@@ -1,0 +1,828 @@
+focus_tree = {
+	id = spain_kingdom_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 20
+			tag = SPR
+		}
+	}
+	
+	default = no
+
+	continuous_focus_position = { x = 50 y = 1500 }
+	
+	focus = {
+		id = SPR_great_spain
+		icon = GFX_goal_generic_demand_territory
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 10
+		y = 0
+		#relative_position_id =
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+###卡洛斯派
+	focus = {
+		id = SPR_carlism
+		icon = GFX_
+		prerequisite = { focus = SPR_great_spain }
+		#mutually_exclusive = { focus =  }
+		x = -7
+		y = 2
+		relative_position_id = SPR_great_spain
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SPR_requetez
+		icon = GFX_
+		prerequisite = { focus = SPR_carlism }
+		#mutually_exclusive = { focus =  }
+		x = -1
+		y = 1
+		relative_position_id = SPR_carlism
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+	
+	focus = {
+		id = SPR_comunion_tradicionalista
+		icon = GFX_
+		prerequisite = { focus = SPR_fe_cristiana }
+		prerequisite = { focus = SPR_carlism }
+		#mutually_exclusive = { focus =  }
+		x = -1
+		y = 1
+		relative_position_id = SPR_fe_cristiana
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SPR_vetar_las_elecciones
+		icon = GFX_
+		prerequisite = { focus = SPR_comunion_tradicionalista }
+		prerequisite = { focus = SPR_requetez }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 2
+		relative_position_id = SPR_carlism
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+	
+	focus = {
+		id = SPR_expand_requetes
+		icon = GFX_
+		prerequisite = { focus = SPR_vetar_las_elecciones }
+		#mutually_exclusive = { focus =  }
+		x = -2
+		y = 1
+		relative_position_id = SPR_vetar_las_elecciones
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+	
+	focus = {
+		id = SPR_kingz_governor
+		icon = GFX_
+		prerequisite = { focus = SPR_vetar_las_elecciones }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = SPR_vetar_las_elecciones
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SPR_dynasty_succession_male_by_blood
+		icon = GFX_
+		prerequisite = { focus = SPR_kingz_governor }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = SPR_kingz_governor
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+	
+	focus = {
+		id = SPR_the_anointed
+		icon = GFX_
+		prerequisite = { focus = SPR_vetar_las_elecciones }
+		#mutually_exclusive = { focus =  }
+		x = 2
+		y = 1
+		relative_position_id = SPR_vetar_las_elecciones
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SPR_protector_of_christianity
+		icon = GFX_
+		prerequisite = { focus = SPR_kingz_governor }
+		prerequisite = { focus = SPR_the_anointed }
+		#mutually_exclusive = { focus =  }
+		x = 2
+		y = 1
+		relative_position_id = SPR_kingz_governor
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+	
+###传统派
+	focus = {
+		id = SPR_nation_state_family
+		icon = GFX_
+		prerequisite = { focus = SPR_great_spain }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = SPR_great_spain
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SPR_fe_cristiana
+		icon = GFX_
+		prerequisite = { focus = SPR_nation_state_family }
+		#mutually_exclusive = { focus =  }
+		x = -5
+		y = 1
+		relative_position_id = SPR_nation_state_family
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+	
+	focus = {
+		id = SPR_frente_de_la_patria
+		icon = GFX_
+		prerequisite = { focus = SPR_nation_state_family }
+		#mutually_exclusive = { focus =  }
+		x = -3
+		y = 1
+		relative_position_id = SPR_nation_state_family
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SPR_spaniards
+		icon = GFX_
+		prerequisite = { focus = SPR_nation_state_family }
+		#mutually_exclusive = { focus =  }
+		x = -1
+		y = 1
+		relative_position_id = SPR_nation_state_family
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+	#波旁线与波拿巴线
+	focus = {
+		id = SPR_a_french_king
+		icon = GFX_
+		prerequisite = { focus = SPR_nation_state_family }
+		mutually_exclusive = { focus = SPR_a_germany_king }
+		x = 1
+		y = 1
+		relative_position_id = SPR_nation_state_family
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+	#哈布斯堡线
+	focus = {
+		id = SPR_a_germany_king
+		icon = GFX_
+		prerequisite = { focus = SPR_nation_state_family }
+		mutually_exclusive = { focus = SPR_a_french_king }
+		x = 3
+		y = 1
+		relative_position_id = SPR_nation_state_family
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+###现代君主制、法西斯等
+	focus = {
+		id = SPR_modern_empire
+		icon = GFX_
+		prerequisite = { focus = SPR_great_spain }
+		#mutually_exclusive = { focus =  }
+		x = 7
+		y = 1
+		relative_position_id = SPR_great_spain
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+
+	
+###扩张路线
+	focus = {
+		id = SPR_iberia_be_one
+		icon = GFX_
+		prerequisite = { focus = SPR_the_anointed }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 6
+		relative_position_id = SPR_great_spain
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SPR_reconquista_crusades
+		icon = GFX_
+		prerequisite = { focus = SPR_iberia_be_one }
+		#mutually_exclusive = { focus =  }
+		x = -4
+		y = 1
+		relative_position_id = SPR_iberia_be_one
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SPR_provinces_of_africa
+		icon = GFX_
+		prerequisite = { focus = SPR_reconquista_crusades }
+		#mutually_exclusive = { focus =  }
+		x = -2
+		y = 1
+		relative_position_id = SPR_reconquista_crusades
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SPR_latin_empire
+		icon = GFX_
+		prerequisite = { focus = SPR_reconquista_crusades }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = SPR_reconquista_crusades
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SPR_take_egypt
+		icon = GFX_
+		prerequisite = { focus = SPR_provinces_of_africa }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = SPR_provinces_of_africa
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+	
+	focus = {
+		id = SPR_kingdom_of_jerusalem
+		icon = GFX_
+		prerequisite = { focus = SPR_latin_empire }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id =  SPR_latin_empire
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SPR_claim_france
+		icon = GFX_
+		prerequisite = { focus = SPR_iberia_be_one }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = SPR_iberia_be_one
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SPR_retake_napoles
+		icon = GFX_
+		prerequisite = { focus = SPR_claim_france focus = SPR_reconquista_crusades }
+		#mutually_exclusive = { focus =  }
+		x = -2
+		y = 1
+		relative_position_id = SPR_claim_france
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SPR_retake_provinces_of_netherland
+		icon = GFX_
+		prerequisite = { focus = SPR_claim_france focus = SPR_claim_habsburg }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = SPR_claim_france
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SPR_claim_habsburg
+		icon = GFX_
+		prerequisite = { focus = SPR_iberia_be_one }
+		#mutually_exclusive = { focus =  }
+		x = 2
+		y = 1
+		relative_position_id = SPR_iberia_be_one
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SPR_bring_hre_back
+		icon = GFX_
+		prerequisite = { focus = SPR_claim_habsburg }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = SPR_claim_habsburg
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+	
+	focus = {
+		id = SPR_italy_war
+		icon = GFX_
+		prerequisite = { focus = SPR_bring_hre_back }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = SPR_bring_hre_back
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SPR_divin_right_of_kings
+		icon = GFX_
+		prerequisite = { focus = SPR_retake_napoles focus = SPR_italy_war focus = SPR_kingdom_of_jerusalem }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 2
+		relative_position_id = SPR_retake_napoles
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+
+	focus = {
+		id = SPR_
+		icon = GFX_
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		#relative_position_id =
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+}

@@ -1,0 +1,1777 @@
+
+#ELECTION DECISION 大选
+GRE_election_category = {
+	#王室危机
+	GRE_the_throne_of_crisis = {
+		icon = eng_support_imperialist_coup
+
+		activation = {
+			has_country_flag = br_GRE_the_throne_of_crisis_flag
+		}
+		available = {
+			OR = {
+				NOT = { has_idea = br_laws_monarchy }
+				custom_trigger_tooltip = {
+					tooltip = gre_civil_war_threat_icon_var_value_oh
+					check_variable = {
+						var = gre_civil_war_threat_icon_var_value
+						value > 100
+					}
+				}
+			}
+		}
+		cancel_trigger = {
+			has_civil_war = yes
+			has_war = yes
+			is_puppet = yes
+		}
+
+		is_good = no
+		days_mission_timeout = 90
+		#selectable_mission = no
+
+		complete_effect = {
+			country_event = { id = br_hellas.4 }
+		}
+
+		timeout_effect = {
+			if = {
+				limit = {
+					check_variable = {
+						var = gre_civil_war_divisions_counter_var
+						value > gre_republic_civil_war_divisions_counter_var
+					}
+					check_variable = {
+						var = gre_civil_war_divisions_counter_var
+						value > 15
+					}
+				}
+				country_event = { id = br_hellas.5 }
+			}
+			else_if = {
+				limit = { always = no }
+				country_event = { id = br_hellas.3 }
+			}
+			else = {
+				country_event = { id = br_hellas.5 }
+			}
+		}
+		
+		priority = 10
+	}
+	#工人运动
+	GRE_worker_strikes = {
+		icon = eng_support_imperialist_coup
+
+		activation = {
+			NOT = {
+				has_government = anarchist_communist
+				has_government = revolution_socialist
+				has_government = scientific_socialist
+				has_government = conservatism_socialist
+			}
+		}
+		available = {
+			always = no
+		}
+		cancel_trigger = {
+			OR = {
+				has_government = anarchist_communist
+				has_government = revolution_socialist
+				has_government = scientific_socialist
+				has_government = conservatism_socialist
+			}
+			has_stability > 0.5
+		}
+
+		is_good = no
+		days_mission_timeout = 30
+		#selectable_mission = no
+
+		timeout_effect = {
+			if = {
+				limit = { has_idea = SPR_national_strikes_8 }
+				swap_ideas = { remove_idea = SPR_national_strikes_8 add_idea = SPR_national_strikes_9 }
+			}
+			else_if = {
+				limit = { has_idea = SPR_national_strikes_7 }
+				swap_ideas = { remove_idea = SPR_national_strikes_7 add_idea = SPR_national_strikes_8 }
+			}
+			else_if = {
+				limit = { has_idea = SPR_national_strikes_6 }
+				swap_ideas = { remove_idea = SPR_national_strikes_6 add_idea = SPR_national_strikes_7 }
+			}
+			else_if = {
+				limit = { has_idea = SPR_national_strikes_5 }
+				swap_ideas = { remove_idea = SPR_national_strikes_5 add_idea = SPR_national_strikes_6 }
+			}
+			else_if = {
+				limit = { has_idea = SPR_national_strikes_4 }
+				swap_ideas = { remove_idea = SPR_national_strikes_4 add_idea = SPR_national_strikes_5 }
+			}
+			else_if = {
+				limit = { has_idea = SPR_national_strikes_3 }
+				swap_ideas = { remove_idea = SPR_national_strikes_3 add_idea = SPR_national_strikes_4 }
+			}
+			else_if = {
+				limit = { has_idea = SPR_national_strikes_2 }
+				swap_ideas = { remove_idea = SPR_national_strikes_2 add_idea = SPR_national_strikes_3 }
+			}
+			else_if = {
+				limit = { has_idea = SPR_national_strikes_1 }
+				swap_ideas = { remove_idea = SPR_national_strikes_1 add_idea = SPR_national_strikes_2 }
+			}
+			else = {
+				add_ideas = SPR_national_strikes_1
+			}
+		}
+		
+		priority = 9
+	}
+	GRE_negotiations_of_strikes = {
+		icon = GFX_
+
+		allowed = {
+			original_tag = GRE
+		}
+		visible = {
+			#
+		}
+		available = {
+			OR = {
+				has_idea = SPR_national_strikes_1
+				has_idea = SPR_national_strikes_2
+				has_idea = SPR_national_strikes_3
+				has_idea = SPR_national_strikes_4
+				has_idea = SPR_national_strikes_5
+				has_idea = SPR_national_strikes_6
+				has_idea = SPR_national_strikes_7
+				has_idea = SPR_national_strikes_8
+				has_idea = SPR_national_strikes_9
+			}
+		}
+
+		fire_only_once = yes
+		days_remove = 30
+
+		remove_effect = {
+			if = {
+				limit = { has_idea = SPR_national_strikes_9 }
+				swap_ideas = { remove_idea = SPR_national_strikes_9 add_idea = SPR_national_strikes_8 }
+			}
+			else_if = {
+				limit = { has_idea = SPR_national_strikes_8 }
+				swap_ideas = { remove_idea = SPR_national_strikes_8 add_idea = SPR_national_strikes_7 }
+			}
+			else_if = {
+				limit = { has_idea = SPR_national_strikes_7 }
+				swap_ideas = { remove_idea = SPR_national_strikes_7 add_idea = SPR_national_strikes_6 }
+			}
+			else_if = {
+				limit = { has_idea = SPR_national_strikes_6 }
+				swap_ideas = { remove_idea = SPR_national_strikes_6 add_idea = SPR_national_strikes_5 }
+			}
+			else_if = {
+				limit = { has_idea = SPR_national_strikes_5 }
+				swap_ideas = { remove_idea = SPR_national_strikes_5 add_idea = SPR_national_strikes_4 }
+			}
+			else_if = {
+				limit = { has_idea = SPR_national_strikes_4 }
+				swap_ideas = { remove_idea = SPR_national_strikes_4 add_idea = SPR_national_strikes_3 }
+			}
+			else_if = {
+				limit = { has_idea = SPR_national_strikes_3 }
+				swap_ideas = { remove_idea = SPR_national_strikes_3 add_idea = SPR_national_strikes_2 }
+			}
+			else_if = {
+				limit = { has_idea = SPR_national_strikes_2 }
+				swap_ideas = { remove_idea = SPR_national_strikes_2 add_idea = SPR_national_strikes_1 }
+			}
+			else = {
+				remove_ideas = SPR_national_strikes_1
+			}
+		}
+	}
+	GRE_suppress_socialism = {
+		icon = GFX_
+
+		allowed = {
+			original_tag = GRE
+		}
+		visible = {
+			#
+		}
+		available = {
+			OR = {
+				has_idea = SPR_national_strikes_1
+				has_idea = SPR_national_strikes_2
+				has_idea = SPR_national_strikes_3
+				has_idea = SPR_national_strikes_4
+				has_idea = SPR_national_strikes_5
+				has_idea = SPR_national_strikes_6
+				has_idea = SPR_national_strikes_7
+				has_idea = SPR_national_strikes_8
+				has_idea = SPR_national_strikes_9
+			}
+		}
+
+		fire_only_once = yes
+		days_remove = 30
+
+		remove_effect = {
+			add_stability = -0.03
+		}
+	}
+	#任用韦尼泽洛斯
+	GRE_rehired_venizelos = {
+		icon = GFX_
+
+		allowed = {
+			original_tag = GRE
+		}
+		visible = {
+			#
+		}
+		available = {
+			NOT = { has_country_leader = { character = GRE_eleftherios_venizelos } }
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			set_country_flag = br_GRE_venizelos_hired_flag
+			custom_effect_tooltip = br_gre_cwt_decreased_5
+			#变量变化
+			add_to_variable = { var = gre_civil_war_threat_icon_var value = -5 } #王室危机-5
+		}
+	}
+	GRE_put_venizelos_under_house_arrest = {
+		icon = GFX_
+
+		allowed = {
+			original_tag = GRE
+		}
+		visible = {
+			#
+		}
+		available = {
+			#
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			set_country_flag = br_GRE_venizelos_arrested_flag
+			custom_effect_tooltip = br_gre_cwt_increased_3
+			#变量变化
+			add_to_variable = { var = gre_civil_war_threat_icon_var value = 3 } #王室危机+3
+		}
+	}
+	GRE_exile_venizelos = {
+		icon = GFX_
+
+		allowed = {
+			original_tag = GRE
+		}
+
+		visible = { has_country_flag = br_GRE_venizelos_arrested_flag }
+
+		available = {
+			NOT = { has_country_leader = { character = GRE_eleftherios_venizelos } }
+			NOT = { has_country_flag = br_GRE_venizelos_hired_flag }
+			has_country_flag = br_GRE_venizelos_arrested_flag
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			set_country_flag = br_GRE_venizelos_exiled_flag
+			custom_effect_tooltip = br_gre_venizelos_exiled_happened
+			custom_effect_tooltip = br_gre_cwt_increased_5
+			#变量变化
+			add_to_variable = { var = gre_civil_war_threat_icon_var value = 5 } #王室危机+5
+
+		}
+	}
+	#安抚军队
+	GRE_conciliate_militaries = {
+		icon = GFX_
+
+		allowed = {
+			original_tag = GRE
+		}
+		visible = {
+			#
+		}
+		available = {
+			#
+		}
+		
+		fire_only_once = yes
+		days_re_enable = 1
+		days_remove = 30
+
+		complete_effect = {
+			set_country_flag = br_GRE_conciliation_has_begun_flag
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = br_gre_cwt_decreased
+			add_to_variable = { var = gre_civil_war_threat_icon_var value = -1 }
+		}
+
+		modifier = {
+			stability_weekly = 0.003
+		}
+	}
+	#指派军官
+	GRE_assign_royalist_officers = {
+		icon = GFX_
+
+		allowed = {
+			original_tag = GRE
+		}
+		visible = { has_country_flag = br_GRE_conciliation_has_begun_flag }
+		available = {
+			#
+		}
+
+		fire_only_once = no
+		days_re_enable = 1
+		days_remove = 14
+
+		complete_effect = {
+			custom_effect_tooltip = br_gre_cwdc_increased_knd
+			add_to_variable = {
+				var = gre_civil_war_divisions_counter_var
+				value = 2
+			}
+		}
+
+		remove_effect = {
+			add_to_variable = {
+				var = gre_civil_war_divisions_counter_var
+				value = 8
+			}
+		}
+	}
+	#指派军官
+	GRE_assign_republicans_officers = {
+		icon = GFX_
+
+		activation = {
+			has_country_flag = br_GRE_the_throne_of_crisis_flag
+		}
+
+		available = {
+			always = no
+		}
+
+		cancel_trigger = {
+			has_civil_war = yes
+			has_war = yes
+			is_puppet = yes
+		}
+
+		is_good = no
+		days_mission_timeout = 14
+		#selectable_mission = no
+
+		complete_effect = {
+			#
+		}
+
+		timeout_effect = {
+			custom_effect_tooltip = br_gre_cwdc_increased_rep
+			custom_effect_tooltip = br_gre_cwt_increased_5
+			add_to_variable = { var = gre_republic_civil_war_divisions_counter_var value = 3 }
+			add_to_variable = { var = gre_civil_war_threat_icon_var value = 5 }
+		}
+		
+		priority = 9
+	}
+	#宣言共和
+	GRE_declare_be_a_republic = {
+		icon = GFX_
+
+		allowed = {
+			original_tag = GRE
+		}
+		visible = {
+			#
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = gre_republic_civil_war_divisions_counter_var_more
+				check_variable = {
+					var = gre_republic_civil_war_divisions_counter_var
+					value > gre_civil_war_divisions_counter_var
+				}
+				check_variable = {
+					var = gre_republic_civil_war_divisions_counter_var
+					value > 5
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			add_ideas = br_laws_proxy
+		}
+	}
+	#确保忠诚
+	GRE_ensure_loyalty_of_militaries_state_target = {
+		icon = eng_support_imperialist_coup
+
+		target_root_trigger = {
+			tag = GRE
+		}
+		#target_array = GRE.core_states
+		target_trigger = {
+			FROM = {
+				is_owned_by = ROOT
+				is_core_of = ROOT
+			}
+		}
+		
+		cost = 20
+		days_remove = 14
+
+		complete_effect = {
+			FROM = {
+				#
+			}
+			ROOT = {
+				custom_effect_tooltip = br_gre_cwdc_increased_knd
+				add_to_variable = { var = gre_civil_war_divisions_counter_var value = 1 }
+			}
+		}
+
+		remove_effect = {
+			add_to_variable = { var = gre_civil_war_divisions_counter_var value = 2 }
+			custom_effect_tooltip = br_gre_cwt_decreased
+			add_to_variable = { var = gre_civil_war_threat_icon_var value = -1 }
+		}
+		
+		on_map_mode = map_only
+		targets_dynamic = yes
+		state_target = yes
+	}
+}
+
+#Greece Hellenic Academy decisions
+GRE_hellenic_academy_category = {
+	GRE_anti_german_stratagems = {
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = GRE
+		}
+
+		available = {
+			has_war_with = GER
+			has_completed_focus = GRE_the_hellenic_air_force
+			has_completed_focus = GRE_the_hellenic_army
+			has_completed_focus = GRE_the_hellenic_navy
+		}
+
+		visible = {
+			has_completed_focus = GRE_hellenic_armed_forces
+		}
+
+		target_trigger = {
+			FROM = {
+				tag = GER
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+
+		targeted_modifier = {
+			tag = GER
+			attack_bonus_against = 0.05
+			defense_bonus_against = 0.15
+		}
+	}
+	GRE_anti_italian_stratagems = {
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = GRE
+		}
+
+		available = {
+			has_war_with = ITA
+			has_completed_focus = GRE_the_hellenic_air_force
+			has_completed_focus = GRE_the_hellenic_army
+			has_completed_focus = GRE_the_hellenic_navy
+		}
+
+		visible = {
+			has_completed_focus = GRE_hellenic_armed_forces
+		}
+
+		target_trigger = {
+			FROM = {
+				tag = ITA
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		fire_only_once = yes
+		days_remove = 120
+
+		targeted_modifier = {
+			tag = ITA
+			attack_bonus_against = 0.05
+			defense_bonus_against = 0.15
+		}
+	}
+	GRE_anti_french_stratagems = {
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = GRE
+		}
+
+		available = {
+			has_war_with = FRA
+			has_completed_focus = GRE_the_hellenic_air_force
+			has_completed_focus = GRE_the_hellenic_army
+			has_completed_focus = GRE_the_hellenic_navy
+		}
+
+		visible = {
+			has_completed_focus = GRE_hellenic_armed_forces
+		}
+
+		target_trigger = {
+			FROM = {
+				tag = FRA
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+
+		targeted_modifier = {
+			tag = FRA
+			attack_bonus_against = 0.05
+			defense_bonus_against = 0.15
+		}
+	}
+	GRE_anti_british_stratagems = {
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = GRE
+		}
+
+		available = {
+			has_war_with = ENG
+			has_completed_focus = GRE_the_hellenic_air_force
+			has_completed_focus = GRE_the_hellenic_army
+			has_completed_focus = GRE_the_hellenic_navy
+		}
+
+		visible = {
+			has_completed_focus = GRE_hellenic_armed_forces
+		}
+
+		target_trigger = {
+			FROM = {
+				tag = ENG
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+
+		targeted_modifier = {
+			tag = ENG
+			attack_bonus_against = 0.05
+			defense_bonus_against = 0.15
+		}
+	}
+	GRE_anti_soviet_stratagems = {
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = GRE
+		}
+
+		available = {
+			has_war_with = SOV
+			has_completed_focus = GRE_the_hellenic_air_force
+			has_completed_focus = GRE_the_hellenic_army
+			has_completed_focus = GRE_the_hellenic_navy
+		}
+
+		visible = {
+			has_completed_focus = GRE_hellenic_armed_forces
+		}
+
+		target_trigger = {
+			FROM = {
+				tag = SOV
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+
+		targeted_modifier = {
+			tag = SOV
+			attack_bonus_against = 0.05
+			defense_bonus_against = 0.15
+		}
+	}
+	GRE_anti_austro_hungarian_stratagems = {
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = GRE
+		}
+
+		available = {
+			AND = {
+				has_war_with = FROM 
+				has_completed_focus = GRE_the_hellenic_air_force
+				has_completed_focus = GRE_the_hellenic_army
+				has_completed_focus = GRE_the_hellenic_navy
+			}
+		}
+
+		visible = {
+			has_completed_focus = GRE_hellenic_armed_forces
+			has_global_flag = form_austria_hungary_flag
+		}
+
+		target_trigger = {
+			FROM = {
+				has_cosmetic_tag = HUN_EMPIRE
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+
+		targeted_modifier = {
+			tag = FROM
+			defense_bonus_against = 0.1
+		}
+	}
+	GRE_anti_romanian_stratagems = {
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = GRE
+		}
+
+		available = {
+			has_war_with = ROM
+			has_completed_focus = GRE_the_hellenic_air_force
+			has_completed_focus = GRE_the_hellenic_army
+			has_completed_focus = GRE_the_hellenic_navy
+		}
+
+		visible = {
+			has_completed_focus = GRE_hellenic_armed_forces
+			ROM = { 
+				has_completed_focus = ROM_balkans_dominance
+			}
+		}
+
+		target_trigger = {
+			FROM = {
+				tag = ROM
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+
+		targeted_modifier = {
+			tag = ROM
+			defense_bonus_against = 0.1
+		}
+	}
+	GRE_anti_bulgarian_stratagems = {
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = GRE
+		}
+
+		available = {
+			has_war_with = BUL
+			has_completed_focus = GRE_the_hellenic_air_force
+			has_completed_focus = GRE_the_hellenic_army
+			has_completed_focus = GRE_the_hellenic_navy
+		}
+
+		visible = {
+			has_completed_focus = GRE_hellenic_armed_forces
+			BUL = { 
+				OR = {
+					has_completed_focus = BUL_power_to_the_tsar
+					has_completed_focus = BUL_appoint_communist_ministers
+				}
+			}
+		}
+
+		target_trigger = {
+			FROM = {
+				original_tag = BUL
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		fire_only_once = yes
+
+		days_remove = 120
+
+		targeted_modifier = {
+			tag = BUL
+			defense_bonus_against = 0.1
+		}
+	}
+	GRE_anti_turkish_stratagems = {
+		icon = generic_operation
+
+		allowed = { 
+			original_tag = GRE
+		}
+
+		available = {
+			has_war_with = TUR
+			has_completed_focus = GRE_the_hellenic_air_force
+			has_completed_focus = GRE_the_hellenic_army
+			has_completed_focus = GRE_the_hellenic_navy
+		}
+
+		visible = {
+			has_completed_focus = GRE_hellenic_armed_forces
+			TUR = { 
+				has_completed_focus = TUR_pivot_to_the_past
+				has_completed_focus = TUR_reconfigure_our_foreign_policy
+			}
+		}
+
+		target_trigger = {
+			FROM = {
+				original_tag = TUR
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		fire_only_once = yes
+
+		days_remove = 120
+
+		targeted_modifier = {
+			tag = TUR
+			defense_bonus_against = 0.1
+		}
+	}
+}
+
+#GREECE FACTION DECISIONS
+GRE_faction_management_category = {
+	#
+	#交好保皇派
+	GRE_befriend_monarchists = {
+
+		icon = generic_political_rally
+
+		allowed = { 
+			original_tag = GRE
+		}
+
+		available = {
+			has_country_flag = GRE_factions_unlocked
+			check_variable = { var = GRE_monarchist_loyalty value = -2 compare = greater_than }
+			check_variable = { var = GRE_monarchist_loyalty value = 1 compare = less_than }
+		}
+
+		cost = 250
+
+		fire_only_once = yes
+
+		days_remove = 200
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 5
+				check_variable = { GRE_monarchist_loyalty = 0 compare = less_than_or_equals }
+			}
+			modifier = {
+				factor = 25
+				check_variable = { GRE_monarchist_loyalty = -1 compare = less_than_or_equals }
+			}
+		}
+
+		visible = {
+			NOT = { 
+				OR = {
+					has_government = neutrality
+					check_variable = { GRE_monarchist_loyalty = -2 compare = equals }
+					check_variable = { GRE_monarchist_loyalty = 1 compare = equals }
+					has_completed_focus = GRE_request_communist_support
+				}
+			}
+		}
+
+		complete_effect = {
+			if = {
+				limit = {
+					has_government = communism
+				}
+				set_temp_variable = { GRE_befriend_monarchists_variable = party_popularity@communism }
+				divide_temp_variable = { GRE_befriend_monarchists_variable = 3 }
+			}
+			if = {
+				limit = {
+					has_government = democratic
+				}
+				set_temp_variable = { GRE_befriend_monarchists_variable = party_popularity@democratic }
+				divide_temp_variable = { GRE_befriend_monarchists_variable = 3 }
+			}
+			if = {
+				limit = {
+					has_government = fascism
+				}
+				set_temp_variable = { GRE_befriend_monarchists_variable = party_popularity@fascism }
+				divide_temp_variable = { GRE_befriend_monarchists_variable = 3 }
+			}
+			multiply_temp_variable = { GRE_befriend_monarchists_variable = -1.00 }
+			add_stability = var:GRE_befriend_monarchists_variable
+			add_war_support = var:GRE_befriend_monarchists_variable
+		}
+
+		remove_effect = {
+			set_temp_variable = { GRE_allied_monarchists_variable = party_popularity@neutrality }
+			divide_temp_variable = { GRE_allied_monarchists_variable = 2 }
+			if = {
+				limit = {
+					neutrality > 0.5
+				}
+				divide_temp_variable = { GRE_allied_monarchists_variable = 3 }
+			}
+			add_stability = var:GRE_allied_monarchists_variable
+			add_war_support = var:GRE_allied_monarchists_variable
+			effect_tooltip = { add_ideas = GRE_friendly_monarchists }
+			hidden_effect = {
+				set_variable = { GRE_monarchist_loyalty = 1 }
+				GRE_political_instability_update_effect = yes
+			}
+		}
+	}
+	#摧毁
+	GRE_crush_monarchists = {
+
+		icon = generic_police_action
+
+		allowed = { 
+			original_tag = GRE
+		}
+
+		available = {
+			has_country_flag = GRE_factions_unlocked
+			check_variable = { var = GRE_monarchist_loyalty value = -2 compare = greater_than }
+			check_variable = { var = GRE_monarchist_loyalty value = 1 compare = less_than }
+		}
+
+		cost = 150
+
+		fire_only_once = no
+
+		days_remove = 120
+
+		days_re_enable = 1
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 5
+				check_variable = { GRE_monarchist_loyalty = 0 compare = less_than_or_equals }
+			}
+			modifier = {
+				factor = 25
+				check_variable = { GRE_monarchist_loyalty = -1 compare = less_than_or_equals }
+			}
+		}
+
+		visible = {
+			NOT = { 
+				OR = {
+					has_government = neutrality
+					check_variable = { GRE_monarchist_loyalty = 1 compare = greater_than_or_equals }
+					check_variable = { GRE_monarchist_loyalty = -2 compare = equals }
+				}
+			}
+		}
+
+		complete_effect = {
+			set_temp_variable = { GRE_war_on_monarchists_variable = party_popularity@neutrality }
+			divide_temp_variable = { GRE_war_on_monarchists_variable = 2 }
+			multiply_temp_variable = { GRE_war_on_monarchists_variable = -1.00 }
+			add_stability = var:GRE_war_on_monarchists_variable
+		}
+
+		remove_effect = {
+			if = {
+				limit = {
+					has_government = communism
+				}
+				set_temp_variable = { GRE_victorious_war_on_monarchists_variable = party_popularity@communism }
+				divide_temp_variable = { GRE_victorious_war_on_monarchists_variable = 3 }
+			}
+			if = {
+				limit = {
+					has_government = democratic
+				}
+				set_temp_variable = { GRE_victorious_war_on_monarchists_variable = party_popularity@democratic }
+				divide_temp_variable = { GRE_victorious_war_on_monarchists_variable = 3 }
+			}
+			if = {
+				limit = {
+					has_government = fascism
+				}
+				set_temp_variable = { GRE_victorious_war_on_monarchists_variable = party_popularity@fascism }
+				divide_temp_variable = { GRE_victorious_war_on_monarchists_variable = 3 }
+			}
+			add_stability = var:GRE_victorious_war_on_monarchists_variable
+			add_war_support = var:GRE_victorious_war_on_monarchists_variable
+			hidden_effect = {
+				set_variable = { GRE_monarchist_loyalty = -2 }
+				GRE_political_instability_update_effect = yes
+			}
+		}
+	}
+	#共和派
+	GRE_befriend_republicans = {
+
+		icon = generic_political_rally
+
+		allowed = { 
+			original_tag = GRE
+		}
+
+		available = {
+			has_country_flag = GRE_factions_unlocked
+			check_variable = { var = GRE_republican_loyalty value = -2 compare = greater_than }
+			check_variable = { var = GRE_republican_loyalty value = 1 compare = less_than }
+			OR = {
+				has_government = fascism
+				AND = {
+					has_government = neutrality
+					has_country_leader = {
+						character = GRE_emmanouil_tsouderos
+						ruling_only = yes
+					}
+				}
+				AND = {
+					has_government = communism
+				}
+			}
+		}
+
+		cost = 250
+
+		fire_only_once = yes
+
+		days_remove = 200
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 5
+				check_variable = { GRE_republican_loyalty = 0 compare = less_than_or_equals }
+			}
+			modifier = {
+				factor = 25
+				check_variable = { GRE_republican_loyalty = -1 compare = less_than_or_equals }
+			}
+		}
+
+		visible = {
+			NOT = { 
+				OR = {
+					has_government = democratic
+					check_variable = { GRE_republican_loyalty = -2 compare = equals }
+					check_variable = { GRE_republican_loyalty = 1 compare = equals }
+				}
+			}
+		}
+
+		complete_effect = {
+			if = {
+				limit = {
+					has_government = neutrality
+				}
+				set_temp_variable = { GRE_befriend_republicans_variable = party_popularity@neutrality }
+				divide_temp_variable = { GRE_befriend_republicans_variable = 3 }
+			}
+			if = {
+				limit = {
+					has_government = communism
+				}
+				set_temp_variable = { GRE_befriend_republicans_variable = party_popularity@communism }
+				divide_temp_variable = { GRE_befriend_republicans_variable = 3 }
+			}
+			if = {
+				limit = {
+					has_government = fascism
+				}
+				set_temp_variable = { GRE_befriend_republicans_variable = party_popularity@fascism }
+				divide_temp_variable = { GRE_befriend_republicans_variable = 3 }
+			}
+			multiply_temp_variable = { GRE_befriend_republicans_variable = -1.00 }
+			add_stability = var:GRE_befriend_republicans_variable
+			add_war_support = var:GRE_befriend_republicans_variable
+		}
+
+		remove_effect = {
+			set_temp_variable = { GRE_allied_republicans_variable = party_popularity@democratic }
+			divide_temp_variable = { GRE_allied_republicans_variable = 2 }
+			if = {
+				limit = {
+					democratic > 0.5
+				}
+				divide_temp_variable = { GRE_allied_republicans_variable = 3 }
+			}
+			add_stability = var:GRE_allied_republicans_variable
+			add_war_support = var:GRE_allied_republicans_variable
+			effect_tooltip = { add_ideas = GRE_friendly_republicans }
+			hidden_effect = {
+				set_variable = { GRE_republican_loyalty = 1 }
+				GRE_political_instability_update_effect = yes
+			}
+		}
+	}
+	#
+	GRE_crush_republicans = {
+
+		icon = generic_police_action
+
+		allowed = { 
+			original_tag = GRE
+		}
+
+		available = {
+			has_country_flag = GRE_factions_unlocked
+			check_variable = { var = GRE_republican_loyalty value = -2 compare = greater_than }
+			check_variable = { var = GRE_republican_loyalty value = 1 compare = less_than }
+			OR = { 
+				has_government = fascism
+				AND = {
+					has_government = neutrality
+					has_completed_focus = GRE_crack_down_on_the_republicans
+				}
+				AND = {
+					has_government = communism
+					has_completed_focus = GRE_depose_the_reactionaries
+				}
+			}
+		}
+
+		cost = 150
+
+		fire_only_once = no
+
+		days_remove = 120
+
+		days_re_enable = 1
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 5
+				check_variable = { GRE_republican_loyalty = 0 compare = less_than_or_equals }
+			}
+			modifier = {
+				factor = 25
+				check_variable = { GRE_republican_loyalty = -1 compare = less_than_or_equals }
+			}
+		}
+
+		visible = {
+			NOT = { 
+				OR = {
+					has_government = democratic
+					check_variable = { GRE_republican_loyalty = 1 compare = greater_than_or_equals }
+					check_variable = { GRE_republican_loyalty = -2 compare = equals }
+				}
+			}
+		}
+
+		complete_effect = {
+			set_temp_variable = { GRE_war_on_republicans_variable = party_popularity@democratic }
+			divide_temp_variable = { GRE_war_on_republicans_variable = 2 }
+			multiply_temp_variable = { GRE_war_on_republicans_variable = -1.00 }
+			add_stability = var:GRE_war_on_republicans_variable
+		}
+
+		remove_effect = {
+			if = {
+				limit = {
+					has_government = neutrality
+				}
+				set_temp_variable = { GRE_victorious_war_on_republicans_variable = party_popularity@neutrality }
+				divide_temp_variable = { GRE_victorious_war_on_republicans_variable = 3 }
+			}
+			if = {
+				limit = {
+					has_government = communism
+				}
+				set_temp_variable = { GRE_victorious_war_on_republicans_variable = party_popularity@communism }
+				divide_temp_variable = { GRE_victorious_war_on_republicans_variable = 3 }
+			}
+			if = {
+				limit = {
+					has_government = fascism
+				}
+				set_temp_variable = { GRE_victorious_war_on_republicans_variable = party_popularity@fascism }
+				divide_temp_variable = { GRE_victorious_war_on_republicans_variable = 3 }
+			}
+			add_stability = var:GRE_victorious_war_on_republicans_variable
+			add_war_support = var:GRE_victorious_war_on_republicans_variable
+			hidden_effect = {
+				set_variable = { GRE_republican_loyalty = -2 }
+				GRE_political_instability_update_effect = yes
+			}
+		}
+	}
+	#g共产党
+	GRE_befriend_communists = {
+
+		icon = generic_political_rally
+
+		allowed = { 
+			original_tag = GRE
+		}
+
+		available = {
+			has_country_flag = GRE_factions_unlocked
+			check_variable = { var = GRE_communist_loyalty value = -2 compare = greater_than }
+			check_variable = { var = GRE_communist_loyalty value = 1 compare = less_than }
+			OR = { 
+				has_government = fascism
+				AND = {
+					has_government = neutrality
+					has_completed_focus = GRE_recruit_the_fascists
+				}
+				AND = {
+					has_government = democratic
+					has_completed_focus = GRE_request_communist_support
+				}
+			}
+		}
+
+		cost = 250
+
+		fire_only_once = yes
+
+		days_remove = 120
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 5
+				check_variable = { GRE_communist_loyalty = 0 compare = less_than_or_equals }
+			}
+			modifier = {
+				factor = 25
+				check_variable = { GRE_communist_loyalty = -1 compare = less_than_or_equals }
+			}
+		}
+
+		visible = {
+			NOT = { 
+				OR = {
+					has_government = communism
+					check_variable = { GRE_communist_loyalty = -2 compare = equals }
+					check_variable = { GRE_communist_loyalty = 1 compare = equals }
+				}
+			}
+		}
+
+		complete_effect = {
+			if = {
+				limit = {
+					has_government = neutrality
+				}
+				set_temp_variable = { GRE_befriend_communists_variable = party_popularity@neutrality }
+				divide_temp_variable = { GRE_befriend_communists_variable = 3 }
+			}
+			if = {
+				limit = {
+					has_government = democratic
+				}
+				set_temp_variable = { GRE_befriend_communists_variable = party_popularity@democratic }
+				divide_temp_variable = { GRE_befriend_communists_variable = 3 }
+			}
+			if = {
+				limit = {
+					has_government = fascism
+				}
+				set_temp_variable = { GRE_befriend_communists_variable = party_popularity@fascism }
+				divide_temp_variable = { GRE_befriend_communists_variable = 3 }
+			}
+			multiply_temp_variable = { GRE_befriend_communists_variable = -1.00 }
+			add_stability = var:GRE_befriend_communists_variable
+			add_war_support = var:GRE_befriend_communists_variable
+		}
+
+		remove_effect = {
+			set_temp_variable = { GRE_allied_communists_variable = party_popularity@communism }
+			divide_temp_variable = { GRE_allied_communists_variable = 2 }
+			if = {
+				limit = {
+					communism > 0.5
+				}
+				divide_temp_variable = { GRE_allied_communists_variable = 3 }
+			}
+			add_stability = var:GRE_allied_communists_variable
+			add_war_support = var:GRE_allied_communists_variable
+			effect_tooltip = { add_ideas = GRE_friendly_communists }
+			hidden_effect = {
+				set_variable = { GRE_communist_loyalty = 1 }
+				GRE_political_instability_update_effect = yes
+			}
+		}
+	}
+
+	GRE_crush_communists = {
+
+		icon = generic_police_action
+
+		allowed = { 
+			original_tag = GRE
+		}
+
+		available = {
+			has_country_flag = GRE_factions_unlocked
+			check_variable = { var = GRE_communist_loyalty value = -2 compare = greater_than }
+			check_variable = { var = GRE_communist_loyalty value = 1 compare = less_than }
+			OR = { 
+				has_government = fascism
+				AND = {
+					has_government = neutrality
+					has_completed_focus = GRE_use_the_military
+				}
+				AND = {
+					has_government = democratic
+					has_completed_focus = GRE_restoring_our_home
+				}
+			}
+		}
+
+		cost = 150
+
+		fire_only_once = no
+
+		days_remove = 120
+
+		days_re_enable = 1
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 5
+				check_variable = { GRE_communist_loyalty = 0 compare = less_than_or_equals }
+			}
+			modifier = {
+				factor = 25
+				check_variable = { GRE_communist_loyalty = -1 compare = less_than_or_equals }
+			}
+		}
+
+		visible = {
+			NOT = { 
+				OR = {
+					has_government = communism
+					has_completed_focus = GRE_request_communist_support
+					check_variable = { GRE_communist_loyalty = 1 compare = greater_than_or_equals }
+					check_variable = { GRE_communist_loyalty = -2 compare = equals }
+				}
+			}
+		}
+
+		complete_effect = {
+			set_temp_variable = { GRE_war_on_communists_variable = party_popularity@communism }
+			divide_temp_variable = { GRE_war_on_communists_variable = 2 }
+			multiply_temp_variable = { GRE_war_on_communists_variable = -1.00 }
+			add_stability = var:GRE_war_on_communists_variable
+		}
+
+		remove_effect = {
+			if = {
+				limit = {
+					has_government = neutrality
+				}
+				set_temp_variable = { GRE_victorious_war_on_communists_variable = party_popularity@neutrality }
+				divide_temp_variable = { GRE_victorious_war_on_communists_variable = 3 }
+			}
+			if = {
+				limit = {
+					has_government = democratic
+				}
+				set_temp_variable = { GRE_victorious_war_on_communists_variable = party_popularity@communism }
+				divide_temp_variable = { GRE_victorious_war_on_communists_variable = 3 }
+			}
+			if = {
+				limit = {
+					has_government = fascism
+				}
+				set_temp_variable = { GRE_victorious_war_on_communists_variable = party_popularity@fascism }
+				divide_temp_variable = { GRE_victorious_war_on_communists_variable = 3 }
+			}
+			add_stability = var:GRE_victorious_war_on_communists_variable
+			add_war_support = var:GRE_victorious_war_on_communists_variable
+			hidden_effect = {
+				set_variable = { GRE_communist_loyalty = -2 }
+				GRE_political_instability_update_effect = yes
+			}
+		}
+	}
+	#法西斯
+	GRE_befriend_fascists = {
+
+		icon = generic_political_rally
+
+		allowed = { 
+			original_tag = GRE
+		}
+
+		available = {
+			has_country_flag = GRE_factions_unlocked
+			check_variable = { var = GRE_fascist_loyalty value = -2 compare = greater_than }
+			check_variable = { var = GRE_fascist_loyalty value = 1 compare = less_than }
+			OR = { 
+				AND = {
+					has_government = democratic
+					has_idea = GRE_eee_in_government
+				}
+				AND = {
+					has_government = communism
+					NOT = { has_completed_focus = GRE_prepare_for_the_great_anti_fascist_war }
+				}
+				AND = {
+					has_government = neutrality
+					NOT = { has_completed_focus = GRE_the_right_to_rule }
+				}
+			}
+		}
+
+		cost = 250
+
+		fire_only_once = yes
+
+		days_remove = 200
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 5
+				check_variable = { GRE_fascist_loyalty = 0 compare = less_than_or_equals }
+			}
+			modifier = {
+				factor = 25
+				check_variable = { GRE_fascist_loyalty = -1 compare = less_than_or_equals }
+			}
+		}
+
+		visible = {
+			NOT = { 
+				OR = {
+					has_government = fascism
+					check_variable = { GRE_fascist_loyalty = -2 compare = equals }
+					check_variable = { GRE_fascist_loyalty = 1 compare = equals }
+				}
+			}
+		}
+
+		complete_effect = {
+			if = {
+				limit = {
+					has_government = neutrality
+				}
+				set_temp_variable = { GRE_befriend_fascists_variable = party_popularity@neutrality }
+				divide_temp_variable = { GRE_befriend_fascists_variable = 3 }
+			}
+			if = {
+				limit = {
+					has_government = democratic
+				}
+				set_temp_variable = { GRE_befriend_fascists_variable = party_popularity@democratic }
+				divide_temp_variable = { GRE_befriend_fascists_variable = 3 }
+			}
+			if = {
+				limit = {
+					has_government = communism
+				}
+				set_temp_variable = { GRE_befriend_communists_variable = party_popularity@communism }
+				divide_temp_variable = { GRE_befriend_fascists_variable = 3 }
+			}
+			multiply_temp_variable = { GRE_befriend_fascists_variable = -1.00 }
+			add_stability = var:GRE_befriend_fascists_variable
+			add_war_support = var:GRE_befriend_fascists_variable
+		}
+
+		remove_effect = {
+			set_temp_variable = { GRE_allied_fascists_variable = party_popularity@fascism }
+			divide_temp_variable = { GRE_allied_fascists_variable = 2 }
+			if = {
+				limit = {
+					fascism > 0.5
+				}
+				divide_temp_variable = { GRE_befriend_fascists_variable = 3 }
+			}
+			add_stability = var:GRE_allied_fascists_variable
+			add_war_support = var:GRE_allied_fascists_variable
+			effect_tooltip = { add_ideas = GRE_friendly_fascists }
+			hidden_effect = {
+				set_variable = { GRE_fascist_loyalty = 1 }
+				GRE_political_instability_update_effect = yes
+			}
+		}
+	}
+
+	GRE_crush_fascists = {
+
+		icon = generic_police_action
+
+		allowed = { 
+			original_tag = GRE
+		}
+
+		available = {
+			has_country_flag = GRE_factions_unlocked
+			check_variable = { var = GRE_fascist_loyalty value = -2 compare = greater_than }
+			check_variable = { var = GRE_fascist_loyalty value = 1 compare = less_than }
+			OR = { 
+				AND = {
+					has_government = democratic
+					has_country_flag = onassis_proposition_accepted
+				}
+				AND = {
+					has_government = neutrality
+					has_completed_focus = GRE_use_the_military
+				}
+				has_government = communism
+			}
+		}
+
+		cost = 150
+
+		fire_only_once = no
+
+		days_remove = 120
+
+		days_re_enable = 1
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 5
+				check_variable = { GRE_fascist_loyalty = 0 compare = less_than_or_equals }
+			}
+			modifier = {
+				factor = 25
+				check_variable = { GRE_fascist_loyalty = -1 compare = less_than_or_equals }
+			}
+		}
+
+		visible = {
+			NOT = { 
+				OR = {
+					has_government = fascism
+					check_variable = { var = GRE_fascist_loyalty value = 1 compare = greater_than_or_equals }
+					check_variable = { var = GRE_fascist_loyalty value = -2 compare = equals }
+				}
+			}
+		}
+
+		complete_effect = {
+			set_temp_variable = { GRE_war_on_fascists_variable = party_popularity@fascism }
+			divide_temp_variable = { GRE_war_on_fascists_variable = 2 }
+			multiply_temp_variable = { GRE_war_on_fascists_variable = -1.00 }
+			add_stability = var:GRE_war_on_fascists_variable
+		}
+
+		remove_effect = {
+			if = {
+				limit = {
+					has_government = neutrality
+				}
+				set_temp_variable = { GRE_victorious_war_on_fascists_variable = party_popularity@neutrality }
+				divide_temp_variable = { GRE_victorious_war_on_fascists_variable = 3 }
+			}
+			if = {
+				limit = {
+					has_government = democratic
+				}
+				set_temp_variable = { GRE_victorious_war_on_fascists_variable = party_popularity@democratic }
+				divide_temp_variable = { GRE_victorious_war_on_fascists_variable = 3 }
+			}
+			if = {
+				limit = {
+					has_government = communism
+				}
+				set_temp_variable = { GRE_victorious_war_on_fascists_variable = party_popularity@communism }
+				divide_temp_variable = { GRE_victorious_war_on_fascists_variable = 3 }
+			}
+			add_stability = var:GRE_victorious_war_on_fascists_variable
+			add_war_support = var:GRE_victorious_war_on_fascists_variable
+			hidden_effect = {
+				set_variable = { GRE_fascist_loyalty = -2 }
+				GRE_political_instability_update_effect = yes
+			}
+		}
+	}
+}
+
+political_actions = {
+	GRE_recommission_the_american_battleships = {
+		
+		icon = generic_naval
+
+		allowed = { 
+			original_tag = GRE
+			has_dlc = "Battle for the Bosporus"
+		}
+
+		available = {
+			NOT = { has_war_with = USA }
+			#has_completed_focus = GRE_british_docking_rights
+		}
+
+		cost = 0
+
+		fire_only_once = yes
+
+		visible = {
+			NOT = { has_war_with = USA }
+		}
+
+		cancel_if_not_visible = yes
+
+		complete_effect = {
+			if = { 
+				limit = { 
+					NOT = { has_dlc = "Man the Guns" }
+				}
+				add_equipment_production = {
+					equipment = {
+						type = battleship_1
+					}
+					requested_factories = 1
+					progress = 0.8
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = battleship_1
+					}
+					requested_factories = 1
+					progress = 0.75
+					amount = 1
+				}
+			}
+			else_if = {
+				limit = { 
+					has_dlc = "Man the Guns"
+				}
+				hidden_effect = { 
+					create_equipment_variant = {
+						name = "Mississippi Class"
+						type = ship_hull_heavy_1
+						name_group = GRE_BB_HISTORICAL
+						allow_without_tech = yes
+						parent_version = 0
+						modules = { 
+							fixed_ship_battery_slot = ship_heavy_battery_1
+							fixed_ship_anti_air_slot = ship_anti_air_1 
+							fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+							fixed_ship_radar_slot = empty
+							fixed_ship_engine_slot = heavy_ship_engine_1 
+							fixed_ship_secondaries_slot = ship_secondaries_1
+							fixed_ship_armor_slot = ship_armor_bb_1
+							front_1_custom_slot = ship_anti_air_1
+							mid_1_custom_slot = ship_secondaries_1 
+							mid_2_custom_slot = empty
+							rear_1_custom_slot = empty
+						} 
+					}	
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_heavy_1
+						creator = "GRE" 
+						version_name = "Mississippi Class"
+					}
+					name = "Kilkis" 
+					requested_factories = 1
+					progress = 0.8
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_heavy_1
+						creator = "GRE" 
+						version_name = "Mississippi Class"
+					}
+					name = "Lemnos" 
+					requested_factories = 1
+					progress = 0.6
+					amount = 1
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+			modifier = {
+				num_of_naval_factories > 12
+				factor = 10
+			}
+		}
+	}
+	GRE_build_the_salamis = {
+		
+		icon = generic_naval
+
+		allowed = { 
+			original_tag = GRE
+			has_dlc = "Battle for the Bosporus"
+		}
+
+		available = {
+			#has_completed_focus = GRE_bolster_the_schachtplan
+		}
+
+		cost = 0
+
+		fire_only_once = yes
+
+		visible = {
+			NOT = { has_war_with = GER }
+		}
+
+		cancel_if_not_visible = yes
+
+		complete_effect = {
+			if = { 
+				limit = { 
+					NOT = { has_dlc = "Man the Guns" }
+				}
+				add_equipment_production = {
+					equipment = {
+						type = battleship_1
+					}
+					requested_factories = 1
+					progress = 0.2
+					amount = 1
+				}
+			}
+			else_if = {
+				limit = { 
+					has_dlc = "Man the Guns"
+				}
+				hidden_effect = { 
+					create_equipment_variant = {
+						name = "Salamis Class"
+						type = ship_hull_heavy_1
+						name_group = GRE_BB_HISTORICAL
+						parent_version = 0
+						allow_without_tech = yes
+						modules = { 
+							fixed_ship_battery_slot = ship_heavy_battery_2
+							fixed_ship_anti_air_slot = ship_anti_air_1 
+							fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+							fixed_ship_radar_slot = empty
+							fixed_ship_engine_slot = heavy_ship_engine_2 
+							fixed_ship_secondaries_slot = ship_secondaries_2
+							fixed_ship_armor_slot = ship_armor_bb_2 
+							front_1_custom_slot = ship_anti_air_1
+							mid_1_custom_slot = ship_secondaries_2
+							mid_2_custom_slot = empty
+							rear_1_custom_slot = ship_heavy_battery_2 
+						} 
+					}	
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_heavy_1
+						creator = "GRE" 
+						version_name = "Salamis Class"
+					}
+					name = "Salamis" 
+					requested_factories = 1
+					progress = 0.2
+					amount = 1
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+			modifier = {
+				num_of_naval_factories > 8
+				factor = 10
+			}
+		}
+	}
+}

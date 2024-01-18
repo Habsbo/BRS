@@ -1,0 +1,81 @@
+﻿capital = 4
+
+oob = "AUS_1936"
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+		set_air_oob = "AUS_1936_air_bba"
+		set_technology = {
+			aa_lmg = 1
+			engines_1 = 1
+			aircraft_construction = 1
+			iw_small_airframe = 1
+		}
+	else = {
+		set_air_oob = "AUS_1936_air_legacy"
+		set_technology = {
+			early_fighter = 1
+
+		}
+	}
+}
+set_research_slots = 3
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_engineers = 1
+	tech_support = 1
+	tech_mountaineers = 1
+	tech_trucks = 1
+	basic_train = 1
+}
+
+recruit_character = AUS_kurt_schuschnigg
+recruit_character = AUS_karl_renner
+recruit_character = AUS_arthur_seyss-inquart
+recruit_character = AUS_alfred_klahr
+recruit_character = AUS_karl_eglseer
+recruit_character = AUS_odilo_globocnik
+recruit_character = AUS_alexander_lohr
+recruit_character = AUS_paul_von_hegedus
+recruit_character = AUS_julius_yllam
+recruit_character = AUS_otto_meixner_von_zweienstamm
+recruit_character = AUS_wilhelm_zehner
+recruit_character = AUS_josef_teufl
+recruit_character = AUS_otto_schobel
+recruit_character = AUS_viktor_seebauer
+recruit_character = AUS_lothar_rendulic
+recruit_character = AUS_ernst_kaltenbrunner
+recruit_character = AUS_eduard_freiherr
+recruit_character = AUS_franz_bohme
+recruit_character = AUS_eugen_beyer
+recruit_character = AUS_julius_raab
+recruit_character = AUS_leopold_figl
+
+
+set_politics = {
+	ruling_party = social_liberation
+	last_election = "1930.11.9"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_popularities = {
+	liberal_anarchy = 0 #自由意志无政府
+	anarchist_communist = 5 #社会无政府主义
+	revolution_socialist = 0 #革命社会主义
+	scientific_socialist = 15 #科学社会主义
+	conservatism_socialist = 0 #保守社会主义
+	social_democracy = 0 #社会民主主义
+	social_liberation = 50 #社会自由主义
+	conservatism_democracy = 20 #保守民主主义
+	authoritarian = 0 #威权主义
+	fascist = 10 #民族主义/束棒
+	national_socialist = 0 #国家社会主义
+	supranational_socialist = 0 #超国家社会主义
+}
+
+set_stability = 0.50
+
+set_cosmetic_tag = AUS_archduchy

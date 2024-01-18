@@ -1,0 +1,34 @@
+﻿capital = 908
+
+OOB = "AFA_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	camelry = 1
+}
+
+add_manpower = 15000
+
+add_ideas = {
+	bba_AFA_skilled_desert_warriors
+}
+
+set_convoys = 10
+
+recruit_character = AFA_sultan_mohamed_yayyo_of_aussa
+
+set_politics = {
+	ruling_party = authoritarian
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	scientific_socialist = 5 #科学社会主义
+	social_democracy = 10 #社会民主主义
+	conservatism_democracy = 10 #保守民主主义
+	authoritarian = 65 #威权主义
+	fascist = 10 #民族主义/束棒
+}

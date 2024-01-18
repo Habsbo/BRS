@@ -1,0 +1,79 @@
+﻿capital = 459
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+recruit_character = ALG_ar
+recruit_character = ALG_acr
+recruit_character = ALG_mt
+recruit_character = ALG_stc
+recruit_character = ALG_aa2
+recruit_character = ALG_acgs
+recruit_character = ALG_ncm
+recruit_character = ALG_nccr
+recruit_character = ALG_coi
+recruit_character = ALG_democratic_guy
+recruit_character = ALG_acd2
+recruit_character = ALG_acas
+recruit_character = ALG_communist_guy
+recruit_character = ALG_ncs
+recruit_character = ALG_awt
+recruit_character = ALG_pot
+recruit_character = ALG_fascist_guy
+recruit_character = ALG_ai2
+recruit_character = ALG_nt
+recruit_character = ALG_aco2
+
+
+set_convoys = 20
+
+set_politics = {
+	ruling_party = authoritarian
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	liberal_anarchy = 0 #自由意志无政府
+	anarchist_communist = 0 #社会无政府主义
+	revolution_socialist = 0 #革命社会主义
+	scientific_socialist = 5 #科学社会主义
+	conservatism_socialist = 0 #保守社会主义
+	social_democracy = 10 #社会民主主义
+	social_liberation = 10 #社会自由主义
+	conservatism_democracy = 20 #保守民主主义
+	authoritarian = 45 #威权主义
+	fascist = 10 #民族主义/束棒
+	national_socialist = 0 #国家社会主义
+	supranational_socialist = 0 #超国家社会主义
+}
+
+create_country_leader = {
+	name = "Ahmed Ben Bella"
+	desc = ""
+	picture = GFX_portrait_Ahmed_Ben_Bella
+	ideology = despotism
+	traits = {
+		#
+	}
+}
+
+#国名&地区名
+set_cosmetic_tag = ALG_self_governance
+#国家精神
+add_ideas = {
+	FRA_influence_from_france
+	AMAZIGA_countries
+}
+#法律
+add_ideas = {
+	br_laws_dictatorship
+	br_laws_suffrage_prohibited
+	br_laws_apartheid
+	br_laws_religious_people
+	br_laws_bourgeoisie
+}
+#政治家

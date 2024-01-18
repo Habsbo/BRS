@@ -1,0 +1,117 @@
+﻿l_simp_chinese:
+#ideas
+ GRE_megali_idea: "伟大理想"
+#decisions
+ GRE_hellenic_ambitions: "希腊人的野望"
+ GRE_megali_idea_map_category_name: "伟大理想中的§G大希腊§!"
+ GRE_hellenic_rome_empire_map_category_name: "希腊化的§G罗马帝国§!"
+
+ GRE_election_category: "国王与选举"
+ GRE_election_category_desc: "议会选举将近，亚历山大国王的突然病逝使得局势变得突然紧张。"
+
+ GRE_civil_war_divisions_counter_full_breakdown: "如果现在爆发内战，保皇派将马上获得[?GRE.gre_civil_war_divisions_counter_var|+0]§H师§!。\n"
+ GRE_civil_war_divisions_counter_icon_value: "[?GRE.gre_civil_war_divisions_counter_var|0H]"
+ GRE_republic_civil_war_divisions_counter_full_breakdown: "如果现在爆发内战，共和派将马上获得[?GRE.gre_republic_civil_war_divisions_counter_var|+0]§H师§!。\n"
+ GRE_republic_civil_war_divisions_counter_icon_value: "[?GRE.gre_republic_civil_war_divisions_counter_var|0H]"
+ GRE_civil_war_threat_icon_value: "§R[?GRE.gre_civil_war_threat_var|0H]%§!"
+ GRE_civil_war_threat_full_breakdown: "当危机度达到§R100%§!，事态将超出保皇派的掌控！"
+
+ br_gre_cwdc_increased_rep: "将有§G3§!个师被§R共和派§!的将领控制"
+ br_gre_cwdc_increased_knd: "将有§G3§!个师陆续被§G君主派§!的将领控制"
+ br_gre_cwt_increased: "§Y王室危机度§!增加§R1%§!"
+ br_gre_cwt_increased_3: "§Y王室危机度§!增加§R3%§!"
+ br_gre_cwt_increased_5: "§Y王室危机度§!增加§R5%§!"
+ br_gre_cwt_decreased: "§Y王室危机度§!降低§G1%§!"
+ br_gre_cwt_decreased_3: "§Y王室危机度§!降低§G3%§!"
+ br_gre_cwt_decreased_5: "§Y王室危机度§!降低§G5%§!"
+
+ GRE_the_throne_of_crisis: "$GRE$王位危机"
+ GRE_the_throne_of_crisis_desc: "$GRE$王位危机"
+ gre_civil_war_threat_icon_var_value_oh: "§Y王室危机度§!超过§R100%§!"
+
+ GRE_worker_strikes: "$GRE$劳工危机"
+ GRE_worker_strikes_desc: "$GRE$劳工危机"
+ GRE_negotiations_of_strikes: "与劳工谈判"
+ GRE_negotiations_of_strikes_desc: "与劳工谈判"
+ GRE_suppress_socialism: "查禁劳工运动"
+ GRE_suppress_socialism_desc: "查禁劳工运动"
+
+ GRE_rehired_venizelos: "重新起用§Y韦尼泽洛斯§!"
+ GRE_put_venizelos_under_house_arrest: "软禁§Y韦尼泽洛斯§!"
+ GRE_put_venizelos_under_house_arrest_desc: "§Y韦尼泽洛斯§!"
+ GRE_exile_venizelos: "流放§Y韦尼泽洛斯§!"
+
+ br_GRE_venizelos_hired_flag: "§Y韦尼泽洛斯§!得到起用"
+ br_GRE_venizelos_arrested_flag: "§Y韦尼泽洛斯§!遭到软禁"
+ br_GRE_venizelos_exiled_flag: "§Y韦尼泽洛斯§!遭到流放"
+ br_gre_venizelos_exiled_happened: "§Y韦尼泽洛斯§!将遭到流放！如果他死于流亡途中，这将对共和派造成巨大打击，同时也意味着拉拢亲君主的温和宪政派不会谋求与国王政府合作。"
+ GRE_conciliate_militaries: "安抚§Y陆军§!"
+ GRE_assign_royalist_officers: "指派§G效忠派§!军官接管§Y陆军§!"
+ GRE_assign_republicans_officers: "§G共和派§!军官接管§Y陆军§!"
+ GRE_assign_republicans_officers_desc: "由于§Y$GRE_sophoklis_venizelos$§!的巨大影响力，立宪共和的主张仍遗存有广阔的生存土壤，青中年军官对于共和派的同情和对§Y$GRE_sophoklis_venizelos$§!的仰慕使得他们对没有君主制的民主制有不切实际的幻想，并妄图通过渗透军队来颠覆王国政权。"
+
+ GRE_declare_be_a_republic: "宣言重建共和国"
+ gre_republic_civil_war_divisions_counter_var_more: "共和派拥有更多的军队支持,且有超过5个师效忠"
+
+ GRE_ensure_loyalty_of_militaries_state_target: "确保军队的忠诚"
+
+#focus
+ 
+#events
+ br_hellas.1.title: "英王室流亡至$GRE$"
+ br_hellas.1.desc: ""
+ br_hellas.1.a: "这里不欢迎英国人。"
+ br_hellas.1.b: "欢迎我们永远的盟友。"
+
+ br_hellas.2.title: "$GRE_george_ii$夺取王位"
+ br_hellas.2.desc: ""
+ br_hellas.2.a: "吾王万岁！"
+
+ br_hellas.3.title: "阿尔伯特亲王登基"
+ br_hellas.3.desc: ""
+ br_hellas.3.a: "吾皇万岁！"
+
+ br_hellas.4.title: "军队发起政变"
+ br_hellas.4.desc: ""
+ br_hellas.4.a: "$GRE$的未来是更美好的明天"
+ br_hellas.4.b: ""
+ 
+ br_hellas.5.title: "共和派主导政府"
+ br_hellas.5.desc: ""
+ br_hellas.5.a: "人民民主共和！"
+
+
+###王子事件链
+ br_hellas.101.title: "遗腹子诞生"
+ br_hellas.101.desc: "先国王亚历山大一世的遗孀，“曼诺斯”女士隆起的肚子终于有了结果。与之前不同，这位小王子十分健康，看上去会是国王最合适的继承者，同时他母亲在政治上的无关紧要使得我们更容易有机会去稳定国家。但是先国王的兄长显然对此嗤之以鼻。"
+ br_hellas.101.a: "$GRE_george_ii$国王，本来他才是正统！"
+ br_hellas.101.b: "想想亚历山大国王，他支持的韦相为我们赢得了如今的希腊。支持小王子！"
+
+
+#伟大理想
+ br_megali_idea.1.title: "[GRE.GetName]要求我们就士麦那等地的主权退让"
+ br_megali_idea.1.desc: ""
+ br_megali_idea.1.a: "是可忍，熟不可忍！"
+ br_megali_idea.1.b: "等等，难道贵国不想听听我们的方案？"
+ br_megali_idea.1.c: "我们无力对抗希腊"
+ br_megali_idea.2.title: "[FORM.GetName]拒绝了我们的要求"
+ br_megali_idea.2.desc: ""
+ br_megali_idea.2.a: "揍他！"
+ br_megali_idea.3.title: "[FORM.GetName]要求对话"
+ br_megali_idea.3.desc: ""
+ br_megali_idea.3.a: "这样的协议我能接受。"
+ br_megali_idea.3.b: "如果我们拒绝让步呢？"
+ br_megali_idea.4.title: "[FORM.GetName]屈服"
+ br_megali_idea.4.desc: ""
+ br_megali_idea.4.a: "这才像话。"
+
+
+ br_hellas..title: "$GRE$共产党的势力在壮大"
+ br_hellas..desc: ""
+ br_hellas..a: "或许······那是更美好的明天？"
+ br_hellas..b: "一派胡言"
+
+ br_hellas..title: ""
+ br_hellas..desc: ""
+ br_hellas..a: ""
+ br_hellas..b: ""

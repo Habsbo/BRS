@@ -1,0 +1,1286 @@
+characters={
+	GRE_konstantinos_demertzis={ #德莫齐斯
+		name=GRE_konstantinos_demertzis
+		portraits={
+			civilian={
+				large="GFX_portrait_gre_konstantinos_demertzis"
+			}
+		}
+		country_leader={
+			ideology=centrism
+			traits={ monarchist_puppet }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	GRE_nikos_zachariadis={ #扎哈里亚基斯
+		name=GRE_nikos_zachariadis
+		portraits={
+			civilian={
+				large="GFX_portrait_gre_nikos_zachariadis"
+			}
+		}
+		country_leader={
+			ideology=stalinism
+			traits={ reluctant_stalinist }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	GRE_george_mercouris={ #默库里斯
+		name=GRE_george_mercouris
+		portraits={
+			civilian={
+				large="GFX_portrait_gre_george_mercouris"
+			}
+		}
+		country_leader={
+			ideology=gen_nazism
+			traits={ polemarch likes_turkey }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	GRE_ioannis_metaxas={ #梅塔克萨斯
+		instance={
+			allowed={ NOT = { has_dlc = "Battle for the Bosporus" } }
+			name=GRE_ioannis_metaxas
+			portraits={
+				civilian={
+					large=GFX_portrait_GRE_ioannis_metaxas
+				}
+			}
+			country_leader={
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance={
+			allowed = { has_dlc = "Battle for the Bosporus" }
+			name=GRE_ioannis_metaxas
+			portraits={
+				army={
+					small="GFX_idea_gre_ioannis_metaxas"
+				}
+				civilian={
+					large=GFX_portrait_GRE_ioannis_metaxas
+				}
+			}
+			advisor={
+				slot = political_advisor
+				idea_token = GRE_ioannis_metaxas
+				allowed = {
+					original_tag = GRE
+					has_dlc = "Battle for the Bosporus"
+				}
+				available = {
+					AND = {
+						OR = {
+							custom_trigger_tooltip = {
+								tooltip = GRE_monarchists_friendly_or_loyal
+								check_variable = {
+									var = GRE_monarchist_loyalty
+									value = 1.000
+									compare = greater_than_or_equals 
+								}
+							}
+							custom_trigger_tooltip = {
+								tooltip = GRE_fascists_friendly_or_loyal
+								check_variable = {
+									var = GRE_fascist_loyalty
+									value = 1.000
+									compare = greater_than_or_equals 
+								}
+							}
+						}
+						NOT = {
+							has_country_leader = {
+								character = GRE_ioannis_metaxas
+								ruling_only = yes 
+							}
+							has_country_flag = GRE_metaxas_is_dead_crab_rave_flag 
+						}
+					}
+				}
+				traits = {
+					devoted_corporatist 
+				}
+			}
+			country_leader = {
+				ideology = despotism
+				expire="1965.1.1.1"
+				traits = { 
+					arkhigos
+				}
+			}
+			country_leader = {
+				expire = "1965.1.1"
+				ideology = fascism_ideology
+				traits = {
+					arkhigos
+				}
+			}
+		}
+	}
+
+	GRE_markos_vafiadis={ #瓦菲阿迪
+		instance={
+			allowed={ has_dlc = "Battle for the Bosporus" }
+			name=GRE_markos_vafiadis
+			portraits={
+				army={
+					large="GFX_portrait_GRE_markos_vafiadis"
+					small=GFX_portrait_GRE_markos_vafiadis_small
+				}
+				civilian={
+					large=GFX_portrait_GRE_markos_vafiadis
+				}
+			}
+			advisor={
+				slot = political_advisor
+				idea_token = GRE_markos_vafiadis
+				allowed = {
+					OR = {
+						original_tag = GRE
+						original_tag = SWE
+					}
+					has_dlc = "Battle for the Bosporus"
+				}
+				available = {
+					OR = {
+						AND = {
+							custom_trigger_tooltip = {
+								tooltip = GRE_communists_friendly_or_loyal
+								check_variable = {
+									var = GRE_communist_loyalty
+									value = 1.000
+									compare = greater_than_or_equals 
+								}
+							}
+						}
+						SWE_refuge_for_revolutionaries_trigger = yes
+					}
+				}
+				traits = {
+					guerilla_warfare_expert 
+				}
+			}
+		}
+		instance={
+			allowed={ NOT = { has_dlc = "Battle for the Bosporus" } }
+			name=GRE_markos_vafiadis
+			portraits={
+				civilian={
+					large=GFX_portrait_GRE_markos_vafiadis
+				}
+			}
+			country_leader={
+				ideology=marxism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+
+	GRE_konstantinos_tsaldaris={ #康斯坦丁诺斯·察尔扎里斯
+		instance={
+			allowed={ has_dlc = "Battle for the Bosporus" }
+			name=GRE_konstantinos_tsaldaris
+			portraits={
+				army={
+					small="GFX_idea_gre_konstantinos_tsaldaris"
+				}
+			}
+			advisor={
+				slot = political_advisor
+				idea_token = GRE_konstantinos_tsaldaris
+				allowed = {
+					original_tag = GRE
+					has_dlc = "Battle for the Bosporus"
+				}
+				available = {
+					custom_trigger_tooltip = {
+						tooltip = GRE_monarchists_friendly_or_loyal
+						check_variable = {
+							var = GRE_monarchist_loyalty
+							value = 1.000
+							compare = greater_than_or_equals 
+						}
+					}
+				}
+				traits = {
+					sharp_tongued_lawyer 
+				}
+			}
+		}
+		instance={
+			allowed={ NOT = { has_dlc = "Battle for the Bosporus" } }
+			name=GRE_konstantinos_tsaldaris
+			portraits={
+				civilian={
+					large=GFX_portrait_GRE_konstantinos_tsaldaris
+				}
+			}
+			country_leader={
+				ideology=conservatism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+
+	GRE_georgios_kosmidis={ #乔治·科斯米迪斯
+		name=GRE_georgios_kosmidis
+		portraits={
+			civilian={
+				large="GFX_portrait_gre_georgios_kosmidis"
+			}
+		}
+		country_leader={
+			ideology=nazism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	GRE_charalambos_katsimitros={ #哈拉兰博斯·卡茨米特罗斯
+		name=GRE_charalambos_katsimitros
+		portraits={
+			army={
+				large="GFX_portrait_gre_charalambos_katsimitros"
+				small=GFX_portrait_GRE_charalambos_katsimitros_small
+			}
+		}
+		corps_commander={
+			traits={ inflexible_strategist trait_cautious war_hero trait_GRE_stauch_monarchist trickster trait_mountaineer }
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=304
+		}
+	}
+
+	GRE_markos_drakos={ #马科斯·兹拉科斯
+		instance = {
+			allowed = {
+				has_dlc = "Battle for the Bosporus"
+			}
+			name=GRE_markos_drakos
+			portraits={
+				army={
+					large="GFX_portrait_gre_markos_drakos"
+					small=GFX_portrait_GRE_markos_drakos_small
+				}
+			}
+			corps_commander={
+				traits={ career_officer infantry_officer trickster trait_mountaineer }
+				skill=3
+				attack_skill=1
+				defense_skill=3
+				planning_skill=3
+				logistics_skill=3
+				legacy_id=306
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Battle for the Bosporus" }
+			}
+			name=GRE_markos_drakos
+			portraits={
+				army={
+					large=GFX_portrait_GRE_markos_drakos
+					small=GFX_portrait_GRE_markos_drakos_small
+				}
+			}
+			corps_commander={
+				traits={ hill_fighter }
+				skill=3
+				attack_skill=1
+				defense_skill=3
+				planning_skill=3
+				logistics_skill=3
+				legacy_id=-1
+			}
+		}
+	}
+
+	GRE_regency_council = { #摄政议会
+		name = GRE_regency_council
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_bul_regency_council"
+			}
+		}
+
+		country_leader={
+			ideology=conservatism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	### Empty characters -> Can become Unit Leaders later
+
+	GRE_theodoros_pangalos = { #塞奥佐罗斯·潘加洛斯
+		name=GRE_theodoros_pangalos
+		portraits={
+			army={
+				large="GFX_portrait_gre_theodoros_pangalos"
+				small=GFX_portrait_GRE_theodoros_pangalos_small #Can become a unit leader later
+			}
+		}
+	}
+
+	GRE_dimitrios_psarros = { #季米特里奥斯·普萨罗斯
+		name=GRE_dimitrios_psarros
+		portraits={
+			army={
+				large="GFX_portrait_gre_dimitrios_psarros"
+				small=GFX_portrait_GRE_dimitrios_psarros_small #Can become a unit leader later
+			}
+		}
+	}
+
+	GRE_panagiotis_demestichas = { #帕纳伊奥蒂斯·德米斯蒂奇
+		name=GRE_panagiotis_demestichas
+		portraits={
+			army={
+				large="GFX_portrait_gre_panagiotis_demestichas"
+				small=GFX_portrait_GRE_panagiotis_demestichas_small #Can become a unit leader later
+			}
+		}
+	}
+
+	GRE_nikolaos_plastiras={ #尼古拉斯·普拉斯提拉斯
+		name=GRE_nikolaos_plastiras
+		portraits={
+			army={
+				small="GFX_idea_gre_nikolaos_plastiras"
+				large="GFX_portrait_gre_nikolaos_plastiras" #Can become unit leader later
+			}
+		}
+		advisor={
+			name = GRE_nikolaos_plastiras
+			slot = army_chief
+			idea_token = GRE_nikolaos_plastiras
+			ledger = army
+			allowed = {
+				original_tag = GRE
+			}
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = GRE_republicans_friendly_or_loyal
+					check_variable = {
+						var = GRE_republican_loyalty
+						value = 1.000
+						compare = greater_than_or_equals
+					}
+				}
+			}
+			traits = {
+				army_chief_maneuver_3
+			}
+			cost = 200
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	GRE_napoleon_zervas={ #拿破仑·泽瓦斯
+		name=GRE_napoleon_zervas
+		portraits={
+			army={
+				small="GFX_idea_gre_napoleon_zervas"
+				large="GFX_portrait_GRE_napoleon_zervas" #Can become unit leader later
+			}
+		}
+		advisor={
+			name = GRE_napoleon_zervas
+			slot = high_command
+			idea_token = GRE_napoleon_zervas
+			ledger = army
+			allowed = {
+				original_tag = GRE
+			}
+			available = {
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = GRE_republicans_friendly_or_loyal
+						check_variable = {
+							var = GRE_republican_loyalty
+							value = 1.000
+							compare = greater_than_or_equals
+						}
+					}
+					custom_trigger_tooltip = {
+						tooltip = GRE_fascists_friendly_or_loyal
+						check_variable = {
+							var = GRE_fascist_loyalty
+							value = 1.000
+							compare = greater_than_or_equals
+						}
+					}
+				}
+			}
+			traits = {
+				army_infantry_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	GRE_dimitrios_oikonomou={ #季米特里奥斯·奥科诺莫
+		name=GRE_dimitrios_oikonomou
+		portraits={
+			army={
+				small="GFX_idea_gre_dimitrios_oikonomou"
+			}
+		}
+		advisor={	
+			slot = high_command
+			idea_token = GRE_dimitrios_oikonomou
+			ledger = navy
+			allowed = {
+				original_tag = GRE
+			}
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = GRE_monarchists_friendly_or_loyal
+					check_variable = {
+						var = GRE_monarchist_loyalty
+						value = 1.000
+						compare = greater_than_or_equals
+					}
+				}
+			}
+			traits = {
+				air_naval_strike_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	GRE_konstantinos_ventiris={ #康斯坦丁诺斯·文蒂里斯
+		name=GRE_konstantinos_ventiris
+			portraits={
+				army={
+					small="GFX_idea_gre_konstantinos_ventiris"
+				}
+			}
+			advisor={
+				name = GRE_konstantinos_ventiris
+				slot = theorist
+				idea_token = GRE_konstantinos_ventiris
+				ledger = army
+
+				allowed = {
+					original_tag = GRE
+				}
+				
+				traits = {
+					grand_battle_plan_expert
+				}
+
+				cost = 150
+			}
+	}
+
+	GRE_nikos_beloyannis={ #尼科斯·贝罗亚尼斯
+		name=GRE_nikos_beloyannis
+		portraits={
+			army={
+				small="GFX_idea_gre_nikos_beloyannis"
+			}
+		}
+		advisor={
+			name = GRE_nikos_beloyannis
+
+			slot = high_command
+			idea_token = GRE_nikos_beloyannis
+			ledger = army
+
+			allowed = {
+				original_tag = GRE
+			}
+
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = GRE_communists_friendly_or_loyal
+					check_variable = {
+						var = GRE_communist_loyalty
+						value = 1.000
+						compare = greater_than_or_equals
+					}
+				}
+			}
+
+			traits = {
+				army_regrouping_2
+			}
+			
+			ai_will_do = {
+				factor = 1.000
+			}
+
+			cost = 100
+		}
+	}
+
+	GRE_alexandros_sakellariou={ #历山德罗斯·萨克拉里乌
+		name=GRE_alexandros_sakellariou
+		portraits={
+			army={
+				small="GFX_idea_gre_alexandros_sakellariou"
+				large=GFX_portrait_GRE_alexandros_sakellariou
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = GRE_alexandros_sakellariou
+			name = GRE_alexandros_sakellariou
+
+			allowed = {
+				original_tag = GRE
+			}
+
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = GRE_monarchists_friendly_or_loyal
+					check_variable = {
+						var = GRE_monarchist_loyalty
+						value = 1.000
+						compare = greater_than_or_equals
+					}
+				}
+			}
+
+			traits = {
+				navy_chief_decisive_battle_2
+			}
+			
+			ai_will_do = {
+				factor = 1.000
+			}
+			
+			cost = 100
+		}
+
+		navy_leader={
+			traits={ media_personality bold caustic_personality fleet_protector }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			maneuvering_skill=3
+			coordination_skill=2
+			legacy_id=-1
+		}
+	}
+
+	GRE_spyridon_avgeris={ #斯皮里宗·阿夫耶里斯
+		name=GRE_spyridon_avgeris
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_anti_submarine_eastern_european_2d"
+			}
+		}
+		advisor={
+			cost = 100	
+			slot = theorist
+			idea_token = GRE_spyridon_avgeris
+			ledger = navy
+			allowed = { original_tag = GRE }
+			traits = {
+				naval_theorist
+			}
+		}
+	}
+
+	GRE_panagiotis_gazis={ #帕纳伊奥蒂斯·加齐斯
+		name=GRE_panagiotis_gazis
+		portraits={
+			army={
+				small="GFX_idea_gre_panagiotis_gazis"
+			}
+		}
+		advisor={
+			name = GRE_panagiotis_gazis
+
+			slot = air_chief
+			idea_token = GRE_panagiotis_gazis
+
+			allowed = {
+				original_tag = GRE
+			}
+			traits = {
+				air_chief_reform_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	GRE_alexandros_papagos={ #亚历山大·帕帕戈斯
+		name=GRE_alexandros_papagos
+		portraits={
+			army={
+				small="GFX_idea_gre_alexandros_papagos"
+				large="GFX_portrait_gre_alexandros_papagos"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = GRE_alexandros_papagos
+			allowed = {
+				original_tag = GRE
+			}
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = GRE_monarchists_friendly_or_loyal
+					check_variable = {
+						var = GRE_monarchist_loyalty
+						value = 1.000
+						compare = greater_than_or_equals
+					}
+				}
+			}
+			traits = {
+				army_chief_defensive_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = GRE_alexandros_papagos_theorist
+			ledger = army
+			allowed = {
+				original_tag = GRE
+			}
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = GRE_monarchists_friendly_or_loyal
+					check_variable = {
+						var = GRE_monarchist_loyalty
+						value = 1.000
+						compare = greater_than_or_equals
+					}
+				}
+			}
+			traits = {
+				military_theorist
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+		field_marshal={
+			traits={ old_guard inflexible_strategist career_officer war_hero trait_GRE_stauch_monarchist trait_mountaineer }
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=300
+		}
+	}
+
+	GRE_petros_voulgaris={ #佩特罗斯·沃尔加里斯
+		name=GRE_petros_voulgaris
+		portraits={
+			army={
+				small="GFX_idea_gre_petros_voulgaris"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = GRE_petros_voulgaris
+			name = "GRE_petros_voulgaris"
+			allowed = {
+				original_tag = GRE
+			}
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = GRE_republicans_friendly_or_loyal
+					check_variable = {
+						var = GRE_republican_loyalty
+						value = 1.000
+						compare = greater_than_or_equals
+					}
+				}
+			}
+			traits = {
+				navy_chief_maneuver_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	GRE_eleftherios_venizelos={ #埃莱夫塞里奥斯·韦尼泽洛斯
+		name=GRE_eleftherios_venizelos
+		portraits={
+			civilian={
+				large="GFX_portrait_gre_eleftherios_venizelos"
+				small=GFX_portrait_GRE_eleftherios_venizelos_small
+			}
+		}
+
+		advisor={
+			slot = theorist
+			idea_token = GRE_eleftherios_venizelos
+			ledger = air
+			allowed = {
+				original_tag = GRE
+			}
+			traits = {
+				air_warfare_theorist
+			}
+			cost = 100
+		}
+
+		country_leader={
+			ideology=liberalism
+			traits={ ethnarch }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	GRE_georgios_tsolakoglou={ #乔治斯·楚拉科格卢
+		name=GRE_georgios_tsolakoglou
+		portraits={
+			army={
+				small="GFX_idea_gre_georgios_tsolakoglou"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = GRE_georgios_tsolakoglou
+			allowed = {
+				original_tag = GRE
+			}
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = GRE_fascists_friendly_or_loyal
+					check_variable = {
+						var = GRE_fascist_loyalty
+						value = 1.000
+						compare = greater_than_or_equals
+					}
+				}
+			}
+			traits = {
+				army_chief_offensive_1
+			}
+			
+			ai_will_do = {
+				factor = 1.000
+			}
+			
+			cost =  50
+		}
+	}
+
+	GRE_vasilios_tsarpalis={ #瓦西利奥斯·察尔帕利斯
+		name=GRE_vasilios_tsarpalis
+		portraits={
+			army={
+				small="GFX_idea_gre_vasilios_tsarpalis"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = GRE_vasilios_tsarpalis
+			allowed = {
+				original_tag = GRE
+			}
+			traits = {
+				air_chief_safety_2
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+
+			cost = 100
+		}
+	}
+	GRE_epameinondas_kavvadias={ #伊巴密浓达·卡夫瓦迪亚斯
+		name=GRE_epameinondas_kavvadias
+		portraits={
+			army={
+				small="GFX_idea_gre_epameinondas_kavvadias"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = GRE_epameinondas_kavvadias
+			ledger = air
+			allowed = {
+				original_tag = GRE
+			}
+			traits = {
+				navy_screen_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	GRE_marinos_mitralexis={ #马里诺斯·密特拉列克西斯
+		name=GRE_marinos_mitralexis
+		portraits={
+			army={
+				small="GFX_idea_generic_air_warfare_theorist_south_american_2d"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = GRE_marinos_mitralexis
+			ledger = air
+			allowed = {
+				original_tag = GRE
+			}
+			traits = {
+				air_warfare_theorist
+			}
+		}
+	}
+
+	GRE_georgios_kosmas={ #乔治·科斯马斯
+		name=GRE_georgios_kosmas
+		portraits={
+			army={
+				small="GFX_idea_gre_giorgios_kosmas"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = GRE_georgios_kosmas
+			ledger = navy
+			allowed = {
+				original_tag = GRE
+			}
+			traits = {
+				army_artillery_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	GRE_aristeidis_moraitinis={ #阿里斯蒂迪斯·莫赖蒂尼斯
+		name=GRE_aristeidis_moraitinis
+		portraits={
+			army={
+				small="GFX_idea_generic_air_europe_2"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = GRE_aristeidis_moraitinis
+			ledger = air
+			allowed = {
+				original_tag = GRE
+			}
+			traits = {
+				air_bomber_interception_2
+			}
+				cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	GRE_aris_velouchiotis={ #阿里斯·维勒奇奥蒂斯
+		name=GRE_aris_velouchiotis
+		portraits={
+			army={
+				small="GFX_idea_gre_aris_velouchiotis"
+				large = "GFX_portrait_gre_aris_velouchiotis" #Can become unit leader later
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = GRE_aris_velouchiotis
+			name = "GRE_aris_velouchiotis"
+			allowed = {
+				original_tag = GRE
+			}
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = GRE_communists_friendly_or_loyal
+					check_variable = {
+						var = GRE_communist_loyalty
+						value = 1.000
+						compare = greater_than_or_equals
+					}
+				}
+			}
+			traits = {
+				army_chief_defensive_2
+			}
+
+			ai_will_do = {
+				factor = 1.000
+			}
+			
+			cost = 100
+		}
+	}
+
+	GRE_aristeidis_dimitratos={ #阿里斯蒂迪斯·季米特拉托斯
+		name=GRE_aristeidis_dimitratos
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_south_america_1"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = GRE_aristeidis_dimitratos
+			allowed = {
+				original_tag = GRE
+			}
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = GRE_monarchists_friendly_or_loyal
+					check_variable = {
+						var = GRE_monarchist_loyalty
+						value = 1.000
+						compare = greater_than_or_equals 
+					}
+				}
+			}
+			traits = {
+				war_industrialist 
+			}
+		}
+	}
+
+	GRE_xenophon_giosmas={ #色诺芬·吉欧斯玛斯
+		name=GRE_xenophon_giosmas
+		portraits={
+			army={
+				small="GFX_idea_gre_xenophon_giosmas"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = GRE_xenophon_giosmas
+			allowed = {
+				original_tag = GRE
+			}
+			available = {
+				#
+			}
+			traits = {
+				national_socialist_paramilitarist 
+			}
+		}
+	}
+
+	GRE_georgios_papandreou={ #乔治·帕潘德里欧
+		name=GRE_georgios_papandreou
+		portraits={
+			army={
+				small="GFX_idea_gre_george_papandreou"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = GRE_georgios_papandreou
+			name = GRE_georgios_papandreou
+			allowed = {
+				original_tag = GRE
+			}
+			available = {
+				#
+			}
+			traits = {
+				resolute_social_democrat 
+			}
+		}
+	}
+
+	GRE_father_dimistrios={ #季米特里奥斯神父
+		name=GRE_father_dimistrios
+		portraits={
+			army={
+				small="GFX_idea_gre_father_dimistrios"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = GRE_father_dimistrios
+			allowed = {
+				original_tag = GRE
+				has_dlc = "La Resistance"
+			}
+			available = {
+				has_intelligence_agency = yes 
+			}
+			traits = {
+				head_of_intelligence 
+			}
+		}		
+	}
+
+	GRE_sophoklis_venizelos={ #索福克利斯·韦尼泽洛斯
+		name=GRE_sophoklis_venizelos
+		portraits={
+			army={
+				small="GFX_idea_gre_sophoklis_venizelos"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = GRE_sophoklis_venizelos
+			allowed = {
+				original_tag = GRE
+			}
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = GRE_republicans_friendly_or_loyal
+					check_variable = {
+						var = GRE_republican_loyalty
+						value = 1.000
+						compare = greater_than_or_equals 
+					}
+				}
+			}
+			traits = {
+				backroom_backstabber 
+			}
+		}
+	}
+
+	GRE_dimitris_glinos={ #季米特里斯·格利诺斯
+		name=GRE_dimitris_glinos
+		portraits={
+			army={
+				small="GFX_idea_gre_dimitris_glinos"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = GRE_dimitris_glinos
+			allowed = {
+				OR = {
+					original_tag = GRE
+					original_tag = SWE
+				}
+			}
+			available = {
+				#
+			}
+			traits = {
+				marxist_academic 
+			}
+		}		
+	}
+
+	GRE_evripidis_bakirtris={ #厄里皮蒂斯·巴吉尔奎斯
+		name=GRE_evripidis_bakirtris
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_europe_3"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = GRE_evripidis_bakirtris
+			allowed = {
+				original_tag = GRE
+			}
+			traits = {
+				war_industrialist 
+			}
+		}
+	}
+
+	GRE_aristotle_onassis={ #亚里士多德·奥纳西斯
+		name=GRE_aristotle_onassis
+		portraits={
+			army={
+				small="GFX_idea_gre_aristotle_onassis"
+			}
+			civilian = {
+				large = GFX_portrait_GRE_aristotle_onassis #Can become country leader later
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = GRE_aristotle_onassis
+			allowed = {
+				original_tag = GRE
+			}
+			available = {
+				has_country_flag = onassis_proposition_accepted 
+				NOT = {
+					has_country_leader = {
+						character = GRE_aristotle_onassis
+						ruling_only = yes 
+					}
+				}
+			}
+			visible = {
+				#has_country_flag = onassis_proposition_accepted 
+			}
+			traits = {
+				gifted_shipping_magnate 
+			}
+		}
+	}
+	
+	GRE_dimitrios_holevas={ #季米特里奥斯·霍莱瓦斯
+		name=GRE_dimitrios_holevas
+		portraits={
+			army={
+				small="GFX_idea_gre_dimitrios_holevas"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = GRE_dimitrios_holevas
+			allowed = {
+				OR = {
+					original_tag = GRE
+					original_tag = SWE
+				}
+			}
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = GRE_communists_friendly_or_loyal
+					check_variable = {
+						var = GRE_communist_loyalty
+						value = 1.000
+						compare = greater_than_or_equals 
+					}
+				}
+			}
+			traits = {
+				marxist_priest 
+			}
+		}
+	}
+
+	GRE_emmanouil_tsouderos={ #埃马努伊尔·楚泽罗斯
+		name=GRE_emmanouil_tsouderos
+		portraits={
+			army={
+				small="GFX_idea_gre_emmanouil_tsouderos"
+			}
+			civilian={
+				large="GFX_portrait_gre_emmanouil_tsouderos" #Can become country leader later
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = GRE_emmanouil_tsouderos
+			allowed = {
+				original_tag = GRE
+			}
+			available = {
+				NOT = {
+					OR = {
+						#has_government = communism 
+						has_country_leader = {
+							character = GRE_emmanouil_tsouderos
+							ruling_only = yes 
+						}
+					}
+				}
+			}
+			traits = {
+				financial_expert 
+			}
+		}
+	}
+
+	GRE_damaskinos={ #达马斯基诺斯
+		name=GRE_damaskinos
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_europe_5"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = GRE_damaskinos
+			allowed = {
+				original_tag = GRE
+			}
+			traits = {
+				compassionate_gentleman 
+			}
+		}
+	}
+
+	GRE_konstantinos_maniadakis={ #康斯坦丁诺斯·马尼亚扎基斯
+		name=GRE_konstantinos_maniadakis
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_south_america_3"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = GRE_konstantinos_maniadakis
+			allowed = {
+				original_tag = GRE
+				has_dlc = "Battle for the Bosporus"
+			}
+			available = {
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = GRE_monarchists_friendly_or_loyal
+						check_variable = {
+							var = GRE_monarchist_loyalty
+							value = 1.000
+							compare = greater_than_or_equals 
+						}
+					}
+					custom_trigger_tooltip = {
+						tooltip = GRE_fascists_friendly_or_loyal
+						check_variable = {
+							var = GRE_fascist_loyalty
+							value = 1.000
+							compare = greater_than_or_equals 
+						}
+					}
+				}
+			}
+			traits = {
+				prince_of_terror 
+			}
+		}
+	}
+}

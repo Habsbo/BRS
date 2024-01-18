@@ -1,0 +1,37 @@
+﻿capital = 183
+
+#oob = ""
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+set_convoys = 5
+
+set_politics = {
+	ruling_party = conservatism_democracy
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_popularities = {
+	social_democracy = 10 #社会民主主义
+	social_liberation = 20 #社会自由主义
+	conservatism_democracy = 70 #保守民主主义
+}
+
+
+set_autonomy = {
+	target = RAJ
+	autonomous_state = autonomy_colony
+	freedom_level = 0.35
+}
+set_autonomy = {
+	target = SAF
+	autonomous_state = autonomy_dominion
+	freedom_level = 0.4
+}
+
+set_cosmetic_tag = CYP_UK_exiled

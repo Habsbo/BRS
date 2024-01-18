@@ -1,0 +1,165 @@
+bookmarks = {
+	bookmark = {
+		name = "br_spanish_civil_war"
+		desc = "br_spanish_civil_war_DESC"
+		date = 1936.1.1.12
+		picture = "GFX_select_date_1936"
+		default_country = "SPR"
+		default = yes
+
+		"FRA"={
+			history = "FRA_GATHERING_STORM_DESC"
+			ideology = democratic
+			#available = { has_dlc = "La Resistance" } 
+			ideas = {
+				#
+			}
+			focuses = {
+				#
+			}
+		}
+
+		"SPR"={
+			history = "FRA_GATHERING_STORM_DESC"
+			ideology = authoritarian
+			#available = { has_dlc = "La Resistance" } 
+			ideas = {
+				#
+			}
+			focuses = {
+				#
+			}
+		}
+		
+		"POR"={
+			history = "FRA_GATHERING_STORM_DESC"
+			ideology = authoritarian
+			#available = { has_dlc = "La Resistance" } 
+			ideas = {
+				#
+			}
+			focuses = {
+				#
+			}
+		}
+
+		"CAT"={
+			history = "FRA_GATHERING_STORM_DESC"
+			ideology = anarchist_communist
+			#available = { has_dlc = "La Resistance" } 
+			ideas = {
+				#
+			}
+			focuses = {
+				#
+			}
+		}
+
+		"HUN"={
+			history = "FRA_GATHERING_STORM_DESC"
+			ideology = conservatism_democracy
+			#available = { has_dlc = "La Resistance" } 
+			ideas = {
+				#
+			}
+			focuses = {
+				#
+			}
+		}
+
+		"---"={
+			history = "OTHER_GATHERING_STORM_DESC"
+		}
+
+
+		# minors from DLC ####
+		"NAV"={
+			minor = yes
+			history = "br_spanish_civil_war_DESC"
+			ideology = social_democracy
+			ideas = {
+				#
+			}
+			focuses = {
+				#
+			}
+		}
+
+		"ALG"={
+			minor = yes
+			history = "br_spanish_civil_war_DESC"
+			ideology = social_democracy
+			ideas = {
+				#
+			}
+			focuses = {
+				#
+			}
+		}
+
+		"MOR"={
+			minor = yes
+			history = "br_spanish_civil_war_DESC"
+			ideology = authoritarian
+			ideas = {
+				#
+			}
+			focuses = {
+				#
+			}
+		}
+
+		"TUN"={
+			minor = yes
+			history = "br_spanish_civil_war_DESC"
+			ideology = authoritarian
+			ideas = {
+				#
+			}
+			focuses = {
+				#
+			}
+		}
+
+		"GRE"={
+			minor = yes
+			history = "br_spanish_civil_war_DESC"
+			ideology = conservatism_democracy
+			ideas = {
+				#
+			}
+			focuses = {
+				#
+			}
+		}
+
+		"TUR"={
+			minor = yes
+			history = "br_spanish_civil_war_DESC"
+			ideology = conservatism_democracy
+			ideas = {
+				#
+			}
+			focuses = {
+				#
+			}
+		}
+
+		"ARM"={
+			minor = yes
+			history = "br_spanish_civil_war_DESC"
+			ideology = conservatism_democracy
+			ideas = {
+				#
+			}
+			focuses = {
+				#
+			}
+		}
+
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

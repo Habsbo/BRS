@@ -1,0 +1,27 @@
+﻿# Infantry
+RIF_INF_01 = {
+	name = "Afar Sefari"
+
+	for_countries = { RIF }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	fallback_name = "%d Rif defenders"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%dy Rif defenders" }
+		2 = { "%dy Rif defenders" }
+		3 = { "%dy Rif defenders" }
+		4 = { "%dy Rif defenders" }
+		5 = { "%dy Rif defenders" }
+		6 = { "%dy Rif defenders" }
+		7 = { "%dy Rif defenders" }
+		8 = { "%dy Rif defenders" }
+		9 = { "%dy Rif defenders" }
+		10 = { "%dy Rif defenders" }
+	}
+}

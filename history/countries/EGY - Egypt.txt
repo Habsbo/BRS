@@ -1,0 +1,92 @@
+﻿capital = 907
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "No Step Back"
+		}
+	}
+	set_technology = {
+		gwtank = 1
+	}
+}
+
+set_convoys = 20
+
+set_politics = {
+	ruling_party = authoritarian
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	liberal_anarchy = 0 #自由意志无政府
+	anarchist_communist = 0 #社会无政府主义
+	revolution_socialist = 0 #革命社会主义
+	scientific_socialist = 10 #科学社会主义
+	conservatism_socialist = 0#保守社会主义
+	social_democracy = 10 #社会民主主义
+	social_liberation = 10 #社会自由主义
+	conservatism_democracy = 10 #保守民主主义
+	authoritarian = 50 #威权主义
+	fascist = 10 #民族主义/束棒
+	national_socialist = 0 #国家社会主义
+	supranational_socialist = 0 #超国家社会主义
+}
+
+
+create_country_leader = {
+	name = "Muhammad Naguib"
+	desc = ""
+	picture = GFX_portrait_Muhammad_Naguib
+	ideology = liberalism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Ahmed Husayn"
+	desc = ""
+	picture = GFX_portrait_Ahmed_Husayn
+	ideology = fascism_ideology
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Farouk Muhammad Ali"
+	desc = ""
+	picture = "GFX_portrait_egy_faud_i"
+	ideology = despotism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Hosni al-Arabi"
+	desc = ""
+	picture = GFX_portrait_Hosni_al_Arabi
+	ideology = leninism
+	traits = {
+		#
+	}
+}
+
+#国名
+set_cosmetic_tag = EGY_kingdom
+#法律
+add_ideas = {
+	br_laws_feudalism
+	br_laws_suffrage_prohibited
+	br_laws_national_state
+	br_laws_spiritual
+	br_laws_loyalist
+}

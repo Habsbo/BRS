@@ -1,0 +1,61 @@
+add_namespace = br_spain_event
+add_namespace = br_portugual_event
+add_namespace = br_spain_civilwar_event
+add_namespace = br_rif
+
+country_event = { #
+	id = br_spain_event.1
+	title = br_spain_event.1.title
+	desc = br_spain_event.1.desc
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = br_spain_event.1.a #
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+country_event = { #
+	id = br_rif.1
+	title = br_rif.1.title
+	desc = br_rif.1.desc
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = { white_peace = RIF }
+	}
+
+	option = {
+		name = br_rif.1.a #
+
+		if = {
+			limit = { 783 = { is_core_of = RIF } }
+			783 = { transfer_state_to = RIF }
+		}
+		if = {
+			limit = { 699 = { is_core_of = RIF } }
+			699 = { transfer_state_to = RIF }
+		}
+
+		ai_chance = { factor = 7 }
+	}
+
+	option = {
+		name = br_rif.1.b #
+
+		create_wargoal = {
+			target = FROM
+			type = annex_everything
+		}
+
+		ai_chance = { factor = 3 }
+	}
+}

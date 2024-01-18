@@ -1,0 +1,77 @@
+﻿capital = 458
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+set_convoys = 20
+
+recruit_character = TUN_acgs
+recruit_character = TUN_acr
+recruit_character = TUN_stc
+recruit_character = TUN_ncm
+recruit_character = TUN_democratic_guy
+recruit_character = TUN_communist_guy
+recruit_character = TUN_coi
+recruit_character = TUN_pot
+recruit_character = TUN_aa2
+recruit_character = TUN_awt
+recruit_character = TUN_acas
+recruit_character = TUN_mt
+recruit_character = TUN_nccr
+recruit_character = TUN_ai2
+recruit_character = TUN_ncs
+recruit_character = TUN_aco2
+recruit_character = TUN_acd2
+recruit_character = TUN_nt
+recruit_character = TUN_ar
+recruit_character = TUN_fascist_guy
+
+set_politics = {
+	ruling_party = authoritarian
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	liberal_anarchy = 0 #自由意志无政府
+	anarchist_communist = 0 #社会无政府主义
+	revolution_socialist = 0 #革命社会主义
+	scientific_socialist = 0 #科学社会主义
+	conservatism_socialist = 0#保守社会主义
+	social_democracy = 15 #社会民主主义
+	social_liberation = 20 #社会自由主义
+	conservatism_democracy = 10 #保守民主主义
+	authoritarian = 45 #威权主义
+	fascist = 10 #民族主义/束棒
+	national_socialist = 0 #国家社会主义
+	supranational_socialist = 0 #超国家社会主义
+}
+
+create_country_leader = {
+	name = "Habib Bourguiba"
+	desc = ""
+	picture = GFX_portrait_Habib_Bourguiba
+	ideology = centrism
+	traits = {
+		#
+	}
+}
+
+#国名
+set_cosmetic_tag = TUN_republic
+#国家精神
+add_ideas = {
+	FRA_influence_from_france
+	AMAZIGA_countries
+}
+#法律
+add_ideas = {
+	br_laws_dictatorship
+	br_laws_suffrage_prohibited
+	br_laws_national_state
+	br_laws_freedom_belief
+	br_laws_bourgeoisie
+}

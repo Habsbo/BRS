@@ -1,0 +1,208 @@
+################
+#### GREECE ####
+################
+
+#大选
+GRE_election_category = {
+	priority = 10
+	icon = generic_crisis
+
+	picture = GFX_decision_cat_picture_1936_election
+
+	allowed = {
+		original_tag = GRE
+	}
+	
+	custom_icon = {
+		tag = GRE
+		value = GRE_civil_war_threat_icon_value
+		desc = GRE_civil_war_threat_full_breakdown
+
+		visible = {
+			NOT = { has_country_flag = br_GRE_the_crisis_done_flag }
+		}
+	}
+	
+	custom_icon = {
+		tag = GRE
+		value = GRE_civil_war_divisions_counter_icon_value
+		desc = GRE_civil_war_divisions_counter_full_breakdown
+
+		visible = {
+			always = yes
+		}
+	}
+	
+	custom_icon = {
+		tag = GRE
+		value = GRE_republic_civil_war_divisions_counter_icon_value
+		desc = GRE_republic_civil_war_divisions_counter_full_breakdown
+
+		visible = {
+			always = yes
+		}
+	}
+
+	visible_when_empty = yes
+
+	on_map_area = {
+		state = 47
+		state = 182
+		state = 184
+		state = 185
+		state = 186
+		state = 187
+		state = 341
+		state = 731
+		state = 797
+		name = SPR_the_inevitable_civil_war_map_category_name
+		zoom = 250
+	}
+
+	visible = {
+		#NOT = { has_global_flag = spanish_civil_war }
+	}
+}
+
+GRE_pay_back_debt_to_the_ifc_category = {
+	priority = 6
+	icon = gre_paying_ifc_debt
+
+	picture = GFX_decision_cat_generic_mefo_bills
+
+	allowed = {
+		original_tag = GRE
+		has_dlc = "Battle for the Bosporus"
+	}
+}
+
+GRE_investment_decisions_category  = {
+	priority = 4
+	icon = gre_investment_decisions	
+
+	allowed = {
+		original_tag = GRE
+		has_dlc = "Battle for the Bosporus"
+	}
+}
+
+GRE_hellenic_academy_category  = {
+	priority = 2
+	icon = gre_hellenic_academy
+
+	allowed = {
+		original_tag = GRE
+		has_dlc = "Battle for the Bosporus"
+	}
+}
+
+GRE_faction_management_category = {
+	priority = 9
+	icon = gre_faction_management
+
+	scripted_gui = gre_internal_factions_decision_ui
+
+	allowed = {
+		original_tag = GRE
+		has_dlc = "Battle for the Bosporus"
+	}
+}
+
+GRE_hellenic_ambitions = {
+	icon = generic_crisis
+
+	allowed = {
+		original_tag = GRE
+	}
+	
+	visible_when_empty = no
+
+	on_map_area = {
+		state = 47
+		state = 164
+		state = 182
+		state = 183
+		state = 184
+		state = 185
+		state = 186
+		state = 187
+		state = 339
+		state = 340
+		state = 341
+		state = 342
+		state = 347
+		state = 731
+		state = 797
+		state = 805
+		name = GRE_megali_idea_map_category_name
+		zoom = 250
+	}
+
+	on_map_area = {
+		state = 44
+		state = 47
+		state = 49
+		state = 103
+		state = 104
+		state = 105
+		state = 106
+		state = 107
+		state = 108
+		state = 109
+		state = 137
+		state = 160
+		state = 163
+		state = 164
+		state = 182
+		state = 183
+		state = 184
+		state = 185
+		state = 186
+		state = 187
+		state = 339
+		state = 340
+		state = 341
+		state = 342
+		state = 343
+		state = 344
+		state = 345
+		state = 346
+		state = 348
+		state = 349
+		state = 350
+		state = 352
+		state = 353
+		state = 354
+		state = 355
+		state = 356
+		state = 347
+		state = 446
+		state = 447
+		state = 452
+		state = 453
+		state = 454
+		state = 456
+		state = 457
+		state = 553
+		state = 554
+		state = 677
+		state = 731
+		state = 797
+		state = 798
+		state = 799
+		state = 800
+		state = 802
+		state = 803
+		state = 804
+		state = 805
+		state = 907
+		state = 934
+
+		name = GRE_hellenic_rome_empire_map_category_name
+		zoom = 250
+	}
+
+	visible = {
+		#
+	}
+}

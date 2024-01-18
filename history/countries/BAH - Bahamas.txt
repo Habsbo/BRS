@@ -1,0 +1,35 @@
+﻿capital = 690
+
+#oob = ""
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+set_convoys = 5
+
+set_politics = {
+	ruling_party = social_liberation
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_popularities = {
+	scientific_socialist = 15 #科学社会主义
+	social_democracy = 10 #社会民主主义
+	social_liberation = 55 #社会自由主义
+	conservatism_democracy = 20 #保守民主主义
+}
+
+#create_country_leader = {
+#	
+#	name = "Jonas Lote"
+#	picture = "gfx//leaders//Africa//Portrait_Africa_Generic_2.dds"
+#	expire = "1965.1.1"
+#	ideology = centrism
+#	traits = {
+#		#
+#	}
+#}

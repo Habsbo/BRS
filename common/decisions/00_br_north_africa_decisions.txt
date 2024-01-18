@@ -1,0 +1,226 @@
+#里夫
+br_na_rif_decisions = {
+	#成立摩洛哥共和国
+	br_na_rif.1 = {
+		icon = generic_research
+
+		available = {
+			tag = RIF
+			ROOT = {
+				exists = yes
+				has_capitulated = no
+				is_subject = no
+			}
+			MOR = {
+				OR = {
+					exists = no
+					has_capitulated = yes
+				}
+			}
+			461 = { is_controlled_by_ROOT_or_ally = yes }
+			462 = { is_controlled_by_ROOT_or_ally = yes }
+		}
+
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = yes
+		cost = 0
+
+		complete_effect = {
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = MOR_republic
+			every_state = {
+				limit = {
+					OR = {
+						state = 461
+						state = 462
+						state = 783
+					}
+				}
+				add_core_of = ROOT
+			}
+			699 = { add_claim_by = ROOT }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+}
+#北非战争
+br_na_war_decisions = {
+	#北非战争
+	br_na_war.1 = {
+		icon = mission_icon
+
+		activation = {
+			RIF = {
+				has_war_with = SPR
+				has_war_with = MOR
+			}
+		}
+
+		available = {
+			tag = RIF
+			MOR = {
+				OR = {
+					exists = no
+					has_capitulated = yes
+				}
+			}
+			RIF = {
+				exists = yes
+				has_capitulated = no
+				is_subject = no
+			}
+			290 = { is_owned_and_controlled_by = RIF }
+			461 = { is_owned_and_controlled_by = RIF }
+			462 = { is_owned_and_controlled_by = RIF }
+			RIF = { NOT = { any_core_state = { is_controlled_by = SPR } } }
+		}
+
+		visible = {
+			OR = {
+				original_tag = SPR
+				original_tag = MOR
+				original_tag = RIF
+			}
+		}
+
+		cancel_trigger = {
+			RIF = { has_capitulated = yes }
+		}
+
+		is_good = no
+		#war_with_on_timeout = SOV
+		days_mission_timeout = 100
+		selectable_mission = no
+
+		complete_effect = {
+			RIF = {
+				add_political_power = 200
+				add_stability = 0.05
+			}
+			SPR = { country_event = { id = br_rif.1 } }
+		}
+
+		timeout_effect = {
+			#
+		}
+	}
+}
+
+br_na_generic_decisions = {#成立摩洛哥共和国
+	br_na_generic.1 = {
+		icon = generic_research
+
+		available = {
+			ROOT = {
+				exists = yes
+				has_capitulated = no
+				is_subject = no
+			}
+			290 = { is_controlled_by_ROOT_or_ally = yes }
+			461 = { is_controlled_by_ROOT_or_ally = yes }
+			462 = { is_controlled_by_ROOT_or_ally = yes }
+			783 = { is_controlled_by_ROOT_or_ally = yes }
+			459 = { is_controlled_by_ROOT_or_ally = yes }
+			460 = { is_controlled_by_ROOT_or_ally = yes }
+			513 = { is_controlled_by_ROOT_or_ally = yes }
+			#514 = { is_controlled_by_ROOT_or_ally = yes }
+			458 = { is_controlled_by_ROOT_or_ally = yes }
+			665 = { is_controlled_by_ROOT_or_ally = yes }
+		}
+
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = yes
+		cost = 0
+
+		complete_effect = {
+			if = {
+				limit = {
+					OR = {
+						has_idea = br_laws_feudalism
+						has_idea = br_laws_dictatorship
+					}
+				}
+				set_cosmetic_tag = AMAZIGA_empire
+			}
+			else = {
+				set_cosmetic_tag = AMAZIGA_republic
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 290
+						state = 461
+						state = 462
+						state = 783
+						state = 459
+						state = 460
+						state = 513
+						state = 514
+						state = 458
+						state = 665
+					}
+				}
+				transfer_state_to = ROOT
+				add_core_of = ROOT
+			}
+			set_country_flag = br_amaziga_country_built_flag
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+	br_na_generic.2 = {
+		icon = generic_research
+
+		available = {
+			ROOT = {
+				exists = yes
+				has_capitulated = no
+				is_subject = no
+			}
+			699 = { is_controlled_by_ROOT_or_ally = yes }
+			557 = { is_controlled_by_ROOT_or_ally = yes }
+			899 = { is_controlled_by_ROOT_or_ally = yes }
+			898 = { is_controlled_by_ROOT_or_ally = yes }
+			781 = { is_controlled_by_ROOT_or_ally = yes }
+		}
+
+		visible = {
+			has_country_flag = br_amaziga_country_built_flag
+		}
+
+		fire_only_once = yes
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 699
+						state = 557 
+						state = 786
+						state = 782
+						state = 899
+						state = 898
+						state = 781
+					}
+				}
+				add_core_of = ROOT
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+}

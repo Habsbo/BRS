@@ -1,0 +1,616 @@
+ideas = {
+	state_system = {
+		law = yes
+		use_list_view = yes
+		#封建制-包括传统世俗君主和维护封建土地关系的神权祭司
+		br_laws_feudalism = {
+
+			allowed = {
+				#
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+
+			default = yes
+			cancel_if_invalid = no
+		}
+		#独裁制-非封建性质的实权领袖、君主，或者由寡头团体内部垄断权力的议会
+		br_laws_dictatorship = {
+
+			allowed = {
+				#
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+
+			cancel_if_invalid = no
+		}
+		#民主授权制-通过民主选举出的、有任期的大权力领袖，一般是总统制
+		br_laws_elected_representative = {
+
+			allowed = {
+				#
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+
+			cancel_if_invalid = no
+		}
+		#议会制-一种民主的责任制，权力最高属于议会，政府的权力架构以议会为核心，对议会代表的阶级负责
+		br_laws_parliamentarism = {
+
+			allowed = {
+				#
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+			
+			cancel_if_invalid = no
+		}
+		#委员会制-以一个党派一个纲领为运作核心的政府
+		br_laws_committee = {
+
+			allowed = {
+				#always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+			
+			cancel_if_invalid = no
+		}
+		#无政府
+	}
+
+	nation_cheif = {
+		law = yes
+		use_list_view = yes
+		#君主制
+		br_laws_monarchy = {
+
+			allowed = {
+				#
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+
+			default = yes
+			cancel_if_invalid = no
+		}
+		#神权君主
+		br_laws_cleric = {
+
+			allowed = {
+				#
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+			
+			cancel_if_invalid = no
+		}
+		#元首制
+		br_laws_archon = {
+
+			allowed = {
+				#
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+
+			cancel_if_invalid = no
+		}
+		#代表制
+		br_laws_proxy = {
+
+			allowed = {
+				#
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+
+			cancel_if_invalid = no
+		}
+		#责任制
+		br_laws_premier = {
+
+			allowed = {
+				#
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+			
+			cancel_if_invalid = no
+		}
+		#技术治国
+		br_laws_technocracy = {
+
+			allowed = {
+				#always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+			
+			cancel_if_invalid = no
+		}
+
+	}
+
+	election_right = {
+		law = yes
+		use_list_view = yes
+
+		#禁止选举
+		br_laws_suffrage_prohibited = {
+
+			allowed = {
+				#
+			}
+
+			available = {
+				NOT = {
+					has_idea = elected_representative
+					has_idea = parliamentarism
+				}
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+
+			on_add = {
+				#set_politics = { elections_allowed = no }
+			}
+			default = yes
+			cancel_if_invalid = no
+		}
+		#地产赋权
+		br_laws_landowner = {
+
+			allowed = {
+				#
+			}
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+
+			cancel_if_invalid = no
+		}
+		#资产赋权
+		br_laws_asset = {
+			
+			allowed = {
+				#
+			}
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+
+			cancel_if_invalid = no
+		}
+		#资格选举
+		br_laws_qualification = {
+			
+			allowed = {
+				#
+			}
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+
+			cancel_if_invalid = no
+		}
+		#完全选举
+		br_laws_free = {
+			
+			allowed = {
+				#
+			}
+
+			available = {
+				NOT = {
+					has_idea = br_laws_feudalism
+					has_idea = br_laws_dictatorship
+					has_idea = br_laws_loyalist
+					has_idea = br_laws_pure_race
+					has_idea = br_laws_apartheid
+				}
+				OR = {
+					has_idea = br_laws_elected_representative
+					has_idea = br_laws_parliamentarism
+				}
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+
+			cancel_if_invalid = no
+		}
+	}
+
+	culture_laws = {
+		law = yes
+		use_list_view = yes
+
+		br_laws_pure_race = {
+			allowed = {
+				#
+			}
+			level = 6
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+			
+			cancel_if_invalid = no
+		}
+
+		br_laws_apartheid = {
+			allowed = {
+				#
+			}
+			level = 5
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+			
+			cancel_if_invalid = no
+		}
+
+		br_laws_national_state = {
+			allowed = {
+				#
+			}
+			level = 4
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+			
+			default = yes
+			cancel_if_invalid = no
+		}
+		
+		br_laws_mainstream = {
+			allowed = {
+				#
+			}
+			level = 3
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		br_laws_diversity = {
+			allowed = {
+				#
+			}
+			level = 2
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+			
+			cancel_if_invalid = no
+		}
+
+		br_laws_whole_in_unity = {
+			allowed = {
+				#
+			}
+			level = 1
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+			
+			cancel_if_invalid = no
+		}
+	}
+
+	faith_laws = {
+		law = yes
+		use_list_view = yes
+		
+		br_laws_spiritual = {
+			allowed = {
+				#
+			}
+			level = 4
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+			
+			cancel_if_invalid = no
+		}
+
+		br_laws_religious_people = {
+			allowed = {
+				#
+			}
+			level = 4
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+			
+			default = yes
+			cancel_if_invalid = no
+		}
+		
+		br_laws_freedom_belief = {
+			allowed = {
+				#
+			}
+			level = 3
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+			
+			cancel_if_invalid = no
+		}
+
+		br_laws_separation = {
+			allowed = {
+				#
+			}
+			level = 2
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+			
+			cancel_if_invalid = no
+		}
+
+		br_laws_atheism = {
+			allowed = {
+				#
+			}
+			level = 1
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+			
+			cancel_if_invalid = no
+		}
+	}
+
+	ruling_class = {
+		law = yes
+		use_list_view = yes
+
+		#地主阶级
+		br_laws_loyalist = {
+
+			allowed = {
+				#
+			}
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			default = yes
+			cancel_if_invalid = no
+		}
+		#资产阶级
+		br_laws_bourgeoisie = {
+
+			allowed = {
+				#
+			}
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				always = no
+			}
+			
+			cancel_if_invalid = no
+		}
+		#无产阶级
+		br_laws_proletariat = {
+
+			allowed = {
+				#
+			}
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				always = no
+			}
+			
+			cancel_if_invalid = no
+		}
+	}
+}

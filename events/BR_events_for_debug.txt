@@ -1,0 +1,137 @@
+add_namespace = br_debug_decisions_for_test_state_names_EGY
+add_namespace = br_debug_memphis_event
+add_namespace = br_event
+
+country_event = { #
+	id = br_debug_decisions_for_test_state_names_EGY.1
+	title = br_debug_decisions_for_test_state_names_EGY.1.title
+	desc = br_debug_decisions_for_test_state_names_EGY.1.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		drop_cosmetic_tag = yes
+	}
+
+	option = {
+		name = br_debug_decisions_for_test_state_names_EGY.1.a #
+
+		set_cosmetic_tag = EGY_kingdom
+		ai_chance = { factor = 0 }
+	}
+
+	option = {
+		name = br_debug_decisions_for_test_state_names_EGY.1.b #
+
+		set_cosmetic_tag = EGY_republic
+		ai_chance = { factor = 0 }
+	}
+
+	option = {
+		name = br_debug_decisions_for_test_state_names_EGY.1.c #
+
+		set_cosmetic_tag = EGY_arab_republic
+		ai_chance = { factor = 0 }
+	}
+
+	option = {
+		name = br_debug_decisions_for_test_state_names_EGY.1.d #
+		
+		set_cosmetic_tag = EGY_masr_sultanate
+		ai_chance = { factor = 0 }
+	}
+
+	option = {
+		name = br_debug_decisions_for_test_state_names_EGY.1.e #
+		
+		country_event = br_debug_decisions_for_test_state_names_EGY.2
+		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = { #
+	id = br_debug_decisions_for_test_state_names_EGY.2
+	title = br_debug_decisions_for_test_state_names_EGY.2.title
+	desc = br_debug_decisions_for_test_state_names_EGY.2.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		#
+	}
+
+	option = {
+		name = br_debug_decisions_for_test_state_names_EGY.2.a #
+
+		set_cosmetic_tag = EGY_hwt_ka_pth_pharaoh
+		ai_chance = { factor = 0 }
+	}
+
+	option = {
+		name = br_debug_decisions_for_test_state_names_EGY.2.b #
+
+		set_cosmetic_tag = EGY_hwt_ka_pth_republic
+		ai_chance = { factor = 0 }
+	}
+
+	option = {
+		name = br_debug_decisions_for_test_state_names_EGY.2.c #
+
+		set_cosmetic_tag = EGY_kmt_pharaoh
+		ai_chance = { factor = 0 }
+	}
+
+	option = {
+		name = br_debug_decisions_for_test_state_names_EGY.2.d #
+		
+		set_cosmetic_tag = EGY_kmt_republic
+		ai_chance = { factor = 0 }
+	}
+
+	option = {
+		name = br_debug_decisions_for_test_state_names_EGY.2.d #
+		
+		set_cosmetic_tag = EGY_kimi_faith
+		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = { #
+	id = br_debug_memphis_event.1
+	title = br_debug_memphis_event.1.title
+	desc = br_debug_memphis_event.1.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		#
+	}
+
+	option = {
+		name = br_debug_memphis_event.1.a #
+
+		907 = {
+			set_state_name = state_name_memphis
+	
+			set_victory_points = {
+				province = 4055
+				value = 20
+			}
+
+			set_victory_points = {
+				province = 7011
+				value = 10
+			}
+		}
+		
+		ai_chance = { factor = 0 }
+	}
+
+
+}

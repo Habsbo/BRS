@@ -1,0 +1,243 @@
+focus_tree = {
+	id = greek_focus
+
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = GRE
+			has_dlc = "Battle for the Bosporus"
+		}
+	}
+	
+	default = no
+
+	continuous_focus_position = { x = 50 y = 1500 }
+#
+	focus = {
+		id = GRE_1
+		icon = GFX_focus_generic_home_defense
+		#prerequisite = { focus =  }
+		mutually_exclusive = { focus = GRE_2 focus = GRE_3 }
+		x = 6
+		y = 0
+		#relative_position_id = GRE_take_path_with_democratic
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {
+			NOT = { has_idea = br_laws_monarchy }
+		}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			add_political_power = 120
+			add_stability = 0.05
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_2
+		icon = GFX_goal_generic_demand_territory
+		#prerequisite = { focus =  }
+		mutually_exclusive = { focus = GRE_1 focus = GRE_3 }
+		x = 2
+		y = 0
+		relative_position_id = GRE_1
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_3
+		icon = GFX_focus_generic_home_defense
+		#prerequisite = { focus =  }
+		mutually_exclusive = { focus = GRE_1 focus = GRE_2 }
+		x = 4
+		y = 0
+		relative_position_id = GRE_1
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {
+			NOT = {	has_country_flag = GRE_king_arrested }
+			has_idea = br_laws_monarchy
+		}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	
+	focus = {
+		id = GRE_4
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = GRE_1 }
+		#mutually_exclusive = { focus =  }
+		x = -4
+		y = 1
+		relative_position_id = GRE_1
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_5
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = GRE_1 focus = GRE_2 focus = GRE_3 }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = GRE_2
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_6
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = GRE_3 }
+		#mutually_exclusive = { focus =  }
+		x = 4
+		y = 1
+		relative_position_id = GRE_3
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_7
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = GRE_5 }
+		mutually_exclusive = { focus = GRE_8 }
+		x = -1
+		y = 1
+		relative_position_id = GRE_5
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_8
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = GRE_5 }
+		mutually_exclusive = { focus = GRE_7 }
+		x = 1
+		y = 1
+		relative_position_id = GRE_5
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+}

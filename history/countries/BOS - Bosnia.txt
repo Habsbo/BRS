@@ -1,0 +1,91 @@
+﻿capital = 104
+
+set_research_slots = 3
+
+# Starting tech
+# clone of Yugoslavia
+set_technology = {
+	tech_support = 1		
+	tech_engineers = 1
+	tech_mountaineers = 1
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_trucks = 1
+	basic_train = 1
+}
+if = {
+	limit = {
+		NOT = {has_dlc = "By Blood Alone"}
+	}
+	set_technology = {
+		early_fighter = 1
+	}
+}
+
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "No Step Back"
+		}
+	}
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+	}
+}
+if = {
+	limit = {
+		
+		has_dlc = "No Step Back"
+		
+	}
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+	}
+}
+
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_destroyer = 1
+		early_light_cruiser = 1
+		early_submarine = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		early_ship_hull_submarine = 1
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		basic_torpedo = 1
+	}
+}
+
+set_politics = {
+	ruling_party = social_liberation
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_popularities = {
+	liberal_anarchy = 0 #自由意志无政府
+	anarchist_communist = 0 #社会无政府主义
+	revolution_socialist = 0 #革命社会主义
+	scientific_socialist = 0 #科学社会主义
+	conservatism_socialist = 10 #保守社会主义
+	social_democracy = 20 #社会民主主义
+	social_liberation = 30 #社会自由主义
+	conservatism_democracy = 20 #保守民主主义
+	authoritarian = 10 #威权主义
+	fascist = 10 #民族主义/束棒
+	national_socialist = 0 #国家社会主义
+	supranational_socialist = 0 #超国家社会主义
+}

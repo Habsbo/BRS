@@ -1,0 +1,68 @@
+ideas = {
+	country = {
+		FRA_influence_from_france = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				#
+			}
+			
+			removal_cost = -1
+
+			picture = state_shintoism
+			
+			modifier = {
+				political_power_cost = 0.2
+				political_advisor_cost_factor = 0.05
+				consumer_goods_factor = 0.05
+				consumer_goods_expected_value = 0.15
+			}
+		}
+
+		AMAZIGA_countries = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = state_shintoism
+			
+			modifier = {
+				conscription = 0.03
+				stability_factor = 0.03
+				army_core_defence_factor = 0.05
+			}
+		}
+
+		MOR_arabian_dynasty = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			#picture = state_shintoism
+			
+			modifier = {
+				political_power_cost = 0.05
+				political_advisor_cost_factor = 0.05
+				stability_factor = -0.05
+			}
+		}
+	}
+
+}

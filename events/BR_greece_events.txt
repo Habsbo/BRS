@@ -1,0 +1,399 @@
+add_namespace = br_hellas
+add_namespace = br_megali_idea
+add_namespace = br_event
+
+country_event = { #
+	id = br_hellas.1
+	title = br_hellas.1.title
+	desc = br_hellas.1.desc
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {  }
+
+	option = {
+		name = br_hellas.1.a #
+
+		trigger = { has_country_flag = GRE_king_arrested }
+		ai_chance = { factor = 5 }
+	}
+
+	option = {
+		name = br_hellas.1.b #
+
+		trigger = { NOT = { has_country_flag = GRE_king_arrested } }
+		ai_chance = { factor = 5 }
+	}
+}
+
+country_event = { #
+	id = br_hellas.2
+	title = br_hellas.2.title
+	desc = br_hellas.2.desc
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {  }
+
+	option = {
+		name = br_hellas.2.a #
+
+		ai_chance = { factor = 2 }
+	}
+
+	option = {
+		name = br_hellas.2.b #
+		
+		ai_chance = { factor = 5 }
+	}
+}
+
+country_event = { #
+	id = br_hellas.3
+	title = br_hellas.3.title
+	desc = br_hellas.3.desc
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {  }
+
+	option = {
+		name = br_hellas.3.a #
+
+		ai_chance = { factor = 2 }
+	}
+
+}
+
+country_event = { #军政府
+	id = br_hellas.4
+	title = br_hellas.4.title
+	desc = br_hellas.4.desc
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {  }
+
+	option = {
+		name = br_hellas.4.a #
+
+
+
+		ai_chance = { factor = 5 }
+	}
+
+	option = {
+		name = br_hellas.4.b #
+
+		ai_chance = { factor = 2 }
+	}
+
+}
+
+country_event = { #
+	id = br_hellas.5
+	title = br_hellas.5.title
+	desc = br_hellas.5.desc
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {  }
+
+	option = {
+		name = br_hellas.5.a #
+
+		ai_chance = { factor = 2 }
+	}
+
+}
+
+country_event = { #
+	id = br_hellas.6
+	title = br_hellas.6.title
+	desc = br_hellas.6.desc
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {  }
+
+	option = {
+		name = br_hellas.6.a #
+
+		ai_chance = { factor = 2 }
+	}
+
+}
+
+country_event = { #
+	id = br_hellas.7
+	title = br_hellas.7.title
+	desc = br_hellas.7.desc
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {  }
+
+	option = {
+		name = br_hellas.7.a #
+
+		ai_chance = { factor = 2 }
+	}
+
+}
+country_event = { #
+	id = br_hellas.8
+	title = br_hellas.8.title
+	desc = br_hellas.8.desc
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {  }
+
+	option = {
+		name = br_hellas.8.a #
+
+		ai_chance = { factor = 2 }
+	}
+
+}
+
+country_event = { #
+	id = br_hellas.9
+	title = br_hellas.9.title
+	desc = br_hellas.9.desc
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {  }
+
+	option = {
+		name = br_hellas.9.a #
+
+		ai_chance = { factor = 2 }
+	}
+
+}
+###王子事件链
+country_event = { #
+	id = br_hellas.101
+	title = br_hellas.101.title
+	desc = br_hellas.101.desc
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {  }
+
+	option = {
+		name = br_hellas.101.a #
+
+		#乔治二世成为国王
+		create_country_leader = {
+			name = GRE_george_ii
+			desc = "POLITICS_GRE_george_ii_DESC"
+			picture = GFX_leader_marshal_unknown
+			expire = "1965.1.1"
+			ideology = despotism
+			traits = {
+			}
+		}
+		create_country_leader = {
+			name = GRE_george_ii
+			desc = "POLITICS_GRE_george_ii_DESC"
+			picture = GFX_leader_marshal_unknown
+			expire = "1965.1.1"
+			ideology = constitutional_monarchy
+			traits = {
+			}
+		}
+
+		ai_chance = { factor = 2 }
+	}
+
+	option = {
+		name = br_hellas.101.b #
+
+		#
+		add_days_mission_timeout = { mission = GRE_the_throne_of_crisis days = 120 }
+		#
+		custom_effect_tooltip = br_gre_cwt_decreased_5
+		add_to_variable = { var = gre_civil_war_threat_icon_var value = -5 } #王室危机-5
+		
+		ai_chance = { factor = 5 }
+	}
+}
+
+#伟大理想
+country_event = { #对土耳其提出要求
+	id = br_megali_idea.1
+	title = br_megali_idea.1.title
+	desc = br_megali_idea.1.desc
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {  }
+
+	option = {
+		name = br_megali_idea.1.a #
+
+		GRE = { country_event = br_megali_idea.2 }
+
+		ai_chance = { factor = 20 }
+	}
+
+	option = {
+		name = br_megali_idea.1.b #
+		
+		GRE = { country_event = br_megali_idea.3 }
+		
+		ai_chance = { factor = 15 }
+	}
+	
+	option = {
+		name = br_megali_idea.1.c #
+		
+		GRE = { country_event = br_megali_idea.4 }
+
+		ai_chance = { factor = 5 }
+	}
+}
+country_event = { #土耳其的回信1
+	id = br_megali_idea.2
+	title = br_megali_idea.2.title
+	desc = br_megali_idea.2.desc
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {  }
+
+	option = {
+		name = br_megali_idea.2.a #
+
+		declare_war_on = {
+			target = FROM
+			type = take_claimed_state
+		}
+
+		ai_chance = { factor = 20 }
+	}
+
+}
+country_event = { #土耳其的回信2
+	id = br_megali_idea.3
+	title = br_megali_idea.3.title
+	desc = br_megali_idea.3.desc
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {  }
+
+	option = {
+		name = br_megali_idea.3.a #
+
+		every_state = {
+			limit = {
+				OR = {
+					state = 339
+					state = 340
+				}
+			}
+			transfer_state_to = GRE
+		}
+
+		ai_chance = { factor = 20 }
+	}
+	option = {
+		name = br_megali_idea.3.b #
+
+		random_list = {
+			9 = {
+				GRE = { country_event = br_megali_idea.2 }
+			}
+			1 = {
+				GRE = { country_event = br_megali_idea.3 }
+			}
+		}
+
+		ai_chance = { factor = 20 }
+	}
+
+}
+country_event = { #土耳其的回信3
+	id = br_megali_idea.4
+	title = br_megali_idea.4.title
+	desc = br_megali_idea.4.desc
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {  }
+
+	option = {
+		name = br_megali_idea.4.a #
+
+		every_state = {
+			limit = {
+				OR = {
+					state = 339
+					state = 340
+					state = 342
+					state = 347
+				}
+			}
+			transfer_state_to = GRE
+		}
+
+		ai_chance = { factor = 20 }
+	}
+
+}
+
+country_event = { #
+	id = br_hellas.
+	title = br_hellas..title
+	desc = br_hellas..desc
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {  }
+
+	option = {
+		name = br_hellas..a #
+
+		ai_chance = { factor = 2 }
+	}
+
+	option = {
+		name = br_hellas..b #
+		
+		ai_chance = { factor = 5 }
+	}
+}

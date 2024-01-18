@@ -1,0 +1,50 @@
+﻿capital = 290
+
+oob = "RIF_army"
+
+IF = {
+	limit = {has_dlc = "By Blood Alone"}
+	recruit_character =  RIF_abd_el_krim
+}
+
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+set_convoys = 10
+
+set_politics = {
+	ruling_party = authoritarian
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	liberal_anarchy = 0 #自由意志无政府
+	anarchist_communist = 0 #社会无政府主义
+	revolution_socialist = 0 #革命社会主义
+	scientific_socialist = 0 #科学社会主义
+	conservatism_socialist = 0#保守社会主义
+	social_democracy = 0 #社会民主主义
+	social_liberation = 0 #社会自由主义
+	conservatism_democracy = 30 #保守民主主义
+	authoritarian = 60 #威权主义
+	fascist = 10 #民族主义/束棒
+	national_socialist = 0 #国家社会主义
+	supranational_socialist = 0 #超国家社会主义
+}
+
+declare_war_on = {
+	target = SPR
+	type = liberate_wargoal
+}
+
+declare_war_on = {
+	target = MOR
+	type = annex_everything
+}
+
+set_cosmetic_tag = RIF_republic

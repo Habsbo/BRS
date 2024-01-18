@@ -1,0 +1,105 @@
+﻿capital = 794 #165
+
+#oob = ""
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_mountaineers = 1
+	tech_trucks = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "By Blood Alone" }
+	}
+	set_technology = {
+		early_fighter = 1
+		early_bomber = 1
+		naval_bomber1 = 1
+	}
+}
+
+set_convoys = 20
+
+
+set_politics = {
+	ruling_party = anarchist_communist
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_popularities = {
+	liberal_anarchy = 0 #自由意志无政府
+	anarchist_communist = 60 #社会无政府主义
+	revolution_socialist = 29 #革命社会主义
+	scientific_socialist = 11 #科学社会主义
+	conservatism_socialist = 0 #保守社会主义
+	social_democracy = 0 #社会民主主义
+	social_liberation = 0 #社会自由主义
+	conservatism_democracy = 0 #保守民主主义
+	authoritarian = 0 #威权主义
+	fascist = 0 #民族主义/束棒
+	national_socialist = 0 #国家社会主义
+	supranational_socialist = 0 #超国家社会主义
+}
+
+create_country_leader = {
+	name = "Andreu Nin i Pérez"
+	picture = GFX_portrait_Andreu_Nin_i_Perez
+	expire = "1965.1.1"
+	ideology = marxism
+}
+
+create_country_leader = {
+	name = "Lluís Companys i Jover"
+	picture = GFX_portrait_Lluis_Companys_i_Jover
+	expire = "1965.1.1"
+	ideology = liberalism
+}
+
+create_country_leader = {
+	name = "Daniel Cardona i Civit"
+	picture = GFX_portrait_Daniel_Cardona_i_Civit
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+}
+
+create_country_leader = {
+	name = "Francesc Cambó i Batlle"
+	picture = GFX_portrait_Francesc_Cambo_i_Batlle
+	expire = "1965.1.1"
+	ideology = centrism
+}
+
+#国名&地区名
+set_cosmetic_tag = CRE_ARAGON
+#法律
+add_ideas = {
+	br_laws_committee
+	br_laws_free
+	br_laws_mainstream
+	br_laws_freedom_belief
+	br_laws_proletariat
+}
+#政治家
+recruit_character = CAT_joaquin_ascaso_budria #华金·阿斯卡索·博得里亚
+recruit_character = CAT_benito_pabon_y_suarez_de_urbina #贝尼托·帕彭
+recruit_character = CAT_adolfo_ballano #阿道夫·巴拉诺
+recruit_character = CAT_adolfo_arnal #阿道夫·阿纳尔
+recruit_character = CAT_evaristo_vinuales_larroy #埃瓦里斯托·维纽莱斯·劳里
+recruit_character = CAT_miguel_chueca_cuartero #米格尔·丘卡·夸尔特罗
+recruit_character = CAT_luis_montoliu_salado #路易斯·蒙托留·萨拉多
+recruit_character = CAT_evelio_martinez #伊夫利奥·马丁内斯
+recruit_character = CAT_jose_ignacio_mantecon #何塞·伊格纳西奥·曼特孔
+recruit_character = CAT_jesus_gracia #赫苏斯·加西亚
+recruit_character = CAT_manuel_latorre #曼努埃尔·拉托雷
+recruit_character = CAT_jose_ruiz_borao #何塞·鲁伊斯·波劳
+recruit_character = CAT_jose_duque #何塞·杜克
+recruit_character = CAT_custodio_pennarrocha #库斯托迪奥·佩纳罗查

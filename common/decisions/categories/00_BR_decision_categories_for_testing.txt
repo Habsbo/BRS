@@ -1,0 +1,40 @@
+br_debug_decisions = {
+	icon = generic_research
+	visible = {
+		is_debug = yes
+		is_ai = no
+	}
+}
+
+br_na_war_decisions = {
+	icon = generic_research
+	allowed = {
+		OR = {
+			original_tag = SPR
+			original_tag = MOR
+			original_tag = RIF
+		}
+	}
+	priority = 100
+}
+
+br_na_rif_decisions = {
+	icon = generic_research
+	allowed = {
+		original_tag = RIF
+	}
+	priority = 100
+}
+
+br_na_generic_decisions = {
+	icon = generic_research
+	allowed = {
+		OR = {
+			original_tag = MOR
+			original_tag = RIF
+			original_tag = ALG
+			original_tag = TUN
+		}
+	}
+	priority = -1
+}
