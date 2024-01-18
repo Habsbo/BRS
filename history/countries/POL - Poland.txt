@@ -1,8 +1,5 @@
 ﻿capital = 10
 
-set_stability = 0.55
-set_war_support = 0.60
-
 oob = "POL_1936"
 if = {
 	limit = { has_dlc = "Man the Guns" }
@@ -109,16 +106,8 @@ if = {
 		POL_looming_peasants_strike
 		POL_sanation_left_opposition_1
 		POL_sanation_right_opposition_1
-		
-		POL_april_constitution_no_crown
-		POL_tight_grain_reserves
-		POL_nationalist_military
-		POL_nationalist_military_hidden
-		POL_spear_of_revenge
 	}
 }
-
-set_variable = { POL_SOR_war_support_factor_var = 0.10 }
 
 
 85 = {
