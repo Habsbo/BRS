@@ -100,9 +100,86 @@ ideas = {
 				}
 			}		
 		}
+
+###
+		br_laws_feudalism_hidden = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			allowed_civil_war = {
+				always = no
+			}
+			
+			modifier = {
+				#
+			}
+		}
+		br_laws_dictatorship_hidden = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			allowed_civil_war = {
+				always = no
+			}
+			
+			modifier = {
+				#
+			}
+		}
+		br_laws_elected_representative_hidden = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			allowed_civil_war = {
+				always = no
+			}
+			
+			modifier = {
+				#
+			}
+		}
+		br_laws_parliamentarism_hidden = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			allowed_civil_war = {
+				always = no
+			}
+			
+			modifier = {
+				#
+			}
+		}
+		br_laws_committee_hidden = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			allowed_civil_war = {
+				always = no
+			}
+			
+			modifier = {
+				#
+			}
+		}
 	}
 
-	# Special ones that can be applied on other countries through focus system.
+# Special ones that can be applied on other countries through focus system.
 	country = {
 		
 		TO_chose_neutrality = {

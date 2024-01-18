@@ -1,0 +1,32 @@
+br_laws_changed_state_system_hidden_ideas_effect = {
+	if = {
+		limit = {
+			has_country_flag = br_laws_feudalism_added_flag
+		}
+		add_ideas = br_laws_feudalism_hidden
+	}
+	if = {
+		limit = {
+			has_country_flag = br_laws_dictatorship_added_flag
+		}
+		add_ideas = br_laws_dictatorship_hidden
+	}
+	if = {
+		limit = {
+			has_country_flag = br_laws_elected_representative_added_flag
+		}
+		add_ideas = br_laws_elected_representative_hidden
+	}
+	if = {
+		limit = {
+			has_country_flag = br_laws_parliamentarism_added_flag
+		}
+		add_ideas = br_laws_parliamentarism_hidden
+	}
+	if = {
+		limit = {
+			has_country_flag = br_laws_committee_added_flag
+		}
+		add_ideas = br_laws_committee_hidden
+	}
+}

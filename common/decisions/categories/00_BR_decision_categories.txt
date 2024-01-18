@@ -1,0 +1,7 @@
+br_laws_decisions = {
+	icon = generic_research
+
+	visible = {
+		always = yes
+	}
+}

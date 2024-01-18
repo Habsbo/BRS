@@ -19,6 +19,27 @@ ideas = {
 				#
 			}
 
+			on_add = {
+				#放弃更改法律
+				if = {
+					limit = { has_country_flag = br_laws_feudalism_removed_flag }
+					clr_country_flag = br_laws_changed_flag
+					clr_country_flag = br_laws_feudalism_removed_flag
+				}
+				#更改法律的好处
+				set_country_flag = br_laws_feudalism_added_flag
+			}
+
+			on_remove = {
+				#法律变化
+				set_country_flag = br_laws_changed_flag
+				#失去的法律是
+				set_country_flag = br_laws_feudalism_removed_flag
+				#失去隐藏增益
+				clr_country_flag = br_laws_feudalism_added_flag
+				remove_ideas = br_laws_feudalism_hidden
+			}
+
 			default = yes
 			cancel_if_invalid = no
 		}
@@ -37,6 +58,27 @@ ideas = {
 
 			allowed_to_remove = {
 				#
+			}
+
+			on_add = {
+				#放弃更改法律
+				if = {
+					limit = { has_country_flag = br_laws_dictatorship_removed_flag }
+					clr_country_flag = br_laws_changed_flag
+					clr_country_flag = br_laws_dictatorship_removed_flag
+				}
+				#更改法律的好处
+				set_country_flag = br_laws_dictatorship_added_flag
+			}
+
+			on_remove = {
+				#法律变化的异议者
+				set_country_flag = br_laws_changed_flag
+				#失去的法律是
+				set_country_flag = br_laws_dictatorship_removed_flag
+				#失去隐藏增益
+				clr_country_flag = br_laws_dictatorship_added_flag
+				remove_ideas = br_laws_dictatorship_hidden
 			}
 
 			cancel_if_invalid = no
@@ -58,6 +100,27 @@ ideas = {
 				#
 			}
 
+			on_add = {
+				#放弃更改法律
+				if = {
+					limit = { has_country_flag = br_laws_elected_representative_removed_flag }
+					clr_country_flag = br_laws_changed_flag
+					clr_country_flag = br_laws_elected_representative_removed_flag
+				}
+				#更改法律的好处
+				set_country_flag = br_laws_elected_representative_added_flag
+			}
+
+			on_remove = {
+				#法律变化的异议者
+				set_country_flag = br_laws_changed_flag
+				#失去的法律是
+				set_country_flag = br_laws_elected_representative_removed_flag
+				#失去隐藏增益
+				clr_country_flag = br_laws_elected_representative_added_flag
+				remove_ideas = br_laws_elected_representative_hidden
+			}
+
 			cancel_if_invalid = no
 		}
 		#议会制-一种民主的责任制，权力最高属于议会，政府的权力架构以议会为核心，对议会代表的阶级负责
@@ -77,6 +140,27 @@ ideas = {
 				#
 			}
 			
+			on_add = {
+				#放弃更改法律
+				if = {
+					limit = { has_country_flag = br_laws_parliamentarism_removed_flag }
+					clr_country_flag = br_laws_changed_flag
+					clr_country_flag = br_laws_parliamentarism_removed_flag
+				}
+				#更改法律的好处
+				set_country_flag = br_laws_parliamentarism_added_flag
+			}
+
+			on_remove = {
+				#法律变化的异议者
+				set_country_flag = br_laws_changed_flag
+				#失去的法律是
+				set_country_flag = br_laws_parliamentarism_removed_flag
+				#失去隐藏增益
+				clr_country_flag = br_laws_parliamentarism_added_flag
+				remove_ideas = br_laws_parliamentarism_hidden
+			}
+			
 			cancel_if_invalid = no
 		}
 		#委员会制-以一个党派一个纲领为运作核心的政府
@@ -93,6 +177,27 @@ ideas = {
 
 			allowed_to_remove = {
 				#
+			}
+			
+			on_add = {
+				#放弃更改法律
+				if = {
+					limit = { has_country_flag = br_laws_committee_removed_flag }
+					clr_country_flag = br_laws_changed_flag
+					clr_country_flag = br_laws_committee_removed_flag
+				}
+				#更改法律的好处
+				set_country_flag = br_laws_committee_added_flag
+			}
+
+			on_remove = {
+				#法律变化的异议者
+				set_country_flag = br_laws_changed_flag
+				#失去的法律是
+				set_country_flag = br_laws_committee_removed_flag
+				#失去隐藏增益
+				clr_country_flag = br_laws_committee_added_flag
+				remove_ideas = br_laws_committee_hidden
 			}
 			
 			cancel_if_invalid = no
@@ -120,6 +225,17 @@ ideas = {
 				#
 			}
 
+			on_add = {
+				#
+			}
+
+			on_remove = {
+				#法律变化的异议者
+				set_country_flag = br_laws_changed_flag
+				#失去的法律是
+				set_country_flag = br_laws_monarchy_flag
+			}
+
 			default = yes
 			cancel_if_invalid = no
 		}
@@ -140,6 +256,17 @@ ideas = {
 				#
 			}
 			
+			on_add = {
+				#
+			}
+
+			on_remove = {
+				#法律变化的异议者
+				set_country_flag = br_laws_changed_flag
+				#失去的法律是
+				set_country_flag = br_laws_cleric_flag
+			}
+
 			cancel_if_invalid = no
 		}
 		#元首制

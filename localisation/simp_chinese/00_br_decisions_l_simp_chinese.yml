@@ -1,0 +1,12 @@
+﻿l_simp_chinese:
+ br_laws_decisions: "[ROOT.GetName]的政治与法律"
+ br_laws_decisions_conflicts: "抵抗废除"
+ br_laws_decisions_conflicts_desc: ""
+ br_laws_decisions_implementing_the_law: "带来的影响"
+ br_laws_decisions_implementing_the_law_desc: ""
+
+ br_laws_feudalism_hidden: "$br_laws_feudalism$"
+ br_laws_dictatorship_hidden: "$br_laws_dictatorship$"
+ br_laws_elected_representative_hidden: "$br_laws_elected_representative$"
+ br_laws_parliamentarism_hidden: "$br_laws_parliamentarism$"
+ br_laws_committee_hidden: "$br_laws_committee$"
