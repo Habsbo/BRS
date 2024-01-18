@@ -189,7 +189,7 @@ ideas = {
 			available = {
 				NOT = { has_country_flag = br_laws_changed_flag }
 			}
-			
+
 			removal_cost = -1
 
 			modifier = {
@@ -236,6 +236,10 @@ ideas = {
 				#
 			}
 
+			available = {
+				NOT = { has_country_flag = br_laws_changed_flag }
+			}
+
 			removal_cost = -1
 
 			modifier = {
@@ -265,6 +269,10 @@ ideas = {
 
 			allowed = {
 				#
+			}
+
+			available = {
+				NOT = { has_country_flag = br_laws_changed_flag }
 			}
 
 			removal_cost = -1
@@ -297,6 +305,10 @@ ideas = {
 				#
 			}
 
+			available = {
+				NOT = { has_country_flag = br_laws_changed_flag }
+			}
+
 			removal_cost = -1
 
 			modifier = {
@@ -314,6 +326,10 @@ ideas = {
 
 			allowed = {
 				#
+			}
+
+			available = {
+				NOT = { has_country_flag = br_laws_changed_flag }
 			}
 
 			removal_cost = -1
@@ -335,6 +351,10 @@ ideas = {
 				#
 			}
 
+			available = {
+				NOT = { has_country_flag = br_laws_changed_flag }
+			}
+
 			removal_cost = -1
 
 			modifier = {
@@ -353,6 +373,11 @@ ideas = {
 			allowed = {
 				#always = no
 			}
+
+			available = {
+				NOT = { has_country_flag = br_laws_changed_flag }
+			}
+			
 			removal_cost = -1
 
 			modifier = {

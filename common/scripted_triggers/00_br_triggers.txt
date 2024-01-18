@@ -9,11 +9,14 @@ br_lwas_changed_state_system_remove_flags_trigger = {
 }
 
 br_lwas_changed_state_system_remove_flags_trigger_NOT = {
-	NOT = {
-		has_country_flag = br_laws_feudalism_removed_flag
-		has_country_flag = br_laws_dictatorship_removed_flag
-		has_country_flag = br_laws_elected_representative_removed_flag
-		has_country_flag = br_laws_parliamentarism_removed_flag
-		has_country_flag = br_laws_committee_added_flag
+	custom_trigger_tooltip = {
+		tooltip = br_lwas_changed_state_system_remove_flags_NOT_tt
+		NOT = {
+			has_country_flag = br_laws_feudalism_removed_flag
+			has_country_flag = br_laws_dictatorship_removed_flag
+			has_country_flag = br_laws_elected_representative_removed_flag
+			has_country_flag = br_laws_parliamentarism_removed_flag
+			has_country_flag = br_laws_committee_added_flag
+		}
 	}
 }

@@ -18,7 +18,7 @@ br_laws_decisions = {
 
 		is_good = no
 		#war_with_on_timeout = 
-		days_mission_timeout = 100
+		days_mission_timeout = 60
 		selectable_mission = no
 
 		complete_effect = {
@@ -30,13 +30,7 @@ br_laws_decisions = {
 			#
 		}
 
-		modifier = {
-			stability_weekly = -0.003
-		}
-
-		ai_will_do = {
-			base = 0
-		}
+		priority = 10
 	}
 
 	br_laws_decisions_implementing_the_law = { #法律变化的好处
@@ -47,7 +41,7 @@ br_laws_decisions = {
 			has_country_flag = br_laws_changed_flag
 		}
 
-		available = {  }
+		available = { always = no }
 
 		cancel_trigger = {
 			NOT = { has_country_flag = br_laws_changed_flag }
@@ -55,7 +49,7 @@ br_laws_decisions = {
 
 		is_good = yes
 		#war_with_on_timeout = 
-		days_mission_timeout = 10
+		days_mission_timeout = 60
 		selectable_mission = no
 
 		complete_effect = {
@@ -64,6 +58,146 @@ br_laws_decisions = {
 
 		timeout_effect = {
 			br_laws_changed_state_system_hidden_ideas_effect = yes
+			#变更法律带来的影响将会结束
+			custom_effect_tooltip = br_lwas_changed_state_system_remove_flags_NOT_tt
+			clr_country_flag = br_laws_changed_flag
+		}
+
+		priority = 10
+	}
+
+	br_laws_decisions_generic.1 = {
+		icon = generic_research
+
+		available = {
+			always = yes
+		}
+
+		visible = {
+			has_country_flag = br_laws_changed_flag
+		}
+
+		fire_only_once = no
+
+		cost = 0
+
+		complete_effect = {
+			#
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+	br_laws_decisions_generic.2 = {
+		icon = generic_research
+
+		available = {
+			always = yes
+		}
+
+		visible = {
+			has_country_flag = br_laws_changed_flag
+		}
+
+		fire_only_once = no
+
+		cost = 0
+
+		complete_effect = {
+			#
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+	br_laws_decisions_generic.3 = {
+		icon = generic_research
+
+		available = {
+			always = yes
+		}
+
+		visible = {
+			has_country_flag = br_laws_changed_flag
+		}
+
+		fire_only_once = no
+
+		cost = 0
+
+		complete_effect = {
+			#
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+	br_laws_decisions_generic.4 = {
+		icon = generic_research
+
+		available = {
+			always = yes
+		}
+
+		visible = {
+			has_country_flag = br_laws_changed_flag
+		}
+
+		fire_only_once = no
+
+		cost = 0
+
+		complete_effect = {
+			#
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+	br_laws_decisions_generic.5 = {
+		icon = generic_research
+
+		available = {
+			tag = JAP
+		}
+
+		visible = {
+			has_country_flag = br_laws_changed_flag
+		}
+
+		fire_only_once = no
+
+		cost = 0
+
+		complete_effect = {
+			#
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+	br_laws_decisions_generic.6 = {
+		icon = generic_research
+
+		available = {
+			always = yes
+		}
+
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = no
+
+		cost = 0
+
+		complete_effect = {
+			#
 		}
 
 		ai_will_do = {

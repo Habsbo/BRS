@@ -4,9 +4,18 @@
  br_laws_decisions_conflicts_desc: ""
  br_laws_decisions_implementing_the_law: "带来的影响"
  br_laws_decisions_implementing_the_law_desc: ""
+ br_laws_decisions_generic.1: "制造丑闻"
+ br_laws_decisions_generic.2: "舆论抨击"
+ br_laws_decisions_generic.3: "搜捕反对者"
+ br_laws_decisions_generic.4: "开放对话"
+ br_laws_decisions_generic.5: "禁止异议"
+ br_laws_decisions_generic.6: ""
 
  br_laws_feudalism_hidden: "$br_laws_feudalism$"
  br_laws_dictatorship_hidden: "$br_laws_dictatorship$"
  br_laws_elected_representative_hidden: "$br_laws_elected_representative$"
  br_laws_parliamentarism_hidden: "$br_laws_parliamentarism$"
  br_laws_committee_hidden: "$br_laws_committee$"
+
+ br_laws_changed_flag: "法律在最近得到变更"
+ br_lwas_changed_state_system_remove_flags_NOT_tt: "最近废除的旧国体支持者声势渐微"

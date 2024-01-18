@@ -51,9 +51,9 @@
  HOL_FRA_democratic_subject: "巴达维亚共和国"
  HOL_FRA_democratic_subject_DEF: "巴达维亚共和国"
 
- CZE: "捷克斯洛伐克"
- CZE_DEF: "捷克斯洛伐克"
- CZE_ADJ: "捷克斯洛伐克"
+ CZE: "捷克"
+ CZE_DEF: "捷克"
+ CZE_ADJ: "捷克"
  CZE_subject: "$OVERLORDADJ$属$CZE$"
  CZE_subject_DEF: "$OVERLORDADJ$属$CZE$"
 

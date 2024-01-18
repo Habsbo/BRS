@@ -199,7 +199,7 @@ if = {
 if = {
 	limit = { has_dlc = "Together for Victory" }
 
-	add_to_tech_sharing_group = commonwealth_research
+	#add_to_tech_sharing_group = commonwealth_research
 }
 
 set_politics = {
@@ -228,14 +228,14 @@ set_popularities = {
 create_faction = Allies
 add_to_faction = ENG
 #add_to_faction = FRA
-add_to_faction = CAN
-add_to_faction = AST
-add_to_faction = NZL
-add_to_faction = SAF
+#add_to_faction = CAN
+#add_to_faction = AST
+#add_to_faction = NZL
+#add_to_faction = SAF
 
-give_military_access = RAJ
-add_to_faction = RAJ		# Must be after puppet
-add_to_faction = MAL
+#give_military_access = RAJ
+#add_to_faction = RAJ		# Must be after puppet
+#add_to_faction = MAL
 
 #give_guarantee = CZE
 
