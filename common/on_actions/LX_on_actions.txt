@@ -1,0 +1,21 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			POL = {
+				remove_ideas = {
+					POL_spear_of_revenge
+					
+					POL_april_constitution_1
+					POL_looming_peasants_strike
+					POL_sanation_left_opposition_1
+					POL_sanation_right_opposition_1
+				}
+				set_variable = { war_support_expectation_value = 0.70 }
+				set_variable = { revenge_cost_method = 1 }
+				add_dynamic_modifier = {
+					modifier = POL_spear_of_revenge_sanation_dynamic_modifier
+				}
+			}
+		}
+	}
+}
