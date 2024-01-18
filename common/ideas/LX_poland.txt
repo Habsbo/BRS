@@ -11,6 +11,8 @@ ideas = {
 			allowed_civil_war = {
 				always = no
 			}
+			
+			available = { has_idea = POL_nationalist_military }
 
 			removal_cost = -1
 

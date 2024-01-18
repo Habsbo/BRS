@@ -66,7 +66,7 @@ POL_spear_of_revenge_decision_category = {
 		is_good = no
 		ai_will_do = { factor = 1 }
 		timeout_effect = {
-			custom_effect_tooltip = POL_modifier_spear_of_revenge_dynamic_modifier
+			custom_effect_tooltip = POL_modifier_spear_of_revenge_dynamic_modifier_tt
 			add_to_variable = { POL_SOR_party_popularity_stability_factor_var = -0.10 tooltip = stability_popularity_tt }
 		}
 	}
@@ -127,7 +127,7 @@ POL_spear_of_revenge_decision_category = {
 					add_political_power = -25
 				}
 			}
-			custom_effect_tooltip = POL_modifier_spear_of_revenge_dynamic_modifier
+			custom_effect_tooltip = POL_modifier_spear_of_revenge_dynamic_modifier_tt
 			add_to_variable = { POL_SOR_consumer_goods_factor_var = -0.10 tooltip = consumer_goods_factor_tt }
 		}
 		remove_effect = {
@@ -135,7 +135,7 @@ POL_spear_of_revenge_decision_category = {
 				ideology = ROOT
 				popularity = 0.02
 			}
-			custom_effect_tooltip = POL_modifier_spear_of_revenge_dynamic_modifier
+			custom_effect_tooltip = POL_modifier_spear_of_revenge_dynamic_modifier_tt
 			add_to_variable = { POL_SOR_consumer_goods_factor_var = 0.05 tooltip = consumer_goods_factor_tt }
 		}
 	}
@@ -176,7 +176,7 @@ POL_spear_of_revenge_decision_category = {
 					add_political_power = -25
 				}
 			}
-			custom_effect_tooltip = POL_modifier_spear_of_revenge_dynamic_modifier
+			custom_effect_tooltip = POL_modifier_spear_of_revenge_dynamic_modifier_tt
 			add_to_variable = { POL_SOR_industrial_capacity_factory_var = 0.10 tooltip = industrial_capacity_factory_tt }
 		}
 		remove_effect = {
@@ -184,7 +184,7 @@ POL_spear_of_revenge_decision_category = {
 				ideology = ROOT
 				popularity = 0.02
 			}
-			custom_effect_tooltip = POL_modifier_spear_of_revenge_dynamic_modifier
+			custom_effect_tooltip = POL_modifier_spear_of_revenge_dynamic_modifier_tt
 			add_to_variable = { POL_SOR_industrial_capacity_factory_var = -0.05 tooltip = industrial_capacity_factory_tt }
 		}
 	}

@@ -23,6 +23,7 @@ focus_tree = {
 	focus = {
 		id = POL_the_four_year_plan
 		icon = GFX_focus_POL_the_four_year_plan
+		mutually_exclusive = { focus = POL_civ_first focus = POL_mil_first }
 		x = 2
 		y = 0
 		cost = 5
@@ -33,10 +34,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			#activate_mission = POL_four_year_plan_mission
-			set_variable = {
-				var = POL_investments_var
-				value = 1
-			}
+			POL_update_industrial_modernization_index = yes
 			add_tech_bonus = {
 				name = POL_the_four_year_plan
 				bonus = 1.0
@@ -49,11 +47,94 @@ focus_tree = {
 			}
 		}
 	}
+	
+	focus = {
+		id = POL_civ_first
+		icon = GFX_focus_POL_the_four_year_plan
+		relative_position_id = POL_the_four_year_plan
+		mutually_exclusive = { focus = POL_mil_first focus = POL_the_four_year_plan }
+		x = -2
+		y = 0
+		cost = 5
+		available = {}
+		ai_will_do = {
+			factor = 0
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			POL_update_industrial_modernization_index = yes
+			add_tech_bonus = {
+				name = POL_civ_first
+				bonus = 1.0
+				uses = 1
+				category = concentrated_industry_category
+				category = dispersed_industry_category
+			}
+			custom_effect_tooltip = POL_modifier_tight_grain_reserves_dynamic_modifier_tt
+			add_to_variable = {  }
+		}
+	}
+	
+	focus = {
+		id = POL_mil_first
+		icon = GFX_focus_POL_the_four_year_plan
+		relative_position_id = POL_the_four_year_plan
+		mutually_exclusive = { focus = POL_civ_first focus = POL_the_four_year_plan }
+		x = 2
+		y = 0
+		cost = 5
+		available = {}
+		ai_will_do = {
+			factor = 0
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			POL_update_industrial_modernization_index = yes
+			add_tech_bonus = {
+				name = POL_mil_first
+				bonus = 1.0
+				uses = 1
+				category = cat_production
+			}
+			custom_effect_tooltip = POL_modifier_tight_grain_reserves_dynamic_modifier_tt
+			add_to_variable = { POL_TGR_party_popularity_stability_factor_var = -0.02 tooltip = stability_popularity_tt }
+			add_to_variable = { POL_TGR_mobilization_speed_var = 0.05 tooltip = mobilization_speed_tt }
+			add_to_variable = { POL_TGR_conscription_factor_var = 0.10 tooltip = conscription_factor_tt }
+		}
+	}
+	
+	focus = {
+		id = POL_modernize_general_policy
+		icon = GFX_focus_research
+		prerequisite = {
+			focus = POL_the_four_year_plan
+			focus = POL_civ_first
+			focus = POL_mil_first
+		}
+		relative_position_id = POL_the_four_year_plan
+		x = 0
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			POL_update_industrial_modernization_index = yes
+		}
+	}
 
 	focus = {
 		id = POL_additional_research_slot1
 		icon = GFX_focus_research
-		prerequisite = { focus = POL_the_four_year_plan }
+		prerequisite = { focus = POL_modernize_general_policy }
 		x = 2
 		y = 1
 		cost = 10
@@ -72,10 +153,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_to_variable = {
-				var = POL_investments_var
-				value = 1
-			}
+			POL_update_industrial_modernization_index = yes
 			add_research_slot = 1
 		}
 	}
@@ -83,7 +161,7 @@ focus_tree = {
 	focus = {
 		id = POL_central_region_strategy
 		icon = GFX_goal_generic_construction
-		prerequisite = { focus = POL_the_four_year_plan }
+		prerequisite = { focus = POL_modernize_general_policy }
 		x = 4
 		y = 1
 		cost = 5
@@ -100,10 +178,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 	
 		complete_tooltip = {
-			add_to_variable = {
-				var = POL_investments_var
-				value = 1
-			}
+			POL_update_industrial_modernization_index = yes
 			random_state = {
 				limit = { has_state_flag = POL_start_central_industrial_region_1 }
 				add_building_construction = {
@@ -129,10 +204,7 @@ focus_tree = {
 		}
 	
 		completion_reward = {
-			add_to_variable = {
-				var = POL_investments_var
-				value = 1
-			}
+			POL_update_industrial_modernization_index = yes
 			random_owned_controlled_state = {
 				prioritize = { 10 }
 				limit = {
@@ -206,10 +278,7 @@ focus_tree = {
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		complete_tooltip = {
-			add_to_variable = {
-				var = POL_investments_var
-				value = 1
-			}
+			POL_update_industrial_modernization_index = yes
 			random_state = {
 				limit = { has_state_flag = POL_expansion_of_new_towns_1 }
 				add_building_construction = {
@@ -229,10 +298,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_to_variable = {
-				var = POL_investments_var
-				value = 1
-			}
+			POL_update_industrial_modernization_index = yes
 			random_owned_controlled_state = {
 				prioritize = { 86 }
 				limit = {									
@@ -297,10 +363,7 @@ focus_tree = {
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		complete_tooltip = {
-			add_to_variable = {
-				var = POL_investments_var
-				value = 1
-			}
+			POL_update_industrial_modernization_index = yes
 			random_state = {
 				limit = { has_state_flag = POL_start_central_industrial_region_1 }
 				add_building_construction = {
@@ -317,10 +380,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_to_variable = {
-				var = POL_investments_var
-				value = 1
-			}
+			POL_update_industrial_modernization_index = yes
 			random_owned_controlled_state = {
 				prioritize = { 88 }
 				limit = {
@@ -367,10 +427,7 @@ focus_tree = {
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		complete_tooltip = {
-			add_to_variable = {
-				var = POL_investments_var
-				value = 1
-			}
+			POL_update_industrial_modernization_index = yes
 			random_state = {
 				limit = { has_state_flag = POL_start_central_industrial_region_1 }
 				add_building_construction = {
@@ -390,10 +447,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_to_variable = {
-				var = POL_investments_var
-				value = 1
-			}
+			POL_update_industrial_modernization_index = yes
 			random_owned_controlled_state = {
 				prioritize = { 89 }
 				limit = {
@@ -458,10 +512,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			add_to_variable = {
-				var = POL_investments_var
-				value = 1
-			}
+			POL_update_industrial_modernization_index = yes
 			add_resource = {
 				type = steel
 				amount = 24
@@ -498,10 +549,7 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			add_to_variable = {
-				var = POL_investments_var
-				value = 1
-			}
+			POL_update_industrial_modernization_index = yes
 			add_research_slot = 1
 		}
 	}
@@ -529,10 +577,7 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			add_to_variable = {
-				var = POL_investments_var
-				value = 1
-			}
+			POL_update_industrial_modernization_index = yes
 			add_ideas = {
 				POL_ideological_fanaticism
 			}
@@ -561,10 +606,7 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			add_to_variable = {
-				var = POL_investments_var
-				value = 1
-			}
+			POL_update_industrial_modernization_index = yes
 			add_ideas = {
 				POL_segregated_seating_abolished
 			}
@@ -574,7 +616,7 @@ focus_tree = {
 	focus = {
 		id = POL_fill_the_railways_gaps
 		icon = GFX_goal_generic_construct_infrastructure
-		prerequisite = { focus = POL_the_four_year_plan }
+		prerequisite = { focus = POL_modernize_general_policy }
 		x = 0
 		y = 1
 		cost = 10 #maybe 20?
@@ -669,10 +711,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			add_to_variable = {
-				var = POL_investments_var
-				value = 1
-			}
+			POL_update_industrial_modernization_index = yes
 			add_timed_idea = {
 				idea = POL_national_defence_fund_idea
 				days = 720
@@ -701,10 +740,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			add_to_variable = {
-				var = POL_investments_var
-				value = 1
-			}
+			POL_update_industrial_modernization_index = yes
 			add_timed_idea = {
 				idea = POL_central_defence_of_poland_idea
 				days = 720
@@ -730,10 +766,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		complete_tooltip = {
-			add_to_variable = {
-				var = POL_investments_var
-				value = 1
-			}
+			POL_update_industrial_modernization_index = yes
 			random_state = {
 				limit = { has_state_flag = POL_develop_upper_silesia_1 }
 				add_building_construction = {
@@ -745,10 +778,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_to_variable = {
-				var = POL_investments_var
-				value = 1
-			}
+			POL_update_industrial_modernization_index = yes
 			random_owned_controlled_state = {
 				prioritize = { 762 }
 				limit = {
@@ -817,10 +847,7 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = POL_delay_strike_70_days_tt
-			add_to_variable = {
-				var = POL_investments_var
-				value = 1
-			}
+			POL_update_industrial_modernization_index = yes
 			if = {
 				limit = { has_idea = POL_great_peasants_strike }
 				remove_ideas = POL_great_peasants_strike
@@ -852,10 +879,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		complete_tooltip = {
-			add_to_variable = {
-				var = POL_investments_var
-				value = 1
-			}
+			POL_update_industrial_modernization_index = yes
 			random_state = {
 				limit = { has_state_flag = POL_develop_east_poland_1 }
 				add_building_construction = {
@@ -891,10 +915,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_to_variable = {
-				var = POL_investments_var
-				value = 1
-			}
+			POL_update_industrial_modernization_index = yes
 			random_owned_controlled_state = {
 				prioritize = { 93 }
 				limit = {
@@ -985,10 +1006,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		complete_tooltip = {
-			add_to_variable = {
-				var = POL_investments_var
-				value = 1
-			}
+			POL_update_industrial_modernization_index = yes
 			random_state = {
 				limit = { has_state_flag = POL_invest_in_the_old_polish_region_1 }
 				add_building_construction = {
@@ -1000,10 +1018,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_to_variable = {
-				var = POL_investments_var
-				value = 1
-			}
+			POL_update_industrial_modernization_index = yes
 			random_owned_controlled_state = {
 				prioritize = { 88 }
 				limit = {
@@ -1045,10 +1060,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		complete_tooltip = {
-			add_to_variable = {
-				var = POL_investments_var
-				value = 1
-			}
+			POL_update_industrial_modernization_index = yes
 			random_state = {
 				limit = { has_state_flag = POL_modernize_congressional_factories_1 }
 				add_building_construction = {
@@ -1081,10 +1093,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_to_variable = {
-				var = POL_investments_var
-				value = 1
-			}
+			POL_update_industrial_modernization_index = yes
 			random_owned_controlled_state = {
 				prioritize = { 10 }
 				limit = {
@@ -1163,10 +1172,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		complete_tooltip = {
-			add_to_variable = {
-				var = POL_investments_var
-				value = 1
-			}
+			POL_update_industrial_modernization_index = yes
 			random_state = {
 				prioritize = { 10 }
 				limit = { has_state_flag = POL_warsaw_main_railway_station_1 }
@@ -1179,10 +1185,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_to_variable = {
-				var = POL_investments_var
-				value = 1
-			}
+			POL_update_industrial_modernization_index = yes
 			random_owned_controlled_state = {
 				prioritize = { 10 }
 				limit = {
