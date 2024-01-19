@@ -13,7 +13,7 @@
  NIR_DEF: "北爱尔兰"
  NIR_ADJ: "北爱尔兰"
 
- SOV: "苏维埃$RUS$"
+ SOV: "$RUS$苏维埃"
  SOV_DEF: "苏俄"
  SOV_ADJ: "苏俄"
 

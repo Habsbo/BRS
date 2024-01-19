@@ -66,11 +66,17 @@
  ARM_republic: "$ARM$共和国"
  GEO_republic: "$GEO$共和国"
 
-#乌克兰
+#乌克兰&俄罗斯
  UKR_liberated_area: "$UKR$农民解放区"
  POL_kingdom: "$POL$王国"
  POL_republic: "$POL$共和国"
- 
+
+ ROR: "$RUS$共和国"
+ ROR_interim_government: "$ROR$临时政府"
+
+ SOU: "苏维埃社会会主义共和国联盟"
+ SOR: "$SOV$共和国"
+
 #多瑙河
  AUS_archduchy: "$AUS$大公国"
  AUS_republic: "$AUS$共和国"
