@@ -36,8 +36,6 @@ POL_spear_of_revenge_sanation_dynamic_modifier = {#on_start_up
 	industrial_capacity_factory = POL_SOR_industrial_capacity_factory_var
 	production_factory_efficiency_gain_factor = POL_SOR_production_factory_efficiency_gain_factor_var
 }
-<<<<<<< Updated upstream:common/dynamic_modifiers/LX_dynamic_modifiers.txt
-=======
 
 POL_tight_grain_reserves_dynamic_modifier = {
 	enable = { always = yes }
@@ -58,4 +56,3 @@ POL_warsaw_main_railway_station_dynamic_modifier = {
 	state_production_speed_buildings_factor = 0.10
 	army_speed_factor_for_controller = 0.15
 }
->>>>>>> Stashed changes:common/dynamic_modifiers/br_poland_dynamic_modifiers.txt
