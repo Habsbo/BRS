@@ -1,7 +1,0 @@
-POL_use_war_support_cost = {
-	check_variable = { revenge_cost_method = 1 }
-}
-
-POL_use_political_power_cost = {
-	check_variable = { revenge_cost_method = 2 }
-}
