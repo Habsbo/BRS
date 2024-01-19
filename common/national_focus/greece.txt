@@ -20,7 +20,7 @@ focus_tree = {
 		icon = GFX_focus_generic_home_defense
 		#prerequisite = { focus =  }
 		mutually_exclusive = { focus = GRE_2 focus = GRE_3 }
-		x = 6
+		x = 36
 		y = 0
 		#relative_position_id = GRE_take_path_with_democratic
 
@@ -237,6 +237,450 @@ focus_tree = {
 		complete_tooltip = {}
 		
 		completion_reward = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+#economic
+
+	focus = {
+		id = GRE_focus_on_economic
+		icon = GFX_goal_generic_demand_territory
+		#prerequisite = { focus = GRE_ }
+		#mutually_exclusive = { focus = GRE_ }
+		x = 5
+		y = 0
+		#relative_position_id = GRE_
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_devalue_drachma_mildly
+		icon = GFX_focus_GRE_reevaluating_the_drachma
+		prerequisite = { focus = GRE_focus_on_economic }
+		#mutually_exclusive = { focus = GRE_ }
+		x = -2
+		y = 1
+		relative_position_id = GRE_focus_on_economic
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			add_political_power = 50
+			add_stability = -0.05
+			unlock_decision_category_tooltip = GRE_pay_back_debt_to_the_ifc_category
+			custom_effect_tooltip = GRE_pay_back_debt_tt
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_restructuring_debts
+		icon = GFX_focus_generic_concessions
+		prerequisite = { focus = GRE_devalue_drachma_mildly }
+		#mutually_exclusive = { focus = GRE_ }
+		x = 0
+		y = 1
+		relative_position_id = GRE_devalue_drachma_mildly
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_contract_new_loans
+		icon = GFX_focus_DEN_no_regulations
+		prerequisite = { focus = GRE_dissolve_workers_and_peasants_association focus = GRE_minister_of_socialism }
+		prerequisite = { focus = GRE_restructuring_debts }
+		#mutually_exclusive = { focus = GRE_ }
+		x = 0
+		y = 1
+		relative_position_id = GRE_restructuring_debts
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_deny_british_debts
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = GRE_restructuring_debts }
+		#mutually_exclusive = { focus = GRE_ }
+		x = -2
+		y = 1
+		relative_position_id = GRE_restructuring_debts
+
+		cost = 5
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_
+		icon = GFX_focus_generic_self_management
+		#prerequisite = { focus = GRE_focus_on_economic }
+		#mutually_exclusive = { focus = GRE_ }
+		x = 2
+		y = 1
+		relative_position_id = GRE_focus_on_economic
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+
+#
+	focus = {
+		id = GRE_arrest_socialist
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = GRE_focus_on_economic }
+		mutually_exclusive = { focus = GRE_dialogue_with_protesters }
+		x = 2
+		y = 1
+		relative_position_id = GRE_focus_on_economic
+
+		cost = 5
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_dissolve_workers_and_peasants_association
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = GRE_arrest_socialist }
+		#mutually_exclusive = { focus = GRE_ }
+		x = 0
+		y = 1
+		relative_position_id = GRE_arrest_socialist
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_force_peasants_into_factories
+		icon = GFX_focus_generic_industry_2
+		prerequisite = { focus = GRE_dissolve_workers_and_peasants_association }
+		#mutually_exclusive = { focus = GRE_ }
+		x = 0
+		y = 1
+		relative_position_id = GRE_dissolve_workers_and_peasants_association
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_
+		icon = GFX_focus_generic_self_management
+		prerequisite = { focus = GRE_force_peasants_into_factories }
+		#mutually_exclusive = { focus = GRE_ }
+		x = -1
+		y = 1
+		relative_position_id = GRE_force_peasants_into_factories
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+#
+	focus = {
+		id = GRE_dialogue_with_protesters
+		icon = GFX_focus_generic_self_management
+		prerequisite = { focus = GRE_focus_on_economic }
+		mutually_exclusive = { focus = GRE_arrest_socialist }
+		x = 4
+		y = 1
+		relative_position_id = GRE_focus_on_economic
+
+		cost = 5
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_minister_of_socialism
+		icon = GFX_focus_generic_soviet_politics
+		prerequisite = { focus = GRE_dialogue_with_protesters }
+		#mutually_exclusive = { focus = GRE_ }
+		x = 0
+		y = 1
+		relative_position_id = GRE_dialogue_with_protesters
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_acquiring_enterprises
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = GRE_minister_of_socialism }
+		#mutually_exclusive = { focus = GRE_ }
+		x = 0
+		y = 1
+		relative_position_id = GRE_minister_of_socialism
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_
+		icon = GFX_focus_generic_self_management
+		prerequisite = { focus = GRE_acquiring_enterprises }
+		#mutually_exclusive = { focus = GRE_ }
+		x = 1
+		y = 1
+		relative_position_id = GRE_acquiring_enterprises
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+
+
+	focus = {
+		id = GRE_labor_capital_relations
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = GRE_force_peasants_into_factories focus = GRE_acquiring_enterprises }
+		#mutually_exclusive = { focus = GRE_ }
+		x = 1
+		y = 1
+		relative_position_id = GRE_force_peasants_into_factories
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 	}

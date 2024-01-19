@@ -60,7 +60,7 @@ GRE_election_category = {
 	}
 
 	visible = {
-		#NOT = { has_global_flag = spanish_civil_war }
+		#
 	}
 }
 
@@ -205,4 +205,20 @@ GRE_hellenic_ambitions = {
 	visible = {
 		#
 	}
+}
+
+GRE_focus_on_economic_decisions = {
+	icon = generic_economy
+
+	picture = GFX_decision_cat_picture_1936_election
+
+	allowed = {
+		original_tag = GRE
+	}
+
+	visible = {
+		#NOT = { has_global_flag = spanish_civil_war }
+	}
+	
+	priority = 9
 }

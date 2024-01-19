@@ -61,7 +61,7 @@ GRE_election_category = {
 	}
 	#工人运动
 	GRE_worker_strikes = {
-		icon = eng_support_imperialist_coup
+		icon = generic_political_rally
 
 		activation = {
 			NOT = {
@@ -129,15 +129,12 @@ GRE_election_category = {
 		priority = 9
 	}
 	GRE_negotiations_of_strikes = {
-		icon = GFX_
+		icon = generic_political_rally
 
 		allowed = {
 			original_tag = GRE
 		}
 		visible = {
-			#
-		}
-		available = {
 			OR = {
 				has_idea = SPR_national_strikes_1
 				has_idea = SPR_national_strikes_2
@@ -149,6 +146,9 @@ GRE_election_category = {
 				has_idea = SPR_national_strikes_8
 				has_idea = SPR_national_strikes_9
 			}
+		}
+		available = {
+			#
 		}
 
 		fire_only_once = yes
@@ -193,15 +193,12 @@ GRE_election_category = {
 		}
 	}
 	GRE_suppress_socialism = {
-		icon = GFX_
+		icon = generic_political_rally
 
 		allowed = {
 			original_tag = GRE
 		}
 		visible = {
-			#
-		}
-		available = {
 			OR = {
 				has_idea = SPR_national_strikes_1
 				has_idea = SPR_national_strikes_2
@@ -213,6 +210,9 @@ GRE_election_category = {
 				has_idea = SPR_national_strikes_8
 				has_idea = SPR_national_strikes_9
 			}
+		}
+		available = {
+			#
 		}
 
 		fire_only_once = yes
@@ -398,7 +398,14 @@ GRE_election_category = {
 			original_tag = GRE
 		}
 		visible = {
-			#
+			check_variable = {
+				var = gre_republic_civil_war_divisions_counter_var
+				value > gre_civil_war_divisions_counter_var
+			}
+			check_variable = {
+				var = gre_republic_civil_war_divisions_counter_var
+				value > 5
+			}
 		}
 		available = {
 			custom_trigger_tooltip = {
@@ -1772,6 +1779,191 @@ political_actions = {
 				num_of_naval_factories > 8
 				factor = 10
 			}
+		}
+	}
+}
+
+#
+GRE_focus_on_economic_decisions = {
+
+	GRE_focus_on_economic_decisions.1 = {
+		
+		icon = generic_naval
+
+		allowed = { 
+			original_tag = GRE
+		}
+
+		available = {
+			#has_completed_focus = GRE_bolster_the_schachtplan
+		}
+
+		cost = 0
+
+		fire_only_once = yes
+
+		visible = {
+			#
+		}
+
+		cancel_if_not_visible = yes
+
+		complete_effect = {
+			#
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	GRE_focus_on_economic_decisions.2 = {
+		
+		icon = generic_naval
+
+		allowed = { 
+			original_tag = GRE
+		}
+
+		available = {
+			#has_completed_focus = GRE_bolster_the_schachtplan
+		}
+
+		cost = 0
+
+		fire_only_once = yes
+
+		visible = {
+			#
+		}
+
+		cancel_if_not_visible = yes
+
+		complete_effect = {
+			#
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	GRE_focus_on_economic_decisions.3 = {
+		
+		icon = generic_naval
+
+		allowed = { 
+			original_tag = GRE
+		}
+
+		available = {
+			#has_completed_focus = GRE_bolster_the_schachtplan
+		}
+
+		cost = 0
+
+		fire_only_once = yes
+
+		visible = {
+			#
+		}
+
+		cancel_if_not_visible = yes
+
+		complete_effect = {
+			#
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	GRE_focus_on_economic_decisions.4 = {
+		
+		icon = generic_naval
+
+		allowed = { 
+			original_tag = GRE
+		}
+
+		available = {
+			#has_completed_focus = GRE_bolster_the_schachtplan
+		}
+
+		cost = 0
+
+		fire_only_once = yes
+
+		visible = {
+			#
+		}
+
+		cancel_if_not_visible = yes
+
+		complete_effect = {
+			#
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	GRE_focus_on_economic_decisions.5 = {
+		
+		icon = generic_naval
+
+		allowed = { 
+			original_tag = GRE
+		}
+
+		available = {
+			#has_completed_focus = GRE_bolster_the_schachtplan
+		}
+
+		cost = 0
+
+		fire_only_once = yes
+
+		visible = {
+			#
+		}
+
+		cancel_if_not_visible = yes
+
+		complete_effect = {
+			#
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	GRE_focus_on_economic_decisions.6 = {
+		
+		icon = generic_naval
+
+		allowed = { 
+			original_tag = GRE
+		}
+
+		available = {
+			#has_completed_focus = GRE_bolster_the_schachtplan
+		}
+
+		cost = 0
+
+		fire_only_once = yes
+
+		visible = {
+			#
+		}
+
+		cancel_if_not_visible = yes
+
+		complete_effect = {
+			#
+		}
+
+		ai_will_do = {
+			factor = 5
 		}
 	}
 }

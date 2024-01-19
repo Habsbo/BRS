@@ -55,8 +55,33 @@
 
  GRE_ensure_loyalty_of_militaries_state_target: "确保军队的忠诚"
 
+ GRE_focus_on_economic_decisions: "聚焦国内经济"
 #focus
- 
+ GRE_focus_on_economic: "聚焦经济"
+ GRE_focus_on_economic_desc: ""
+ GRE_devalue_drachma_mildly: "温和的货币贬值"
+ GRE_devalue_drachma_mildly_desc: ""
+ GRE_restructuring_debts: "债务重组"
+ GRE_restructuring_debts_desc: ""
+ GRE_contract_new_loans: "举借新债"
+ GRE_contract_new_loans_desc: ""
+ GRE_arrest_socialist: "逮捕社会主义者"
+ GRE_arrest_socialist_desc: ""
+ GRE_dissolve_workers_and_peasants_association: "解散工农行会"
+ GRE_dissolve_workers_and_peasants_association_desc: ""
+ GRE_force_peasants_into_factories: "强制劳动力继续工作"
+ GRE_force_peasants_into_factories_desc: ""
+ GRE_dialogue_with_protesters: "开启对话"
+ GRE_dialogue_with_protesters_desc: ""
+ GRE_minister_of_socialism: "起用社会主义部长"
+ GRE_minister_of_socialism_desc: ""
+ GRE_acquiring_enterprises: "收买组建国有企业"
+ GRE_acquiring_enterprises_desc: ""
+ GRE_deny_british_debts: "否认英国债务"
+ GRE_deny_british_debts_desc: ""
+ GRE_labor_capital_relations: "改善劳资关系"
+ GRE_labor_capital_relations_desc: ""
+
 #events
  br_hellas.1.title: "英王室流亡至$GRE$"
  br_hellas.1.desc: ""
