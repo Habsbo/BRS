@@ -50,8 +50,6 @@ focus_tree = {
 			add_stability = 0.05
 		}
 	}
-<<<<<<< Updated upstream
-=======
 	
 	focus = {
 		id = POL_civ_first
@@ -150,19 +148,13 @@ focus_tree = {
 			add_ideas = POL_modernize_general_policy
 		}
 	}
->>>>>>> Stashed changes
 
 	focus = {
 		id = POL_additional_research_slot1
 		icon = GFX_focus_research
-<<<<<<< Updated upstream
-		prerequisite = { focus = POL_the_four_year_plan }
-		x = 2
-=======
 		prerequisite = { focus = POL_modernize_general_policy }
 		relative_position_id = POL_modernize_general_policy
 		x = 0
->>>>>>> Stashed changes
 		y = 1
 		cost = 10
 
@@ -191,14 +183,9 @@ focus_tree = {
 	focus = {
 		id = POL_central_region_strategy
 		icon = GFX_goal_generic_construction
-<<<<<<< Updated upstream
-		prerequisite = { focus = POL_the_four_year_plan }
-		x = 4
-=======
 		prerequisite = { focus = POL_modernize_general_policy }
 		relative_position_id = POL_modernize_general_policy
 		x = 2
->>>>>>> Stashed changes
 		y = 1
 		cost = 5
 
@@ -775,14 +762,9 @@ focus_tree = {
 	focus = {
 		id = POL_fill_the_railways_gaps
 		icon = GFX_goal_generic_construct_infrastructure
-<<<<<<< Updated upstream
-		prerequisite = { focus = POL_the_four_year_plan }
-		x = 0
-=======
 		prerequisite = { focus = POL_modernize_general_policy }
 		relative_position_id = POL_modernize_general_policy
 		x = -2
->>>>>>> Stashed changes
 		y = 1
 		cost = 10 #maybe 20?
 
@@ -1053,27 +1035,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
-<<<<<<< Updated upstream
-			custom_effect_tooltip = POL_delay_strike_70_days_tt
-			add_to_variable = {
-				var = POL_investments_var
-				value = 1
-			}
-			if = {
-				limit = { has_idea = POL_great_peasants_strike }
-				remove_ideas = POL_great_peasants_strike
-			}
-			else = {
-				remove_ideas = POL_looming_peasants_strike
-			}
-=======
 			custom_effect_tooltip = POL_agrarian_reform_tt1
 			effect_tooltip = { add_stability = 0.10 }
 			custom_effect_tooltip = POL_agrarian_reform_tt2
 			POL_update_industrial_modernization_index = yes
 			add_political_power = 25
 			POL_grain_reserves_expand = yes
->>>>>>> Stashed changes
 		}		
 	}
 	
