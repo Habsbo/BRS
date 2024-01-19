@@ -1,0 +1,7 @@
+spriteTypes = {
+
+	SpriteType = {
+		name = "GFX_focus_POL_railway_for_all_rzeczpospolita"
+		texturefile = "gfx/interface/goals/focus_POL_railway_for_all_rzeczpospolita.dds"			
+	}
+}

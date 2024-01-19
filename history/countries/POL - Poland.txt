@@ -111,7 +111,7 @@ if = {
 		POL_sanation_right_opposition_1
 		
 		POL_april_constitution_no_crown
-		POL_tight_grain_reserves
+		POL_tight_grain_reserves_5
 		POL_nationalist_military
 		POL_nationalist_military_hidden
 		POL_spear_of_revenge

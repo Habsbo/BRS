@@ -1,0 +1,63 @@
+#Remember to change the tooltips if the effects are changed
+#State scope. Prev is target country.
+POL_update_industrial_modernization_index = {
+	if = {
+		limit = { NOT = { has_variable = POL_investments_var } }
+		set_variable = {
+			var = POL_investments_var
+			value = 1
+		}
+	}
+	else = {
+		add_to_variable = {
+			var = POL_investments_var
+			value = 1
+		}
+	}
+}
+
+POL_grain_reserves_expand = {
+	effect_tooltip = {
+		swap_ideas = {
+			remove_idea = POL_tight_grain_reserves_5
+			add_idea = POL_tight_grain_reserves_4
+		}
+	}
+	hidden_ideas = {
+		if = {
+			limit = { has_idea = POL_tight_grain_reserves_5 }
+			swap_ideas = {
+				remove_idea = POL_tight_grain_reserves_5
+				add_idea = POL_tight_grain_reserves_4
+			}
+		}
+		else_if = {
+			limit = { has_idea = POL_tight_grain_reserves_4 }
+			swap_ideas = {
+				remove_idea = POL_tight_grain_reserves_4
+				add_idea = POL_tight_grain_reserves_3
+			}
+		}
+		else_if = {
+			limit = { has_idea = POL_tight_grain_reserves_3 }
+			swap_ideas = {
+				remove_idea = POL_tight_grain_reserves_3
+				add_idea = POL_tight_grain_reserves_2
+			}
+		}
+		else_if = {
+			limit = { has_idea = POL_tight_grain_reserves_2 }
+			swap_ideas = {
+				remove_idea = POL_tight_grain_reserves_2
+				add_idea = POL_tight_grain_reserves_1
+			}
+		}
+		else_if = {
+			limit = { has_idea = POL_tight_grain_reserves_1 }
+			swap_ideas = {
+				remove_idea = POL_tight_grain_reserves_1
+				add_idea = POL_tight_grain_reserves
+			}
+		}
+	}
+}
