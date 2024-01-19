@@ -29,14 +29,16 @@ recruit_character = DAH_fascist_guy
 recruit_character = DAH_ar
 
 set_politics = {
-	ruling_party = neutrality
+	ruling_party = social_liberation
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = no
 }
+
 set_popularities = {
-	democratic = 25
-	fascism = 20
-	communism = 5
-	neutrality = 50
+	social_democracy = 17 #社会民主主义
+	social_liberation = 30 #社会自由主义
+	conservatism_democracy = 20 #保守民主主义
+	authoritarian = 20 #威权主义
+	fascist = 13 #民族主义/束棒
 }

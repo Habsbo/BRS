@@ -84,9 +84,18 @@ if = {
 	}
 }
 
+set_politics = {
+	ruling_party = social_democracy
+	last_election = "1931.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
 set_popularities = {
-	democratic = 60
-	communism = 40
+	scientific_socialist = 20 #科学社会主义
+	conservatism_socialist = 5 #保守社会主义
+	social_democracy = 45 #社会民主主义
+	authoritarian = 30 #威权主义
 }
 
 create_country_leader = {

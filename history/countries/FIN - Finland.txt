@@ -603,37 +603,25 @@ set_convoys = 5
 }
 
 set_politics = {
-	ruling_party = neutrality
+	ruling_party = authoritarian
 	last_election = "1931.3.2" #Represents Presidential elections (Country leader is President of the Republic, not Prime Minister)
 	election_frequency = 72
 	elections_allowed = yes
 }
+
 set_popularities = {
-	democratic = 15
-	fascism = 19
-	communism = 1
-	neutrality = 65
+	revolution_socialist = 16 #革命社会主义
+	scientific_socialist = 8 #科学社会主义
+	conservatism_democracy = 10 #保守民主主义
+	authoritarian = 46 #威权主义
+	fascist = 17 #民族主义/束棒
+	national_socialist = 3 #国家社会主义
 }
+
 add_stability = -0.1
 
 #Event for Svinhufvud's Term Ending
 country_event = { id = AAT_finland_political.02 days = 426 }
-
-
-1939.1.1 = {
-	set_politics = {
-		ruling_party = neutrality
-		last_election = "1937.3.1" #Represents Presidential elections (Country leader is President of the Republic, not Prime Minister)
-		election_frequency = 72
-		elections_allowed = yes
-	}
-	set_popularities = {
-		democratic = 4
-		fascism = 15
-		communism = 1
-		neutrality = 80
-	}
-}
 
 ### VARIANTS ###
 # 1936 Start #
@@ -722,42 +710,3 @@ if = {
 		producer = FRA
 	}
 }
-
-
-
-1939.1.1 = {
-	if = {
-		limit = {
-			has_dlc = "No Step Back"
-		}
-		set_country_flag = FIN_vickers_template_created_flag
-		create_equipment_variant = {
-			name = "Vickers Mark E Tpye B"
-			type = light_tank_chassis_0
-			parent_version = 0
-			modules = {
-				main_armament_slot = tank_high_velocity_cannon
-				turret_type_slot = tank_light_one_man_tank_turret
-				suspension_type_slot = tank_bogie_suspension
-				armor_type_slot = tank_riveted_armor
-				engine_type_slot = tank_gasoline_engine
-				special_type_slot_1 = secondary_turret_hmg
-			}
-			upgrades = {
-				tank_nsb_armor_upgrade = 3
-				tank_nsb_engine_upgrade = 2
-			}
-			obsolete = yes
-			icon = "GFX_FIN_gw_tank_destroyer_vickers_medium"
-			model = "commonwealth_gfx_light_armor_entity"
-		}
-
-		add_equipment_to_stockpile = { 
-			type = light_tank_chassis_0
-			variant_name = "Vickers 6 ton A"
-			amount = 26
-			producer = ENG
-		}
-	}
-}
-

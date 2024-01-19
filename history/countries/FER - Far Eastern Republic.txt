@@ -83,18 +83,15 @@ if = {
 	}
 }
 set_politics = {
-	ruling_party = democratic
+	ruling_party = scientific_socialist
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = yes
 }
 
 set_popularities = {
-	democratic = 60
-	fascism = 0
-	communism = 40
+	revolution_socialist = 24 #革命社会主义
+	scientific_socialist = 62 #科学社会主义
+	conservatism_socialist = 10 #保守社会主义
+	social_democracy = 4 #社会民主主义
 }
-
-
-
-

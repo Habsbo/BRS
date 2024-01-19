@@ -88,17 +88,18 @@ if = {
 }
 
 set_politics = {
-	ruling_party = fascism
+	ruling_party = social_democracy
 	last_election = "1935.4.7"
 	election_frequency = 36
 	elections_allowed = yes
 }
 
-set_popularities = { #popularities based on 1933 election statistics.
-	democratic = 22
-	fascism = 62
-	communism = 6
-	neutrality = 10
+set_popularities = {
+	social_democracy = 30 #社会民主主义
+	social_liberation = 20 #社会自由主义
+	conservatism_democracy = 20 #保守民主主义
+	authoritarian = 10 #威权主义
+	fascist = 20 #民族主义/束棒
 }
 
 create_country_leader = {
