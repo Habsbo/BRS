@@ -377,7 +377,7 @@ ideas = {
 			available = {
 				NOT = { has_country_flag = br_laws_changed_flag }
 			}
-			
+
 			removal_cost = -1
 
 			modifier = {
@@ -406,8 +406,8 @@ ideas = {
 
 			available = {
 				NOT = {
-					has_idea = elected_representative
-					has_idea = parliamentarism
+					has_idea = br_laws_elected_representative
+					has_idea = br_laws_parliamentarism
 				}
 			}
 

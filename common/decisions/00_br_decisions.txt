@@ -189,7 +189,7 @@ br_laws_decisions = {
 		}
 
 		visible = {
-			always = yes
+			has_country_flag = br_laws_changed_flag
 		}
 
 		fire_only_once = no
