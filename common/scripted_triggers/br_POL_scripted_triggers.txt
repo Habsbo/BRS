@@ -1,3 +1,4 @@
+### made by LingXia ###
 POL_use_war_support_cost = {
 	check_variable = { revenge_cost_method = 1 }
 }

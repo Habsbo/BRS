@@ -1,4 +1,5 @@
-﻿capital = 10
+﻿### made by LingXia ###
+capital = 10
 
 set_stability = 0.55
 set_war_support = 0.60

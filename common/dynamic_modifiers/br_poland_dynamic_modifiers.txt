@@ -1,3 +1,4 @@
+### made by LingXia ###
 #	Example:
 # 
 #	example_dynamic_modifier = {

@@ -1,3 +1,4 @@
+### made by LingXia ###
 #Remember to change the tooltips if the effects are changed
 #State scope. Prev is target country.
 POL_update_industrial_modernization_index = {
