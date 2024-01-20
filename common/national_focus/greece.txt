@@ -15,231 +15,7 @@ focus_tree = {
 
 	continuous_focus_position = { x = 50 y = 1500 }
 #
-	focus = {
-		id = GRE_1
-		icon = GFX_focus_generic_home_defense
-		#prerequisite = { focus =  }
-		mutually_exclusive = { focus = GRE_2 focus = GRE_3 }
-		x = 36
-		y = 0
-		#relative_position_id = GRE_take_path_with_democratic
 
-		cost = 8
-		
-		ai_will_do = { factor = 1 }
-		
-		available = {
-			NOT = { has_idea = br_laws_monarchy }
-		}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {
-			add_political_power = 120
-			add_stability = 0.05
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
-	}
-	focus = {
-		id = GRE_2
-		icon = GFX_goal_generic_demand_territory
-		#prerequisite = { focus =  }
-		mutually_exclusive = { focus = GRE_1 focus = GRE_3 }
-		x = 2
-		y = 0
-		relative_position_id = GRE_1
-
-		cost = 8
-		
-		ai_will_do = { factor = 1 }
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
-	}
-	focus = {
-		id = GRE_3
-		icon = GFX_focus_generic_home_defense
-		#prerequisite = { focus =  }
-		mutually_exclusive = { focus = GRE_1 focus = GRE_2 }
-		x = 4
-		y = 0
-		relative_position_id = GRE_1
-
-		cost = 8
-		
-		ai_will_do = { factor = 1 }
-		
-		available = {
-			NOT = {	has_country_flag = GRE_king_arrested }
-			has_idea = br_laws_monarchy
-		}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
-	}
-	
-	focus = {
-		id = GRE_4
-		icon = GFX_goal_generic_demand_territory
-		prerequisite = { focus = GRE_1 }
-		#mutually_exclusive = { focus =  }
-		x = -4
-		y = 1
-		relative_position_id = GRE_1
-
-		cost = 8
-		
-		ai_will_do = { factor = 1 }
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
-	}
-	focus = {
-		id = GRE_5
-		icon = GFX_goal_generic_demand_territory
-		prerequisite = { focus = GRE_1 focus = GRE_2 focus = GRE_3 }
-		#mutually_exclusive = { focus =  }
-		x = 0
-		y = 1
-		relative_position_id = GRE_2
-
-		cost = 8
-		
-		ai_will_do = { factor = 1 }
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
-	}
-	focus = {
-		id = GRE_6
-		icon = GFX_goal_generic_demand_territory
-		prerequisite = { focus = GRE_3 }
-		#mutually_exclusive = { focus =  }
-		x = 4
-		y = 1
-		relative_position_id = GRE_3
-
-		cost = 8
-		
-		ai_will_do = { factor = 1 }
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
-	}
-	focus = {
-		id = GRE_7
-		icon = GFX_goal_generic_demand_territory
-		prerequisite = { focus = GRE_5 }
-		mutually_exclusive = { focus = GRE_8 }
-		x = -1
-		y = 1
-		relative_position_id = GRE_5
-
-		cost = 8
-		
-		ai_will_do = { factor = 1 }
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
-	}
-	focus = {
-		id = GRE_8
-		icon = GFX_goal_generic_demand_territory
-		prerequisite = { focus = GRE_5 }
-		mutually_exclusive = { focus = GRE_7 }
-		x = 1
-		y = 1
-		relative_position_id = GRE_5
-
-		cost = 8
-		
-		ai_will_do = { factor = 1 }
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
-	}
 #economic
 
 	focus = {
@@ -247,7 +23,7 @@ focus_tree = {
 		icon = GFX_goal_generic_demand_territory
 		#prerequisite = { focus = GRE_ }
 		#mutually_exclusive = { focus = GRE_ }
-		x = 5
+		x = 7
 		y = 0
 		#relative_position_id = GRE_
 
@@ -274,7 +50,7 @@ focus_tree = {
 		icon = GFX_focus_GRE_reevaluating_the_drachma
 		prerequisite = { focus = GRE_focus_on_economic }
 		#mutually_exclusive = { focus = GRE_ }
-		x = -2
+		x = -4
 		y = 1
 		relative_position_id = GRE_focus_on_economic
 
@@ -390,13 +166,43 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 	}
 	focus = {
-		id = GRE_
-		icon = GFX_focus_generic_self_management
-		#prerequisite = { focus = GRE_focus_on_economic }
-		#mutually_exclusive = { focus = GRE_ }
-		x = 2
+		id = GRE_deny_italian_debts
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = GRE_restructuring_debts }
+		mutually_exclusive = { focus = GRE_cooperations_with_italian }
+		x = -3
+		y = 2
+		relative_position_id = GRE_restructuring_debts
+
+		cost = 5
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	#法团主义
+	focus = {
+		id = GRE_cooperations_with_italian
+		icon = GFX_focus_generic_italy_propaganda
+		prerequisite = { focus = GRE_contract_new_loans }
+		mutually_exclusive = { focus = GRE_deny_italian_debts }
+		x = -1
 		y = 1
-		relative_position_id = GRE_focus_on_economic
+		relative_position_id = GRE_contract_new_loans
 
 		cost = 8
 		
@@ -418,14 +224,364 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 	}
+	focus = {
+		id = GRE_trattato_rosso
+		icon = GFX_goal_molotov_ribbentrop_pact
+		prerequisite = { focus = GRE_cooperations_with_italian }
+		mutually_exclusive = { focus = GRE_rome_treaty focus = GRE_petite_entente focus = GRE_the_ally }
+		x = -2
+		y = 2
+		relative_position_id = GRE_cooperations_with_italian
 
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_rome_treaty
+		icon = GFX_focus_generic_fascist_propaganda
+		prerequisite = { focus = GRE_cooperations_with_italian }
+		mutually_exclusive = { focus = GRE_trattato_rosso focus = GRE_petite_entente focus = GRE_the_ally }
+		x = 0
+		y = 2
+		relative_position_id = GRE_cooperations_with_italian
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_improve_economic_structure
+		icon = GFX_focus_generic_modernize_industry
+		prerequisite = { focus = GRE_cooperations_with_italian focus = GRE_cooperations_with_french }
+		#mutually_exclusive = { focus = GRE_ }
+		x = 1
+		y = 1
+		relative_position_id = GRE_cooperations_with_italian
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	#小协约国-隔离线
+	focus = {
+		id = GRE_cooperations_with_french
+		icon = GFX_focus_chi_reach_out_to_france
+		prerequisite = { focus = GRE_contract_new_loans }
+		#mutually_exclusive = { focus = GRE_ }
+		x = 1
+		y = 1
+		relative_position_id = GRE_contract_new_loans
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_petite_entente
+		icon = GFX_goal_generic_alliance
+		prerequisite = { focus = GRE_cooperations_with_french }
+		mutually_exclusive = { focus = GRE_trattato_rosso focus = GRE_rome_treaty focus = GRE_the_ally }
+		x = 0
+		y = 2
+		relative_position_id = GRE_cooperations_with_french
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_admire_midzymorze
+		icon = GFX_focus_generic_polish_deal
+		prerequisite = { focus =  GRE_petite_entente }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 2
+		relative_position_id =  GRE_petite_entente
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_gre_cze_industries_cooperation
+		icon = GFX_focus_generic_industry_3
+		prerequisite = { focus =  GRE_petite_entente focus = GRE_the_ally }
+		prerequisite = { focus = GRE_democratic_industry }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 1
+		relative_position_id =  GRE_petite_entente
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_isolation_line
+		icon = GFX_focus_invite_romania
+		prerequisite = { focus =  GRE_petite_entente }
+		#mutually_exclusive = { focus =  }
+		x = -1
+		y = 1
+		relative_position_id =  GRE_petite_entente
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_democratic_industry
+		icon = GFX_focus_generic_the_giant_wakes
+		prerequisite = { focus = GRE_cooperations_with_french focus = GRE_keep_schacht_plan }
+		#mutually_exclusive = { focus = GRE_ }
+		x = 1
+		y = 1
+		relative_position_id = GRE_cooperations_with_french
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	#德国-奥地利体制
+	focus = {
+		id = GRE_keep_schacht_plan
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = GRE_contract_new_loans }
+		#mutually_exclusive = { focus = GRE_ }
+		x = 3
+		y = 1
+		relative_position_id = GRE_contract_new_loans
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_the_ally
+		icon = GFX_focus_generic_the_giant_wakes
+		prerequisite = { focus = GRE_keep_schacht_plan }
+		mutually_exclusive = { focus = GRE_trattato_rosso focus = GRE_rome_treaty focus = GRE_petite_entente }
+		x = 0
+		y = 2
+		relative_position_id = GRE_keep_schacht_plan
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_d
+		icon = GFX_focus_generic_the_giant_wakes
+		prerequisite = { focus = GRE_keep_schacht_plan }
+		#mutually_exclusive = { focus = GRE_ }
+		x = 1
+		y = 1
+		relative_position_id = GRE_keep_schacht_plan
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
 #
 	focus = {
 		id = GRE_arrest_socialist
 		icon = GFX_goal_demand_sudetenland
 		prerequisite = { focus = GRE_focus_on_economic }
 		mutually_exclusive = { focus = GRE_dialogue_with_protesters }
-		x = 2
+		x = 4
 		y = 1
 		relative_position_id = GRE_focus_on_economic
 
@@ -508,7 +664,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 	}
 	focus = {
-		id = GRE_
+		id = GRE_1
 		icon = GFX_focus_generic_self_management
 		prerequisite = { focus = GRE_force_peasants_into_factories }
 		#mutually_exclusive = { focus = GRE_ }
@@ -542,7 +698,7 @@ focus_tree = {
 		icon = GFX_focus_generic_self_management
 		prerequisite = { focus = GRE_focus_on_economic }
 		mutually_exclusive = { focus = GRE_arrest_socialist }
-		x = 4
+		x = 6
 		y = 1
 		relative_position_id = GRE_focus_on_economic
 
@@ -625,7 +781,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 	}
 	focus = {
-		id = GRE_
+		id = GRE_2
 		icon = GFX_focus_generic_self_management
 		prerequisite = { focus = GRE_acquiring_enterprises }
 		#mutually_exclusive = { focus = GRE_ }
