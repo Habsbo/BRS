@@ -13,7 +13,7 @@ focus_tree = {
 	
 	default = no
 
-	continuous_focus_position = { x = 50 y = 1500 }
+	continuous_focus_position = { x = 50 y = 1350 }
 #
 
 #economic
@@ -23,7 +23,7 @@ focus_tree = {
 		icon = GFX_goal_generic_demand_territory
 		#prerequisite = { focus = GRE_ }
 		#mutually_exclusive = { focus = GRE_ }
-		x = 7
+		x = 8
 		y = 0
 		#relative_position_id = GRE_
 
@@ -254,6 +254,93 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 	}
 	focus = {
+		id = GRE_common_aspiration
+		icon = GFX_focus_SOV_breadbasket_of_the_union
+		prerequisite = { focus = GRE_trattato_rosso }
+		#mutually_exclusive = { focus = GRE_ }
+		x = -1
+		y = 1
+		relative_position_id = GRE_trattato_rosso
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_free_cry
+		icon = GFX_focus_spr_masters_of_our_own_fate
+		prerequisite = { focus = GRE_common_aspiration }
+		#mutually_exclusive = { focus = GRE_ }
+		x = 1
+		y = 1
+		relative_position_id = GRE_common_aspiration
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_maxism_revolution_allies
+		icon = GFX_focus_spr_unify_the_london_bureau
+		prerequisite = { focus = GRE_common_aspiration }
+		#mutually_exclusive = { focus = GRE_ }
+		x = 0
+		y = 2
+		relative_position_id = GRE_common_aspiration
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
 		id = GRE_rome_treaty
 		icon = GFX_focus_generic_fascist_propaganda
 		prerequisite = { focus = GRE_cooperations_with_italian }
@@ -261,6 +348,94 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = GRE_cooperations_with_italian
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_latin_military
+		icon = GFX_focus_ITA_a_colonial_empire
+		prerequisite = { focus = GRE_trattato_rosso focus = GRE_rome_treaty }
+		#mutually_exclusive = { focus = GRE_ }
+		x = 1
+		y = 1
+		relative_position_id = GRE_trattato_rosso
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_imperators
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = GRE_rome_treaty }
+		#mutually_exclusive = { focus = GRE_ }
+		x = 0
+		y = 2
+		relative_position_id = GRE_rome_treaty
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_eagle_reborn
+		icon = GFX_focus_GRE_reviving_the_double_headed_eagle
+		prerequisite = { focus = GRE_latin_military }
+		prerequisite = { focus = GRE_imperators }
+		#mutually_exclusive = { focus = GRE_ }
+		x = 0
+		y = 2
+		relative_position_id = GRE_latin_military
 
 		cost = 8
 		
@@ -430,13 +605,42 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 	}
 	focus = {
-		id = GRE_isolation_line
+		id = GRE_be_friendly_to_romania
 		icon = GFX_focus_invite_romania
-		prerequisite = { focus =  GRE_petite_entente }
+		prerequisite = { focus = GRE_trattato_rosso focus = GRE_rome_treaty focus = GRE_petite_entente focus = GRE_the_ally }
 		#mutually_exclusive = { focus =  }
 		x = -1
 		y = 1
 		relative_position_id =  GRE_petite_entente
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_isolation_line
+		icon = GFX_focus_rom_preserve_romania
+		prerequisite = { focus = GRE_be_friendly_to_romania }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 2
+		relative_position_id =  GRE_be_friendly_to_romania
 
 		cost = 8
 		
@@ -547,13 +751,187 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 	}
 	focus = {
-		id = GRE_d
-		icon = GFX_focus_generic_the_giant_wakes
+		id = GRE_improve_schacht_plan
+		icon = GFX_focus_usa_reestablish_the_gold_standard
 		prerequisite = { focus = GRE_keep_schacht_plan }
 		#mutually_exclusive = { focus = GRE_ }
 		x = 1
 		y = 1
 		relative_position_id = GRE_keep_schacht_plan
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_rule_balkan
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		prerequisite = { focus = GRE_the_ally }
+		#mutually_exclusive = { focus = GRE_ }
+		x = 1
+		y = 1
+		relative_position_id = GRE_the_ally
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_eastern_empire
+		icon = GFX_focus_generic_coastal_fort
+		prerequisite = { focus = GRE_rule_balkan focus = GRE_help_uk }
+		#mutually_exclusive = { focus = GRE_ }
+		x = 1
+		y = 1
+		relative_position_id = GRE_rule_balkan
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_help_uk
+		icon = GFX_focus_chi_british_cooperation
+		prerequisite = { focus = GRE_the_ally }
+		#mutually_exclusive = { focus = GRE_ }
+		x = 3
+		y = 1
+		relative_position_id = GRE_the_ally
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_eagle_flapping
+		icon = GFX_focus_SWE_refuge_from_war
+		prerequisite = { focus = GRE_admire_midzymorze focus = GRE_eastern_empire }
+		#mutually_exclusive = { focus = GRE_ }
+		x = -3
+		y = 1
+		relative_position_id = GRE_eastern_empire
+
+		cost = 5
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_hellenic_alexander_empire
+		icon =  GFX_focus_GRE_reviving_the_spartan_warrior_spirit
+		prerequisite = { focus = GRE_eastern_empire }
+		#mutually_exclusive = { focus = GRE_ }
+		x = -1
+		y = 1
+		relative_position_id = GRE_eastern_empire
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_orthodox_empire
+		icon = GFX_focus_GRE_an_orthodox_state
+		prerequisite = { focus = GRE_eastern_empire }
+		#mutually_exclusive = { focus = GRE_ }
+		x = 1
+		y = 1
+		relative_position_id = GRE_eastern_empire
 
 		cost = 8
 		
