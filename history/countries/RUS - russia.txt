@@ -180,5 +180,5 @@ set_cosmetic_tag = ROR_interim_government #RUS_republic
 
 set_autonomy = {
 	target = BSK
-	autonomy_state = autonomy_br_self_governance
+	autonomy_state = autonomy_br_protectorate
 }

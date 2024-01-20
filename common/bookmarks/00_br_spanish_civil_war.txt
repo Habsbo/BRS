@@ -67,6 +67,18 @@ bookmarks = {
 			}
 		}
 
+		"POL"={
+			history = "FRA_GATHERING_STORM_DESC"
+			ideology = conservatism_democracy
+			#available = { has_dlc = "La Resistance" } 
+			ideas = {
+				#
+			}
+			focuses = {
+				#
+			}
+		}
+
 		"---"={
 			history = "OTHER_GATHERING_STORM_DESC"
 		}

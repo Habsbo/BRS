@@ -591,7 +591,7 @@ characters={
 			}
 	
 			country_leader={
-				ideology=nationalism_type
+				ideology=falangism
 				expire="1965.1.1.1"
 				id=-1
 			}
@@ -4711,8 +4711,8 @@ characters={
 			}
 			modifier = {
 				political_power_gain = 0.35
-				anarchist_drift = 0.08
-				anarchist_acceptance = 80
+				anarchist_communist_drift = 0.08
+				anarchist_communist_acceptance = 80
 			}
 		}
 		corps_commander={
@@ -5613,14 +5613,6 @@ characters={
 		portraits = {
 			civilian = {
 				large = "GFX_portrait_SOV_white_transitionary_council"
-			}
-		}
-		country_leader = {
-			ideology = social_liberation_type
-			expire = "1953.3.1.1"
-			id = -1
-			traits = {
-				emigre_connections desperate_gambit dysfunctional_assembly
 			}
 		}
 		country_leader = {
