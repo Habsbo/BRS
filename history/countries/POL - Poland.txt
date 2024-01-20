@@ -105,21 +105,21 @@ if = {
 		has_dlc = "Poland: United and Ready"
 	}
 	add_ideas = {
-		uncontrolled_exports
-		POL_april_constitution_1
-		POL_looming_peasants_strike
-		POL_sanation_left_opposition_1
-		POL_sanation_right_opposition_1
+		#uncontrolled_exports
+		#POL_april_constitution_1
+		#POL_looming_peasants_strike
+		#POL_sanation_left_opposition_1
+		#POL_sanation_right_opposition_1
 		
 		POL_april_constitution_no_crown
+		POL_sanation_left_opposition_1
+		POL_sanation_right_opposition_1
 		POL_tight_grain_reserves_5
 		POL_nationalist_military
 		POL_nationalist_military_hidden
 		POL_spear_of_revenge
 	}
 }
-
-set_variable = { POL_SOR_war_support_factor_var = 0.10 }
 
 
 85 = {

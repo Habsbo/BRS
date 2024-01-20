@@ -4,16 +4,22 @@ on_actions = {
 			POL = {
 				remove_ideas = {
 					POL_spear_of_revenge
-					
-					POL_april_constitution_1
-					POL_looming_peasants_strike
-					POL_sanation_left_opposition_1
-					POL_sanation_right_opposition_1
 				}
 				set_variable = { war_support_expectation_value = 0.70 }
 				set_variable = { revenge_cost_method = 1 }
+
+				set_variable = { POL_SOR_war_support_factor_var = 0.10 }
 				add_dynamic_modifier = {
 					modifier = POL_spear_of_revenge_sanation_dynamic_modifier
+				}
+				
+				set_variable = { POL_TGR_mobilization_speed_var = -0.20 }
+				set_variable = { POL_TGR_consumer_goods_factor_var = 0.30 }
+				set_variable = { POL_TGR_production_speed_industrial_complex_factor_var = 0.30 }
+				set_variable = { POL_TGR_conscription_factor_var = -0.15 }
+				set_variable = { POL_TGR_party_popularity_stability_factor_var = 0 }
+				add_dynamic_modifier = {
+					modifier = POL_tight_grain_reserves_dynamic_modifier
 				}
 			}
 		}
