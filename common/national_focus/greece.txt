@@ -781,7 +781,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GRE_rule_balkan
-		icon = GFX_focus_usa_reestablish_the_gold_standard
+		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = GRE_the_ally }
 		#mutually_exclusive = { focus = GRE_ }
 		x = 1
