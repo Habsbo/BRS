@@ -27,7 +27,7 @@ focus_tree = {
 		y = 0
 		#relative_position_id = GRE_
 
-		cost = 8
+		cost = 5
 		
 		available = {}
 		
@@ -39,7 +39,10 @@ focus_tree = {
 		
 		complete_tooltip = {}
 		
-		completion_reward = {}
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+		}
 		
 		ai_will_do = { factor = 1 }
 
@@ -754,8 +757,9 @@ focus_tree = {
 		id = GRE_improve_schacht_plan
 		icon = GFX_focus_usa_reestablish_the_gold_standard
 		prerequisite = { focus = GRE_keep_schacht_plan }
+		prerequisite = { focus = GRE_power_from_oversea }
 		#mutually_exclusive = { focus = GRE_ }
-		x = 1
+		x = 2
 		y = 1
 		relative_position_id = GRE_keep_schacht_plan
 
@@ -840,7 +844,7 @@ focus_tree = {
 	focus = {
 		id = GRE_help_uk
 		icon = GFX_focus_chi_british_cooperation
-		prerequisite = { focus = GRE_the_ally }
+		prerequisite = { focus = GRE_the_ally focus = GRE_learning_advanced_technique }
 		#mutually_exclusive = { focus = GRE_ }
 		x = 3
 		y = 1
@@ -976,7 +980,12 @@ focus_tree = {
 		complete_tooltip = {}
 		
 		completion_reward = {
-			
+			add_political_power = 200
+			add_stability = -0.03
+			add_popularity = { ideology = revolution_socialist popularity = -0.03 }
+			add_popularity = { ideology = scientific_socialist popularity = -0.08 }
+			add_popularity = { ideology = conservatism_socialist popularity = -0.02 }
+			add_popularity = { ideology = social_democracy popularity = -0.05 }
 		}
 		
 		ai_will_do = { factor = 1 }
@@ -1005,7 +1014,10 @@ focus_tree = {
 		complete_tooltip = {}
 		
 		completion_reward = {
-			
+			add_popularity = { ideology = anarchist_communist popularity = -0.05 }
+			add_popularity = { ideology = revolution_socialist popularity = -0.05 }
+			add_popularity = { ideology = scientific_socialist popularity = -0.08 }
+			add_stability = -0.15
 		}
 		
 		ai_will_do = { factor = 1 }
@@ -1042,13 +1054,161 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 	}
 	focus = {
-		id = GRE_1
-		icon = GFX_focus_generic_self_management
+		id = GRE_power_from_oversea
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = GRE_contract_new_loans }
 		prerequisite = { focus = GRE_force_peasants_into_factories }
 		#mutually_exclusive = { focus = GRE_ }
 		x = -1
 		y = 1
 		relative_position_id = GRE_force_peasants_into_factories
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_learning_advanced_technique
+		icon = GFX_focus_research2
+		prerequisite = { focus = GRE_power_from_oversea }
+		#mutually_exclusive = { focus = GRE_ }
+		x = 0
+		y = 2
+		relative_position_id = GRE_power_from_oversea
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			add_stability = 0.05
+			add_research_slot = 1
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_RESEARCH }
+	}
+	focus = {
+		id = GRE_efficient_mining
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = GRE_learning_advanced_technique }
+		#mutually_exclusive = { focus = GRE_ }
+		x = 1
+		y = 1
+		relative_position_id = GRE_learning_advanced_technique
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_RESEARCH }
+	}
+	focus = {
+		id = GRE_liquefaction
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = GRE_efficient_mining }
+		#mutually_exclusive = { focus = GRE_ }
+		x = 0
+		y = 2
+		relative_position_id = GRE_efficient_mining
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_RESEARCH }
+	}
+	focus = {
+		id = GRE_assembly_line
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = GRE_learning_advanced_technique }
+		#mutually_exclusive = { focus = GRE_ }
+		x = 3
+		y = 1
+		relative_position_id = GRE_learning_advanced_technique
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_industrial_upgrading
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = GRE_efficient_mining }
+		prerequisite = { focus = GRE_assembly_line }
+		#mutually_exclusive = { focus = GRE_ }
+		x = -1
+		y = 1
+		relative_position_id = GRE_assembly_line
 
 		cost = 8
 		
@@ -1093,7 +1253,10 @@ focus_tree = {
 		complete_tooltip = {}
 		
 		completion_reward = {
-			
+			add_political_power = 100
+			add_stability = 0.05
+			add_popularity = { ideology = scientific_socialist popularity = 0.02 }
+			add_popularity = { ideology = social_democracy popularity = 0.05 }
 		}
 		
 		ai_will_do = { factor = 1 }
@@ -1159,8 +1322,37 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 	}
 	focus = {
-		id = GRE_2
-		icon = GFX_focus_generic_self_management
+		id = GRE_recruit_exiled_scholar
+		icon = GFX_focus_research2
+		prerequisite = { focus = GRE_acquiring_enterprises }
+		#mutually_exclusive = { focus = GRE_ }
+		x = 3
+		y = 1
+		relative_position_id = GRE_acquiring_enterprises
+
+		cost = 5
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			add_research_slot = 1
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_RESEARCH }
+	}
+	focus = {
+		id = GRE_athenian_education
+		icon = GFX_focus_research
 		prerequisite = { focus = GRE_acquiring_enterprises }
 		#mutually_exclusive = { focus = GRE_ }
 		x = 1
@@ -1185,10 +1377,442 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_RESEARCH }
+	}
+	focus = {
+		id = GRE_popular_soil
+		icon = GFX_focus_GRE_resurrecting_the_megali_idea
+		prerequisite = { focus = GRE_athenian_education }
+		mutually_exclusive = { focus = GRE_agricultural_improvement }
+		x = 0
+		y = 1
+		relative_position_id = GRE_athenian_education
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
+
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 	}
+	focus = {
+		id = GRE_independent_industry
+		icon = GFX_focus_generic_industry_2
+		prerequisite = { focus = GRE_athenian_education }
+		#mutually_exclusive = { focus = GRE_ }
+		x = 2
+		y = 1
+		relative_position_id = GRE_athenian_education
 
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
 
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_invest_peloponnesian
+		icon = GFX_focus_generic_industry_1
+		prerequisite = { focus = GRE_independent_industry }
+		#mutually_exclusive = { focus = GRE_ }
+		x = -1
+		y = 1
+		relative_position_id = GRE_independent_industry
+
+		cost = 5
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_invest_attica
+		icon = GFX_focus_generic_industry_1
+		prerequisite = { focus = GRE_independent_industry }
+		#mutually_exclusive = { focus = GRE_ }
+		x = 1
+		y = 1
+		relative_position_id = GRE_independent_industry
+
+		cost = 5
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_invest_macedonia
+		icon = GFX_focus_generic_industry_1
+		prerequisite = { focus = GRE_independent_industry }
+		#mutually_exclusive = { focus = GRE_ }
+		x = 3
+		y = 1
+		relative_position_id = GRE_independent_industry
+
+		cost = 5
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_invest_epirus
+		icon = GFX_focus_generic_industry_1
+		prerequisite = { focus = GRE_independent_industry }
+		#mutually_exclusive = { focus = GRE_ }
+		x = 5
+		y = 1
+		relative_position_id = GRE_independent_industry
+
+		cost = 5
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_invest_constantinople
+		icon = GFX_focus_generic_industry_3
+		prerequisite = { focus = GRE_invest_peloponnesian focus = GRE_invest_attica focus = GRE_invest_macedonia focus = GRE_invest_epirus }
+		#mutually_exclusive = { focus = GRE_ }
+		x = 0
+		y = 1
+		relative_position_id = GRE_invest_peloponnesian
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_prosperities_of_aegean_sea
+		icon = GFX_focus_GRE_bedrock_of_balkan_stability
+		prerequisite = { focus = GRE_assembly_line focus = GRE_invest_constantinople }
+		#mutually_exclusive = { focus = GRE_ }
+		x = -1
+		y = 1
+		relative_position_id = GRE_invest_constantinople
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_back_on_popular_hand
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = GRE_invest_constantinople }
+		#mutually_exclusive = { focus = GRE_ }
+		x = 0
+		y = 2
+		relative_position_id = GRE_invest_constantinople
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_invest_anatolia
+		icon = GFX_focus_generic_industry_3
+		prerequisite = { focus = GRE_invest_peloponnesian focus = GRE_invest_attica focus = GRE_invest_macedonia focus = GRE_invest_epirus }
+		#mutually_exclusive = { focus = GRE_ }
+		x = 3
+		y = 1
+		relative_position_id = GRE_invest_peloponnesian
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_invest_africa
+		icon = GFX_focus_generic_industry_1
+		prerequisite = { focus = GRE_invest_anatolia }
+		#mutually_exclusive = { focus = GRE_ }
+		x = -1
+		y = 2
+		relative_position_id = GRE_invest_anatolia
+
+		cost = 5
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_invest_eygpt
+		icon = GFX_focus_generic_industry_1
+		prerequisite = { focus = GRE_invest_anatolia }
+		#mutually_exclusive = { focus = GRE_ }
+		x = 0
+		y = 1
+		relative_position_id = GRE_invest_anatolia
+
+		cost = 5
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_invest_hispain
+		icon = GFX_focus_generic_industry_1
+		prerequisite = { focus = GRE_invest_anatolia }
+		#mutually_exclusive = { focus = GRE_ }
+		x = 1
+		y = 2
+		relative_position_id = GRE_invest_anatolia
+
+		cost = 5
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_invest_iberia
+		icon = GFX_focus_generic_industry_1
+		prerequisite = { focus = GRE_invest_anatolia }
+		#mutually_exclusive = { focus = GRE_ }
+		x = 2
+		y = 1
+		relative_position_id = GRE_invest_anatolia
+
+		cost = 5
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_invest_illyria_and_dacia
+		icon = GFX_focus_generic_industry_1
+		prerequisite = { focus = GRE_invest_anatolia }
+		#mutually_exclusive = { focus = GRE_ }
+		x = 3
+		y = 2
+		relative_position_id = GRE_invest_anatolia
+
+		cost = 5
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	#
 	focus = {
 		id = GRE_labor_capital_relations
 		icon = GFX_focus_generic_treaty
@@ -1197,6 +1821,36 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GRE_force_peasants_into_factories
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_agricultural_improvement
+		icon = GFX_focus_generic_self_management
+		prerequisite = { focus =  GRE_labor_capital_relations }
+		prerequisite = { focus =  GRE_power_from_oversea focus = GRE_athenian_education }
+		mutually_exclusive = { focus = GRE_popular_soil }
+		x = 0
+		y = 1
+		relative_position_id =  GRE_labor_capital_relations
 
 		cost = 8
 		

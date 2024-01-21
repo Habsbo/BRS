@@ -49,4 +49,65 @@ br_debug_decisions = {
 			base = 0
 		}
 	}
+	debug_poland.1 = {
+
+		icon = generic_research
+
+		available = {
+			always = yes
+		}
+
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = no
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 188
+						state = 189
+						state = 11
+						state = 814
+						state = 815
+						state = 5
+						state = 763
+						state = 85
+						state = 807
+						state = 63
+						state = 68
+						state = 86
+						state = 66
+						state = 67
+						state = 762
+						IS_CORE_OF = CZE
+						IS_CORE_OF = UKR
+						IS_CORE_OF = LAT
+						IS_CORE_OF = BLR
+						IS_OWNED_BY = HUN
+						state = 76
+						state = 83
+						state = 84
+						state = 82
+						state = 79
+						state = 80
+						state = 78
+						state = 766
+						state = 89
+						state = 91
+						state = 93
+					}
+				}
+				add_core_of = ROOT
+				transfer_state_to = ROOT
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
 }
