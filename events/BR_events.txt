@@ -1,3 +1,198 @@
+add_namespace = br_political_actions
 add_namespace = br_event
 add_namespace = br_event
-add_namespace = br_event
+
+
+country_event = { #
+	id = br_political_actions.1
+	title = br_political_actions.1.title
+	desc = br_political_actions.1.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			FROM = {
+				if = {
+					limit = {
+						has_country_flag = br_political_action_anarchism_suppressed_flag
+						NOT = { has_country_flag = br_political_action_be_hostility_to_anarchism_flag }
+					}
+					set_country_flag = br_political_action_be_hostility_to_anarchism_flag
+				}
+				if = {
+					limit = {
+						has_country_flag = br_political_action_socialism_suppressed_flag
+						NOT = { has_country_flag = br_political_action_be_hostility_to_socialism_flag }
+					}
+					set_country_flag = br_political_action_be_hostility_to_socialism_flag
+				}
+				if = {
+					limit = {
+						has_country_flag = br_political_action_democratic_suppressed_flag
+						NOT = { has_country_flag = br_political_action_be_hostility_to_democratic_flag }
+					}
+					set_country_flag = br_political_action_be_hostility_to_democratic_flag
+				}
+				if = {
+					limit = {
+						has_country_flag = br_political_action_fascism_suppressed_flag
+						NOT = { has_country_flag = br_political_action_be_hostility_to_fascism_flag }
+					}
+					set_country_flag = br_political_action_be_hostility_to_fascism_flag
+				}
+			}
+		}
+	}
+
+	option = {
+		name = br_political_actions.1.a #
+
+		FROM = {
+			if = {
+				limit = { has_country_flag = br_political_action_anarchism_suppressed_flag }
+				set_temp_variable = { var = deny_ideology_var value = party_popularity@liberal_anarchy }
+				add_to_temp_variable = { var = deny_ideology_var value = party_popularity@anarchist_communist }
+				multiply_temp_variable = { var = deny_ideology_var value = -0.33 }
+				add_stability = deny_ideology_var
+				clr_country_flag = br_political_action_anarchism_suppressed_flag
+			}
+			if = {
+				limit = { has_country_flag = br_political_action_socialism_suppressed_flag }
+				set_temp_variable = { var = deny_ideology_var value = party_popularity@revolution_socialist }
+				add_to_temp_variable = { var = deny_ideology_var value = party_popularity@scientific_socialist }
+				add_to_temp_variable = { var = deny_ideology_var value = party_popularity@conservatism_socialist }
+				multiply_temp_variable = { var = deny_ideology_var value = -0.33 }
+				add_stability = deny_ideology_var
+				clr_country_flag = br_political_action_socialism_suppressed_flag
+			}
+			if = {
+				limit = { has_country_flag = br_political_action_democratic_suppressed_flag }
+				set_temp_variable = { var = deny_ideology_var value = party_popularity@social_democracy }
+				set_temp_variable = { var = deny_ideology_var value = party_popularity@social_liberation }
+				set_temp_variable = { var = deny_ideology_var value = party_popularity@conservatism_democracy }
+				multiply_temp_variable = { var = deny_ideology_var value = -0.33 }
+				add_stability = deny_ideology_var
+				clr_country_flag = br_political_action_democratic_suppressed_flag
+			}
+			if = {
+				limit = { has_country_flag = br_political_action_fascism_suppressed_flag }
+				set_temp_variable = { var = deny_ideology_var value = party_popularity@fascist }
+				set_temp_variable = { var = deny_ideology_var value = party_popularity@national_socialist }
+				set_temp_variable = { var = deny_ideology_var value = party_popularity@supranational_socialist }
+				multiply_temp_variable = { var = deny_ideology_var value = -0.33 }
+				add_stability = deny_ideology_var
+				clr_country_flag = br_political_action_fascism_suppressed_flag
+			}
+		}
+		ai_chance = { factor = 5 }
+	}
+
+}
+
+country_event = { #
+	id = br_political_actions.2
+	title = br_political_actions.2.title
+	desc = br_political_actions.2.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {  }
+
+	option = {
+		name = br_political_actions.2.a #
+
+		FROM = {
+			if = {
+				limit = { has_country_flag = br_political_action_anarchism_suppressed_flag }
+				#
+				set_temp_variable = { var = ban_ideology_var_ideology.1 value = party_popularity@liberal_anarchy }
+				set_temp_variable = { var = ban_ideology_var_ideology.2 value = party_popularity@anarchist_communist }
+				multiply_temp_variable = { var = ban_ideology_var_ideology.1 value = -1 }
+				multiply_temp_variable = { var = ban_ideology_var_ideology.2 value = -1 }
+				add_popularity = { ideology = liberal_anarchy popularity = ban_ideology_var_ideology.1 }
+				add_popularity = { ideology = anarchist_communist popularity = ban_ideology_var_ideology.2 }
+				#
+				set_temp_variable = { var = ban_ideology_var value = ban_ideology_var_ideology.1 }
+				add_to_temp_variable = { var = ban_ideology_var value = ban_ideology_var_ideology.2 }
+				multiply_temp_variable = { var = ban_ideology_var value = 0.33 }
+				add_stability = ban_ideology_var
+				#
+				clr_country_flag = br_political_action_anarchism_suppressed_flag
+				set_country_flag = br_political_action_ban_anarchism_flag
+			}
+			if = {
+				limit = { has_country_flag = br_political_action_socialism_suppressed_flag }
+				#
+				set_temp_variable = { var = ban_ideology_var_ideology.1 value = party_popularity@revolution_socialist }
+				set_temp_variable = { var = ban_ideology_var_ideology.2 value = party_popularity@scientific_socialist }
+				set_temp_variable = { var = ban_ideology_var_ideology.3 value = party_popularity@conservatism_socialist }
+				multiply_temp_variable = { var = ban_ideology_var_ideology.1 value = -1 }
+				multiply_temp_variable = { var = ban_ideology_var_ideology.2 value = -1 }
+				multiply_temp_variable = { var = ban_ideology_var_ideology.3 value = -1 }
+				add_popularity = { ideology = revolution_socialist popularity = ban_ideology_var_ideology.1 }
+				add_popularity = { ideology = scientific_socialist popularity = ban_ideology_var_ideology.2 }
+				add_popularity = { ideology = conservatism_socialist popularity = ban_ideology_var_ideology.3 }
+				#
+				set_temp_variable = { var = ban_ideology_var value = ban_ideology_var_ideology.1 }
+				add_to_temp_variable = { var = ban_ideology_var value = ban_ideology_var_ideology.2 }
+				add_to_temp_variable = { var = ban_ideology_var value = ban_ideology_var_ideology.3 }
+				multiply_temp_variable = { var = ban_ideology_var value = 0.33 }
+				add_stability = ban_ideology_var
+				#
+				clr_country_flag = br_political_action_socialism_suppressed_flag
+				set_country_flag = br_political_action_ban_socialism_flag
+			}
+			if = {
+				limit = { has_country_flag = br_political_action_democratic_suppressed_flag }
+				#
+				set_temp_variable = { var = ban_ideology_var_ideology.1 value = party_popularity@social_democracy }
+				set_temp_variable = { var = ban_ideology_var_ideology.2 value = party_popularity@social_liberation }
+				set_temp_variable = { var = ban_ideology_var_ideology.3 value = party_popularity@conservatism_democracy }
+				multiply_temp_variable = { var = ban_ideology_var_ideology.1 value = -1 }
+				multiply_temp_variable = { var = ban_ideology_var_ideology.2 value = -1 }
+				multiply_temp_variable = { var = ban_ideology_var_ideology.3 value = -1 }
+				add_popularity = { ideology = social_democracy popularity = ban_ideology_var_ideology.1 }
+				add_popularity = { ideology = social_liberation popularity = ban_ideology_var_ideology.2 }
+				add_popularity = { ideology = conservatism_democracy popularity = ban_ideology_var_ideology.3 }
+				#
+				set_temp_variable = { var = ban_ideology_var value = ban_ideology_var_ideology.1 }
+				add_to_temp_variable = { var = ban_ideology_var value = ban_ideology_var_ideology.2 }
+				add_to_temp_variable = { var = ban_ideology_var value = ban_ideology_var_ideology.3 }
+				multiply_temp_variable = { var = ban_ideology_var value = 0.33 }
+				add_stability = ban_ideology_var
+				#
+				clr_country_flag = br_political_action_democratic_suppressed_flag
+				set_country_flag = br_political_action_ban_democratic_flag
+			}
+			if = {
+				limit = { has_country_flag = br_political_action_fascism_suppressed_flag }
+				#
+				set_temp_variable = { var = ban_ideology_var_ideology.1 value = party_popularity@fascist }
+				set_temp_variable = { var = ban_ideology_var_ideology.2 value = party_popularity@national_socialist }
+				set_temp_variable = { var = ban_ideology_var_ideology.3 value = party_popularity@supranational_socialist }
+				multiply_temp_variable = { var = ban_ideology_var_ideology.1 value = -1 }
+				multiply_temp_variable = { var = ban_ideology_var_ideology.2 value = -1 }
+				multiply_temp_variable = { var = ban_ideology_var_ideology.3 value = -1 }
+				add_popularity = { ideology = fascist popularity = ban_ideology_var_ideology.1 }
+				add_popularity = { ideology = national_socialist popularity = ban_ideology_var_ideology.2 }
+				add_popularity = { ideology = supranational_socialist popularity = ban_ideology_var_ideology.3 }
+				#
+				set_temp_variable = { var = ban_ideology_var value = ban_ideology_var_ideology.1 }
+				add_to_temp_variable = { var = ban_ideology_var value = ban_ideology_var_ideology.2 }
+				add_to_temp_variable = { var = ban_ideology_var value = ban_ideology_var_ideology.3 }
+				multiply_temp_variable = { var = ban_ideology_var value = 0.33 }
+				add_stability = ban_ideology_var
+				#
+				clr_country_flag = br_political_action_fascism_suppressed_flag
+				set_country_flag = br_political_action_ban_fascism_flag
+			}
+		}
+		ai_chance = { factor = 5 }
+	}
+
+}

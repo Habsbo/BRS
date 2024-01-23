@@ -9,40 +9,38 @@
 # that'll be used if trigger passes
 
 defined_text = { # Country
-	name = GetCountryNameFRA
+	name = GetideologieskindName
 	text = {
 		trigger = {
-			original_tag = FRA
-			has_idea = feudalism
-		}
-		localization_key = FRANCE_KINGDOM_NAME
-	}
-	text = {
-		trigger = {
-			original_tag = FRA
-			has_idea = dictatorship
-		}
-		localization_key = FRANCE_KINGDOM_NAME
-	}
-	text = {
-		trigger = {
-			original_tag = FRA
-			OR = {
-				has_idea = elected_representative
-				has_idea = parliamentarism
+			FROM = {
+				has_country_flag = br_political_action_anarchism_suppressed_flag
 			}
 		}
-		localization_key = FRANCE_REPUBLIC_NAME
+		localization_key = GetideologieskindName_anarchism
 	}
 	text = {
 		trigger = {
-			original_tag = FRA
-			OR = {
-				has_idea = committee
-				#has_idea = 
+			FROM = {
+				has_country_flag = br_political_action_socialism_suppressed_flag
 			}
 		}
-		localization_key = FRENCH_COMMUNE_NAME
+		localization_key = GetideologieskindName_socialism
+	}
+	text = {
+		trigger = {
+			FROM = {
+				has_country_flag = br_political_action_democratic_suppressed_flag
+			}
+		}
+		localization_key = GetideologieskindName_democratic
+	}
+	text = {
+		trigger = {
+			FROM = {
+				has_country_flag = br_political_action_fascism_suppressed_flag
+			}
+		}
+		localization_key = GetideologieskindName_fascism
 	}
 }
 

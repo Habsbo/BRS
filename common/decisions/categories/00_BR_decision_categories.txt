@@ -12,4 +12,6 @@ br_political_actions = {
 	visible = {
 		always = yes
 	}
+
+	priority = 0
 }

@@ -82,3 +82,16 @@
  br_rif.1.desc: "§G$RIF$§!抵抗者们已经取得了初步胜利，我们的军队被驱逐出西属北非，摩洛哥的国王也被这群柏柏尔人擒获。"
  br_rif.1.a: "我们只能接受这一现实。"
  br_rif.1.b: "我们不能放弃北非"
+
+#
+ br_political_actions.1.title: "[FROM.GetideologieskindName]的抵抗"
+ br_political_actions.1.desc: ""
+ br_political_actions.1.a: "镇压他们！"
+ br_political_actions.2.title: "[FROM.GetideologieskindName]被禁绝"
+ br_political_actions.2.desc: ""
+ br_political_actions.2.a: "很好。"
+
+ GetideologieskindName_anarchism: "[FROM.GetName]无政府主义者"
+ GetideologieskindName_socialism: "[FROM.GetName]社会主义者"
+ GetideologieskindName_democratic: "[FROM.GetName]民主主义着"
+ GetideologieskindName_fascism: "[FROM.GetName]法西斯主义者"
