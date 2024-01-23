@@ -21,6 +21,8 @@
  br_lwas_changed_state_system_remove_flags_NOT_tt: "最近废除的旧国体支持者声势渐微"
 
  br_political_actions: "政治活动"
+ br_political_actions_desc: ""
+
  br_political_action_prepare_for_war: "战争动员"
  br_political_action_labor_law: "完善劳工法"
  br_political_action_labor_union: "工会监管法"
