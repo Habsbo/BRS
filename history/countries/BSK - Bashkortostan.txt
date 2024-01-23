@@ -97,7 +97,6 @@ set_popularities = {
 	fascist = 10 #民族主义/束棒
 }
 
-
 recruit_character = BSK_yakov_bykin
 
 

@@ -87,6 +87,19 @@
  SPR_national_socialist_party: ""
  SPR_supranational_socialist_party: ""
 
+ POL_liberal_anarchy_party: "无政府主义自由派"
+ POL_anarchist_communist_party: "波兰农民无政府主义联盟"
+ POL_revolution_socialist_party: "波兰和立陶宛社会民主党（SDKP）与犹太工人联盟（GJLB）" #而波兰工人共产党（KPRP）失败了
+ POL_scientific_socialist_party: "波兰工人党"
+ POL_conservatism_socialist_party: "波兰农民党"
+ POL_social_democracy_party: "波兰社会党（PPS）"
+ POL_social_liberation_party: "波兰国家民主党"
+ POL_conservatism_democracy_party: "萨纳齐亚主义左派"
+ POL_authoritarian_party: "萨纳齐亚主义右派" #帕克斯协会
+ POL_fascist_party: "波兰长枪党"
+ POL_national_socialist_party: "波兰纳粹党"
+ POL_supranational_socialist_party: "波兰纳粹党极端派"
+
  GRE_liberal_anarchy_party: "无政府主义自由派"
  GRE_anarchist_communist_party: "希腊无政府主义联盟"
  GRE_revolution_socialist_party: "希腊工人联盟"

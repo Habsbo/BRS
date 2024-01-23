@@ -18,7 +18,11 @@
 
 #巴尔干
  GRE_kingdom: "$GRE$王国"
+ GRE_republic: "$GRE$共和国"
 
+ CZE_kingdom: "波西米亚王国"
+ CZE_maravian_kingdom: "大摩拉维亚王国"
+ CZE_republic: "$CZE$共和国"
 #中国
  MNG: "大明"
  MNG_empire: "$MNG$帝国"
@@ -66,7 +70,7 @@
  ARM_republic: "$ARM$共和国"
  GEO_republic: "$GEO$共和国"
 
-#乌克兰&俄罗斯
+#乌克兰&俄罗斯&波兰
  UKR_liberated_area: "$UKR$农民解放区"
  POL_kingdom: "$POL$王国"
  POL_republic: "$POL$共和国"

@@ -5,3 +5,11 @@ br_laws_decisions = {
 		always = yes
 	}
 }
+
+br_political_actions = {
+	icon = generic_political_actions
+
+	visible = {
+		always = yes
+	}
+}

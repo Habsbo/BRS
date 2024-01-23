@@ -7,14 +7,12 @@
  GRE_hellenic_rome_empire_map_category_name: "希腊化的§G罗马帝国§!"
 
  GRE_election_category: "国王与选举"
- GRE_election_category_desc: "议会选举将近，亚历山大国王的突然病逝使得局势变得突然紧张。"
+ GRE_election_category_desc: "议会选举将近，亚历山大国王的突然病逝使得局势变得突然紧张。现在的王室危机度§R[?GRE.gre_civil_war_threat_var|0H]%§!。当危机度达到§R100%§!，事态将超出保皇派的掌控！"
 
  GRE_civil_war_divisions_counter_full_breakdown: "如果现在爆发内战，保皇派将马上获得[?GRE.gre_civil_war_divisions_counter_var|+0]§H师§!。\n"
  GRE_civil_war_divisions_counter_icon_value: "[?GRE.gre_civil_war_divisions_counter_var|0H]"
  GRE_republic_civil_war_divisions_counter_full_breakdown: "如果现在爆发内战，共和派将马上获得[?GRE.gre_republic_civil_war_divisions_counter_var|+0]§H师§!。\n"
  GRE_republic_civil_war_divisions_counter_icon_value: "[?GRE.gre_republic_civil_war_divisions_counter_var|0H]"
- GRE_civil_war_threat_icon_value: "§R[?GRE.gre_civil_war_threat_var|0H]%§!"
- GRE_civil_war_threat_full_breakdown: "当危机度达到§R100%§!，事态将超出保皇派的掌控！"
 
  br_gre_cwdc_increased_rep: "将有§G3§!个师被§R共和派§!的将领控制"
  br_gre_cwdc_increased_knd: "将有§G3§!个师陆续被§G君主派§!的将领控制"

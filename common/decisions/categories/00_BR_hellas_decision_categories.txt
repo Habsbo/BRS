@@ -15,16 +15,6 @@ GRE_election_category = {
 	
 	custom_icon = {
 		tag = GRE
-		value = GRE_civil_war_threat_icon_value
-		desc = GRE_civil_war_threat_full_breakdown
-
-		visible = {
-			NOT = { has_country_flag = br_GRE_the_crisis_done_flag }
-		}
-	}
-	
-	custom_icon = {
-		tag = GRE
 		value = GRE_civil_war_divisions_counter_icon_value
 		desc = GRE_civil_war_divisions_counter_full_breakdown
 

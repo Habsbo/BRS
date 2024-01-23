@@ -225,3 +225,4 @@ if = {
 	}
 }
 
+set_cosmetic_tag = CZE_republic
