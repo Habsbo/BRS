@@ -44,3 +44,38 @@ defined_text = { # Country
 	}
 }
 
+#希腊的国家信心
+defined_text = { # Country
+	name = GethellenicCountryconfidence
+	text = {
+		trigger = {
+            original_tag = GRE
+			check_variable = { var = br_hellenic_countryconfidence_var  value = 100 compare = less_than_or_equals }
+			check_variable = { var = br_hellenic_countryconfidence_var  value = 70 compare = greater_than }
+		}
+		localization_key = GethellenicCountryconfidence_high
+	}
+	text = {
+		trigger = {
+            original_tag = GRE
+			check_variable = { var = br_hellenic_countryconfidence_var  value = 70 compare = less_than_or_equals }
+			check_variable = { var = br_hellenic_countryconfidence_var  value = 30 compare = greater_than }
+		}
+		localization_key = GethellenicCountryconfidence_medium
+	}
+	text = {
+		trigger = {
+            original_tag = GRE
+			check_variable = { var = br_hellenic_countryconfidence_var  value = 30 compare = less_than_or_equals }
+			check_variable = { var = br_hellenic_countryconfidence_var  value = 10 compare = greater_than }
+		}
+		localization_key = GethellenicCountryconfidence_low
+	}
+	text = {
+		trigger = {
+            original_tag = GRE
+			check_variable = { var = br_hellenic_countryconfidence_var  value = 10 compare = less_than_or_equals }
+		}
+		localization_key = GethellenicCountryconfidence_ruins
+	}
+}

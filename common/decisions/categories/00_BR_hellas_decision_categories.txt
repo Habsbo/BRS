@@ -207,7 +207,7 @@ GRE_focus_on_economic_decisions = {
 	}
 
 	visible = {
-		#NOT = { has_global_flag = spanish_civil_war }
+		has_completed_focus = GRE_focus_on_economic
 	}
 	
 	priority = 9

@@ -7,7 +7,7 @@
  GRE_hellenic_rome_empire_map_category_name: "希腊化的§G罗马帝国§!"
 
  GRE_election_category: "国王与选举"
- GRE_election_category_desc: "议会选举将近，亚历山大国王的突然病逝使得局势变得突然紧张。现在的王室危机度§R[?GRE.gre_civil_war_threat_var|0H]%§!。当危机度达到§R100%§!，事态将超出保皇派的掌控！"
+ GRE_election_category_desc: "议会选举将近，亚历山大国王的突然病逝使得局势变得突然紧张。现在的王室危机度是§R[?GRE.gre_civil_war_threat_var|0H]%§!。当危机度达到§R100%§!，事态将超出保皇派的掌控！"
 
  GRE_civil_war_divisions_counter_full_breakdown: "如果现在爆发内战，保皇派将马上获得[?GRE.gre_civil_war_divisions_counter_var|+0]§H师§!。\n"
  GRE_civil_war_divisions_counter_icon_value: "[?GRE.gre_civil_war_divisions_counter_var|0H]"
@@ -54,6 +54,29 @@
  GRE_ensure_loyalty_of_militaries_state_target: "确保军队的忠诚"
 
  GRE_focus_on_economic_decisions: "聚焦国内经济"
+
+ GRE_pay_back_debt_to_the_ifc_category: "处理国际金融委员会债务"
+ GRE_pay_back_debt_to_the_ifc_category_desc: "自1829年独立战争之后，希腊就饱尝负债之苦，然而上次大战并未帮我们缓解财政问题。如果我们现在偿清债务，将大大有助于确保表面上的经济稳定。当然我们也可以寄希望于某些因抵制政治和经济会议而诱发的极端政治运动，或者静待时间流逝，任凭世界土崩瓦解，等待更极端的选项出现……\n\n§Y国家信心§!：[ROOT.GethellenicCountryconfidence]\n\n§Y国家资本§!：[?ROOT.gre_pbdt_the_ifc_gre_var|0H]§Y万§!§G德拉马克§!\n\n欠有§Y国债§!：[?ROOT.gre_pbdt_the_ifc_gre_loans_var|0H]§Y万§!§G德拉马克§!\n\n欠§Y英国§!的§Y债务§!：[?ROOT.gre_pbdt_the_ifc_eng_var|0H]§Y万§!§G英镑§!\n\n欠§Y法国§!的§Y债务§!：[?ROOT.gre_pbdt_the_ifc_fra_var|0H]§Y万§!§G法郎§!\n\n欠§Y德国§!的§Y债务§!：[?ROOT.gre_pbdt_the_ifc_ger_var|0H]§Y万§!§G帝国马克§!\n\n欠§Y意大利§!的§Y债务§!：[?ROOT.gre_pbdt_the_ifc_ita_var|0H]§Y万§!§G意大利里拉§!\n\n欠§Y美国§!的§Y债务§!：[?ROOT.gre_pbdt_the_ifc_usa_var|0H]§Y万§!§G美元§!\n\n欠§Y大明§!的§Y债务§!：[?ROOT.gre_pbdt_the_ifc_mng_var|0H]§Y万§!§G圆§!\n\n欠§Y日本§!的§Y债务§!：[?ROOT.gre_pbdt_the_ifc_jap_var|0H]§Y万§!§G日元§!"
+ GethellenicCountryconfidence_high: "§G稳固§!"
+ GethellenicCountryconfidence_medium: "§Y尚可§!"
+ GethellenicCountryconfidence_low: "§R人心浮动§!"
+ GethellenicCountryconfidence_ruins: "§R崩溃§!"
+ GRE_pbdt_the_ifc_decisions_devalues: "贬值德拉马克"
+ GRE_pbdt_the_ifc_decisions_national_debt: "增发国债"
+ GRE_pbdt_the_ifc_decisions_national_debt_deadline: "民众要求兑现国债"
+ GRE_pbdt_the_ifc_decisions_eng: "偿还英国债务"
+ GRE_pbdt_the_ifc_decisions_fra: "偿还法国债务"
+ GRE_pbdt_the_ifc_decisions_ger: "偿还德国债务"
+ GRE_pbdt_the_ifc_decisions_ita: "偿还意大利债务"
+ GRE_pbdt_the_ifc_decisions_usa: "偿还美联邦债务"
+ GRE_pbdt_the_ifc_decisions_mng: "偿还大明债务"
+ GRE_pbdt_the_ifc_decisions_jap: "偿还日本债务"
+ GRE_pbdt_the_ifc_decisions_bankruptcy: "宣布债务违约"
+
+ GRE_recommission_the_american_battleships: "复役美国战列舰"
+ GRE_recommission_the_american_battleships_desc: "自希土战争以来，战列舰基尔基斯号和利姆诺斯号的处境就有些尴尬，但是只要花费稍许的耐心与决心加以改装，我们就可以使她们再度适合海战。"
+ GRE_build_the_salamis: "重建萨拉米斯号"
+ GRE_build_the_salamis_desc: "在德国的帮助下，我们将得以重建在1932年被目光短浅地废弃的战列巡洋舰——萨拉米斯号。幸运的是，我们依然还保留有旧船体，所以从某种程度上来说这也不算从头再来。"
 #focus
  GRE_focus_on_economic: "聚焦经济"
  GRE_focus_on_economic_desc: ""

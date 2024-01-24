@@ -403,3 +403,13 @@ add_ideas = {
 	br_laws_bourgeoisie
 }
 #
+set_variable = { var = br_hellenic_countryconfidence_var value = 80 }
+set_variable = { var = gre_pbdt_the_ifc_gre_var value = 50000 }
+set_variable = { var = gre_pbdt_the_ifc_gre_loans_var value = 650000 }
+set_variable = { var = gre_pbdt_the_ifc_eng_var value = 6500 }
+set_variable = { var = gre_pbdt_the_ifc_fra_var value = 12700 }
+set_variable = { var = gre_pbdt_the_ifc_ger_var value = 6800 }
+set_variable = { var = gre_pbdt_the_ifc_ita_var value = 30000 }
+set_variable = { var = gre_pbdt_the_ifc_usa_var value = 80000 }
+set_variable = { var = gre_pbdt_the_ifc_mng_var value = 60000 }
+set_variable = { var = gre_pbdt_the_ifc_jap_var value = 10000 }

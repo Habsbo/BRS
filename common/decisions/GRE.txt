@@ -1582,7 +1582,7 @@ GRE_faction_management_category = {
 	}
 }
 
-political_actions = {
+br_political_actions = {
 	GRE_recommission_the_american_battleships = {
 		
 		icon = generic_naval
@@ -1782,7 +1782,368 @@ political_actions = {
 		}
 	}
 }
+#
+GRE_pay_back_debt_to_the_ifc_category = {
+	GRE_pbdt_the_ifc_decisions_devalues = { #贬值货币
+		
+		icon = generic_political_discourse
 
+		allowed = { 
+			original_tag = GRE
+		}
+
+		available = {
+			has_completed_focus = GRE_devalue_drachma_mildly
+		}
+
+		cost = 0
+
+		fire_only_once = no
+		days_re_enable = 90
+		days_remove = 60 
+
+		visible = {
+			#
+		}
+
+		cancel_if_not_visible = yes
+
+		complete_effect = {
+			#
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	GRE_pbdt_the_ifc_decisions_national_debt = { #增发国债
+		
+		icon = generic_political_discourse
+
+		allowed = { 
+			original_tag = GRE
+		}
+
+		available = {
+			has_completed_focus = GRE_devalue_drachma_mildly
+		}
+
+		cost = 0
+
+		fire_only_once = no
+		days_re_enable = 90
+		days_remove = 60 
+
+		visible = {
+			#
+		}
+
+		cancel_if_not_visible = yes
+
+		complete_effect = {
+			#
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	GRE_pbdt_the_ifc_decisions_national_debt_deadline = { #国债即将逾期
+		
+		icon = generic_political_discourse
+
+		activation = {
+			has_stability < 0.30
+		}
+
+		allowed = { 
+			original_tag = GRE
+		}
+
+		available = {
+			always = no
+		}
+		
+		cancel_trigger = {
+			always = no
+		}
+
+		is_good = no
+		days_mission_timeout = 90
+
+		visible = {
+			#
+		}
+
+		cancel_if_not_visible = yes
+
+		complete_effect = {
+			#
+		}
+
+		priority = 10
+	}
+	GRE_pbdt_the_ifc_decisions_eng = { #偿还英国
+		
+		icon = generic_political_discourse
+
+		allowed = { 
+			original_tag = GRE
+		}
+
+		available = {
+			has_completed_focus = GRE_restructuring_debts
+			NOT = { has_completed_focus = GRE_deny_british_debts }
+		}
+
+		visible = {
+			#has_completed_focus = GRE_devalue_drachma_mildly
+			NOT = { has_completed_focus = GRE_deny_british_debts }
+		}
+
+		cost = 0
+
+		fire_only_once = no
+		days_re_enable = 90
+		days_remove = 60
+
+		cancel_if_not_visible = yes
+
+		complete_effect = {
+			#
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	GRE_pbdt_the_ifc_decisions_fra = { #偿还法国
+		
+		icon = generic_political_discourse
+
+		allowed = { 
+			original_tag = GRE
+		}
+
+		available = {
+			has_completed_focus = GRE_restructuring_debts
+		}
+		
+		visible = {
+			#has_completed_focus = GRE_devalue_drachma_mildly
+		}
+
+		cost = 0
+
+		fire_only_once = no
+		days_re_enable = 90
+		days_remove = 60
+		
+		cancel_if_not_visible = yes
+
+		complete_effect = {
+			#
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	GRE_pbdt_the_ifc_decisions_ger = { #偿还德国
+		
+		icon = generic_political_discourse
+
+		allowed = { 
+			original_tag = GRE
+		}
+
+		available = {
+			has_completed_focus = GRE_restructuring_debts
+		}
+		
+		visible = {
+			#has_completed_focus = GRE_devalue_drachma_mildly
+		}
+
+		cost = 0
+
+		fire_only_once = no
+		days_re_enable = 90
+		days_remove = 60
+
+		cancel_if_not_visible = yes
+
+		complete_effect = {
+			#
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	GRE_pbdt_the_ifc_decisions_ita = { #偿还意大利
+		
+		icon = generic_political_discourse
+
+		allowed = { 
+			original_tag = GRE
+		}
+
+		available = {
+			has_completed_focus = GRE_restructuring_debts
+			NOT = { has_completed_focus = GRE_deny_italian_debts }
+		}
+		
+		visible = {
+			#has_completed_focus = GRE_devalue_drachma_mildly
+			NOT = { has_completed_focus = GRE_deny_italian_debts }
+		}
+
+		cost = 0
+
+		fire_only_once = no
+		days_re_enable = 90
+		days_remove = 60
+
+		cancel_if_not_visible = yes
+
+		complete_effect = {
+			#
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	GRE_pbdt_the_ifc_decisions_usa = { #偿还美国
+		
+		icon = generic_political_discourse
+
+		allowed = { 
+			original_tag = GRE
+		}
+
+		available = {
+			has_completed_focus = GRE_restructuring_debts
+		}
+		
+		visible = {
+			#has_completed_focus = GRE_devalue_drachma_mildly
+		}
+
+		cost = 0
+
+		fire_only_once = no
+		days_re_enable = 90
+		days_remove = 60
+
+		cancel_if_not_visible = yes
+
+		complete_effect = {
+			#
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	GRE_pbdt_the_ifc_decisions_mng = { #偿还大明
+		
+		icon = generic_political_discourse
+
+		allowed = { 
+			original_tag = GRE
+		}
+
+		available = {
+			has_completed_focus = GRE_restructuring_debts
+		}
+		
+		visible = {
+			#has_completed_focus = GRE_devalue_drachma_mildly
+		}
+
+		cost = 0
+
+		fire_only_once = no
+		days_re_enable = 90
+		days_remove = 60
+
+		cancel_if_not_visible = yes
+
+		complete_effect = {
+			#
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	GRE_pbdt_the_ifc_decisions_jap = { #偿还日本
+		
+		icon = generic_political_discourse
+
+		allowed = { 
+			original_tag = GRE
+		}
+
+		available = {
+			has_completed_focus = GRE_restructuring_debts
+		}
+
+		visible = {
+			#has_completed_focus = GRE_devalue_drachma_mildly
+		}
+
+		cost = 0
+
+		fire_only_once = no
+		days_re_enable = 90
+		days_remove = 60 
+
+		cancel_if_not_visible = yes
+
+		complete_effect = {
+			#
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	GRE_pbdt_the_ifc_decisions_bankruptcy = { #宣布破产
+		
+		icon = generic_political_discourse
+
+		allowed = { 
+			original_tag = GRE
+		}
+
+		available = {
+			has_completed_focus = GRE_restructuring_debts
+		}
+
+		cost = 0
+
+		fire_only_once = no
+		days_re_enable = 90
+		days_remove = 60 
+
+		visible = {
+			#has_completed_focus = GRE_devalue_drachma_mildly
+		}
+
+		cancel_if_not_visible = yes
+
+		complete_effect = {
+			#
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+	}
+}
 #
 GRE_focus_on_economic_decisions = {
 
