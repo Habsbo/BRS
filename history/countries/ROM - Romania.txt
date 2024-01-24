@@ -300,3 +300,5 @@ if = {
 		limit = { has_dlc = "Man the Guns" }
 	}
 }
+
+set_cosmetic_tag = ROM_kingdom
