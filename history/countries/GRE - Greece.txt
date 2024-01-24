@@ -404,8 +404,8 @@ add_ideas = {
 }
 #
 set_variable = { var = br_hellenic_countryconfidence_var value = 80 }
-set_variable = { var = gre_pbdt_the_ifc_gre_var value = 50000 }
-set_variable = { var = gre_pbdt_the_ifc_gre_loans_var value = 650000 }
+set_variable = { var = gre_pbdt_the_ifc_gre_var value = 5000 }
+set_variable = { var = gre_pbdt_the_ifc_gre_loans_var value = 8500 }
 set_variable = { var = gre_pbdt_the_ifc_eng_var value = 6500 }
 set_variable = { var = gre_pbdt_the_ifc_fra_var value = 12700 }
 set_variable = { var = gre_pbdt_the_ifc_ger_var value = 6800 }
