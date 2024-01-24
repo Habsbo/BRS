@@ -400,7 +400,7 @@ if = {
 	}
 }
 #
-set_cosmetic_tag = POL_republic #POL_kingdom
+set_cosmetic_tag = POL_kingdom
 #
 add_ideas = {
 	br_laws_parliamentarism
