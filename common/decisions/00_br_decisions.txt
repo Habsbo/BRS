@@ -284,7 +284,7 @@ br_political_actions = {
 			}
 			if = {
 				limit = { has_idea = war_economy }
-				add_idea = partial_economic_mobilisation
+				add_ideas = partial_economic_mobilisation
 			}
 		}
 
