@@ -76,3 +76,10 @@
  decision_cost_PP_50: "£pol_power §Y50§!"
  decision_cost_PP_50_blocked: "£pol_power §R50§!"
  decision_cost_PP_50_tooltip: "需要£pol_power §Y50§! 以执行此决议"
+
+
+ br_laws_feudalism_removed_flag: "封建制最近被议论废除"
+ br_laws_dictatorship_removed_flag: "独裁制最近被议论废除"
+ br_laws_elected_representative_removed_flag: "总统制最近被议论废除"
+ br_laws_parliamentarism_removed_flag: "议会制最近被议论废除"
+ br_laws_committee_removed_flag: "委员会制最近被议论废除"

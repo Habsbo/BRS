@@ -201,7 +201,7 @@ ideas = {
 			available = {
 				OR = {
 					NOT = { has_country_flag = br_laws_changed_flag }
-					has_country_flag = br_laws_committee_removed_flag
+					has_country_flag = br_laws_elected_representative_removed_flag
 				}
 			}
 
