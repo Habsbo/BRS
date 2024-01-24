@@ -69,6 +69,8 @@
  TUR_republic: "$TUR$共和国"
  ARM_republic: "$ARM$共和国"
  GEO_republic: "$GEO$共和国"
+ ROM_kingdom: "$ROM$王国"
+ ROM_republic: "$ROM$共和国"
 
 #乌克兰&俄罗斯&波兰
  UKR_liberated_area: "$UKR$农民解放区"
