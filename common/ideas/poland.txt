@@ -232,10 +232,6 @@ ideas = {
 				always = no
 			}
 
-			available = {
-				always = no
-			}
-
 			removal_cost = -1
 
 			modifier = {
@@ -252,10 +248,6 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = no
-			}
-
-			available = {
 				always = no
 			}
 
@@ -279,10 +271,6 @@ ideas = {
 				always = no
 			}
 
-			available = {
-				always = no
-			}
-
 			removal_cost = -1
 
 			modifier = {
@@ -303,10 +291,6 @@ ideas = {
 				always = no
 			}
 
-			available = {
-				always = no
-			}
-
 			removal_cost = -1
 
 			modifier = {
@@ -321,31 +305,408 @@ ideas = {
 				nuclear = 0.10
 			}
 		}
+		
+		POL_railway_for_all_rzeczpospolita = {
+			picture = generic_research_bonus
+
+			allowed = {
+				original_tag = POL
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_rail_way_factor = 0.20
+				supply_factor = 0.20
+			}
+		}
+		
+		POL_prepare_for_the_next_war = {
+			picture = generic_research_bonus
+
+			allowed = {
+				original_tag = POL
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				experience_gain_army = 0.05
+			}
+		}
+		
+		POL_standardisation_of_equipment = {
+			picture = generic_research_bonus
+
+			allowed = {
+				original_tag = POL
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				air_equipment_upgrade_xp_cost = -0.20
+				land_equipment_upgrade_xp_cost = -0.20
+			}
+		}
+
+		POL_new_military_academy_idea = {
+
+			allowed = {
+				original_tag = POL
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_army_war_college
+
+			modifier = {
+				army_spirit_category_type_cost_factor = -0.10
+				air_spirit_category_type_cost_factor = -0.20
+				max_command_power = 30
+				command_abilities_cost_factor = -0.25
+				choose_preferred_tactics_cost = -10
+			}
+		}
+		
+		POL_modernising_the_cavalry = {
+			picture = generic_research_bonus
+
+			allowed = {
+				original_tag = POL
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				cavalry_attack_factor = 0.10
+				cavalry_defence_factor = 0.10
+			}
+		}
+		
+		POL_cruiser_tank_experiments_idea = {
+			picture = generic_research_bonus
+
+			allowed = {
+				original_tag = POL
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_armor_speed_factor = 0.10
+			}
+			
+			equipment_bonus = {
+				armor = {
+					hard_attack = 0.10
+					
+					instant = yes
+				}
+			}
+		}
+		
+		POL_artillery_modernisation = {
+			picture = generic_research_bonus
+
+			allowed = {
+				original_tag = POL
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_armor_speed_factor = 0.10
+			}
+		}
+		
+		POL_anti_tank_guns = {
+			picture = FRA_motorized_focus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			equipment_bonus = {
+				anti_tank_equipment = {
+					build_cost_ic = -0.2
+					instant = yes
+				}
+			}
+		}
+
+		POL_anti_blitz_vehicles = {
+			picture = FRA_motorized_focus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				dig_in_speed_factor = 0.20
+			}
+
+			equipment_bonus = {
+				anti_tank_equipment = {
+					build_cost_ic = -0.2
+					hard_attack = 0.1
+					instant = yes
+				}
+			}
+		}
+		
+		POL_air_ground = {
+			picture = FRA_motorized_focus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_artillery_attack_factor = 0.05
+				ground_attack_factor = 0.20
+				breakthrough_factor = 0.20
+			}
+		}
+		
+		POL_air_modernisations_programme = {
+			picture = FRA_motorized_focus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				air_ace_generation_chance_factor = 1.00
+				air_accidents_factor = -0.20
+			}
+		}
+		
+		POL_navy_theorist_idea = {
+			picture = FRA_motorized_focus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				experience_gain_navy_factor = 0.20
+			}
+		}
+		
+		POL_expand_danzig_seaport_idea = {
+			name = POL_navy_theorist_idea
+			picture = FRA_motorized_focus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				experience_gain_navy_factor = 0.20
+				naval_doctrine_cost_factor = -0.20
+				production_speed_dockyard_factor = 0.15
+			}
+		}
+		
+		POL_expand_baltic_sea_ports = {
+			picture = FRA_motorized_focus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.20
+				industrial_capacity_dockyard = 0.10
+			}
+		}
+		
+		POL_open_up_black_sea_estuary = {
+			picture = FRA_motorized_focus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				trade_opinion_factor = 0.50
+				local_resources_factor = 0.15
+			}
+		}
+		
+		POL_the_twin_threats = {
+			picture = FRA_motorized_focus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			research_bonus = {
+				naval_equipment = 0.10
+			}
+		}
+		
+		POL_baltic_navy = {
+			picture = FRA_motorized_focus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				navy_capital_ship_attack_factor = 0.10
+				navy_capital_ship_defence_factor = 0.10
+				positioning = 0.20
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.10
+			}
+		}
+		
+		POL_study_foreign_built_ships = {
+			picture = FRA_motorized_focus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				refit_ic_cost = -0.05
+				refit_speed = 0.05
+				repair_speed_factor = 0.05
+			}
+			
+			equipment_bonus = {
+				ship_hull_light = {
+					build_cost_ic = -0.05 instant = yes
+				}
+				convoy = {
+					build_cost_ic = -0.05 instant = yes
+				}
+			}
+		}
+		
+		POL_import_submarine_technology = {
+			picture = FRA_motorized_focus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				navy_intel_factor = 0.05
+				operative_slot = 1
+				operation_steal_tech_navy_cost = -0.50
+				operation_steal_tech_navy_outcome = 0.20
+				intel_from_operatives_factor = 0.10
+			}
+		}
 	}
 
 country = {
-
-	POL_new_military_academy_idea = {
-
-		allowed = {
-			original_tag = POL
-			always = no
-		}
-
-		allowed_civil_war = {
-			always = no
-		}
-
-		removal_cost = -1
-
-		picture = generic_army_war_college
-
-		modifier = {
-			military_leader_cost_factor = -0.3
-			army_leader_start_level = 1
-			army_leader_start_planning_level= 1
-		}
-	}
 
 	POL_looming_peasants_strike = {
 
@@ -2150,28 +2511,6 @@ country = {
 
 		modifier = {
 			exiled_government_weekly_manpower = 700
-		}
-	}
-
-	POL_anti_blitz_vehicles = {
-
-		allowed = {
-			always = no
-		}
-
-		allowed_civil_war = {
-			always = yes
-		}
-
-		picture = FRA_motorized_focus
-
-		removal_cost = -1
-
-		equipment_bonus = {
-			anti_tank_equipment = {
-				build_cost_ic = -0.2
-				instant = yes
-			}
 		}
 	}
 

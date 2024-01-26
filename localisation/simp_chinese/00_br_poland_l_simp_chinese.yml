@@ -1,7 +1,9 @@
 ﻿### made by LingXia ###
 l_simp_chinese:
  stability_popularity_tt: "$MODIFIER_STABILITY_POPULARITY_FACTOR$：$RIGHT|+=%2$"
-
+ operation_steal_tech_navy_cost: "针对海军的间谍行动花费"
+ operation_steal_tech_navy_outcome: "针对海军的间谍行动成果"
+ 
  POL_april_constitution: "四月宪法"
  POL_april_constitution_desc: "四月宪法"
  POL_tight_grain_reserves: "紧张的粮食储备"
@@ -43,6 +45,8 @@ l_simp_chinese:
  POL_railway_ukraine_desc: ""
  POL_navy_theorist: "成立海军部"
  POL_navy_theorist_desc: ""
+ POL_clamp_down_on_danzig: "行动目标：但泽"
+ POL_clamp_down_on_danzig_desc: ""
  POL_expand_southern_rail: "修建南部铁路"
  POL_expand_southern_rail_desc: ""
  POL_meeting_with_baltic: "照会波罗的海"
@@ -53,10 +57,13 @@ l_simp_chinese:
  POL_open_up_black_sea_estuary_desc: ""
  POL_expand_danzig_seaport: "迁移海军部"
  POL_expand_danzig_seaport_desc: ""
+ POL_expand_danzig_seaport_dynamic_modifier: "波兰海军司令部"
  POL_arm_danzig: "武装但泽走廊"
  POL_arm_danzig_desc: ""
  POL_air_ground: "空地配合"
  POL_air_ground_desc: ""
+ POL_develop_polish_ship_building: "转移造船业"
+ POL_develop_polish_ship_building_desc: ""
  POL_improving_quality_of_army: "提升军队素质"
  POL_improving_quality_of_army_desc: ""
  POL_plan_in_progress_flag: "正在筹备§Y军事计划§!"
@@ -78,6 +85,9 @@ l_simp_chinese:
  POL_modifier_spear_of_revenge_dynamic_modifier: "§Y$POL_spear_of_revenge$§!追加效果："
  POL_modifier_spear_of_revenge_dynamic_modifier_tt: "§Y$POL_spear_of_revenge$§!追加效果："
  POL_warsaw_main_railway_station_dynamic_modifier: "$POL_warsaw_main_railway_station$"
+ POL_cruiser_tank_experiments_idea: "巡洋坦克"
+ POL_navy_theorist_idea: "海军部"
+ 
  
  POL_spear_of_revenge_decision_category: "$POL_spear_of_revenge$"
  POL_spear_of_revenge_decision_category_desc: "波兰复国主义和波兰立陶宛联邦的梦想敦促着政府时刻为战争做好准备，波兰民众支持着这两个观念。\n当前民众对£GFX_war_support_icon §Y战争支持度§!的期望值为：§[GETWarSupportExpectation][?ROOT.war_support_expectation_value|.0%]§!\n\n目前我们正使用[GETRevengeCostMethod]"

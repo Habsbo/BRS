@@ -1741,7 +1741,8 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 125
+			add_ideas = POL_railway_for_all_rzeczpospolita
 		}
 	}
 	
@@ -1752,7 +1753,7 @@ focus_tree = {
 		relative_position_id = POL_railway_for_all_rzeczpospolita
 		x = -2
 		y = 1
-		cost = 5
+		cost = 4
 
 		ai_will_do = {
 			factor = 5
@@ -1766,6 +1767,15 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_political_power = 25
+			every_state = {
+				limit = { is_core_of = LIT }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
@@ -1790,6 +1800,15 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_political_power = 25
+			every_state = {
+				limit = { is_core_of = BLR }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
@@ -1800,7 +1819,7 @@ focus_tree = {
 		relative_position_id = POL_railway_for_all_rzeczpospolita
 		x = 2
 		y = 1
-		cost = 5
+		cost = 6
 
 		ai_will_do = {
 			factor = 5
@@ -1814,6 +1833,28 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_political_power = 25
+			every_state = {
+				limit = {
+					is_core_of = UKR
+					NOT = { is_core_of = ROOT }
+					NOT = {
+						state = 196
+						state = 200
+						state = 227
+						state = 228
+						state = 221
+						state = 259
+						state = 193
+						state = 225
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -1843,6 +1884,7 @@ focus_tree = {
 				uses = 1
 				category = land_doctrine
 			}
+			add_timed_idea = { idea = POL_prepare_for_the_next_war days = 365 }
 			#1x 50% cost reduction for one land doctrine research
 		}
 	}
@@ -1895,6 +1937,7 @@ focus_tree = {
 				uses = 1
 				category = infantry_weapons
 			}
+			add_ideas = POL_standardisation_of_equipment
 			army_experience = 10
 		}
 	}
@@ -1909,7 +1952,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = POL_new_military_academy
-		cost = 10
+		cost = 4
 
 		ai_will_do = {
 			factor = 10
@@ -1918,12 +1961,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_tech_bonus = {
-				name = POL_modernising_the_cavalry
-				bonus = 3.0
-				uses = 1
-				category = motorized_equipment
-			}
+			add_ideas = POL_modernising_the_cavalry
 		}
 	}
 
@@ -1937,7 +1975,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = POL_standardisation_of_equipment
-		cost = 10
+		cost = 3
 
 		ai_will_do = {
 			factor = 10
@@ -1969,7 +2007,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = POL_army_modernisation
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -1996,7 +2034,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = POL_attract_foreign_motors
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -2023,7 +2061,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = POL_study_foreign_tanks
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -2039,6 +2077,7 @@ focus_tree = {
 				category = cat_medium_armor
 			}
 			#1x 50% reduction on research for medium tanks
+			add_ideas = POL_cruiser_tank_experiments_idea
 		}
 	}
 
@@ -2049,7 +2088,7 @@ focus_tree = {
 		relative_position_id = POL_army_modernisation
 		x = -1
 		y = 1
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -2064,6 +2103,15 @@ focus_tree = {
 				category = artillery
 			}
 			#1 x 50% for Artillery Equipment
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -2075,7 +2123,7 @@ focus_tree = {
 		x = 1
 		y = 2
 		relative_position_id = POL_artillery_modernisation
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -2087,10 +2135,12 @@ focus_tree = {
 			add_tech_bonus = {
 				name = POL_anti_tank_guns
 				bonus = 1.0
+				ahead_reduction = 1
 				uses = 1
 				category = cat_anti_tank
 			}
 			#1x 50% bonus for Anti-Tank guns
+			add_ideas = POL_anti_tank_guns
 		}
 	}
 
@@ -2102,7 +2152,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = POL_anti_tank_guns
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -2111,7 +2161,10 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			add_ideas = POL_anti_blitz_vehicles
+			swap_ideas = {
+				remove_idea = POL_anti_tank_guns
+				add_idea = POL_anti_blitz_vehicles
+			}
 		}
 	}
 
@@ -2221,7 +2274,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		x = 0
 		y = 2
-		cost = 10
+		cost = 3
 
 		ai_will_do = {
 			factor = 1
@@ -2257,7 +2310,7 @@ focus_tree = {
 				set_state_flag = POL_air_base_expansion_1
 			}
 			#Add 2 Airbases in Warsaw
-			
+			air_experience = 25
 		}
 	}
 
@@ -2269,7 +2322,7 @@ focus_tree = {
 		x = -3
 		y = 1
 		relative_position_id = POL_air_base_expansion
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -2296,7 +2349,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = POL_air_base_expansion
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -2308,7 +2361,7 @@ focus_tree = {
 			add_doctrine_cost_reduction = {
 				name = POL_air_innovations
 				cost_reduction = 0.5
-				uses = 1
+				uses = 2
 				category = air_doctrine
 			}
 			#1x50% research bonus to Air Doctrine Research
@@ -2339,6 +2392,25 @@ focus_tree = {
 				category = air_doctrine
 			}
 			#1x50% research bonus to Air Doctrine Research
+			add_doctrine_cost_reduction = {
+				name = POL_air_innovations
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			add_ideas = POL_air_ground
+			add_tech_bonus = {
+				name = POL_air_innovations
+				uses = 1
+				ahead_reduction = 1.0
+				category = air_equipment
+			}
+			add_tech_bonus = {
+				name = POL_air_innovations
+				uses = 1
+				ahead_reduction = 1.0
+				category = armor
+			}
 		}
 	}
 
@@ -2350,7 +2422,7 @@ focus_tree = {
 		x = -1
 		y = 2
 		relative_position_id = POL_fighter_modernisation
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -2377,7 +2449,7 @@ focus_tree = {
 		x = 1
 		y = 2
 		relative_position_id = POL_air_innovations
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -2407,7 +2479,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = POL_fighter_modernisation
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -2438,7 +2510,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = POL_air_innovations
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -2465,7 +2537,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = POL_light_bomber_focus
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -2480,7 +2552,7 @@ focus_tree = {
 				uses = 1
 				category = air_doctrine
 			}
-			
+			add_ideas = POL_air_modernisations_programme
 		}
 	}
 
@@ -15509,10 +15581,13 @@ focus_tree = {
 		}
 
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		search_filters = {  }
 
 		completion_reward = {
-			
+			custom_effect_tooltip = available_chief_of_navy
+			show_ideas_tooltip = POL_josef_unrug
+			navy_experience = 10
+			add_ideas = POL_navy_theorist_idea
 		}
 	}
 
@@ -15540,32 +15615,32 @@ focus_tree = {
 			unlock_decision_category_tooltip = POL_danzig_decisions
 			add_political_power = 75
 			add_command_power = 50
-			85 = {
-				remove_dynamic_modifier = {
-					modifier = international_city
-				}
-				add_dynamic_modifier = {
-					modifier = international_city_2
-				}
-				force_enable_resistance = { 
-					clear = no
-					occupier = POL
-					occupied = DNZ
-				}
-				start_resistance = DNZ
-				set_resistance = 40
-				set_compliance = 30
-				add_resistance_target = { 
-					amount = 30
-					tooltip = clamp_down_on_danzig_tt
-				}
-			}
-			hidden_effect = {
-				news_event = {
-					id = nsb_news.4
-					days = 1
-				}
-			}
+#			85 = {
+#				remove_dynamic_modifier = {
+#					modifier = international_city
+#				}
+#				add_dynamic_modifier = {
+#					modifier = international_city_2
+#				}
+#				force_enable_resistance = { 
+#					clear = no
+#					occupier = POL
+#					occupied = DNZ
+#				}
+#				start_resistance = DNZ
+#				set_resistance = 40
+#				set_compliance = 30
+#				add_resistance_target = { 
+#					amount = 30
+#					tooltip = clamp_down_on_danzig_tt
+#				}
+#			}
+#			hidden_effect = {
+#				news_event = {
+#					id = nsb_news.4
+#					days = 1
+#				}
+#			}
 		}
 	}
 	
@@ -15590,7 +15665,16 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 75
+			add_political_power = 50
+			swap_ideas = {
+				remove_idea = POL_navy_theorist_idea
+				add_idea = POL_expand_danzig_seaport_idea
+			}
+			85 = {
+				add_dynamic_modifier = {
+					modifier = POL_expand_danzig_seaport_dynamic_modifier
+				}
+			}
 		}
 	}
 	
@@ -15607,13 +15691,24 @@ focus_tree = {
 		}
 		
 		available = {
-			
+			owns_state = 85
 		}
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_WAR_SUPPORT }
 
 		completion_reward = {
-			add_political_power = 75
+			add_war_support = 0.05
+			85 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = {
+						all_provinces = yes
+						limit_to_victory_point = yes
+					}
+					instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -15652,25 +15747,54 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			random_owned_controlled_state = {
-				prioritize = { 807 }
+			if = {
 				limit = {
-					free_building_slots = {
-						building = dockyard
-						size > 3
-						include_locked = yes
+					any_owned_state = {
+						NOT = { state = 85 }
+						is_controlled_by = ROOT
+						is_coastal = yes
 					}
-					NOT = { state = 85 }
 				}
-				add_extra_state_shared_building_slots = 4
-				add_building_construction = {
-					type = dockyard
-					level = 4
-					instant_build = yes
+				random_owned_controlled_state = {
+					prioritize = { 807 }
+					limit = {
+						free_building_slots = {
+							building = dockyard
+							size > 3
+							include_locked = yes
+						}
+						NOT = { state = 85 }
+					}
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = dockyard
+						level = 4
+						instant_build = yes
+					}
+					set_state_flag = POL_develop_polish_ship_building_1
 				}
-				set_state_flag = POL_develop_polish_ship_building_1
+				#Add 4 Dockyards at Gdynia
 			}
-			#Add 4 Dockyards at Gdynia			
+			else = {
+				random_state = {
+					prioritize = { 807 }
+					limit = {
+						free_building_slots = {
+							building = dockyard
+							size > 3
+							include_locked = yes
+						}
+						NOT = { state = 85 }
+					}
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = dockyard
+						level = 4
+						instant_build = yes
+					}
+					set_state_flag = POL_develop_polish_ship_building_1
+				}
+			}
 		}
 	}
 
@@ -15680,22 +15804,31 @@ focus_tree = {
 		prerequisite = { focus = POL_develop_polish_ship_building focus = POL_clamp_down_on_danzig }
 		x = -1
 		y = 1
-		cost = 10
+		cost = 5
 		relative_position_id = POL_develop_polish_ship_building
+		available = {
+			any_state = {
+				OR = {
+					is_core_of = EST
+					is_core_of = LAT
+					is_core_of = LIT
+				}
+				is_coastal = yes
+				owner = {
+					OR = {
+						tag = ROOT
+						NOT = { has_war_with = ROOT }
+					}
+				}
+			}
+		}
 		ai_will_do = {
 			factor = 10
 		}
-
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		search_filters = {  }
 		completion_reward = {
-			add_tech_bonus = {
-				name = POL_study_foreign_built_ships
-				bonus = 1.0
-				uses = 2
-				category = dd_tech
-			}
-			#2x 50% research bonus for Destroyers
+			add_ideas = POL_expand_baltic_sea_ports
 		}
 	}
 
@@ -15710,17 +15843,28 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-
+		available = {
+			any_state = {
+				OR = {
+					is_core_of = UKR
+					is_core_of = ROM
+					is_core_of = BUL
+					is_core_of = CRI
+					state = 797
+				}
+				is_coastal = yes
+				owner = {
+					OR = {
+						tag = ROOT
+						NOT = { has_war_with = ROOT }
+					}
+				}
+			}
+		}
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_tech_bonus = {
-				name = POL_study_foreign_built_ships
-				bonus = 1.0
-				uses = 2
-				category = dd_tech
-			}
-			#2x 50% research bonus for Destroyers
+			add_ideas = POL_open_up_black_sea_estuary
 		}
 	}
 
@@ -15743,28 +15887,7 @@ focus_tree = {
 		available = {
 			owns_state = 85
 			controls_state = 85
-			85 = {
-				OR = {
-					AND = {
-						compliance > 80
-						resistance < 50
-					}
-					NOT = { is_core_of = DNZ }
-				}
-			}
-		}
-		
-		bypass = {
-			OR = {
-				NOT = {
-					has_idea = uncontrolled_exports
-				}
-				NOT = {
-					controls_state = 85
-				}
-				85 = { is_demilitarized_zone = no }
-			}
-			has_civil_war = no
+			fascism > 0
 		}
 
 		available_if_capitulated = yes
@@ -15802,11 +15925,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			any_owned_state = {
-				is_coastal = yes 
-				NOT = { state = 85 }
-				is_controlled_by = ROOT
-			}
+			owns_state = 807
 		}
 
 		available_if_capitulated = yes
@@ -15822,34 +15941,38 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			if = {
-				limit = {
-					has_idea = uncontrolled_exports
-				}
-				swap_ideas = {
-					remove_idea = uncontrolled_exports
-					add_idea = export_focus
+			effect_tooltip = {
+				random_state = {
+					prioritize = { 807 }
+					limit = {
+						is_coastal = yes
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
 				}
 			}
-			random_owned_controlled_state = {
-				prioritize = { 807 }
-				limit = {
-					is_coastal = yes
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
+			hidden_effect = {
+				random_owned_controlled_state = {
+					prioritize = { 807 }
+					limit = {
+						is_coastal = yes
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
 				}
 			}
 			807 = {
 				add_building_construction = { type = bunker province = 9263 level = 2 instant_build = yes }
 				add_building_construction = { type = bunker province = 334 level = 2 instant_build = yes }
 				add_building_construction = { type = bunker province = 389 level = 2 instant_build = yes }
-			}
-			85 = {
-				add_building_construction = { type = bunker province = 362 level = 2 instant_build = yes }
 			}
 			#Add 2 Dockyards at Gdansk			
 		}
@@ -15877,32 +16000,44 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			if = {
-				limit = {
-					has_idea = uncontrolled_exports
-				}
-				swap_ideas = {
-					remove_idea = uncontrolled_exports
-					add_idea = export_focus
+			effect_tooltip = {
+				random_state = {
+					prioritize = { 85 }
+					limit = {
+						is_coastal = yes
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
 				}
 			}
-			random_owned_controlled_state = {
-				prioritize = { 85 }
-				limit = {
-					is_coastal = yes
+			hidden_effect = {
+				random_owned_controlled_state = {
+					prioritize = { 85 }
+					limit = {
+						is_coastal = yes
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
 				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}			
+			}
 		}
 	}
 
@@ -15937,19 +16072,35 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			random_owned_controlled_state = {
-				prioritize = { 85 }
-				limit = {
-					is_coastal = yes
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
+			effect_tooltip = {
+				random_state = {
+					prioritize = { 85 }
+					limit = {
+						is_coastal = yes
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
 				}
 			}
-			#Add 2 Dockyards at Gdansk			
+			hidden_effect = {
+				random_owned_controlled_state = {
+					prioritize = { 85 }
+					limit = {
+						is_coastal = yes
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+				#Add 2 Dockyards at Gdansk		
+			}
 		}
 	}
 
@@ -15966,9 +16117,11 @@ focus_tree = {
 			factor = 10
 		}
 		
-		bypass = {
-			85 = { controls_or_subject_of = no }
-			807 = { controls_or_subject_of = no }
+		available = {
+			OR = {
+				85 = { any_neighbor_state = { is_controlled_by = ROOT } }
+				807 = { any_neighbor_state = { is_controlled_by = ROOT } }
+			}
 		}
 
 		available_if_capitulated = yes
@@ -15992,9 +16145,10 @@ focus_tree = {
 					path = { 279 3324 389 9263 }
 				}
 			}
-
-			random_owned_controlled_state = {
-				prioritize = { 85 }
+			every_owned_state = {
+				limit = {
+					any_neighbor_state = { state = 85 }
+				}
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
@@ -16002,7 +16156,17 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-
+			every_owned_state = {
+				limit = {
+					any_neighbor_state = { state = 807 }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 			add_political_power = 50
 		}
 	}
@@ -16021,16 +16185,40 @@ focus_tree = {
 			factor = 10
 		}
 		
-		bypass = {
-			85 = { controls_or_subject_of = no }
-			807 = { controls_or_subject_of = no }
+		available = {
+			any_owned_state = {
+				any_neighbor_state = {
+					owner = {
+						OR = {
+							tag = UKR
+							tag = ROM
+						}
+					}
+				}
+			}
 		}
 
 		available_if_capitulated = yes
 		completion_reward = {
-			
-
-			add_political_power = 50
+			every_owned_state = {
+				limit = {
+					any_neighbor_state = {
+						owner = {
+							OR = {
+								tag = UKR
+								tag = ROM
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_political_power = 25
 		}
 	}
 
@@ -16041,7 +16229,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = POL_expand_northern_rail
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -16057,6 +16245,7 @@ focus_tree = {
 				category = naval_doctrine
 			}
 			#1x50% bonus to Naval Doctrine Research
+			add_ideas = POL_the_twin_threats
 		}
 	}
 
@@ -16068,7 +16257,7 @@ focus_tree = {
 		x = -3
 		y = 1
 		relative_position_id = POL_the_twin_threats
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -16094,7 +16283,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = POL_navy_theorist
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -16109,7 +16298,7 @@ focus_tree = {
 				uses = 1
 				category = ss_tech
 			}
-			#1 x50% research bonus for Submarines
+			add_ideas = POL_import_submarine_technology
 		}
 	}
 	
@@ -16120,22 +16309,23 @@ focus_tree = {
 		x = -3
 		y = 1
 		relative_position_id = POL_navy_theorist
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
 		}
-
+		available = {
+			OR = {
+				EST = { NOT = { has_war_with = ROOT } }
+				LAT = { NOT = { has_war_with = ROOT } }
+				LIT = { NOT = { has_war_with = ROOT } }
+			}
+		}
+		bypass = { always = yes }
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_tech_bonus = {
-				name = POL_import_submarine_technology
-				bonus = 1.0
-				uses = 1
-				category = ss_tech
-			}
-			#1 x50% research bonus for Submarines
+			custom_effect_tooltip = POL_meeting_with_baltic_tt
 		}
 	}
 
@@ -16146,7 +16336,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = POL_meeting_with_baltic
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -16192,8 +16382,8 @@ focus_tree = {
 			}
 			#Add 2 Dockyards at Gdynia	
 			add_victory_points = {
-			  province = 9263
-			  value = 5
+				province = 9263
+				value = 5
 			}
 		}
 	}
@@ -16204,7 +16394,7 @@ focus_tree = {
 		prerequisite = { focus = POL_import_submarine_technology }
 		x = -1
 		y = 1
-		cost = 10
+		cost = 5
 		relative_position_id = POL_import_submarine_technology
 		ai_will_do = {
 			factor = 10
@@ -16216,10 +16406,11 @@ focus_tree = {
 			add_tech_bonus = {
 				name = POL_study_foreign_built_ships
 				bonus = 1.0
-				uses = 2
+				uses = 1
 				category = dd_tech
 			}
 			#2x 50% research bonus for Destroyers
+			add_ideas = POL_study_foreign_built_ships
 		}
 	}
 
@@ -16230,7 +16421,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = POL_the_twin_threats
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -16242,7 +16433,7 @@ focus_tree = {
 			add_doctrine_cost_reduction = {
 				name = POL_commerce_attack
 				cost_reduction = 0.5
-				uses = 1
+				uses = 2
 				category = submarine_doctrine
 			}
 			#1x50% research bonus to Submarine Doctrine
@@ -16257,7 +16448,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = POL_the_twin_threats
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -16290,7 +16481,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = POL_the_twin_threats
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -16321,7 +16512,7 @@ focus_tree = {
 					name = POL_strike_force
 					bonus = 1.0
 					uses = 2
-					category = cl_tech
+					category = ca_tech
 				}
 			}
 			#1x50% research bonus to Light Cruisers & 1x50% bonus to Heavy Cruisers
@@ -16352,6 +16543,10 @@ focus_tree = {
 				category = naval_doctrine
 			}
 			#1x50% bonus to Naval Doctrine research
+			swap_ideas = {
+				remove_idea = POL_the_twin_threats
+				add_idea = POL_baltic_navy
+			}
 		}
 	}
 

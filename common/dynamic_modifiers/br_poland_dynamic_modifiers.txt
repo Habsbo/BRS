@@ -57,3 +57,15 @@ POL_warsaw_main_railway_station_dynamic_modifier = {
 	state_production_speed_buildings_factor = 0.10
 	army_speed_factor_for_controller = 0.15
 }
+
+POL_expand_danzig_seaport_dynamic_modifier = {
+	enable = { always = yes }
+	icon = GFX_modifiers_generic_supply
+	
+	state_production_speed_buildings_factor = -0.10
+	state_production_speed_naval_base_factor = 0.15
+	state_production_speed_dockyard_factor = 0.15
+	state_production_speed_fuel_silo_factor = 0.15
+	state_repair_speed_fuel_silo_factor = 0.20
+	local_building_slots = 2
+}
