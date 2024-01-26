@@ -62,9 +62,12 @@
  GethellenicCountryconfidence_low: "§R人心浮动§!"
  GethellenicCountryconfidence_ruins: "§R崩溃§!"
  GRE_pbdt_the_ifc_decisions_devalues: "贬值德拉马克"
+ GRE_pbdt_the_ifc_decisions_devalues_tt: "国库将会获得§Y100万§!德拉马克，我们可以借此机会清偿一部分国债，但§R国家信心将会被动摇！§!"
  GRE_pbdt_the_ifc_decisions_national_debt: "增发国债"
+ GRE_pbdt_the_ifc_decisions_national_debt_tt: "国库将会获得§Y200万§!德拉马克,我们会获得等量的国债。"
  GRE_pbdt_the_ifc_decisions_national_debt_deadline: "民众要求兑现国债"
  GRE_pbdt_the_ifc_decisions_eng: "偿还英国债务"
+ GRE_pbdt_the_ifc_decisions_eng_tt: "将会偿还我们欠英国的部分债务"
  GRE_pbdt_the_ifc_decisions_fra: "偿还法国债务"
  GRE_pbdt_the_ifc_decisions_ger: "偿还德国债务"
  GRE_pbdt_the_ifc_decisions_ita: "偿还意大利债务"
@@ -392,6 +395,11 @@
  br_hellas..desc: ""
  br_hellas..a: "或许······那是更美好的明天？"
  br_hellas..b: "一派胡言"
+
+ br_ifc.2.title: "日本催还欠款" #[FROM.GetName]
+ br_ifc.2.desc: ""
+ br_ifc.2.a: "我们可以先偿兑一部分。"
+ br_ifc.2.b: "我们还还不起！"
 
  br_hellas..title: ""
  br_hellas..desc: ""

@@ -1,6 +1,6 @@
 add_namespace = br_hellas
 add_namespace = br_megali_idea
-add_namespace = br_event
+add_namespace = br_ifc
 
 country_event = { #
 	id = br_hellas.1
@@ -243,10 +243,12 @@ country_event = { #
 }
 
 #伟大理想
-country_event = { #对土耳其提出要求
-	id = br_megali_idea.1
-	title = br_megali_idea.1.title
-	desc = br_megali_idea.1.desc
+
+#
+country_event = { #要求还款
+	id = br_ifc.1
+	title = br_ifc.1.title
+	desc = br_ifc.1.desc
 	picture = GFX_report_event_chinese_soldiers_fighting
 
 	fire_only_once = yes
@@ -255,33 +257,21 @@ country_event = { #对土耳其提出要求
 	immediate = {  }
 
 	option = {
-		name = br_megali_idea.1.a #
+		name = br_ifc.1.a #
 
-		GRE = { country_event = br_megali_idea.2 }
-
-		ai_chance = { factor = 20 }
+		ai_chance = { factor = 5 }
 	}
 
 	option = {
-		name = br_megali_idea.1.b #
-		
-		GRE = { country_event = br_megali_idea.3 }
-		
-		ai_chance = { factor = 15 }
-	}
-	
-	option = {
-		name = br_megali_idea.1.c #
-		
-		GRE = { country_event = br_megali_idea.4 }
+		name = br_ifc.1.b #
 
 		ai_chance = { factor = 5 }
 	}
 }
-country_event = { #土耳其的回信1
-	id = br_megali_idea.2
-	title = br_megali_idea.2.title
-	desc = br_megali_idea.2.desc
+country_event = { #要求还款
+	id = br_ifc.2
+	title = br_ifc.2.title
+	desc = br_ifc.2.desc
 	picture = GFX_report_event_chinese_soldiers_fighting
 
 	fire_only_once = yes
@@ -290,110 +280,14 @@ country_event = { #土耳其的回信1
 	immediate = {  }
 
 	option = {
-		name = br_megali_idea.2.a #
+		name = br_ifc.2.a #
 
-		declare_war_on = {
-			target = FROM
-			type = take_claimed_state
-		}
-
-		ai_chance = { factor = 20 }
-	}
-
-}
-country_event = { #土耳其的回信2
-	id = br_megali_idea.3
-	title = br_megali_idea.3.title
-	desc = br_megali_idea.3.desc
-	picture = GFX_report_event_chinese_soldiers_fighting
-
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	immediate = {  }
-
-	option = {
-		name = br_megali_idea.3.a #
-
-		every_state = {
-			limit = {
-				OR = {
-					state = 339
-					state = 340
-				}
-			}
-			transfer_state_to = GRE
-		}
-
-		ai_chance = { factor = 20 }
-	}
-	option = {
-		name = br_megali_idea.3.b #
-
-		random_list = {
-			9 = {
-				GRE = { country_event = br_megali_idea.2 }
-			}
-			1 = {
-				GRE = { country_event = br_megali_idea.3 }
-			}
-		}
-
-		ai_chance = { factor = 20 }
-	}
-
-}
-country_event = { #土耳其的回信3
-	id = br_megali_idea.4
-	title = br_megali_idea.4.title
-	desc = br_megali_idea.4.desc
-	picture = GFX_report_event_chinese_soldiers_fighting
-
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	immediate = {  }
-
-	option = {
-		name = br_megali_idea.4.a #
-
-		every_state = {
-			limit = {
-				OR = {
-					state = 339
-					state = 340
-					state = 342
-					state = 347
-				}
-			}
-			transfer_state_to = GRE
-		}
-
-		ai_chance = { factor = 20 }
-	}
-
-}
-
-country_event = { #
-	id = br_hellas.
-	title = br_hellas..title
-	desc = br_hellas..desc
-	picture = GFX_report_event_chinese_soldiers_fighting
-
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	immediate = {  }
-
-	option = {
-		name = br_hellas..a #
-
-		ai_chance = { factor = 2 }
+		ai_chance = { factor = 5 }
 	}
 
 	option = {
-		name = br_hellas..b #
-		
+		name = br_ifc.2.b #
+
 		ai_chance = { factor = 5 }
 	}
 }
