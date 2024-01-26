@@ -3,6 +3,7 @@ l_simp_chinese:
  stability_popularity_tt: "$MODIFIER_STABILITY_POPULARITY_FACTOR$：$RIGHT|+=%2$"
  operation_steal_tech_navy_cost: "针对海军的间谍行动花费"
  operation_steal_tech_navy_outcome: "针对海军的间谍行动成果"
+ modifier_state_repair_speed_fuel_silo_factor: "§Y$fuel_silo$§!修理速度"
  
  POL_april_constitution: "四月宪法"
  POL_april_constitution_desc: "四月宪法"
