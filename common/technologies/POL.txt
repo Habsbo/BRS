@@ -1,0 +1,17 @@
+technologies = {
+	POL_armed_winged_hussar_tech = {
+		
+		allow = {
+			always = no
+		}
+
+		research_cost = 1
+		start_year = 1936
+
+		category_cavalry = {
+			hard_attack = 2.0
+			max_organisation = 0.10
+			urban = { defence = 0.10 }
+		}
+	}
+}

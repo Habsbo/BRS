@@ -25,9 +25,9 @@ ideas = {
 	}
 	
 	country = {
-		POL_april_constitution_no_crown = {
-			name = POL_april_constitution
-			picture = POL_april_constitution
+		POL_general_jozef_pilsudski = {
+			name = Jozef_Pilsudski
+			picture = advisor_jozef_pilsudski
 
 			allowed = {
 				original_tag = POL
@@ -39,14 +39,7 @@ ideas = {
 
 			removal_cost = -1
 
-			modifier = {
-				political_power_factor = -0.10
-				political_advisor_cost_factor = -0.15
-				economy_cost_factor = 0.15
-				mobilization_laws_cost_factor = 0.15
-				trade_laws_cost_factor = 0.15
-				neutrality_drift = 0.05
-			}
+			traits = { dictator_of_sanacja }
 		}
 		
 		POL_tight_grain_reserves_5 = {
@@ -307,7 +300,7 @@ ideas = {
 		}
 		
 		POL_railway_for_all_rzeczpospolita = {
-			picture = generic_research_bonus
+			picture = generic_railroads
 
 			allowed = {
 				original_tag = POL
@@ -326,7 +319,7 @@ ideas = {
 		}
 		
 		POL_prepare_for_the_next_war = {
-			picture = generic_research_bonus
+			picture = generic_infantry_bonus
 
 			allowed = {
 				original_tag = POL
@@ -344,7 +337,7 @@ ideas = {
 		}
 		
 		POL_standardisation_of_equipment = {
-			picture = generic_research_bonus
+			picture = SWE_hodgepodge_of_equipment
 
 			allowed = {
 				original_tag = POL
@@ -363,6 +356,7 @@ ideas = {
 		}
 
 		POL_new_military_academy_idea = {
+			picture = generic_army_war_college
 
 			allowed = {
 				original_tag = POL
@@ -375,8 +369,6 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = generic_army_war_college
-
 			modifier = {
 				army_spirit_category_type_cost_factor = -0.10
 				air_spirit_category_type_cost_factor = -0.20
@@ -387,7 +379,7 @@ ideas = {
 		}
 		
 		POL_modernising_the_cavalry = {
-			picture = generic_research_bonus
+			picture = generic_motorized_equipment_manufacturer_2
 
 			allowed = {
 				original_tag = POL
@@ -406,7 +398,7 @@ ideas = {
 		}
 		
 		POL_cruiser_tank_experiments_idea = {
-			picture = generic_research_bonus
+			picture = man_five_year_plan_tank
 
 			allowed = {
 				original_tag = POL
@@ -432,7 +424,7 @@ ideas = {
 		}
 		
 		POL_artillery_modernisation = {
-			picture = generic_research_bonus
+			picture = generic_acquire_tanks
 
 			allowed = {
 				original_tag = POL
@@ -497,7 +489,7 @@ ideas = {
 		}
 		
 		POL_air_ground = {
-			picture = FRA_motorized_focus
+			picture = SWE_land_air_warfare
 
 			allowed = {
 				always = no
@@ -517,7 +509,7 @@ ideas = {
 		}
 		
 		POL_air_modernisations_programme = {
-			picture = FRA_motorized_focus
+			picture = generic_air_bonus
 
 			allowed = {
 				always = no
@@ -536,7 +528,7 @@ ideas = {
 		}
 		
 		POL_navy_theorist_idea = {
-			picture = FRA_motorized_focus
+			picture = hol_naval_heritage
 
 			allowed = {
 				always = no
@@ -555,7 +547,7 @@ ideas = {
 		
 		POL_expand_danzig_seaport_idea = {
 			name = POL_navy_theorist_idea
-			picture = FRA_motorized_focus
+			picture = generic_coastal_navy
 
 			allowed = {
 				always = no
@@ -575,7 +567,7 @@ ideas = {
 		}
 		
 		POL_expand_baltic_sea_ports = {
-			picture = FRA_motorized_focus
+			picture = generic_the_london_naval_treaty
 
 			allowed = {
 				always = no
@@ -594,7 +586,7 @@ ideas = {
 		}
 		
 		POL_open_up_black_sea_estuary = {
-			picture = FRA_motorized_focus
+			picture = liberty_ships_focus
 
 			allowed = {
 				always = no
@@ -613,7 +605,7 @@ ideas = {
 		}
 		
 		POL_the_twin_threats = {
-			picture = FRA_motorized_focus
+			picture = generic_sea_focused_navy
 
 			allowed = {
 				always = no
@@ -631,7 +623,7 @@ ideas = {
 		}
 		
 		POL_baltic_navy = {
-			picture = FRA_motorized_focus
+			picture = generic_navy_bonus
 
 			allowed = {
 				always = no
@@ -655,7 +647,7 @@ ideas = {
 		}
 		
 		POL_study_foreign_built_ships = {
-			picture = FRA_motorized_focus
+			picture = generic_coastal_defense_ships
 
 			allowed = {
 				always = no
@@ -684,7 +676,7 @@ ideas = {
 		}
 		
 		POL_import_submarine_technology = {
-			picture = FRA_motorized_focus
+			picture = generic_spy_intel
 
 			allowed = {
 				always = no
@@ -702,6 +694,54 @@ ideas = {
 				operation_steal_tech_navy_cost = -0.50
 				operation_steal_tech_navy_outcome = 0.20
 				intel_from_operatives_factor = 0.10
+			}
+		}
+		
+		POL_improving_quality_of_army_idea = {
+			picture = HUN_secret_rearmament
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			available = { always = no }
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = 0.05
+			}
+		}
+		
+		POL_entire_nation_in_arms_idea = {
+			name = POL_improving_quality_of_army_idea
+			picture = HUN_secret_rearmament
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			available = {
+				has_dynamic_modifier = {
+					modifier = POL_improving_quality_of_army_dynamic_modifier
+				}
+			}
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				infantry_weapons = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
 			}
 		}
 	}

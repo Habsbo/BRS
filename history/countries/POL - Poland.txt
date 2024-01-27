@@ -1,39 +1,10 @@
 ﻿### made by LingXia ###
 capital = 10
 
+set_research_slots = 3
 set_stability = 0.55
 set_war_support = 0.60
-
-oob = "POL_1936"
-if = {
-	limit = { has_dlc = "Man the Guns" }
-		set_naval_oob = "POL_1936_naval_mtg"
-	else = {
-		set_naval_oob = "POL_1936_naval_legacy"
-	}
-}
-if = {
-	limit = { has_dlc = "By Blood Alone" }
-		set_air_oob = "POL_1936_air_bba"
-		set_technology = {
-			aa_lmg = 1
-			aa_cannon_1 = 1
-			iw_small_airframe = 1
-			basic_small_airframe = 1
-			engines_1 = 1
-			early_bombs = 1
-		}
-	else = {
-		set_air_oob = "POL_1936_air_legacy"
-		set_technology = {
-			early_fighter = 1
-			early_bomber = 1
-			CAS1 = 1
-		}
-	}
-}
-
-set_research_slots = 3
+set_convoys = 10
 
 # Starting tech
 set_technology = {
@@ -52,27 +23,16 @@ set_technology = {
 	basic_train = 1
 }
 
+oob = "POL_1936"
 if = {
-	limit = {
-		NOT = { has_dlc = "No Step Back" }
-	}
+	limit = { NOT = { has_dlc = "No Step Back" } }
 	set_technology = {
 		gwtank = 1
 	}
-}
-if = {
-	limit = {
-		has_dlc = "No Step Back"
-	}
-	set_technology = {
-		gwtank_chassis = 1
-	}
-}
-if = {
-	limit = { not = { has_dlc = "Man the Guns" } }
-	set_technology = {
-		early_destroyer = 1
-		early_submarine = 1	
+	else = {
+		set_technology = {
+			gwtank_chassis = 1
+		}
 	}
 }
 if = {
@@ -87,7 +47,37 @@ if = {
 		basic_torpedo = 1
 		basic_depth_charges = 1
 	}
+	set_naval_oob = "POL_1936_naval_mtg"
+	else = {
+		set_technology = {
+			early_destroyer = 1
+			early_submarine = 1	
+		}
+		set_naval_oob = "POL_1936_naval_legacy"
+	}
 }
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		aa_lmg = 1
+		aa_cannon_1 = 1
+		iw_small_airframe = 1
+		basic_small_airframe = 1
+		engines_1 = 1
+		early_bombs = 1
+	}
+	set_air_oob = "POL_1936_air_bba"
+	else = {
+		set_technology = {
+			early_fighter = 1
+			early_bomber = 1
+			CAS1 = 1
+		}
+		set_air_oob = "POL_1936_air_legacy"
+	}
+}
+
+
 if = {
 	limit = { has_dlc = "No Step Back" }
 	set_variable = {
@@ -100,33 +90,22 @@ if = {
 	}
 }
 
-if = {
-	limit = {
-		has_dlc = "Poland: United and Ready"
-	}
-	add_ideas = {
-		#uncontrolled_exports
-		#POL_april_constitution_1
-		#POL_looming_peasants_strike
-		#POL_sanation_left_opposition_1
-		#POL_sanation_right_opposition_1
-		
-		POL_april_constitution_no_crown
-		POL_sanation_left_opposition_1
-		POL_sanation_right_opposition_1
-		POL_tight_grain_reserves_5
-		POL_nationalist_military
-		POL_nationalist_military_hidden
-		POL_spear_of_revenge
-	}
+
+add_ideas = {
+	#uncontrolled_exports
+	#POL_april_constitution_1
+	#POL_looming_peasants_strike
+	#POL_sanation_left_opposition_1
+	#POL_sanation_right_opposition_1
+	
+	POL_general_jozef_pilsudski
+	POL_tight_grain_reserves_5
+	POL_nationalist_military
+	POL_nationalist_military_hidden
+	POL_spear_of_revenge
 }
 
-
-85 = {
-	add_dynamic_modifier = { modifier = international_city }
-}
-
-set_convoys = 10
+recruit_character = POL_Jozef_Pilsudski
 
 set_politics = {
 	ruling_party = conservatism_democracy
@@ -136,12 +115,18 @@ set_politics = {
 }
 
 set_popularities = {
-	revolution_socialist = 30 #革命社会主义
-	scientific_socialist = 10 #科学社会主义
-	social_democracy = 10 #社会民主主义
-	conservatism_democracy = 30 #保守民主主义
-	authoritarian = 10 #威权主义
-	fascist = 10 #民族主义/束棒
+	liberal_anarchy = 0
+	anarchist_communist = 0
+	revolution_socialist = 30
+	scientific_socialist = 10
+	conservatism_socialist = 0
+	social_democracy = 10
+	social_liberation = 0
+	conservatism_democracy = 30
+	authoritarian = 10 
+	fascist = 10
+	national_socialist = 0
+	supranational_socialist = 0
 }
 
 recruit_character = POL_ignacy_moscicki

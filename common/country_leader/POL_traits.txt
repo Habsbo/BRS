@@ -1,0 +1,29 @@
+@tier1 = 30
+@tier2 = 20
+@tier3 = 10
+
+@experience_gain_low = 0.03
+@experience_gain_medium = 0.06
+@experience_gain_high = 0.08
+
+@chief_experience_gain_low = 0.20
+@chief_experience_gain_medium = 0.30
+@chief_experience_gain_high = 0.40
+
+###Todo remove commented advisor experience gains
+
+leader_traits = {
+	
+	dictator_of_sanacja = {
+		random = no
+		
+		political_power_gain = 0.10
+		war_stability_factor = 0.05
+		army_attack_against_major_factor = 0.15
+		army_defence_against_major_factor = 0.15
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

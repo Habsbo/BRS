@@ -1,5 +1,14 @@
 ### made by LingXia ###
 spriteTypes = {
+	spriteType = {
+		name = "GFX_portrait_POL_Jozef_Pilsudski"
+		texturefile = "gfx/interface/leaders/POL/Jozef_Pilsudski.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_advisor_jozef_pilsudski"
+		texturefile = "gfx/interface/ideas/idea_jozef_pilsudski.dds"
+	}
 
 	spriteType = {
 		name = "GFX_idea_POL_nationalist_military"

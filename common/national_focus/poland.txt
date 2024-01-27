@@ -2617,6 +2617,7 @@ focus_tree = {
 					}
 				}
 			}
+			always = no
 		}
 		available = { is_subject = no }
 
@@ -4591,6 +4592,7 @@ focus_tree = {
 				}
 			}
 			custom_effect_tooltip = POL_complete_plan_west_tt
+			clr_country_flag = POL_plan_in_progress_flag
 		}
 	}
 	
@@ -5152,6 +5154,7 @@ focus_tree = {
 				}
 			}
 			custom_effect_tooltip = POL_complete_plan_east_tt
+			clr_country_flag = POL_plan_in_progress_flag
 		}
 	}
 
@@ -5196,13 +5199,21 @@ focus_tree = {
 		
 		search_filters = {  } 
 		completion_reward = {
+			army_experience = 25
+			effect_tooltip = { add_ideas = POL_improving_quality_of_army_idea }
+			hidden_effect = {
+				set_variable = { POL_IQA_army_org_factor_var = 0.05 }
+				add_dynamic_modifier = {
+					modifier = POL_improving_quality_of_army_dynamic_modifier
+				}
+			}
 			set_country_flag = POL_army_training_in_progress_flag
 		}
 	}
 
 	focus = {
-		id = POL_123
-		icon = GFX_goal_generic_allies_build_infantry
+		id = POL_armed_cavalry
+		icon = GFX_focus_ETH_freedom_at_gunpoint
 		prerequisite = { focus = POL_improving_quality_of_army }
 		relative_position_id = POL_improving_quality_of_army
 		x = -1
@@ -5216,7 +5227,189 @@ focus_tree = {
 		
 		search_filters = {  } 
 		completion_reward = {
-			set_country_flag = POL_army_training_in_progress_flag
+			custom_effect_tooltip = POL_modifier_improving_quality_of_army_dynamic_modifier_tt
+			add_to_variable = { POL_IQA_cavalry_attack_factor_var = 0.10 tooltip = cavalry_attack_factor_tt }
+			add_to_variable = { POL_IQA_cavalry_defence_factor_var = 0.10 tooltip = cavalry_defence_factor_tt }
+		}
+	}
+
+	focus = {
+		id = POL_total_conscription
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = POL_improving_quality_of_army }
+		relative_position_id = POL_improving_quality_of_army
+		x = 1
+		y = 1
+		available = {
+		}
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		
+		search_filters = {  } 
+		completion_reward = {
+			custom_effect_tooltip = POL_modifier_improving_quality_of_army_dynamic_modifier_tt
+			add_to_variable = { POL_IQA_conscription_factor_var = 0.05 tooltip = conscription_factor_tt }
+			add_to_variable = { POL_IQA_mobilization_speed_var = 0.15 tooltip = mobilization_speed_tt }
+		}
+	}
+
+	focus = {
+		id = POL_entire_nation_in_arms
+		icon = GFX_focus_ITA_banda_carita
+		prerequisite = { focus = POL_armed_cavalry }
+		prerequisite = { focus = POL_total_conscription }
+		mutually_exclusive = { focus = POL_high_quality_training }
+		relative_position_id = POL_improving_quality_of_army
+		x = -1
+		y = 2
+		available = {
+		}
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		
+		search_filters = {  } 
+		completion_reward = {
+			custom_effect_tooltip = POL_modifier_improving_quality_of_army_dynamic_modifier_tt
+			add_to_variable = { POL_IQA_minimum_training_level_var = -0.10 tooltip = minimum_training_level_tt }
+			custom_effect_tooltip = POL_entire_nation_in_arms_tt
+			hidden_effect = { add_ideas = POL_entire_nation_in_arms_idea }
+		}
+	}
+
+	focus = {
+		id = POL_high_quality_training
+		icon = GFX_focus_generic_little_entente
+		prerequisite = { focus = POL_armed_cavalry }
+		prerequisite = { focus = POL_total_conscription }
+		mutually_exclusive = { focus = POL_entire_nation_in_arms }
+		relative_position_id = POL_improving_quality_of_army
+		x = 1
+		y = 2
+		available = {
+		}
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		
+		search_filters = {  } 
+		completion_reward = {
+			custom_effect_tooltip = POL_modifier_improving_quality_of_army_dynamic_modifier_tt
+			add_to_variable = { POL_IQA_training_time_factor_var = -0.10 tooltip = training_time_factor_tt }
+			add_to_variable = { POL_IQA_army_morale_factor_var = 0.10 tooltip = army_morale_factor_tt }
+		}
+	}
+
+	focus = {
+		id = POL_rear_service
+		icon = GFX_focus_SWE_bofors_fly_swatter
+		prerequisite = { focus = POL_armed_cavalry }
+		prerequisite = { focus = POL_total_conscription }
+		relative_position_id = POL_improving_quality_of_army
+		x = -3
+		y = 2
+		available = {
+		}
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		
+		search_filters = {  } 
+		completion_reward = {
+			custom_effect_tooltip = POL_modifier_improving_quality_of_army_dynamic_modifier_tt
+			add_to_variable = { POL_IQA_supply_consumption_factor_var = -0.10 tooltip = supply_consumption_factor_tt }
+			add_to_variable = { POL_IQA_pocket_penalty_var = -0.10 tooltip = pocket_penalty_tt }
+		}
+	}
+
+	focus = {
+		id = POL_duck_and_cover
+		icon = GFX_focus_prc_infiltration
+		prerequisite = { focus = POL_armed_cavalry }
+		prerequisite = { focus = POL_total_conscription }
+		relative_position_id = POL_improving_quality_of_army
+		x = 3
+		y = 2
+		available = {
+		}
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		
+		search_filters = {  } 
+		completion_reward = {
+			custom_effect_tooltip = POL_modifier_improving_quality_of_army_dynamic_modifier_tt
+			add_to_variable = { POL_IQA_max_dig_in_factor_var = 0.15 tooltip = max_dig_in_factor_tt }
+			add_to_variable = { POL_IQA_cas_damage_reduction_var = 0.10 tooltip = cas_damage_reduction_tt }
+		}
+	}
+	
+	focus = {
+		id = POL_cavalry_assault
+		icon = GFX_focus_ITA_cavalry_charge
+		prerequisite = { focus = POL_rear_service }
+		prerequisite = {
+			focus = POL_entire_nation_in_arms
+			focus = POL_high_quality_training
+		}
+		relative_position_id = POL_improving_quality_of_army
+		x = -1
+		y = 3
+		available = {
+		}
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		
+		search_filters = {  } 
+		completion_reward = {
+			custom_effect_tooltip = POL_modifier_improving_quality_of_army_dynamic_modifier_tt
+			custom_effect_tooltip = POL_cavalry_assault_tt
+			hidden_effect = {
+				set_technology = { POL_armed_winged_hussar_tech = 1 popup = no }
+			}
+			if = {
+				limit = { has_completed_focus = POL_home_defence }
+				clr_country_flag = POL_army_training_in_progress_flag
+			}
+		}
+	}
+
+	focus = {
+		id = POL_home_defence
+		icon = GFX_focus_hol_united_netherlands
+		prerequisite = { focus = POL_duck_and_cover }
+		prerequisite = {
+			focus = POL_entire_nation_in_arms
+			focus = POL_high_quality_training
+		}
+		relative_position_id = POL_improving_quality_of_army
+		x = 1
+		y = 3
+		available = {
+		}
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		
+		search_filters = {  } 
+		completion_reward = {
+			custom_effect_tooltip = POL_modifier_improving_quality_of_army_dynamic_modifier_tt
+			add_to_variable = { POL_IQA_army_core_defence_factor_var = 0.15 tooltip = army_core_defence_factor_tt }
+			add_to_variable = { POL_IQA_army_attack_against_major_factor_var = 0.10 tooltip = army_attack_against_major_factor_tt }
+			add_to_variable = { POL_IQA_surrender_limit_var = 0.05 tooltip = surrender_limit_tt }
+			if = {
+				limit = { has_completed_focus = POL_cavalry_assault }
+				clr_country_flag = POL_army_training_in_progress_flag
+			}
 		}
 	}
 
@@ -5248,6 +5441,7 @@ focus_tree = {
 					}
 				}
 			}
+			always = no
 		}
 
 		ai_will_do = {
@@ -8140,7 +8334,7 @@ focus_tree = {
 		available = {
 		}
 
-		x = 77
+		x = 52
 		y = 0
 		cost = 5
 
@@ -8222,8 +8416,8 @@ focus_tree = {
 		relative_position_id = POL_assemble_the_regency_council
 		
 		available = {
-			neutrality > 0.2
-			democratic < 0.5
+			#neutrality > 0.2
+			#democratic < 0.5
 		}
 
 		x = 0
@@ -11897,6 +12091,7 @@ focus_tree = {
 					}
 				}
 			}
+			always = no
 		}
 
 		x = 91
@@ -12306,6 +12501,7 @@ focus_tree = {
 					}
 				}
 			}
+			always = no
 		}
 
 		x = 87
@@ -12382,6 +12578,7 @@ focus_tree = {
 					}
 				}
 			}
+			always = no
 		}
 
 		x = 89
@@ -13533,6 +13730,7 @@ focus_tree = {
 					}
 				}
 			}
+			always = no
 		}
 		
 		offset = {
@@ -13584,6 +13782,7 @@ focus_tree = {
 					}
 				}
 			}
+			always = no
 		}
 		
 		offset = {
@@ -13977,6 +14176,7 @@ focus_tree = {
 	focus = {
 		id = POL_the_between_the_seas_concept
 		icon = GFX_goal_anschluss
+		allow_branch = { always = no }
 		available = {
 			is_puppet = no
 			if = {
@@ -14794,6 +14994,7 @@ focus_tree = {
 			}
 		}
 		allow_branch = { has_dlc = "Man the Guns" }
+		allow_branch = { always = no }
 		x = 106
 		y = 0
 		offset = {
@@ -15194,6 +15395,7 @@ focus_tree = {
 		allow_branch = {
 			has_dlc = "La Resistance"
 			has_dlc = "Man the Guns"
+			always = no
 		}
 
 		x = 3

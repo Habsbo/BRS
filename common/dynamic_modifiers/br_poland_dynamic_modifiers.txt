@@ -48,6 +48,26 @@ POL_tight_grain_reserves_dynamic_modifier = {
 	party_popularity_stability_factor = POL_TGR_party_popularity_stability_factor_var
 }
 
+POL_improving_quality_of_army_dynamic_modifier = {
+	enable = { always = yes }
+	icon = GFX_idea_MEX_politicised_army
+	
+	army_org_factor = POL_IQA_army_org_factor_var
+	cavalry_attack_factor = POL_IQA_cavalry_attack_factor_var
+	cavalry_defence_factor = POL_IQA_cavalry_defence_factor_var
+	custom_modifier_tooltip = POL_entire_nation_in_arms_mtt
+	conscription_factor = POL_IQA_conscription_factor_var
+	mobilization_speed = POL_IQA_mobilization_speed_var
+	minimum_training_level = POL_IQA_minimum_training_level_var
+	training_time_factor = POL_IQA_training_time_factor_var
+	army_morale_factor = POL_IQA_army_morale_factor_var
+	supply_consumption_factor = POL_IQA_supply_consumption_factor_var
+	pocket_penalty = POL_IQA_pocket_penalty_var
+	max_dig_in_factor = POL_IQA_max_dig_in_factor_var
+	cas_damage_reduction = POL_IQA_cas_damage_reduction_var
+	custom_modifier_tooltip = POL_cavalry_assault_mtt
+}
+
 POL_warsaw_main_railway_station_dynamic_modifier = {
 	enable = { always = yes }
 	icon = GFX_modifiers_generic_supply
@@ -60,7 +80,7 @@ POL_warsaw_main_railway_station_dynamic_modifier = {
 
 POL_expand_danzig_seaport_dynamic_modifier = {
 	enable = { always = yes }
-	icon = GFX_modifiers_generic_supply
+	icon = GFX_modifiers_SOV_armored_battery
 	
 	state_production_speed_buildings_factor = -0.10
 	state_production_speed_naval_base_factor = 0.15

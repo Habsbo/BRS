@@ -1,4 +1,25 @@
 characters = {
+
+	POL_Jozef_Pilsudski = {
+		name = Jozef_Pilsudski
+		portraits = {
+			civilian = {
+				large = GFX_portrait_POL_Jozef_Pilsudski
+				small = GFX_idea_advisor_jozef_pilsudski
+			}
+			army = {
+				large = GFX_portrait_POL_Jozef_Pilsudski
+				small = GFX_idea_advisor_jozef_pilsudski
+			}
+		}
+		#country_leader = {
+		#	ideology = despotism
+		#	traits = { the_last_romanov_maybe }
+		#	expire = "1965.1.1.1"
+		#	id = -1
+		#}
+	}
+	
 	POL_anna_andersson = {
 		name="Anastasia Romanov"
 		portraits = {
