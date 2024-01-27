@@ -50,7 +50,7 @@ POL_tight_grain_reserves_dynamic_modifier = {
 
 POL_improving_quality_of_army_dynamic_modifier = {
 	enable = { always = yes }
-	icon = GFX_idea_MEX_politicised_army
+	icon = GFX_idea_HUN_secret_rearmament
 	
 	army_org_factor = POL_IQA_army_org_factor_var
 	cavalry_attack_factor = POL_IQA_cavalry_attack_factor_var
