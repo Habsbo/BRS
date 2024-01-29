@@ -396,7 +396,7 @@
  br_hellas..a: "或许······那是更美好的明天？"
  br_hellas..b: "一派胡言"
 
- br_ifc.2.title: "日本催还欠款" #[FROM.GetName]
+ br_ifc.2.title: "[FROM.GetName]催还欠款" #
  br_ifc.2.desc: ""
  br_ifc.2.a: "我们可以先偿兑一部分。"
  br_ifc.2.b: "我们还还不起！"

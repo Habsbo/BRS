@@ -469,357 +469,39 @@ GRE_election_category = {
 
 #Greece Hellenic Academy decisions
 GRE_hellenic_academy_category = {
-	GRE_anti_german_stratagems = {
-		icon = generic_operation
+	GRE_ = { #
+		icon = generic_political_discourse
 
 		allowed = { 
 			original_tag = GRE
 		}
 
 		available = {
-			has_war_with = GER
-			has_completed_focus = GRE_the_hellenic_air_force
-			has_completed_focus = GRE_the_hellenic_army
-			has_completed_focus = GRE_the_hellenic_navy
+			#has_completed_focus = GRE_devalue_drachma_mildly
 		}
+
+		custom_cost_trigger = {
+			has_army_experience > 5
+		}
+		custom_cost_text = decision_cost_AE_5
+		fire_only_once = no
+		days_remove = 60
+		days_re_enable = 90
 
 		visible = {
-			has_completed_focus = GRE_hellenic_armed_forces
+			#
 		}
 
-		target_trigger = {
-			FROM = {
-				tag = GER
+		cancel_if_not_visible = yes
+
+		complete_effect = {
+			hidden_effect = {
+				army_experience = -5
 			}
 		}
 
 		ai_will_do = {
-			factor = 1
-		}
-
-		fire_only_once = yes
-
-		days_remove = 90
-
-		targeted_modifier = {
-			tag = GER
-			attack_bonus_against = 0.05
-			defense_bonus_against = 0.15
-		}
-	}
-	GRE_anti_italian_stratagems = {
-		icon = generic_operation
-
-		allowed = { 
-			original_tag = GRE
-		}
-
-		available = {
-			has_war_with = ITA
-			has_completed_focus = GRE_the_hellenic_air_force
-			has_completed_focus = GRE_the_hellenic_army
-			has_completed_focus = GRE_the_hellenic_navy
-		}
-
-		visible = {
-			has_completed_focus = GRE_hellenic_armed_forces
-		}
-
-		target_trigger = {
-			FROM = {
-				tag = ITA
-			}
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		fire_only_once = yes
-		days_remove = 120
-
-		targeted_modifier = {
-			tag = ITA
-			attack_bonus_against = 0.05
-			defense_bonus_against = 0.15
-		}
-	}
-	GRE_anti_french_stratagems = {
-		icon = generic_operation
-
-		allowed = { 
-			original_tag = GRE
-		}
-
-		available = {
-			has_war_with = FRA
-			has_completed_focus = GRE_the_hellenic_air_force
-			has_completed_focus = GRE_the_hellenic_army
-			has_completed_focus = GRE_the_hellenic_navy
-		}
-
-		visible = {
-			has_completed_focus = GRE_hellenic_armed_forces
-		}
-
-		target_trigger = {
-			FROM = {
-				tag = FRA
-			}
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		fire_only_once = yes
-
-		days_remove = 90
-
-		targeted_modifier = {
-			tag = FRA
-			attack_bonus_against = 0.05
-			defense_bonus_against = 0.15
-		}
-	}
-	GRE_anti_british_stratagems = {
-		icon = generic_operation
-
-		allowed = { 
-			original_tag = GRE
-		}
-
-		available = {
-			has_war_with = ENG
-			has_completed_focus = GRE_the_hellenic_air_force
-			has_completed_focus = GRE_the_hellenic_army
-			has_completed_focus = GRE_the_hellenic_navy
-		}
-
-		visible = {
-			has_completed_focus = GRE_hellenic_armed_forces
-		}
-
-		target_trigger = {
-			FROM = {
-				tag = ENG
-			}
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		fire_only_once = yes
-
-		days_remove = 90
-
-		targeted_modifier = {
-			tag = ENG
-			attack_bonus_against = 0.05
-			defense_bonus_against = 0.15
-		}
-	}
-	GRE_anti_soviet_stratagems = {
-		icon = generic_operation
-
-		allowed = { 
-			original_tag = GRE
-		}
-
-		available = {
-			has_war_with = SOV
-			has_completed_focus = GRE_the_hellenic_air_force
-			has_completed_focus = GRE_the_hellenic_army
-			has_completed_focus = GRE_the_hellenic_navy
-		}
-
-		visible = {
-			has_completed_focus = GRE_hellenic_armed_forces
-		}
-
-		target_trigger = {
-			FROM = {
-				tag = SOV
-			}
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		fire_only_once = yes
-
-		days_remove = 90
-
-		targeted_modifier = {
-			tag = SOV
-			attack_bonus_against = 0.05
-			defense_bonus_against = 0.15
-		}
-	}
-	GRE_anti_austro_hungarian_stratagems = {
-		icon = generic_operation
-
-		allowed = { 
-			original_tag = GRE
-		}
-
-		available = {
-			AND = {
-				has_war_with = FROM 
-				has_completed_focus = GRE_the_hellenic_air_force
-				has_completed_focus = GRE_the_hellenic_army
-				has_completed_focus = GRE_the_hellenic_navy
-			}
-		}
-
-		visible = {
-			has_completed_focus = GRE_hellenic_armed_forces
-			has_global_flag = form_austria_hungary_flag
-		}
-
-		target_trigger = {
-			FROM = {
-				has_cosmetic_tag = HUN_EMPIRE
-			}
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		fire_only_once = yes
-
-		days_remove = 90
-
-		targeted_modifier = {
-			tag = FROM
-			defense_bonus_against = 0.1
-		}
-	}
-	GRE_anti_romanian_stratagems = {
-		icon = generic_operation
-
-		allowed = { 
-			original_tag = GRE
-		}
-
-		available = {
-			has_war_with = ROM
-			has_completed_focus = GRE_the_hellenic_air_force
-			has_completed_focus = GRE_the_hellenic_army
-			has_completed_focus = GRE_the_hellenic_navy
-		}
-
-		visible = {
-			has_completed_focus = GRE_hellenic_armed_forces
-			ROM = { 
-				has_completed_focus = ROM_balkans_dominance
-			}
-		}
-
-		target_trigger = {
-			FROM = {
-				tag = ROM
-			}
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		fire_only_once = yes
-
-		days_remove = 90
-
-		targeted_modifier = {
-			tag = ROM
-			defense_bonus_against = 0.1
-		}
-	}
-	GRE_anti_bulgarian_stratagems = {
-		icon = generic_operation
-
-		allowed = { 
-			original_tag = GRE
-		}
-
-		available = {
-			has_war_with = BUL
-			has_completed_focus = GRE_the_hellenic_air_force
-			has_completed_focus = GRE_the_hellenic_army
-			has_completed_focus = GRE_the_hellenic_navy
-		}
-
-		visible = {
-			has_completed_focus = GRE_hellenic_armed_forces
-			BUL = { 
-				OR = {
-					has_completed_focus = BUL_power_to_the_tsar
-					has_completed_focus = BUL_appoint_communist_ministers
-				}
-			}
-		}
-
-		target_trigger = {
-			FROM = {
-				original_tag = BUL
-			}
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		fire_only_once = yes
-
-		days_remove = 120
-
-		targeted_modifier = {
-			tag = BUL
-			defense_bonus_against = 0.1
-		}
-	}
-	GRE_anti_turkish_stratagems = {
-		icon = generic_operation
-
-		allowed = { 
-			original_tag = GRE
-		}
-
-		available = {
-			has_war_with = TUR
-			has_completed_focus = GRE_the_hellenic_air_force
-			has_completed_focus = GRE_the_hellenic_army
-			has_completed_focus = GRE_the_hellenic_navy
-		}
-
-		visible = {
-			has_completed_focus = GRE_hellenic_armed_forces
-			TUR = { 
-				has_completed_focus = TUR_pivot_to_the_past
-				has_completed_focus = TUR_reconfigure_our_foreign_policy
-			}
-		}
-
-		target_trigger = {
-			FROM = {
-				original_tag = TUR
-			}
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		fire_only_once = yes
-
-		days_remove = 120
-
-		targeted_modifier = {
-			tag = TUR
-			defense_bonus_against = 0.1
+			factor = 5
 		}
 	}
 }
@@ -2339,3 +2021,4 @@ GRE_focus_on_economic_decisions = {
 		}
 	}
 }
+
