@@ -91,6 +91,16 @@
 #伊朗
  PER_pahlavi_dynasty: "巴列维王朝"
 
+#美国
+ LSA: "$USA$合众国"
+ CSA: "$USA$联盟国"
+ WPA: "太平洋合众国"
+ ASA: "$USA$工人联盟"
+ BSA: "$USA$统一工团联邦"
+ GSA: "$USA$帮国"
+ ESA: "$USA$帝国"
+ FSA: "至高$USA$帝国"
+
  INS_HOL_democratic: "荷属东印度"
  INS_HOL_democratic_DEF: "荷属东印度"
  INS_subject: "$OVERLORDADJ$属东印度"
