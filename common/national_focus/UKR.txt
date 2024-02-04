@@ -22,7 +22,7 @@
 		y = 0
 		#relative_position_id =
 
-		cost = 8
+		cost = 5
 		
 		available = {}
 		bypass = {}
@@ -177,7 +177,7 @@
 	}
 	focus = {
 		id = UKR_ukrainian_fertile_soil
-		icon = GFX_focus_POL_ukrainian_army
+		icon = GFX_focus_generic_agricultural_subsidies
 		prerequisite = { focus = UKR_slaughter_mennonites_landowner focus = UKR_transform_by_justice }
 		#mutually_exclusive = { focus = UKR_ }
 		x = 2
@@ -205,7 +205,7 @@
 		y = 0
 		relative_position_id = UKR_alternative_path
 
-		cost = 8
+		cost = 5
 		
 		available = {}
 		bypass = {}
@@ -289,11 +289,57 @@
 		ai_will_do = { factor = 1 }
 	}
 	focus = {
-		id = UKR_11
-		icon = GFX_focus_generic_anti_fascist_diplomacy
+		id = UKR_15
+		icon = GFX_focus_DEN_no_regulations
 		prerequisite = { focus = UKR_makhno_movement }
 		#mutually_exclusive = { focus =  }
-		x = 0
+		x = -2
+		y = 1
+		relative_position_id = UKR_makhno_movement
+
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = UKR_11
+		icon = GFX_focus_DEN_no_regulations
+		prerequisite = { focus = UKR_makhno_movement }
+		#mutually_exclusive = { focus =  }
+		x = -1
+		y = 2
+		relative_position_id = UKR_makhno_movement
+
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = UKR_chase_remnant_troops
+		icon = GFX_focus_generic_air_defense
+		prerequisite = { focus = UKR_makhno_movement focus = UKR_anarchy_committee }
+		#mutually_exclusive = { focus =  }
+		x = 2
 		y = 1
 		relative_position_id = UKR_makhno_movement
 
@@ -336,6 +382,124 @@
 		ai_will_do = { factor = 1 }
 	}
 	focus = {
+		id = UKR_education_of_revolution
+		icon = GFX_focus_generic_socialist_science
+		prerequisite = { focus = UKR_anarchy_committee focus = UKR_revolution_ukraine_bolshevik }
+		#mutually_exclusive = { focus =  }
+		x = 2
+		y = 1
+		relative_position_id = UKR_anarchy_committee
+
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = UKR_education_of_tech
+		icon = GFX_focus_generic_university_1
+		prerequisite = { focus = UKR_education_of_revolution }
+		#mutually_exclusive = { focus =  }
+		x = -1
+		y = 1
+		relative_position_id = UKR_education_of_revolution
+
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = UKR_womens_power
+		icon = GFX_focus_hol_the_foundations_of_defense
+		prerequisite = { focus = UKR_education_of_revolution }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 1
+		relative_position_id = UKR_education_of_revolution
+
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = UKR_14
+		icon = GFX_focus_generic_league_of_nations
+		prerequisite = { focus = UKR_revolution_ukraine_bolshevik }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 2
+		relative_position_id = UKR_revolution_ukraine_bolshevik 
+
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = UKR_16
+		icon = GFX_focus_generic_league_of_nations
+		prerequisite = { focus = UKR_revolution_ukraine_bolshevik }
+		#mutually_exclusive = { focus =  }
+		x = 2
+		y = 1
+		relative_position_id = UKR_revolution_ukraine_bolshevik 
+
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+#ac
+	focus = {
 		id = UKR_anarchy_committee
 		icon = GFX_focus_NOR_empower_sivorg
 		prerequisite = { focus = UKR_anarchism focus = UKR_resist_counterrevolutionary }
@@ -359,11 +523,11 @@
 	}
 	focus = {
 		id = UKR_10
-		icon = GFX_focus_generic_anti_fascist_diplomacy
+		icon = GFX_focus_generic_treaty
 		prerequisite = { focus = UKR_anarchy_committee }
 		#mutually_exclusive = { focus =  }
 		x = 0
-		y = 1
+		y = 3
 		relative_position_id = UKR_anarchy_committee
 
 		cost = 8
