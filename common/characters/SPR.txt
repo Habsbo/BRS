@@ -4711,8 +4711,8 @@ characters={
 			}
 			modifier = {
 				political_power_gain = 0.35
-				anarchist_communist_drift = 0.08
-				anarchist_communist_acceptance = 80
+				anarchist_drift = 0.08
+				anarchist_acceptance = 80
 			}
 		}
 		corps_commander={

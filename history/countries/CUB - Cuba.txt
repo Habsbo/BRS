@@ -53,7 +53,7 @@ set_politics = {
 }
 
 set_popularities = {
-	revolution_socialist = 5 #革命社会主义
+	revolution_socialism = 5 #革命社会主义
 	authoritarian = 95 #威权主义
 }
 

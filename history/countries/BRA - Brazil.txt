@@ -104,9 +104,9 @@ set_politics = {
 }
 
 set_popularities = {
-	anarchist_communist = 5#社会无政府主义
-	revolution_socialist = 10 #革命社会主义
-	scientific_socialist = 25 #科学社会主义
+	anarchist主义
+	revolution_socialism = 10 #革命社会主义
+	scientific_socialism = 25 #科学社会主义
 	social_liberation = 10 #社会自由主义
 	conservatism_democracy = 10 #保守民主主义
 	authoritarian = 40 #威权主义

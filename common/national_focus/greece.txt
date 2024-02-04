@@ -984,9 +984,9 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 200
 			add_stability = -0.03
-			add_popularity = { ideology = revolution_socialist popularity = -0.03 }
-			add_popularity = { ideology = scientific_socialist popularity = -0.08 }
-			add_popularity = { ideology = conservatism_socialist popularity = -0.02 }
+			add_popularity = { ideology = revolution_socialism popularity = -0.03 }
+			add_popularity = { ideology = scientific_socialism popularity = -0.08 }
+			add_popularity = { ideology = conservatism_socialism popularity = -0.02 }
 			add_popularity = { ideology = social_democracy popularity = -0.05 }
 		}
 		
@@ -1016,9 +1016,9 @@ focus_tree = {
 		complete_tooltip = {}
 		
 		completion_reward = {
-			add_popularity = { ideology = anarchist_communist popularity = -0.05 }
-			add_popularity = { ideology = revolution_socialist popularity = -0.05 }
-			add_popularity = { ideology = scientific_socialist popularity = -0.08 }
+			add_popularity = { ideology = anarchist popularity = -0.05 }
+			add_popularity = { ideology = revolution_socialism popularity = -0.05 }
+			add_popularity = { ideology = scientific_socialism popularity = -0.08 }
 			add_stability = -0.15
 		}
 		
@@ -1257,7 +1257,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 100
 			add_stability = 0.05
-			add_popularity = { ideology = scientific_socialist popularity = 0.02 }
+			add_popularity = { ideology = scientific_socialism popularity = 0.02 }
 			add_popularity = { ideology = social_democracy popularity = 0.05 }
 		}
 		

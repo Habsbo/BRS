@@ -390,20 +390,17 @@ br_political_actions = {
 
 		available = {
 			NOT = {
-				has_government = liberal_anarchy
-				has_government = anarchist_communist
-				has_government = revolution_socialist
+				has_government = anarchist
+				has_government = revolution_socialism
 				has_country_flag = br_political_action_ban_anarchism_flag
 			}
-			liberal_anarchy < 0.50
-			anarchist_communist < 0.50
+			anarchist < 0.50
 		}
 
 		visible = {
 			NOT = {
-				has_government = liberal_anarchy
-				has_government = anarchist_communist
-				has_government = revolution_socialist
+				has_government = anarchist
+				has_government = revolution_socialism
 			}
 		}
 
@@ -414,8 +411,7 @@ br_political_actions = {
 		cost = 50
 
 		modifier = {
-			liberal_anarchy_drift = -0.05
-			anarchist_communist_drift = -0.05
+			anarchist_drift = -0.05
 		}
 
 		complete_effect = {
@@ -434,19 +430,16 @@ br_political_actions = {
 
 		available = {
 			NOT = {
-				has_government = liberal_anarchy
-				has_government = anarchist_communist
-				has_government = revolution_socialist
+				has_government = anarchist
+				has_government = revolution_socialism
 			}
-			liberal_anarchy < 0.35
-			anarchist_communist < 0.35
+			anarchist < 0.35
 		}
 
 		visible = {
 			NOT = {
-				has_government = liberal_anarchy
-				has_government = anarchist_communist
-				has_government = revolution_socialist
+				has_government = anarchist
+				has_government = revolution_socialism
 			}
 			has_country_flag = br_political_action_be_hostility_to_anarchism_flag
 		}
@@ -457,8 +450,7 @@ br_political_actions = {
 		cost = 100
 
 		modifier = {
-			liberal_anarchy_drift = -0.01
-			anarchist_communist_drift = -0.01
+			anarchist_drift = -0.01
 		}
 
 		complete_effect = {
@@ -474,21 +466,21 @@ br_political_actions = {
 
 		available = {
 			NOT = {
-				has_government = revolution_socialist
-				has_government = scientific_socialist
-				has_government = conservatism_socialist
+				has_government = revolution_socialism
+				has_government = scientific_socialism
+				has_government = conservatism_socialism
 				has_country_flag = br_political_action_ban_socialism_flag
 			}
-			revolution_socialist < 0.30
-			scientific_socialist < 0.30
-			conservatism_socialist < 0.30
+			revolution_socialism < 0.30
+			scientific_socialism < 0.30
+			conservatism_socialism < 0.30
 		}
 
 		visible = {
 			NOT = {
-				has_government = revolution_socialist
-				has_government = scientific_socialist
-				has_government = conservatism_socialist
+				has_government = revolution_socialism
+				has_government = scientific_socialism
+				has_government = conservatism_socialism
 				has_country_flag = br_political_action_ban_socialism_flag
 			}
 		}
@@ -500,9 +492,9 @@ br_political_actions = {
 		cost = 50
 
 		modifier = {
-			revolution_socialist_drift = -0.05
-			scientific_socialist_drift = -0.05
-			conservatism_socialist_drift = -0.05
+			revolution_socialism_drift = -0.05
+			scientific_socialism_drift = -0.05
+			conservatism_socialism_drift = -0.05
 		}
 
 		complete_effect = {
@@ -517,20 +509,20 @@ br_political_actions = {
 
 		available = {
 			NOT = {
-				has_government = revolution_socialist
-				has_government = scientific_socialist
-				has_government = conservatism_socialist
+				has_government = revolution_socialism
+				has_government = scientific_socialism
+				has_government = conservatism_socialism
 			}
-			revolution_socialist < 0.15
-			scientific_socialist < 0.15
-			conservatism_socialist < 0.20
+			revolution_socialism < 0.15
+			scientific_socialism < 0.15
+			conservatism_socialism < 0.20
 		}
 
 		visible = {
 			NOT = {
-				has_government = revolution_socialist
-				has_government = scientific_socialist
-				has_government = conservatism_socialist
+				has_government = revolution_socialism
+				has_government = scientific_socialism
+				has_government = conservatism_socialism
 			}
 			has_country_flag = br_political_action_be_hostility_to_socialism_flag
 		}
@@ -541,9 +533,9 @@ br_political_actions = {
 		cost = 100
 
 		modifier = {
-			revolution_socialist_drift = -0.01
-			scientific_socialist_drift = -0.01
-			conservatism_socialist_drift = -0.01
+			revolution_socialism_drift = -0.01
+			scientific_socialism_drift = -0.01
+			conservatism_socialism_drift = -0.01
 		}
 
 		complete_effect = {

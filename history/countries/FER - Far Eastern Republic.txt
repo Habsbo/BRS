@@ -83,15 +83,15 @@ if = {
 	}
 }
 set_politics = {
-	ruling_party = scientific_socialist
+	ruling_party = scientific_socialism
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = yes
 }
 
 set_popularities = {
-	revolution_socialist = 24 #革命社会主义
-	scientific_socialist = 62 #科学社会主义
-	conservatism_socialist = 10 #保守社会主义
+	revolution_socialism = 24 #革命社会主义
+	scientific_socialism = 62 #科学社会主义
+	conservatism_socialism = 10 #保守社会主义
 	social_democracy = 4 #社会民主主义
 }

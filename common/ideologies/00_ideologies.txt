@@ -1,53 +1,13 @@
 ideologies = {
-	#自由意志无政府
-	liberal_anarchy = {
+	#社会主义无政府
+	anarchist = {
+
 		types = {
 			anarchism = {
 				can_be_randomly_selected = no # won't be assigned to randomly generated country leaders
 			}
 			anarchist_liberalism = {
 			}
-		}
-
-		dynamic_faction_names = {
-			#
-		}
-
-		color = { 100 210 255 }
-
-		war_impact_on_world_tension = 0.75 #Commie less threatening
-		faction_impact_on_world_tension = 0.5 #
-
-		rules = {
-			#can_create_collaboration_government = # Can create a collaboration government
-			can_declare_war_on_same_ideology = yes #可以对相同的意识形态宣战
-			can_force_government = no #强制改变政府
-			can_send_volunteers = yes #志愿者
-			can_puppet = no #附庸其他国家
-			can_lower_tension = no #允许降低世界紧张度
-			can_only_justify_war_on_threat_country = no #只能对制造世界紧张度的国家宣战
-			can_guarantee_other_ideologies = no #允许保障独立其他意识形态
-		}
-
-		can_be_boosted = yes #允许传播意识形态
-		can_collaborate = no #允许合作政府
-		can_host_government_in_exile = no #允许流亡政府
-
-		modifiers = {
-			#
-		}
-
-		faction_modifiers = {
-
-		}
-
-		ai_neutral = yes #
-		ai_ideology_wanted_units_factor = 1.20
-	}
-	#社会主义无政府
-	anarchist_communist = {
-
-		types = {
 			anarchist_communism = {
 			}
 		}
@@ -82,10 +42,10 @@ ideologies = {
 		ai_ideology_wanted_units_factor = 1.20
 	}
 	#革命社会主义
-	revolution_socialist = {
+	revolution_socialism = {
 
 		types = {
-			revolution_socialism = {
+			revolution_socialism_type= {
 			}
 			
 		}
@@ -130,10 +90,10 @@ ideologies = {
 
 	}
 	#科学社会主义
-	scientific_socialist = {
+	scientific_socialism = {
 
 		types = {
-			scientific_socialist_type = {
+			scientific_socialism_type = {
 			}
 			marxism = {
 			}
@@ -183,7 +143,7 @@ ideologies = {
 
 	}
 	#保守社会主义
-	conservatism_socialist = {
+	conservatism_socialism = {
 
 		types = {
 			anti_revisionism = {

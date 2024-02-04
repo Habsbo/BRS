@@ -1,0 +1,24 @@
+ideas = {
+	country = {
+		UKR_liberative_way = { #
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				OR = {
+					has_government = anarchist
+					has_government = revolution_socialism
+				}
+			}
+			
+			removal_cost = -1
+			picture = generic_pp_unity_bonus
+			
+			modifier = {
+				anarchist_drift = 0.08
+				revolution_socialism_drift = 0.05
+			}
+		}
+	}
+}

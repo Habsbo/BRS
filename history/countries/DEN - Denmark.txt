@@ -401,7 +401,7 @@ if = {
 	}
 
 	set_popularities = {
-		scientific_socialist = 5 #科学社会主义
+		scientific_socialism = 5 #科学社会主义
 		social_democracy = 24 #社会民主主义
 		social_liberation = 36 #社会自由主义
 		conservatism_democracy = 28 #保守民主主义
@@ -423,7 +423,7 @@ if = {
 	}
 
 	set_popularities = {
-		scientific_socialist = 5 #科学社会主义
+		scientific_socialism = 5 #科学社会主义
 		social_democracy = 24 #社会民主主义
 		social_liberation = 36 #社会自由主义
 		conservatism_democracy = 28 #保守民主主义

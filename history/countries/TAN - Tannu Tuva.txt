@@ -32,14 +32,14 @@ add_ideas = {
 }
 
 set_politics = {
-	ruling_party = scientific_socialist
+	ruling_party = scientific_socialism
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = no
 }
 
 set_popularities = {
-	scientific_socialist = 60 #科学社会主义
+	scientific_socialism = 60 #科学社会主义
 	social_democracy = 10 #社会民主主义
 	conservatism_democracy = 30 #保守民主主义
 }

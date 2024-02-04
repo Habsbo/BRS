@@ -65,10 +65,10 @@ GRE_election_category = {
 
 		activation = {
 			NOT = {
-				has_government = anarchist_communist
-				has_government = revolution_socialist
-				has_government = scientific_socialist
-				has_government = conservatism_socialist
+				has_government = anarchist
+				has_government = revolution_socialism
+				has_government = scientific_socialism
+				has_government = conservatism_socialism
 			}
 		}
 		available = {
@@ -76,10 +76,10 @@ GRE_election_category = {
 		}
 		cancel_trigger = {
 			OR = {
-				has_government = anarchist_communist
-				has_government = revolution_socialist
-				has_government = scientific_socialist
-				has_government = conservatism_socialist
+				has_government = anarchist
+				has_government = revolution_socialism
+				has_government = scientific_socialism
+				has_government = conservatism_socialism
 			}
 			has_stability > 0.5
 		}

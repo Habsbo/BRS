@@ -311,7 +311,7 @@ set_politics = { #VANILLA
 }
 
 set_popularities = {
-	scientific_socialist = 10 #科学社会主义
+	scientific_socialism = 10 #科学社会主义
 	social_liberation = 10 #社会自由主义
 	conservatism_democracy = 10 #保守民主主义
 	authoritarian = 40 #威权主义

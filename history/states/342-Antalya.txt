@@ -9,10 +9,12 @@ state={
 	state_category = rural
 
 	history={
-		owner = TUR
-		victory_points = {
-			1005 5 
-		}
+		owner = GRE
+		add_claim_by = TUR #add_core_of = TUR
+		add_core_of = GRE
+
+		victory_points = { 1005 5 }
+
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
@@ -20,7 +22,6 @@ state={
 				naval_base = 4
 			}
 		}
-		add_core_of = TUR
 	}
 
 	provinces={
