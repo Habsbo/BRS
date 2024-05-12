@@ -18,9 +18,9 @@
 		custom_trigger_tooltip = {
 			tooltip = br_ideology_socialism_ruling_tt
 			OR = {
-				has_government = scientific_socialism
-				has_government = conservatism_socialism
-				has_government = social_democracy
+				has_government = sci_socialism
+				has_government = con_socialism
+				has_government = demo_socialism
 			}
 		}
 	}
@@ -28,8 +28,8 @@
 		custom_trigger_tooltip = {
 			tooltip = br_ideology_capitalism_ruling_tt
 			OR = {
-				has_government = social_liberation
-				has_government = conservatism_democracy
+				has_government = demo_liberalism
+				has_government = demo_conservatism
 			}
 		}
 	}
@@ -45,8 +45,8 @@
 			tooltip = br_ideology_fascism_ruling_tt
 			OR = {
 				has_government = fascism
-				has_government = national_socialist
-				has_government = supranational_socialist
+				has_government = nationalism
+				has_government = supernationalism
 			}
 		}
 	}
@@ -70,9 +70,9 @@
 		custom_trigger_tooltip = {
 			tooltip = br_ideology_socialism_nio_tt
 			NOT = {
-				has_government = scientific_socialism
-				has_government = conservatism_socialism
-				has_government = social_democracy
+				has_government = sci_socialism
+				has_government = con_socialism
+				has_government = demo_socialism
 			}
 		}
 	}
@@ -80,8 +80,8 @@
 		custom_trigger_tooltip = {
 			tooltip = br_ideology_capitalism_nio_tt
 			NOT = {
-				has_government = social_liberation
-				has_government = conservatism_democracy
+				has_government = demo_liberalism
+				has_government = demo_conservatism
 			}
 		}
 	}
@@ -96,8 +96,8 @@
 			tooltip = br_ideology_fascism_nio_tt
 			NOT = {
 				has_government = fascism
-				has_government = national_socialist
-				has_government = supranational_socialist
+				has_government = nationalism
+				has_government = supernationalism
 			}
 		}
 	}

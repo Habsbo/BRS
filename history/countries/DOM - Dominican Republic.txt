@@ -45,7 +45,7 @@ set_politics = {
 set_popularities = {
 	authoritarian = 60 #威权主义
 	fascism = 20 #民族主义/束棒
-	national_socialist = 20 #国家社会主义
+	nationalism = 20 #国家社会主义
 }
 
 1939.1.1 = {

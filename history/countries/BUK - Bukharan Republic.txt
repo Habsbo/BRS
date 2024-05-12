@@ -85,17 +85,17 @@ if = {
 	}
 }
 set_politics = {
-	ruling_party = social_liberation
+	ruling_party = demo_liberalism
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = yes
 }
 
 set_popularities = {
-	scientific_socialism = 5 #科学社会主义
-	social_democracy = 15 #社会民主主义
-	social_liberation = 50 #社会自由主义
-	conservatism_democracy = 20 #保守民主主义
+	sci_socialism = 5 #科学社会主义
+	demo_socialism = 15 #社会民主主义
+	demo_liberalism = 50 #社会自由主义
+	demo_conservatism = 20 #保守民主主义
 	fascism = 10 #民族主义/束棒
 }
 

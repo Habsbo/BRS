@@ -984,9 +984,9 @@ focus_tree = {
 			add_political_power = 200
 			add_stability = -0.03
 			add_popularity = { ideology = vanwardism popularity = -0.02 }
-			add_popularity = { ideology = scientific_socialism popularity = -0.02 }
-			add_popularity = { ideology = conservatism_socialism popularity = -0.02 }
-			add_popularity = { ideology = social_democracy popularity = -0.02 }
+			add_popularity = { ideology = sci_socialism popularity = -0.02 }
+			add_popularity = { ideology = con_socialism popularity = -0.02 }
+			add_popularity = { ideology = demo_socialism popularity = -0.02 }
 		}
 		
 		ai_will_do = { factor = 1 }
@@ -1017,7 +1017,7 @@ focus_tree = {
 		completion_reward = {
 			add_popularity = { ideology = sco_anarchism popularity = -0.05 }
 			add_popularity = { ideology = vanwardism popularity = -0.05 }
-			add_popularity = { ideology = scientific_socialism popularity = -0.08 }
+			add_popularity = { ideology = sci_socialism popularity = -0.08 }
 			add_stability = -0.15
 		}
 		
@@ -1256,8 +1256,8 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 100
 			add_stability = 0.05
-			add_popularity = { ideology = scientific_socialism popularity = 0.02 }
-			add_popularity = { ideology = social_democracy popularity = 0.05 }
+			add_popularity = { ideology = sci_socialism popularity = 0.02 }
+			add_popularity = { ideology = demo_socialism popularity = 0.05 }
 		}
 		
 		ai_will_do = { factor = 1 }
@@ -2488,7 +2488,7 @@ focus_tree = {
 		
 		completion_reward = {
 			set_politics = {
-				ruling_party = social_liberation
+				ruling_party = demo_liberalism
 				election_frequency = 48
 				elections_allowed = yes
 			}
@@ -2496,15 +2496,15 @@ focus_tree = {
 				set_popularities = {
 					#anarchist = 5 #社会无政府主义
 					#vanwardism = 0 #革命社会主义
-					scientific_socialism = 20 #科学社会主义
-					conservatism_socialism = 10 #保守社会主义
-					social_democracy = 20 #社会民主主义
-					social_liberation = 50 #社会自由主义
-					#conservatism_democracy = 0 #保守民主主义
+					sci_socialism = 20 #科学社会主义
+					con_socialism = 10 #保守社会主义
+					demo_socialism = 20 #社会民主主义
+					demo_liberalism = 50 #社会自由主义
+					#demo_conservatism = 0 #保守民主主义
 					#authoritarian = 0 #威权主义
 					#fascism = 10 #民族主义/束棒
-					#national_socialist = 0 #国家社会主义
-					#supranational_socialist = 0 #超国家社会主义
+					#nationalism = 0 #国家社会主义
+					#supernationalism = 0 #超国家社会主义
 				}
 			}
 		}
@@ -2650,7 +2650,7 @@ focus_tree = {
 		
 		completion_reward = {
 			set_politics = {
-				ruling_party = conservatism_democracy
+				ruling_party = demo_conservatism
 				election_frequency = 48
 				elections_allowed = yes
 			}
@@ -2658,15 +2658,15 @@ focus_tree = {
 				set_popularities = {
 					#anarchist = 0 #社会无政府主义
 					#vanwardism = 0 #革命社会主义
-					#scientific_socialism = 20 #科学社会主义
-					#conservatism_socialism = 10 #保守社会主义
-					social_democracy = 10 #社会民主主义
-					social_liberation = 10 #社会自由主义
-					conservatism_democracy = 60 #保守民主主义
+					#sci_socialism = 20 #科学社会主义
+					#con_socialism = 10 #保守社会主义
+					demo_socialism = 10 #社会民主主义
+					demo_liberalism = 10 #社会自由主义
+					demo_conservatism = 60 #保守民主主义
 					authoritarian = 20 #威权主义
 					#fascism = 10 #民族主义/束棒
-					#national_socialist = 0 #国家社会主义
-					#supranational_socialist = 0 #超国家社会主义
+					#nationalism = 0 #国家社会主义
+					#supernationalism = 0 #超国家社会主义
 				}
 			}
 		}

@@ -495,8 +495,8 @@ ideas = {
 
 			available = {
 				OR = {
-					has_government = national_socialist
-					has_government = supranational_socialist
+					has_government = nationalism
+					has_government = supernationalism
 				}
 			}
 			level = 6
@@ -736,7 +736,7 @@ ideas = {
 
 			available = {
 				OR = {
-					has_government = social_democracy
+					has_government = demo_socialism
 					br_ideology_capitalism_ruling = yes
 					br_ideology_authoritarian_ruling = yes
 					br_ideology_fascism_ruling = yes
@@ -778,7 +778,7 @@ ideas = {
 				br_ideology_radical_communism_nio = yes
 				OR = {
 					br_ideology_socialism_nio = yes
-					has_government = social_democracy
+					has_government = demo_socialism
 				}
 			}
 			

@@ -108,7 +108,7 @@ set_convoys = 50
 set_stability = 0.75
 
 set_politics = {
-	ruling_party = scientific_socialism
+	ruling_party = sci_socialism
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = yes
@@ -117,9 +117,9 @@ set_politics = {
 
 set_popularities = {
 	vanwardism = 15 #革命社会主义
-	scientific_socialism = 55 #科学社会主义
-	conservatism_socialism = 10 #保守社会主义
-	social_democracy = 20 #社会民主主义
+	sci_socialism = 55 #科学社会主义
+	con_socialism = 10 #保守社会主义
+	demo_socialism = 20 #社会民主主义
 }
 
 add_ideas = {

@@ -140,7 +140,7 @@ if = {
 set_convoys = 10
 
 set_politics = {
-	ruling_party = conservatism_democracy
+	ruling_party = demo_conservatism
 	last_election = "1935.6.9"
 	election_frequency = 7
 	elections_allowed = yes # none after offset 1
@@ -149,14 +149,14 @@ set_politics = {
 set_popularities = {
 	sco_anarchism = 5 #无政府主义
 	vanwardism = 0 #革命社会主义
-	scientific_socialism = 10 #科学社会主义
-	conservatism_socialism = 5 #保守社会主义
-	social_democracy = 20 #社会民主主义
-	social_liberation = 20 #社会自由主义
-	conservatism_democracy = 30 #保守民主主义
+	sci_socialism = 10 #科学社会主义
+	con_socialism = 5 #保守社会主义
+	demo_socialism = 10 #社会民主主义
+	demo_liberalism = 20 #社会自由主义
+	demo_conservatism = 40 #保守民主主义
 	authoritarian = 0 #威权主义
 	fascism = 10 #民族主义/束棒
-	national_socialist = 0 #国家社会主义
+	nationalism = 0 #国家社会主义
 }
 
 set_stability = 0.72
@@ -408,7 +408,7 @@ create_dynamic_country = {
 	original_tag = GRE
 	set_country_flag = br_HEL_hellenic_republic_flag
 	set_politics = {
-		ruling_party = social_liberation
+		ruling_party = demo_liberalism
 	}
 	set_cosmetic_tag = HEL_republic
 	set_research_slots = 3

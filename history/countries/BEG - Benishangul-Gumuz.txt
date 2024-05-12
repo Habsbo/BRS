@@ -15,6 +15,6 @@ set_politics = {
 }
 
 set_popularities = {
-	conservatism_democracy = 20 #保守民主主义
+	demo_conservatism #保守民主主义
 	authoritarian = 80 #威权主义
 }

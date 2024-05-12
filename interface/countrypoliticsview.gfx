@@ -477,28 +477,28 @@ spriteTypes = {
 	}
 	
 	spriteType = {
-		name = "GFX_ideology_scientific_socialism_group"
-		texturefile = "gfx/interface/ideologies/scientific_socialism_group.png"
+		name = "GFX_ideology_sci_socialism_group"
+		texturefile = "gfx/interface/ideologies/sci_socialism_group.png"
 	}
 
 	spriteType = {
-		name = "GFX_ideology_conservatism_socialism_group"
-		texturefile = "gfx/interface/ideologies/conservatism_socialism_group.png"
+		name = "GFX_ideology_con_socialism_group"
+		texturefile = "gfx/interface/ideologies/con_socialism_group.png"
 	}
 	
 	spriteType = {
-		name = "GFX_ideology_social_democracy_group"
-		texturefile = "gfx/interface/ideologies/social_democracy_group.png"
+		name = "GFX_ideology_demo_socialism_group"
+		texturefile = "gfx/interface/ideologies/demo_socialism_group.png"
 	}
 
 	spriteType = {
-		name = "GFX_ideology_social_liberation_group"
-		texturefile = "gfx/interface/ideologies/social_liberation_group.png"
+		name = "GFX_ideology_demo_liberalism_group"
+		texturefile = "gfx/interface/ideologies/demo_liberalism_group.png"
 	}
 	
 	spriteType = {
-		name = "GFX_ideology_conservatism_democracy_group"
-		texturefile = "gfx/interface/ideologies/conservatism_democracy_group.png"
+		name = "GFX_ideology_demo_conservatism_group"
+		texturefile = "gfx/interface/ideologies/demo_conservatism_group.png"
 	}
 
 	spriteType = {
@@ -512,12 +512,12 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_ideology_national_socialist_group"
-		texturefile = "gfx/interface/ideologies/national_socialist_group.png"
+		name = "GFX_ideology_nationalism_group"
+		texturefile = "gfx/interface/ideologies/nationalism_group.png"
 	}
 	spriteType = {
-		name = "GFX_ideology_supranational_socialist_group"
-		texturefile = "gfx/interface/ideologies/supranational_socialist_group.png"
+		name = "GFX_ideology_supernationalism_group"
+		texturefile = "gfx/interface/ideologies/supernationalism_group.png"
 	}
 	
 	spriteType = {

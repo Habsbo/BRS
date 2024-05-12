@@ -89,7 +89,7 @@ ideologies = {
 
 	}
 	#科学社会主义
-	scientific_socialism = {
+	sci_socialism = {
 
 		types = {
 			marxism = {
@@ -140,7 +140,7 @@ ideologies = {
 
 	}
 	#保守社会主义
-	conservatism_socialism = {
+	con_socialism = {
 
 		types = {
 			anti_revisionism = {
@@ -189,7 +189,7 @@ ideologies = {
 
 	}
 	#社会民主主义
-	social_democracy = {
+	demo_socialism = {
 
 		types = {
 			socialism = {
@@ -249,7 +249,7 @@ ideologies = {
 		ai_ideology_wanted_units_factor = 1.0 # multiplies threat impact on number of desired units by this value, defaults to 1.0. If at war, the larger of this value and NDefines::NAI::WANTED_UNITS_WAR_THREAT_FACTOR will be used instead
 	}
 	#社会自由主义
-	social_liberation = {
+	demo_liberalism = {
 
 		types = {
 			liberative_democratic = {
@@ -309,7 +309,7 @@ ideologies = {
 		ai_ideology_wanted_units_factor = 1.0 # multiplies threat impact on number of desired units by this value, defaults to 1.0. If at war, the larger of this value and NDefines::NAI::WANTED_UNITS_WAR_THREAT_FACTOR will be used instead
 	}
 	#保守民主主义
-	conservatism_democracy = {
+	demo_conservatism = {
 
 		types = {
 			conservatism = {
@@ -468,7 +468,7 @@ ideologies = {
 		ai_ideology_wanted_units_factor = 1.65
 	}
 	#国家社会主义
-	national_socialist = {
+	nationalism = {
 
 		types = {
 			nazism = {
@@ -512,10 +512,10 @@ ideologies = {
 		ai_ideology_wanted_units_factor = 1.65
 	}
 	#超国家社会主义
-	supranational_socialist = {
+	supernationalism = {
 
 		types = {
-			supranational_socialist_type = {
+			supernationalism_type = {
 			}
 		}
 

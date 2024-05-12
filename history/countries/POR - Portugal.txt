@@ -107,15 +107,15 @@ set_politics = {
 set_popularities = {
 	sco_anarchism = 0 #无政府主义
 	vanwardism = 0 #革命社会主义
-	scientific_socialism = 5 #科学社会主义
-	conservatism_socialism = 15#保守社会主义
-	social_democracy = 10 #社会民主主义
-	social_liberation = 10 #社会自由主义
-	conservatism_democracy = 20 #保守民主主义
+	sci_socialism = 5 #科学社会主义
+	con_socialism = 15#保守社会主义
+	demo_socialism = 10 #社会民主主义
+	demo_liberalism = 10 #社会自由主义
+	demo_conservatism = 20 #保守民主主义
 	authoritarian = 30 #威权主义
 	fascism = 10 #民族主义/束棒
-	national_socialist = 0 #国家社会主义
-	supranational_socialist = 0 #超国家社会主义
+	nationalism = 0 #国家社会主义
+	supernationalism = 0 #超国家社会主义
 }
 
 set_convoys = 100

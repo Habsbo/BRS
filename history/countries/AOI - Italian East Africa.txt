@@ -106,10 +106,10 @@ set_politics = {
 }
 
 set_popularities = {
-	conservatism_democracy = 10 #保守民主主义
+	demo_conservatism = 10 #保守民主主义
 	authoritarian = 25 #威权主义
 	fascism = 60 #民族主义/束棒
-	national_socialist = 5 #国家社会主义
+	nationalism = 5 #国家社会主义
 }
 
 recruit_character = AOI_prince_amedeo 

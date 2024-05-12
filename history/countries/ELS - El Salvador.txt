@@ -50,11 +50,11 @@ set_politics = {
 }
 
 set_popularities = {
-	social_democracy = 10 #社会民主主义
-	conservatism_democracy = 10 #保守民主主义
+	demo_socialism = 10 #社会民主主义
+	demo_conservatism = 10 #保守民主主义
 	authoritarian = 50 #威权主义
 	fascism = 10 #民族主义/束棒
-	national_socialist = 20 #国家社会主义
+	nationalism = 20 #国家社会主义
 }
 
 1939.1.1 = {

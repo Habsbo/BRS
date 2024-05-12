@@ -154,16 +154,16 @@ recruit_character = HOL_pieter_sjoerds_gerbrandy
 recruit_character = HOL_wilhelmina
 
 set_politics = {
-	ruling_party = social_liberation
+	ruling_party = demo_liberalism
 	last_election = "1933.4.26"
 	election_frequency = 48
 	elections_allowed = yes
 }
 
 set_popularities = {
-	social_democracy = 20 #社会民主主义
-	social_liberation = 60 #社会自由主义
-	conservatism_democracy = 20 #保守民主主义
+	demo_socialism = 20 #社会民主主义
+	demo_liberalism = 60 #社会自由主义
+	demo_conservatism = 20 #保守民主主义
 }
 
 set_convoys = 150

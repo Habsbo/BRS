@@ -39,9 +39,9 @@ set_politics = {
 }
 
 set_popularities = {
-	scientific_socialism = 30 #科学社会主义
-	social_democracy = 10 #社会民主主义
-	social_liberation = 20 #社会自由主义
+	sci_socialism = 30 #科学社会主义
+	demo_socialism = 10 #社会民主主义
+	demo_liberalism = 20 #社会自由主义
 	authoritarian = 40 #威权主义
 }
 

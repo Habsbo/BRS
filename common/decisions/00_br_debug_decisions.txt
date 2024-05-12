@@ -64,32 +64,32 @@ br_debug_decisions = {
 	debug_ideo.3 = {
 		fire_only_once = no
 		complete_effect = {
-			set_politics = { ruling_party = scientific_socialism }
+			set_politics = { ruling_party = sci_socialism }
 		}
 	}
 	debug_ideo.4 = {
 		fire_only_once = no
 		complete_effect = {
-			set_politics = { ruling_party = conservatism_socialism }
+			set_politics = { ruling_party = con_socialism }
 		}
 	}
 	
 	debug_ideo.5 = {
 		fire_only_once = no
 		complete_effect = {
-			set_politics = { ruling_party = social_democracy }
+			set_politics = { ruling_party = demo_socialism }
 		}
 	}
 	debug_ideo.6 = {
 		fire_only_once = no
 		complete_effect = {
-			set_politics = { ruling_party = social_liberation }
+			set_politics = { ruling_party = demo_liberalism }
 		}
 	}
 	debug_ideo.7 = {
 		fire_only_once = no
 		complete_effect = {
-			set_politics = { ruling_party = conservatism_democracy }
+			set_politics = { ruling_party = demo_conservatism }
 		}
 	}
 	debug_ideo.8 = {
@@ -107,7 +107,7 @@ br_debug_decisions = {
 	debug_ideo.10 = {
 		fire_only_once = no
 		complete_effect = {
-			set_politics = { ruling_party = national_socialist }
+			set_politics = { ruling_party = nationalism }
 		}
 	}
 	debug_poland.1 = {

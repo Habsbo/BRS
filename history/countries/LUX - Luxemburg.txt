@@ -45,17 +45,17 @@ recruit_character = LUX_pierre_krier
 recruit_character = LUX_martin_karp
 
 set_politics = {
-	ruling_party = social_democracy
+	ruling_party = demo_socialism
 	last_election = "1934.6.3"
 	election_frequency = 36
 	elections_allowed = yes
 }
 
 set_popularities = {
-	scientific_socialism = 10 #科学社会主义
-	social_democracy = 40 #社会民主主义
-	social_liberation = 30 #社会自由主义
-	conservatism_democracy = 20 #保守民主主义
+	sci_socialism = 10 #科学社会主义
+	demo_socialism = 40 #社会民主主义
+	demo_liberalism = 30 #社会自由主义
+	demo_conservatism = 20 #保守民主主义
 }
 
 1939.1.1 = {

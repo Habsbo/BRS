@@ -180,7 +180,7 @@ if = {
 
 set_convoys = 25
 set_politics = {
-	ruling_party = conservatism_democracy
+	ruling_party = demo_conservatism
 	last_election = "1933.5.17"
 	election_frequency = 60
 	elections_allowed = yes
@@ -188,10 +188,10 @@ set_politics = {
 
 set_popularities = {
 	vanwardism = 6 #革命社会主义
-	scientific_socialism = 14 #科学社会主义
-	social_democracy = 10 #社会民主主义
-	conservatism_democracy = 50 #保守民主主义
-	national_socialist = 20 #国家社会主义
+	sci_socialism = 14 #科学社会主义
+	demo_socialism = 10 #社会民主主义
+	demo_conservatism = 50 #保守民主主义
+	nationalism = 20 #国家社会主义
 }
 
 recruit_character = SAF_j_b_m_hertzog

@@ -101,9 +101,9 @@ country_event = { #
 		name = br_political_actions.3.a #
 
 		hidden_effect = {
-			set_temp_variable = { var = deny_ideology_var value = party_popularity@scientific_socialism }
-			add_to_temp_variable = { var = deny_ideology_var value = party_popularity@conservatism_socialism }
-			add_to_temp_variable = { var = deny_ideology_var value = party_popularity@social_democracy }
+			set_temp_variable = { var = deny_ideology_var value = party_popularity@sci_socialism }
+			add_to_temp_variable = { var = deny_ideology_var value = party_popularity@con_socialism }
+			add_to_temp_variable = { var = deny_ideology_var value = party_popularity@demo_socialism }
 			multiply_temp_variable = { var = deny_ideology_var value = -0.33 }
 		}
 		#
@@ -128,17 +128,17 @@ country_event = { #
 		name = br_political_actions.4.a #
 		#
 		hidden_effect = {
-			set_temp_variable = { ban_ideology_var_ideology.2 = party_popularity@scientific_socialism }
-			set_temp_variable = { ban_ideology_var_ideology.3 = party_popularity@conservatism_socialism }
-			set_temp_variable = { ban_ideology_var_ideology.1 = party_popularity@social_democracy }
+			set_temp_variable = { ban_ideology_var_ideology.2 = party_popularity@sci_socialism }
+			set_temp_variable = { ban_ideology_var_ideology.3 = party_popularity@con_socialism }
+			set_temp_variable = { ban_ideology_var_ideology.1 = party_popularity@demo_socialism }
 			multiply_temp_variable = { ban_ideology_var_ideology.1 = -1 }
 			multiply_temp_variable = { ban_ideology_var_ideology.2 = -1 }
 			multiply_temp_variable = { ban_ideology_var_ideology.3 = -1 }
 		}
 		#
-		add_popularity = { ideology = scientific_socialism popularity = ban_ideology_var_ideology.1 }
-		add_popularity = { ideology = conservatism_socialism popularity = ban_ideology_var_ideology.2 }
-		add_popularity = { ideology = social_democracy popularity = ban_ideology_var_ideology.3 }
+		add_popularity = { ideology = sci_socialism popularity = ban_ideology_var_ideology.1 }
+		add_popularity = { ideology = con_socialism popularity = ban_ideology_var_ideology.2 }
+		add_popularity = { ideology = demo_socialism popularity = ban_ideology_var_ideology.3 }
 		#
 		hidden_effect = {
 			set_temp_variable = { ban_ideology_var = ban_ideology_var_ideology.1 }
@@ -180,8 +180,8 @@ country_event = { #
 		name = br_political_actions.5.a #
 
 		hidden_effect = {
-			set_temp_variable = { deny_ideology_var = party_popularity@social_liberation }
-			add_to_temp_variable = { deny_ideology_var = party_popularity@conservatism_democracy }
+			set_temp_variable = { deny_ideology_var = party_popularity@demo_liberalism }
+			add_to_temp_variable = { deny_ideology_var = party_popularity@demo_conservatism }
 			multiply_temp_variable = { deny_ideology_var = -0.33 }
 		}
 		add_stability = deny_ideology_var
@@ -205,17 +205,17 @@ country_event = { #
 		name = br_political_actions.6.a #
 		#
 		hidden_effect = {
-			set_temp_variable = { ban_ideology_var_ideology.1 = party_popularity@social_liberation }
-			set_temp_variable = { ban_ideology_var_ideology.2 = party_popularity@conservatism_democracy }
+			set_temp_variable = { ban_ideology_var_ideology.1 = party_popularity@demo_liberalism }
+			set_temp_variable = { ban_ideology_var_ideology.2 = party_popularity@demo_conservatism }
 			multiply_temp_variable = { ban_ideology_var_ideology.1 = -1 }
 			multiply_temp_variable = { ban_ideology_var_ideology.2 = -1 }
 		}
-		add_popularity = { ideology = social_liberation popularity = ban_ideology_var_ideology.1 }
-		add_popularity = { ideology = conservatism_democracy popularity = ban_ideology_var_ideology.2 }
+		add_popularity = { ideology = demo_liberalism popularity = ban_ideology_var_ideology.1 }
+		add_popularity = { ideology = demo_conservatism popularity = ban_ideology_var_ideology.2 }
 		#
 		hidden_effect = {
-			set_temp_variable = { ban_ideology_var_ideology.1 = party_popularity@social_liberation }
-			add_to_temp_variable = { ban_ideology_var_ideology.2 = party_popularity@conservatism_democracy }
+			set_temp_variable = { ban_ideology_var_ideology.1 = party_popularity@demo_liberalism }
+			add_to_temp_variable = { ban_ideology_var_ideology.2 = party_popularity@demo_conservatism }
 			multiply_temp_variable = { ban_ideology_var = 0.33 }
 		}
 		add_stability = ban_ideology_var
@@ -252,8 +252,8 @@ country_event = { #
 
 		hidden_effect = {
 			set_temp_variable = { deny_ideology_var = party_popularity@fascism }
-			add_to_temp_variable = { deny_ideology_var = party_popularity@national_socialist }
-			add_to_temp_variable = { deny_ideology_var = party_popularity@supranational_socialist }
+			add_to_temp_variable = { deny_ideology_var = party_popularity@nationalism }
+			add_to_temp_variable = { deny_ideology_var = party_popularity@supernationalism }
 			multiply_temp_variable = { deny_ideology_var = -0.33 }
 		}
 		add_stability = deny_ideology_var
@@ -278,15 +278,15 @@ country_event = { #
 
 		hidden_effect = {
 			set_temp_variable = { ban_ideology_var_ideology.1 = party_popularity@fascism }
-			set_temp_variable = { ban_ideology_var_ideology.2 = party_popularity@national_socialist }
-			set_temp_variable = { ban_ideology_var_ideology.3 = party_popularity@supranational_socialist }
+			set_temp_variable = { ban_ideology_var_ideology.2 = party_popularity@nationalism }
+			set_temp_variable = { ban_ideology_var_ideology.3 = party_popularity@supernationalism }
 			multiply_temp_variable = { ban_ideology_var_ideology.1 = -1 }
 			multiply_temp_variable = { ban_ideology_var_ideology.2 = -1 }
 			multiply_temp_variable = { ban_ideology_var_ideology.3 = -1 }
 		}
 		add_popularity = { ideology = fascism popularity = ban_ideology_var_ideology.1 }
-		add_popularity = { ideology = national_socialist popularity = ban_ideology_var_ideology.2 }
-		add_popularity = { ideology = supranational_socialist popularity = ban_ideology_var_ideology.3 }
+		add_popularity = { ideology = nationalism popularity = ban_ideology_var_ideology.2 }
+		add_popularity = { ideology = supernationalism popularity = ban_ideology_var_ideology.3 }
 		#
 		hidden_effect = {
 			set_temp_variable = { ban_ideology_var = ban_ideology_var_ideology.1 }

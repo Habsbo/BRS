@@ -212,8 +212,8 @@ br_political_actions = {
 			OR = {
 				threat > 0.24
 				has_government = fascism
-				has_government = national_socialist
-				has_government = supranational_socialist
+				has_government = nationalism
+				has_government = supernationalism
 			}
 		}
 
@@ -465,9 +465,9 @@ br_political_actions = {
 		cost = 50
 
 		modifier = {
-			scientific_socialism_drift = -0.05
-			conservatism_socialism_drift = -0.05
-			social_democracy = -0.05
+			sci_socialism_drift = -0.05
+			con_socialism_drift = -0.05
+			demo_socialism = -0.05
 		}
 
 		complete_effect = {
@@ -495,9 +495,9 @@ br_political_actions = {
 		cost = 100
 
 		modifier = {
-			scientific_socialism_drift = -0.01
-			conservatism_socialism_drift = -0.01
-			social_democracy = -0.01
+			sci_socialism_drift = -0.01
+			con_socialism_drift = -0.01
+			demo_socialism = -0.01
 		}
 
 		complete_effect = {
@@ -527,8 +527,8 @@ br_political_actions = {
 		cost = 50
 
 		modifier = {
-			social_liberation_drift = -0.05
-			conservatism_democracy_drift = -0.05
+			demo_liberalism_drift = -0.05
+			demo_conservatism_drift = -0.05
 		}
 
 		complete_effect = {
@@ -556,8 +556,8 @@ br_political_actions = {
 		cost = 100
 
 		modifier = {
-			social_liberation_drift = -0.01
-			conservatism_democracy_drift = -0.01
+			demo_liberalism_drift = -0.01
+			demo_conservatism_drift = -0.01
 		}
 
 		complete_effect = {
@@ -574,8 +574,8 @@ br_political_actions = {
 			br_ideology_fascism_nio = yes
 			NOT = { has_country_flag = br_political_action_ban_fascism_flag }
 			fascism < 0.30
-			national_socialist < 0.30
-			supranational_socialist < 0.50
+			nationalism < 0.30
+			supernationalism < 0.50
 		}
 
 		visible = {
@@ -591,8 +591,8 @@ br_political_actions = {
 
 		modifier = {
 			fascism_drift = -0.05
-			national_socialist_drift = -0.05
-			supranational_socialist_drift = -0.05
+			nationalism_drift = -0.05
+			supernationalism_drift = -0.05
 		}
 
 		complete_effect = {
@@ -622,8 +622,8 @@ br_political_actions = {
 
 		modifier = {
 			fascism_drift = -0.01
-			national_socialist_drift = -0.01
-			supranational_socialist_drift = -0.01
+			nationalism_drift = -0.01
+			supernationalism_drift = -0.01
 		}
 
 		complete_effect = {

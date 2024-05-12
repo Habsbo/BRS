@@ -108,9 +108,9 @@ AR1 = {
 	OR= {
 		has_government = sco_anarchism
 		has_government = vanwardism
-		has_government = scientific_socialism
-		has_government = conservatism_socialism
-		has_government = social_democracy
+		has_government = sci_socialism
+		has_government = con_socialism
+		has_government = demo_socialism
 	}
 }
 
@@ -124,9 +124,9 @@ AR2 = {
 	OR= {
 		has_government = sco_anarchism
 		has_government = vanwardism
-		has_government = scientific_socialism
-		has_government = conservatism_socialism
-		has_government = social_democracy
+		has_government = sci_socialism
+		has_government = con_socialism
+		has_government = demo_socialism
 	}
 }
 
@@ -136,8 +136,8 @@ EUS = {
 	OR= {
 		has_government = sco_anarchism
 		has_government = vanwardism
-		has_government = scientific_socialism
-		has_government = conservatism_socialism
-		has_government = social_democracy
+		has_government = sci_socialism
+		has_government = con_socialism
+		has_government = demo_socialism
 	}
 }

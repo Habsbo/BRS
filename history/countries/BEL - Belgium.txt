@@ -54,17 +54,17 @@ recruit_character = BEL_gaston_eyskens
 recruit_character = BEL_paul_van_zeeland
 
 set_politics = {
-	ruling_party = social_liberation
+	ruling_party = demo_liberalism
 	last_election = "1932.11.27"
 	election_frequency = 48
 	elections_allowed = yes
 }
 
 set_popularities = {
-	scientific_socialism = 20 #科学社会主义
-	social_democracy = 20 #社会民主主义
-	social_liberation = 30 #社会自由主义
-	conservatism_democracy = 20 #保守民主主义
+	sci_socialism = 20 #科学社会主义
+	demo_socialism = 20 #社会民主主义
+	demo_liberalism = 30 #社会自由主义
+	demo_conservatism = 20 #保守民主主义
 	authoritarian = 10 #威权主义
 }
 
