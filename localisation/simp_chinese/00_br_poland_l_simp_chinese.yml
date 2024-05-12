@@ -122,7 +122,7 @@ l_simp_chinese:
  POL_spear_of_revenge_decision_category: "$POL_spear_of_revenge$"
  POL_spear_of_revenge_decision_category_desc: "波兰复国主义和波兰立陶宛联邦的梦想敦促着政府时刻为战争做好准备，波兰民众支持着这两个观念。\n当前民众对£GFX_war_support_icon §Y战争支持度§!的期望值为：§[GETWarSupportExpectation][?ROOT.war_support_expectation_value|.0%]§!\n\n目前我们正使用[GETRevengeCostMethod]"
  revenge_cost_dynamic_modifier: "£GFX_war_support_icon §Y战争支持度§!进行战备工作，\n优先使用§Y战争支持度修正§!，不足时以§Y基础战争支持度§!代替。"
- revenge_cost_political_power: "£GFX_war_support_icon §Y政治点数§!进行战备工作。"
+ revenge_cost_political_power: "£GFX_pol_power_icon §Y政治点数§!进行战备工作。"
  G_color: "G"
  O_color: "O"
  R_color: "R"
