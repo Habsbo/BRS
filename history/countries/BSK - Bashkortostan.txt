@@ -94,7 +94,7 @@ set_popularities = {
 	social_democracy = 15 #社会民主主义
 	social_liberation = 40 #社会自由主义
 	conservatism_democracy = 20 #保守民主主义
-	fascist = 10 #民族主义/束棒
+	fascism = 10 #民族主义/束棒
 }
 
 recruit_character = BSK_yakov_bykin

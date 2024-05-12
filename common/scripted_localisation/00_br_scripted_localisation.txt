@@ -7,43 +7,16 @@
 # (eg Root or From.From).)
 # localization_key -> points to the localization key
 # that'll be used if trigger passes
-
+#你的政治体制
 defined_text = { # Country
-	name = GetideologieskindName
+	name = GetGovRegime
 	text = {
 		trigger = {
-			FROM = {
-				has_country_flag = br_political_action_anarchism_suppressed_flag
-			}
+			has_idea = br_laws_committee
 		}
-		localization_key = GetideologieskindName_anarchism
-	}
-	text = {
-		trigger = {
-			FROM = {
-				has_country_flag = br_political_action_socialism_suppressed_flag
-			}
-		}
-		localization_key = GetideologieskindName_socialism
-	}
-	text = {
-		trigger = {
-			FROM = {
-				has_country_flag = br_political_action_democratic_suppressed_flag
-			}
-		}
-		localization_key = GetideologieskindName_democratic
-	}
-	text = {
-		trigger = {
-			FROM = {
-				has_country_flag = br_political_action_fascism_suppressed_flag
-			}
-		}
-		localization_key = GetideologieskindName_fascism
+		localization_key = GetGovRegime_committee
 	}
 }
-
 #希腊的国家信心
 defined_text = { # Country
 	name = GethellenicCountryconfidence

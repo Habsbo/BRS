@@ -28,7 +28,7 @@ set_popularities = {
 	social_liberation = 0 #社会自由主义
 	conservatism_democracy = 30 #保守民主主义
 	authoritarian = 60 #威权主义
-	fascist = 10 #民族主义/束棒
+	fascism = 10 #民族主义/束棒
 	national_socialist = 0 #国家社会主义
 	supranational_socialist = 0 #超国家社会主义
 }

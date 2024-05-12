@@ -6,8 +6,7 @@ focus_tree = {
 		
 		modifier = {
 			add = 10
-			tag = GRE
-			has_dlc = "Battle for the Bosporus"
+			original_tag = GRE
 		}
 	}
 	
@@ -23,7 +22,7 @@ focus_tree = {
 		icon = GFX_goal_generic_demand_territory
 		#prerequisite = { focus = GRE_ }
 		#mutually_exclusive = { focus = GRE_ }
-		x = 8
+		x = 10
 		y = 0
 		#relative_position_id = GRE_
 
@@ -146,8 +145,8 @@ focus_tree = {
 		icon = GFX_goal_generic_territory_or_war
 		prerequisite = { focus = GRE_restructuring_debts }
 		#mutually_exclusive = { focus = GRE_ }
-		x = -2
-		y = 1
+		x = -5
+		y = 2
 		relative_position_id = GRE_restructuring_debts
 
 		cost = 5
@@ -292,7 +291,7 @@ focus_tree = {
 		icon = GFX_focus_spr_masters_of_our_own_fate
 		prerequisite = { focus = GRE_common_aspiration }
 		#mutually_exclusive = { focus = GRE_ }
-		x = 1
+		x = -1
 		y = 1
 		relative_position_id = GRE_common_aspiration
 
@@ -984,10 +983,10 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 200
 			add_stability = -0.03
-			add_popularity = { ideology = revolution_socialism popularity = -0.03 }
-			add_popularity = { ideology = scientific_socialism popularity = -0.08 }
+			add_popularity = { ideology = vanwardism popularity = -0.02 }
+			add_popularity = { ideology = scientific_socialism popularity = -0.02 }
 			add_popularity = { ideology = conservatism_socialism popularity = -0.02 }
-			add_popularity = { ideology = social_democracy popularity = -0.05 }
+			add_popularity = { ideology = social_democracy popularity = -0.02 }
 		}
 		
 		ai_will_do = { factor = 1 }
@@ -1016,8 +1015,8 @@ focus_tree = {
 		complete_tooltip = {}
 		
 		completion_reward = {
-			add_popularity = { ideology = anarchist popularity = -0.05 }
-			add_popularity = { ideology = revolution_socialism popularity = -0.05 }
+			add_popularity = { ideology = sco_anarchism popularity = -0.05 }
+			add_popularity = { ideology = vanwardism popularity = -0.05 }
 			add_popularity = { ideology = scientific_socialism popularity = -0.08 }
 			add_stability = -0.15
 		}
@@ -1832,9 +1831,27 @@ focus_tree = {
 
 		cost = 5
 		
-		available = {}
+		available = {
+			var:capital = {
+				is_fully_controlled_by = ROOT
+			}
+		}
 		
-		bypass = {}
+		bypass = {
+			var:capital = {
+				OR = {
+					NOT = { is_fully_controlled_by = ROOT }
+					custom_trigger_tooltip = {
+						tooltip = infrastructure_effort_tt
+						all_owned_state = { free_building_slots = { building = infrastructure size < 1 } }
+					}
+					custom_trigger_tooltip = {
+						tooltip = construction_effort_tt
+						all_owned_state = { free_building_slots = { building = industrial_complex size < 1 include_locked = yes } }
+					}
+				}
+			}
+		}
 		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -1843,7 +1860,14 @@ focus_tree = {
 		complete_tooltip = {}
 		
 		completion_reward = {
-			
+			var:capital = {
+				add_building_construction = { type = infrastructure level = 1 }
+				add_extra_state_shared_building_slots = 1
+				if = {
+					limit = { infrastructure > 3 }
+					add_building_construction = { type = industrial_complex level = 1 }
+				}
+			}
 		}
 		
 		ai_will_do = { factor = 1 }
@@ -1861,9 +1885,24 @@ focus_tree = {
 
 		cost = 5
 		
-		available = {}
+		available = {
+			186 = { is_fully_controlled_by = ROOT }
+		}
 		
-		bypass = {}
+		bypass = {
+			186 = {
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = infrastructure_effort_tt
+						all_owned_state = { free_building_slots = { building = infrastructure size < 1 } }
+					}
+					custom_trigger_tooltip = {
+						tooltip = construction_effort_tt
+						all_owned_state = { free_building_slots = { building = industrial_complex size < 1 include_locked = yes } }
+					}
+				}
+			}
+		}
 		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -1872,7 +1911,14 @@ focus_tree = {
 		complete_tooltip = {}
 		
 		completion_reward = {
-			
+			186 = {
+				add_building_construction = { type = infrastructure level = 1 }
+				add_extra_state_shared_building_slots = 1
+				if = {
+					limit = { infrastructure > 3 }
+					add_building_construction = { type = industrial_complex level = 1 }
+				}
+			}
 		}
 		
 		ai_will_do = { factor = 1 }
@@ -1890,9 +1936,24 @@ focus_tree = {
 
 		cost = 5
 		
-		available = {}
+		available = {
+			47 = { is_fully_controlled_by = ROOT }
+		}
 		
-		bypass = {}
+		bypass = {
+			47 = {
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = infrastructure_effort_tt
+						all_owned_state = { free_building_slots = { building = infrastructure size < 1 } }
+					}
+					custom_trigger_tooltip = {
+						tooltip = construction_effort_tt
+						all_owned_state = { free_building_slots = { building = industrial_complex size < 1 include_locked = yes } }
+					}
+				}
+			}
+		}
 		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -1901,7 +1962,14 @@ focus_tree = {
 		complete_tooltip = {}
 		
 		completion_reward = {
-			
+			47 = {
+				add_building_construction = { type = infrastructure level = 1 }
+				add_extra_state_shared_building_slots = 1
+				if = {
+					limit = { infrastructure > 3 }
+					add_building_construction = { type = industrial_complex level = 1 }
+				}
+			}
 		}
 		
 		ai_will_do = { factor = 1 }
@@ -1919,9 +1987,48 @@ focus_tree = {
 
 		cost = 5
 		
-		available = {}
+		available = {
+			184 = { is_fully_controlled_by = ROOT }
+		}
 		
-		bypass = {}
+		bypass = {
+			731 = {
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = infrastructure_effort_tt
+						all_owned_state = { free_building_slots = { building = infrastructure size < 1 } }
+					}
+					custom_trigger_tooltip = {
+						tooltip = construction_effort_tt
+						all_owned_state = { free_building_slots = { building = industrial_complex size < 1 include_locked = yes } }
+					}
+				}
+			}
+			184 = {
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = infrastructure_effort_tt
+						all_owned_state = { free_building_slots = { building = infrastructure size < 1 } }
+					}
+					custom_trigger_tooltip = {
+						tooltip = construction_effort_tt
+						all_owned_state = { free_building_slots = { building = industrial_complex size < 1 include_locked = yes } }
+					}
+				}
+			}
+			314 = {
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = infrastructure_effort_tt
+						all_owned_state = { free_building_slots = { building = infrastructure size < 1 } }
+					}
+					custom_trigger_tooltip = {
+						tooltip = construction_effort_tt
+						all_owned_state = { free_building_slots = { building = industrial_complex size < 1 include_locked = yes } }
+					}
+				}
+			}
+		}
 		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -1930,7 +2037,36 @@ focus_tree = {
 		complete_tooltip = {}
 		
 		completion_reward = {
-			
+			731 = {
+				if = {
+					limit = { is_fully_controlled_by = ROOT }
+					add_building_construction = { type = infrastructure level = 1 }
+					add_extra_state_shared_building_slots = 1
+					if = {
+						limit = { infrastructure > 3 }
+						add_building_construction = { type = industrial_complex level = 1 }
+					}
+				}
+			}
+			184 = {
+				add_building_construction = { type = infrastructure level = 1 }
+				add_extra_state_shared_building_slots = 1
+				if = {
+					limit = { infrastructure > 3 }
+					add_building_construction = { type = industrial_complex level = 1 }
+				}
+			}
+			314 = {
+				if = {
+					limit = { is_fully_controlled_by = ROOT }
+					add_building_construction = { type = infrastructure level = 1 }
+					add_extra_state_shared_building_slots = 1
+					if = {
+						limit = { infrastructure > 3 }
+						add_building_construction = { type = industrial_complex level = 1 }
+					}
+				}
+			}
 		}
 		
 		ai_will_do = { factor = 1 }
@@ -1948,7 +2084,9 @@ focus_tree = {
 
 		cost = 5
 		
-		available = {}
+		available = {
+			185 = { is_fully_controlled_by = ROOT }
+		}
 		
 		bypass = {}
 		
@@ -1959,7 +2097,25 @@ focus_tree = {
 		complete_tooltip = {}
 		
 		completion_reward = {
-			
+			185 = {
+				add_building_construction = { type = infrastructure level = 1 }
+				add_extra_state_shared_building_slots = 1
+				if = {
+					limit = { infrastructure > 3 }
+					add_building_construction = { type = industrial_complex level = 1 }
+				}
+			}
+			805 = {
+				if = {
+					limit = { is_fully_controlled_by = ROOT }
+					add_building_construction = { type = infrastructure level = 1 }
+					add_extra_state_shared_building_slots = 1
+					if = {
+						limit = { infrastructure > 3 }
+						add_building_construction = { type = industrial_complex level = 1 }
+					}
+				}
+			}
 		}
 		
 		ai_will_do = { factor = 1 }
@@ -1977,9 +2133,19 @@ focus_tree = {
 
 		cost = 8
 		
-		available = {}
+		available = {
+			341 = { owner = { NOT = { has_war_with = ROOT } } }
+			797 = { is_fully_controlled_by = ROOT }
+		}
 		
-		bypass = {}
+		bypass = {
+			797 = {
+				custom_trigger_tooltip = {
+					tooltip = construction_effort_tt
+					all_owned_state = { free_building_slots = { building = industrial_complex size < 5 include_locked = yes } }
+				}
+			}
+		}
 		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -1988,7 +2154,12 @@ focus_tree = {
 		complete_tooltip = {}
 		
 		completion_reward = {
-			
+			797 = {
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = { type = industrial_complex level = 3 }
+				add_building_construction = { type = arms_factory level = 1 }
+				add_building_construction = { type = dockyard level = 1 }
+			}
 		}
 		
 		ai_will_do = { factor = 1 }
@@ -2177,7 +2348,7 @@ focus_tree = {
 		icon = GFX_goal_generic_demand_territory
 		#prerequisite = { focus = GRE_ }
 		#mutually_exclusive = { focus = GRE_ }
-		x = 30
+		x = 24
 		y = 0
 		#relative_position_id = GRE_
 
@@ -2259,6 +2430,302 @@ focus_tree = {
 			add_political_power = 50
 			add_stability = 0.05
 			unlock_decision_category_tooltip = GRE_focus_on_economic_decisions
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_2
+		icon = GFX_goal_generic_alliance
+		#prerequisite = { focus = GRE_focus_on_military }
+		#mutually_exclusive = { focus = GRE_ }
+		x = 2
+		y = 1
+		#relative_position_id = GRE_focus_on_military
+
+		cost = 5
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+###
+	focus = {
+		id = GRE_great_hellenic_republic
+		icon = GFX_focus_GRE_resurrecting_the_megali_idea
+		mutually_exclusive = { focus = GRE_greek_kingdom }
+		x = 48
+		y = 0
+		#relative_position_id = GRE_
+
+		cost = 5
+		
+		available = {
+			has_global_flag = br_global_hellas_civilwar_started_flag
+		}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			set_politics = {
+				ruling_party = social_liberation
+				election_frequency = 48
+				elections_allowed = yes
+			}
+			hidden_effect = {
+				set_popularities = {
+					#anarchist = 5 #社会无政府主义
+					#vanwardism = 0 #革命社会主义
+					scientific_socialism = 20 #科学社会主义
+					conservatism_socialism = 10 #保守社会主义
+					social_democracy = 20 #社会民主主义
+					social_liberation = 50 #社会自由主义
+					#conservatism_democracy = 0 #保守民主主义
+					#authoritarian = 0 #威权主义
+					#fascism = 10 #民族主义/束棒
+					#national_socialist = 0 #国家社会主义
+					#supranational_socialist = 0 #超国家社会主义
+				}
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_death_day_of_the_king_of_troy
+		icon = GFX_focus_generic_monarchy_1
+		prerequisite = { focus = GRE_great_hellenic_republic }
+		#mutually_exclusive = { focus = GRE_ }
+		x = 8
+		y = 1
+		relative_position_id = GRE_great_hellenic_republic
+
+		cost = 5
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	#
+	focus = {
+		id = GRE_more_debts_as_exchange
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = GRE_death_day_of_the_king_of_troy }
+		mutually_exclusive = { focus = GRE_tough_way }
+		x = -1
+		y = 1
+		relative_position_id = GRE_death_day_of_the_king_of_troy
+
+		cost = 5
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_officer_as_an_official_represent
+		icon = GFX_focus_generic_support_the_left_right
+		prerequisite = { focus = GRE_more_debts_as_exchange }
+		#mutually_exclusive = { focus = GRE_ }
+		x = 0
+		y = 1
+		relative_position_id = GRE_more_debts_as_exchange
+
+		cost = 5
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			add_ideas = br_laws_elected_representative
+			add_ideas = br_laws_archon
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_tough_way
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = GRE_death_day_of_the_king_of_troy }
+		mutually_exclusive = { focus = GRE_more_debts_as_exchange }
+		x = 1
+		y = 1
+		relative_position_id = GRE_death_day_of_the_king_of_troy
+
+		cost = 5
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+###
+	focus = {
+		id = GRE_greek_kingdom
+		icon = GFX_focus_generic_monarchy_2
+		mutually_exclusive = { focus =  GRE_great_hellenic_republic }
+		x = -2
+		y = 0
+		relative_position_id = GRE_great_hellenic_republic
+
+		cost = 5
+		
+		available = {
+			has_global_flag = br_global_hellas_civilwar_started_flag
+		}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			set_politics = {
+				ruling_party = conservatism_democracy
+				election_frequency = 48
+				elections_allowed = yes
+			}
+			hidden_effect = {
+				set_popularities = {
+					#anarchist = 0 #社会无政府主义
+					#vanwardism = 0 #革命社会主义
+					#scientific_socialism = 20 #科学社会主义
+					#conservatism_socialism = 10 #保守社会主义
+					social_democracy = 10 #社会民主主义
+					social_liberation = 10 #社会自由主义
+					conservatism_democracy = 60 #保守民主主义
+					authoritarian = 20 #威权主义
+					#fascism = 10 #民族主义/束棒
+					#national_socialist = 0 #国家社会主义
+					#supranational_socialist = 0 #超国家社会主义
+				}
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_12
+		icon = GFX_goal_generic_alliance
+		prerequisite = { focus = GRE_greek_kingdom }
+		#mutually_exclusive = { focus = GRE_ }
+		x = -8
+		y = 1
+		relative_position_id = GRE_greek_kingdom
+
+		cost = 5
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+
+	focus = {
+		id = GRE_later_life_of_venizelos
+		icon = GFX_goal_generic_alliance
+		prerequisite = { focus = GRE_great_hellenic_republic focus = GRE_greek_kingdom }
+		x = -1
+		y = 2
+		relative_position_id = GRE_great_hellenic_republic
+
+		cost = 5
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
 		}
 		
 		ai_will_do = { factor = 1 }

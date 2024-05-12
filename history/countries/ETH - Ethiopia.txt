@@ -196,7 +196,7 @@ IF = {
 	recruit_character = ETH_senedu_gebru
 	recruit_character = ETH_random_sud_advisor
 	recruit_character = ETH_random_som_advisor
-	recruit_character = ETH_anarchist_council
+	recruit_character = ETH_sco_anarchism_council
 	recruit_character = ETH_prov_mil_admin
 	
 	# Military Advisors
@@ -280,5 +280,5 @@ set_popularities = {
 	social_democracy = 10 #社会民主主义
 	conservatism_democracy = 10 #保守民主主义
 	authoritarian = 60 #威权主义
-	fascist = 10 #民族主义/束棒
+	fascism = 10 #民族主义/束棒
 }

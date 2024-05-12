@@ -610,11 +610,11 @@ set_politics = {
 }
 
 set_popularities = {
-	revolution_socialism = 16 #革命社会主义
+	vanwardism = 16 #革命社会主义
 	scientific_socialism = 8 #科学社会主义
 	conservatism_democracy = 10 #保守民主主义
 	authoritarian = 46 #威权主义
-	fascist = 17 #民族主义/束棒
+	fascism = 17 #民族主义/束棒
 	national_socialist = 3 #国家社会主义
 }
 

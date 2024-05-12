@@ -838,7 +838,7 @@ set_politics = {
 }
 
 set_popularities = {
-	revolution_socialism = 10 #革命社会主义
+	vanwardism = 10 #革命社会主义
 	scientific_socialism = 48 #科学社会主义
 	conservatism_socialism = 29 #保守社会主义
 	social_democracy = 7 #社会民主主义

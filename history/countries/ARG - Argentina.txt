@@ -102,12 +102,12 @@ set_politics = {
 }
 
 set_popularities = {
-	anarchist = 4 #社会无政府主义
+	sco_anarchism = 4 #社会无政府主义
 	scientific_socialism = 20 #科学社会主义
 	social_liberation = 10 #社会自由主义
 	conservatism_democracy = 30 #保守民主主义
 	authoritarian = 20 #威权主义
-	fascist = 16 #民族主义/束棒
+	fascism = 16 #民族主义/束棒
 }
 
 ### VARIANTS ###

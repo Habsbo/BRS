@@ -172,20 +172,135 @@ country_event = { #
 	}
 
 }
+#
+add_namespace = br_hellas_civilwar
 
 country_event = { #
-	id = br_hellas.9
-	title = br_hellas.9.title
-	desc = br_hellas.9.desc
+	id = br_hellas_civilwar.1
+	title = br_hellas_civilwar.1.title
+	desc = br_hellas_civilwar.1.desc
 	picture = GFX_report_event_chinese_soldiers_fighting
 
 	fire_only_once = yes
 	is_triggered_only = yes
 
-	immediate = {  }
+	immediate = {
+		hidden_effect = {
+			every_core_state = { add_core_of = HER }
+			set_global_flag = br_global_hellas_civilwar_started_flag
+		}
+	}
 
-	option = {
-		name = br_hellas.9.a #
+	option = { #王党
+		name = br_hellas_civilwar.1.a #
+		#
+		complete_national_focus = GRE_greek_kingdom
+		#
+		every_owned_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+				is_capital = no
+			}
+			transfer_state_to = HER
+		}
+		#
+		transfer_units_fraction= {
+			target = HER
+			size = 0.5 #stockpile_ratio = 0.8
+			army_ratio = 0.5
+			navy_ratio = 0.5
+			air_ratio = 0.5
+			keep_unit_leaders_trigger = { has_trait = trait_GRE_stauch_monarchist }
+		}
+		#
+		HER = {
+			declare_war_on = { target = ROOT type = annex_everything }
+			add_civil_war_target = ROOT
+			complete_national_focus = GRE_great_hellenic_republic
+		}
+
+		ai_chance = { factor = 2 }
+	}
+	
+	option = { #共和派
+		name = br_hellas_civilwar.2.a #
+
+		
+
+		ai_chance = { factor = 2 }
+	}
+
+}
+country_event = { #
+	id = br_hellas_civilwar.100
+	title = br_hellas_civilwar.1.title
+	desc = br_hellas_civilwar.1.desc
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			every_core_state = { add_core_of = HER }
+			set_global_flag = br_global_hellas_civilwar_ended_flag
+		}
+	}
+
+	option = { #王党
+		name = br_hellas_civilwar.1.a #
+		#
+
+		ai_chance = { factor = 2 }
+	}
+	
+	option = { #共和派
+		name = br_hellas_civilwar.2.a #
+
+		
+
+		ai_chance = { factor = 2 }
+	}
+
+}
+country_event = { #
+	id = br_hellas_civilwar.101
+	title = br_hellas_civilwar.101.title
+	desc = br_hellas_civilwar.101.desc
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = br_global_hellas_civilwar_ended_flag
+		}
+	}
+
+	option = { #王党
+		name = br_hellas_civilwar.101.a #
+		#
+		HER = {
+			every_owned_state = {
+				limit = {
+					NOT = { state = 182 }
+				}
+				transfer_state_to = HEK
+			}
+			white_peace = {
+				tag = HEK
+				#message = my_peace_tt
+			}
+		}
+
+		ai_chance = { factor = 2 }
+	}
+	
+	option = { #共和派
+		name = br_hellas_civilwar.101.b #
+
+		
 
 		ai_chance = { factor = 2 }
 	}

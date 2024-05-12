@@ -4,7 +4,6 @@
 
 #大选
 GRE_election_category = {
-	priority = 10
 	icon = generic_crisis
 
 	picture = GFX_decision_cat_picture_1936_election
@@ -14,7 +13,7 @@ GRE_election_category = {
 	}
 	
 	custom_icon = {
-		tag = GRE
+		tag = HEK
 		value = GRE_civil_war_divisions_counter_icon_value
 		desc = GRE_civil_war_divisions_counter_full_breakdown
 
@@ -24,7 +23,7 @@ GRE_election_category = {
 	}
 	
 	custom_icon = {
-		tag = GRE
+		tag = HER
 		value = GRE_republic_civil_war_divisions_counter_icon_value
 		desc = GRE_republic_civil_war_divisions_counter_full_breakdown
 
@@ -33,7 +32,7 @@ GRE_election_category = {
 		}
 	}
 
-	visible_when_empty = yes
+	visible_when_empty = no
 
 	on_map_area = {
 		state = 47
@@ -42,9 +41,7 @@ GRE_election_category = {
 		state = 185
 		state = 186
 		state = 187
-		state = 341
 		state = 731
-		state = 797
 		name = SPR_the_inevitable_civil_war_map_category_name
 		zoom = 250
 	}
@@ -52,6 +49,8 @@ GRE_election_category = {
 	visible = {
 		#
 	}
+	
+	priority = 10
 }
 
 GRE_pay_back_debt_to_the_ifc_category = {

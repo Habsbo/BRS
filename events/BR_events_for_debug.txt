@@ -1,6 +1,6 @@
 add_namespace = br_debug_decisions_for_test_state_names_EGY
 add_namespace = br_debug_memphis_event
-add_namespace = br_event
+add_namespace = br_debug
 
 country_event = { #
 	id = br_debug_decisions_for_test_state_names_EGY.1
@@ -130,6 +130,32 @@ country_event = { #
 			}
 		}
 		
+		ai_chance = { factor = 0 }
+	}
+
+
+}
+
+country_event = { #
+	id = br_debug.1
+	title = br_debug.1.title
+	desc = br_debug.1.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		#
+	}
+
+	option = {
+		name = br_debug.1.a #
+
+		event_target:Aragon = {
+			add_stability = 0.05
+		}
+
 		ai_chance = { factor = 0 }
 	}
 

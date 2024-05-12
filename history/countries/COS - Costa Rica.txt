@@ -45,7 +45,7 @@ set_politics = {
 set_popularities = {
 	social_democracy = 5 #社会民主主义
 	social_liberation = 90 #社会自由主义
-	fascist = 5 #民族主义/束棒
+	fascism = 5 #民族主义/束棒
 }
 
 1939.1.1 = {

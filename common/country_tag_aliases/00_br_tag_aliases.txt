@@ -1,0 +1,143 @@
+
+# tag aliases are country tags that maps to different countries depending on a set of triggers
+
+#TAG = { #name of alias tag. must be 3 letters and different from any other tags. once this is defined, it will be available in any script that uses country tags
+#
+#	# you can map an alias directly to an event target or another variable. only use one of the following entries
+#	# if any of these are used, the alias will be mapped to that specific variable/event target and no other check will be done
+#	variable = var_name
+#	global_event_target = event_target_name
+#	event_target = event_target_name
+#
+#	# if an alias is not mapped directly to a variable/event target, it will be searched within a list of countries that can be definied below
+#	# you can use any combination of these below
+#	# while checking for triggers/variables, current scope will be the country we are checking and PREV will be the scope that uses the alias
+#	# if none of the following targets are defined, the game will check all existing countries but this is highly discouraged for performance reasons
+#	original_tag = GER # pick a country that has original_tag of GER
+#	targets = { GER FRA ENG } # search within the list of tags/variables
+#	target_array = array_name # search within an array
+#
+#	# by default alias will return the first existing country that it matches and fulfils the triggers. you can also define a scoring system like this and it will pick the tag with the highest score > 0
+#	country_score = {
+#		base = 1
+#		modifier = {
+#			add = 10
+#			# if mapped tag is in same faction with the country in scope that calls this alias give it a higher score
+#			is_in_faction_with = PREV
+#		}
+#		modifier = {
+#			add = 5
+#			# if the mapped tag has fascism give it a higher score
+#			has_government = fascism
+#		}
+#	}
+#
+#	fallback = GER # if the alias can't match anything, use this one as fallback (no triggers or weight will be checked)
+#
+#	# you can define a list of trigger, in that case it will chech is tags that this alias is mapped to and return only if the triggers are true
+#	or = {
+#		#only accept targets that is ally with us or is fascist
+#		is_in_faction_with = PREV
+#		has_government = fascism
+#	}
+#	# trigger 2
+#	# trigger 3
+#	# ...
+#}
+
+#CN
+MNG = {
+	original_tag = CHI
+	has_country_flag = MNG_empire_ruling_flag
+}
+
+QNG = {
+	original_tag = MAN
+	has_country_flag = QNG_empire_ruling_flag
+}
+
+KMT = {
+	original_tag = CHI
+	has_country_flag = CHI_KMT_flag
+}
+#
+HEL = {
+	tag = GRE
+}
+HER = {
+	original_tag = GRE
+	has_country_flag = br_HEL_hellenic_republic_flag
+}
+HEK = {
+	original_tag = GRE
+	country_score = {
+		base = 0
+		modifier = {
+			has_idea = br_laws_monarchy
+			add = 5
+		}
+		modifier = {
+			has_country_flag = br_HEL_hellenic_kingdom_flag
+			add = 10
+		}
+	}
+}
+BYZ = {
+	original_tag = GRE
+	country_score = {
+		base = 1
+		modifier = { add = 10 }
+	}
+}
+#
+ARA = {
+	OR = {
+		original_tag = SPR
+		original_tag = CAT
+	}
+	event_target = Aragon
+}
+
+AR1 = {
+	OR = {
+		original_tag = SPR
+		original_tag = CAT
+	}
+	tag = ARA
+	
+	OR= {
+		has_government = sco_anarchism
+		has_government = vanwardism
+		has_government = scientific_socialism
+		has_government = conservatism_socialism
+		has_government = social_democracy
+	}
+}
+
+AR2 = {
+	OR = {
+		original_tag = SPR
+		original_tag = CAT
+	}
+	tag = ARA
+	
+	OR= {
+		has_government = sco_anarchism
+		has_government = vanwardism
+		has_government = scientific_socialism
+		has_government = conservatism_socialism
+		has_government = social_democracy
+	}
+}
+
+EUS = {
+	original_tag = NAV
+
+	OR= {
+		has_government = sco_anarchism
+		has_government = vanwardism
+		has_government = scientific_socialism
+		has_government = conservatism_socialism
+		has_government = social_democracy
+	}
+}

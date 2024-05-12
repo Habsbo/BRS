@@ -1,22 +1,110 @@
-br_lwas_changed_state_system_remove_flags_trigger = {
-	OR = {
-		has_country_flag = br_laws_feudalism_removed_flag
-		has_country_flag = br_laws_dictatorship_removed_flag
-		has_country_flag = br_laws_elected_representative_removed_flag
-		has_country_flag = br_laws_parliamentarism_removed_flag
-		has_country_flag = br_laws_committee_added_flag
-	}
-}
-
-br_lwas_changed_state_system_remove_flags_trigger_NOT = {
-	custom_trigger_tooltip = {
-		tooltip = br_lwas_changed_state_system_remove_flags_NOT_tt
-		NOT = {
-			has_country_flag = br_laws_feudalism_removed_flag
-			has_country_flag = br_laws_dictatorship_removed_flag
-			has_country_flag = br_laws_elected_representative_removed_flag
-			has_country_flag = br_laws_parliamentarism_removed_flag
-			has_country_flag = br_laws_committee_added_flag
+###
+	br_ideology_anarchism_ruling = { #无政府主义
+		custom_trigger_tooltip = {
+			tooltip = br_ideology_anarchism_ruling_tt
+			has_government = sco_anarchism
 		}
 	}
-}
+	br_ideology_radical_communism_ruling = { #激进共产主义
+		custom_trigger_tooltip = {
+			tooltip = br_ideology_radical_communism_ruling_tt
+			OR = {
+				has_government = sco_anarchism
+				has_government = vanwardism
+			}
+		}
+	}
+	br_ideology_socialism_ruling = { #社会主义
+		custom_trigger_tooltip = {
+			tooltip = br_ideology_socialism_ruling_tt
+			OR = {
+				has_government = scientific_socialism
+				has_government = conservatism_socialism
+				has_government = social_democracy
+			}
+		}
+	}
+	br_ideology_capitalism_ruling = { #资本主义
+		custom_trigger_tooltip = {
+			tooltip = br_ideology_capitalism_ruling_tt
+			OR = {
+				has_government = social_liberation
+				has_government = conservatism_democracy
+			}
+		}
+	}
+	br_ideology_authoritarian_ruling = { #专制主义
+		custom_trigger_tooltip = {
+			tooltip = br_ideology_authoritarian_ruling_tt
+			
+			has_government = authoritarian
+		}
+	}
+	br_ideology_fascism_ruling = { #法西斯及衍生
+		custom_trigger_tooltip = {
+			tooltip = br_ideology_fascism_ruling_tt
+			OR = {
+				has_government = fascism
+				has_government = national_socialist
+				has_government = supranational_socialist
+			}
+		}
+	}
+###
+	br_ideology_anarchism_nio = { #无政府主义
+		custom_trigger_tooltip = {
+			tooltip = br_ideology_anarchism_nio_tt
+			NOT = { has_government = sco_anarchism }
+		}
+	}
+	br_ideology_radical_communism_nio = { #激进共产主义
+		custom_trigger_tooltip = {
+			tooltip = br_ideology_radical_communism_nio_tt
+			NOT = {
+				has_government = sco_anarchism
+				has_government = vanwardism
+			}
+		}
+	}
+	br_ideology_socialism_nio = { #社会主义
+		custom_trigger_tooltip = {
+			tooltip = br_ideology_socialism_nio_tt
+			NOT = {
+				has_government = scientific_socialism
+				has_government = conservatism_socialism
+				has_government = social_democracy
+			}
+		}
+	}
+	br_ideology_capitalism_nio = { #资本主义
+		custom_trigger_tooltip = {
+			tooltip = br_ideology_capitalism_nio_tt
+			NOT = {
+				has_government = social_liberation
+				has_government = conservatism_democracy
+			}
+		}
+	}
+	br_ideology_authoritarian_nio = { #专制主义
+		custom_trigger_tooltip = {
+			tooltip = br_ideology_authoritarian_nio_tt
+			NOT = { has_government = authoritarian }
+		}
+	}
+	br_ideology_fascism_nio = { #法西斯及衍生
+		custom_trigger_tooltip = {
+			tooltip = br_ideology_fascism_nio_tt
+			NOT = {
+				has_government = fascism
+				has_government = national_socialist
+				has_government = supranational_socialist
+			}
+		}
+	}
+###
+
+	br_laws_election_right_trigger = {
+		custom_trigger_tooltip = {
+			tooltip = x
+		}
+	}

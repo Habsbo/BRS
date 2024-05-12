@@ -96,12 +96,12 @@ set_politics = {
 }
 
 set_popularities = {
-	revolution_socialism = 10 #革命社会主义
+	vanwardism = 10 #革命社会主义
 	scientific_socialism = 10 #科学社会主义
 	social_democracy = 10 #社会民主主义
 	social_liberation = 30 #社会自由主义
 	conservatism_democracy = 20 #保守民主主义
-	fascist = 10 #民族主义/束棒
+	fascism = 10 #民族主义/束棒
 	national_socialist = 5 #国家社会主义
 	supranational_socialist = 5 #超国家社会主义
 }

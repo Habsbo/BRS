@@ -115,15 +115,15 @@ set_politics = {
 }
 
 set_popularities = {
-	anarchist = 0
-	revolution_socialism = 30
+	sco_anarchism = 0
+	vanwardism = 30
 	scientific_socialism = 10
 	conservatism_socialism = 0
 	social_democracy = 10
 	social_liberation = 0
 	conservatism_democracy = 30
 	authoritarian = 10 
-	fascist = 10
+	fascism = 10
 	national_socialist = 0
 	supranational_socialist = 0
 }

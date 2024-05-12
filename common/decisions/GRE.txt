@@ -20,41 +20,23 @@ GRE_election_category = {
 				}
 			}
 		}
-		cancel_trigger = {
-			has_civil_war = yes
-			has_war = yes
-			is_puppet = yes
+		
+		visible = {
+			is_puppet = no
+			has_civil_war = no
+			has_stability < 0.5
 		}
 
 		is_good = no
 		days_mission_timeout = 90
-		#selectable_mission = no
+		cancel_if_not_visible = yes
 
 		complete_effect = {
-			country_event = { id = br_hellas.4 }
+			country_event = { id = br_hellas_civilwar.1 }
 		}
 
 		timeout_effect = {
-			if = {
-				limit = {
-					check_variable = {
-						var = gre_civil_war_divisions_counter_var
-						value > gre_republic_civil_war_divisions_counter_var
-					}
-					check_variable = {
-						var = gre_civil_war_divisions_counter_var
-						value > 15
-					}
-				}
-				country_event = { id = br_hellas.5 }
-			}
-			else_if = {
-				limit = { always = no }
-				country_event = { id = br_hellas.3 }
-			}
-			else = {
-				country_event = { id = br_hellas.5 }
-			}
+			country_event = { id = br_hellas_civilwar.1 }
 		}
 		
 		priority = 10
@@ -64,28 +46,20 @@ GRE_election_category = {
 		icon = generic_political_rally
 
 		activation = {
-			NOT = {
-				has_government = anarchist
-				has_government = revolution_socialism
-				has_government = scientific_socialism
-				has_government = conservatism_socialism
-			}
+			#
 		}
 		available = {
 			always = no
 		}
-		cancel_trigger = {
-			OR = {
-				has_government = anarchist
-				has_government = revolution_socialism
-				has_government = scientific_socialism
-				has_government = conservatism_socialism
-			}
-			has_stability > 0.5
+		visible = {
+			is_puppet = no
+			has_civil_war = no
+			has_stability < 0.5
 		}
 
 		is_good = no
 		days_mission_timeout = 30
+		cancel_if_not_visible = yes
 		#selectable_mission = no
 
 		timeout_effect = {
@@ -124,6 +98,7 @@ GRE_election_category = {
 			else = {
 				add_ideas = SPR_national_strikes_1
 			}
+			hidden_effect = { activate_mission = GRE_worker_strikes }
 		}
 		
 		priority = 9
@@ -224,7 +199,7 @@ GRE_election_category = {
 	}
 	#任用韦尼泽洛斯
 	GRE_rehired_venizelos = {
-		icon = GFX_
+		icon = eng_trade_unions_support
 
 		allowed = {
 			original_tag = GRE
@@ -246,7 +221,7 @@ GRE_election_category = {
 		}
 	}
 	GRE_put_venizelos_under_house_arrest = {
-		icon = GFX_
+		icon = eng_trade_unions_support
 
 		allowed = {
 			original_tag = GRE
@@ -268,7 +243,7 @@ GRE_election_category = {
 		}
 	}
 	GRE_exile_venizelos = {
-		icon = GFX_
+		icon = eng_trade_unions_support
 
 		allowed = {
 			original_tag = GRE
@@ -324,13 +299,11 @@ GRE_election_category = {
 			stability_weekly = 0.003
 		}
 	}
-	#指派军官
+	#指派军官 - 王党
 	GRE_assign_royalist_officers = {
 		icon = GFX_
 
-		allowed = {
-			original_tag = GRE
-		}
+		allowed = { tag = HEK }
 		visible = { has_country_flag = br_GRE_conciliation_has_begun_flag }
 		available = {
 			#
@@ -355,9 +328,9 @@ GRE_election_category = {
 			}
 		}
 	}
-	#指派军官
+	#指派军官 - 共和派
 	GRE_assign_republicans_officers = {
-		icon = GFX_
+		icon = CHL_carabineros
 
 		activation = {
 			has_country_flag = br_GRE_the_throne_of_crisis_flag
@@ -367,15 +340,15 @@ GRE_election_category = {
 			always = no
 		}
 
-		cancel_trigger = {
-			has_civil_war = yes
-			has_war = yes
-			is_puppet = yes
+		visible = {
+			is_puppet = no
+			has_civil_war = no
+			has_stability < 0.5
 		}
 
 		is_good = no
-		days_mission_timeout = 14
-		#selectable_mission = no
+		days_mission_timeout = 90
+		cancel_if_not_visible = yes
 
 		complete_effect = {
 			#
@@ -392,21 +365,12 @@ GRE_election_category = {
 	}
 	#宣言共和
 	GRE_declare_be_a_republic = {
-		icon = GFX_
+		icon = eng_trade_unions_support
 
 		allowed = {
 			original_tag = GRE
 		}
-		visible = {
-			check_variable = {
-				var = gre_republic_civil_war_divisions_counter_var
-				value > gre_civil_war_divisions_counter_var
-			}
-			check_variable = {
-				var = gre_republic_civil_war_divisions_counter_var
-				value > 5
-			}
-		}
+		visible = {}
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = gre_republic_civil_war_divisions_counter_var_more
@@ -439,6 +403,7 @@ GRE_election_category = {
 			FROM = {
 				is_owned_by = ROOT
 				is_core_of = ROOT
+				is_in_home_area = yes
 			}
 		}
 		

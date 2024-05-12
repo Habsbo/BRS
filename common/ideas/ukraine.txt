@@ -7,8 +7,8 @@ ideas = {
 
 			allowed_civil_war = {
 				OR = {
-					has_government = anarchist
-					has_government = revolution_socialism
+					has_government = sco_anarchism
+					has_government = vanwardism
 				}
 			}
 			
@@ -16,8 +16,8 @@ ideas = {
 			picture = generic_pp_unity_bonus
 			
 			modifier = {
-				anarchist_drift = 0.08
-				revolution_socialism_drift = 0.05
+				sco_anarchism_drift = 0.08
+				vanwardism_drift = 0.05
 			}
 		}
 		UKR_grassroots_officers = { #
@@ -27,8 +27,8 @@ ideas = {
 
 			allowed_civil_war = {
 				OR = {
-					has_government = anarchist
-					has_government = revolution_socialism
+					has_government = sco_anarchism
+					has_government = vanwardism
 				}
 			}
 			

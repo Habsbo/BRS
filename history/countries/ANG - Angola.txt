@@ -39,13 +39,13 @@ set_politics = {
 }
 
 set_popularities = {
-	anarchist = 5 #社会无政府主义
-	revolution_socialism = 20 #革命社会主义
+	sco_anarchism = 5 #社会无政府主义
+	vanwardism = 20 #革命社会主义
 	scientific_socialism = 25 #科学社会主义
 	social_liberation = 10 #社会自由主义
 	conservatism_democracy = 20 #保守民主主义
 	authoritarian = 25 #威权主义
-	fascist =  5 #民族主义/束棒
+	fascism =  5 #民族主义/束棒
 }
 
 create_country_leader = {

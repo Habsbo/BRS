@@ -41,6 +41,9 @@ idea_categories = {
 		slot = culture_laws #文化法律
 		slot = faith_laws #信仰法律
 		slot = ruling_class #统治阶级
+
+		cost = 150
+		removal_cost = 0
 	}
 
 	officer = {
@@ -62,7 +65,7 @@ idea_categories = {
 
 		ledger = civilian
 		
-		cost = 150
+		cost = 0
 		removal_cost = 0
 	}
 	

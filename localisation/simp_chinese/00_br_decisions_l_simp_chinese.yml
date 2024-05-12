@@ -1,9 +1,6 @@
 ﻿l_simp_chinese:
  br_laws_decisions: "[ROOT.GetName]的政治与法律"
- br_laws_decisions_conflicts: "抵抗废除"
- br_laws_decisions_conflicts_desc: ""
- br_laws_decisions_implementing_the_law: "带来的影响"
- br_laws_decisions_implementing_the_law_desc: ""
+
  br_laws_decisions_generic.1: "制造丑闻"
  br_laws_decisions_generic.2: "舆论抨击"
  br_laws_decisions_generic.3: "搜捕反对者"
@@ -17,7 +14,6 @@
  br_laws_parliamentarism_hidden: "$br_laws_parliamentarism$"
  br_laws_committee_hidden: "$br_laws_committee$"
 
- br_laws_changed_flag: "法律在最近得到变更"
  br_lwas_changed_state_system_remove_flags_NOT_tt: "最近废除的旧国体支持者声势渐微"
 
  br_political_actions: "政治活动"
@@ -33,18 +29,28 @@
 
  br_political_action_anarchism_suppressed: "镇压无政府主义活动"
  br_political_action_anarchism_illegal: "宣布无政府主义非法"
- br_political_action_ban_anarchism_flag: "无政府主义已被宣布非法"
  br_political_action_socialism_suppressed: "镇压社会主义活动"
  br_political_action_socialism_illegal: "宣布社会主义非法"
- br_political_action_ban_socialism_flag: "社会主义已被宣布非法"
+
  br_political_action_democratic_suppressed: "镇压民主主义活动"
  br_political_action_democratic_illegal: "宣布民主主义非法"
- br_political_action_ban_democratic_flag: "民主主义已被宣布非法"
+
  br_political_action_fascism_suppressed: "镇压法西斯主义活动"
  br_political_action_fascism_illegal: "宣布法西斯主义非法"
- br_political_action_ban_fascism_flag: "法西斯主义已被宣布非法"
+
  br_political_action_advocate_gov_ideology: "宣扬政府的意识形态"
  br_political_action_advocate_gov_ideology_desc: "这期间，我们修改符合意识形态主张的法律的阻力将会减少。"
+
+ br_alsace: "阿尔萨斯-洛林问题"
+ br_alsace_desc: "阿尔萨斯-洛林问题"
+ br_alsace_on_map_area: "关注到§Y阿尔萨斯-洛林§!地区"
+ br_alsace_revolt_mission: "即将到来的§Y阿尔萨斯-洛林§!回归[FRA.GetAdjective]运动"
+ br_alsace_revolt_mission_desc: ""
+ br_alsace_granting_autonomy: "给予§Y阿尔萨斯-洛林§!人自治权"
+ br_alsace_granting_autonomy_desc: ""
+ br_alsace_exempt_military_service: "豁免对§Y阿尔萨斯-洛林§!人的兵役"
+ br_alsace_exempt_military_service_desc: ""
+
 
  decision_cost_S_5: "£GFX_stability_icon §Y5%§!"
  decision_cost_S_5_blocked: "£GFX_stability_icon §R5%§!"
@@ -96,9 +102,3 @@
  decision_cost_AE_100: "£GFX_army_experience §Y100§!"
  decision_cost_AE_100_blocked: "£GFX_army_experience §R100§!"
  decision_cost_AE_100_tooltip: "需要£GFX_army_experience §Y100§! 以执行此决议"
-
- br_laws_feudalism_removed_flag: "封建制最近被议论废除"
- br_laws_dictatorship_removed_flag: "独裁制最近被议论废除"
- br_laws_elected_representative_removed_flag: "总统制最近被议论废除"
- br_laws_parliamentarism_removed_flag: "议会制最近被议论废除"
- br_laws_committee_removed_flag: "委员会制最近被议论废除"

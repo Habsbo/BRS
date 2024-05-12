@@ -1,0 +1,451 @@
+﻿focus_tree = {
+	id = br_aragon_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 20
+			tag = CAT
+		}
+	}
+	
+	default = no
+
+	continuous_focus_position = { x = 50 y = 1500 }
+#团结西班牙
+	focus = {
+		id = CAT_united_espannol
+		icon = GFX_focus_intervention_spain_republic
+		#prerequisite = { focus =  }
+		mutually_exclusive = { focus = CAT_aragon_first }
+		x = 20
+		y = 0
+		#relative_position_id =
+
+		cost = 5
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			#
+			add_political_power = 50
+			#
+			add_popularity = { ideology = social_democracy popularity = 0.08 }
+			add_popularity = { ideology = social_liberation popularity = 0.08 }
+		}
+	}
+	focus = {
+		id = CAT_armed_civilians
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = CAT_united_espannol }
+		#mutually_exclusive = { focus =  }
+		x = -10
+		y = 1
+		relative_position_id = CAT_united_espannol
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {
+			ROOT = {
+				exists = yes
+				has_capitulated = no
+				has_civil_war = no
+			}
+			794 = { is_owned_and_controlled_by = ROOT }
+		}
+		
+		bypass = {
+			794 = {
+				custom_trigger_tooltip = {
+					tooltip = production_effort_tt
+					free_building_slots = { building = arms_factory size < 1 include_locked = yes }
+				}
+			}
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			794 = {}
+		}
+	}
+	focus = {
+		id = CAT_assist_euskadi
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = CAT_armed_civilians }
+		mutually_exclusive = { focus = CAT_cooperate_with_catalonia_radicals }
+		x = -1
+		y = 1
+		relative_position_id = CAT_armed_civilians
+
+		cost = 5
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {
+			ARA = {
+				exists = yes
+				has_capitulated = no
+				has_civil_war = no
+			}
+			EUS = {
+				exists = yes
+				has_capitulated = no
+				has_civil_war = no
+			}
+		}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+	focus = {
+		id = CAT_cooperate_with_catalonia_radicals
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = { focus = CAT_armed_civilians }
+		mutually_exclusive = { focus = CAT_assist_euskadi }
+		x = 1
+		y = 1
+		relative_position_id = CAT_armed_civilians
+
+		cost = 5
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+	focus = {
+		id = CAT_seize_west_aragon
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = CAT_assist_euskadi focus = CAT_cooperate_with_catalonia_radicals }
+		x = 1
+		y = 1
+		relative_position_id = CAT_assist_euskadi
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+	focus = {
+		id = CAT_raising_of_proletariat
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = CAT_seize_west_aragon }
+		x = 0
+		y = 1
+		relative_position_id = CAT_seize_west_aragon 
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+	#阿拉贡无政府
+	focus = {
+		id = CAT_regional_defense_council_of_aragon
+		icon = GFX_focus_spr_regional_defense_council_of_aragon
+		prerequisite = { focus = CAT_raising_of_proletariat }
+		mutually_exclusive = { focus = CAT_the_anti_fascist_workers_revolution }
+		x = -4
+		y = 1
+		relative_position_id = CAT_raising_of_proletariat
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+	focus = {
+		id = CAT_spark_over_aragon_workers
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
+		prerequisite = { focus = CAT_regional_defense_council_of_aragon }
+		#mutually_exclusive = { focus =  }
+		x = -4
+		y = 1
+		relative_position_id = CAT_regional_defense_council_of_aragon
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+	#加泰激进左翼
+	focus = {
+		id = CAT_the_anti_fascist_workers_revolution
+		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		prerequisite = { focus = CAT_raising_of_proletariat }
+		mutually_exclusive = { focus = CAT_regional_defense_council_of_aragon }
+		x = 4
+		y = 1
+		relative_position_id = CAT_raising_of_proletariat
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+	focus = {
+		id = CAT_6
+		icon = GFX_focus_spr_unify_the_london_bureau
+		prerequisite = { focus = CAT_regional_defense_council_of_aragon focus = CAT_the_anti_fascist_workers_revolution }
+		#mutually_exclusive = { focus =  }
+		x = -4
+		y = 1
+		relative_position_id = CAT_the_anti_fascist_workers_revolution
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+	focus = {
+		id = CAT_communist_spain
+		icon = GFX_focus_generic_befriend_communist_spain_focus
+		prerequisite = { focus = CAT_the_anti_fascist_workers_revolution }
+		#mutually_exclusive = { focus =  }
+		x = 4
+		y = 1
+		relative_position_id = CAT_the_anti_fascist_workers_revolution
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+#阿拉贡自立
+	focus = {
+		id = CAT_aragon_first
+		icon = GFX_goal_generic_demand_territory
+		#prerequisite = { focus =  }
+		mutually_exclusive = { focus = CAT_united_espannol }
+		x = 2
+		y = 0
+		relative_position_id = CAT_united_espannol
+
+		cost = 5
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+	
+	focus = {
+		id = CAT_1
+		icon = GFX_goal_generic_demand_territory
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 0
+		#relative_position_id =
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+	focus = {
+		id = CAT_2
+		icon = GFX_goal_generic_demand_territory
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 0
+		#relative_position_id =
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+	focus = {
+		id = CAT_3
+		icon = GFX_goal_generic_demand_territory
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 0
+		#relative_position_id =
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+	focus = {
+		id = CAT_4
+		icon = GFX_goal_generic_demand_territory
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 0
+		#relative_position_id =
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+}

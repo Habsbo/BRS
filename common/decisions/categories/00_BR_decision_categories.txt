@@ -1,9 +1,14 @@
 br_laws_decisions = {
-	icon = generic_research
+	icon = SWI_absolute_neutrality
+
+	allowed = { always = yes }
 
 	visible = {
 		always = yes
 	}
+	
+	visible_when_empty = yes
+	priority = 100
 }
 
 br_political_actions = {
@@ -13,5 +18,83 @@ br_political_actions = {
 		always = yes
 	}
 
-	priority = 0
+	priority = 99
+	visible_when_empty = yes
+}
+
+br_alsace = {
+	icon = CHL_hispanic_unity_decisions
+	picture = GFX_decision_cat_picture_government_in_exile
+
+	visible = {
+		OR = {
+			original_tag = GER
+			original_tag = FRA
+			original_tag = LUX
+			original_tag = BEL
+			original_tag = HOL
+			original_tag = SWI
+		}
+	}
+
+	priority = 99
+	visible_when_empty = yes
+
+	on_map_area = {
+		name = br_alsace_on_map_area
+		zoom = 100
+		state = 28
+	}
+
+	custom_icon = {
+		tag = GER
+		value = br_alsace_ger_icon_value
+		desc = br_alsace_ger_desc
+
+		visible = {
+			#has_event_target = scope_GER
+		}
+	}
+
+	custom_icon = {
+		tag = FRA
+		value = br_alsace_fra_icon_value
+		desc = br_alsace_fra_desc
+
+		visible = {
+			#has_event_target = scope_FRA
+		}
+	}
+
+	custom_icon = {
+		tag = LUX
+		value = br_alsace_lux_icon_value
+		desc = br_alsace_lux_desc
+		
+		visible = { has_event_target = scope_LUX }
+	}
+
+	custom_icon = {
+		tag = BEL
+		value = br_alsace_hol_icon_value
+		desc = br_alsace_hol_desc
+		
+		visible = { has_event_target = scope_BEL }
+	}
+	
+	custom_icon = {
+		tag = HOL
+		value = br_alsace_hol_icon_value
+		desc = br_alsace_hol_desc
+		
+		visible = { has_event_target = scope_HOL }
+	}
+
+	custom_icon = {
+		tag = SWI
+		value = br_alsace_swi_icon_value
+		desc = br_alsace_swi_desc
+		
+		visible = { has_event_target = scope_SWI }
+	}
 }

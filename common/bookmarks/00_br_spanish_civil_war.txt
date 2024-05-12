@@ -45,7 +45,7 @@ bookmarks = {
 
 		"CAT"={
 			history = "FRA_GATHERING_STORM_DESC"
-			ideology = anarchist
+			ideology = sco_anarchism
 			#available = { has_dlc = "La Resistance" } 
 			ideas = {
 				#

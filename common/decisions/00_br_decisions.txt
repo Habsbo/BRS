@@ -1,11 +1,10 @@
 br_laws_decisions = {
-
-	br_laws_decisions_conflicts = { #抵抗法律变化
+	br_laws_decisions_conflicts_mission = { #抵抗法律变化
 
 		icon = generic_research
 
 		activation = {
-			has_country_flag = br_laws_changed_flag
+			always = no
 		}
 
 		available = {
@@ -33,12 +32,12 @@ br_laws_decisions = {
 		priority = 10
 	}
 
-	br_laws_decisions_implementing_the_law = { #法律变化的好处
+	br_laws_decisions_implementing_the_law_mission = { #法律变化的好处
 
 		icon = generic_research
 
 		activation = {
-			has_country_flag = br_laws_changed_flag
+			always = no #
 		}
 
 		available = { always = no }
@@ -57,10 +56,7 @@ br_laws_decisions = {
 		}
 
 		timeout_effect = {
-			br_laws_changed_state_system_hidden_ideas_effect = yes
-			#变更法律带来的影响将会结束
-			custom_effect_tooltip = br_lwas_changed_state_system_remove_flags_NOT_tt
-			clr_country_flag = br_laws_changed_flag
+			#
 		}
 
 		priority = 10
@@ -207,15 +203,15 @@ br_laws_decisions = {
 }
 
 br_political_actions = {
-	#备战
-	br_political_action_prepare_for_war = {
+#战争
+	br_political_action_prepare_for_war = { #备战
 		icon = generic_prepare_civil_war
 
 		available = {
 			has_war_support < 1.00
 			OR = {
 				threat > 0.24
-				has_government = fascist
+				has_government = fascism
 				has_government = national_socialist
 				has_government = supranational_socialist
 			}
@@ -248,8 +244,7 @@ br_political_actions = {
 
 		ai_will_do = { base = 0 }
 	}
-	#反战
-	br_political_action_pacifist_rhetoric = {
+	br_political_action_pacifist_rhetoric = { #反战
 		icon = generic_form_nation
 
 		available = {
@@ -290,7 +285,7 @@ br_political_actions = {
 
 		ai_will_do = { base = 0 }
 	}
-	#劳动
+#劳动
 	br_political_action_labor_law = {
 		icon = generic_political_discourse
 
@@ -337,7 +332,7 @@ br_political_actions = {
 			base = 0
 		}
 	}
-	#集会权
+#集会权
 	br_political_action_right_of_assembly_allowed = { #合法
 		icon = generic_form_nation
 
@@ -384,38 +379,34 @@ br_political_actions = {
 			base = 0
 		}
 	}
+#意识形态
 	#无政府主义
 	br_political_action_anarchism_suppressed = {
 		icon = generic_tank
 
 		available = {
-			NOT = {
-				has_government = anarchist
-				has_government = revolution_socialism
-				has_country_flag = br_political_action_ban_anarchism_flag
-			}
-			anarchist < 0.50
+			br_ideology_radical_communism_nio = yes
+			NOT = { has_country_flag = br_political_action_ban_anarchism_flag }
 		}
 
 		visible = {
-			NOT = {
-				has_government = anarchist
-				has_government = revolution_socialism
-			}
+			#br_ideology_radical_communism_nio = yes
 		}
 
 		fire_only_once = no
 		days_remove = 60
 		days_re_enable = 90
 
+		cancel_if_not_visible = yes
+
 		cost = 50
 
 		modifier = {
-			anarchist_drift = -0.05
+			sco_anarchism_drift = -0.05
+			vanwardism_drift = -0.05
 		}
 
 		complete_effect = {
-			set_country_flag = br_political_action_anarchism_suppressed_flag
 			country_event = br_political_actions.1
 		}
 
@@ -429,19 +420,13 @@ br_political_actions = {
 		icon = generic_break_treaty
 
 		available = {
-			NOT = {
-				has_government = anarchist
-				has_government = revolution_socialism
-			}
-			anarchist < 0.35
+			br_ideology_radical_communism_nio = yes
+			has_country_flag = br_political_action_be_hostility_to_anarchism_flag
 		}
 
 		visible = {
-			NOT = {
-				has_government = anarchist
-				has_government = revolution_socialism
-			}
-			has_country_flag = br_political_action_be_hostility_to_anarchism_flag
+			br_ideology_radical_communism_nio = yes
+			#has_country_flag = br_political_action_be_hostility_to_anarchism_flag
 		}
 
 		fire_only_once = yes
@@ -450,11 +435,10 @@ br_political_actions = {
 		cost = 100
 
 		modifier = {
-			anarchist_drift = -0.01
+			sco_anarchism_drift = -0.01
 		}
 
 		complete_effect = {
-			set_country_flag = br_political_action_anarchism_suppressed_flag
 			country_event = br_political_actions.2
 		}
 
@@ -465,24 +449,13 @@ br_political_actions = {
 		icon = generic_tank
 
 		available = {
-			NOT = {
-				has_government = revolution_socialism
-				has_government = scientific_socialism
-				has_government = conservatism_socialism
-				has_country_flag = br_political_action_ban_socialism_flag
-			}
-			revolution_socialism < 0.30
-			scientific_socialism < 0.30
-			conservatism_socialism < 0.30
+			br_ideology_socialism_nio = yes
+			NOT = { has_country_flag = br_political_action_ban_socialism_flag }
 		}
 
 		visible = {
-			NOT = {
-				has_government = revolution_socialism
-				has_government = scientific_socialism
-				has_government = conservatism_socialism
-				has_country_flag = br_political_action_ban_socialism_flag
-			}
+			br_ideology_socialism_nio = yes
+			NOT = { has_country_flag = br_political_action_ban_socialism_flag }
 		}
 
 		fire_only_once = no
@@ -492,14 +465,13 @@ br_political_actions = {
 		cost = 50
 
 		modifier = {
-			revolution_socialism_drift = -0.05
 			scientific_socialism_drift = -0.05
 			conservatism_socialism_drift = -0.05
+			social_democracy = -0.05
 		}
 
 		complete_effect = {
-			set_country_flag = br_political_action_socialism_suppressed_flag
-			country_event = br_political_actions.1
+			country_event = br_political_actions.3
 		}
 
 		ai_will_do = { base = 0 }
@@ -508,23 +480,13 @@ br_political_actions = {
 		icon = generic_break_treaty
 
 		available = {
-			NOT = {
-				has_government = revolution_socialism
-				has_government = scientific_socialism
-				has_government = conservatism_socialism
-			}
-			revolution_socialism < 0.15
-			scientific_socialism < 0.15
-			conservatism_socialism < 0.20
+			br_ideology_socialism_nio = yes
+			has_country_flag = br_political_action_be_hostility_to_socialism_flag
 		}
 
 		visible = {
-			NOT = {
-				has_government = revolution_socialism
-				has_government = scientific_socialism
-				has_government = conservatism_socialism
-			}
-			has_country_flag = br_political_action_be_hostility_to_socialism_flag
+			br_ideology_socialism_nio = yes
+			#has_country_flag = br_political_action_be_hostility_to_socialism_flag
 		}
 
 		fire_only_once = yes
@@ -533,14 +495,13 @@ br_political_actions = {
 		cost = 100
 
 		modifier = {
-			revolution_socialism_drift = -0.01
 			scientific_socialism_drift = -0.01
 			conservatism_socialism_drift = -0.01
+			social_democracy = -0.01
 		}
 
 		complete_effect = {
-			set_country_flag = br_political_action_socialism_suppressed_flag
-			country_event = br_political_actions.2
+			country_event = br_political_actions.4
 		}
 
 		ai_will_do = { base = 0 }
@@ -550,24 +511,13 @@ br_political_actions = {
 		icon = generic_tank
 
 		available = {
-			NOT = {
-				has_government = social_democracy
-				has_government = social_liberation
-				has_government = conservatism_democracy
-				has_country_flag = br_political_action_ban_democratic_flag
-			}
-			social_democracy < 0.30
-			social_liberation < 0.30
-			conservatism_democracy < 0.30
+			br_ideology_capitalism_nio = yes
+			NOT = { has_country_flag = br_political_action_ban_democratic_flag }
 		}
 
 		visible = {
-			NOT = {
-				has_government = social_democracy
-				has_government = social_liberation
-				has_government = conservatism_democracy
-				has_country_flag = br_political_action_ban_democratic_flag
-			}
+			br_ideology_capitalism_nio = yes
+			NOT = { has_country_flag = br_political_action_ban_democratic_flag }
 		}
 
 		fire_only_once = no
@@ -577,14 +527,12 @@ br_political_actions = {
 		cost = 50
 
 		modifier = {
-			social_democracy_drift = -0.05
 			social_liberation_drift = -0.05
 			conservatism_democracy_drift = -0.05
 		}
 
 		complete_effect = {
-			set_country_flag = br_political_action_democratic_suppressed_flag
-			country_event = br_political_actions.1
+			country_event = br_political_actions.5
 		}
 
 		ai_will_do = { base = 0 }
@@ -593,23 +541,13 @@ br_political_actions = {
 		icon = generic_break_treaty
 
 		available = {
-			NOT = {
-				has_government = social_democracy
-				has_government = social_liberation
-				has_government = conservatism_democracy
-			}
-			social_democracy < 0.15
-			social_liberation < 0.15
-			conservatism_democracy < 0.30
+			br_ideology_capitalism_nio = yes
+			has_country_flag = br_political_action_be_hostility_to_democratic_flag
 		}
 
 		visible = {
-			NOT = {
-				has_government = social_democracy
-				has_government = social_liberation
-				has_government = conservatism_democracy
-			}
-			has_country_flag = br_political_action_be_hostility_to_democratic_flag
+			br_ideology_capitalism_nio = yes
+			#has_country_flag = br_political_action_be_hostility_to_democratic_flag
 		}
 
 		fire_only_once = yes
@@ -618,14 +556,12 @@ br_political_actions = {
 		cost = 100
 
 		modifier = {
-			social_democracy_drift = -0.01
 			social_liberation_drift = -0.01
 			conservatism_democracy_drift = -0.01
 		}
 
 		complete_effect = {
-			set_country_flag = br_political_action_democratic_suppressed_flag
-			country_event = br_political_actions.2
+			country_event = br_political_actions.6
 		}
 
 		ai_will_do = { base = 0 }
@@ -635,23 +571,16 @@ br_political_actions = {
 		icon = generic_tank
 
 		available = {
-			NOT = {
-				has_government = fascist
-				has_government = national_socialist
-				has_government = supranational_socialist
-				has_country_flag = br_political_action_ban_fascism_flag
-			}
-			fascist < 0.30
+			br_ideology_fascism_nio = yes
+			NOT = { has_country_flag = br_political_action_ban_fascism_flag }
+			fascism < 0.30
 			national_socialist < 0.30
 			supranational_socialist < 0.50
 		}
 
 		visible = {
-			NOT = {
-				has_government = fascist
-				has_government = national_socialist
-				has_government = supranational_socialist
-			}
+			br_ideology_fascism_nio = yes
+			NOT = { has_country_flag = br_political_action_ban_fascism_flag }
 		}
 
 		fire_only_once = no
@@ -661,7 +590,7 @@ br_political_actions = {
 		cost = 50
 
 		modifier = {
-			fascist_drift = -0.05
+			fascism_drift = -0.05
 			national_socialist_drift = -0.05
 			supranational_socialist_drift = -0.05
 		}
@@ -677,23 +606,13 @@ br_political_actions = {
 		icon = generic_break_treaty
 
 		available = {
-			NOT = {
-				has_government = fascist
-				has_government = national_socialist
-				has_government = supranational_socialist
-			}
-			fascist < 0.15
-			national_socialist < 0.20
-			supranational_socialist < 0.30
+			br_ideology_fascism_nio = yes
+			has_country_flag = br_political_action_be_hostility_to_fascism_flag
 		}
 
 		visible = {
-			NOT = {
-				has_government = fascist
-				has_government = national_socialist
-				has_government = supranational_socialist
-			}
-			has_country_flag = br_political_action_be_hostility_to_fascism_flag
+			br_ideology_fascism_nio = yes
+			#has_country_flag = br_political_action_be_hostility_to_fascism_flag
 		}
 
 		fire_only_once = yes
@@ -702,7 +621,7 @@ br_political_actions = {
 		cost = 100
 
 		modifier = {
-			fascist_drift = -0.01
+			fascism_drift = -0.01
 			national_socialist_drift = -0.01
 			supranational_socialist_drift = -0.01
 		}
@@ -714,7 +633,7 @@ br_political_actions = {
 
 		ai_will_do = { base = 0 }
 	}
-	#
+	#宣扬执政意识形态
 	br_political_action_advocate_gov_ideology = {
 		icon = generic_political_discourse
 
@@ -745,6 +664,7 @@ br_political_actions = {
 			base = 0
 		}
 	}
+#
 	br_political_action_ = {
 		icon = generic_research
 
@@ -757,6 +677,145 @@ br_political_actions = {
 		}
 
 		fire_only_once = no
+
+		cost = 0
+
+		complete_effect = {
+			#
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+}
+
+br_alsace = {
+	br_alsace_revolt_mission = {
+		
+		icon = generic_research
+
+		activation = {
+			28 = {
+				has_resistance > 0.20
+			}
+		}
+
+		available = {
+			always = no
+		}
+
+		visible = {
+			28 = {
+				is_owned_by = ROOT
+				is_fully_controlled_by = ROOT
+			}
+		}
+
+		cancel_trigger = {
+			#
+		}
+
+		is_good = no
+		days_mission_timeout = 365
+		selectable_mission = no
+		cancel_if_not_visible = yes
+
+		complete_effect = {
+			#
+		}
+
+		timeout_effect = {
+			#
+		}
+	}
+	#给予自治权
+	br_alsace_granting_autonomy = {
+		icon = generic_political_discourse
+
+		available = {
+			28 = {
+				is_owned_by = ROOT
+				is_fully_controlled_by = ROOT
+			}
+		}
+
+		visible = {
+			28 = {
+				is_owned_by = ROOT
+				is_fully_controlled_by = ROOT
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		complete_effect = {
+			#
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+	#兵役优待
+	br_alsace_exempt_military_service = {
+		icon = generic_political_discourse
+
+		available = {
+			NOT = {
+				has_idea = disarmed_nation
+				has_idea = volunteer_only
+			}
+			28 = {
+				is_owned_by = ROOT
+				is_fully_controlled_by = ROOT
+			}
+		}
+
+		visible = {
+			28 = {
+				is_owned_by = ROOT
+				is_fully_controlled_by = ROOT
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		complete_effect = {
+			#
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+	#
+	br_alsace_revolte = {
+		icon = generic_political_discourse
+
+		available = {
+			NOT = {
+				has_idea = disarmed_nation
+				has_idea = volunteer_only
+			}
+			28 = {
+				is_owned_by = ROOT
+				is_fully_controlled_by = ROOT
+			}
+		}
+
+		visible = {
+			28 = {
+				is_owned_by = ROOT
+				is_fully_controlled_by = ROOT
+			}
+		}
+
+		fire_only_once = yes
 
 		cost = 0
 

@@ -12,7 +12,7 @@ characters={
 				}
 			}
 			country_leader={
-				ideology=social_democracy_type
+				ideology=liberalism
 				traits={ indecisive }
 				expire="1965.1.1.1"
 				id=-1
@@ -29,7 +29,7 @@ characters={
 				}
 			}
 			country_leader={
-				ideology=social_democracy_type
+				ideology=liberalism
 				expire="1965.1.1.1"
 				id=-1
 			}
@@ -80,7 +80,7 @@ characters={
 			}
 		}
 		country_leader={
-			ideology=social_democracy_type
+			ideology=conservatism
 			expire="1965.1.1.1"
 			id=1100
 		}
@@ -191,12 +191,12 @@ characters={
 				}
 				visible = {
 					NOT = {
-						has_government = fascist
+						has_government = fascism
 					}
 				}
 				available = {
 					NOT = {
-						has_government = fascist
+						has_government = fascism
 					}
 				}
 				traits = {
@@ -265,12 +265,12 @@ characters={
 				}
 				visible = {
 					NOT = {
-						has_government = fascist
+						has_government = fascism
 					}
 				}
 				available = {
 					NOT = {
-						has_government = fascist
+						has_government = fascism
 					}
 				}
 				traits = {
@@ -304,10 +304,10 @@ characters={
 				original_tag = SPR
 			}
 			visible = {
-				has_government = fascist
+				has_government = fascism
 			}
 			available = {
-				has_government = fascist
+				has_government = fascism
 			}
 			traits = {
 				air_warfare_theorist
@@ -563,7 +563,7 @@ characters={
 					custom_trigger_tooltip = {
 						tooltip = spr_franco_unavailable_tooltip
 						OR = {
-							has_government = fascist
+							has_government = fascism
 							AND = {
 								NOT = {
 									has_government = communism
@@ -574,7 +574,7 @@ characters={
 										NOT = {
 											tag = root
 										}
-										has_government = fascist
+										has_government = fascism
 									}
 								}
 							}
@@ -720,10 +720,10 @@ characters={
 					original_tag = SPR
 				}
 				visible = {
-					has_government = fascist
+					has_government = fascism
 				}
 				available = {
-					has_government = fascist
+					has_government = fascism
 				}
 				traits = {
 					army_chief_offensive_2
@@ -817,10 +817,10 @@ characters={
 					original_tag = SPR
 				}
 				visible = {
-					has_government = fascist
+					has_government = fascism
 				}
 				available = {
-					has_government = fascist
+					has_government = fascism
 				}
 				traits = {
 					air_chief_reform_2
@@ -852,10 +852,10 @@ characters={
 				original_tag = SPR
 			}
 			visible = {
-				has_government = fascist
+				has_government = fascism
 			}
 			available = {
-				has_government = fascist
+				has_government = fascism
 			}
 			traits = {
 				army_logistics_2
@@ -938,10 +938,10 @@ characters={
 					original_tag = SPR
 				}
 				visible = {
-					has_government = fascist
+					has_government = fascism
 				}
 				available = {
-					has_government = fascist
+					has_government = fascism
 				}
 				traits = {
 					army_infantry_2
@@ -1058,10 +1058,10 @@ characters={
 					original_tag = SPR
 				}
 				visible = {
-					has_government = fascist
+					has_government = fascism
 				}
 				available = {
-					has_government = fascist
+					has_government = fascism
 				}
 				
 				traits = {
@@ -1160,10 +1160,10 @@ characters={
 					original_tag = SPR
 				}
 				visible = {
-					has_government = fascist
+					has_government = fascism
 				}
 				available = {
-					has_government = fascist
+					has_government = fascism
 				}
 				traits = {
 					army_chief_old_guard
@@ -1239,12 +1239,12 @@ characters={
 				}
 				visible = {
 					NOT = {
-						has_government = fascist
+						has_government = fascism
 					}
 				}
 				available = {
 					NOT = {
-						has_government = fascist
+						has_government = fascism
 					}
 				}
 				traits = {
@@ -1322,10 +1322,10 @@ characters={
 					original_tag = SPR
 				}
 				visible = {
-					has_government = fascist
+					has_government = fascism
 				}
 				available = {
-					has_government = fascist
+					has_government = fascism
 				}
 				traits = {
 					navy_chief_old_guard
@@ -1538,10 +1538,10 @@ characters={
 					original_tag = SPR
 				}
 				visible = {
-					has_government = fascist
+					has_government = fascism
 				}
 				available = {
-					has_government = fascist
+					has_government = fascism
 				}
 				traits = {
 					air_air_combat_training_3
@@ -1682,12 +1682,12 @@ characters={
 			}
 			visible = {
 				NOT = {
-					has_government = fascist
+					has_government = fascism
 				}
 			}
 			available = {
 				NOT = {
-					has_government = fascist
+					has_government = fascism
 				}
 			}
 			traits = {
@@ -1761,10 +1761,10 @@ characters={
 					original_tag = SPR
 				}
 				visible = {
-					has_government = fascist
+					has_government = fascism
 				}
 				available = {
-					has_government = fascist
+					has_government = fascism
 				}
 				traits = {
 					army_chief_defensive_2
@@ -1840,12 +1840,12 @@ characters={
 				}
 				visible = {
 					NOT = {
-						has_government = fascist
+						has_government = fascism
 					}
 				}
 				available = {
 					NOT = {
-						has_government = fascist
+						has_government = fascism
 					}
 				}
 				traits = {
@@ -1873,10 +1873,10 @@ characters={
 				original_tag = SPR
 			}
 			visible = {
-				has_government = fascist
+				has_government = fascism
 			}
 			available = {
-				has_government = fascist
+				has_government = fascism
 			}
 			traits = {
 				navy_chief_decisive_battle_2
@@ -1906,10 +1906,10 @@ characters={
 				original_tag = SPR
 			}
 			visible = {
-				has_government = fascist
+				has_government = fascism
 			}
 			available = {
-				has_government = fascist
+				has_government = fascism
 			}
 			traits = {
 				navy_chief_reform_2
@@ -1942,12 +1942,12 @@ characters={
 			}
 			visible = {
 				NOT = {
-					has_government = fascist
+					has_government = fascism
 				}
 			}
 			available = {
 				NOT = {
-					has_government = fascist
+					has_government = fascism
 				}
 			}
 			
@@ -2161,12 +2161,12 @@ characters={
 			}
 			visible = {
 				NOT = {
-					has_government = fascist
+					has_government = fascism
 				}
 			}
 			available = {
 				NOT = {
-					has_government = fascist
+					has_government = fascism
 				}
 			}
 			traits = {
@@ -2198,10 +2198,10 @@ characters={
 				original_tag = SPR
 			}
 			visible = {
-				has_government = fascist
+				has_government = fascism
 			}
 			available = {
-				has_government = fascist
+				has_government = fascism
 			}
 			traits = {
 				air_strategic_bombing_2
@@ -2372,10 +2372,10 @@ characters={
 				original_tag = SPR
 			}
 			visible = {
-				has_government = fascist
+				has_government = fascism
 			}
 			available = {
-				has_government = fascist
+				has_government = fascism
 			}
 			traits = {
 				air_chief_ground_support_2
@@ -2407,12 +2407,12 @@ characters={
 			}
 			visible = {
 				NOT = {
-					has_government = fascist
+					has_government = fascism
 				}
 			}
 			available = {
 				NOT = {
-					has_government = fascist
+					has_government = fascism
 				}
 			}
 			traits = {
@@ -2485,12 +2485,12 @@ characters={
 				}
 				visible = {
 					NOT = {
-						has_government = fascist
+						has_government = fascism
 					}
 				}
 				available = {
 					NOT = {
-						has_government = fascist
+						has_government = fascism
 					}
 				}
 				traits = {
@@ -2564,12 +2564,12 @@ characters={
 				}
 				visible = {
 					NOT = {
-						has_government = fascist
+						has_government = fascism
 					}
 				}
 				available = {
 					NOT = {
-						has_government = fascist
+						has_government = fascism
 					}
 				}
 				traits = {
@@ -2749,12 +2749,12 @@ characters={
 				}
 				visible = {
 					NOT = {
-						has_government = fascist
+						has_government = fascism
 					}
 				}
 				available = {
 					NOT = {
-						has_government = fascist
+						has_government = fascism
 					}
 				}
 				traits = {
@@ -3046,12 +3046,12 @@ characters={
 				}
 				visible = {
 					NOT = {
-						has_government = fascist
+						has_government = fascism
 					}
 				}
 				available = {
 					NOT = {
-						has_government = fascist
+						has_government = fascism
 					}
 				}
 				traits = {
@@ -3522,7 +3522,7 @@ characters={
 					}
 					original_tag = SPR
 					NOT = {
-						has_government = fascist 
+						has_government = fascism 
 					}
 				}
 				traits = {
@@ -3604,7 +3604,7 @@ characters={
 					}
 					original_tag = SPR
 					NOT = {
-						has_government = fascist 
+						has_government = fascism 
 					}
 				}
 				traits = {
@@ -3691,7 +3691,7 @@ characters={
 					}
 					original_tag = SPR
 					NOT = {
-						has_government = fascist 
+						has_government = fascism 
 					}
 				}
 				available = {
@@ -3932,7 +3932,7 @@ characters={
 					}
 					original_tag = SPR
 					NOT = {
-						has_government = fascist 
+						has_government = fascism 
 					}
 				}
 				traits = {
@@ -4260,7 +4260,7 @@ characters={
 			allowed = {
 				NOT = { has_dlc = "La Resistance" }
 				original_tag = SPR
-				has_government = fascist
+				has_government = fascism
 			}
 			traits = {
 				prince_of_terror 
@@ -4282,7 +4282,7 @@ characters={
 			allowed = {
 				NOT = { has_dlc = "La Resistance" }
 				original_tag = SPR
-				has_government = fascist
+				has_government = fascism
 			}
 			traits = {
 				compassionate_gentleman 
@@ -4304,7 +4304,7 @@ characters={
 			allowed = {
 				NOT = { has_dlc = "La Resistance" }
 				original_tag = SPR
-				has_government = fascist
+				has_government = fascism
 			}
 			traits = {
 				war_industrialist 
@@ -4656,955 +4656,7 @@ characters={
 		}
 	}
 
-####阿拉贡####
-	CAT_joaquin_ascaso_budria = { #主席 华金·阿斯卡索
-		name=CAT_joaquin_ascaso_budria
-		portraits={
-			civilian={
-				large="GFX_portrait_Draza_Mihailovic"
-				small="GFX_idea_generic_political_advisor_europe_3"
-			}
 
-			army={
-				large="GFX_portrait_Draza_Mihailovic"
-				small="GFX_idea_generic_political_advisor_europe_3"
-			}
-		}
-
-		country_leader={
-			ideology=anarchist_communism
-			expire="1965.1.1.1"
-			id=11000000002
-		}
-	}
-
-	CAT_benito_pabon_y_suarez_de_urbina = { #总书记 贝尼托·帕彭
-		name=CAT_benito_pabon_y_suarez_de_urbina
-		portraits={
-			army={
-				large="GFX_portrait_LAT_hermanis_buks"
-				small="GFX_idea_SPA_mauricio_de_sivatte"
-			}
-		}
-		country_leader={
-			ideology=anarchism
-			expire="1965.1.1.1"
-			id=11000000002
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = CAT_benito_pabon_y_suarez_de_urbina
-			name = CAT_benito_pabon_y_suarez_de_urbina
-			allowed = {
-				#
-			}
-
-			visible = {
-				#
-			}
-
-			available = {
-				#
-			}
-			traits = {
-				#
-			}
-			modifier = {
-				political_power_gain = 0.35
-				anarchist_drift = 0.08
-				anarchist_acceptance = 80
-			}
-		}
-		corps_commander={
-			traits={ brilliant_strategist }
-			skill=2
-			attack_skill=3
-			defense_skill=3
-			planning_skill=2
-			logistics_skill=2
-			legacy_id=-1
-		}
-	}
-
-	CAT_adolfo_ballano = { #公共秩序 阿道夫·巴拉诺
-		name=CAT_adolfo_ballano
-		portraits={
-			army={
-				large="GFX_portrait_LAT_hermanis_buks"
-				small="GFX_idea_SPA_mauricio_de_sivatte"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = CAT_adolfo_ballano
-			name = CAT_adolfo_ballano
-			allowed = {
-				#
-			}
-
-			visible = {
-				#
-			}
-
-			available = {
-				#
-			}
-			traits = {
-				regional_traditionalist_leader 
-			}
-		}
-		corps_commander={
-			traits={ brilliant_strategist }
-			skill=2
-			attack_skill=3
-			defense_skill=3
-			planning_skill=2
-			logistics_skill=2
-			legacy_id=-1
-		}
-	}
-
-	CAT_adolfo_arnal = { #农业部长 阿道夫·阿纳尔
-		name=CAT_adolfo_arnal
-		portraits={
-			army={
-				large="GFX_portrait_LAT_hermanis_buks"
-				small="GFX_idea_SPA_mauricio_de_sivatte"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = CAT_adolfo_arnal
-			name = CAT_adolfo_arnal
-			allowed = {
-				#
-			}
-
-			visible = {
-				#
-			}
-
-			available = {
-				#
-			}
-			traits = {
-				#
-			}
-			modifier = {
-				political_power_gain = 0.2
-			}
-		}
-	}
-
-	CAT_evaristo_vinuales_larroy = { #信息宣传 埃瓦里斯托·维纽莱斯
-		name=CAT_evaristo_vinuales_larroy
-		portraits={
-			army={
-				large="GFX_portrait_LAT_hermanis_buks"
-				small="GFX_idea_SPA_mauricio_de_sivatte"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = CAT_evaristo_vinuales_larroy
-			name = CAT_evaristo_vinuales_larroy
-			allowed = {
-				#
-			}
-
-			visible = {
-				#
-			}
-
-			available = {
-				#
-			}
-			traits = {
-				#
-			}
-		}
-	}
-	
-	CAT_miguel_chueca_cuartero = { #劳工 米格尔·丘卡
-		name=CAT_miguel_chueca_cuartero
-		portraits={
-			army={
-				large="GFX_portrait_LAT_hermanis_buks"
-				small="GFX_idea_SPA_mauricio_de_sivatte"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = CAT_miguel_chueca_cuartero
-			name = CAT_miguel_chueca_cuartero
-			allowed = {
-				#
-			}
-
-			visible = {
-				#
-			}
-
-			available = {
-				#
-			}
-			traits = {
-				#
-			}
-		}
-	}
-
-	CAT_luis_montoliu_salado = { #运输与通信 路易斯·蒙托留
-		name=CAT_luis_montoliu_salado
-		portraits={
-			army={
-				large="GFX_portrait_LAT_hermanis_buks"
-				small="GFX_idea_SPA_mauricio_de_sivatte"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = CAT_luis_montoliu_salado
-			name = CAT_luis_montoliu_salado
-			allowed = {
-				#
-			}
-
-			visible = {
-				#
-			}
-
-			available = {
-				#
-			}
-			traits = {
-				#
-			}
-		}
-	}
-
-	CAT_evelio_martinez = { #经济与用品 伊夫利奥·马丁内斯
-		name=CAT_evelio_martinez
-		portraits={
-			army={
-				large="GFX_portrait_LAT_hermanis_buks"
-				small="GFX_idea_SPA_mauricio_de_sivatte"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = CAT_evelio_martinez
-			name = CAT_evelio_martinez
-			allowed = {
-				#
-			}
-
-			visible = {
-				#
-			}
-
-			available = {
-				#
-			}
-			traits = {
-				#
-			}
-		}
-	}
-
-	CAT_jose_ignacio_mantecon = { #法官 何塞·伊格纳西奥·曼特孔
-		name=CAT_jose_ignacio_mantecon
-		portraits={
-			army={
-				large="GFX_portrait_LAT_hermanis_buks"
-				small="GFX_idea_SPA_mauricio_de_sivatte"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = CAT_jose_ignacio_mantecon
-			name = CAT_jose_ignacio_mantecon
-			allowed = {
-				#
-			}
-
-			visible = {
-				#
-			}
-
-			available = {
-				#
-			}
-			traits = {
-				#
-			}
-		}
-	}
-
-	CAT_jesus_gracia = { #金融 赫苏斯·加西亚
-		name=CAT_jesus_gracia
-		portraits={
-			army={
-				large="GFX_portrait_LAT_hermanis_buks"
-				small="GFX_idea_SPA_mauricio_de_sivatte"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = CAT_jesus_gracia
-			name = CAT_jesus_gracia
-			allowed = {
-				#
-			}
-
-			visible = {
-				#
-			}
-
-			available = {
-				#
-			}
-			traits = {
-				#
-			}
-		}
-	}
-
-	CAT_manuel_latorre = { #文化部长 曼努埃尔·拉托雷
-		name=CAT_manuel_latorre
-		portraits={
-			army={
-				large="GFX_portrait_LAT_hermanis_buks"
-				small="GFX_idea_SPA_mauricio_de_sivatte"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = CAT_manuel_latorre
-			name = CAT_manuel_latorre
-			allowed = {
-				#
-			}
-
-			visible = {
-				#
-			}
-
-			available = {
-				#
-			}
-			traits = {
-				#
-			}
-		}
-	}
-
-	CAT_jose_ruiz_borao = { #公共工程 何塞·鲁伊斯·波劳
-		name=CAT_jose_ruiz_borao
-		portraits={
-			army={
-				large="GFX_portrait_LAT_hermanis_buks"
-				small="GFX_idea_SPA_mauricio_de_sivatte"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = CAT_jose_ruiz_borao
-			name = CAT_jose_ruiz_borao
-			allowed = {
-				#
-			}
-
-			visible = {
-				#
-			}
-
-			available = {
-				#
-			}
-			traits = {
-				#
-			}
-		}
-	}
-
-	CAT_jose_duque = { #卫生与社会援助 何塞·杜克
-		name=CAT_jose_duque
-		portraits={
-			army={
-				large="GFX_portrait_LAT_hermanis_buks"
-				small="GFX_idea_SPA_mauricio_de_sivatte"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = CAT_jose_duque
-			name = CAT_jose_duque
-			allowed = {
-				#
-			}
-
-			visible = {
-				#
-			}
-
-			available = {
-				#
-			}
-			traits = {
-				#
-			}
-		}
-	}
-
-	CAT_custodio_pennarrocha = { #库斯托迪奥·佩纳罗查
-		name=CAT_custodio_pennarrocha
-		portraits={
-			army={
-				large="GFX_portrait_LAT_hermanis_buks"
-				small="GFX_idea_SPA_mauricio_de_sivatte"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = CAT_custodio_pennarrocha
-			name = CAT_custodio_pennarrocha
-			allowed = {
-				#
-			}
-
-			visible = {
-				#
-			}
-
-			available = {
-				#
-			}
-			traits = {
-				#
-			}
-		}
-	}
-
-	CAT_council_of_theorists = { # Anarchists
-		name=SPR_council_of_theorists
-		portraits={
-			army={
-				small="GFX_idea_SPR_anarchist_council"
-			}
-		}
-		advisor={
-			cost = 100
-			slot = theorist
-			idea_token = CAT_council_of_theorists
-			ledger = military
-			allowed = {
-				has_dlc = "La Resistance"
-				original_tag = CAT
-			}
-			visible = {
-				NOT = {
-					tag = SPA
-					tag = SPB
-				}
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-			}
-			available = {
-				has_completed_focus = SPR_communal_military_strategies
-			}
-			traits = { council_of_theorists }
-		}
-	}
-	
-	CAT_defensive_military_council = { # Anarchist
-		name=SPR_defensive_military_council
-		portraits={
-			army={
-				small="GFX_idea_SPR_anarchist_council"
-			}
-		}
-		advisor={
-			slot = army_chief
-			idea_token = CAT_defensive_military_council
-			ledger = army
-			allowed = {
-				has_dlc = "La Resistance"
-				original_tag = CAT
-			}
-			visible = {
-				NOT = {
-					tag = SPA
-					tag = SPB
-				}
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-			}
-			available = {
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-				has_completed_focus = SPR_masters_of_our_own_fate
-				custom_trigger_tooltip = {
-					tooltip = SPR_not_nationalist_spain_tt
-					NOT = { tag = SPA }
-				}
-			}
-			traits = { army_chief_defensive_2 }
-			cost = 100
-		}
-	}
-
-	CAT_offensive_military_council = { # Anarchist
-		name=SPR_offensive_military_council
-		portraits={
-			army={
-				small="GFX_idea_SPR_anarchist_council"
-			}
-		}
-		advisor={	
-			slot = army_chief
-			idea_token = CAT_offensive_military_council
-			ledger = army
-			allowed = {
-				has_dlc = "La Resistance"
-				original_tag = CAT
-			}
-			visible = {
-				NOT = {
-					tag = SPA
-					tag = SPB
-				}
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-			}
-			available = {
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-				has_completed_focus = SPR_masters_of_our_own_fate
-				custom_trigger_tooltip = {
-					tooltip = SPR_not_nationalist_spain_tt
-					NOT = { tag = SPA }
-				}
-			}
-			traits = { army_chief_offensive_2 }
-			cost = 100
-		}
-	}
-
-	CAT_organizational_military_council = { # Anarchist
-		name=SPR_organizational_military_council
-		portraits={
-			army={
-				small="GFX_idea_SPR_anarchist_council"
-			}
-		}
-		advisor={
-			slot = army_chief
-			idea_token = CAT_organizational_military_council
-			ledger = army
-			allowed = {
-				has_dlc = "La Resistance"
-				original_tag = CAT
-			}
-			visible = {
-				NOT = {
-					tag = SPA
-					tag = SPB
-				}
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-			}
-			available = {
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-				has_completed_focus = SPR_masters_of_our_own_fate
-				custom_trigger_tooltip = {
-					tooltip = SPR_not_nationalist_spain_tt
-					NOT = { tag = SPA }
-				}
-			}
-			traits = { army_chief_organizational_2 }
-			cost = 100
-		}
-	}
-	
-	CAT_air_safety_aviation_council = { # Anarchist
-		name=SPR_air_safety_aviation_council
-		portraits={
-			army={
-				small="GFX_idea_SPR_anarchist_council"
-			}
-		}
-		advisor={	
-			slot = air_chief
-			idea_token = CAT_air_safety_aviation_council
-			ledger = air
-			allowed = {
-				has_dlc = "La Resistance"
-				original_tag = CAT
-			}
-			visible = {
-				NOT = {
-					tag = SPA
-					tag = SPB
-				}
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-			}
-			available = {
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-				has_completed_focus = SPR_masters_of_our_own_fate
-				custom_trigger_tooltip = {
-					tooltip = SPR_not_nationalist_spain_tt
-					NOT = { tag = SPA }
-				}
-			}
-			traits = { air_chief_safety_2 }
-			cost = 100
-		}
-	}
-
-	CAT_all_weather_aviation_council = { # Anarchist
-		name=SPR_all_weather_aviation_council
-		portraits={
-			army={
-				small="GFX_idea_SPR_anarchist_council"
-			}
-		}
-		advisor={
-			slot = air_chief
-			idea_token = CAT_all_weather_aviation_council
-			ledger = air
-			allowed = {
-				has_dlc = "La Resistance"
-				original_tag = CAT
-			}
-			visible = {
-				NOT = {
-					tag = SPA
-					tag = SPB
-				}
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-			}
-			available = {
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-				has_completed_focus = SPR_masters_of_our_own_fate
-				custom_trigger_tooltip = {
-					tooltip = SPR_not_nationalist_spain_tt
-					NOT = { tag = SPA }
-				}
-			}
-			traits = { air_chief_all_weather_2 }
-			cost = 100
-		}
-	}
-
-	CAT_commerce_raiding_naval_council = { # Anarchist
-		name=SPR_commerce_raiding_naval_council
-		portraits={
-			army={
-				small="GFX_idea_SPR_anarchist_council"
-			}
-		}
-		advisor={
-			slot = navy_chief
-			idea_token = CAT_commerce_raiding_naval_council
-			ledger = navy
-			allowed = {
-				has_dlc = "La Resistance"
-				original_tag = CAT
-			}
-			visible = {
-				NOT = {
-					tag = SPA
-					tag = SPB
-				}
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-			}
-			available = {
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-				has_completed_focus = SPR_masters_of_our_own_fate
-				custom_trigger_tooltip = {
-					tooltip = SPR_not_nationalist_spain_tt
-					NOT = { tag = SPA }
-				}
-			}
-			traits = { navy_chief_commerce_raiding_2 }
-			cost = 100
-		}
-	}
-
-	CAT_reform_naval_council = { # Anarchist
-		name=SPR_reform_naval_council
-		portraits={
-			army={
-				small="GFX_idea_SPR_anarchist_council"
-			}
-		}
-		advisor={
-			slot = navy_chief
-			idea_token = CAT_reform_naval_council
-			ledger = navy
-			allowed = {
-				has_dlc = "La Resistance"
-				original_tag = CAT
-			}
-			visible = {
-				NOT = {
-					tag = SPA
-					tag = SPB
-				}
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-			}
-			available = {
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-				has_completed_focus = SPR_masters_of_our_own_fate
-				custom_trigger_tooltip = {
-					tooltip = SPR_not_nationalist_spain_tt
-					NOT = { tag = SPA }
-				}
-			}
-			traits = { navy_chief_reform_2 }
-			cost = 100
-		}
-	}
-
-	CAT_infantry_military_council = { # Anarchist
-		name=SPR_infantry_military_council
-		portraits={
-			army={
-				small="GFX_idea_SPR_anarchist_council"
-			}
-		}
-		advisor={
-			slot = high_command
-			idea_token = CAT_infantry_military_council
-			ledger = army
-			allowed = {
-				has_dlc = "La Resistance"
-				original_tag = CAT
-			}
-			visible = {
-				NOT = {
-					tag = SPA
-					tag = SPB
-				}
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-			}
-			available = {
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-				has_completed_focus = SPR_masters_of_our_own_fate
-				custom_trigger_tooltip = {
-					tooltip = SPR_not_nationalist_spain_tt
-					NOT = { tag = SPA }
-				}
-			}
-			traits = { army_infantry_3 }
-			cost = 200
-		}
-	}
-
-	CAT_army_regrouping_military_council = { # Anarchist
-		name=SPR_army_regrouping_military_council
-		portraits={
-			army={
-				small="GFX_idea_SPR_anarchist_council"
-			}
-		}
-		advisor={
-			slot = high_command
-			idea_token = CAT_army_regrouping_military_council
-			ledger = army
-			allowed = {
-				has_dlc = "La Resistance"
-				original_tag = CAT
-			}
-			visible = {
-				NOT = {
-					tag = SPA
-					tag = SPB
-				}
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-			}
-			available = {
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-				has_completed_focus = SPR_masters_of_our_own_fate
-				custom_trigger_tooltip = {
-					tooltip = SPR_not_nationalist_spain_tt
-					NOT = { tag = SPA }
-				}
-			}
-			traits = { army_regrouping_2 }
-			cost = 100
-		}
-	}
-
-	CAT_concealment_military_council = { # Anarchist
-		name=SPR_concealment_military_council
-		portraits={
-			army={
-				small="GFX_idea_SPR_anarchist_council"
-			}
-		}
-		advisor={
-			slot = high_command
-			idea_token = CAT_concealment_military_council
-			ledger = army
-			allowed = {
-				has_dlc = "La Resistance"
-				original_tag = CAT
-			}
-			visible = {
-				NOT = {
-					tag = SPA
-					tag = SPB
-				}
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-			}
-			available = {
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-				has_completed_focus = SPR_masters_of_our_own_fate
-				custom_trigger_tooltip = {
-					tooltip = SPR_not_nationalist_spain_tt
-					NOT = { tag = SPA }
-				}
-			}
-			traits = { army_concealment_2 }
-			cost = 100
-		}
-	}
-
-	CAT_naval_strike_aviation_council = { # Anarchist
-		name=SPR_naval_strike_aviation_council
-		portraits={
-			army={
-				small="GFX_idea_SPR_anarchist_council"
-			}
-		}
-		advisor={
-			slot = high_command
-			idea_token = CAT_naval_strike_aviation_council
-			ledger = navy
-			allowed = {
-				has_dlc = "La Resistance"
-				original_tag = CAT
-			}
-			visible = {
-				NOT = {
-					tag = SPA
-					tag = SPB
-				}
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-			}
-			available = {
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-				has_completed_focus = SPR_masters_of_our_own_fate
-				custom_trigger_tooltip = {
-					tooltip = SPR_not_nationalist_spain_tt
-					NOT = { tag = SPA }
-				}
-			}
-			traits = { air_naval_strike_2 }
-			cost = 100
-		}
-	}
-
-	CAT_close_air_support_aviation_council = { # Anarchist
-		name=SPR_close_air_support_aviation_council
-		portraits={
-			army={
-				small="GFX_idea_SPR_anarchist_council"
-			}
-		}
-		advisor={
-			slot = high_command
-			idea_token = CAT_close_air_support_aviation_council
-			ledger = air
-			allowed = {
-				has_dlc = "La Resistance"
-				original_tag = CAT
-			}
-			visible = {
-				NOT = {
-					tag = SPA
-					tag = SPB
-				}
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-			}
-			available = {
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-				has_completed_focus = SPR_masters_of_our_own_fate
-				custom_trigger_tooltip = {
-					tooltip = SPR_not_nationalist_spain_tt
-					NOT = { tag = SPA }
-				}
-			}
-			traits = { air_close_air_support_2 }
-			cost = 100
-		}
-	}
-
-	CAT_logistics_naval_council = { # Anarchist
-		name=SPR_logistics_naval_council
-		portraits={
-			army={
-				small="GFX_idea_SPR_anarchist_council"
-			}
-		}
-		advisor={
-			slot = high_command
-			idea_token = CAT_logistics_naval_council
-			ledger = navy
-			allowed = {
-				has_dlc = "La Resistance"
-				original_tag = CAT
-			}
-			visible = {
-				NOT = {
-					tag = SPA
-					tag = SPB
-				}
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-			}
-			available = {
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-				has_completed_focus = SPR_masters_of_our_own_fate
-				custom_trigger_tooltip = {
-					tooltip = SPR_not_nationalist_spain_tt
-					NOT = { tag = SPA }
-				}
-			}
-			traits = { navy_fleet_logistics_2 }
-			cost = 100
-		}
-	}
-
-	CAT_anti_submarine_naval_council = { # Anarchist
-		name=SPR_anti_submarine_naval_council
-		portraits={
-			army={
-				small="GFX_idea_SPR_anarchist_council"
-			}
-		}
-		advisor={
-			slot = high_command
-			idea_token = CAT_anti_submarine_naval_council
-			ledger = navy
-			allowed = {
-				has_dlc = "La Resistance"
-				original_tag = CAT
-			}
-			visible = {
-				NOT = {
-					tag = SPA
-					tag = SPB
-				}
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-			}
-			available = {
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-				has_completed_focus = SPR_masters_of_our_own_fate
-				custom_trigger_tooltip = {
-					tooltip = SPR_not_nationalist_spain_tt
-					NOT = { tag = SPA }
-				}
-			}
-			traits = { navy_anti_submarine_2 }
-			cost = 100
-		}
-	}
 
 ####西班牙国###
 	SPN_provisional_government = {

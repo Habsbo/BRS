@@ -650,7 +650,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = POL_additional_research_slot2 }
 		relative_position_id = POL_digging_into_the_potential_of_kielce
-		x = 1
+		x = 2
 		y = 2
 		cost = 5
 		ai_will_do = {
@@ -709,7 +709,7 @@ focus_tree = {
 		
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
-		x = -2
+		x = -1
 		y = 1
 		relative_position_id = POL_additional_research_slot2
 		cost = 10
@@ -741,7 +741,7 @@ focus_tree = {
 		
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_MANPOWER }
-		x = 0
+		x = 1
 		y = 1
 		relative_position_id = POL_additional_research_slot2
 		cost = 10
@@ -1867,7 +1867,7 @@ focus_tree = {
 		id = POL_prepare_for_the_next_war
 		icon = GFX_goal_generic_build_tank
 		
-		x = 23
+		x = 28
 		y = 0
 		cost = 5
 
@@ -5162,7 +5162,7 @@ focus_tree = {
 		id = POL_sabotage_polish_industry
 		icon = GFX_goal_generic_major_war
 		prerequisite = { focus = POL_mil_first }
-		x = 1
+		x = 0
 		y = 1
 		relative_position_id = POL_mil_first
 		cost = 10
@@ -8334,7 +8334,7 @@ focus_tree = {
 		available = {
 		}
 
-		x = 52
+		x = 58
 		y = 0
 		cost = 5
 
@@ -8361,7 +8361,7 @@ focus_tree = {
 		}
 		
 		offset = {
-			x = -24
+			x = 0
 			y = 0
 			trigger = {
 				has_completed_focus = POL_assemble_the_regency_council
@@ -9248,7 +9248,7 @@ focus_tree = {
 		prerequisite = { focus = POL_unite_west_slavia }
 		relative_position_id = POL_trust_in_the_west
 
-		x = 1
+		x = 0
 		y = 1
 		cost = 10
 
@@ -9306,7 +9306,7 @@ focus_tree = {
 		prerequisite = { focus = POL_unite_west_slavia }
 		relative_position_id = POL_unite_west_slavia
 
-		x = 1
+		x = -1
 		y = 1
 		cost = 10
 
@@ -9435,7 +9435,7 @@ focus_tree = {
 		prerequisite = { focus = POL_join_CZE_rails }
 		relative_position_id = POL_join_CZE_industry
 
-		x = 1
+		x = -1
 		y = 1
 		cost = 10
 
@@ -10502,7 +10502,7 @@ focus_tree = {
 
 		mutually_exclusive = { focus = POL_habsburg focus = POL_hohenzollern focus = POL_cossack_king focus = POL_romanov }
 
-		x = 1
+		x = 2
 		y = 1
 		cost = 10
 
@@ -10533,7 +10533,7 @@ focus_tree = {
 		prerequisite = { focus = POL_claiming_lithuania focus = POL_hohenzollern }
 		relative_position_id = POL_claiming_lithuania
 
-		x = -1
+		x = -2
 		y = 1
 		cost = 10
 
@@ -11127,7 +11127,7 @@ focus_tree = {
 		prerequisite = { focus = POL_lithuanian_rail }
 		relative_position_id = POL_lithuanian_rail
 
-		x = 0
+		x = 1
 		y = 1
 		cost = 5
 
@@ -11185,7 +11185,7 @@ focus_tree = {
 		prerequisite = { focus = POL_push_for_ruthenia }
 		relative_position_id = POL_push_for_ruthenia
 
-		x = 1
+		x = 0
 		y = 1
 		cost = 10
 
@@ -15773,7 +15773,7 @@ focus_tree = {
 	focus = {
 		id = POL_navy_theorist
 		icon = GFX_focus_SWE_all_cards_on_deck
-		x = 12
+		x = 14
 		y = 0
 		relative_position_id = POL_the_four_year_plan
 		cost = 5
@@ -15798,7 +15798,7 @@ focus_tree = {
 		icon = GFX_focus_POL_clamp_down_on_danzig
 		mutually_exclusive = { focus = POL_develop_polish_ship_building }
 		relative_position_id = POL_navy_theorist
-		x = 4
+		x = 5
 		y = 0
 		cost = 5
 		
@@ -15919,7 +15919,7 @@ focus_tree = {
 		icon = GFX_focus_POL_develop_polish_shipbuilding
 		mutually_exclusive = { focus = POL_clamp_down_on_danzig }
 		relative_position_id = POL_clamp_down_on_danzig
-		x = 2
+		x = 4
 		y = 0
 		cost = 10
 		#allow_branch = { always = no }
@@ -16077,8 +16077,8 @@ focus_tree = {
 			focus = POL_clamp_down_on_danzig
 			focus = POL_develop_polish_ship_building
 		}
-		x = 4
-		y = 2
+		x = 1
+		y = 1
 		relative_position_id = POL_clamp_down_on_danzig
 		cost = 5
 
@@ -16535,7 +16535,7 @@ focus_tree = {
 		id = POL_attract_poles_to_gdynia
 		icon = GFX_focus_generic_the_giant_wakes
 		prerequisite = { focus = POL_meeting_with_baltic }
-		x = 1
+		x = 0
 		y = 1
 		relative_position_id = POL_meeting_with_baltic
 		cost = 5
@@ -16594,7 +16594,7 @@ focus_tree = {
 		id = POL_study_foreign_built_ships
 		icon = GFX_focus_ger_accept_british_naval_dominance
 		prerequisite = { focus = POL_import_submarine_technology }
-		x = -1
+		x = 0
 		y = 1
 		cost = 5
 		relative_position_id = POL_import_submarine_technology

@@ -49,6 +49,67 @@ br_debug_decisions = {
 			base = 0
 		}
 	}
+	debug_ideo.1 = {
+		fire_only_once = no
+		complete_effect = {
+			set_politics = { ruling_party = sco_anarchism }
+		}
+	}
+	debug_ideo.2 = {
+		fire_only_once = no
+		complete_effect = {
+			set_politics = { ruling_party = vanwardism }
+		}
+	}
+	debug_ideo.3 = {
+		fire_only_once = no
+		complete_effect = {
+			set_politics = { ruling_party = scientific_socialism }
+		}
+	}
+	debug_ideo.4 = {
+		fire_only_once = no
+		complete_effect = {
+			set_politics = { ruling_party = conservatism_socialism }
+		}
+	}
+	
+	debug_ideo.5 = {
+		fire_only_once = no
+		complete_effect = {
+			set_politics = { ruling_party = social_democracy }
+		}
+	}
+	debug_ideo.6 = {
+		fire_only_once = no
+		complete_effect = {
+			set_politics = { ruling_party = social_liberation }
+		}
+	}
+	debug_ideo.7 = {
+		fire_only_once = no
+		complete_effect = {
+			set_politics = { ruling_party = conservatism_democracy }
+		}
+	}
+	debug_ideo.8 = {
+		fire_only_once = no
+		complete_effect = {
+			set_politics = { ruling_party = authoritarian }
+		}
+	}
+	debug_ideo.9 = {
+		fire_only_once = no
+		complete_effect = {
+			set_politics = { ruling_party = fascism }
+		}
+	}
+	debug_ideo.10 = {
+		fire_only_once = no
+		complete_effect = {
+			set_politics = { ruling_party = national_socialist }
+		}
+	}
 	debug_poland.1 = {
 
 		icon = generic_research

@@ -1,0 +1,19 @@
+﻿l_simp_chinese:
+ br_ideology_anarchism_ruling_tt: "§G执政党§!所属的意识形态是§Y$sco_anarchism$§!"
+ br_ideology_radical_communism_ruling_tt: "§G执政党§!所属的意识形态是§Y$sco_anarchism$§!或§Y$vanwardism$§!的任意一种"
+ br_ideology_socialism_ruling_tt: "§G执政党§!所属的意识形态是§Y$scientific_socialism$§!、§Y$conservatism_socialism$§!或§Y$social_democracy$§!的任意一种"
+ br_ideology_capitalism_ruling_tt: "§G执政党§!所属的意识形态是§Y$social_liberation$§!或§Y$conservatism_democracy$§!的任意一种"
+ br_ideology_authoritarian_ruling_tt: "§G执政党§!所属的意识形态是§Y$authoritarian$§!"
+ br_ideology_fascism_ruling_tt: "§G执政党§!所属的意识形态是§Y$fascist$§!、§Y$national_socialist$§!或§Y$supranational_socialist$§!的任意一种"
+
+ br_ideology_anarchism_nio_tt: "§G执政党§!所属的意识形态不是§Y$sco_anarchism$§!"
+ br_ideology_radical_communism_nio_tt: "§G执政党§!所属的意识形态不是§Y$sco_anarchism$§!或§Y$vanwardism$§!"
+ br_ideology_socialism_nio_tt: "§G执政党§!所属的意识形态不是以下任意一种：\n  §Y$scientific_socialism$§!\n  §Y$conservatism_socialism$§!\n  §Y$social_democracy$§!"
+ br_ideology_capitalism_nio_tt: "§G执政党§!所属的意识形态不是以下任意一种：\n  §Y$social_liberation$§!\n  §Y$conservatism_democracy$§!"
+ br_ideology_authoritarian_nio_tt: "§G执政党§!所属的意识形态不是以下任意一种：\n  §Y$authoritarian$§!"
+ br_ideology_fascism_nio_tt: "§G执政党§!所属的意识形态不是以下任意一种：\n  §Y$fascist$§!\n  §Y$national_socialist$§!\n  §Y$supranational_socialist$§!"
+
+ br_political_action_ban_anarchism_flag: "无政府主义已被宣布非法"
+ br_political_action_ban_socialism_flag: "社会主义已被宣布非法"
+ br_political_action_ban_democratic_flag: "民主主义已被宣布非法"
+ br_political_action_ban_fascism_flag: "法西斯主义已被宣布非法"

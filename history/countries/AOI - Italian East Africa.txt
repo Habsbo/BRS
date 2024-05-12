@@ -99,7 +99,7 @@ if = {
 set_convoys = 30
 
 set_politics = {
-	ruling_party = fascist
+	ruling_party = fascism
 	last_election = "1934.3.26"
 	election_frequency = 60
 	elections_allowed = no
@@ -108,7 +108,7 @@ set_politics = {
 set_popularities = {
 	conservatism_democracy = 10 #保守民主主义
 	authoritarian = 25 #威权主义
-	fascist = 60 #民族主义/束棒
+	fascism = 60 #民族主义/束棒
 	national_socialist = 5 #国家社会主义
 }
 

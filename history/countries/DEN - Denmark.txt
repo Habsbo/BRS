@@ -406,7 +406,7 @@ if = {
 		social_liberation = 36 #社会自由主义
 		conservatism_democracy = 28 #保守民主主义
 		authoritarian = 2 #威权主义
-		fascist = 5 #民族主义/束棒
+		fascism = 5 #民族主义/束棒
 	}
 
 	store_core_states_on_game_start = yes
@@ -428,7 +428,7 @@ if = {
 		social_liberation = 36 #社会自由主义
 		conservatism_democracy = 28 #保守民主主义
 		authoritarian = 2 #威权主义
-		fascist = 5 #民族主义/束棒
+		fascism = 5 #民族主义/束棒
 	}
 }
 

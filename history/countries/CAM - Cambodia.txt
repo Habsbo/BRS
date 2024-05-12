@@ -109,7 +109,7 @@ set_popularities = {
 	social_democracy = 10 #社会民主主义
 	conservatism_democracy = 70 #保守民主主义
 	authoritarian = 10 #威权主义
-	fascist = 5 #民族主义/束棒
+	fascism = 5 #民族主义/束棒
 }
 
 create_country_leader = {

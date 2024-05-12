@@ -1,0 +1,791 @@
+ideas = {
+	state_system = {
+		law = yes
+		use_list_view = yes
+		#封建制
+		br_laws_feudalism = {
+
+			allowed = { always = yes }
+
+			available = {
+				#
+				OR = {
+					has_idea = br_laws_monarchy
+					has_idea = br_laws_cleric
+					has_idea = br_laws_archon
+				}
+				#
+				has_idea = br_laws_loyalist
+				#
+				br_ideology_authoritarian_ruling = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				custom_modifier_tooltip = br_laws_feudalism_hidden
+			}
+
+			allowed_to_remove = {
+				#
+			}
+
+			on_add = {
+				#
+			}
+
+			on_remove = {
+				#
+			}
+
+			default = yes
+			cancel_if_invalid = yes
+		}
+		#独裁制
+		br_laws_dictatorship = {
+
+			allowed = { always = yes }
+
+			available = {
+				OR = {
+					br_ideology_capitalism_ruling = yes
+					br_ideology_authoritarian_ruling = yes
+					br_ideology_fascism_ruling = yes
+				}
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+
+			on_add = {
+				#
+			}
+
+			on_remove = {
+				#
+			}
+
+			cancel_if_invalid = yes
+		}
+		#民主授权制
+		br_laws_elected_representative = {
+
+			allowed = { always = yes }
+
+			available = {
+				OR = {
+					br_ideology_socialism_ruling = yes
+					br_ideology_capitalism_ruling = yes
+					br_ideology_fascism_ruling = yes
+				}
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+
+			on_add = {
+				#
+			}
+
+			on_remove = {
+				#
+			}
+
+			cancel_if_invalid = yes
+		}
+		#议会制
+		br_laws_parliamentarism = {
+
+			allowed = { always = yes }
+
+			available = {
+				OR = {
+					br_ideology_socialism_ruling = yes
+					br_ideology_capitalism_ruling = yes
+					br_ideology_fascism_ruling = yes
+				}
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+			
+			on_add = {
+				#
+			}
+
+			on_remove = {
+				#
+			}
+			
+			cancel_if_invalid = yes
+		}
+		#委员会制
+		br_laws_committee = {
+
+			allowed = { always = yes }
+
+			available = {
+				has_idea = br_laws_proletariat
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+			
+			on_add = {
+				#
+			}
+
+			on_remove = {
+				#
+			}
+			
+			cancel_if_invalid = yes
+		}
+		#技术治国
+		br_laws_technocracy = {
+
+			allowed = { always = yes }
+
+			available = {
+				NOT = {
+					#
+					has_idea = br_laws_feudalism
+					has_idea = br_laws_dictatorship
+					#
+					has_idea = br_laws_monarchy
+
+					#
+					has_idea = br_laws_loyalist
+				}
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+			
+			cancel_if_invalid = yes
+		}
+		#无政府
+	}
+
+	nation_cheif = {
+		law = yes
+		use_list_view = yes
+		#君主制
+		br_laws_monarchy = {
+
+			allowed = { always = yes }
+
+			available = {
+				OR = {
+					has_idea = br_laws_feudalism
+					has_idea = br_laws_dictatorship
+					has_idea = br_laws_parliamentarism
+				}
+				NOT = { has_idea = br_laws_atheism }
+				OR = {
+					has_idea = br_laws_loyalist
+					has_idea = br_laws_bourgeoisie
+				}
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+
+			on_add = {
+				#
+			}
+
+			on_remove = {
+				#
+			}
+
+			default = yes
+			cancel_if_invalid = yes
+		}
+		#神权制
+		br_laws_cleric = {
+
+			allowed = { always = yes }
+
+			available = {
+				has_idea = br_laws_spiritual
+				OR = {
+					has_idea = br_laws_loyalist
+					has_idea = br_laws_bourgeoisie
+				}
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+			
+			on_add = {
+				#
+			}
+
+			on_remove = {
+				#
+			}
+
+			cancel_if_invalid = yes
+		}
+		#元首制
+		br_laws_archon = {
+
+			allowed = { always = yes }
+
+			available = {
+				OR = {
+					has_idea = br_laws_feudalism
+					has_idea = br_laws_dictatorship
+					has_idea = br_laws_parliamentarism
+				}
+				OR = {
+					has_idea = br_laws_loyalist
+					has_idea = br_laws_bourgeoisie
+				}
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+
+			cancel_if_invalid = yes
+		}
+		#代表制
+		br_laws_proxy = {
+
+			allowed = { always = yes }
+
+			available = {
+				NOT = {
+					has_idea = br_laws_suffrage_prohibited
+					#
+					has_idea = br_laws_loyalist
+				}
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+
+			cancel_if_invalid = yes
+		}
+		#责任制
+		br_laws_premier = {
+
+			allowed = { always = yes }
+
+			available = {
+				NOT = { has_idea = br_laws_loyalist }
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+			
+			cancel_if_invalid = yes
+		}
+	}
+
+	election_right = {
+		law = yes
+		use_list_view = yes
+
+		#禁止选举
+		br_laws_suffrage_prohibited = {
+
+			allowed = { always = yes }
+
+			level = 5
+
+			available = {
+				#
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+
+			on_add = {
+				#set_politics = { elections_allowed = no }
+			}
+			default = yes
+			cancel_if_invalid = no
+		}
+		#地产赋权
+		br_laws_landowner = {
+
+			allowed = { always = yes }
+
+			level = 4
+
+			available = {
+				has_idea = br_laws_loyalist
+				NOT = {
+					has_idea = br_laws_elected_representative
+					has_idea = br_laws_parliamentarism
+				}
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+
+			cancel_if_invalid = yes
+		}
+		#资产赋权
+		br_laws_asset = {
+			
+			allowed = { always = yes }
+
+			level = 3
+
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+
+			cancel_if_invalid = yes
+		}
+		#资格选举
+		br_laws_qualification = {
+			
+			allowed = { always = yes }
+			
+			level = 2
+
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+
+			cancel_if_invalid = yes
+		}
+		#完全选举
+		br_laws_free = {
+			
+			allowed = { always = yes }
+
+			level = 1
+
+			available = {
+				NOT = {
+					has_idea = br_laws_feudalism
+					has_idea = br_laws_dictatorship
+					has_idea = br_laws_loyalist
+					has_idea = br_laws_pure_race
+					has_idea = br_laws_apartheid
+				}
+				OR = {
+					has_idea = br_laws_elected_representative
+					has_idea = br_laws_parliamentarism
+				}
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+
+			cancel_if_invalid = yes
+		}
+	}
+
+	culture_laws = {
+		law = yes
+		use_list_view = yes
+
+		#纯净种族
+		br_laws_pure_race = {
+			allowed = { always = yes }
+
+			available = {
+				OR = {
+					has_government = national_socialist
+					has_government = supranational_socialist
+				}
+			}
+			level = 6
+
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+			
+			cancel_if_invalid = yes
+		}
+		#种族隔离
+		br_laws_apartheid = {
+			allowed = { always = yes }
+
+			level = 5
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+			
+			cancel_if_invalid = no
+		}
+		#民族国家
+		br_laws_national_state = {
+			allowed = {
+				#
+			}
+			level = 4
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+			
+			default = yes
+			cancel_if_invalid = no
+		}
+		#主体文化
+		br_laws_mainstream = {
+			allowed = { always = yes }
+
+			level = 3
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+			
+			cancel_if_invalid = no
+		}
+		#多元文化
+		br_laws_diversity = {
+			allowed = { always = yes }
+
+			level = 2
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+			
+			cancel_if_invalid = no
+		}
+		#大同社会
+		br_laws_whole_in_unity = {
+			allowed = { always = yes }
+
+			level = 1
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+			
+			cancel_if_invalid = no
+		}
+	}
+
+	faith_laws = {
+		law = yes
+		use_list_view = yes
+		
+		#
+		br_laws_spiritual = {
+			allowed = {
+				#
+			}
+			level = 4
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+			
+			cancel_if_invalid = no
+		}
+		#
+		br_laws_religious_people = {
+			allowed = {
+				#
+			}
+			level = 4
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+			
+			default = yes
+			cancel_if_invalid = no
+		}
+		#信仰自由
+		br_laws_freedom_belief = {
+			allowed = {
+				#
+			}
+			level = 3
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+			
+			cancel_if_invalid = no
+		}
+
+		br_laws_separation = {
+			allowed = {
+				#
+			}
+			level = 2
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+			
+			cancel_if_invalid = no
+		}
+		#无神论
+		br_laws_atheism = {
+			allowed = {
+				#
+			}
+			level = 1
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+			
+			cancel_if_invalid = no
+		}
+	}
+
+	ruling_class = {
+		law = yes
+		use_list_view = yes
+
+		#地主阶级
+		br_laws_loyalist = {
+
+			available = {
+				OR = {
+					br_ideology_capitalism_ruling = yes
+					br_ideology_authoritarian_ruling = yes
+					has_government = fascism
+				}
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				always = yes
+			}
+
+			on_add = { country_event = br_laws.1 }
+			on_remove = {}
+
+			default = yes
+
+			cancel_if_invalid = yes
+		}
+		#资产阶级
+		br_laws_bourgeoisie = {
+
+			available = {
+				OR = {
+					has_government = social_democracy
+					br_ideology_capitalism_ruling = yes
+					br_ideology_authoritarian_ruling = yes
+					br_ideology_fascism_ruling = yes
+				}
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				br_ideology_capitalism_nio = yes
+			}
+			
+			on_add = { country_event = br_laws.2 }
+			on_remove = {}
+
+			cancel_if_invalid = yes
+		}
+		#无产阶级
+		br_laws_proletariat = {
+			
+			available = {
+				OR = {
+					br_ideology_radical_communism_ruling = yes
+					br_ideology_socialism_ruling = yes
+				}
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				br_ideology_radical_communism_nio = yes
+				OR = {
+					br_ideology_socialism_nio = yes
+					has_government = social_democracy
+				}
+			}
+			
+			on_add = { country_event = br_laws.3 }
+			on_remove = {}
+
+			cancel_if_invalid = yes
+		}
+	}
+}

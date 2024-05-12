@@ -45,7 +45,7 @@ set_popularities = {
 	social_democracy = 10 #社会民主主义
 	conservatism_democracy = 20 #保守民主主义
 	authoritarian = 50 #威权主义
-	fascist = 10 #民族主义/束棒
+	fascism = 10 #民族主义/束棒
 }
 
 1939.1.1 = {

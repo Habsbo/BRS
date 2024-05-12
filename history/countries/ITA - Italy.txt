@@ -712,22 +712,22 @@ if = {
 set_convoys = 200
 
 set_politics = {
-	ruling_party = revolution_socialism
+	ruling_party = vanwardism
 	last_election = "1934.3.26"
 	election_frequency = 60
 	elections_allowed = yes
 }
 
 set_popularities = {
-	anarchist = 3 #社会无政府主义
-	revolution_socialism = 37 #革命社会主义
+	sco_anarchism = 3 #社会无政府主义
+	vanwardism = 37 #革命社会主义
 	scientific_socialism = 10 #科学社会主义
 	conservatism_socialism = 0#保守社会主义
 	social_democracy = 0 #社会民主主义
 	social_liberation = 15 #社会自由主义
 	conservatism_democracy = 0 #保守民主主义
 	authoritarian = 0 #威权主义
-	fascist = 35 #民族主义/束棒
+	fascism = 35 #民族主义/束棒
 	national_socialist = 0 #国家社会主义
 	supranational_socialist = 0 #超国家社会主义
 }
