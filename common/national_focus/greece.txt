@@ -2365,9 +2365,7 @@ focus_tree = {
 		complete_tooltip = {}
 		
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.05
-			unlock_decision_category_tooltip = GRE_focus_on_economic_decisions
+			army_experience = 25
 		}
 		
 		ai_will_do = { factor = 1 }

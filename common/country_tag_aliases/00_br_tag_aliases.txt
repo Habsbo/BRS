@@ -82,6 +82,20 @@ HEK = {
 		}
 	}
 }
+HED = {
+	original_tag = GRE
+	country_score = {
+		base = 0
+		modifier = {
+			has_idea = br_laws_proletariat
+			add = 5
+		}
+		modifier = {
+			has_country_flag = br_HEL_hellenic_democratic_republic_flag
+			add = 10
+		}
+	}
+}
 BYZ = {
 	original_tag = GRE
 	country_score = {

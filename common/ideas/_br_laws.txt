@@ -75,7 +75,7 @@ ideas = {
 			cancel_if_invalid = yes
 		}
 		#民主授权制
-		br_laws_elected_representative = {
+		br_laws_elected_president = {
 
 			allowed = { always = yes }
 
@@ -395,7 +395,7 @@ ideas = {
 			available = {
 				has_idea = br_laws_loyalist
 				NOT = {
-					has_idea = br_laws_elected_representative
+					has_idea = br_laws_elected_president
 					has_idea = br_laws_parliamentarism
 				}
 			}
@@ -466,7 +466,7 @@ ideas = {
 					has_idea = br_laws_apartheid
 				}
 				OR = {
-					has_idea = br_laws_elected_representative
+					has_idea = br_laws_elected_president
 					has_idea = br_laws_parliamentarism
 				}
 			}
@@ -727,6 +727,8 @@ ideas = {
 			on_add = { country_event = br_laws.1 }
 			on_remove = {}
 
+			cost = 0
+
 			default = yes
 
 			cancel_if_invalid = yes
@@ -755,6 +757,8 @@ ideas = {
 			
 			on_add = { country_event = br_laws.2 }
 			on_remove = {}
+
+			cost = 0
 
 			cancel_if_invalid = yes
 		}
@@ -785,6 +789,8 @@ ideas = {
 			on_add = { country_event = br_laws.3 }
 			on_remove = {}
 
+			cost = 0
+			
 			cancel_if_invalid = yes
 		}
 	}

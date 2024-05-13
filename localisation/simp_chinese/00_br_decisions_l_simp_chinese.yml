@@ -10,11 +10,9 @@
 
  br_laws_feudalism_hidden: "$br_laws_feudalism$"
  br_laws_dictatorship_hidden: "$br_laws_dictatorship$"
- br_laws_elected_representative_hidden: "$br_laws_elected_representative$"
+ br_laws_elected_president_hidden: "$br_laws_elected_president$"
  br_laws_parliamentarism_hidden: "$br_laws_parliamentarism$"
  br_laws_committee_hidden: "$br_laws_committee$"
-
- br_lwas_changed_state_system_remove_flags_NOT_tt: "最近废除的旧国体支持者声势渐微"
 
  br_political_actions: "政治活动"
  br_political_actions_desc: ""

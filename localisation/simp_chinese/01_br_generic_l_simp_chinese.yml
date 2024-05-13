@@ -1,4 +1,14 @@
 ﻿l_simp_chinese:
+ black_force_dynamic_modifier: "黑军"
+ red_army_dynamic_modifier: "红军"
+ land_force_alt_dynamic_modifier: "[FROM.GetAdjective]陆军"
+
+ committee_combat_dynamic_modifier: "战斗评估委员会"
+ political_commissar_dynamic_modifier: "政治委员"
+ officer_cap_dynamic_modifier: "[FROM.GetAdjective]的军官团"
+
+ national_strikes_dynamic_modifier: "全国罢工"
+
  br_ideology_anarchism_ruling_tt: "§G执政党§!所属的意识形态是§Y$sco_anarchism$§!"
  br_ideology_radical_communism_ruling_tt: "§G执政党§!所属的意识形态是§Y$sco_anarchism$§!或§Y$vanwardism$§!的任意一种"
  br_ideology_socialism_ruling_tt: "§G执政党§!所属的意识形态是§Y$sci_socialism$§!、§Y$con_socialism$§!或§Y$demo_socialism$§!的任意一种"

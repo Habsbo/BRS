@@ -74,68 +74,38 @@ if = {
 		mtg_transport = 1
 	}
 }
-1936.1.1 = {
-	if = {
-		limit = { has_dlc = "Battle for the Bosporus" }
-		add_opinion_modifier = { 
-			target = ROM
-			modifier = BFTB_balkan_pact_ally
-		}
-		add_opinion_modifier = { 
-			target = TUR
-			modifier = BFTB_balkan_pact_ally
-		}
-		add_opinion_modifier = { 
-			target = YUG
-			modifier = BFTB_balkan_pact_ally
-		}
-		add_opinion_modifier = { 
-			target = BUL
-			modifier = BFTB_balkan_pact_enemy
-		}
-		add_opinion_modifier = { 
-			target = HUN
-			modifier = BFTB_balkan_pact_enemy
-		}
-		set_country_flag = GRE_factions_unlocked
-		add_ideas = {
-			export_focus
-			limited_conscription
-			civilian_economy
-			#GRE_george_ii
-			GRE_debt_to_the_ifc
-			GRE_foreign_monopolies
-			GRE_schachtplan
-			GRE_political_instability
-			GRE_agrarian_society
-		}
 
-		set_variable = { var = GRE_debt_to_the_ifc_britain_var value = 10 }
-		set_variable = { var = GRE_debt_to_the_ifc_france_var value = 10 }
-		set_variable = { var = GRE_debt_to_the_ifc_italy_var value = 10 }
-		set_variable = { var = GRE_debt_to_the_ifc_paid_var value = 0 }
+add_opinion_modifier = { target = ROM modifier = BFTB_balkan_pact_ally }
+add_opinion_modifier = { target = TUR modifier = BFTB_balkan_pact_ally }
+add_opinion_modifier = { target = YUG modifier = BFTB_balkan_pact_ally }
+add_opinion_modifier = { target = BUL modifier = BFTB_balkan_pact_enemy }
+add_opinion_modifier = { target = HUN modifier = BFTB_balkan_pact_enemy }
+set_country_flag = GRE_factions_unlocked #解锁派系机制
 
-		add_opinion_modifier = { 
-			target = GER
-			modifier = GRE_strong_trading_ties
-		}
-		GER = { 
-			add_opinion_modifier = { 
-				target = GRE
-				modifier = GRE_strong_trading_ties
-			}
-		}
-	}
+add_ideas = {
+	export_focus
+	volunteer_only
+	civilian_economy
+	#
+	GRE_debt_to_the_ifc
+	GRE_foreign_monopolies
+	GRE_schachtplan
+	#
+	GRE_political_violence
+	GRE_military_disloyalty
+	#GRE_george_ii
+	GRE_political_instability
+	GRE_agrarian_society
 
-	if = {
-		limit = { NOT = { has_dlc = "Battle for the Bosporus" } }
-		add_ideas = {
-			export_focus
-			limited_conscription
-			civilian_economy
-		}
-	}
 }
+
+set_variable = { var = GRE_debt_to_the_ifc_britain_var value = 10 }
+set_variable = { var = GRE_debt_to_the_ifc_france_var value = 10 }
+set_variable = { var = GRE_debt_to_the_ifc_italy_var value = 10 }
+set_variable = { var = GRE_debt_to_the_ifc_paid_var value = 0 }
+
+add_opinion_modifier = { target = GER modifier = GRE_strong_trading_ties }
+GER = { add_opinion_modifier = { target = HEL modifier = GRE_strong_trading_ties } }
 
 set_convoys = 10
 
@@ -400,27 +370,64 @@ add_ideas = {
 	br_laws_religious_people
 	br_laws_bourgeoisie
 }
-
+#dynamic modifier - army
+add_dynamic_modifier = { modifier = black_force_dynamic_modifier }
+add_dynamic_modifier = { modifier = red_army_dynamic_modifier }
+add_dynamic_modifier = { modifier = land_force_alt_dynamic_modifier }
+set_variable = { troops_political_power_gain = 0.15 }
+set_variable = { troops_army_attack_factor = -0.10 }
+set_variable = { troops_army_defence_factor = -0.10 }
+set_variable = { troops_army_speed_factor = -0.10 }
+set_variable = { troops_army_org_factor = -0.10 }
+set_variable = { troops_conscription_factor = -0.10 }
 #
-set_country_flag = _country_flag = br_HEL_hellenic_kingdom_flag
+add_dynamic_modifier = { modifier = committee_combat_dynamic_modifier }
+add_dynamic_modifier = { modifier = political_commissar_dynamic_modifier }
+add_dynamic_modifier = { modifier = officer_cap_dynamic_modifier }
+set_variable = { officer_cap_political_power_factor = 0.05 }
+set_variable = { officer_cap_army_advisor_cost_factor = -0.10 }
+set_variable = { officer_cap_planning_speed = -0.50 }
+set_variable = { officer_cap_experience_gain_army_factor = -0.20 }
+set_variable = { officer_cap_command_abilities_cost_factor = 0.20 }
+set_variable = { officer_cap_land_doctrine_cost_factor = -0.10 }
+#
+add_dynamic_modifier = { modifier = national_strikes_dynamic_modifier }
+set_variable = { national_strikes_political_power_factor = -0.05 }
+set_variable = { national_strikes_industrial_capacity_factory = -0.05 }
+set_variable = { national_strikes_industrial_capacity_dockyard = -0.05 }
+set_variable = { national_strikes_production_speed_buildings_factor = -0.05 }
+#
+set_country_flag = br_HEL_hellenic_kingdom_flag
 #
 create_dynamic_country = {
 	original_tag = GRE
 	set_country_flag = br_HEL_hellenic_republic_flag
-	set_politics = {
-		ruling_party = demo_liberalism
-	}
+	set_politics = { ruling_party = demo_liberalism }
 	set_cosmetic_tag = HEL_republic
 	set_research_slots = 3
 	reserve_dynamic_country = yes
 }
+create_dynamic_country = {
+	original_tag = GRE
+	set_country_flag = br_HEL_hellenic_democratic_republic_flag
+	set_politics = { ruling_party = sci_socialism }
+	set_cosmetic_tag = HEL_democratic_republic
+	set_research_slots = 3
+	reserve_dynamic_country = yes
+}
 every_state = {
-	limit = {
-		is_core_of = HER
-	}
+	limit = { is_core_of = HER }
 	remove_core_of = HER
 }
+every_state = {
+	limit = { is_core_of = HED }
+	remove_core_of = HED
+}
 #
+set_variable = { gre_civil_war_threat_var = 50 }
+set_variable = { gre_civil_war_divisions_counter_var = 0 }
+set_variable = { gre_republic_civil_war_divisions_counter_var = 5 }
+#ifc
 set_variable = { var = br_hellenic_countryconfidence_var value = 80 }
 set_variable = { var = gre_pbdt_the_ifc_gre_var value = 5000 }
 set_variable = { var = gre_pbdt_the_ifc_gre_loans_var value = 8500 }

@@ -1,6 +1,8 @@
 ﻿l_simp_chinese:
 #ideas
  GRE_megali_idea: "伟大理想"
+ GRE_political_violence: "政治暴力"
+ GRE_political_violence_desc: ""
 #decisions
  GRE_hellenic_ambitions: "希腊人的野望"
  GRE_megali_idea_map_category_name: "伟大理想中的§G大希腊§!"
@@ -48,8 +50,8 @@
  GRE_assign_republicans_officers: "§G共和派§!军官接管§Y陆军§!"
  GRE_assign_republicans_officers_desc: "由于§Y$GRE_sophoklis_venizelos$§!的巨大影响力，立宪共和的主张仍遗存有广阔的生存土壤，青中年军官对于共和派的同情和对§Y$GRE_sophoklis_venizelos$§!的仰慕使得他们对没有君主制的民主制有不切实际的幻想，并妄图通过渗透军队来颠覆王国政权。"
 
- GRE_declare_be_a_republic: "宣言重建共和国"
- gre_republic_civil_war_divisions_counter_var_more: "共和派拥有更多的军队支持,且有超过5个师效忠"
+ GRE_declare_be_a_republic: "共和国宣言"
+ gre_republic_civil_war_divisions_counter_var_more: "共和派拥有更多的军队支持,且有至少10个师效忠"
 
  GRE_ensure_loyalty_of_militaries_state_target: "确保军队的忠诚"
 

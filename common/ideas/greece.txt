@@ -1,6 +1,44 @@
 ideas = {
 
 	country = { 
+		GRE_political_violence = {
+
+			picture = SPR_political_violence
+
+			allowed = {
+				original_tag = GRE
+				NOT = { has_global_flag = br_global_hellas_civilwar_started_flag }
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_factor = -0.15
+				disabled_ideas = 1
+			}
+		}
+		GRE_military_disloyalty = {
+
+			picture = chi_war_of_resistance
+
+			allowed = {
+				original_tag = GRE
+				NOT = { has_global_flag = br_global_hellas_civilwar_started_flag }
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				custom_modifier_tooltip = SPR_military_disloyalty_tt
+				military_leader_cost_factor = 1.00
+			}
+
+			on_remove = { country_event = br_hellas_civilwar.11 }
+		}
 
 		GRE_agrarian_society = { #农业社会
 				

@@ -1,4 +1,3 @@
-
 #ELECTION DECISION 大选
 GRE_election_category = {
 	#王室危机
@@ -42,15 +41,13 @@ GRE_election_category = {
 		priority = 10
 	}
 	#工人运动
-	GRE_worker_strikes = {
+	GRE_worker_strikes_mission.1 = { #罢工
 		icon = generic_political_rally
 
 		activation = {
 			#
 		}
-		available = {
-			always = no
-		}
+		available = { always = no }
 		visible = {
 			is_puppet = no
 			has_civil_war = no
@@ -58,47 +55,51 @@ GRE_election_category = {
 		}
 
 		is_good = no
-		days_mission_timeout = 30
+		days_mission_timeout = 14
+		cancel_if_not_visible = yes
+		#selectable_mission = no
+
+		cancel_effect = {
+			if = {
+				limit = {
+					has_global_flag = br_global_hellas_civilwar_started_flag
+					NOT = { has_global_flag = br_global_hellas_civilwar_ended_flag }
+				}
+				hidden_effect = { activate_mission = GRE_worker_strikes_mission.2 }
+			}
+		}
+
+		timeout_effect = {
+			if = {
+				limit = {
+					NOT = { has_global_flag = br_global_hellas_civilwar_started_flag }
+				}
+				hidden_effect = { activate_mission = GRE_worker_strikes_mission.1 }
+			}
+		}
+		
+		priority = 9
+	}
+	GRE_worker_strikes_mission.2 = { #社会派革命
+		icon = generic_political_rally
+
+		activation = { always = no }
+		available = { always = no }
+
+		visible = {
+			tag = HER
+			original_tag = GRE
+			is_puppet = no
+			has_stability < 0.5
+		}
+
+		is_good = no
+		days_mission_timeout = 90
 		cancel_if_not_visible = yes
 		#selectable_mission = no
 
 		timeout_effect = {
-			if = {
-				limit = { has_idea = SPR_national_strikes_8 }
-				swap_ideas = { remove_idea = SPR_national_strikes_8 add_idea = SPR_national_strikes_9 }
-			}
-			else_if = {
-				limit = { has_idea = SPR_national_strikes_7 }
-				swap_ideas = { remove_idea = SPR_national_strikes_7 add_idea = SPR_national_strikes_8 }
-			}
-			else_if = {
-				limit = { has_idea = SPR_national_strikes_6 }
-				swap_ideas = { remove_idea = SPR_national_strikes_6 add_idea = SPR_national_strikes_7 }
-			}
-			else_if = {
-				limit = { has_idea = SPR_national_strikes_5 }
-				swap_ideas = { remove_idea = SPR_national_strikes_5 add_idea = SPR_national_strikes_6 }
-			}
-			else_if = {
-				limit = { has_idea = SPR_national_strikes_4 }
-				swap_ideas = { remove_idea = SPR_national_strikes_4 add_idea = SPR_national_strikes_5 }
-			}
-			else_if = {
-				limit = { has_idea = SPR_national_strikes_3 }
-				swap_ideas = { remove_idea = SPR_national_strikes_3 add_idea = SPR_national_strikes_4 }
-			}
-			else_if = {
-				limit = { has_idea = SPR_national_strikes_2 }
-				swap_ideas = { remove_idea = SPR_national_strikes_2 add_idea = SPR_national_strikes_3 }
-			}
-			else_if = {
-				limit = { has_idea = SPR_national_strikes_1 }
-				swap_ideas = { remove_idea = SPR_national_strikes_1 add_idea = SPR_national_strikes_2 }
-			}
-			else = {
-				add_ideas = SPR_national_strikes_1
-			}
-			hidden_effect = { activate_mission = GRE_worker_strikes }
+			#
 		}
 		
 		priority = 9
@@ -197,7 +198,7 @@ GRE_election_category = {
 			add_stability = -0.03
 		}
 	}
-	#任用韦尼泽洛斯
+	#韦尼泽洛斯
 	GRE_rehired_venizelos = {
 		icon = eng_trade_unions_support
 
@@ -270,7 +271,7 @@ GRE_election_category = {
 	}
 	#安抚军队
 	GRE_conciliate_militaries = {
-		icon = GFX_
+		icon = generic_military
 
 		allowed = {
 			original_tag = GRE
@@ -347,7 +348,7 @@ GRE_election_category = {
 		}
 
 		is_good = no
-		days_mission_timeout = 90
+		days_mission_timeout = 14
 		cancel_if_not_visible = yes
 
 		complete_effect = {
@@ -357,8 +358,8 @@ GRE_election_category = {
 		timeout_effect = {
 			custom_effect_tooltip = br_gre_cwdc_increased_rep
 			custom_effect_tooltip = br_gre_cwt_increased_5
-			add_to_variable = { var = gre_republic_civil_war_divisions_counter_var value = 3 }
-			add_to_variable = { var = gre_civil_war_threat_icon_var value = 5 }
+			add_to_variable = { gre_republic_civil_war_divisions_counter_var = 3 }
+			add_to_variable = { gre_civil_war_threat_icon_var = 5 }
 		}
 		
 		priority = 9
@@ -380,7 +381,7 @@ GRE_election_category = {
 				}
 				check_variable = {
 					var = gre_republic_civil_war_divisions_counter_var
-					value > 5
+					value > 9
 				}
 			}
 		}
@@ -389,14 +390,27 @@ GRE_election_category = {
 
 		complete_effect = {
 			add_ideas = br_laws_proxy
+			remove_ideas = GRE_political_violence
+			remove_ideas = GRE_military_disloyalty
 		}
 	}
 	#确保忠诚
 	GRE_ensure_loyalty_of_militaries_state_target = {
 		icon = eng_support_imperialist_coup
 
+		available = {
+			NOT = {
+				has_global_flag = br_global_hellas_civilwar_started_flag
+				has_global_flag = br_global_hellas_civilwar_ended_flag
+			}
+		}
+
 		target_root_trigger = {
-			tag = GRE
+			tag = HEK
+			NOT = {
+				has_global_flag = br_global_hellas_civilwar_started_flag
+				has_global_flag = br_global_hellas_civilwar_ended_flag
+			}
 		}
 		#target_array = GRE.core_states
 		target_trigger = {
@@ -412,16 +426,15 @@ GRE_election_category = {
 
 		complete_effect = {
 			FROM = {
-				#
+				set_state_flag = br_state_loyalty_of_militaries_flag
 			}
 			ROOT = {
 				custom_effect_tooltip = br_gre_cwdc_increased_knd
-				add_to_variable = { var = gre_civil_war_divisions_counter_var value = 1 }
+				add_to_variable = { var = gre_civil_war_divisions_counter_var value = 3 }
 			}
 		}
 
 		remove_effect = {
-			add_to_variable = { var = gre_civil_war_divisions_counter_var value = 2 }
 			custom_effect_tooltip = br_gre_cwt_decreased
 			add_to_variable = { var = gre_civil_war_threat_icon_var value = -1 }
 		}
