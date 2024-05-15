@@ -193,6 +193,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
+				stability_factor = -0.10
 				custom_modifier_tooltip = POL_nationalist_military_mtt
 				fascism_drift = 0.01
 				nationalism_drift = 0.01
