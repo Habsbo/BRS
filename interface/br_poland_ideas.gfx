@@ -2,7 +2,7 @@
 spriteTypes = {
 	spriteType = {
 		name = "GFX_portrait_POL_Jozef_Pilsudski"
-		texturefile = "gfx/interface/leaders/POL/Jozef_Pilsudski.dds"
+		texturefile = "gfx/leaders/POL/Jozef_Pilsudski.dds"
 	}
 	
 	spriteType = {
