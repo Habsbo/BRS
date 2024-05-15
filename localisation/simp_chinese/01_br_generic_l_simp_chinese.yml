@@ -8,6 +8,12 @@
  officer_cap_dynamic_modifier: "[FROM.GetAdjective]的军官团"
 
  national_strikes_dynamic_modifier: "全国罢工"
+ national_strikes_added_tt: "§Y$national_strikes_dynamic_modifier$§!追加效果："
+
+ political_power_factor_tt: " $MODIFIER_POLITICAL_POWER_FACTOR$: $RIGHT|+=%1$"
+ industrial_capacity_factory_tt: " $MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: $RIGHT|+=%1$"
+ industrial_capacity_dockyard_tt: " $MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: $RIGHT|+=%1$"
+ production_speed_buildings_factor_tt: " $MODIFIER_PRODUCTION_SPEED_BUILDINGS_FACTOR$: $RIGHT|+=%1$"
 
  br_ideology_anarchism_ruling_tt: "§G执政党§!所属的意识形态是§Y$sco_anarchism$§!"
  br_ideology_radical_communism_ruling_tt: "§G执政党§!所属的意识形态是§Y$sco_anarchism$§!或§Y$vanwardism$§!的任意一种"

@@ -1,6 +1,7 @@
-add_namespace = br_hellas
 add_namespace = br_megali_idea
 add_namespace = br_ifc
+###
+add_namespace = br_hellas
 
 country_event = { #
 	id = br_hellas.1
@@ -172,10 +173,10 @@ country_event = { #
 	}
 
 }
-###
+###希腊内战
 add_namespace = br_hellas_civilwar
 
-country_event = { #
+country_event = { #共和国还是王党
 	id = br_hellas_civilwar.1
 	title = br_hellas_civilwar.1.title
 	desc = br_hellas_civilwar.1.desc
@@ -205,36 +206,68 @@ country_event = { #
 			transfer_state_to = HER
 		}
 		#
-		transfer_units_fraction= {
+		transfer_units_fraction = {
 			target = HER
-			size = 0.5 #stockpile_ratio = 0.8
-			army_ratio = 0.5
-			navy_ratio = 0.5
-			air_ratio = 0.5
+			size = 0.2
+			army_ratio = 0.1
+			navy_ratio = 0.1
+			air_ratio = 0.1
 			keep_unit_leaders_trigger = { has_trait = trait_GRE_stauch_monarchist }
 		}
 		#
 		HER = {
-			declare_war_on = { target = ROOT type = annex_everything }
-			add_civil_war_target = ROOT
 			complete_national_focus = GRE_great_hellenic_republic
+			#dynamic modifier - army
+			add_dynamic_modifier = { modifier = black_force_dynamic_modifier }
+			add_dynamic_modifier = { modifier = red_army_dynamic_modifier }
+			add_dynamic_modifier = { modifier = land_force_alt_dynamic_modifier }
+			set_variable = { troops_political_power_gain = HEK.troops_political_power_gain }
+			set_variable = { troops_army_attack_factor = HEK.troops_army_attack_factor }
+			set_variable = { troops_army_defence_factor = HEK.troops_army_defence_factor }
+			set_variable = { troops_army_speed_factor = HEK.troops_army_speed_factor }
+			set_variable = { troops_army_org_factor = HEK.troops_army_org_factor }
+			set_variable = { troops_conscription_factor = HEK.troops_conscription_factor }
+			#
+			add_dynamic_modifier = { modifier = committee_combat_dynamic_modifier }
+			add_dynamic_modifier = { modifier = political_commissar_dynamic_modifier }
+			add_dynamic_modifier = { modifier = officer_cap_dynamic_modifier }
+			set_variable = { officer_cap_political_power_factor = HEK.officer_cap_political_power_factor }
+			set_variable = { officer_cap_army_advisor_cost_factor = HEK.officer_cap_army_advisor_cost_factor }
+			set_variable = { officer_cap_planning_speed = HEK.officer_cap_planning_speed }
+			set_variable = { officer_cap_experience_gain_army_factor = HEK.officer_cap_experience_gain_army_factor }
+			set_variable = { officer_cap_command_abilities_cost_factor = HEK.officer_cap_command_abilities_cost_factor }
+			set_variable = { officer_cap_land_doctrine_cost_factor = HEK.officer_cap_land_doctrine_cost_factor }
+			#
+			add_dynamic_modifier = { modifier = national_strikes_dynamic_modifier }
+			set_variable = { national_strikes_political_power_factor = HEK.national_strikes_political_power_factor }
+			set_variable = { national_strikes_industrial_capacity_factory = HEK.national_strikes_industrial_capacity_factory }
+			set_variable = { national_strikes_industrial_capacity_dockyard = HEK.national_strikes_industrial_capacity_dockyard }
+			set_variable = { national_strikes_production_speed_buildings_factor = HEK.national_strikes_production_speed_buildings_factor }
 		}
 
 		ai_chance = { base = 1 }
 	}
 	
 	option = { #共和派
-		name = br_hellas_civilwar.2.a #
+		name = br_hellas_civilwar.1.b #
 
 		#
 		complete_national_focus = GRE_great_hellenic_republic
 		#
+		add_ideas = {
+			br_laws_parliamentarism
+			br_laws_proxy
+			br_laws_asset
+			br_laws_national_state
+			br_laws_religious_people
+			br_laws_bourgeoisie
+		}
 
 		ai_chance = { base = 0 }
 	}
 
 }
-country_event = { #
+country_event = { #共和国还是民主希腊
 	id = br_hellas_civilwar.2
 	title = br_hellas_civilwar.2.title
 	desc = br_hellas_civilwar.2.desc
@@ -269,7 +302,6 @@ country_event = { #
 			army_ratio = 0.5
 			navy_ratio = 0.5
 			air_ratio = 0.5
-			keep_unit_leaders_trigger = { has_trait = trait_GRE_stauch_monarchist }
 		}
 		#
 		HED = {
@@ -289,6 +321,41 @@ country_event = { #
 			}
 			#
 			complete_national_focus = GRE_great_hellenic_republic
+			#法律
+			add_ideas = {
+				br_laws_parliamentarism
+				br_laws_proxy
+				br_laws_asset
+				br_laws_national_state
+				br_laws_religious_people
+				br_laws_bourgeoisie
+			}
+			#dynamic modifier - army
+			add_dynamic_modifier = { modifier = black_force_dynamic_modifier }
+			add_dynamic_modifier = { modifier = red_army_dynamic_modifier }
+			add_dynamic_modifier = { modifier = land_force_alt_dynamic_modifier }
+			set_variable = { troops_political_power_gain = HEK.troops_political_power_gain }
+			set_variable = { troops_army_attack_factor = HEK.troops_army_attack_factor }
+			set_variable = { troops_army_defence_factor = HEK.troops_army_defence_factor }
+			set_variable = { troops_army_speed_factor = HEK.troops_army_speed_factor }
+			set_variable = { troops_army_org_factor = HEK.troops_army_org_factor }
+			set_variable = { troops_conscription_factor = HEK.troops_conscription_factor }
+			#
+			add_dynamic_modifier = { modifier = committee_combat_dynamic_modifier }
+			add_dynamic_modifier = { modifier = political_commissar_dynamic_modifier }
+			add_dynamic_modifier = { modifier = officer_cap_dynamic_modifier }
+			set_variable = { officer_cap_political_power_factor = HEK.officer_cap_political_power_factor }
+			set_variable = { officer_cap_army_advisor_cost_factor = HEK.officer_cap_army_advisor_cost_factor }
+			set_variable = { officer_cap_planning_speed = HEK.officer_cap_planning_speed }
+			set_variable = { officer_cap_experience_gain_army_factor = HEK.officer_cap_experience_gain_army_factor }
+			set_variable = { officer_cap_command_abilities_cost_factor = HEK.officer_cap_command_abilities_cost_factor }
+			set_variable = { officer_cap_land_doctrine_cost_factor = HEK.officer_cap_land_doctrine_cost_factor }
+			#
+			add_dynamic_modifier = { modifier = national_strikes_dynamic_modifier }
+			set_variable = { national_strikes_political_power_factor = HEK.national_strikes_political_power_factor }
+			set_variable = { national_strikes_industrial_capacity_factory = HEK.national_strikes_industrial_capacity_factory }
+			set_variable = { national_strikes_industrial_capacity_dockyard = HEK.national_strikes_industrial_capacity_dockyard }
+			set_variable = { national_strikes_production_speed_buildings_factor = HEK.national_strikes_production_speed_buildings_factor }
 		}
 
 		ai_chance = { base = 1 }
@@ -325,10 +392,10 @@ country_event = { #
 		ai_chance = { factor = 2 }
 	}
 }
-country_event = { #
+country_event = { #战争结束
 	id = br_hellas_civilwar.100
-	title = br_hellas_civilwar.1.title
-	desc = br_hellas_civilwar.1.desc
+	title = br_hellas_civilwar.100.title
+	desc = br_hellas_civilwar.100.desc
 	picture = GFX_report_event_chinese_soldiers_fighting
 
 	fire_only_once = yes
@@ -342,7 +409,7 @@ country_event = { #
 	}
 
 	option = { #王党
-		name = br_hellas_civilwar.1.a #
+		name = br_hellas_civilwar.100.a #
 		#
 
 		ai_chance = { factor = 2 }

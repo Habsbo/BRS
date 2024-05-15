@@ -91,19 +91,19 @@ add_ideas = {
 	GRE_foreign_monopolies
 	GRE_schachtplan
 	#
-	GRE_political_violence
+	GRE_political_instability_hidden
+	GRE_political_instability
 	GRE_military_disloyalty
 	#GRE_george_ii
-	GRE_political_instability
 	GRE_agrarian_society
 
 }
-
+#IFC
 set_variable = { var = GRE_debt_to_the_ifc_britain_var value = 10 }
 set_variable = { var = GRE_debt_to_the_ifc_france_var value = 10 }
 set_variable = { var = GRE_debt_to_the_ifc_italy_var value = 10 }
 set_variable = { var = GRE_debt_to_the_ifc_paid_var value = 0 }
-
+#
 add_opinion_modifier = { target = GER modifier = GRE_strong_trading_ties }
 GER = { add_opinion_modifier = { target = HEL modifier = GRE_strong_trading_ties } }
 
@@ -359,8 +359,6 @@ if = {
 
 #国名&地区名
 set_cosmetic_tag = HEL_kingdom
-set_country_flag = br_GRE_the_throne_of_crisis_flag
-set_country_flag = GRE_factions_unlocked
 #法律
 add_ideas = {
 	br_laws_parliamentarism
@@ -398,8 +396,8 @@ set_variable = { national_strikes_industrial_capacity_dockyard = -0.05 }
 set_variable = { national_strikes_production_speed_buildings_factor = -0.05 }
 #
 set_country_flag = br_HEL_hellenic_kingdom_flag
-#
-create_dynamic_country = {
+#dynamic tag
+create_dynamic_country = { # HER - Hellas republic
 	original_tag = GRE
 	set_country_flag = br_HEL_hellenic_republic_flag
 	set_politics = { ruling_party = demo_liberalism }
@@ -407,7 +405,7 @@ create_dynamic_country = {
 	set_research_slots = 3
 	reserve_dynamic_country = yes
 }
-create_dynamic_country = {
+create_dynamic_country = { # HED - Hellas democratic republic
 	original_tag = GRE
 	set_country_flag = br_HEL_hellenic_democratic_republic_flag
 	set_politics = { ruling_party = sci_socialism }
@@ -415,16 +413,7 @@ create_dynamic_country = {
 	set_research_slots = 3
 	reserve_dynamic_country = yes
 }
-every_state = {
-	limit = { is_core_of = HER }
-	remove_core_of = HER
-}
-every_state = {
-	limit = { is_core_of = HED }
-	remove_core_of = HED
-}
 #
-set_variable = { gre_civil_war_threat_var = 50 }
 set_variable = { gre_civil_war_divisions_counter_var = 0 }
 set_variable = { gre_republic_civil_war_divisions_counter_var = 5 }
 #ifc

@@ -1,0 +1,14 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			HEL = {
+				set_variable = { gre_civil_war_threat_var = 52 }
+				activate_mission = GRE_the_throne_of_crisis
+				activate_mission = GRE_worker_strikes_mission.1
+				activate_mission = GRE_assign_republicans_officers
+			}
+			every_state = { limit = { is_core_of = HER } remove_core_of = HER }
+			every_state = { limit = { is_core_of = HED } remove_core_of = HED }
+		}
+	}
+}

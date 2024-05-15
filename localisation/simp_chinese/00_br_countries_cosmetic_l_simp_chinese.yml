@@ -15,6 +15,8 @@
 
 #意大利
  ITA_socialist_republic: "$ITA$社会主义共和国"
+ ITA_socialist_republic_DEF: "$ITA$社会主义共和国"
+ ITA_socialist_republic_ADJ: "$ITA$共和国"
 
 #巴尔干
  HEL_kingdom: "$GRE$王国"
@@ -23,7 +25,10 @@
  HEL_republic: "$GRE$共和国"
  HEL_republic_DEF: "$GRE$共和国"
  HEL_republic_ADJ: "$GRE$"
-
+ HEL_democratic_republic: "$GRE$民主共和国"
+ HEL_democratic_republic_DEF: "$GRE$民主共和国"
+ HEL_democratic_republic_ADJ: "$GRE$"
+ 
  GRE_byz_republic_fascism: "希腊国民联盟"
  GRE_byz_republic_fascism_DEF: "希腊国民联盟"
  GRE_byz_republic_fascism_ADJ: "希腊"
@@ -33,20 +38,12 @@
  GRE_com_independent_communism: "希腊人民共和国"
  GRE_com_independent_communism_DEF: "希腊人民共和国"
  GRE_com_independent_communism_ADJ: "希腊"
- GRE_stalinist_communism: "希腊苏维埃共和国联盟"
- GRE_stalinist_communism_DEF: "希腊苏维埃共和国联盟"
+ GRE_stalinist_communism: "希腊苏维埃共和国"
+ GRE_stalinist_communism_DEF: "希腊苏维埃共和国"
  GRE_stalinist_communism_ADJ: "希腊"
- GRE_GREATER_GREECE_neutrality: "大希腊王国"
- GRE_GREATER_GREECE_fascism: "大希腊帝国"
- GRE_GREATER_GREECE_democratic: "大希腊"
- GRE_GREATER_GREECE_communism: "爱琴公社"
- GRE_GREATER_GREECE_neutrality_DEF: "大希腊王国"
- GRE_GREATER_GREECE_fascism_DEF: "大希腊帝国"
- GRE_GREATER_GREECE_democratic_DEF: "大希腊"
- GRE_GREATER_GREECE_communism_DEF: "爱琴公社"
- GRE_GREATER_GREECE_fascism_ADJ: "希腊"
- GRE_GREATER_GREECE_democratic_ADJ: "希腊"
- GRE_GREATER_GREECE_communism_ADJ: "爱琴海"
+ GRE_GREATER_GREECE: "大希腊国"
+ GRE_GREATER_GREECE_DEF: "大希腊国"
+ GRE_GREATER_GREECE_ADJ: "希腊"
 
  CZE_kingdom: "波西米亚王国"
  CZE_maravian_kingdom: "大摩拉维亚王国"

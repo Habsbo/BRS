@@ -1,8 +1,7 @@
 ﻿l_simp_chinese:
 #ideas
  GRE_megali_idea: "伟大理想"
- GRE_political_violence: "政治暴力"
- GRE_political_violence_desc: ""
+ GRE_political_instability_hidden_tt: "§R直到共和派系脱离或接受君主制为止，我们无法独自变更法律或改变任用的顾问！§!"
 #decisions
  GRE_hellenic_ambitions: "希腊人的野望"
  GRE_megali_idea_map_category_name: "伟大理想中的§G大希腊§!"
@@ -11,13 +10,13 @@
  GRE_election_category: "国王与选举"
  GRE_election_category_desc: "议会选举将近，亚历山大国王的突然病逝使得局势变得突然紧张。现在的王室危机度是§R[?GRE.gre_civil_war_threat_var|0H]%§!。当危机度达到§R100%§!，事态将超出保皇派的掌控！"
 
- GRE_civil_war_divisions_counter_full_breakdown: "如果现在爆发内战，保皇派将马上获得[?GRE.gre_civil_war_divisions_counter_var|+0]§H师§!。\n"
- GRE_civil_war_divisions_counter_icon_value: "[?GRE.gre_civil_war_divisions_counter_var|0H]"
- GRE_republic_civil_war_divisions_counter_full_breakdown: "如果现在爆发内战，共和派将马上获得[?GRE.gre_republic_civil_war_divisions_counter_var|+0]§H师§!。\n"
+ GRE_civil_war_divisions_counter_full_breakdown: "如果现在爆发内战，保皇派将马上获得额外[?HEL.gre_civil_war_divisions_counter_var|+0]§H师§!。\n"
+ GRE_civil_war_divisions_counter_icon_value: "[?HEL.gre_civil_war_divisions_counter_var|0H]"
+ GRE_republic_civil_war_divisions_counter_full_breakdown: "如果现在爆发内战，共和派将马上获得额外[?HEL.gre_republic_civil_war_divisions_counter_var|+0]§H师§!。\n"
  GRE_republic_civil_war_divisions_counter_icon_value: "[?GRE.gre_republic_civil_war_divisions_counter_var|0H]"
 
- br_gre_cwdc_increased_rep: "将有§G3§!个师被§R共和派§!的将领控制"
- br_gre_cwdc_increased_knd: "将有§G3§!个师陆续被§G君主派§!的将领控制"
+ br_gre_cwdc_increased_rep: "将有§G1§!个师被§R共和派§!的将领控制"
+ br_gre_cwdc_increased_knd: "将有§G1§!个师被§G君主派§!的将领控制"
  br_gre_cwt_increased: "§Y王室危机度§!增加§R1%§!"
  br_gre_cwt_increased_3: "§Y王室危机度§!增加§R3%§!"
  br_gre_cwt_increased_5: "§Y王室危机度§!增加§R5%§!"
@@ -29,8 +28,10 @@
  GRE_the_throne_of_crisis_desc: "$GRE$王位危机"
  gre_civil_war_threat_icon_var_value_oh: "§Y王室危机度§!超过§R100%§!"
 
- GRE_worker_strikes: "$GRE$劳工危机"
- GRE_worker_strikes_desc: "$GRE$劳工危机"
+ GRE_worker_strikes_mission.1: "$GRE$劳工危机"
+ GRE_worker_strikes_mission.1_desc: "$GRE$劳工危机"
+ GRE_worker_strikes_mission.2: "决裂"
+ GRE_worker_strikes_mission.2_desc: "随着"
  GRE_negotiations_of_strikes: "与劳工谈判"
  GRE_negotiations_of_strikes_desc: "与劳工谈判"
  GRE_suppress_socialism: "查禁劳工运动"
@@ -382,6 +383,7 @@
  br_hellas.5.desc: ""
  br_hellas.5.a: "人民民主共和！"
 
+ 
 
 ###王子事件链
  br_hellas.101.title: "遗腹子诞生"
@@ -428,6 +430,7 @@
 
  GRE_officer_as_an_official_represent: "军政代表"
  GRE_officer_as_an_official_represent_desc: ""
+
  : ""
  _desc: ""
  : ""

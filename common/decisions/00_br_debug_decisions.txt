@@ -110,6 +110,12 @@ br_debug_decisions = {
 			set_politics = { ruling_party = nationalism }
 		}
 	}
+	debug_ideo.11 = {
+		fire_only_once = no
+		complete_effect = {
+			#
+		}
+	}
 	debug_poland.1 = {
 
 		icon = generic_research

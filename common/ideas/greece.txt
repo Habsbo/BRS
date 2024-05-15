@@ -1,22 +1,48 @@
 ideas = {
-
-	country = { 
-		GRE_political_violence = {
-
-			picture = SPR_political_violence
+	hidden_ideas = {
+		GRE_political_instability_hidden = {
+			name = GRE_political_instability
 
 			allowed = {
 				original_tag = GRE
-				NOT = { has_global_flag = br_global_hellas_civilwar_started_flag }
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			available = {
+				has_idea = GRE_political_instability
+				has_civil_war = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				disabled_ideas = 1
+			}
+		}
+	}
+
+	country = {
+		
+		GRE_political_instability = { #政局动荡
+				
+			allowed = {
+				original_tag = GRE
 			}
 
 			allowed_civil_war = {
 				always = yes
 			}
 
+			picture = gre_political_instability
+				
+			removal_cost = -1
+				
 			modifier = {
-				stability_factor = -0.15
-				disabled_ideas = 1
+				political_power_factor	= -0.15
+				custom_modifier_tooltip = GRE_political_instability_hidden_tt
 			}
 		}
 		GRE_military_disloyalty = {
@@ -489,25 +515,6 @@ ideas = {
 				war_support_factor = 0.1
 				training_time_factor = -0.1
 				fascism_drift = 0.03
-			}
-		}
-
-		GRE_political_instability = { #政局动荡
-				
-			allowed = {
-				original_tag = GRE
-			}
-
-			allowed_civil_war = {
-				always = no
-			}
-
-			picture = gre_political_instability
-				
-			removal_cost = -1
-				
-			modifier = {
-				political_power_factor	= -0.15		
 			}
 		}
 

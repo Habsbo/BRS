@@ -2491,6 +2491,18 @@ focus_tree = {
 				elections_allowed = yes
 			}
 			hidden_effect = {
+				declare_war_on = { target = HEK type = annex_everything }
+				add_civil_war_target = HEK
+				#法律
+				add_ideas = {
+					br_laws_parliamentarism
+					br_laws_proxy
+					br_laws_asset
+					br_laws_national_state
+					br_laws_religious_people
+					br_laws_bourgeoisie
+				}
+				#
 				set_popularities = {
 					#anarchist = 5 #社会无政府主义
 					#vanwardism = 0 #革命社会主义
@@ -2524,7 +2536,9 @@ focus_tree = {
 		
 		available = {}
 		
-		bypass = {}
+		bypass = {
+			has_global_flag = br_global_sec_hellas_civilwar_started_flag
+		}
 		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
