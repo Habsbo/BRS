@@ -2,6 +2,7 @@ on_actions = {
 	on_startup = {
 		effect = {
 			HEL = {
+				country_lock_all_division_template = yes
 				set_variable = { gre_civil_war_threat_var = 52 }
 				activate_mission = GRE_the_throne_of_crisis
 				activate_mission = GRE_worker_strikes_mission.1

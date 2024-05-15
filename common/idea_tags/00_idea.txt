@@ -47,7 +47,7 @@ idea_categories = {
 	}
 
 	officer = {
-		character_slot = political_advisor
+		character_slot = head_of_gov
 		character_slot = political_advisor
 		character_slot = political_advisor
 		character_slot = political_advisor

@@ -254,14 +254,6 @@ country_event = { #共和国还是王党
 		#
 		complete_national_focus = GRE_great_hellenic_republic
 		#
-		add_ideas = {
-			br_laws_parliamentarism
-			br_laws_proxy
-			br_laws_asset
-			br_laws_national_state
-			br_laws_religious_people
-			br_laws_bourgeoisie
-		}
 
 		ai_chance = { base = 0 }
 	}

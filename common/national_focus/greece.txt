@@ -2583,8 +2583,8 @@ focus_tree = {
 	focus = {
 		id = GRE_officer_as_an_official_represent
 		icon = GFX_focus_generic_support_the_left_right
-		prerequisite = { focus = GRE_more_debts_as_exchange }
-		#mutually_exclusive = { focus = GRE_ }
+		prerequisite = { focus = GRE_more_debts_as_exchange focus = GRE_tough_way }
+		mutually_exclusive = { focus = GRE_socialist_union }
 		x = 0
 		y = 1
 		relative_position_id = GRE_more_debts_as_exchange
@@ -2637,6 +2637,33 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 	}
+	focus = {
+		id = GRE_socialist_union
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = { focus = GRE_more_debts_as_exchange focus = GRE_tough_way }
+		mutually_exclusive = { focus = GRE_officer_as_an_official_represent }
+		x = 0
+		y = 1
+		relative_position_id = GRE_tough_way
+
+		cost = 5
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
 ###
 	focus = {
 		id = GRE_greek_kingdom
@@ -2667,6 +2694,14 @@ focus_tree = {
 				elections_allowed = yes
 			}
 			hidden_effect = {
+				add_ideas = {
+					br_laws_parliamentarism
+					br_laws_proxy
+					br_laws_asset
+					br_laws_national_state
+					br_laws_religious_people
+					br_laws_bourgeoisie
+				}
 				set_popularities = {
 					#anarchist = 0 #社会无政府主义
 					#vanwardism = 0 #革命社会主义
@@ -2688,13 +2723,67 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 	}
 	focus = {
-		id = GRE_12
-		icon = GFX_goal_generic_alliance
+		id = GRE_defend_orthodoxy
+		icon = GFX_focus_GRE_bedrock_of_balkan_stability
 		prerequisite = { focus = GRE_greek_kingdom }
 		#mutually_exclusive = { focus = GRE_ }
 		x = -8
 		y = 1
 		relative_position_id = GRE_greek_kingdom
+
+		cost = 5
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_appoint_metaxas
+		icon = GFX_focus_GRE_metaxism
+		prerequisite = { focus = GRE_defend_orthodoxy }
+		#mutually_exclusive = { focus = GRE_ }
+		x = -1
+		y = 1
+		relative_position_id = GRE_defend_orthodoxy
+
+		cost = 5
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRE_12
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		prerequisite = { focus = GRE_defend_orthodoxy }
+		#mutually_exclusive = { focus = GRE_ }
+		x = 1
+		y = 1
+		relative_position_id = GRE_defend_orthodoxy
 
 		cost = 5
 		

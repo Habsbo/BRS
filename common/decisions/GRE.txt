@@ -418,12 +418,8 @@ GRE_election_category = {
 		days_remove = 14
 
 		complete_effect = {
-			FROM = {
-				set_state_flag = br_state_loyalty_of_militaries_flag
-			}
-			ROOT = {
-				
-			}
+			FROM = { set_state_flag = br_state_loyalty_of_militaries_flag }
+			ROOT = { GRE_civilwar_dc_var_add = yes }
 		}
 
 		remove_effect = {
