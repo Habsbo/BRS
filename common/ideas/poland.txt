@@ -25,22 +25,21 @@ ideas = {
 	}
 	
 	country = {
-		POL_hanging_throne = {
-			picture = generic_king_handled
+		POL_general_jozef_pilsudski = {
+			name = Jozef_Pilsudski
+			picture = advisor_jozef_pilsudski
 
 			allowed = {
 				original_tag = POL
 			}
 
 			allowed_civil_war = {
-				always = yes
+				has_government = neutrality
 			}
 
 			removal_cost = -1
 
-			modifier = {
-				party_popularity_stability_factor = -0.10
-			}
+			traits = { dictator_of_sanacja }
 		}
 		
 		POL_tight_grain_reserves_5 = {
@@ -155,31 +154,6 @@ ideas = {
 			}
 		}
 		
-		POL_socialist_covert_activities = {
-			picture = generic_spy_coup
-
-			allowed = {
-				original_tag = POL
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			modifier = {
-				stability_factor = -0.10
-				operative_slot = 1
-				political_power_factor = -0.10
-				sco_anarchism_drift = 0.01
-				vanwardism_drift = 0.01
-				sci_socialism_drift = 0.01
-				con_socialism_drift = 0.01
-				demo_socialism_drift = 0.01
-			}
-		}
-		
 		POL_nationalist_military = {
 
 			allowed = {
@@ -193,11 +167,8 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				stability_factor = -0.10
 				custom_modifier_tooltip = POL_nationalist_military_mtt
-				fascism_drift = 0.01
-				nationalism_drift = 0.01
-				supernationalism_drift = 0.01
+				fascism_drift = 0.02
 				surrender_limit = 0.05
 				mobilization_laws_cost_factor = -0.10
 			}
