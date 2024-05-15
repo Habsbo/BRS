@@ -12,12 +12,12 @@ characters = {
 				small = GFX_idea_advisor_jozef_pilsudski
 			}
 		}
-		#country_leader = {
-		#	ideology = despotism
-		#	traits = { the_last_romanov_maybe }
-		#	expire = "1965.1.1.1"
-		#	id = -1
-		#}
+		country_leader = {
+			ideology = conservatism
+			traits = { dictator_of_sanacja }
+			expire = "1965.1.1.1"
+			id = -1
+		}
 	}
 	
 	POL_anna_andersson = {
