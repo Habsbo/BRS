@@ -16,7 +16,8 @@ leader_traits = {
 	
 	mastermind_of_mega_idea = {
 		random = no
-		
+		sprite = 13
+		#
 		political_power_factor = 0.05
 		stability_factor = 0.05
 		stability_weekly_factor = 0.25
