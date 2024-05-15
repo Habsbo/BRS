@@ -2345,7 +2345,7 @@ focus_tree = {
 #陆军
 	focus = {
 		id = GRE_focus_on_military
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_focus_GRE_hellenic_armed_forces
 		#prerequisite = { focus = GRE_ }
 		#mutually_exclusive = { focus = GRE_ }
 		x = 24
@@ -2753,7 +2753,7 @@ focus_tree = {
 		id = GRE_appoint_metaxas
 		icon = GFX_focus_GRE_metaxism
 		prerequisite = { focus = GRE_defend_orthodoxy }
-		#mutually_exclusive = { focus = GRE_ }
+		mutually_exclusive = { focus = GRE_monarchists_rule_hellas }
 		x = -1
 		y = 1
 		relative_position_id = GRE_defend_orthodoxy
@@ -2777,10 +2777,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 	}
 	focus = {
-		id = GRE_12
+		id = GRE_monarchists_rule_hellas
 		icon = GFX_goal_tfv_strengthen_commonwealth_ties
 		prerequisite = { focus = GRE_defend_orthodoxy }
-		#mutually_exclusive = { focus = GRE_ }
+		mutually_exclusive = { focus = GRE_appoint_metaxas }
 		x = 1
 		y = 1
 		relative_position_id = GRE_defend_orthodoxy

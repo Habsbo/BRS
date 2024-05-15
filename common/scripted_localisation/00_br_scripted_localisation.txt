@@ -7,16 +7,6 @@
 # (eg Root or From.From).)
 # localization_key -> points to the localization key
 # that'll be used if trigger passes
-#你的政治体制
-defined_text = { # Country
-	name = GetGovRegime
-	text = {
-		trigger = {
-			has_idea = br_laws_committee
-		}
-		localization_key = GetGovRegime_committee
-	}
-}
 #希腊的国家信心
 defined_text = { # Country
 	name = GethellenicCountryconfidence

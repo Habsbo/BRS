@@ -1,4 +1,6 @@
 ﻿l_simp_chinese:
+#
+ mastermind_of_mega_idea: "伟大理想的践行者"
 #ideas
  GRE_megali_idea: "伟大理想"
  GRE_political_instability_hidden_tt: "§R直到共和派系脱离或接受君主制为止，我们无法独自变更法律或改变任用的顾问！§!"
@@ -196,6 +198,72 @@
  GRE_monarchist_economy_change_positive_tt: "维持长期稳健的经济政策将会增加§Y君主派§!§G10§!点的忠诚度。\n"
  GRE_republican_economy_change_positive_tt: "维持长期稳健的经济政策将会增加§Y共和派§!§G5§!点的忠诚度。\n"
  GRE_communist_economy_change_tt: "维持长期稳健的经济政策将会降低§Y共产派§!§R5§!点的忠诚度。\n"
+
+#events
+ br_hellas.1.title: "英王室流亡至$GRE$"
+ br_hellas.1.desc: ""
+ br_hellas.1.a: "这里不欢迎英国人。"
+ br_hellas.1.b: "欢迎我们永远的盟友。"
+
+ br_hellas.2.title: "$GRE_george_ii$夺取王位"
+ br_hellas.2.desc: ""
+ br_hellas.2.a: "吾王万岁！"
+
+ br_hellas.3.title: "阿尔伯特亲王登基"
+ br_hellas.3.desc: ""
+ br_hellas.3.a: "吾皇万岁！"
+
+ br_hellas.4.title: "军队发起政变"
+ br_hellas.4.desc: ""
+ br_hellas.4.a: "$GRE$的未来是更美好的明天"
+ br_hellas.4.b: ""
+ 
+ br_hellas.5.title: "共和派主导政府"
+ br_hellas.5.desc: ""
+ br_hellas.5.a: "人民民主共和！"
+
+###王子事件链
+ br_hellas.101.title: "遗腹子诞生"
+ br_hellas.101.desc: "先国王亚历山大一世的遗孀，“曼诺斯”女士隆起的肚子终于有了结果。与之前不同，这位小王子十分健康，看上去会是国王最合适的继承者，同时他母亲在政治上的无关紧要使得我们更容易有机会去稳定国家。但是先国王的兄长显然对此嗤之以鼻。"
+ br_hellas.101.a: "$GRE_george_ii$国王，本来他才是正统！"
+ br_hellas.101.b: "想想亚历山大国王，他支持的韦相为我们赢得了如今的希腊。支持小王子！"
+
+#伟大理想
+ br_megali_idea.1.title: "[GRE.GetName]要求我们就士麦那等地的主权退让"
+ br_megali_idea.1.desc: ""
+ br_megali_idea.1.a: "是可忍，熟不可忍！"
+ br_megali_idea.1.b: "等等，难道贵国不想听听我们的方案？"
+ br_megali_idea.1.c: "我们无力对抗希腊"
+ br_megali_idea.2.title: "[FORM.GetName]拒绝了我们的要求"
+ br_megali_idea.2.desc: ""
+ br_megali_idea.2.a: "揍他！"
+ br_megali_idea.3.title: "[FORM.GetName]要求对话"
+ br_megali_idea.3.desc: ""
+ br_megali_idea.3.a: "这样的协议我能接受。"
+ br_megali_idea.3.b: "如果我们拒绝让步呢？"
+ br_megali_idea.4.title: "[FORM.GetName]屈服"
+ br_megali_idea.4.desc: ""
+ br_megali_idea.4.a: "这才像话。"
+
+
+ br_hellas..title: "$GRE$共产党的势力在壮大"
+ br_hellas..desc: ""
+ br_hellas..a: "或许······那是更美好的明天？"
+ br_hellas..b: "一派胡言"
+
+ br_ifc.2.title: "[FROM.GetName]催还欠款" #
+ br_ifc.2.desc: ""
+ br_ifc.2.a: "我们可以先偿兑一部分。"
+ br_ifc.2.b: "我们还还不起！"
+
+ br_hellas..title: ""
+ br_hellas..desc: ""
+ br_hellas..a: ""
+ br_hellas..b: ""
+
+ br_global_hellas_civilwar_started_flag: "§Y希腊王党-共和派§!内战已经开始"
+ br_global_hellas_civilwar_ended_flag: "§Y希腊王党-共和派§!内战已经结束"
+
 #focus
  GRE_focus_on_economic: "聚焦经济"
  GRE_focus_on_economic_desc: ""
@@ -366,80 +434,11 @@
 
  GRE_later_life_of_venizelos: "韦尼泽洛斯的退休生活"
  GRE_later_life_of_venizelos_desc: "为了希腊的伟大理想而战斗到如今的韦尼泽洛斯首相的身体已然就木。是时候请韦相退休了，年轻人会跟得上他的脚步的。"
-
-#events
- br_hellas.1.title: "英王室流亡至$GRE$"
- br_hellas.1.desc: ""
- br_hellas.1.a: "这里不欢迎英国人。"
- br_hellas.1.b: "欢迎我们永远的盟友。"
-
- br_hellas.2.title: "$GRE_george_ii$夺取王位"
- br_hellas.2.desc: ""
- br_hellas.2.a: "吾王万岁！"
-
- br_hellas.3.title: "阿尔伯特亲王登基"
- br_hellas.3.desc: ""
- br_hellas.3.a: "吾皇万岁！"
-
- br_hellas.4.title: "军队发起政变"
- br_hellas.4.desc: ""
- br_hellas.4.a: "$GRE$的未来是更美好的明天"
- br_hellas.4.b: ""
- 
- br_hellas.5.title: "共和派主导政府"
- br_hellas.5.desc: ""
- br_hellas.5.a: "人民民主共和！"
-
- 
-
-###王子事件链
- br_hellas.101.title: "遗腹子诞生"
- br_hellas.101.desc: "先国王亚历山大一世的遗孀，“曼诺斯”女士隆起的肚子终于有了结果。与之前不同，这位小王子十分健康，看上去会是国王最合适的继承者，同时他母亲在政治上的无关紧要使得我们更容易有机会去稳定国家。但是先国王的兄长显然对此嗤之以鼻。"
- br_hellas.101.a: "$GRE_george_ii$国王，本来他才是正统！"
- br_hellas.101.b: "想想亚历山大国王，他支持的韦相为我们赢得了如今的希腊。支持小王子！"
-
-
-#伟大理想
- br_megali_idea.1.title: "[GRE.GetName]要求我们就士麦那等地的主权退让"
- br_megali_idea.1.desc: ""
- br_megali_idea.1.a: "是可忍，熟不可忍！"
- br_megali_idea.1.b: "等等，难道贵国不想听听我们的方案？"
- br_megali_idea.1.c: "我们无力对抗希腊"
- br_megali_idea.2.title: "[FORM.GetName]拒绝了我们的要求"
- br_megali_idea.2.desc: ""
- br_megali_idea.2.a: "揍他！"
- br_megali_idea.3.title: "[FORM.GetName]要求对话"
- br_megali_idea.3.desc: ""
- br_megali_idea.3.a: "这样的协议我能接受。"
- br_megali_idea.3.b: "如果我们拒绝让步呢？"
- br_megali_idea.4.title: "[FORM.GetName]屈服"
- br_megali_idea.4.desc: ""
- br_megali_idea.4.a: "这才像话。"
-
-
- br_hellas..title: "$GRE$共产党的势力在壮大"
- br_hellas..desc: ""
- br_hellas..a: "或许······那是更美好的明天？"
- br_hellas..b: "一派胡言"
-
- br_ifc.2.title: "[FROM.GetName]催还欠款" #
- br_ifc.2.desc: ""
- br_ifc.2.a: "我们可以先偿兑一部分。"
- br_ifc.2.b: "我们还还不起！"
-
- br_hellas..title: ""
- br_hellas..desc: ""
- br_hellas..a: ""
- br_hellas..b: ""
-
- br_global_hellas_civilwar_started_flag: "§Y希腊王党-共和派§!内战已经开始"
- br_global_hellas_civilwar_ended_flag: "§Y希腊王党-共和派§!内战已经结束"
-
  GRE_officer_as_an_official_represent: "军政代表"
  GRE_officer_as_an_official_represent_desc: ""
 
- : ""
- _desc: ""
+ GRE_monarchists_rules_hellas: "君王政治"
+ GRE_monarchists_rules_hellas_desc: ""
  : ""
  _desc: ""
  : ""
