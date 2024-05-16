@@ -33,3 +33,6 @@
  br_political_action_ban_socialism_flag: "社会主义已被宣布非法"
  br_political_action_ban_democratic_flag: "民主主义已被宣布非法"
  br_political_action_ban_fascism_flag: "法西斯主义已被宣布非法"
+ 
+ generic_head_of_government_name: "国会"
+ generic_head_of_gov: "政府首脑"

@@ -249,6 +249,10 @@ spriteTypes = {
 		textureFile = "gfx/interface/rules_sum_icon.dds"
 	}
 
+	spriteType = {
+		name = "GFX_idea_slot_head_of_gov"
+		textureFile = "gfx/interface/officer_corp/select_advisor.dds"
+	}
 
 	spriteType = {
 		name = "GFX_idea_slot_high_command"

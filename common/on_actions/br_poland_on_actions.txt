@@ -16,6 +16,19 @@ on_actions = {
 					modifier = POL_tight_grain_reserves_dynamic_modifier
 				}
 			}
+			every_possible_country = {
+				limit = { is_dynamic_country = no }
+				if = {
+					limit = {
+						amount_taken_ideas = {
+							amount < 1
+							slots = { head_of_gov }
+						}
+					}
+					#activate_advisor = generic_head_of_government
+					#add_ideas = generic_head_of_government
+				}
+			}
 		}
 	}
 }
