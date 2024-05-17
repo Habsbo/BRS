@@ -12,10 +12,13 @@ l_simp_chinese:
  operation_steal_tech_navy_cost: "针对海军的间谍行动花费"
  operation_steal_tech_navy_outcome: "针对海军的间谍行动成果"
  modifier_state_repair_speed_fuel_silo_factor: "§Y$fuel_silo$§!修理速度"
+ head_of_gov_generic_ttt: "政府首脑无法自由任命"
  
  Jozef_Pilsudski: "约瑟夫·毕苏斯基"
+ Ignacy_Moscicki: "伊格纳齐·莫希奇茨基"
  
  dictator_of_sanacja: "萨纳齐亚的独裁者"
+ chemical_educator: "化学教育家"
  
  
  POL_civ_first: "农业补贴政策"
