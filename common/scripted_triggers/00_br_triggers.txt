@@ -108,3 +108,18 @@
 			tooltip = x
 		}
 	}
+###
+
+	br_head_of_gov_generic_trigger = {
+		#amount_taken_ideas = {
+		#	amount < 1
+		#	slots = { head_of_gov }
+		#}
+		if = {
+			limit = { is_hired_as_advisor = no }
+			custom_trigger_tooltip = {
+				tooltip = head_of_gov_generic_ttt
+				always = no
+			}
+		}
+	}

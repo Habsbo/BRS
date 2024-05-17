@@ -5,7 +5,7 @@
 		factor = 0
 		
 		modifier = {
-			add = 1
+			add = 100
 			tag = FRA
 		}
 	}
@@ -27,7 +27,12 @@
 		
 		ai_will_do = { factor = 1 }
 		
-		available = {}
+		available = {
+amount_taken_ideas = {
+									amount < 1
+									slots = { head_of_gov }
+								}
+}
 		
 		bypass = {}
 		

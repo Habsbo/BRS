@@ -2,6 +2,7 @@ on_actions = {
 	on_startup = {
 		effect = {
 			POL = {
+				activate_advisor = POL_Ignacy_Moscicki
 				remove_ideas = {
 					POL_spear_of_revenge
 				}
@@ -16,19 +17,50 @@ on_actions = {
 					modifier = POL_tight_grain_reserves_dynamic_modifier
 				}
 			}
-			every_possible_country = {
-				limit = { is_dynamic_country = no }
-				if = {
-					limit = {
-						amount_taken_ideas = {
-							amount < 1
-							slots = { head_of_gov }
-						}
-					}
-					#activate_advisor = generic_head_of_government
-					#add_ideas = generic_head_of_government
-				}
-			}
+#			every_possible_country = {
+#				limit = {
+#					# avoid generic advisors in temporary countries
+#					is_dynamic_country = no
+#					NOT = {
+#						has_allowed_idea_with_traits = { idea = generic_head_of_gov characters = yes }
+#					}
+#				}
+#				meta_effect = {
+#					tag = "[THIS.GetTag]"
+#					text = {
+#						generate_character = {
+#							token_base = [tag]_generic_head_of_government # token will be TAG_token_base
+#							name = generic_head_of_government_name
+#							portraits = { 
+#								army = { small = GFX_portrait_POL_ignacy_moscicki_small }
+#							}
+#						}
+#						[tag]_generic_head_of_government = {
+#							add_advisor_role = {
+#								advisor = {
+#									slot = head_of_gov
+#									idea_token = [tag]_generic_head_of_government
+#									cost = 0
+#									can_be_fired = no
+#									traits = { generic_head_of_gov }
+#									ai_will_do = {
+#										factor = 0
+#									}
+#								}
+#							}
+#						}
+#						if = {
+#							limit = {
+#								amount_taken_ideas = {
+#									amount > 0
+#									slots = { head_of_gov }
+#								}
+#							}
+#							add_ideas = [tag]_generic_head_of_government
+#						}
+#					}
+#				}
+#			}
 		}
 	}
 }

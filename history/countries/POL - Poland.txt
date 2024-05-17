@@ -107,6 +107,8 @@ add_ideas = {
 }
 
 recruit_character = POL_Jozef_Pilsudski
+recruit_character = POL_Ignacy_Moscicki
+
 
 set_politics = {
 	ruling_party = demo_conservatism
@@ -128,8 +130,6 @@ set_popularities = {
 	nationalism = 0
 	supernationalism = 0
 }
-
-recruit_character = POL_ignacy_moscicki
 recruit_character = POL_wladyslaw_sikorski
 recruit_character = POL_boleslaw_wieniawa_glugoszowski
 recruit_character = POL_wladyslaw_gomulka

@@ -20,6 +20,31 @@ characters = {
 		}
 	}
 	
+	POL_Ignacy_Moscicki = {
+		name = Ignacy_Moscicki
+		portraits = {
+			army = {
+				small = GFX_portrait_POL_ignacy_moscicki_small
+			}
+			civilian = {
+				large = GFX_portrait_POL_ignacy_moscicki
+			}
+		}
+		advisor = {
+			slot = head_of_gov
+			idea_token = POL_Ignacy_Moscicki
+			allowed = {
+				original_tag = POL
+			}
+			available = {
+				br_head_of_gov_generic_trigger = yes
+			}
+			cost = 0
+			can_be_fired = no
+			traits = { chemical_educator }
+		}
+	}
+	
 	POL_anna_andersson = {
 		name="Anastasia Romanov"
 		portraits = {
@@ -182,44 +207,6 @@ characters = {
 			defense_skill = 4
 			planning_skill = 3
 			logistics_skill = 2
-		}
-	}
-
-	POL_ignacy_moscicki = {
-		name=POL_ignacy_moscicki
-		portraits = {
-			army={
-				small=GFX_portrait_POL_ignacy_moscicki_small
-			}
-			civilian = {
-				large="GFX_portrait_POL_ignacy_moscicki"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = POL_ignacy_moscicki
-			available = {
-				OR = {
-					has_completed_focus = POL_ozon 
-					has_completed_focus = POL_dissolve_the_bbwr 
-				}
-			}
-			allowed = {
-				original_tag = POL
-				OR = {
-					has_dlc = "No Step Back"
-					has_dlc = "Poland: United and Ready"
-				}
-			}
-			traits = {
-				the_king_of_the_castle 
-			}
-		}
-		
-		country_leader = {
-			ideology=oligarchism
-			expire="1965.1.1.1"
-			id=-1
 		}
 	}
 

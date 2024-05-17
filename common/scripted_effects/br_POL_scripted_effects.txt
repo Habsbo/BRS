@@ -1,6 +1,23 @@
 ### made by LingXia ###
 #Remember to change the tooltips if the effects are changed
 #State scope. Prev is target country.
+
+POL_DEBUG_effect_1 = {
+	if = {
+		limit = { is_debug = yes }
+		activate_advisor = POL_Ignacy_Moscicki
+	}
+}
+
+POL_DEBUG_effect_2 = {
+	if = {
+		limit = { is_debug = yes }
+		deactivate_advisor = POL_Ignacy_Moscicki
+	}
+}
+
+
+
 POL_update_industrial_modernization_index = {
 	if = {
 		limit = { NOT = { has_variable = POL_investments_var } }
