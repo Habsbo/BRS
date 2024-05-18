@@ -176,6 +176,7 @@ if = {
 	recruit_character = GRE_georgios_kosmidis
 	#
 	recruit_character = GRE_regency_council
+	recruit_character = GRE_george_ii_of_the_hellenes
 }
 
 if = {

@@ -775,7 +775,7 @@ characters={
 				#
 			}
 
-			traits = { mastermind_of_mega_idea }
+			traits = { ethnarch }
 		}
 
 		country_leader={

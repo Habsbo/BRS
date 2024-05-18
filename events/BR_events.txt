@@ -312,7 +312,7 @@ country_event = { #
 	desc = br_laws.1.desc
 	#picture = GFX_report_event_chinese_soldiers_fighting
 
-	fire_only_once = yes
+	fire_only_once = no
 	is_triggered_only = yes
 
 	immediate = {
@@ -340,7 +340,7 @@ country_event = { #
 	desc = br_laws.2.desc
 	#picture = GFX_report_event_chinese_soldiers_fighting
 
-	fire_only_once = yes
+	fire_only_once = no
 	is_triggered_only = yes
 
 	immediate = {
@@ -368,7 +368,7 @@ country_event = { #2
 	desc = br_laws.3.desc
 	#picture = GFX_report_event_chinese_soldiers_fighting
 
-	fire_only_once = yes
+	fire_only_once = no
 	is_triggered_only = yes
 
 	immediate = {

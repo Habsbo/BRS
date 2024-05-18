@@ -23,7 +23,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				custom_modifier_tooltip = br_laws_feudalism_hidden
+				custom_modifier_tooltip = br_laws_feudalism_hidden_tt
 			}
 
 			allowed_to_remove = {
@@ -380,8 +380,12 @@ ideas = {
 			}
 
 			on_add = {
-				#set_politics = { elections_allowed = no }
+				set_politics = { ruling_party = root elections_allowed = no }
 			}
+			on_remove = {
+				set_politics = { ruling_party = root elections_allowed = yes }
+			}
+
 			default = yes
 			cancel_if_invalid = no
 		}

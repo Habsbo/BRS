@@ -161,3 +161,29 @@ country_event = { #
 
 
 }
+country_event = { #
+	id = br_debug.2
+	title = br_debug.2.title
+	desc = br_debug.2.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		#
+	}
+
+	option = {
+		name = br_debug.2.a #
+
+		set_politics = {
+			ruling_party = root
+			elections_allowed = no
+		}
+
+		ai_chance = { factor = 0 }
+	}
+
+
+}
