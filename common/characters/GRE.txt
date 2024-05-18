@@ -1,3 +1,4 @@
+### by leader ###
 characters={
 	GRE_konstantinos_demertzis={ #德莫齐斯
 		name=GRE_konstantinos_demertzis
@@ -290,11 +291,37 @@ characters={
 		}
 	}
 
+	GRE_george_ii_of_the_hellenes = {
+		name=GRE_george_ii
+		portraits={
+			army={
+				large=GFX_portrait_gre_george_ii
+				small=GFX_idea_gre_george_ii
+			}
+		}
+		advisor={
+			slot = head_of_gov
+			idea_token = GRE_george_ii_hog
+			allowed = { original_tag = GRE }
+
+			available = {
+				#
+				br_ideology_radical_communism_nio = yes
+				br_ideology_socialism_nio = yes
+				#
+				has_idea = br_laws_monarchy
+			}
+			traits = {}
+		}
+	}
+
+
 	GRE_regency_council = { #摄政议会
 		name = GRE_regency_council
 		portraits = {
 			civilian = {
 				large = "GFX_portrait_bul_regency_council"
+				small = "GFX_idea_gre_xenophon_giosmas"
 			}
 		}
 
