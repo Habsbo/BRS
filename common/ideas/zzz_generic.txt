@@ -181,25 +181,6 @@ ideas = {
 
 # Special ones that can be applied on other countries through focus system.
 	country = {
-
-		LUX_crisis_awareness_idea = {
-			picture = generic_pp_unity_bonus
-
-			removal_cost = -1
-
-			allowed = { has_war = no }
-
-			#on_add = {}
-
-			#on_remove = {}
-
-			modifier = {
-				war_support_weekly = 0.01
-				consumer_goods_factor = -0.15
-				conversion_cost_civ_to_mil_factor = -0.25
-				production_speed_arms_factory_factor = 0.15
-			}
-		}
 		
 		TO_chose_neutrality = {
 

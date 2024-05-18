@@ -139,7 +139,7 @@ ideologies = {
 		}
 
 	}
-	#保守社会主义
+	#合作社会主义
 	con_socialism = {
 
 		types = {
