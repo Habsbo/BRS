@@ -1,0 +1,1177 @@
+### search_filters = {FOCUS_FILTER_WAR_SUPPORTPOLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+### search_filters = {FOCUS_FILTER_ARMY_XP}
+### search_filters = {FOCUS_FILTER_NAVY_XP}
+### search_filters = {FOCUS_FILTER_AIR_XP}
+### search_filters = {FOCUS_FILTER_MILITARY_CHARACTER}
+### search_filters = {FOCUS_FILTER_HISTORICAL}
+### search_filters = {FOCUS_FILTER_BALANCE_OF_POWER}
+### search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+### search_filters = { }
+
+focus_tree = {
+	id = luxembourg_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 20
+			tag = LUX
+		}
+	}
+	
+	default = no
+
+	continuous_focus_position = { x = 50 y = 1500 }
+
+###red/black/blue
+	focus = {
+		id = LUX_farewell_your_majesty
+		icon = GFX_goal_tfv_sever_ties_with_uk
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 36
+		y = 0
+		#relative_position_id =
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+###white/blue/brown
+	focus = {
+		id = LUX_monarchy_of_luxembourg
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 50
+		y = 0
+		#relative_position_id =
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	#blue
+	focus = {
+		id = LUX_consolidate_charter
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = LUX_monarchy_of_luxembourg }
+		mutually_exclusive = { focus = LUX_strengthen_loyalists }
+		x = -1
+		y = 1
+		relative_position_id = LUX_monarchy_of_luxembourg
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_speech_liberty
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = LUX_consolidate_charter focus = LUX_strengthen_loyalists }
+		mutually_exclusive = { focus = LUX_united_front }
+		x = 0
+		y = 1
+		relative_position_id = LUX_consolidate_charter
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_neutral_country
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = LUX_speech_liberty focus = LUX_united_front }
+		x = 1
+		y = 1
+		relative_position_id = LUX_speech_liberty
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_defend_territory
+		icon = GFX_goal_generic_defence
+		prerequisite = {
+			focus = LUX_tolerate_moderate_socialists
+			focus = LUX_neutral_country
+			focus = LUX_luxembourg_nation
+		}
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 2
+		relative_position_id = LUX_neutral_country
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_tolerate_moderate_socialists
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = LUX_speech_liberty }
+		mutually_exclusive = { focus =  LUX_luxembourg_nation }
+		x = -1
+		y = 2
+		relative_position_id = LUX_speech_liberty
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	#white
+	focus = {
+		id = LUX_strengthen_loyalists
+		icon = GFX_focus_generic_diplomatic_treaty
+		prerequisite = { focus = LUX_monarchy_of_luxembourg }
+		mutually_exclusive = { focus = LUX_consolidate_charter }
+		x = 1
+		y = 1
+		relative_position_id = LUX_monarchy_of_luxembourg
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_united_front
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = LUX_consolidate_charter focus = LUX_strengthen_loyalists }
+		mutually_exclusive = { focus = LUX_speech_liberty }
+		x = 0
+		y = 1
+		relative_position_id = LUX_strengthen_loyalists
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_luxembourg_nation
+		icon = GFX_goal_support_fascism
+		prerequisite = { focus = LUX_united_front }
+		mutually_exclusive = { focus = LUX_tolerate_moderate_socialists }
+		x = 1
+		y = 2
+		relative_position_id = LUX_united_front
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_glory_erstwhile
+		icon = GFX_focus_ger_revive_kaiserreich
+		prerequisite = { focus = LUX_luxembourg_nation }
+		#mutually_exclusive = { focus =  }
+		x = 2
+		y = 1
+		relative_position_id = LUX_luxembourg_nation
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_house_1
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = LUX_glory_erstwhile }
+		#mutually_exclusive = { focus =  }
+		x = -1
+		y = 1
+		relative_position_id = LUX_glory_erstwhile
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_
+		icon = GFX_goal_generic_demand_territory
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		#relative_position_id =
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	#FASCISM
+	focus = {
+		id = LUX_ture_frankish_nation
+		icon = GFX_focus_generic_fascist_propaganda
+		prerequisite = { focus = LUX_luxembourg_nation }
+		#mutually_exclusive = { focus =  }
+		x = 6
+		y = 1
+		relative_position_id = LUX_luxembourg_nation
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_black_shirt_army
+		icon = GFX_focus_generic_fascist_troops
+		prerequisite = { focus = LUX_ture_frankish_nation }
+		x = -1
+		y = 1
+		relative_position_id = LUX_ture_frankish_nation
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_united_nazism
+		icon = GFX_focus_chi_mission_to_germany
+		prerequisite = { focus = LUX_ture_frankish_nation }
+		x = 1
+		y = 1
+		relative_position_id = LUX_ture_frankish_nation
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			if = {
+				limit = {
+					any_country = {
+						exists = yes
+						has_capitulated = no
+						original_tag = GER
+						has_government = nationalism
+					}
+				}
+				add_stability = 0.05
+				#country_event =  #ADD OPPION
+			}
+			if = {
+				limit = {
+					any_country = {
+						exists = yes
+						has_capitulated = no
+						original_tag = GER
+						NOT = { has_government = nationalism }
+						has_civil_war = no
+					}
+				}
+				every_country = {
+					limit = {
+						exists = yes
+						has_capitulated = no
+						original_tag = GER
+						NOT = { has_government = nationalism }
+					}
+					add_popularity = { ideology = nationalism popularity = 0.05 }
+				}
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_grand_duchy_of_lorraine
+		icon = GFX_goal_anschluss
+		prerequisite = { focus = LUX_black_shirt_army }
+		prerequisite = { focus = LUX_united_nazism }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 2
+		relative_position_id = LUX_ture_frankish_nation
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			#fascism party ruling
+			set_politics = {
+				ruling_party = fascism
+				election_frequency = 96
+				elections_allowed = yes
+			}
+			#add rhineland claim
+			42 = { add_claim_by = root }
+			51 = { add_claim_by = root }
+			#add lorraine claim
+			17 = { add_claim_by = root }
+			28 = { add_claim_by = root }
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_claim_north_france
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = LUX_grand_duchy_of_lorraine }
+		x = -1
+		y = 1
+		relative_position_id = LUX_grand_duchy_of_lorraine
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			15 = { add_core_of = root } #normandy
+			16 = { add_core_of = root } #ile de France
+			18 = { add_core_of = root } #champagne
+			24 = { add_core_of = root } #région du centre
+			27 = { add_core_of = root } #bourgogne
+			29 = { add_core_of = root } #calais
+			30 = { add_core_of = root } #loire
+			785 = { add_core_of = root } #picardy
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_conquer_aquitaine
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = LUX_claim_north_france }
+		x = 0
+		y = 1
+		relative_position_id = LUX_claim_north_france
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			19 = { add_core_of = root }
+			23 = { add_core_of = root }
+			25 = { add_core_of = root }
+			26 = { add_core_of = root }
+			33 = { add_core_of = root }
+			806 = { add_core_of = root }
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_conquer_duchy_of_barcelona
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = { focus = LUX_conquer_aquitaine }
+		x = 0
+		y = 1
+		relative_position_id = LUX_conquer_aquitaine
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			31 = { add_core_of = root }
+			22 = { add_core_of = root }
+			165 = { add_core_of = root }
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_claim_eastern_franks
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = LUX_grand_duchy_of_lorraine }
+		x = 1
+		y = 1
+		relative_position_id = LUX_grand_duchy_of_lorraine
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_conquer_north_italy
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = { focus = LUX_claim_eastern_franks }
+		x = 0
+		y = 1
+		relative_position_id = LUX_claim_eastern_franks
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+###
+	focus = {
+		id = LUX_
+		icon = GFX_goal_generic_demand_territory
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 0
+		#relative_position_id =
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_1
+		icon = GFX_goal_generic_demand_territory
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 0
+		#relative_position_id =
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_2
+		icon = GFX_goal_generic_demand_territory
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 0
+		#relative_position_id =
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+### IC FOCUS
+	focus = {
+		id = LUX_economic_effort
+		icon = GFX_goal_generic_construct_infrastructure
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 12
+		y = 0
+		#relative_position_id =
+
+		cost = 5
+		
+		available = {
+			root = {
+				exists = yes
+				has_capitulated = no
+				has_civil_war = no
+			}
+			var:capital = { is_fully_controlled_by = root }
+		}
+		
+		bypass = {
+			var:capital = {
+				OR = {
+					NOT = { is_fully_controlled_by = root }
+					custom_trigger_tooltip = {
+						tooltip = infrastructure_effort_tt
+						all_owned_state = { free_building_slots = { building = infrastructure size < 1 } }
+					}
+					custom_trigger_tooltip = {
+						tooltip = construction_effort_tt
+						all_owned_state = { free_building_slots = { building = industrial_complex size < 1 include_locked = yes } }
+					}
+				}
+			}
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			var:capital = {
+				add_building_construction = { type = infrastructure level = 1 }
+				add_extra_state_shared_building_slots = 1
+				if = {
+					limit = { infrastructure > 3 }
+					add_building_construction = { type = industrial_complex level = 1 }
+				}
+			}
+		}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_industrial_upgrading_of_steel
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = LUX_economic_effort }
+		#mutually_exclusive = { focus =  }
+		x = -2
+		y = 1
+		relative_position_id = LUX_economic_effort
+
+		cost = 8
+		
+		available = {
+			root = {
+				exists = yes
+				has_capitulated = no
+				has_civil_war = no
+			}
+			var:capital = { is_fully_controlled_by = root }
+		}
+		
+		bypass = {
+			var:capital = {
+				OR = {
+					NOT = { is_fully_controlled_by = root }
+					custom_trigger_tooltip = {
+						tooltip = infrastructure_effort_tt
+						all_owned_state = { free_building_slots = { building = infrastructure size < 1 } }
+					}
+					custom_trigger_tooltip = {
+						tooltip = construction_effort_tt
+						all_owned_state = { free_building_slots = { building = industrial_complex size < 1 include_locked = yes } }
+					}
+				}
+			}
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			var:capital = {
+				add_building_construction = { type = infrastructure level = 1 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 }
+				add_resource = { type = steel amount = 10 }
+			}
+		}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	#france
+	focus = {
+		id = LUX_allies_of_petite_entente
+		icon = GFX_focus_chi_reach_out_to_france
+		prerequisite = { focus = LUX_industrial_upgrading_of_steel }
+		x = -6
+		y = 1
+		relative_position_id = LUX_industrial_upgrading_of_steel
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_employment_promoted
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = LUX_allies_of_petite_entente }
+		mutually_exclusive = {
+			focus = LUX_supply_of_industrial_consumer
+			focus = LUX_letzbuergesch_prioriteit
+		}
+		x = 0
+		y = 1
+		relative_position_id = LUX_allies_of_petite_entente
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	#germany
+	focus = {
+		id = LUX_allies_of_iron
+		icon = GFX_focus_chi_mission_to_germany
+		prerequisite = { focus = LUX_industrial_upgrading_of_steel }
+		x = -2
+		y = 1
+		relative_position_id = LUX_industrial_upgrading_of_steel
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_supply_of_industrial_consumer
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = LUX_allies_of_iron }
+		mutually_exclusive = {
+			focus = LUX_employment_promoted 
+			focus = LUX_letzbuergesch_prioriteit
+		}
+		x = 0
+		y = 1
+		relative_position_id = LUX_allies_of_iron
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	#
+	focus = {
+		id = LUX_letzbuergesch_prioriteit #Lëtzebuergesch Prioritéit
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = LUX_industrial_upgrading_of_steel }
+		prerequisite = { focus = LUX_crisis_awareness }
+		mutually_exclusive = {
+			focus = LUX_employment_promoted 
+			focus = LUX_supply_of_industrial_consumer
+		}
+
+		x = 2
+		y = 2
+		relative_position_id = LUX_industrial_upgrading_of_steel
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_
+		icon = GFX_goal_generic_demand_territory
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 0
+		#relative_position_id =
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	### ARMY FACTORIES
+	focus = {
+		id = LUX_crisis_awareness
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = LUX_economic_effort }
+		#mutually_exclusive = { focus =  }
+		x = 2
+		y = 2
+		relative_position_id = LUX_economic_effort
+
+		cost = 8
+		
+		available = {
+			root = {
+				exists = yes
+				has_capitulated = no
+				has_civil_war = no
+				is_puppet = no
+				has_war_support > 0.10
+			}
+		}
+		
+		bypass = {
+			OR = {
+				threat > 0.26
+				has_war = yes
+			}
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			add_war_support = 0.05
+			if = {
+				limit = { has_idea = civilian_economy }
+				add_ideas = low_economic_mobilisation
+			}
+			add_timed_idea = { idea = LUX_crisis_awareness_idea years = 1 }
+		}
+		
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_national_army_factories
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = LUX_crisis_awareness }
+		#mutually_exclusive = { focus =  }
+		x = 2
+		y = 1
+		relative_position_id = LUX_crisis_awareness
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_fortress_of_territory
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = LUX_crisis_awareness }
+		#mutually_exclusive = { focus =  }
+		x = 6
+		y = 1
+		relative_position_id = LUX_crisis_awareness
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+### NAVY FOCUS
+	focus = {
+		id = LUX_
+		icon = GFX_goal_generic_demand_territory
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 0
+		#relative_position_id =
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+### AIRFORCE FOCUS
+	focus = {
+		id = LUX_
+		icon = GFX_goal_generic_demand_territory
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 0
+		#relative_position_id =
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+}

@@ -36,3 +36,80 @@
  
  generic_head_of_government_name: "国会"
  generic_head_of_gov: "政府首脑"
+
+#LUX
+ #ideas
+ LUX_crisis_awareness_idea: "危机意识"
+ LUX_crisis_awareness_idea_desc: ""
+ 
+ LUX_economic_effort: "重视经济"
+ LUX_economic_effort_desc: ""
+
+ LUX_industrial_upgrading_of_steel: "大炼钢铁"
+ LUX_industrial_upgrading_of_steel_desc: ""
+
+ LUX_crisis_awareness: "危机意识"
+ LUX_crisis_awareness_desc: ""
+
+ LUX_national_army_factories: "国家战备工厂"
+ LUX_national_army_factories_desc: ""
+
+ LUX_fortress_of_territory: "国土防线"
+ LUX_fortress_of_territory_desc: ""
+
+ LUX_allies_of_petite_entente: "供给小协约国"
+ LUX_allies_of_petite_entente_desc: ""
+ LUX_employment_promoted: "充分就业"
+ LUX_employment_promoted_desc: ""
+ LUX_allies_of_iron: "钢铁合约"
+ LUX_allies_of_iron_desc: ""
+ LUX_supply_of_industrial_consumer: "工业产品供给"
+ LUX_supply_of_industrial_consumer_desc: ""
+ LUX_letzbuergesch_prioriteit: "自立自强"
+ LUX_letzbuergesch_prioriteit_desc: ""
+
+ LUX_monarchy_of_luxembourg: "卢森堡君主制"
+ LUX_monarchy_of_luxembourg_desc: ""
+
+ LUX_farewell_your_majesty: "送别君主制"
+ LUX_farewell_your_majesty_desc: ""
+
+ LUX_consolidate_charter: "巩固宪章权威"
+ LUX_consolidate_charter_desc: ""
+ LUX_speech_liberty: "言论自由"
+ LUX_speech_liberty_desc: ""
+ LUX_tolerate_moderate_socialists: "兼容社会主义温和派"
+ LUX_tolerate_moderate_socialists_desc: ""
+
+ LUX_strengthen_loyalists: "强化君主派"
+ LUX_strengthen_loyalists_desc: ""
+
+ LUX_united_front: "团结阵线"
+ LUX_united_front_desc: ""
+ LUX_neutral_country: "中立国"
+ LUX_neutral_country_desc: ""
+ LUX_luxembourg_nation: "何谓卢森堡民族"
+ LUX_luxembourg_nation_desc: ""
+ LUX_defend_territory: "捍卫疆土"
+ LUX_defend_territory_desc: ""
+
+ LUX_glory_erstwhile: "旧日辉煌"
+ LUX_glory_erstwhile_desc: ""
+ LUX_ture_frankish_nation: "真正的法兰克人"
+ LUX_ture_frankish_nation_desc: ""
+ LUX_black_shirt_army: "组织黑衫军"
+ LUX_black_shirt_army_desc: ""
+ LUX_united_nazism: "联盟国社党人"
+ LUX_united_nazism_desc: ""
+ LUX_grand_duchy_of_lorraine: "洛林的大公国"
+ LUX_grand_duchy_of_lorraine_desc: ""
+ LUX_claim_north_france: "北法兰西的统治权"
+ LUX_claim_north_france_desc: ""
+ LUX_claim_eastern_franks: "东法兰克的主权"
+ LUX_claim_eastern_franks_desc: ""
+ LUX_conquer_aquitaine: "征服阿基坦人"
+ LUX_conquer_aquitaine_desc: ""
+ LUX_conquer_duchy_of_barcelona: "征服巴塞罗那公国"
+ LUX_conquer_duchy_of_barcelona_desc: ""
+ LUX_conquer_north_italy: "征服北意大利"
+ LUX_conquer_north_italy_desc: ""
