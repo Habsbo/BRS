@@ -2,6 +2,12 @@
 #Remember to change the tooltips if the effects are changed
 #State scope. Prev is target country.
 
+remove_head_of_gov_effect = {
+	hidden_effect = {
+		remove_ideas_with_trait = generic_head_of_gov_hidden
+	}
+}
+
 POL_DEBUG_effect_1 = {
 	if = {
 		limit = { is_debug = yes }
@@ -16,7 +22,12 @@ POL_DEBUG_effect_2 = {
 	}
 }
 
-
+POL_DEBUG_effect_3 = {
+	if = {
+		limit = { is_debug = yes }
+		
+	}
+}
 
 POL_update_industrial_modernization_index = {
 	if = {

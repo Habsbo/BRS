@@ -1,0 +1,30 @@
+﻿###########################
+# BR News Events
+###########################
+
+add_namespace = BR_news
+
+# Jozef Pilsudski has been assassinated
+news_event = {
+	id = BR_news.1
+	title = BR_news.1.t
+	desc = BR_news.1.desc
+	picture = GFX_news_event_001
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = BR_news.1.a
+		trigger = {
+			TAG = POL
+		}
+	}
+	option = {
+		name = BR_news.1.b
+		trigger = {
+			NOT = { TAG = POL }
+		}
+	}
+}

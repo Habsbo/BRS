@@ -6,10 +6,62 @@ spriteTypes = {
 	}
 	
 	spriteType = {
+		name = "GFX_portrait_POL_Rosa_Luxemburg"
+		texturefile = "gfx/leaders/POL/Rosa_Luxemburg.tga"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_POL_Felix_Dzerzhinsky"
+		texturefile = "gfx/leaders/POL/Felix_Dzerzhinsky.png"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_POL_Parliament"
+		texturefile = "gfx/leaders/POL/Parliament.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_POL_Ignacy_Paderewski"
+		texturefile = "gfx/leaders/POL/Ignacy_Paderewski.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_POL_Rydz_Smigly"
+		texturefile = "gfx/leaders/POL/Rydz_Smigly.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_advisor_Rydz_Smigly"
+		texturefile = "gfx/interface/ideas/idea_advisor_POL_Rydz_Smigly.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_advisor_Ignacy_Paderewski"
+		texturefile = "gfx/interface/ideas/idea_advisor_POL_Ignacy_Paderewski.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_advisor_POL_Parliament"
+		texturefile = "gfx/interface/ideas/idea_advisor_POL_Parliament.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_advisor_Felix_Dzerzhinsky"
+		texturefile = "gfx/interface/ideas/idea_advisor_POL_Felix_Dzerzhinsky.png"
+	}
+	
+	spriteType = {
 		name = "GFX_idea_advisor_jozef_pilsudski"
 		texturefile = "gfx/interface/ideas/idea_jozef_pilsudski.dds"
 	}
+	
+	spriteType = {
+		name = "GFX_idea_advisor_Rosa_Luxemburg"
+		texturefile = "gfx/interface/ideas/idea_advisor_POL_Rosa_Luxemburg.png"
+	}
 
+
+	### national spirit ###
 	spriteType = {
 		name = "GFX_idea_POL_nationalist_military"
 		texturefile = "gfx/interface/ideas/idea_POL_nationalist_military.dds"

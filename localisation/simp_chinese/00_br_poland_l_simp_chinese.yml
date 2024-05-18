@@ -13,12 +13,22 @@ l_simp_chinese:
  operation_steal_tech_navy_outcome: "针对海军的间谍行动成果"
  modifier_state_repair_speed_fuel_silo_factor: "§Y$fuel_silo$§!修理速度"
  head_of_gov_generic_ttt: "政府首脑无法自由任命"
+ generic_head_of_gov_hidden: "    "
  
+ POL_Parliament: "波兰议会"
  Jozef_Pilsudski: "约瑟夫·毕苏斯基"
+ Rosa_Luxemburg: "罗莎·卢森堡"
+ Felix_Dzerzhinsky: "菲利克斯·捷尔任斯基"
  Ignacy_Moscicki: "伊格纳齐·莫希奇茨基"
+ Ignacy_Paderewski: "伊格纳齐·扬·帕德列夫斯基"
+ Rydz_Smigly: "雷兹·希米格维"
  
  dictator_of_sanacja: "萨纳齐亚的独裁者"
+ egle_of_revolution_leader: "$egle_of_revolution$"
+ egle_of_revolution: "革命之鹰"
  chemical_educator: "化学教育家"
+ head_of_national_security: "国防安全部长"
+ piano_diplomatist: "钢琴外交官"
  
  
  POL_civ_first: "农业补贴政策"
@@ -141,4 +151,16 @@ l_simp_chinese:
  POL_change_cost_method_tt2: "将切换成使用£GFX_war_support_icon §Y战争支持度§!进行战备工作，\n优先使用§Y战争支持度修正§!，不足时以§Y基础战争支持度§!代替。"
  POL_issues_securities: "发行债券"
  POL_expropriate_production_lines: "征用生产线"
+ 
+ BR_news.1.t: "$Jozef_Pilsudski$遭暗杀身亡"
+ BR_news.1.desc: "昨日下午3时许，巴拉巴拉……"
+ BR_news.1.a: "一定要找出凶手！"
+ BR_news.1.b: "太残暴了。"
+ BR_poland_events.1001.t: "波兰政府选举"
+ BR_poland_events.1001.desc: "理论上这是一个调试事件。"
+ BR_poland_events.1001.a: "$Rosa_Luxemburg$。"
+ BR_poland_events.1001.b: "$Felix_Dzerzhinsky$。"
+ BR_poland_events.1001.c: "$Ignacy_Moscicki$。"
+ BR_poland_events.1001.d: "$Ignacy_Paderewski$。"
+ BR_poland_events.1001.e: "$Rydz_Smigly$。"
  

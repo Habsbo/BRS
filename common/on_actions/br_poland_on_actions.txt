@@ -32,7 +32,7 @@ on_actions = {
 #							token_base = [tag]_generic_head_of_government # token will be TAG_token_base
 #							name = generic_head_of_government_name
 #							portraits = { 
-#								army = { small = GFX_portrait_POL_ignacy_moscicki_small }
+#								army = { small = GFX_idea_advisor_Parliament }
 #							}
 #						}
 #						[tag]_generic_head_of_government = {

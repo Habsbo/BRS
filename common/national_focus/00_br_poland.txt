@@ -1,0 +1,58 @@
+### made by LingXia ###
+### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_HISTORICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+### search_filters = {FOCUS_FILTER_PROPAGANDA}
+### search_filters = {FOCUS_FILTER_ARMY_XP}
+### search_filters = {FOCUS_FILTER_NAVY_XP}
+### search_filters = {FOCUS_FILTER_AIR_XP}
+### search_filters = {FOCUS_FILTER_BALANCE_OF_POWER}
+### search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+
+focus_tree = {
+	id = br_polish_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 100
+			tag = POL
+		}
+	}
+	default = no
+
+	continuous_focus_position = { x = 100 y = 3250 }
+
+	initial_show_position = {
+		x = 10
+		y = 0
+	}
+
+	focus = {
+		id = POL_nothing_today
+		icon = GFX_focus_generic_military_dictatorship
+		#prerequisite = { focus = ENG_twenty_passed }
+		#relative_position_id = ENG_twenty_passed
+		x = 12
+		y = 0
+		cost = 0
+		available = {
+			always = no
+		}
+		ai_will_do = {
+			base = 1
+		}
+		bypass = {}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 10
+		}
+	}
+}

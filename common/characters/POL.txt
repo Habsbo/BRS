@@ -1,5 +1,32 @@
 characters = {
 
+	POL_Parliament = {
+		name = POL_Parliament
+		portraits = {
+			civilian = {
+				large = GFX_portrait_POL_Parliament
+				small = GFX_idea_advisor_POL_Parliament
+			}
+			army = {
+				large = GFX_portrait_POL_Parliament
+				small = GFX_idea_advisor_POL_Parliament
+			}
+		}
+		advisor = {
+			slot = head_of_gov
+			idea_token = POL_Parliament
+			allowed = {
+				original_tag = POL
+			}
+			available = {
+				br_head_of_gov_generic_trigger = yes
+			}
+			cost = 0
+			can_be_fired = no
+			traits = { generic_head_of_gov generic_head_of_gov_hidden }
+		}
+	}
+
 	POL_Jozef_Pilsudski = {
 		name = Jozef_Pilsudski
 		portraits = {
@@ -17,6 +44,72 @@ characters = {
 			traits = { dictator_of_sanacja }
 			expire = "1965.1.1.1"
 			id = -1
+		}
+	}
+
+	POL_Rosa_Luxemburg = {
+		name = Rosa_Luxemburg
+		portraits = {
+			civilian = {
+				large = GFX_portrait_POL_Rosa_Luxemburg
+				small = GFX_idea_advisor_Rosa_Luxemburg
+			}
+			army = {
+				large = GFX_portrait_POL_Rosa_Luxemburg
+				small = GFX_idea_advisor_Rosa_Luxemburg
+			}
+		}
+		country_leader = {
+			ideology = syndicalism
+			traits = { egle_of_revolution_leader }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+		advisor = {
+			slot = head_of_gov
+			idea_token = POL_Rosa_Luxemburg
+			allowed = {
+				original_tag = POL
+			}
+			available = {
+				br_head_of_gov_generic_trigger = yes
+			}
+			cost = 0
+			can_be_fired = no
+			traits = { egle_of_revolution generic_head_of_gov_hidden }
+		}
+	}
+
+	POL_Felix_Dzerzhinsky = {
+		name = Felix_Dzerzhinsky
+		portraits = {
+			civilian = {
+				large = GFX_portrait_POL_Felix_Dzerzhinsky
+				small = GFX_idea_advisor_Felix_Dzerzhinsky
+			}
+			army = {
+				large = GFX_portrait_POL_Felix_Dzerzhinsky
+				small = GFX_idea_advisor_Felix_Dzerzhinsky
+			}
+		}
+		country_leader = {
+			ideology = leninism
+			traits = {  }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+		advisor = {
+			slot = head_of_gov
+			idea_token = POL_Felix_Dzerzhinsky
+			allowed = {
+				original_tag = POL
+			}
+			available = {
+				br_head_of_gov_generic_trigger = yes
+			}
+			cost = 0
+			can_be_fired = no
+			traits = { head_of_national_security generic_head_of_gov_hidden }
 		}
 	}
 	
@@ -41,7 +134,70 @@ characters = {
 			}
 			cost = 0
 			can_be_fired = no
-			traits = { chemical_educator }
+			traits = { chemical_educator generic_head_of_gov_hidden }
+		}
+	}
+	
+	POL_Ignacy_Paderewski = {
+		name = Ignacy_Paderewski
+		portraits = {
+			civilian = {
+				large = GFX_portrait_POL_Ignacy_Paderewski
+				small = GFX_idea_advisor_Ignacy_Paderewski
+			}
+			army = {
+				large = GFX_portrait_POL_Ignacy_Paderewski
+				small = GFX_idea_advisor_Ignacy_Paderewski
+			}
+		}
+		advisor = {
+			slot = head_of_gov
+			idea_token = POL_Ignacy_Paderewski
+			allowed = {
+				original_tag = POL
+			}
+			available = {
+				br_head_of_gov_generic_trigger = yes
+			}
+			cost = 0
+			can_be_fired = no
+			traits = { piano_diplomatist generic_head_of_gov_hidden }
+		}
+	}
+	
+	POL_Rydz_Smigly = {
+		name = Rydz_Smigly
+		portraits = {
+			civilian = {
+				large = GFX_portrait_POL_Rydz_Smigly
+				small = GFX_idea_advisor_Rydz_Smigly
+			}
+			army = {
+				large = GFX_portrait_POL_Rydz_Smigly
+				small = GFX_idea_advisor_Rydz_Smigly
+			}
+		}
+		advisor = {
+			slot = head_of_gov
+			idea_token = POL_Rydz_Smigly
+			allowed = {
+				original_tag = POL
+			}
+			available = {
+				br_head_of_gov_generic_trigger = yes
+			}
+			cost = 0
+			can_be_fired = no
+			traits = { NOR_oppportunistic_officer generic_head_of_gov_hidden }
+		}
+		field_marshal = {
+			traits = { old_guard thorough_planner politically_connected }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 3
+			legacy_id = -1
 		}
 	}
 	

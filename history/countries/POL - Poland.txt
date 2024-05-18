@@ -106,9 +106,21 @@ add_ideas = {
 	POL_spear_of_revenge
 }
 
+recruit_character = POL_Parliament
 recruit_character = POL_Jozef_Pilsudski
+recruit_character = POL_Rosa_Luxemburg
+recruit_character = POL_Felix_Dzerzhinsky
 recruit_character = POL_Ignacy_Moscicki
+recruit_character = POL_Ignacy_Paderewski
+recruit_character = POL_Rydz_Smigly
 
+
+POL_Parliament = { set_variable = { THIS.CharacterID = POL_Parliament } }
+POL_Rosa_Luxemburg = { set_variable = { THIS.CharacterID = POL_Rosa_Luxemburg } }
+POL_Felix_Dzerzhinsky = { set_variable = { THIS.CharacterID = POL_Felix_Dzerzhinsky } }
+POL_Ignacy_Moscicki = { set_variable = { THIS.CharacterID = POL_Ignacy_Moscicki } }
+POL_Ignacy_Paderewski = { set_variable = { THIS.CharacterID = POL_Ignacy_Paderewski } }
+POL_Rydz_Smigly = { set_variable = { THIS.CharacterID = POL_Rydz_Smigly } }
 
 set_politics = {
 	ruling_party = demo_conservatism
