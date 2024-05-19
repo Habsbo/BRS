@@ -62,6 +62,7 @@ KMT = {
 }
 #
 HEL = {
+	original_tag = GRE
 	tag = GRE
 }
 HER = {

@@ -108,6 +108,17 @@
 			tooltip = x
 		}
 	}
+
+	
+	is_border_state = {
+		custom_trigger_tooltip = {
+			tooltip = is_border_state_tt
+			any_neighbor_state = {
+				NOT = { is_owned_by = root }
+			}
+		}
+	}
+
 ###
 
 	br_head_of_gov_generic_trigger = {

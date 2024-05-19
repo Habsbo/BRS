@@ -23,6 +23,11 @@ if = {
 set_war_support = 0.1
 set_stability = 0.8
 
+#
+recruit_character = LUX_marie_adelaide_of_luxembourg
+recruit_character = LUX_charlotte_of_luxembourg
+recruit_character = LUX_jean_benoit_marc_d_aviano
+#
 recruit_character = LUX_joseph_bech
 recruit_character = LUX_gustave_lebeau
 recruit_character = LUX_frédéric_nagelmackers
@@ -45,7 +50,7 @@ recruit_character = LUX_pierre_krier
 recruit_character = LUX_martin_karp
 
 set_politics = {
-	ruling_party = demo_socialism
+	ruling_party = demo_conservatism
 	last_election = "1934.6.3"
 	election_frequency = 36
 	elections_allowed = yes
@@ -53,12 +58,27 @@ set_politics = {
 
 set_popularities = {
 	sci_socialism = 10 #科学社会主义
-	demo_socialism = 40 #社会民主主义
+	demo_socialism = 20 #社会民主主义
 	demo_liberalism = 30 #社会自由主义
-	demo_conservatism = 20 #保守民主主义
+	demo_conservatism = 40 #保守民主主义
 }
 
 1939.1.1 = {
 	promote_character = LUX_pierre_dupong
 	retire_character = LUX_joseph_bech
+}
+
+add_ideas = {
+	br_laws_parliamentarism
+	br_laws_monarchy
+	br_laws_asset
+	br_laws_national_state
+	br_laws_spiritual
+	br_laws_bourgeoisie
+	#
+	volunteer_only
+	free_trade
+	civilian_economy
+	#hog
+	LUX_joseph_bech_hog
 }

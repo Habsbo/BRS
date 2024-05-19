@@ -35,7 +35,7 @@ focus_tree = {
 		id = LUX_farewell_your_majesty
 		icon = GFX_goal_tfv_sever_ties_with_uk
 		#prerequisite = { focus =  }
-		#mutually_exclusive = { focus =  }
+		mutually_exclusive = { focus =  LUX_monarchy_of_luxembourg }
 		x = 36
 		y = 0
 		#relative_position_id =
@@ -62,7 +62,7 @@ focus_tree = {
 		id = LUX_monarchy_of_luxembourg
 		icon = GFX_goal_tfv_strengthen_commonwealth_ties
 		#prerequisite = { focus =  }
-		#mutually_exclusive = { focus =  }
+		mutually_exclusive = { focus = LUX_farewell_your_majesty }
 		x = 50
 		y = 0
 		#relative_position_id =
@@ -79,7 +79,12 @@ focus_tree = {
 		
 		complete_tooltip = {}
 		
-		completion_reward = {}
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = { ideology = demo_liberalism popularity = 0.02 }
+			add_popularity = { ideology = demo_conservatism popularity = 0.02 }
+			add_popularity = { ideology = authoritarian popularity = 0.02 }
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -90,7 +95,7 @@ focus_tree = {
 		prerequisite = { focus = LUX_monarchy_of_luxembourg }
 		mutually_exclusive = { focus = LUX_strengthen_loyalists }
 		x = -1
-		y = 1
+		y = 2
 		relative_position_id = LUX_monarchy_of_luxembourg
 
 		cost = 8
@@ -105,7 +110,11 @@ focus_tree = {
 		
 		complete_tooltip = {}
 		
-		completion_reward = {}
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = { ideology = demo_liberalism popularity = 0.03 }
+			add_popularity = { ideology = demo_conservatism popularity = 0.03 }
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -115,7 +124,7 @@ focus_tree = {
 		prerequisite = { focus = LUX_consolidate_charter focus = LUX_strengthen_loyalists }
 		mutually_exclusive = { focus = LUX_united_front }
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = LUX_consolidate_charter
 
 		cost = 8
@@ -220,7 +229,7 @@ focus_tree = {
 		prerequisite = { focus = LUX_monarchy_of_luxembourg }
 		mutually_exclusive = { focus = LUX_consolidate_charter }
 		x = 1
-		y = 1
+		y = 2
 		relative_position_id = LUX_monarchy_of_luxembourg
 
 		cost = 8
@@ -235,7 +244,11 @@ focus_tree = {
 		
 		complete_tooltip = {}
 		
-		completion_reward = {}
+		completion_reward = {
+			add_war_support = 0.05
+			add_popularity = { ideology = demo_conservatism popularity = 0.03 }
+			add_popularity = { ideology = authoritarian popularity = 0.03 }
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -245,7 +258,7 @@ focus_tree = {
 		prerequisite = { focus = LUX_consolidate_charter focus = LUX_strengthen_loyalists }
 		mutually_exclusive = { focus = LUX_speech_liberty }
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = LUX_strengthen_loyalists
 
 		cost = 8
@@ -294,7 +307,7 @@ focus_tree = {
 		icon = GFX_focus_ger_revive_kaiserreich
 		prerequisite = { focus = LUX_luxembourg_nation }
 		#mutually_exclusive = { focus =  }
-		x = 2
+		x = 4
 		y = 1
 		relative_position_id = LUX_luxembourg_nation
 
@@ -315,11 +328,38 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 	}
 	focus = {
-		id = LUX_house_1
+		id = LUX_kaiser_of_holy_roman_empire
 		icon = GFX_goal_generic_demand_territory
 		prerequisite = { focus = LUX_glory_erstwhile }
-		#mutually_exclusive = { focus =  }
+		mutually_exclusive = { focus = LUX_date_back_house_of_merovingian }
 		x = -1
+		y = 1
+		relative_position_id = LUX_glory_erstwhile
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_date_back_house_of_merovingian
+		icon = GFX_focus_ARG_defense_and_democracy
+		prerequisite = { focus = LUX_glory_erstwhile }
+		mutually_exclusive = { focus = LUX_kaiser_of_holy_roman_empire }
+		x = 1
 		y = 1
 		relative_position_id = LUX_glory_erstwhile
 
@@ -372,7 +412,7 @@ focus_tree = {
 		icon = GFX_focus_generic_fascist_propaganda
 		prerequisite = { focus = LUX_luxembourg_nation }
 		#mutually_exclusive = { focus =  }
-		x = 6
+		x = 8
 		y = 1
 		relative_position_id = LUX_luxembourg_nation
 
@@ -396,7 +436,7 @@ focus_tree = {
 		id = LUX_black_shirt_army
 		icon = GFX_focus_generic_fascist_troops
 		prerequisite = { focus = LUX_ture_frankish_nation }
-		x = -1
+		x = 0
 		y = 1
 		relative_position_id = LUX_ture_frankish_nation
 
@@ -420,8 +460,9 @@ focus_tree = {
 		id = LUX_united_nazism
 		icon = GFX_focus_chi_mission_to_germany
 		prerequisite = { focus = LUX_ture_frankish_nation }
-		x = 1
-		y = 1
+		mutually_exclusive = { focus = LUX_united_british_fascisti }
+		x = -1
+		y = 2
 		relative_position_id = LUX_ture_frankish_nation
 
 		cost = 8
@@ -474,14 +515,39 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 	}
 	focus = {
+		id = LUX_united_british_fascisti
+		icon = GFX_focus_chi_mission_to_germany
+		prerequisite = { focus = LUX_ture_frankish_nation }
+		mutually_exclusive = { focus = LUX_united_nazism }
+		x = 1
+		y = 2
+		relative_position_id = LUX_ture_frankish_nation
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
 		id = LUX_grand_duchy_of_lorraine
 		icon = GFX_goal_anschluss
 		prerequisite = { focus = LUX_black_shirt_army }
-		prerequisite = { focus = LUX_united_nazism }
+		prerequisite = { focus = LUX_united_nazism focus = LUX_united_british_fascisti }
 		#mutually_exclusive = { focus =  }
 		x = 0
 		y = 2
-		relative_position_id = LUX_ture_frankish_nation
+		relative_position_id = LUX_black_shirt_army
 
 		cost = 8
 		
@@ -508,6 +574,22 @@ focus_tree = {
 			#add lorraine claim
 			17 = { add_claim_by = root }
 			28 = { add_claim_by = root }
+			#war with france
+			effect_tooltip = {
+				create_wargoal = {
+					target = FRA
+					type = take_state_focus
+					generator = { 17 28 }
+				}
+			}
+			#war with germany
+			effect_tooltip = {
+				create_wargoal = {
+					target = GER
+					type = take_state_focus
+					generator = { 42 51 }
+				}
+			}
 		}
 		
 		ai_will_do = { factor = 1 }
@@ -842,6 +924,96 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+	#england
+	focus = {
+		id = LUX_allies_of_bri_lux
+		icon = GFX_focus_chi_british_cooperation
+		prerequisite = { focus = LUX_industrial_upgrading_of_steel }
+		x = -10
+		y = 1
+		relative_position_id = LUX_industrial_upgrading_of_steel
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_substitute_trade_status_of_bel
+		icon = GFX_goal_generic_military_deal
+		prerequisite = { focus = LUX_allies_of_bri_lux }
+		mutually_exclusive = {
+			focus = LUX_employment_promoted
+			focus = LUX_supply_of_industrial_consumer
+			focus = LUX_letzbuergesch_prioriteit
+		}
+		x = 0
+		y = 1
+		relative_position_id = LUX_allies_of_bri_lux
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			custom_effect_tooltip = if_they_accept_newline_tt
+			effect_tooltip = {
+				create_wargoal = { target = BEL type = annex_everything }
+				give_guarantee = no
+			}
+		}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_integrate_educational_resources
+		icon = GFX_focus_research2
+		prerequisite = { focus = LUX_substitute_trade_status_of_bel focus = LUX_employment_promoted }
+		x = 2
+		y = 1
+		relative_position_id = LUX_substitute_trade_status_of_bel
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
 	#france
 	focus = {
 		id = LUX_allies_of_petite_entente
@@ -874,12 +1046,39 @@ focus_tree = {
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = LUX_allies_of_petite_entente }
 		mutually_exclusive = {
+			focus = LUX_substitute_trade_status_of_bel
 			focus = LUX_supply_of_industrial_consumer
 			focus = LUX_letzbuergesch_prioriteit
 		}
 		x = 0
 		y = 1
 		relative_position_id = LUX_allies_of_petite_entente
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_scientific_exchange
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = LUX_employment_promoted focus = LUX_supply_of_industrial_consumer }
+		x = 2
+		y = 1
+		relative_position_id = LUX_employment_promoted
 
 		cost = 8
 		
@@ -931,6 +1130,7 @@ focus_tree = {
 		icon = GFX_goal_generic_positive_trade_relations
 		prerequisite = { focus = LUX_allies_of_iron }
 		mutually_exclusive = {
+			focus = LUX_substitute_trade_status_of_bel
 			focus = LUX_employment_promoted 
 			focus = LUX_letzbuergesch_prioriteit
 		}
@@ -963,6 +1163,7 @@ focus_tree = {
 		prerequisite = { focus = LUX_industrial_upgrading_of_steel }
 		prerequisite = { focus = LUX_crisis_awareness }
 		mutually_exclusive = {
+			focus = LUX_substitute_trade_status_of_bel
 			focus = LUX_employment_promoted 
 			focus = LUX_supply_of_industrial_consumer
 		}
@@ -986,6 +1187,32 @@ focus_tree = {
 		completion_reward = {}
 
 		search_filters = {FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_national_university_of_letzbuergesch
+		icon = GFX_focus_research
+		prerequisite = { focus = LUX_supply_of_industrial_consumer focus = LUX_letzbuergesch_prioriteit }
+		x = -2
+		y = 1
+		relative_position_id = LUX_letzbuergesch_prioriteit
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			add_research_slot = 1
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -1076,6 +1303,76 @@ focus_tree = {
 
 		cost = 8
 		
+		available = {
+			root = {
+				exists = yes
+				has_capitulated = no
+				has_civil_war = no
+			}
+			OR = {
+				has_war_support > 0.20
+				threat > 0.10
+			}
+			any_core_state = { is_fully_controlled_by = root }
+		}
+		
+		bypass = {
+			any_core_state = {
+				OR = {
+					NOT = { is_fully_controlled_by = root }
+					custom_trigger_tooltip = {
+						tooltip = production_effort_tt
+						all_owned_state = { free_building_slots = { building = arms_factory size < 1 include_locked = yes } }
+					}
+				}
+			}
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			#
+			add_war_support = 0.05
+			#
+			random_core_state = {
+				prioritize = { 8 }
+				limit = {
+					is_owned_and_controlled_by = root
+					free_building_slots = { building = arms_factory size > 1 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = arms_factory level = 2 }
+			}
+			random_core_state = {
+				limit = {
+					is_owned_and_controlled_by = root
+					free_building_slots = { building = arms_factory size > 1 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = arms_factory level = 2 }
+			}
+		}
+		
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_grand_battle_plan
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = LUX_national_army_factories }
+		prerequisite = { focus = LUX_fortress_of_territory }
+		mutually_exclusive = { focus = LUX_artillery_collaboration }
+		x = -1
+		y = 2
+		relative_position_id = LUX_national_army_factories
+
+		cost = 8
+		
 		available = {}
 		
 		bypass = {}
@@ -1088,10 +1385,83 @@ focus_tree = {
 		
 		completion_reward = {}
 		
-		search_filters = {FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INDUSTRY}
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_focus_on_volition
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = LUX_grand_battle_plan focus = LUX_artillery_collaboration }
+		mutually_exclusive = { focus =  LUX_focus_on_cycle }
+		x = 0
+		y = 1
+		relative_position_id = LUX_grand_battle_plan
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
 		
 		ai_will_do = { factor = 1 }
 	}
+	#
+	focus = {
+		id = LUX_optimize_training
+		icon = GFX_focus_chi_army_reform
+		prerequisite = { focus = LUX_focus_on_volition }
+		x = 0
+		y = 1
+		relative_position_id = LUX_focus_on_volition
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_efficient_scheduling
+		icon = GFX_focus_generic_military_mission
+		prerequisite = { focus = LUX_optimize_training }
+		x = 0
+		y = 1
+		relative_position_id = LUX_optimize_training
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	#
 	focus = {
 		id = LUX_fortress_of_territory
 		icon = GFX_goal_generic_construct_military
@@ -1100,6 +1470,181 @@ focus_tree = {
 		x = 6
 		y = 1
 		relative_position_id = LUX_crisis_awareness
+
+		cost = 8
+		
+		available = {
+			root = {
+				exists = yes
+				has_capitulated = no
+				has_civil_war = no
+				is_puppet = no
+			}
+			OR = {
+				has_war_support > 0.20
+				threat > 0.05
+			}
+			any_core_state = { is_fully_controlled_by = root }
+		}
+		
+		bypass = {
+			any_core_state = {
+				OR = {
+					NOT = { is_fully_controlled_by = root }
+					custom_trigger_tooltip = {
+						tooltip = production_effort_tt
+						all_owned_state = { free_building_slots = { building = arms_factory size < 1 include_locked = yes } }
+					}
+				}
+			}
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			add_war_support = 0.05
+			#
+			random_core_state = {
+				prioritize = { 8 }
+				limit = {
+					is_owned_and_controlled_by = root
+					free_building_slots = { building = arms_factory size > 1 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = arms_factory level = 2 }
+			}
+			#
+			every_core_state = {
+				limit = {
+					is_owned_by = root
+					is_fully_controlled_by = root
+					is_border_state = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = { all_provinces = yes }
+				}
+			}
+		}
+
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_great_defense_theory
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = LUX_fortress_of_territory }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 2
+		relative_position_id = LUX_fortress_of_territory
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	#
+	focus = {
+		id = LUX_army_artillery_effort
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = LUX_national_army_factories }
+		prerequisite = { focus = LUX_fortress_of_territory }
+		#mutually_exclusive = { focus =  }
+		x = 2
+		y = 1
+		relative_position_id = LUX_national_army_factories
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_artillery_collaboration
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = LUX_army_artillery_effort }
+		mutually_exclusive = { focus = LUX_grand_battle_plan }
+		x = -1
+		y = 1
+		relative_position_id = LUX_army_artillery_effort
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_focus_on_cycle
+		icon = GFX_focus_BRA_rubber_war
+		prerequisite = { focus = LUX_grand_battle_plan focus = LUX_artillery_collaboration }
+		mutually_exclusive = { focus = LUX_focus_on_volition }
+		x = 0
+		y = 1
+		relative_position_id = LUX_artillery_collaboration
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_external_support
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = LUX_focus_on_cycle }
+		x = 0
+		y = 1
+		relative_position_id = LUX_focus_on_cycle
 
 		cost = 8
 		
@@ -1119,7 +1664,128 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+	focus = {
+		id = LUX_industrial_utmost_optimization
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = LUX_external_support }
+		x = 0
+		y = 1
+		relative_position_id = LUX_external_support
 
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	#
+	focus = {
+		id = LUX_consolidate_front_lines
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = LUX_army_artillery_effort }
+		x = 1
+		y = 1
+		relative_position_id = LUX_army_artillery_effort
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_armorization
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = LUX_consolidate_front_lines }
+		x = 0
+		y = 1
+		relative_position_id = LUX_consolidate_front_lines
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_diversified_warfare
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = LUX_armorization }
+		x = 0
+		y = 1
+		relative_position_id = LUX_armorization
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_future_weapons
+		icon = GFX_goal_generic_secret_weapon
+		prerequisite = { focus = LUX_diversified_warfare }
+		x = 0
+		y = 1
+		relative_position_id = LUX_diversified_warfare
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
 ### NAVY FOCUS
 	focus = {
 		id = LUX_
