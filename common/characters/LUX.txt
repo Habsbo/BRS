@@ -1,5 +1,5 @@
 characters={
-	#大公
+### duchy ###
 	LUX_marie_adelaide_of_luxembourg = { #Marie-Adélaïde Thérèse Hilda Wilhelmine
 		name=LUX_marie_adelaide
 		portraits={
@@ -34,6 +34,7 @@ characters={
 			}
 		}
 	}
+### prime minister ###
 	LUX_joseph_bech={ #约瑟夫·贝希
 		name=LUX_joseph_bech
 		portraits={
@@ -46,31 +47,95 @@ characters={
 			slot = head_of_gov
 			idea_token = LUX_joseph_bech_hog
 			allowed = { always = yes }
-			
 			available = {
 				br_head_of_gov_generic_trigger = yes
 				br_ideology_fascism_nio = yes
 			}
+			traits = { generic_head_of_gov }
+			modifier = {
+				political_power_gain = 0.15
+				stability_weekly = 0.01
+			}
 
-			traits = { silent_workhorse }
+			cost = 0
+			can_be_fired = no
+			ai_will_do = { factor = 1.000 }
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = LUX_joseph_bech
+			allowed = { always = yes }
+			available = { br_ideology_radical_communism_nio = yes }
+			traits = {  }
 
 			cost = 0
 			can_be_fired = no
 			ai_will_do = { factor = 1.000 }
 		}
 	}
-	LUX_gustave_lebeau={ #古斯塔夫·勒博
-		name=LUX_gustave_lebeau
+	LUX_pierre_fischbach={ #皮埃尔·菲施巴赫
+		name=LUX_pierre_fischbach
 		portraits={
-			civilian={
-				large=GFX_portrait_Gustave_Lebeau
+			army={
+				small="GFX_idea_generic_navy_europe_1"
 			}
 		}
-		country_leader={
-			ideology=stalinism
-			traits={ reluctant_interventionist }
-			expire="1951.1.1.12"
-			id=-1
+		advisor={
+			slot = head_of_gov
+			idea_token = LUX_pierre_fischbach_hog
+			allowed = { original_tag = LUX }
+			available = {
+				br_head_of_gov_generic_trigger = yes
+				br_ideology_fascism_nio = yes
+			}
+			traits = { head_of_national_security }
+			cost = 0
+			ai_will_do = { factor = 1.000 }
+		}
+		advisor={
+			slot = high_command
+			idea_token = LUX_pierre_fischbach
+			ledger = navy
+			allowed = { original_tag = LUX }
+			traits = { navy_fleet_logistics_2 }
+			cost = 100
+			ai_will_do = { factor = 1.000 }
+		}
+	}
+	LUX_pierre_dupong={ #皮埃尔·杜彭
+		name=LUX_pierre_dupong
+		portraits={
+			civilian={
+				large=GFX_portrait_Pierre_Dupong
+				small="GFX_idea_generic_political_advisor_europe_1"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = LUX_pierre_dupong
+			allowed  = { original_tag  = LUX }
+			traits  = { silent_workhorse }
+			ai_will_do = { factor = 1.000 }
+		}
+		advisor = {
+			slot = head_of_gov
+			idea_token = LUX_pierre_dupong_hog
+			allowed = { always = yes }
+			available = {
+				br_head_of_gov_generic_trigger = yes
+				br_ideology_fascism_nio = yes
+			}
+			traits = { generic_head_of_gov }
+			modifier = {
+				political_power_gain = 0.25
+				stability_factor = 0.05
+				legitimacy_gain_factor = 0.15
+				exiled_government_weekly_manpower = 100
+			}
+
+			cost = 0
+			can_be_fired = no
+			ai_will_do = { factor = 1.000 }
 		}
 	}
 	LUX_frédéric_nagelmackers={ #弗雷德里克·纳吉麦克
@@ -99,45 +164,6 @@ characters={
 			traits={ quartermaster_general }
 			expire="1942.1.1.12"
 			id=-1
-		}
-	}
-	LUX_pierre_dupong={ #皮埃尔·杜彭
-		name=LUX_pierre_dupong
-		portraits={
-			civilian={
-				large=GFX_portrait_Pierre_Dupong
-			}
-			army={
-				small="GFX_idea_generic_political_advisor_europe_1"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = LUX_pierre_dupong
-			allowed  = { original_tag  = LUX }
-			traits  = { silent_workhorse }
-		}
-		advisor = {
-			slot = head_of_gov
-			idea_token = LUX_pierre_dupong_hog
-			allowed = { always = yes }
-			
-			available = {
-				br_head_of_gov_generic_trigger = yes
-				br_ideology_fascism_nio = yes
-			}
-
-			traits = { generic_head_of_gov }
-			modifier = {
-				political_power_gain = 0.25
-				stability_factor = 0.05
-				legitimacy_gain_factor = 0.15
-				exiled_government_weekly_manpower = 100
-			}
-
-			cost = 0
-			can_be_fired = no
-			ai_will_do = { factor = 1.000 }
 		}
 	}
 	LUX_damien_roeser={ #达米恩·勒泽
@@ -203,33 +229,18 @@ characters={
 			ai_will_do = { factor = 1.000 }
 		}
 	}
-	LUX_pierre_fischbach={ #皮埃尔·菲施巴赫
-		name=LUX_pierre_fischbach
+	LUX_gustave_lebeau={ #古斯塔夫·勒博
+		name=LUX_gustave_lebeau
 		portraits={
-			army={
-				small="GFX_idea_generic_navy_europe_1"
+			civilian={
+				large=GFX_portrait_Gustave_Lebeau
 			}
 		}
-		advisor={
-			slot = head_of_gov
-			idea_token = LUX_pierre_fischbach_hog
-			allowed = { original_tag = LUX }
-			available = {
-				br_head_of_gov_generic_trigger = yes
-				br_ideology_fascism_nio = yes
-			}
-			traits = { head_of_national_security }
-			cost = 0
-			ai_will_do = { factor = 1.000 }
-		}
-		advisor={
-			slot = high_command
-			idea_token = LUX_pierre_fischbach
-			ledger = navy
-			allowed = { original_tag = LUX }
-			traits = { navy_fleet_logistics_2 }
-			cost = 100
-			ai_will_do = { factor = 1.000 }
+		country_leader={
+			ideology=stalinism
+			traits={ reluctant_interventionist }
+			expire="1951.1.1.12"
+			id=-1
 		}
 	}
 	LUX_guillaume_soisson={ #纪尧姆·苏瓦松
@@ -286,16 +297,10 @@ characters={
 		advisor={
 			slot = navy_chief
 			idea_token = LUX_henri_ahnen
-			allowed = {
-					original_tag = LUX
-				}
-				traits = {
-					navy_chief_maneuver_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
+			allowed = { original_tag = LUX }
+			traits = { navy_chief_maneuver_2 }
+			cost = 100
+			ai_will_do = { factor = 1.000 }
 		}
 	}
 	LUX_emile_speller={
@@ -308,16 +313,10 @@ characters={
 		advisor={
 			slot = army_chief
 			idea_token = LUX_emile_speller
-			allowed = {
-					original_tag = LUX
-				}
-				traits = {
-					army_chief_defensive_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
+			allowed = { original_tag = LUX }
+			traits = { army_chief_defensive_2 }
+			cost = 100
+			ai_will_do = { factor = 1.000 }
 		}
 	}
 	LUX_francois_schammel={

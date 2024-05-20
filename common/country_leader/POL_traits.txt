@@ -13,21 +13,6 @@
 ###Todo remove commented advisor experience gains
 
 leader_traits = {
-	generic_head_of_gov = {
-		random = no
-		sprite = 13
-
-		ai_will_do = {
-			factor = 0
-		}
-	}
-	generic_head_of_gov_hidden = {
-		random = no
-
-		ai_will_do = {
-			factor = 0
-		}
-	}
 	
 	dictator_of_sanacja = {
 		random = no
