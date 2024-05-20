@@ -35,6 +35,48 @@ characters={
 		}
 	}
 ### prime minister ###
+	LUX_pierre_prvm = {
+		name=LUX_pierre_prvm
+		portraits={
+			civilian={
+				large=GFX_Portrait_Europe_Generic_3
+				small=GFX_Portrait_Europe_Generic_3_small
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			expire="1965.1.1.1"
+			id=-1
+		}
+		advisor = {
+			slot = head_of_gov
+			idea_token = LUX_pierre_prvm_hog
+			allowed = { always = yes }
+			available = {
+				br_head_of_gov_generic_trigger = yes
+				br_ideology_fascism_nio = yes
+			}
+			traits = { generic_head_of_gov }
+			modifier = {
+				political_power_gain = 0.15
+				stability_weekly = 0.01
+			}
+
+			cost = 100
+			can_be_fired = no
+			ai_will_do = { factor = 1.000 }
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = LUX_pierre_prvm
+			allowed = { always = yes }
+			available = { br_ideology_radical_communism_nio = yes }
+			traits = { democractic_coordinator }
+
+			cost = 100
+			ai_will_do = { factor = 1.000 }
+		}
+	}
 	LUX_joseph_bech={ #约瑟夫·贝希
 		name=LUX_joseph_bech
 		portraits={
@@ -66,10 +108,9 @@ characters={
 			idea_token = LUX_joseph_bech
 			allowed = { always = yes }
 			available = { br_ideology_radical_communism_nio = yes }
-			traits = {  }
+			traits = { political_dancer }
 
-			cost = 0
-			can_be_fired = no
+			cost = 100
 			ai_will_do = { factor = 1.000 }
 		}
 	}
@@ -133,6 +174,133 @@ characters={
 				exiled_government_weekly_manpower = 100
 			}
 
+			cost = 0
+			can_be_fired = no
+			ai_will_do = { factor = 1.000 }
+		}
+	}
+	LUX_emile_reuter={ #埃米尔·罗伊特
+		name=LUX_emile_reuter
+		portraits={
+			civilian={
+				large="GFX_Portrait_Europe_Generic_3"
+				small="GFX_idea_generic_political_advisor_europe_3"
+			}
+		}
+		advisor = {
+			slot = head_of_gov
+			idea_token = LUX_emile_reuter_hog
+			allowed = { always = yes }
+			available = {
+				br_head_of_gov_generic_trigger = yes
+				br_ideology_fascism_nio = yes
+			}
+			traits = { generic_head_of_gov }
+			modifier = { stability_factor = 0.10 }
+
+			cost = 0
+			can_be_fired = no
+			ai_will_do = { factor = 1.000 }
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = LUX_emile_reuter
+			allowed = { always = yes }
+			available = { br_ideology_radical_communism_nio = yes }
+			traits = { democractic_coordinator }
+
+			cost = 100
+			ai_will_do = { factor = 1.000 }
+		}
+	}
+### communists ###
+	LUX_ali_ruckert={ #阿里·吕克特
+		name=LUX_ali_ruckert
+		portraits={
+			civilian={
+				large="GFX_Portrait_Europe_Generic_1"
+				small="GFX_idea_generic_political_advisor_europe_1"
+			}
+		}
+		country_leader={
+			ideology=marxism
+			expire="1965.1.1.1"
+			id=-1
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = LUX_ali_ruckert
+			allowed  = { original_tag  = LUX }
+			available = { br_ideology_fascism_nio = yes }
+			traits  = { sci_socialist_revolutionary }
+			ai_will_do = { factor = 1.000 }
+		}
+	}
+	LUX_charles_marx={ #夏尔·马克思
+		name=LUX_charles_marx
+		portraits={
+			civilian={
+				large="GFX_Portrait_Europe_Generic_1"
+				small="GFX_idea_generic_political_advisor_europe_1"
+			}
+		}
+		country_leader={
+			ideology=marxism
+			expire="1965.1.1.1"
+			id=-1
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = LUX_charles_marx
+			allowed  = { original_tag  = LUX }
+			available = { br_ideology_fascism_nio = yes }
+			traits  = { anti_imperialism_revolutionary }
+			ai_will_do = { factor = 1.000 }
+		}
+		advisor = {
+			slot = head_of_gov
+			idea_token = LUX_charles_marx_hog
+			allowed = { always = yes }
+			available = {
+				br_head_of_gov_generic_trigger = yes
+				br_ideology_fascism_nio = yes
+			}
+			traits = { anti_imperialism_revolutionary }
+			cost = 0
+			can_be_fired = no
+			ai_will_do = { factor = 1.000 }
+		}
+	}
+	LUX_dominique_urbany = { #
+		name = LUX_dominique_urbany
+		portraits={
+			civilian={
+				large="GFX_Portrait_Europe_Generic_2"
+				small="GFX_idea_generic_political_advisor_europe_2"
+			}
+		}
+		country_leader={
+			ideology=marxism
+			expire="1965.1.1.1"
+			id=-1
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = LUX_dominique_urbany
+			allowed  = { original_tag  = LUX }
+			available = { br_ideology_fascism_nio = yes }
+			traits  = { anti_imperialism_revolutionary }
+			ai_will_do = { factor = 1.000 }
+		}
+		advisor = {
+			slot = head_of_gov
+			idea_token = LUX_dominique_urbany_hog
+			allowed = { always = yes }
+			available = {
+				br_head_of_gov_generic_trigger = yes
+				br_ideology_fascism_nio = yes
+			}
+			traits = { anti_imperialism_revolutionary }
 			cost = 0
 			can_be_fired = no
 			ai_will_do = { factor = 1.000 }

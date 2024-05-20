@@ -252,8 +252,6 @@ ideologies = {
 	demo_liberalism = {
 
 		types = {
-			liberative_democratic = {
-			}
 			liberalism = {
 			}
 			moderatism = {

@@ -29,4 +29,142 @@ leader_traits = {
 			factor = 0
 		}
 	}
+
+	anarchist_revolutionary = {
+		random = no
+		sprite = 13
+
+		sco_anarchism_drift = 0.10
+		stability_factor = -0.05
+
+		ai_will_do = { factor = 0 }
+	}
+
+	vanwardist_revolutionary = {
+		random = no
+		sprite = 13
+
+		sco_anarchism_drift = 0.02
+		vanwardism_drift = 0.08
+
+		ai_will_do = { factor = 0 }
+	}
+
+	syndicalist_revolutionary = {
+		random = no
+		sprite = 13
+
+		vanwardism_drift = 0.06
+		sci_socialism_drift = 0.04
+
+		ai_will_do = { factor = 0 }
+	}
+
+	sci_socialist_revolutionary = {
+		random = no
+		sprite = 13
+		
+		political_power_gain = 0.15
+		sci_socialism_drift = 0.08
+		drift_defence_factor = -0.50
+
+		ai_will_do = { factor = 0 }
+	}
+
+	anti_imperialism_revolutionary = {
+		random = no
+		sprite = 13
+		
+		sci_socialism_drift = 0.02
+		con_socialism_drift = 0.06
+		army_core_attack_factor = 0.05
+		army_core_defence_factor = 0.05
+
+		ai_will_do = { factor = 0 }
+	}
+
+	social_reformer = {
+		random = no
+		sprite = 13
+		
+		political_power_gain = 0.15
+		demo_socialism_drift = 0.08
+		stability_factor = 0.05
+
+		ai_will_do = { factor = 0 }
+	}
+
+	capitalism_economist = {
+		random = no
+		sprite = 13
+		
+		demo_liberalism_drift = 0.08
+		consumer_goods_factor = -0.05
+		guarantee_cost = -0.25
+
+		ai_will_do = { factor = 0 }
+	}
+
+	democractic_coordinator = {
+		random = no
+		sprite = 13
+		
+		political_power_gain = 0.25
+		demo_liberalism_drift = 0.05
+		demo_conservatism_drift = 0.05
+		opinion_gain_monthly_factor = 0.25
+		
+		ai_will_do = { factor = 0 }
+	}
+	
+	imperialism_lackeys = {
+		random = no
+		sprite = 13
+		
+		demo_conservatism_drift = 0.08
+		guarantee_cost = -0.50
+		
+
+		ai_will_do = { factor = 0 }
+	}
+
+	loyalists_of_monarchy = {
+		random = no
+		sprite = 13
+		
+		authoritarian_drift = 0.08
+		political_advisor_cost_factor = -0.15
+
+		ai_will_do = { factor = 0 }
+	}
+
+	falangists_sol = {
+		random = no
+		sprite = 13
+		
+		authoritarian_drift = 0.06
+		fascism_drift = 0.06
+
+		ai_will_do = { factor = 0 }
+	}
+
+	fascism_theorist = {
+		random = no
+		sprite = 13
+		
+		fascism_drift = 0.12
+		nationalism_drift = 0.01
+		conscription_factor = 0.50
+
+		ai_will_do = { factor = 0 }
+	}
+
+	talented_demonic_demagogue = {
+		random = no
+		sprite = 13
+		
+		nationalism_drift = 0.15
+
+		ai_will_do = { factor = 0 }
+	}
 }
