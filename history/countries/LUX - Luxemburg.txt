@@ -80,6 +80,9 @@ set_popularities = {
 	retire_character = LUX_joseph_bech
 }
 
+#diplomacy
+GER = { give_guarantee = root }
+
 add_ideas = {
 	br_laws_parliamentarism
 	br_laws_monarchy
