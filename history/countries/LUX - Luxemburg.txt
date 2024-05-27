@@ -33,6 +33,8 @@ recruit_character = LUX_joseph_bech
 recruit_character = LUX_pierre_fischbach
 recruit_character = LUX_pierre_dupong
 recruit_character = LUX_emile_reuter
+recruit_character = LUX_pierre_frieden
+
 #communists
 recruit_character = LUX_ali_ruckert
 recruit_character = LUX_charles_marx
@@ -55,6 +57,9 @@ recruit_character = LUX_paul_medinger
 recruit_character = LUX_nicholas_diedrich
 recruit_character = LUX_pierre_krier
 recruit_character = LUX_martin_karp
+
+# unhistorical chars
+recruit_character = LUX_karlothringen_marquis
 
 set_politics = {
 	ruling_party = demo_conservatism

@@ -195,8 +195,7 @@ characters={
 				br_head_of_gov_generic_trigger = yes
 				br_ideology_fascism_nio = yes
 			}
-			traits = { generic_head_of_gov }
-			modifier = { stability_factor = 0.10 }
+			traits = { popular_figurehead }
 
 			cost = 0
 			can_be_fired = no
@@ -205,6 +204,40 @@ characters={
 		advisor = {
 			slot = political_advisor
 			idea_token = LUX_emile_reuter
+			allowed = { always = yes }
+			available = { br_ideology_radical_communism_nio = yes }
+			traits = { democractic_coordinator }
+
+			cost = 100
+			ai_will_do = { factor = 1.000 }
+		}
+	}
+	LUX_pierre_frieden={ #皮埃尔·弗里登
+		name=LUX_pierre_frieden
+		portraits={
+			civilian={
+				large="GFX_Portrait_Europe_Generic_1"
+				small="GFX_idea_generic_political_advisor_europe_1"
+			}
+		}
+		advisor = {
+			slot = head_of_gov
+			idea_token = LUX_pierre_frieden_hog
+			allowed = { always = yes }
+			available = {
+				br_head_of_gov_generic_trigger = yes
+				br_ideology_fascism_nio = yes
+			}
+			traits = { generic_head_of_gov }
+			modifier = { demo_conservatism_drift = 0.05 }
+
+			cost = 0
+			can_be_fired = no
+			ai_will_do = { factor = 1.000 }
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = LUX_pierre_frieden
 			allowed = { always = yes }
 			available = { br_ideology_radical_communism_nio = yes }
 			traits = { democractic_coordinator }
@@ -306,6 +339,7 @@ characters={
 			ai_will_do = { factor = 1.000 }
 		}
 	}
+###advisors ###
 	LUX_frédéric_nagelmackers={ #弗雷德里克·纳吉麦克
 		name=LUX_frederic_nagelmackers
 		portraits={
@@ -633,6 +667,25 @@ characters={
 				traits  = {
 					war_industrialist 
 				}
+		}
+	}
+### unhistorical chars ###
+	LUX_karlothringen_marquis = { #卡尔-洛林根侯爵
+		name=LUX_karlothringen_marquis
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_europe_2"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = LUX_karlothringen_marquis
+			allowed  = { original_tag  = LUX }
+			available = {
+				br_ideology_radical_communism_nio = yes
+				br_ideology_socialism_nio = yes
+			}
+			traits  = { loyalists_of_monarchy }
 		}
 	}
 }
