@@ -123,3 +123,5 @@
  LUX_diversified_warfare_desc: ""
  LUX_future_weapons: "未来武器"
  LUX_future_weapons_desc: ""
+#
+ LUX_fortress_of_territory_tt: "为一个自己的§Y省份§!建造2个§Y军用工厂§!，优先为§Y首都§!。\n为每个§Y省份§!的单元格建造二级的§Y陆上要塞§!。"

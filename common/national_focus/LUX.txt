@@ -21,7 +21,7 @@ focus_tree = {
 		factor = 0
 		
 		modifier = {
-			add = 20
+			add = 10
 			tag = LUX
 		}
 	}
@@ -39,6 +39,56 @@ focus_tree = {
 		x = 36
 		y = 0
 		#relative_position_id =
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_11
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = LUX_farewell_your_majesty }
+		#mutually_exclusive = { focus =  }
+		x = -4
+		y = 1
+		relative_position_id = LUX_farewell_your_majesty
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_12
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = LUX_farewell_your_majesty }
+		#mutually_exclusive = { focus =  }
+		x = 4
+		y = 1
+		relative_position_id = LUX_farewell_your_majesty
 
 		cost = 8
 		
@@ -963,7 +1013,25 @@ focus_tree = {
 
 		cost = 8
 		
-		available = {}
+		available = {
+			root = {
+				exists = yes
+				has_capitulated = no
+				has_civil_war = no
+				is_puppet = no
+			}
+			ENG = {
+				exists = yes
+				has_capitulated = no
+				has_civil_war = no
+				is_puppet = no
+				NOT = { has_war_with = root }
+				OR = {
+					has_government = root
+					has_opinion = { target = root value > 24 }
+				}
+			}
+		}
 		
 		bypass = {}
 		
@@ -1345,7 +1413,7 @@ focus_tree = {
 		}
 		
 		bypass = {
-			any_core_state = {
+			all_core_state = {
 				OR = {
 					NOT = { is_fully_controlled_by = root }
 					custom_trigger_tooltip = {
@@ -1536,26 +1604,29 @@ focus_tree = {
 		completion_reward = {
 			add_war_support = 0.05
 			#
-			random_core_state = {
-				prioritize = { 8 }
-				limit = {
-					is_owned_and_controlled_by = root
-					free_building_slots = { building = arms_factory size > 1 include_locked = yes }
+			custom_effect_tooltip = LUX_fortress_of_territory_tt
+			hidden_effect = {
+				random_core_state = {
+					prioritize = { 8 }
+					limit = {
+						is_owned_and_controlled_by = root
+						free_building_slots = { building = arms_factory size > 1 include_locked = yes }
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = { type = arms_factory level = 2 }
 				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = arms_factory level = 2 }
-			}
-			#
-			every_core_state = {
-				limit = {
-					is_owned_by = root
-					is_fully_controlled_by = root
-					is_border_state = yes
-				}
-				add_building_construction = {
-					type = bunker
-					level = 2
-					province = { all_provinces = yes }
+				#
+				every_core_state = {
+					limit = {
+						is_owned_by = root
+						is_fully_controlled_by = root
+						is_border_state = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = { all_provinces = yes }
+					}
 				}
 			}
 		}
@@ -1602,9 +1673,30 @@ focus_tree = {
 
 		cost = 8
 		
-		available = {}
+		available = {
+			root = {
+				exists = yes
+				has_capitulated = no
+				has_civil_war = no
+			}
+			OR = {
+				has_war_support > 0.20
+				threat > 0.10
+			}
+			any_core_state = { is_fully_controlled_by = root }
+		}
 		
-		bypass = {}
+		bypass = {
+			all_core_state = {
+				OR = {
+					NOT = { is_fully_controlled_by = root }
+					custom_trigger_tooltip = {
+						tooltip = production_effort_tt
+						all_owned_state = { free_building_slots = { building = arms_factory size = 0 include_locked = yes } }
+					}
+				}
+			}
+		}
 		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -1618,6 +1710,14 @@ focus_tree = {
 				uses = 1
 				bonus = 1.0
 				category = artillery
+			}
+			random_core_state = {
+				limit = {
+					is_owned_and_controlled_by = root
+					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = arms_factory level = 1 }
 			}
 		}
 		
