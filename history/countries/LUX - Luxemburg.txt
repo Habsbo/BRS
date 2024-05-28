@@ -81,7 +81,7 @@ set_popularities = {
 }
 
 #diplomacy
-GER = { give_guarantee = root }
+#GER = { give_guarantee = root }
 
 add_ideas = {
 	br_laws_parliamentarism

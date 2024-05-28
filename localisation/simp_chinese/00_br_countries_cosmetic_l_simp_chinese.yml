@@ -11,8 +11,21 @@
  CYP_UK_exiled_ADJ: "不列颠"
  CYP_UK_exiled_DEF: "英国"
 #德国
- GER_empire: "$GER$帝国"
-
+ DKR: "德意志帝国"
+ DKR_ADJ: "德意志帝国"
+ DKR_DEF: "德国"
+ DDR: "德意志民主共和国"
+ DDR_ADJ: "德意志民主共和国"
+ DDR_DEF: "德国"
+ DSR: "德意志社会主义民主共和国"
+ DSR_ADJ: "德意志社会主义民主共和国"
+ DSR_DEF: "德国"
+ DRR: "德意志共和国"
+ DRR_ADJ: "德意志共和国"
+ DRR_DEF: "德国"
+ DBR: "德意志联邦共和国"
+ DBR_ADJ: "德意志联邦共和国"
+ DBR_DEF: "德国"
 #意大利
  ITA_socialist_republic: "$ITA$社会主义共和国"
  ITA_socialist_republic_DEF: "$ITA$社会主义共和国"

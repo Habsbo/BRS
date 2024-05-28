@@ -190,11 +190,6 @@ set_popularities = {
 	nationalism = 0 #国家社会主义
 }
 
-create_faction = Central_Power
-add_to_faction = GER
-#add_to_faction = HOL
-
-
 add_ideas = {
 	sour_loser
 	general_staff
@@ -818,9 +813,15 @@ if = {
 	}
 }
 
-set_cosmetic_tag = GER_empire
+set_cosmetic_tag = DKR
 
-set_autonomy = {
-	target = BAY
-	autonomy_state = autonomy_br_self_governance
-}
+create_faction = Kaiserreich_Power
+add_to_faction = GER
+add_to_faction = LIT
+add_to_faction = LAT
+add_to_faction = EST
+add_to_faction = FIN
+add_to_faction = LUX
+#add_to_faction = HOL
+
+#set_autonomy = { target = BAY autonomy_state = autonomy_br_self_governance }
