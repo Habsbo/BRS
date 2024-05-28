@@ -57,8 +57,8 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 	}
 	focus = {
-		id = LUX_11
-		icon = GFX_goal_generic_demand_territory
+		id = LUX_united_left_front
+		icon = GFX_focus_focus_fra_revolution_utmost
 		prerequisite = { focus = LUX_farewell_your_majesty }
 		#mutually_exclusive = { focus =  }
 		x = -4
@@ -220,14 +220,13 @@ focus_tree = {
 	focus = {
 		id = LUX_defend_territory
 		icon = GFX_goal_generic_defence
-		prerequisite = {
+		prerequisite = { focus = LUX_neutral_country }
+		mutually_exclusive = { 
 			focus = LUX_tolerate_moderate_socialists
-			focus = LUX_neutral_country
 			focus = LUX_luxembourg_nation
 		}
-		#mutually_exclusive = { focus =  }
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = LUX_neutral_country
 
 		cost = 8
@@ -250,8 +249,11 @@ focus_tree = {
 		id = LUX_tolerate_moderate_socialists
 		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = LUX_speech_liberty }
-		mutually_exclusive = { focus =  LUX_luxembourg_nation }
-		x = -1
+		mutually_exclusive = {
+			focus = LUX_defend_territory
+			focus = LUX_luxembourg_nation
+		}
+		x = -4
 		y = 2
 		relative_position_id = LUX_speech_liberty
 
@@ -331,8 +333,11 @@ focus_tree = {
 		id = LUX_luxembourg_nation
 		icon = GFX_goal_support_fascism
 		prerequisite = { focus = LUX_united_front }
-		mutually_exclusive = { focus = LUX_tolerate_moderate_socialists }
-		x = 1
+		mutually_exclusive = {
+			focus = LUX_tolerate_moderate_socialists
+			focus = LUX_defend_territory
+		}
+		x = 4
 		y = 2
 		relative_position_id = LUX_united_front
 
@@ -356,10 +361,10 @@ focus_tree = {
 	focus = {
 		id = LUX_germany_union
 		icon = GFX_focus_ger_oppose_hitler
-		prerequisite = { focus = LUX_luxembourg_nation }
+		prerequisite = { focus = LUX_luxembourg_nation focus = LUX_defend_territory }
 		mutually_exclusive = { focus = LUX_ture_frankish_nation }
-		x = 2
-		y = 1
+		x = -2
+		y = 2
 		relative_position_id = LUX_luxembourg_nation
 
 		cost = 8
@@ -378,14 +383,163 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
-	#
 	focus = {
-		id = LUX_
+		id = LUX_loyalty_to_the_deutsche_king
+		icon = GFX_focus_ger_return_of_the_kaiser
+		prerequisite = { focus = LUX_germany_union }
+		mutually_exclusive = { focus = LUX_united_nazism }
+		x = -1
+		y = 1
+		relative_position_id = LUX_germany_union
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_defense_germany_nations_border
+		icon = GFX_focus_SWI_fortify_border_with_germany
+		prerequisite = { focus = LUX_loyalty_to_the_deutsche_king focus = LUX_united_nazism }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 2
+		relative_position_id = LUX_germany_union
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_dominate_pays_bas
+		icon = GFX_focus_hol_the_foundations_of_defense
+		prerequisite = { focus = LUX_defense_germany_nations_border }
+		x = -1
+		y = 1
+		relative_position_id = LUX_defense_germany_nations_border
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_attack_britain
+		icon = GFX_focus_attack_britain
+		prerequisite = { focus = LUX_defense_germany_nations_border }
+		x = 1
+		y = 1
+		relative_position_id = LUX_defense_germany_nations_border
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_great_duchy_of_burgundy
+		icon = GFX_focus_attack_france
+		prerequisite = { focus = LUX_dominate_pays_bas }
+		x = 0
+		y = 1
+		relative_position_id = LUX_dominate_pays_bas
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			set_cosmetic_tag = Lorraine_Burgundy
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_crown_of_lotharingia
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = LUX_great_duchy_of_burgundy }
+		x = 0
+		y = 1
+		relative_position_id = LUX_great_duchy_of_burgundy
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			set_cosmetic_tag = LUX_Lotharingia
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_2
 		icon = GFX_goal_generic_demand_territory
 		#prerequisite = { focus =  }
 		#mutually_exclusive = { focus =  }
 		x = 0
-		y = 1
+		y = 0
 		#relative_position_id =
 
 		cost = 8
@@ -410,8 +564,8 @@ focus_tree = {
 		icon = GFX_focus_generic_fascist_propaganda
 		prerequisite = { focus = LUX_luxembourg_nation }
 		mutually_exclusive = { focus = LUX_germany_union }
-		x = 6
-		y = 1
+		x = 2
+		y = 2
 		relative_position_id = LUX_luxembourg_nation
 
 		cost = 8
@@ -434,7 +588,7 @@ focus_tree = {
 		id = LUX_black_shirt_army
 		icon = GFX_focus_generic_fascist_troops
 		prerequisite = { focus = LUX_ture_frankish_nation }
-		x = 0
+		x = 1
 		y = 1
 		relative_position_id = LUX_ture_frankish_nation
 
@@ -457,10 +611,10 @@ focus_tree = {
 	focus = {
 		id = LUX_united_nazism
 		icon = GFX_focus_chi_mission_to_germany
-		prerequisite = { focus = LUX_ture_frankish_nation }
-		mutually_exclusive = { focus = LUX_united_british_fascisti }
-		x = -1
-		y = 2
+		prerequisite = { focus = LUX_germany_union }
+		mutually_exclusive = { focus = LUX_united_british_fascisti focus = LUX_loyalty_to_the_deutsche_king }
+		x = -3
+		y = 1
 		relative_position_id = LUX_ture_frankish_nation
 
 		cost = 8
@@ -515,10 +669,10 @@ focus_tree = {
 	focus = {
 		id = LUX_united_british_fascisti
 		icon = GFX_focus_chi_mission_to_germany
-		prerequisite = { focus = LUX_ture_frankish_nation }
+		prerequisite = { focus = LUX_germany_union focus = LUX_ture_frankish_nation }
 		mutually_exclusive = { focus = LUX_united_nazism }
-		x = 1
-		y = 2
+		x = -1
+		y = 1
 		relative_position_id = LUX_ture_frankish_nation
 
 		cost = 8
@@ -540,12 +694,11 @@ focus_tree = {
 	focus = {
 		id = LUX_grand_duchy_of_lorraine
 		icon = GFX_goal_anschluss
-		prerequisite = { focus = LUX_black_shirt_army }
-		prerequisite = { focus = LUX_united_nazism focus = LUX_united_british_fascisti }
+		prerequisite = { focus = LUX_united_british_fascisti focus = LUX_black_shirt_army focus = LUX_kaiser_of_holy_roman_empire }
 		#mutually_exclusive = { focus =  }
 		x = 0
 		y = 2
-		relative_position_id = LUX_black_shirt_army
+		relative_position_id = LUX_ture_frankish_nation
 
 		cost = 8
 		
@@ -572,6 +725,8 @@ focus_tree = {
 			#add lorraine claim
 			17 = { add_claim_by = root }
 			28 = { add_claim_by = root }
+			#
+			set_cosmetic_tag = LUX_Lorraine
 			#war with france
 			effect_tooltip = {
 				create_wargoal = {
@@ -613,14 +768,14 @@ focus_tree = {
 		complete_tooltip = {}
 		
 		completion_reward = {
-			15 = { add_core_of = root } #normandy
-			16 = { add_core_of = root } #ile de France
-			18 = { add_core_of = root } #champagne
-			24 = { add_core_of = root } #région du centre
-			27 = { add_core_of = root } #bourgogne
-			29 = { add_core_of = root } #calais
-			30 = { add_core_of = root } #loire
-			785 = { add_core_of = root } #picardy
+			15 = { add_claim_by = root } #normandy
+			16 = { add_claim_by = root } #ile de France
+			18 = { add_claim_by = root } #champagne
+			24 = { add_claim_by = root } #région du centre
+			27 = { add_claim_by = root } #bourgogne
+			29 = { add_claim_by = root } #calais
+			30 = { add_claim_by = root } #loire
+			785 = { add_claim_by = root } #picardy
 		}
 		
 		ai_will_do = { factor = 1 }
@@ -677,9 +832,11 @@ focus_tree = {
 		complete_tooltip = {}
 		
 		completion_reward = {
-			31 = { add_core_of = root }
-			22 = { add_core_of = root }
-			165 = { add_core_of = root }
+			create_wargoal = {
+				target = SPR
+				type = take_state_focus
+				generator = { 165 }
+			}
 		}
 		
 		ai_will_do = { factor = 1 }
@@ -738,8 +895,8 @@ focus_tree = {
 		icon = GFX_focus_ger_revive_kaiserreich
 		prerequisite = { focus = LUX_luxembourg_nation }
 		#mutually_exclusive = { focus =  }
-		x = 10
-		y = 1
+		x = 6
+		y = 2
 		relative_position_id = LUX_luxembourg_nation
 
 		cost = 8
@@ -758,12 +915,13 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+	#
 	focus = {
 		id = LUX_kaiser_of_holy_roman_empire
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_focus_usa_focus_on_europe
 		prerequisite = { focus = LUX_glory_erstwhile }
-		mutually_exclusive = { focus = LUX_date_back_house_of_merovingian }
-		x = -1
+		#mutually_exclusive = { focus = LUX_ }
+		x = 0
 		y = 1
 		relative_position_id = LUX_glory_erstwhile
 
@@ -786,13 +944,13 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 	}
 	focus = {
-		id = LUX_date_back_house_of_merovingian
+		id = LUX_messiah_of_the_universal_empire
 		icon = GFX_focus_ARG_defense_and_democracy
-		prerequisite = { focus = LUX_glory_erstwhile }
-		mutually_exclusive = { focus = LUX_kaiser_of_holy_roman_empire }
-		x = 1
+		prerequisite = { focus = LUX_kaiser_of_holy_roman_empire }
+		#mutually_exclusive = { focus =  }
+		x = -1
 		y = 1
-		relative_position_id = LUX_glory_erstwhile
+		relative_position_id = LUX_kaiser_of_holy_roman_empire
 
 		cost = 8
 		
@@ -807,8 +965,80 @@ focus_tree = {
 		complete_tooltip = {}
 		
 		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_kingdom_of_franconia
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = LUX_kaiser_of_holy_roman_empire }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 1
+		relative_position_id = LUX_kaiser_of_holy_roman_empire
 
-		search_filters = {FOCUS_FILTER_INDUSTRY}
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_crown_of_bohemia
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = LUX_kingdom_of_franconia }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = LUX_kingdom_of_franconia
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_challenge_habsburg
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = LUX_crown_of_bohemia }
+		x = 0
+		y = 1
+		relative_position_id = LUX_crown_of_bohemia
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
 		
 		ai_will_do = { factor = 1 }
 	}

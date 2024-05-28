@@ -828,3 +828,563 @@ br_alsace = {
 		}
 	}
 }
+
+br_hearts_of_lux = {
+	br_hearts_of_lux.1 = {
+		icon = generic_political_discourse
+
+		available = {
+			BEL = {
+				OR = {
+					exists = no
+					has_capitulated = yes
+				}
+				all_core_state = { is_fully_controlled_by = root }
+			}
+			HOL = {
+				OR = {
+					exists = no
+					has_capitulated = yes
+				}
+				all_core_state = { is_fully_controlled_by = root }
+			}
+			LUX = {
+				exists = yes
+				has_capitulated = no
+				all_core_state = { is_fully_controlled_by = root }
+			}
+		}
+
+		visible = { original_tag = LUX }
+
+		fire_only_once = yes
+
+		cost = 0
+
+		complete_effect = {
+			BEL = { every_core_state = { add_core_of = root } }
+			HOL = { every_core_state = { add_core_of = root } }
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				OR = {
+					is_core_of = HOL
+					is_core_of = BEL
+					state = 8
+				}
+			}
+		}
+
+		ai_will_do = { base = 10 }
+	}
+	br_hearts_of_lux.2 = {
+		icon = generic_political_discourse
+
+		available = {
+			LUX = {
+				exists = yes
+				has_capitulated = no
+				all_core_state = { is_fully_controlled_by = root }
+			}
+			custom_trigger_tooltip = {
+				tooltip = br_hearts_of_lux_rhe_tt
+				42 = { is_fully_controlled_by = root }
+				50 = { is_fully_controlled_by = root }
+				51 = { is_fully_controlled_by = root }
+				55 = { is_fully_controlled_by = root }
+				57 = { is_fully_controlled_by = root }
+			}
+		}
+
+		visible = { original_tag = LUX }
+
+		fire_only_once = yes
+
+		cost = 0
+
+		complete_effect = {
+			#
+			17 = { add_core_of = root }
+			28 = { add_core_of = root }
+			#
+			42 = { add_core_of = root }
+			50 = { add_core_of = root }
+			51 = { add_core_of = root }
+			55 = { add_core_of = root }
+			57 = { add_core_of = root }
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				#
+				state = 8
+				#
+				state = 17
+				state = 28
+				#
+				state = 42
+				state = 50
+				state = 51
+				state = 55
+				state = 57
+			}
+		}
+
+		ai_will_do = { base = 10 }
+	}
+	br_hearts_of_lux.3 = {
+		icon = generic_political_discourse
+
+		available = {
+			LUX = {
+				exists = yes
+				has_capitulated = no
+				all_core_state = { is_fully_controlled_by = root }
+			}
+			custom_trigger_tooltip = {
+				tooltip = br_hearts_of_lux_eng_tt
+				122 = { is_fully_controlled_by = root }
+				123 = { is_fully_controlled_by = root }
+				125 = { is_fully_controlled_by = root }
+				126 = { is_fully_controlled_by = root }
+				127 = { is_fully_controlled_by = root }
+				128 = { is_fully_controlled_by = root }
+				129 = { is_fully_controlled_by = root }
+				130 = { is_fully_controlled_by = root }
+				131 = { is_fully_controlled_by = root }
+				132 = { is_fully_controlled_by = root }
+				338 = { is_fully_controlled_by = root }
+				931 = { is_fully_controlled_by = root }
+			}
+		}
+
+		visible = { original_tag = LUX }
+
+		fire_only_once = yes
+
+		cost = 0
+
+		complete_effect = {
+			122 = { add_core_of = root }
+			123 = { add_core_of = root }
+			125 = { add_core_of = root }
+			126 = { add_core_of = root }
+			127	= { add_core_of = root }
+			128	= { add_core_of = root }
+			129	= { add_core_of = root }
+			130	= { add_core_of = root }
+			131	= { add_core_of = root }
+			132	= { add_core_of = root }
+			338	= { add_core_of = root }
+			931 = { add_core_of = root }
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				#
+				state = 122
+				state = 123
+				state = 125
+				state = 126
+				state = 127
+				state = 128
+				state = 129
+				state = 130
+				state = 131
+				state = 132
+				state = 338
+				state = 931
+			}
+		}
+
+		ai_will_do = { base = 10 }
+	}
+	br_hearts_of_lux.4 = {
+		icon = generic_political_discourse
+
+		available = {
+			LUX = {
+				exists = yes
+				has_capitulated = no
+				all_core_state = { is_fully_controlled_by = root }
+			}
+			custom_trigger_tooltip = {
+				tooltip = br_hearts_of_lux_ger_tt
+				53 = { is_fully_controlled_by = root }
+				54 = { is_fully_controlled_by = root }
+				55 = { is_fully_controlled_by = root }
+				56 = { is_fully_controlled_by = root }
+				58 = { is_fully_controlled_by = root }
+				59 = { is_fully_controlled_by = root }
+				60 = { is_fully_controlled_by = root }
+				61 = { is_fully_controlled_by = root }
+				62 = { is_fully_controlled_by = root }
+				64 = { is_fully_controlled_by = root }
+				65 = { is_fully_controlled_by = root }
+				909 = { is_fully_controlled_by = root }
+			}
+		}
+
+		visible = { original_tag = LUX }
+
+		fire_only_once = yes
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 52
+						state = 53
+						state = 54
+						state = 56
+						state = 58
+						state = 59
+						state = 60
+						state = 61
+						state = 62
+						state = 64
+						state = 65
+						state = 69
+						state = 909
+					}
+				}
+				add_core_of = root
+			}
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				#
+				state = 52
+				state = 53
+				state = 54
+				state = 56
+				state = 58
+				state = 59
+				state = 60
+				state = 61
+				state = 62
+				state = 64
+				state = 65
+				state = 69
+				state = 909
+			}
+		}
+
+		ai_will_do = { base = 10 }
+	}
+	br_hearts_of_lux.5 = {
+		icon = generic_political_discourse
+
+		available = {
+			LUX = {
+				exists = yes
+				has_capitulated = no
+				all_core_state = { is_fully_controlled_by = root }
+			}
+			custom_trigger_tooltip = {
+				tooltip = br_hearts_of_lux_hab_tt
+				4 = { is_fully_controlled_by = root }
+				152 = { is_fully_controlled_by = root }
+				153 = { is_fully_controlled_by = root }
+				848 = { is_fully_controlled_by = root }
+			}
+		}
+
+		visible = { original_tag = LUX }
+
+		fire_only_once = yes
+
+		cost = 0
+
+		complete_effect = {
+			4 = { add_core_of = root }
+			152 = { add_core_of = root }
+			153 = { add_core_of = root }
+			39 = { add_core_of = root }
+			848	= { add_core_of = root }
+			850	= { add_core_of = root }
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				#
+				state = 4
+				state = 152
+				state = 153
+				state = 39
+				state = 848
+				state = 850
+			}
+		}
+
+		ai_will_do = { base = 10 }
+	}
+	br_hearts_of_lux.6 = {
+		icon = generic_political_discourse
+
+		available = {
+			LUX = {
+				exists = yes
+				has_capitulated = no
+				all_core_state = { is_fully_controlled_by = root }
+			}
+			SWI = {
+				OR = {
+					exists = no
+					has_capitulated = yes
+				}
+				all_core_state = { is_fully_controlled_by = root }
+			}
+		}
+
+		visible = { original_tag = LUX }
+
+		fire_only_once = yes
+
+		cost = 0
+
+		complete_effect = {
+			SWI = { every_core_state = { add_core_of = root } }
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_core_of = SWI
+			}
+		}
+
+		ai_will_do = { base = 10 }
+	}
+	br_hearts_of_lux.7 = {
+		icon = generic_political_discourse
+
+		available = {
+			LUX = {
+				exists = yes
+				has_capitulated = no
+				all_core_state = { is_fully_controlled_by = root }
+			}
+			custom_trigger_tooltip = {
+				tooltip = br_hearts_of_lux_nor_fra_tt
+				15 = { is_fully_controlled_by = root }
+				16 = { is_fully_controlled_by = root }
+				17 = { is_fully_controlled_by = root }
+				18 = { is_fully_controlled_by = root }
+				24 = { is_fully_controlled_by = root }
+				27 = { is_fully_controlled_by = root }
+				29 = { is_fully_controlled_by = root }
+				30 = { is_fully_controlled_by = root }
+				785 = { is_fully_controlled_by = root }
+			}
+		}
+
+		visible = { original_tag = LUX }
+
+		fire_only_once = yes
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 15
+						state = 16
+						state = 17
+						state = 18
+						#
+						state = 24
+						state = 27
+						state = 29
+						state = 30
+						state = 785
+					}
+				}
+				add_core_of = root
+			}
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 15
+				state = 16
+				state = 17
+				state = 18
+				#
+				state = 24
+				state = 27
+				state = 29
+				state = 30
+				state = 785
+			}
+		}
+
+		ai_will_do = { base = 10 }
+	}
+	br_hearts_of_lux.8 = {
+		icon = generic_political_discourse
+
+		available = {
+			LUX = {
+				exists = yes
+				has_capitulated = no
+				all_core_state = { is_fully_controlled_by = root }
+			}
+			custom_trigger_tooltip = {
+				tooltip = br_hearts_of_lux_nor_ita_tt
+				1 = { is_fully_controlled_by = root }
+				21 = { is_fully_controlled_by = root }
+				114 = { is_fully_controlled_by = root }
+				158 = { is_fully_controlled_by = root }
+				159 = { is_fully_controlled_by = root }
+				160 = { is_fully_controlled_by = root }
+				161 = { is_fully_controlled_by = root }
+				162 = { is_fully_controlled_by = root }
+				735 = { is_fully_controlled_by = root }
+				851 = { is_fully_controlled_by = root }
+			}
+		}
+
+		visible = { original_tag = LUX }
+
+		fire_only_once = yes
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 1
+						state = 21
+						state = 114
+						state = 158
+						state = 159
+						state = 160
+						state = 161
+						state = 162
+						state = 735
+						state = 851
+					}
+				}
+				add_core_of = root
+			}
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 1
+				state = 21
+				state = 114
+				state = 158
+				state = 159
+				state = 160
+				state = 161
+				state = 162
+				state = 735
+				state = 851
+			}
+		}
+
+		ai_will_do = { base = 10 }
+	}
+	br_hearts_of_lux.9 = {
+		icon = generic_political_discourse
+
+		available = {
+			LUX = {
+				exists = yes
+				has_capitulated = no
+				all_core_state = { is_fully_controlled_by = root }
+			}
+			custom_trigger_tooltip = {
+				tooltip = br_hearts_of_lux_orc_tt
+				19 = { is_fully_controlled_by = root }
+				20 = { is_fully_controlled_by = root }
+				22 = { is_fully_controlled_by = root }
+				23 = { is_fully_controlled_by = root }
+				25 = { is_fully_controlled_by = root }
+				26 = { is_fully_controlled_by = root }
+				31 = { is_fully_controlled_by = root }
+				32 = { is_fully_controlled_by = root }
+				33 = { is_fully_controlled_by = root }
+				806 = { is_fully_controlled_by = root }
+			}
+		}
+
+		visible = { original_tag = LUX }
+
+		fire_only_once = yes
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 165
+						#
+						state = 19
+						state = 20
+						state = 22
+						state = 23
+						state = 25
+						state = 26
+						state = 31
+						state = 32
+						state = 33
+						state = 806
+					}
+				}
+				add_core_of = root
+			}
+			165 = { transfer_state_to = root }
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 165
+				#
+				state = 19
+				state = 20
+				state = 22
+				state = 23
+				state = 25
+				state = 26
+				state = 31
+				state = 32
+				state = 33
+				state = 806
+			}
+		}
+
+		ai_will_do = { base = 10 }
+	}
+	br_hearts_of_lux.10 = {
+		icon = generic_political_discourse
+
+		available = {
+			LUX = {
+				exists = yes
+				has_capitulated = no
+				all_core_state = { is_fully_controlled_by = root }
+			}
+		}
+
+		visible = { original_tag = LUX }
+
+		fire_only_once = yes
+
+		cost = 0
+
+		complete_effect = {
+			set_cosmetic_tag = HRE
+		}
+
+		ai_will_do = { base = 10 }
+	}
+}

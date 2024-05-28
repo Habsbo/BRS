@@ -177,4 +177,12 @@ br_debug_decisions = {
 			base = 0
 		}
 	}
+	debug_LUX.1 = {
+		fire_only_once = no
+		complete_effect = {
+			FRA = { every_core_state = { transfer_state_to = LUX } }
+			ENG = { every_core_state = { transfer_state_to = LUX } }
+			ITA = { every_core_state = { transfer_state_to = LUX } }
+		}
+	}
 }
