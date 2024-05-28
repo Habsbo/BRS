@@ -190,8 +190,9 @@ set_popularities = {
 	nationalism = 0 #国家社会主义
 }
 
-create_faction = Axis
+create_faction = Central_Power
 add_to_faction = GER
+#add_to_faction = HOL
 
 
 add_ideas = {

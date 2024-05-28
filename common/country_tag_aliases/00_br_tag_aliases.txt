@@ -145,6 +145,16 @@ AR2 = {
 	}
 }
 
+DKR = {
+	original_tag = GER
+
+}
+
+KPD = {
+	original_tag = GER
+
+}
+
 EUS = {
 	original_tag = NAV
 
