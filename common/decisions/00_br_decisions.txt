@@ -904,15 +904,23 @@ br_hearts_of_lux = {
 		cost = 0
 
 		complete_effect = {
-			#
-			17 = { add_core_of = root }
-			28 = { add_core_of = root }
-			#
-			42 = { add_core_of = root }
-			50 = { add_core_of = root }
-			51 = { add_core_of = root }
-			55 = { add_core_of = root }
-			57 = { add_core_of = root }
+			every_state = {
+				limit = {
+					OR = {
+						state = 8
+						#
+						state = 17
+						state = 28
+						#
+						state = 42
+						state = 50
+						state = 51
+						state = 55
+						state = 57
+					}
+				}
+				add_core_of = root
+			}
 		}
 
 		highlight_states = {
@@ -1087,10 +1095,10 @@ br_hearts_of_lux = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = br_hearts_of_lux_hab_tt
-				4 = { is_fully_controlled_by = root }
-				152 = { is_fully_controlled_by = root }
-				153 = { is_fully_controlled_by = root }
-				848 = { is_fully_controlled_by = root }
+				4 = { is_fully_controlled_by = root compliance > 59 }
+				152 = { is_fully_controlled_by = root compliance > 59 }
+				153 = { is_fully_controlled_by = root compliance > 59 }
+				848 = { is_fully_controlled_by = root compliance > 59 }
 			}
 		}
 
@@ -1137,7 +1145,7 @@ br_hearts_of_lux = {
 					exists = no
 					has_capitulated = yes
 				}
-				all_core_state = { is_fully_controlled_by = root }
+				all_core_state = { is_fully_controlled_by = root compliance > 60 }
 			}
 		}
 
@@ -1170,15 +1178,15 @@ br_hearts_of_lux = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = br_hearts_of_lux_nor_fra_tt
-				15 = { is_fully_controlled_by = root }
-				16 = { is_fully_controlled_by = root }
-				17 = { is_fully_controlled_by = root }
-				18 = { is_fully_controlled_by = root }
-				24 = { is_fully_controlled_by = root }
-				27 = { is_fully_controlled_by = root }
-				29 = { is_fully_controlled_by = root }
-				30 = { is_fully_controlled_by = root }
-				785 = { is_fully_controlled_by = root }
+				15 = { is_fully_controlled_by = root compliance > 59 }
+				16 = { is_fully_controlled_by = root compliance > 59 }
+				17 = { is_fully_controlled_by = root compliance > 59 }
+				18 = { is_fully_controlled_by = root compliance > 59 }
+				24 = { is_fully_controlled_by = root compliance > 59 }
+				27 = { is_fully_controlled_by = root compliance > 59 }
+				29 = { is_fully_controlled_by = root compliance > 59 }
+				30 = { is_fully_controlled_by = root compliance > 59 }
+				785 = { is_fully_controlled_by = root compliance > 59 }
 			}
 		}
 
@@ -1236,16 +1244,16 @@ br_hearts_of_lux = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = br_hearts_of_lux_nor_ita_tt
-				1 = { is_fully_controlled_by = root }
-				21 = { is_fully_controlled_by = root }
-				114 = { is_fully_controlled_by = root }
-				158 = { is_fully_controlled_by = root }
-				159 = { is_fully_controlled_by = root }
-				160 = { is_fully_controlled_by = root }
-				161 = { is_fully_controlled_by = root }
-				162 = { is_fully_controlled_by = root }
-				735 = { is_fully_controlled_by = root }
-				851 = { is_fully_controlled_by = root }
+				1 = { is_fully_controlled_by = root compliance > 59 }
+				21 = { is_fully_controlled_by = root compliance > 59 }
+				114 = { is_fully_controlled_by = root compliance > 59 }
+				158 = { is_fully_controlled_by = root compliance > 59 }
+				159 = { is_fully_controlled_by = root compliance > 59 }
+				160 = { is_fully_controlled_by = root compliance > 59 }
+				161 = { is_fully_controlled_by = root compliance > 59 }
+				162 = { is_fully_controlled_by = root compliance > 59 }
+				735 = { is_fully_controlled_by = root compliance > 59 }
+				851 = { is_fully_controlled_by = root compliance > 59 }
 			}
 		}
 
@@ -1301,18 +1309,19 @@ br_hearts_of_lux = {
 				has_capitulated = no
 				all_core_state = { is_fully_controlled_by = root }
 			}
+			#	
 			custom_trigger_tooltip = {
 				tooltip = br_hearts_of_lux_orc_tt
-				19 = { is_fully_controlled_by = root }
-				20 = { is_fully_controlled_by = root }
-				22 = { is_fully_controlled_by = root }
-				23 = { is_fully_controlled_by = root }
-				25 = { is_fully_controlled_by = root }
-				26 = { is_fully_controlled_by = root }
-				31 = { is_fully_controlled_by = root }
-				32 = { is_fully_controlled_by = root }
-				33 = { is_fully_controlled_by = root }
-				806 = { is_fully_controlled_by = root }
+				19 = { is_fully_controlled_by = root compliance > 59  }
+				20 = { is_fully_controlled_by = root compliance > 59  }
+				22 = { is_fully_controlled_by = root compliance > 59  }
+				23 = { is_fully_controlled_by = root compliance > 59  }
+				25 = { is_fully_controlled_by = root compliance > 59  }
+				26 = { is_fully_controlled_by = root compliance > 59  }
+				31 = { is_fully_controlled_by = root compliance > 59  }
+				32 = { is_fully_controlled_by = root compliance > 59  }
+				33 = { is_fully_controlled_by = root compliance > 59  }
+				806 = { is_fully_controlled_by = root compliance > 59 }
 			}
 		}
 
@@ -1372,10 +1381,20 @@ br_hearts_of_lux = {
 				exists = yes
 				has_capitulated = no
 				all_core_state = { is_fully_controlled_by = root }
+				OR = {
+					has_idea = br_laws_monarchy
+					has_idea = br_laws_cleric
+					has_idea = br_laws_archon
+				}
+				has_idea = br_laws_spiritual
 			}
 		}
 
-		visible = { original_tag = LUX }
+		visible = {
+			original_tag = LUX
+			br_ideology_radical_communism_nio = yes
+			br_ideology_socialism_nio = yes
+		}
 
 		fire_only_once = yes
 
