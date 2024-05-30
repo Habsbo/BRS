@@ -77,6 +77,18 @@ focus_tree = {
 			}
 		}
 		
+		offset = {
+			x = 6
+			y = 0
+			trigger = {
+				has_completed_focus = LUX_integrate_to_democratic
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
+
 		available = {
 			LUX = {
 				exists = yes
@@ -147,7 +159,22 @@ focus_tree = {
 						option = HIDE
 					}
 				}
-				NOT = { has_completed_focus = LUX_integrate_to_democratic }
+				NOT = {
+					has_completed_focus = LUX_monarchy_of_luxembourg
+					has_completed_focus = LUX_integrate_to_democratic
+				}
+			}
+		}
+		
+		offset = {
+			x = 2
+			y = 0
+			trigger = {
+				has_completed_focus = LUX_united_left_front
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
 			}
 		}
 
@@ -180,11 +207,11 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 	}
 	focus = {
-		id = LUX_
-		icon = GFX_goal_generic_demand_territory
+		id = LUX_socialists_voice
+		icon = GFX_focus_SOV_proclaim_soviet_hegemony
 		prerequisite = { focus = LUX_united_left_front }
 		#mutually_exclusive = { focus =  }
-		x = -4
+		x = -2
 		y = 2
 		relative_position_id = LUX_united_left_front
 
@@ -205,13 +232,623 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 	}
 	focus = {
-		id = LUX_
+		id = LUX_communism_side
+		icon = GFX_focus_ARG_no_gods_no_masters
+		prerequisite = { focus = LUX_socialists_voice }
+		mutually_exclusive = { focus = LUX_socialism_side }
+		x = -2
+		y = 1
+		relative_position_id = LUX_socialists_voice
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_calling_of_communism
+		icon = GFX_focus_por_workers_of_iberia
+		prerequisite = { focus = LUX_communism_side }
+		x = 0
+		y = 1
+		relative_position_id = LUX_communism_side
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_seize_lathes
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = LUX_communism_side }
+		x = -1
+		y = 2
+		relative_position_id = LUX_communism_side
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_internal_circulation
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = LUX_seize_lathes focus = LUX_protect_government_by_force }
+		prerequisite = { focus = LUX_collective_owned_industries }
+		x = 3
+		y = 1
+		relative_position_id = LUX_seize_lathes
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_anarchic_society
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
+		prerequisite = { focus = LUX_seize_lathes }
+		x = 0
+		y = 1
+		relative_position_id = LUX_seize_lathes
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_communism_theory
+		icon = GFX_focus_spr_unify_the_london_bureau
+		prerequisite = { focus = LUX_anarchic_society }
+		x = 0
+		y = 1
+		relative_position_id = LUX_anarchic_society
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_flemish_wallonia_anarchists
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = { focus = LUX_anarchic_society }
+		x = 1
+		y = 2
+		relative_position_id = LUX_anarchic_society
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_revolutionary_komune
 		icon = GFX_goal_generic_demand_territory
-		prerequisite = { focus = LUX_united_left_front }
+		prerequisite = { focus = LUX_flemish_wallonia_anarchists }
+		x = -1
+		y = 2
+		relative_position_id = LUX_flemish_wallonia_anarchists
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_anarchism_knows_no_borders
+		icon = GFX_focus_spr_anarchism_knows_no_borders
+		prerequisite = { focus = LUX_revolutionary_komune }
+		x = 0
+		y = 2
+		relative_position_id = LUX_revolutionary_komune
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	#
+	focus = {
+		id = LUX_socialism_side
+		icon = GFX_focus_focus_fra_liberte_egalite_solidarite
+		prerequisite = { focus = LUX_socialists_voice }
+		mutually_exclusive = { focus = LUX_communism_side }
+		x = 2
+		y = 1
+		relative_position_id = LUX_socialists_voice
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_class_war
+		icon = GFX_focus_spr_class_war
+		prerequisite = { focus = LUX_communism_side focus = LUX_socialism_side }
+		x = 0
+		y = 2
+		relative_position_id = LUX_socialists_voice
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_collective_owned_industries
+		icon = GFX_focus_SOV_organize_wreckers
+		prerequisite = { focus = LUX_class_war }
+		x = 0
+		y = 1
+		relative_position_id = LUX_class_war
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_build_people_s_army
+		icon = GFX_focus_SOV_builder_of_the_red_army
+		prerequisite = { focus = LUX_socialism_side }
+		x = 0
+		y = 1
+		relative_position_id = LUX_socialism_side
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_protect_government_by_force
+		icon = GFX_focus_SWE_refuge_for_revolutionaries
+		prerequisite = { focus = LUX_socialism_side }
+		x = 1
+		y = 2
+		relative_position_id = LUX_socialism_side
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_singleparty_govern_by_multiparty_supervise
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = LUX_protect_government_by_force }
+		x = 0
+		y = 1
+		relative_position_id = LUX_protect_government_by_force
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_internationale
+		icon = GFX_goal_molotov_ribbentrop_pact
+		prerequisite = { focus = LUX_singleparty_govern_by_multiparty_supervise focus = LUX_joint_governance }
+		mutually_exclusive = { focus = LUX_non_alignment }
+		x = -1
+		y = 1
+		relative_position_id = LUX_labor_insurance
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_wind_of_revolution
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = LUX_internationale }
+		x = 1
+		y = 2
+		relative_position_id = LUX_internationale
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_proletariaten_vun_der_welt_uniteieren
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = LUX_wind_of_revolution }
+		x = 0
+		y = 2
+		relative_position_id = LUX_wind_of_revolution
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_liberating_daitschland
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = LUX_flemish_wallonia_anarchists focus = LUX_internationale }
+		x = 1
+		y = 1
+		relative_position_id = LUX_flemish_wallonia_anarchists
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_liberating_frankreich
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = LUX_flemish_wallonia_anarchists focus = LUX_internationale }
+		x = 3
+		y = 1
+		relative_position_id = LUX_flemish_wallonia_anarchists
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	#
+	focus = {
+		id = LUX_women_movement
+		icon = GFX_focus_ARG_women_in_industry
+		prerequisite = { focus = LUX_united_left_front focus = LUX_integrate_to_democratic }
+		x = 2
+		y = 1
+		relative_position_id = LUX_united_left_front
+
+		offset = {
+			x = -6
+			y = 0
+			trigger = {
+				has_completed_focus = LUX_integrate_to_democratic
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_combined_labor_union
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = { focus = LUX_women_movement }
+		#mutually_exclusive = { focus =  }
+		x = -1
+		y = 1
+		relative_position_id = LUX_women_movement
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_detachment_of_women
+		icon = GFX_focus_generic_women_in_military
+		prerequisite = { focus = LUX_women_movement }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 1
+		relative_position_id = LUX_women_movement
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_the_laboring_women
+		icon = GFX_focus_generic_industry_3
+		prerequisite = { focus = LUX_detachment_of_women }
 		#mutually_exclusive = { focus =  }
 		x = 0
 		y = 1
-		relative_position_id = LUX_united_left_front
+		relative_position_id = LUX_detachment_of_women
 
 		cost = 8
 		
@@ -233,7 +870,6 @@ focus_tree = {
 		id = LUX_appoint_communists_as_minister
 		icon = GFX_focus_generic_soviet_politics
 		prerequisite = { focus = LUX_united_left_front focus = LUX_integrate_to_democratic }
-		#mutually_exclusive = { focus =  }
 		x = 6
 		y = 1
 		relative_position_id = LUX_united_left_front
@@ -339,8 +975,8 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 	}
 	focus = {
-		id = LUX_a1
-		icon = GFX_goal_generic_consumer_goods
+		id = LUX_research_of_luxembourg
+		icon = GFX_goal_generic_scientific_exchange
 		prerequisite = { focus = LUX_regular_assessment_to_functionaries }
 		x = 0
 		y = 1
@@ -380,7 +1016,10 @@ focus_tree = {
 						option = HIDE
 					}
 				}
-				NOT = { has_completed_focus = LUX_united_left_front }
+				NOT = {
+					has_completed_focus = LUX_monarchy_of_luxembourg
+					has_completed_focus = LUX_united_left_front
+				}
 			}
 		}
 
@@ -496,10 +1135,22 @@ focus_tree = {
 		}
 
 		offset = {
-			x = -16
+			x = -10
 			y = 0
 			trigger = {
 				has_completed_focus = LUX_monarchy_of_luxembourg
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
+
+		offset = {
+			x = -6
+			y = 0
+			trigger = {
+				has_completed_focus = LUX_integrate_to_democratic
 				has_game_rule = {
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
@@ -642,6 +1293,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+	#
 	focus = {
 		id = LUX_defend_territory
 		icon = GFX_goal_generic_defence
@@ -671,6 +1323,225 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 	}
 	focus = {
+		id = LUX_dancing_round_europa
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = LUX_tolerate_moderate_socialists focus = LUX_defend_territory }
+		x = -1
+		y = 2
+		relative_position_id = LUX_defend_territory
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_cementing_relation_with_petite_entente
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = LUX_dancing_round_europa }
+		mutually_exclusive = { focus = LUX_central_power }
+		x = -1
+		y = 1
+		relative_position_id = LUX_dancing_round_europa
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_central_power
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = LUX_dancing_round_europa }
+		mutually_exclusive = { focus = LUX_cementing_relation_with_petite_entente }
+		x = 1
+		y = 1
+		relative_position_id = LUX_dancing_round_europa
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_led_by_france
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = LUX_cementing_relation_with_petite_entente }
+		x = 0
+		y = 1
+		relative_position_id = LUX_cementing_relation_with_petite_entente
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_led_by_germany
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = LUX_central_power }
+		x = 0
+		y = 1
+		relative_position_id = LUX_central_power
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_european_union
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = LUX_led_by_france focus = LUX_led_by_germany }
+		x = 0
+		y = 3
+		relative_position_id = LUX_dancing_round_europa
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_the_european_coal_and_steel_treaty_organization
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = LUX_european_union }
+		x = -1
+		y = 1
+		relative_position_id = LUX_european_union
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_european_monetary_union
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = LUX_european_union }
+		x = 1
+		y = 1
+		relative_position_id = LUX_european_union
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_alternative_unified_europe
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = LUX_the_european_coal_and_steel_treaty_organization focus = LUX_european_monetary_union }
+		x = 0
+		y = 2
+		relative_position_id = LUX_european_union
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	#
+	focus = {
 		id = LUX_tolerate_moderate_socialists
 		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = LUX_speech_liberty }
@@ -695,6 +1566,269 @@ focus_tree = {
 		complete_tooltip = {}
 		
 		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_joint_governance
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = LUX_tolerate_moderate_socialists }
+		x = 0
+		y = 1
+		relative_position_id = LUX_tolerate_moderate_socialists
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_labor_insurance
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = LUX_singleparty_govern_by_multiparty_supervise focus = LUX_joint_governance }
+		x = -4
+		y = 1
+		relative_position_id = LUX_joint_governance
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_information_publicizative
+		icon = GFX_focus_SWE_radiotjanst
+		prerequisite = { focus = LUX_singleparty_govern_by_multiparty_supervise focus = LUX_joint_governance }
+		x = -2
+		y = 1
+		relative_position_id = LUX_joint_governance
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_providing_housing
+		icon = GFX_focus_spa_the_spanish_miracle
+		prerequisite = { focus = LUX_singleparty_govern_by_multiparty_supervise focus = LUX_joint_governance }
+		x = 0
+		y = 1
+		relative_position_id = LUX_joint_governance
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_non_alignment
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = LUX_singleparty_govern_by_multiparty_supervise focus = LUX_joint_governance }
+		mutually_exclusive = { focus = LUX_internationale }
+		x = 1
+		y = 1
+		relative_position_id = LUX_providing_housing
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_fight_against_colonialism
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = LUX_non_alignment }
+		x = 0
+		y = 2
+		relative_position_id = LUX_non_alignment
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_liberation_equality_fraternity
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = LUX_fight_against_colonialism }
+		x = 0
+		y = 2
+		relative_position_id = LUX_fight_against_colonialism
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_letzbuergesch_prioriteit #Lëtzebuergesch Prioritéit
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = LUX_industrial_upgrading_of_steel }
+		prerequisite = { focus = LUX_crisis_awareness }
+		mutually_exclusive = {
+			focus = LUX_substitute_trade_status_of_bel
+			focus = LUX_employment_promoted 
+			focus = LUX_supply_of_industrial_consumer
+		}
+
+		x = 2
+		y = 2
+		relative_position_id = LUX_industrial_upgrading_of_steel
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_national_university_of_letzbuergesch
+		icon = GFX_focus_research
+		prerequisite = { focus = LUX_supply_of_industrial_consumer focus = LUX_letzbuergesch_prioriteit }
+		x = -2
+		y = 1
+		relative_position_id = LUX_letzbuergesch_prioriteit
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			add_research_slot = 1
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_
+		icon = GFX_goal_generic_demand_territory
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 0
+		#relative_position_id =
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -1441,7 +2575,7 @@ focus_tree = {
 		
 		completion_reward = {}
 
-		search_filters = {FOCUS_FILTER_INDUSTRY}
+		search_filters = {}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -1617,6 +2751,60 @@ focus_tree = {
 		complete_tooltip = {}
 		
 		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_
+		icon = GFX_goal_generic_demand_territory
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 0
+		#relative_position_id =
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_
+		icon = GFX_goal_generic_demand_territory
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 0
+		#relative_position_id =
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -1853,7 +3041,23 @@ focus_tree = {
 
 		cost = 8
 		
-		available = {}
+		available = {
+			root = {
+				exists = yes
+				has_capitulated = no
+				has_war = no
+			}
+			any_country = {
+				original_tag = FRA
+				exists = yes
+				has_capitulated = no
+				is_faction_leader = yes
+				OR = {
+					is_in_faction_with = root
+					has_opinion = { target = root value > 24 }
+				}
+			}
+		}
 		
 		bypass = {}
 		
@@ -1863,7 +3067,25 @@ focus_tree = {
 		
 		complete_tooltip = {}
 		
-		completion_reward = {}
+		completion_reward = {
+			custom_effect_tooltip = if_they_accept_newline_tt
+			effect_tooltip = {
+				18 = {
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = { type = industrial_complex level = 1 }
+				}
+				51 = {
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = { type = industrial_complex level = 1 }
+				}
+				var:capital = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = { type = industrial_complex level = 1 }
+					add_resource = { type = steel amount = 10 }
+				}
+				add_cic = 3000
+			}
+		}
 
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		
@@ -1937,7 +3159,19 @@ focus_tree = {
 
 		cost = 8
 		
-		available = {}
+		available = {
+			root = {
+				exists = yes
+				has_capitulated = no
+			}
+			any_country = {
+				original_tag = GER
+				OR = {
+					is_in_faction_with = root
+					has_opinion = { target = root value > 24 }
+				}
+			}
+		}
 		
 		bypass = {}
 		
@@ -1947,7 +3181,27 @@ focus_tree = {
 		
 		complete_tooltip = {}
 		
-		completion_reward = {}
+		completion_reward = {
+			custom_effect_tooltip = if_they_accept_newline_tt
+			effect_tooltip = {
+				42 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = { type = industrial_complex level = 1 }
+					add_resource = { type = steel amount = 5 }
+				}
+				51 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = { type = industrial_complex level = 1 }
+					add_resource = { type = steel amount = 5 }
+				}
+				var:capital = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = { type = industrial_complex level = 1 }
+					add_resource = { type = steel amount = 10 }
+				}
+				add_cic = 3000
+			}
+		}
 
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		
@@ -2041,33 +3295,6 @@ focus_tree = {
 		completion_reward = {
 			add_research_slot = 1
 		}
-		
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
-		id = LUX_
-		icon = GFX_goal_generic_demand_territory
-		#prerequisite = { focus =  }
-		#mutually_exclusive = { focus =  }
-		x = 0
-		y = 0
-		#relative_position_id =
-
-		cost = 8
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-
-		search_filters = {FOCUS_FILTER_INDUSTRY}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -2655,11 +3882,9 @@ focus_tree = {
 	
 ### NAVY FOCUS
 	focus = {
-		id = LUX_
+		id = LUX_sea_so_far
 		icon = GFX_goal_generic_demand_territory
-		#prerequisite = { focus =  }
-		#mutually_exclusive = { focus =  }
-		x = 0
+		x = 26
 		y = 0
 		#relative_position_id =
 
@@ -2679,15 +3904,89 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+	focus = {
+		id = LUX_north_sea_fleet
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = LUX_sea_so_far }
+		#mutually_exclusive = { focus =  }
+		x = -2
+		y = 1
+		relative_position_id = LUX_sea_so_far
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_expanding_shipyard
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = LUX_sea_so_far }
+		#mutually_exclusive = { focus =  }
+		x = 2
+		y = 1
+		relative_position_id = LUX_sea_so_far
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_upgrade_the_hull
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = LUX_north_sea_fleet }
+		prerequisite = { focus = LUX_expanding_shipyard }
+		x = 0
+		y = 2
+		relative_position_id = LUX_sea_so_far
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
 ### AIRFORCE FOCUS
 	focus = {
-		id = LUX_
-		icon = GFX_goal_generic_demand_territory
-		#prerequisite = { focus =  }
-		#mutually_exclusive = { focus =  }
-		x = 0
-		y = 0
-		#relative_position_id =
+		id = LUX_pilot_training
+		icon = GFX_focus_SOV_women_in_aviation
+		prerequisite = { focus = LUX_crisis_awareness }
+		x = 10
+		y = 1
+		relative_position_id = LUX_crisis_awareness
 
 		cost = 8
 		
@@ -2704,6 +4003,131 @@ focus_tree = {
 		completion_reward = {}
 
 		search_filters = {FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_informatics
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = LUX_fortress_of_territory }
+		prerequisite = { focus = LUX_pilot_training }
+		x = -2
+		y = 1
+		relative_position_id = LUX_pilot_training
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_aircraft_industries
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = LUX_pilot_training }
+		x = 1
+		y = 2
+		relative_position_id = LUX_pilot_training
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_light_aircraft
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = LUX_aircraft_industries }
+		x = -1
+		y = 1
+		relative_position_id = LUX_aircraft_industries
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_heavy_power
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = LUX_aircraft_industries }
+		x = 1
+		y = 1
+		relative_position_id = LUX_aircraft_industries
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_women_pilots
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = LUX_pilot_training }
+		x = 2
+		y = 1
+		relative_position_id = LUX_pilot_training
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
 		
 		ai_will_do = { factor = 1 }
 	}
