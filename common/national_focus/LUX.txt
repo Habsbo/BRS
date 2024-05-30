@@ -416,6 +416,130 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 	}
 	focus = {
+		id = LUX_liberating_daitschland
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = LUX_flemish_wallonia_anarchists focus = LUX_internationale }
+		x = 1
+		y = 1
+		relative_position_id = LUX_flemish_wallonia_anarchists
+
+		offset = {
+			x = -1
+			y = 0
+			trigger = {
+				has_completed_focus = LUX_united_left_front
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
+
+		offset = {
+			x = -6
+			y = 0
+			trigger = {
+				has_completed_focus = LUX_integrate_to_democratic
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
+
+		offset = {
+			x = -10
+			y = 0
+			trigger = {
+				has_completed_focus = LUX_monarchy_of_luxembourg
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
+		
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_liberating_frankreich
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = LUX_flemish_wallonia_anarchists focus = LUX_internationale }
+		x = 3
+		y = 1
+		relative_position_id = LUX_flemish_wallonia_anarchists
+
+		offset = {
+			x = -1
+			y = 0
+			trigger = {
+				has_completed_focus = LUX_united_left_front
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
+
+		offset = {
+			x = -6
+			y = 0
+			trigger = {
+				has_completed_focus = LUX_integrate_to_democratic
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
+
+		offset = {
+			x = -10
+			y = 0
+			trigger = {
+				has_completed_focus = LUX_monarchy_of_luxembourg
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
 		id = LUX_revolutionary_komune
 		icon = GFX_goal_generic_demand_territory
 		prerequisite = { focus = LUX_flemish_wallonia_anarchists }
@@ -660,6 +784,21 @@ focus_tree = {
 		y = 2
 		relative_position_id = LUX_internationale
 
+		offset = {
+			x = -1
+			y = 0
+			trigger = {
+				OR = {
+					has_completed_focus = LUX_integrate_to_democratic
+					has_completed_focus = LUX_monarchy_of_luxembourg
+				}
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
+
 		cost = 8
 		
 		available = {}
@@ -683,58 +822,6 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = LUX_wind_of_revolution
-
-		cost = 8
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-
-		search_filters = {FOCUS_FILTER_INDUSTRY}
-		
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
-		id = LUX_liberating_daitschland
-		icon = GFX_goal_generic_demand_territory
-		prerequisite = { focus = LUX_flemish_wallonia_anarchists focus = LUX_internationale }
-		x = 1
-		y = 1
-		relative_position_id = LUX_flemish_wallonia_anarchists
-
-		cost = 8
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-
-		search_filters = {FOCUS_FILTER_INDUSTRY}
-		
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
-		id = LUX_liberating_frankreich
-		icon = GFX_goal_generic_demand_territory
-		prerequisite = { focus = LUX_flemish_wallonia_anarchists focus = LUX_internationale }
-		x = 3
-		y = 1
-		relative_position_id = LUX_flemish_wallonia_anarchists
 
 		cost = 8
 		
