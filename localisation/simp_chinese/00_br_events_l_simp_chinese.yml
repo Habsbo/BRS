@@ -128,3 +128,10 @@
  br_political_actions.8.title: "[FROM.GetName]法西斯主义者被禁绝"
  br_political_actions.8.desc: ""
  br_political_actions.8.a: "很好。"
+#
+ br_gd.1.title: "银行挤兑风波"
+ br_gd.1.desc: ""
+ br_gd.1.a: "不！"
+ br_gd.2.title: ""
+ br_gd.2.desc: ""
+ br_gd.2.a: ""

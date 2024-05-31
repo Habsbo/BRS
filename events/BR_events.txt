@@ -468,7 +468,7 @@ country_event = { #change government
 ##
 add_namespace = br_gd
 #
-country_event = { #
+country_event = { #crash
 	id = br_gd.1
 	title =br_gd.1.title
 	desc = br_gd.1.desc
@@ -485,6 +485,28 @@ country_event = { #
 
 	option = {
 		name =  br_gd.1.a #
+
+		ai_chance = { factor = 5 }
+	}
+
+}
+country_event = { #crash
+	id = br_gd.2
+	title =br_gd.2.title
+	desc = br_gd.2.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			#
+		}
+	}
+
+	option = {
+		name =  br_gd.2.a #
 
 		ai_chance = { factor = 5 }
 	}

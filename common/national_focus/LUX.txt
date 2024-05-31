@@ -641,6 +641,18 @@ focus_tree = {
 		y = 2
 		relative_position_id = LUX_singleparty_govern_by_multiparty_supervise
 
+		offset = {
+			x = -10
+			y = 0
+			trigger = {
+				has_completed_focus = LUX_monarchy_of_luxembourg
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
+
 		cost = 8
 		
 		available = {}
@@ -1343,6 +1355,7 @@ focus_tree = {
 			add_stability = 0.05
 			add_popularity = { ideology = demo_liberalism popularity = 0.03 }
 			add_popularity = { ideology = demo_conservatism popularity = 0.03 }
+			add_ideas = LUX_consolidate_charter_idea
 		}
 		
 		ai_will_do = { factor = 1 }
