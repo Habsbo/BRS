@@ -150,13 +150,31 @@ DKR = { #germnay empire
 	original_tag = GER
 	has_cosmetic_tag = DKR
 }
+RHE = { #
+	original_tag = GER
+	country_score = {
+		base = 0
+		modifier = {
+			OR= {
+				has_government = demo_socialism
+				has_government = demo_liberalism
+				has_government = demo_conservatism
+			}
+			add = 10
+		}
+		modifier = {
+			has_country_flag = GER_rheinland_flag
+			add = 20
+		}
+	}
+}
 KPD = { #DDR
 	original_tag = GER
 	country_score = {
 		base = 0
 		modifier = {
 			has_idea = br_laws_committee
-			add = 5
+			add = 10
 		}
 		modifier = {
 			OR = {
@@ -165,7 +183,11 @@ KPD = { #DDR
 				has_government = con_socialism
 				has_government = demo_socialism
 			}
-			add = 10
+			add = 15
+		}
+		modifier = {
+			has_country_flag = GER_sozialistische_weltrepublik_flag
+			add = 20
 		}
 	}
 }
@@ -175,21 +197,25 @@ NSD = { #nazi
 		base = 0
 		modifier = {
 			has_government = supernationalism
-			add = 5
+			add = 10
 		}
 		modifier = {
 			has_government = nationalism
-			add = 10
+			add = 15
+		}
+		modifier = {
+			has_country_flag = GER_nazi_flag
+			add = 20
 		}
 	}
-}
+} 
 DBR = { #
 	original_tag = GER
 	country_score = {
 		base = 0
 		modifier = {
 			has_idea = br_laws_monarchy
-			add = 5
+			add = 10
 		}
 		modifier = {
 			OR= {
@@ -197,7 +223,11 @@ DBR = { #
 				has_government = demo_liberalism
 				has_government = demo_conservatism
 			}
-			add = 10
+			add = 15
+		}
+		modifier = {
+			has_country_flag = GER_bundesrepublik_deutschland_flag
+			add = 20
 		}
 	}
 }

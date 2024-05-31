@@ -102,7 +102,7 @@ set_popularities = {
 	demo_liberalism = 30 #社会自由主义
 	demo_conservatism = 20 #保守民主主义
 	fascism = 10 #民族主义/束棒
-	nationalism家社会主义
+	nationalism = 5 #民族社会主义
 	supernationalism = 5 #超国家社会主义
 }
 

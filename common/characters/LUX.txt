@@ -423,7 +423,7 @@ characters={
 				}
 		}
 	}
-	LUX_alexander_von_falkenhausen={ #
+	LUX_alexander_von_falkenhausen={ #法肯豪森
 		name="LUX_alexander_von_falkenhausen"
 		portraits={
 			army={
@@ -713,7 +713,7 @@ characters={
 				br_ideology_radical_communism_nio = yes
 				br_ideology_socialism_nio = yes
 			}
-			traits  = {  }
+			traits  = { fascism_theorist }
 		}
 	}
 }

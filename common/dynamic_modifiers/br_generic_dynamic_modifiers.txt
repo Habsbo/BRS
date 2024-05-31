@@ -129,7 +129,7 @@ land_force_alt_dynamic_modifier = { #
 	conscription_factor = troops_conscription_factor
 	
 }
-#
+#军官
 committee_combat_dynamic_modifier = {
 	icon = GFX_idea_ARG_no_gods_no_masters
 	
@@ -187,3 +187,4 @@ officer_cap_dynamic_modifier = {
 	#学说
 	land_doctrine_cost_factor = officer_cap_land_doctrine_cost_factor
 }
+#
