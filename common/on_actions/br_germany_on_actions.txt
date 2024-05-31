@@ -15,4 +15,28 @@ on_actions = {
 			}
 		}
 	}
+
+	on_weekly_LUX = {
+		effect = {
+			if = {
+				limit = {
+					original_tag = LUX
+					has_completed_focus = LUX_monarchy_of_luxembourg
+					has_completed_focus = LUX_luxembourg_nation
+					OR = {
+						has_idea = br_laws_monarchy
+						has_idea = br_laws_cleric
+					}
+					has_idea = br_laws_spiritual
+					authoritarian > 0.3
+					authoritarian > party_popularity@ruling_party
+					authoritarian > var:party_popularity@fascism
+					authoritarian > party_popularity@nationalism
+				}
+				LUX = {
+					country_event = { id = br_lux.1 }
+				}
+			}
+		}
+	}
 }

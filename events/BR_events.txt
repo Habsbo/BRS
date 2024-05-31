@@ -773,3 +773,34 @@ country_event = { #crash
 		ai_chance = { factor = 5 }
 	}
 }
+
+###
+add_namespace = br_lux
+###
+country_event = { #egg
+	id = br_lux.1
+	title = br_lux.1.title
+	desc = br_lux.1.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = br_global_lux_eggs_flag
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+
+	option = {
+		name =  br_lux.1.a #
+
+		set_politics = {
+			ruling_party = authoritarian
+			elections_allowed = no
+		}
+
+		ai_chance = { factor = 5 }
+	}
+}

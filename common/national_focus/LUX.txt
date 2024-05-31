@@ -1468,7 +1468,9 @@ focus_tree = {
 		
 		complete_tooltip = {}
 		
-		completion_reward = {}
+		completion_reward = {
+			add_popularity = { ideology = authoritarian popularity = 0.10 }
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -2990,6 +2992,8 @@ focus_tree = {
 		x = 6
 		y = 2
 		relative_position_id = LUX_luxembourg_nation
+		
+		allow_branch = { has_global_flag = br_global_lux_eggs_flag }
 
 		cost = 8
 		
