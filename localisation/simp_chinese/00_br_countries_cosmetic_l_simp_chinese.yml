@@ -26,9 +26,13 @@
  DBR: "德意志联邦共和国"
  DBR_ADJ: "德意志联邦共和国"
  DBR_DEF: "德国"
+ DR_nazi: "德意志国"
+ DR_nazi_ADJ: "德意志国"
+ DR_nazi_DEF: "德国"
  RHE: "莱茵联邦"
  RHE_ADJ: "莱茵联邦"
  RHE_DEF: "莱茵兰"
+ 
  HRE: "神圣罗马帝国"
  HRE_DEF: "神圣罗马帝国"
  LUX_Lorraine: "洛林大公国"
