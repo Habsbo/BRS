@@ -404,19 +404,88 @@ country_event = { #PUPPET
 
 	immediate = {
 		hidden_effect = {
-			#
+			FROM = {
+				create_wargoal = {
+					target = root
+					type = puppet_wargoal_focus
+				}
+			}
 		}
 	}
 
 	option = {
 		name =  br_CB.1.a #
 
-		FROM = {
-			create_wargoal = {
-				target = root
-				type = puppet_wargoal_focus
+		effect_tooltip = {
+			FROM = {
+				create_wargoal = {
+					target = root
+					type = puppet_wargoal_focus
+				}
 			}
 		}
+		
+		ai_chance = { factor = 5 }
+	}
+
+}
+country_event = { #change government
+	id = br_CB.2
+	title = br_CB.2.title
+	desc = br_CB.2.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			FROM = {
+				create_wargoal = {
+					target = root
+					type = topple_government
+				}
+			}
+		}
+	}
+
+	option = {
+		name =  br_CB.2.a #
+
+		effect_tooltip = {
+			FROM = {
+				create_wargoal = {
+					target = root
+					type = topple_government
+				}
+			}
+		}
+		
+		ai_chance = { factor = 5 }
+	}
+
+}
+##
+add_namespace = br_gd
+#
+country_event = { #
+	id = br_gd.1
+	title =br_gd.1.title
+	desc = br_gd.1.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			#
+		}
+	}
+
+	option = {
+		name =  br_gd.1.a #
+
 		ai_chance = { factor = 5 }
 	}
 

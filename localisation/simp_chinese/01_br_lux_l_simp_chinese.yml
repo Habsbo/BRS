@@ -168,3 +168,6 @@
  br_hearts_of_lux_nor_fra_tt: "§Y法兰西北部§!被§Y完全控制§!且有至少§G60%§!的§Y顺从度§!"
  br_hearts_of_lux_nor_ita_tt: "§Y意大利北部§!被§Y完全控制§!且有至少§G60%§!的§Y顺从度§!"
  br_hearts_of_lux_orc_tt: "§Y阿基坦地区§!被§Y完全控制§!且有至少§G60%§!的§Y顺从度§!"
+
+#
+ LUX_appoint_communists_as_minister_tt: "如果左翼政党在未来胜选，他们也会有机会成为§Y政府首脑§!。"

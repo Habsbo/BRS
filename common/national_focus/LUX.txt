@@ -1,4 +1,4 @@
-### search_filters = {FOCUS_FILTER_WAR_SUPPORTPOLITICAL}
+### search_filters = {FOCUS_FILTER_POLITICAL}
 ### search_filters = {FOCUS_FILTER_RESEARCH}
 ### search_filters = {FOCUS_FILTER_INDUSTRY}
 ### search_filters = {FOCUS_FILTER_STABILITY}
@@ -12,6 +12,7 @@
 ### search_filters = {FOCUS_FILTER_HISTORICAL}
 ### search_filters = {FOCUS_FILTER_BALANCE_OF_POWER}
 ### search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
 ### search_filters = { }
 
 focus_tree = {
@@ -125,6 +126,12 @@ focus_tree = {
 				retire_country_leader = yes
 			}
 			add_ideas = br_laws_premier
+			add_stability = -0.10
+			add_popularity = { ideology = vanwardism popularity = 0.02 }
+			add_popularity = { ideology = sci_socialism popularity = 0.02 }
+			add_popularity = { ideology = con_socialism popularity = 0.02 }
+			add_popularity = { ideology = demo_socialism popularity = 0.02 }
+			add_popularity = { ideology = demo_liberalism popularity = 0.03 }
 			hidden_effect = {
 				if = {
 					limit = {
@@ -280,7 +287,7 @@ focus_tree = {
 		
 		completion_reward = {}
 
-		search_filters = {FOCUS_FILTER_INDUSTRY}
+		search_filters = {FOCUS_FILTER_POLITICAL}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -417,7 +424,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LUX_revolutionary_komune
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_focus_generic_communist_industry
 		prerequisite = { focus = LUX_flemish_wallonia_anarchists }
 		x = -1
 		y = 2
@@ -470,7 +477,7 @@ focus_tree = {
 	#
 	focus = {
 		id = LUX_socialism_side
-		icon = GFX_focus_focus_fra_liberte_egalite_solidarite
+		icon = GFX_focus_generic_soviet_politics
 		prerequisite = { focus = LUX_socialists_voice }
 		mutually_exclusive = { focus = LUX_communism_side }
 		x = 2
@@ -654,7 +661,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LUX_liberating_daitschland
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_focus_attack_germany
 		prerequisite = { focus = LUX_flemish_wallonia_anarchists focus = LUX_internationale }
 		x = 1
 		y = 1
@@ -708,15 +715,23 @@ focus_tree = {
 		
 		complete_tooltip = {}
 		
-		completion_reward = {}
+		completion_reward = {
+			add_war_support = 0.10
+			effect_tooltip = {
+				create_wargoal = {
+					target = GER
+					type = topple_government
+				}
+			}
+		}
 
-		search_filters = {FOCUS_FILTER_INDUSTRY}
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
 		
 		ai_will_do = { factor = 1 }
 	}
 	focus = {
 		id = LUX_liberating_frankreich
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_focus_attack_france
 		prerequisite = { focus = LUX_flemish_wallonia_anarchists focus = LUX_internationale }
 		x = 3
 		y = 1
@@ -770,15 +785,23 @@ focus_tree = {
 		
 		complete_tooltip = {}
 		
-		completion_reward = {}
+		completion_reward = {
+			add_war_support = 0.10
+			effect_tooltip = {
+				create_wargoal = {
+					target = FRA
+					type = topple_government
+				}
+			}
+		}
 
-		search_filters = {FOCUS_FILTER_INDUSTRY}
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
 		
 		ai_will_do = { factor = 1 }
 	}
 	focus = {
 		id = LUX_wind_of_revolution
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_goal_generic_soviet_construction
 		prerequisite = { focus = LUX_internationale }
 		x = 1
 		y = 2
@@ -817,7 +840,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LUX_proletariaten_vun_der_welt_uniteieren
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_focus_spr_crush_the_revolution
 		prerequisite = { focus = LUX_wind_of_revolution }
 		x = 0
 		y = 2
@@ -985,7 +1008,12 @@ focus_tree = {
 		
 		complete_tooltip = {}
 		
-		completion_reward = {}
+		completion_reward = {
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = LUX_charles_marx
+			show_ideas_tooltip = LUX_dominique_urbany
+			custom_effect_tooltip = LUX_appoint_communists_as_minister_tt
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -1352,7 +1380,14 @@ focus_tree = {
 		
 		complete_tooltip = {}
 		
-		completion_reward = {}
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = { ideology = vanwardism popularity = 0.02 }
+			add_popularity = { ideology = con_socialism popularity = 0.02 }
+			add_popularity = { ideology = demo_socialism popularity = 0.02 }
+			add_popularity = { ideology = demo_liberalism popularity = 0.03 }
+			add_popularity = { ideology = demo_conservatism popularity = 0.03 }
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -1411,7 +1446,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LUX_dancing_round_europa
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = LUX_tolerate_moderate_socialists focus = LUX_defend_territory }
 		x = -1
 		y = 2
@@ -1485,7 +1520,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LUX_led_by_france
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_focus_chi_reach_out_to_france
 		prerequisite = { focus = LUX_cementing_relation_with_petite_entente }
 		x = 0
 		y = 1
@@ -1509,7 +1544,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LUX_led_by_germany
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_focus_chi_mission_to_germany
 		prerequisite = { focus = LUX_central_power }
 		x = 0
 		y = 1
@@ -1533,7 +1568,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LUX_european_union
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_goal_generic_major_alliance
 		prerequisite = { focus = LUX_led_by_france focus = LUX_led_by_germany }
 		x = 0
 		y = 3
@@ -1756,7 +1791,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LUX_non_alignment
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_goal_generic_territory_or_war
 		prerequisite = { focus = LUX_singleparty_govern_by_multiparty_supervise focus = LUX_joint_governance }
 		mutually_exclusive = { focus = LUX_internationale }
 		x = 1
@@ -1783,7 +1818,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LUX_fight_against_colonialism
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_focus_SOV_the_road_of_life
 		prerequisite = { focus = LUX_non_alignment }
 		x = 0
 		y = 2
@@ -1809,7 +1844,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LUX_liberation_equality_fraternity
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_focus_focus_fra_liberte_egalite_solidarite
 		prerequisite = { focus = LUX_fight_against_colonialism }
 		x = 0
 		y = 2
@@ -1946,6 +1981,9 @@ focus_tree = {
 			add_war_support = 0.05
 			add_popularity = { ideology = demo_conservatism popularity = 0.03 }
 			add_popularity = { ideology = authoritarian popularity = 0.03 }
+			#
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = LUX_karlothringen_marquis #it's a fictitious character
 		}
 		
 		ai_will_do = { factor = 1 }
@@ -1971,7 +2009,11 @@ focus_tree = {
 		
 		complete_tooltip = {}
 		
-		completion_reward = {}
+		completion_reward = {
+			#
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = LUX_friedrich_schreiwung #it's a fictitious character
+		}
 		
 		ai_will_do = { factor = 1 }
 	}

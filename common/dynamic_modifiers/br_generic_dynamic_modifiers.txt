@@ -27,6 +27,22 @@
 #	can be added to countries, states or unit leaders
 #	will only updated daily, unless forced by force_update_dynamic_modifier effect
 
+great_depression_generic_dynamic_modifier = { #Great Depression
+	icon = GFX_idea_great_depression
+
+	enable = {}
+
+	remove_trigger = {}
+
+	political_power_factor = br_gd_generic_political_power_factor
+	stability_factor = br_gd_generic_stability_factor
+	#
+	consumer_goods_factor = br_gd_generic_consumer_goods_factor
+	industrial_capacity_factory = br_gd_generic_industrial_capacity_factory
+	industrial_capacity_dockyard = br_gd_generic_industrial_capacity_dockyard
+	production_speed_buildings_factor = br_gd_generic_production_speed_buildings_factor
+}
+
 national_strikes_dynamic_modifier = {
 	icon = GFX_idea_FRA_factory_strikes
 

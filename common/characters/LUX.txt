@@ -286,7 +286,10 @@ characters={
 			slot = political_advisor
 			idea_token = LUX_charles_marx
 			allowed  = { original_tag  = LUX }
-			available = { br_ideology_fascism_nio = yes }
+			available = {
+				has_completed_focus = LUX_appoint_communists_as_minister
+				br_ideology_fascism_nio = yes
+			}
 			traits  = { anti_imperialism_revolutionary }
 			ai_will_do = { factor = 1.000 }
 		}
@@ -295,6 +298,7 @@ characters={
 			idea_token = LUX_charles_marx_hog
 			allowed = { always = yes }
 			available = {
+				has_completed_focus = LUX_appoint_communists_as_minister
 				br_head_of_gov_generic_trigger = yes
 				br_ideology_fascism_nio = yes
 			}
@@ -321,7 +325,10 @@ characters={
 			slot = political_advisor
 			idea_token = LUX_dominique_urbany
 			allowed  = { original_tag  = LUX }
-			available = { br_ideology_fascism_nio = yes }
+			available = {
+				has_completed_focus = LUX_appoint_communists_as_minister
+				br_ideology_fascism_nio = yes
+			}
 			traits  = { anti_imperialism_revolutionary }
 			ai_will_do = { factor = 1.000 }
 		}
@@ -330,6 +337,7 @@ characters={
 			idea_token = LUX_dominique_urbany_hog
 			allowed = { always = yes }
 			available = {
+				has_completed_focus = LUX_appoint_communists_as_minister
 				br_head_of_gov_generic_trigger = yes
 				br_ideology_fascism_nio = yes
 			}
@@ -682,10 +690,30 @@ characters={
 			idea_token = LUX_karlothringen_marquis
 			allowed  = { original_tag  = LUX }
 			available = {
+				has_completed_focus = LUX_strengthen_loyalists
 				br_ideology_radical_communism_nio = yes
 				br_ideology_socialism_nio = yes
 			}
 			traits  = { loyalists_of_monarchy }
+		}
+	}
+	LUX_friedrich_schreiwung = { #
+		name=LUX_friedrich_schreiwung
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_europe_3"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = LUX_friedrich_schreiwung
+			allowed  = { original_tag  = LUX }
+			available = {
+				has_completed_focus = LUX_united_front
+				br_ideology_radical_communism_nio = yes
+				br_ideology_socialism_nio = yes
+			}
+			traits  = {  }
 		}
 	}
 }
