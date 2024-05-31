@@ -716,4 +716,22 @@ characters={
 			traits  = { fascism_theorist }
 		}
 	}
+	LUX_ehrlich_swabian = { #
+		name=LUX_ehrlich_swabian 
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_europe_3"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = LUX_ehrlich_swabian
+			allowed  = { original_tag  = LUX }
+			available = {
+				has_completed_focus = LUX_consolidate_charter
+				br_ideology_radical_communism_nio = yes
+			}
+			traits  = { sincere_conciliator }
+		}
+	}
 }

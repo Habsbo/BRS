@@ -17,6 +17,17 @@ national_strikes_added_effect = {
 		add_to_variable = { national_strikes_production_speed_buildings_factor = -0.05 tooltip = production_speed_buildings_factor_tt }
 	}
 }
+br_game_rule_hide_focus_reload = {
+	if = {
+		limit = {
+			has_game_rule = {
+				rule = obsolete_focus_branches_visibility
+				option = HIDE
+			}
+		}
+		mark_focus_tree_layout_dirty = yes
+	}
+}
 GRE_civilwar_dc_var_add = {
 	custom_effect_tooltip = br_gre_cwdc_increased_knd
 	if = {

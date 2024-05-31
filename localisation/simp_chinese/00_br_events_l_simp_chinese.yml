@@ -129,6 +129,14 @@
  br_political_actions.8.desc: ""
  br_political_actions.8.a: "很好。"
 #
+ br_CB.1.title: "[FROM.GetName]要求新疆界"
+ br_CB.1.desc: "[FROM.GetName]的外交发言人发出这样的警告：旧的边境条例已经不再适用双方的关系，两国之间应当是服从与被服从，贵国应当及早地屈服，以免酿成更多的伤亡，让两个原本友谊深厚的民族成为敌人。显然，我国的人民不会惧怕这种孱弱的威胁。"
+ br_CB.1.a: "战争即将到来。"
+#
+ br_cb_barcelona.1.title: "[FROM.GetName]索要巴塞罗那"
+ br_cb_barcelona.1.desc: "[FROM.GetName]发出了最后通牒，如果我们不愿交出巴塞罗那，战争将不可避免。"
+ br_cb_barcelona.1.a: "他们想要那就用他们战士的尸体来拿吧！"
+#
  br_gd.1.title: "银行挤兑风波"
  br_gd.1.desc: ""
  br_gd.1.a: "不！"

@@ -1,5 +1,5 @@
 br_hearts_of_lux = {
-	br_hearts_of_lux.1 = {
+	br_hearts_of_lux.1 = { #dutch-bel
 		icon = generic_political_discourse
 
 		available = {
@@ -47,7 +47,7 @@ br_hearts_of_lux = {
 
 		ai_will_do = { base = 10 }
 	}
-	br_hearts_of_lux.2 = {
+	br_hearts_of_lux.2 = { #rhe
 		icon = generic_political_discourse
 
 		available = {
@@ -58,15 +58,18 @@ br_hearts_of_lux = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = br_hearts_of_lux_rhe_tt
-				42 = { is_fully_controlled_by = root }
-				50 = { is_fully_controlled_by = root }
-				51 = { is_fully_controlled_by = root }
-				55 = { is_fully_controlled_by = root }
-				57 = { is_fully_controlled_by = root }
+				42 = { is_fully_controlled_by = root compliance > 59  }
+				50 = { is_fully_controlled_by = root compliance > 59  }
+				51 = { is_fully_controlled_by = root compliance > 59  }
+				55 = { is_fully_controlled_by = root compliance > 59  }
+				57 = { is_fully_controlled_by = root compliance > 59  }
 			}
 		}
 
-		visible = { original_tag = LUX }
+		visible = {
+			original_tag = LUX
+			has_completed_focus = LUX_crown_of_lotharingia
+		}
 
 		fire_only_once = yes
 
@@ -110,7 +113,7 @@ br_hearts_of_lux = {
 
 		ai_will_do = { base = 10 }
 	}
-	br_hearts_of_lux.3 = {
+	br_hearts_of_lux.3 = { #eng
 		icon = generic_political_discourse
 
 		available = {
@@ -121,22 +124,25 @@ br_hearts_of_lux = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = br_hearts_of_lux_eng_tt
-				122 = { is_fully_controlled_by = root }
-				123 = { is_fully_controlled_by = root }
-				125 = { is_fully_controlled_by = root }
-				126 = { is_fully_controlled_by = root }
-				127 = { is_fully_controlled_by = root }
-				128 = { is_fully_controlled_by = root }
-				129 = { is_fully_controlled_by = root }
-				130 = { is_fully_controlled_by = root }
-				131 = { is_fully_controlled_by = root }
-				132 = { is_fully_controlled_by = root }
-				338 = { is_fully_controlled_by = root }
-				931 = { is_fully_controlled_by = root }
+				122 = { is_fully_controlled_by = root compliance > 59  }
+				123 = { is_fully_controlled_by = root compliance > 59  }
+				125 = { is_fully_controlled_by = root compliance > 59  }
+				126 = { is_fully_controlled_by = root compliance > 59  }
+				127 = { is_fully_controlled_by = root compliance > 59  }
+				128 = { is_fully_controlled_by = root compliance > 59  }
+				129 = { is_fully_controlled_by = root compliance > 59  }
+				130 = { is_fully_controlled_by = root compliance > 59  }
+				131 = { is_fully_controlled_by = root compliance > 59  }
+				132 = { is_fully_controlled_by = root compliance > 59  }
+				338 = { is_fully_controlled_by = root compliance > 59  }
+				931 = { is_fully_controlled_by = root compliance > 59  }
 			}
 		}
 
-		visible = { original_tag = LUX }
+		visible = {
+			original_tag = LUX 
+			has_completed_focus = LUX_attack_britain
+		}
 
 		fire_only_once = yes
 
@@ -185,7 +191,7 @@ br_hearts_of_lux = {
 
 		ai_will_do = { base = 10 }
 	}
-	br_hearts_of_lux.4 = {
+	br_hearts_of_lux.4 = { #ger
 		icon = generic_political_discourse
 
 		available = {
@@ -196,22 +202,28 @@ br_hearts_of_lux = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = br_hearts_of_lux_ger_tt
-				53 = { is_fully_controlled_by = root }
-				54 = { is_fully_controlled_by = root }
-				55 = { is_fully_controlled_by = root }
-				56 = { is_fully_controlled_by = root }
-				58 = { is_fully_controlled_by = root }
-				59 = { is_fully_controlled_by = root }
-				60 = { is_fully_controlled_by = root }
-				61 = { is_fully_controlled_by = root }
-				62 = { is_fully_controlled_by = root }
-				64 = { is_fully_controlled_by = root }
-				65 = { is_fully_controlled_by = root }
-				909 = { is_fully_controlled_by = root }
+				53 = { is_fully_controlled_by = root compliance > 59  }
+				54 = { is_fully_controlled_by = root compliance > 59  }
+				55 = { is_fully_controlled_by = root compliance > 59  }
+				56 = { is_fully_controlled_by = root compliance > 59  }
+				58 = { is_fully_controlled_by = root compliance > 59  }
+				59 = { is_fully_controlled_by = root compliance > 59  }
+				60 = { is_fully_controlled_by = root compliance > 59  }
+				61 = { is_fully_controlled_by = root compliance > 59  }
+				62 = { is_fully_controlled_by = root compliance > 59  }
+				64 = { is_fully_controlled_by = root compliance > 59  }
+				65 = { is_fully_controlled_by = root compliance > 59  }
+				909 = { is_fully_controlled_by = root compliance > 59  }
 			}
 		}
 
-		visible = { original_tag = LUX }
+		visible = {
+			original_tag = LUX
+			OR = {
+				has_completed_focus = LUX_germany_union
+				has_completed_focus = LUX_challenge_habsburg
+			}
+		}
 
 		fire_only_once = yes
 
@@ -261,7 +273,7 @@ br_hearts_of_lux = {
 
 		ai_will_do = { base = 10 }
 	}
-	br_hearts_of_lux.5 = {
+	br_hearts_of_lux.5 = { #aus
 		icon = generic_political_discourse
 
 		available = {
@@ -279,7 +291,13 @@ br_hearts_of_lux = {
 			}
 		}
 
-		visible = { original_tag = LUX }
+		visible = {
+			original_tag = LUX
+			OR = {
+				has_completed_focus = LUX_germany_union
+				has_completed_focus = LUX_challenge_habsburg
+			}
+		}
 
 		fire_only_once = yes
 
@@ -308,7 +326,7 @@ br_hearts_of_lux = {
 
 		ai_will_do = { base = 10 }
 	}
-	br_hearts_of_lux.6 = {
+	br_hearts_of_lux.6 = { #swi
 		icon = generic_political_discourse
 
 		available = {
@@ -326,7 +344,13 @@ br_hearts_of_lux = {
 			}
 		}
 
-		visible = { original_tag = LUX }
+		visible = {
+			original_tag = LUX
+			OR = {
+				has_completed_focus = LUX_germany_union
+				has_completed_focus = LUX_challenge_habsburg
+			}
+		}
 
 		fire_only_once = yes
 
@@ -344,7 +368,7 @@ br_hearts_of_lux = {
 
 		ai_will_do = { base = 10 }
 	}
-	br_hearts_of_lux.7 = {
+	br_hearts_of_lux.7 = { #nord france
 		icon = generic_political_discourse
 
 		available = {
@@ -367,7 +391,13 @@ br_hearts_of_lux = {
 			}
 		}
 
-		visible = { original_tag = LUX }
+		visible = {
+			original_tag = LUX
+			OR = {
+				has_completed_focus = LUX_crown_of_lotharingia
+				has_completed_focus = LUX_claim_north_france
+			}
+		}
 
 		fire_only_once = yes
 
@@ -410,7 +440,7 @@ br_hearts_of_lux = {
 
 		ai_will_do = { base = 10 }
 	}
-	br_hearts_of_lux.8 = {
+	br_hearts_of_lux.8 = { #north ita
 		icon = generic_political_discourse
 
 		available = {
@@ -434,7 +464,13 @@ br_hearts_of_lux = {
 			}
 		}
 
-		visible = { original_tag = LUX }
+		visible = {
+			original_tag = LUX
+			OR = {
+				has_completed_focus = LUX_conquer_north_italy
+				has_completed_focus = LUX_challenge_habsburg
+			}
+		}
 
 		fire_only_once = yes
 
@@ -477,7 +513,7 @@ br_hearts_of_lux = {
 
 		ai_will_do = { base = 10 }
 	}
-	br_hearts_of_lux.9 = {
+	br_hearts_of_lux.9 = { #south france
 		icon = generic_political_discourse
 
 		available = {
@@ -486,7 +522,7 @@ br_hearts_of_lux = {
 				has_capitulated = no
 				all_core_state = { is_fully_controlled_by = root }
 			}
-			#	
+			#
 			custom_trigger_tooltip = {
 				tooltip = br_hearts_of_lux_orc_tt
 				19 = { is_fully_controlled_by = root compliance > 59  }
@@ -500,9 +536,15 @@ br_hearts_of_lux = {
 				33 = { is_fully_controlled_by = root compliance > 59  }
 				806 = { is_fully_controlled_by = root compliance > 59 }
 			}
+			#
+			has_completed_focus = LUX_conquer_aquitaine
 		}
 
-		visible = { original_tag = LUX }
+		visible = {
+			original_tag = LUX
+			#
+			has_completed_focus = LUX_conquer_aquitaine
+		}
 
 		fire_only_once = yes
 
@@ -528,7 +570,6 @@ br_hearts_of_lux = {
 				}
 				add_core_of = root
 			}
-			165 = { transfer_state_to = root }
 		}
 
 		highlight_states = {
@@ -550,7 +591,7 @@ br_hearts_of_lux = {
 
 		ai_will_do = { base = 10 }
 	}
-	br_hearts_of_lux.10 = {
+	br_hearts_of_lux.10 = { #hre
 		icon = generic_political_discourse
 
 		available = {
@@ -565,24 +606,28 @@ br_hearts_of_lux = {
 				}
 				has_idea = br_laws_spiritual
 			}
-			64 = { is_fully_controlled_by = root compliance > 60 } #berlin
-			52 = { is_fully_controlled_by = root compliance > 60 } #münchen
-			4 = { is_fully_controlled_by = root compliance > 60 } #wien
-			9 = { is_fully_controlled_by = root compliance > 60 } #prague
-			159 = { is_fully_controlled_by = root compliance > 60 } #milan
+			64 = { is_fully_controlled_by = root } #berlin
+			52 = { is_fully_controlled_by = root } #münchen
+			4 = { is_fully_controlled_by = root } #wien
+			9 = { is_fully_controlled_by = root } #prague
+			159 = { is_fully_controlled_by = root } #milan
 			2 = { #roma
-				is_fully_controlled_by = root
-				AND = {
-					PAP = { is_puppet_of = root }
-					is_fully_controlled_by = PAP
+				OR = {
+					is_fully_controlled_by = root
+					AND = {
+						PAP = { is_puppet_of = root }
+						is_fully_controlled_by = PAP
+					}
 				}
 			}
+			has_completed_focus = LUX_kaiser_of_holy_roman_empire
 		}
 
 		visible = {
 			original_tag = LUX
 			br_ideology_radical_communism_nio = yes
 			br_ideology_socialism_nio = yes
+			has_completed_focus = LUX_kaiser_of_holy_roman_empire
 		}
 
 		fire_only_once = yes
@@ -661,6 +706,7 @@ br_hearts_of_lux = {
 				}
 				add_core_of = root
 			}
+			every_controlled_state = { add_compliance = 40 }
 		}
 		
 		highlight_states = {
@@ -728,6 +774,96 @@ br_hearts_of_lux = {
 				#
 				state = 736
 				state = 852
+			}
+		}
+
+		ai_will_do = { base = 10 }
+	}
+	br_hearts_of_lux.11 = { #east frank
+		icon = generic_political_discourse
+
+		available = {
+			LUX = {
+				exists = yes
+				has_capitulated = no
+				all_core_state = { is_fully_controlled_by = root }
+			}
+			#
+			custom_trigger_tooltip = {
+				tooltip = br_hearts_of_lux_rhe_tt
+				42 = { is_fully_controlled_by = root compliance > 59  }
+				50 = { is_fully_controlled_by = root compliance > 59  }
+				51 = { is_fully_controlled_by = root compliance > 59  }
+				55 = { is_fully_controlled_by = root compliance > 59  }
+				57 = { is_fully_controlled_by = root compliance > 59  }
+				#
+				53 = { is_fully_controlled_by = root compliance > 59  }
+				54 = { is_fully_controlled_by = root compliance > 59  }
+				55 = { is_fully_controlled_by = root compliance > 59  }
+				56 = { is_fully_controlled_by = root compliance > 59  }
+				58 = { is_fully_controlled_by = root compliance > 59  }
+				59 = { is_fully_controlled_by = root compliance > 59  }
+				909 = { is_fully_controlled_by = root compliance > 59  }
+			}
+		}
+
+		visible = {
+			original_tag = LUX
+			has_completed_focus = LUX_claim_eastern_franks
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 8
+						#
+						state = 17
+						state = 28
+						#
+						state = 42
+						state = 50
+						state = 51
+						state = 55
+						state = 57
+						#
+						state = 52
+						state = 53
+						state = 54
+						state = 56
+						state = 58
+						state = 59
+						state = 909
+					}
+				}
+				add_core_of = root
+			}
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 8
+				#
+				state = 17
+				state = 28
+				#
+				state = 42
+				state = 50
+				state = 51
+				state = 55
+				state = 57
+				#
+				state = 52
+				state = 53
+				state = 54
+				state = 56
+				state = 58
+				state = 59
+				state = 909
 			}
 		}
 

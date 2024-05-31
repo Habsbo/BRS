@@ -167,4 +167,27 @@ leader_traits = {
 
 		ai_will_do = { factor = 0 }
 	}
+
+	harsh_conscription_officer = {
+		random = no
+		sprite = 13
+		
+		stability_factor = -0.05
+		industrial_capacity_factory = -0.05
+		weekly_manpower = 100
+
+		ai_will_do = { factor = 0 }
+	}
+
+	sincere_conciliator = {
+		random = no
+		sprite = 13
+		
+		compliance_growth = 0.15
+		non_core_manpower = 0.05
+		drift_defence_factor = 0.10
+
+		ai_will_do = { factor = 0 }
+	}
+
 }

@@ -465,6 +465,46 @@ country_event = { #change government
 	}
 
 }
+#
+add_namespace = br_cb_barcelona
+country_event = { #change government
+	id = br_cb_barcelona.1
+	title = br_cb_barcelona.1.title
+	desc = br_cb_barcelona.1.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			FROM = {
+				create_wargoal = {
+					target = root
+					type = take_state_focus
+					generator = { 165 }
+				}
+			}
+		}
+	}
+
+	option = {
+		name =  br_cb_barcelona.1.a #
+
+		effect_tooltip = {
+			FROM = {
+				create_wargoal = {
+					target = root
+					type = take_state_focus
+					generator = { 165 }
+				}
+			}
+		}
+		
+		ai_chance = { factor = 5 }
+	}
+
+}
 ##
 add_namespace = br_gd
 #
