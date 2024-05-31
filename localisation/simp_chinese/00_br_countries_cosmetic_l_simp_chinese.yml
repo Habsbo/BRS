@@ -4,9 +4,15 @@
 
 #英国
  ENG_republic: "$ENG$共和国"
+ ENG_republic_ADJ: "$ENG$共和国"
+ ENG_republic_DEF: "$ENG$共和国"
  ENG_people_republic: "$ENG$人民共和国"
+ ENG_people_republic_ADJ: "$ENG$人民共和国"
+ ENG_people_republic_DEF: "英国"
  BRITISH: "不列颠"
  ENG_republic_mosley: "$BRITISH$共和国"
+ ENG_republic_mosley_ADJ: "$BRITISH$共和国"
+ ENG_republic_mosley_DEF: "英国"
  CYP_UK_exiled: "大英帝国"
  CYP_UK_exiled_ADJ: "不列颠"
  CYP_UK_exiled_DEF: "英国"
