@@ -12,6 +12,10 @@ ideas = {
 
 			allowed = { has_war = no }
 
+			allowed_civil_war = {
+				always = yes
+			}
+
 			#on_add = {}
 
 			#on_remove = {}
@@ -29,7 +33,13 @@ ideas = {
 
 			removal_cost = -1
 
-			allowed = { has_war = no }
+			allowed = {
+				br_ideology_fascism_nio = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
 
 			#on_add = {}
 
@@ -39,6 +49,55 @@ ideas = {
 				political_power_factor = 0.05
 				stability_factor = 0.10
 				political_advisor_cost_factor = -0.15
+			}
+		}
+		#
+		LUX_luxembourg_nation_united_front = {
+			picture = generic_pp_unity_bonus
+
+			removal_cost = -1
+
+			allowed = {
+				OR = {
+					br_ideology_capitalism_ruling = yes
+					br_ideology_authoritarian_ruling = yes
+					br_ideology_fascism_ruling = yes
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			#on_add = {}
+
+			#on_remove = {}
+
+			modifier = {
+				war_stability_factor = 0.10
+				resistance_decay = 0.25
+			}
+		}
+		#
+		LUX_week_national_consciousness = {
+			picture = generic_pp_unity_bonus
+
+			removal_cost = -1
+
+			allowed = {
+				br_ideology_fascism_nio = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			#on_add = {}
+
+			#on_remove = {}
+
+			modifier = {
+				fascism_drift = -0.01
 			}
 		}
 	}

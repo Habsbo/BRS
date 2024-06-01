@@ -4,6 +4,10 @@
  LUX_crisis_awareness_idea_desc: ""
  LUX_consolidate_charter_idea: "[LUX.Getadjective]国家宪法"
  LUX_consolidate_charter_idea_desc: ""
+ LUX_luxembourg_nation_united_front: "[LUX.Getadjective]民族团结阵线"
+ LUX_luxembourg_nation_united_front_desc: ""
+ LUX_week_national_consciousness: "日渐衰弱的民族意识"
+ LUX_week_national_consciousness_desc: ""
 # 
  LUX_economic_effort: "重视经济"
  LUX_economic_effort_desc: ""
