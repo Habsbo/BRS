@@ -31,13 +31,1452 @@ focus_tree = {
 
 	continuous_focus_position = { x = 50 y = 1500 }
 
+### IC FOCUS
+	focus = {
+		id = LUX_economic_effort
+		icon = GFX_goal_generic_construct_infrastructure
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 12
+		y = 0
+		#relative_position_id =
+
+		cost = 5
+		
+		available = {
+			root = {
+				exists = yes
+				has_capitulated = no
+				has_civil_war = no
+			}
+			var:capital = { is_fully_controlled_by = root }
+		}
+		
+		bypass = {
+			var:capital = {
+				OR = {
+					NOT = { is_fully_controlled_by = root }
+					custom_trigger_tooltip = {
+						tooltip = infrastructure_effort_tt
+						all_owned_state = { free_building_slots = { building = infrastructure size < 1 } }
+					}
+					custom_trigger_tooltip = {
+						tooltip = construction_effort_tt
+						all_owned_state = { free_building_slots = { building = industrial_complex size < 1 include_locked = yes } }
+					}
+				}
+			}
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			var:capital = {
+				add_building_construction = { type = infrastructure level = 1 }
+				add_extra_state_shared_building_slots = 1
+				if = {
+					limit = { infrastructure > 3 }
+					add_building_construction = { type = industrial_complex level = 1 }
+				}
+			}
+		}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_industrial_upgrading_of_steel
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = LUX_economic_effort }
+		#mutually_exclusive = { focus =  }
+		x = -2
+		y = 1
+		relative_position_id = LUX_economic_effort
+
+		cost = 8
+		
+		available = {
+			root = {
+				exists = yes
+				has_capitulated = no
+				has_civil_war = no
+			}
+			var:capital = { is_fully_controlled_by = root }
+		}
+		
+		bypass = {
+			var:capital = {
+				OR = {
+					NOT = { is_fully_controlled_by = root }
+					custom_trigger_tooltip = {
+						tooltip = infrastructure_effort_tt
+						all_owned_state = { free_building_slots = { building = infrastructure size < 1 } }
+					}
+					custom_trigger_tooltip = {
+						tooltip = construction_effort_tt
+						all_owned_state = { free_building_slots = { building = industrial_complex size < 1 include_locked = yes } }
+					}
+				}
+			}
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			var:capital = {
+				add_building_construction = { type = infrastructure level = 1 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 }
+				add_resource = { type = steel amount = 10 }
+			}
+		}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	#england
+	focus = {
+		id = LUX_allies_of_bri_lux
+		icon = GFX_focus_chi_british_cooperation
+		prerequisite = { focus = LUX_industrial_upgrading_of_steel }
+		x = -10
+		y = 1
+		relative_position_id = LUX_industrial_upgrading_of_steel
+
+		cost = 8
+		
+		available = {
+			root = {
+				exists = yes
+				has_capitulated = no
+				has_civil_war = no
+				is_puppet = no
+			}
+			ENG = {
+				exists = yes
+				has_capitulated = no
+				has_civil_war = no
+				is_puppet = no
+				NOT = { has_war_with = root }
+				OR = {
+					has_government = root
+					has_opinion = { target = root value > 24 }
+				}
+			}
+		}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			custom_effect_tooltip = if_they_accept_newline_tt
+			effect_tooltip = {
+				add_political_power = 50
+				add_popularity = { ideology = ENG popularity = 0.05 }
+				add_cic = 3000
+			}
+		}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_substitute_trade_status_of_bel
+		icon = GFX_goal_generic_military_deal
+		prerequisite = { focus = LUX_allies_of_bri_lux }
+		mutually_exclusive = {
+			focus = LUX_employment_promoted
+			focus = LUX_supply_of_industrial_consumer
+			focus = LUX_letzbuergesch_prioriteit
+		}
+		x = 0
+		y = 1
+		relative_position_id = LUX_allies_of_bri_lux
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			custom_effect_tooltip = if_they_accept_newline_tt
+			effect_tooltip = {
+				create_wargoal = { target = BEL type = annex_everything }
+				give_guarantee = no
+			}
+		}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_allies_around_north_sea
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = LUX_substitute_trade_status_of_bel }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 2
+		relative_position_id = LUX_substitute_trade_status_of_bel
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_integrate_educational_resources
+		icon = GFX_focus_research2
+		prerequisite = { focus = LUX_substitute_trade_status_of_bel focus = LUX_employment_promoted }
+		x = 2
+		y = 1
+		relative_position_id = LUX_substitute_trade_status_of_bel
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	#france
+	focus = {
+		id = LUX_allies_of_petite_entente
+		icon = GFX_focus_chi_reach_out_to_france
+		prerequisite = { focus = LUX_industrial_upgrading_of_steel }
+		x = -6
+		y = 1
+		relative_position_id = LUX_industrial_upgrading_of_steel
+
+		cost = 8
+		
+		available = {
+			root = {
+				exists = yes
+				has_capitulated = no
+				has_war = no
+			}
+			any_country = {
+				original_tag = FRA
+				exists = yes
+				has_capitulated = no
+				is_faction_leader = yes
+				OR = {
+					is_in_faction_with = root
+					has_opinion = { target = root value > 24 }
+				}
+			}
+		}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			custom_effect_tooltip = if_they_accept_newline_tt
+			effect_tooltip = {
+				18 = {
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = { type = industrial_complex level = 1 }
+				}
+				if = {
+					limit = { 51 = { is_fully_controlled_by = root compliance > 20 } }
+					51 = {
+						hidden_effect = { add_core_of = root }
+						add_extra_state_shared_building_slots = 3
+						add_building_construction = { type = industrial_complex level = 1 }
+					}
+				}
+				var:capital = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = { type = industrial_complex level = 1 }
+					add_resource = { type = steel amount = 10 }
+				}
+				add_cic = 3000
+			}
+		}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_employment_promoted
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = LUX_allies_of_petite_entente }
+		mutually_exclusive = {
+			focus = LUX_substitute_trade_status_of_bel
+			focus = LUX_supply_of_industrial_consumer
+			focus = LUX_letzbuergesch_prioriteit
+		}
+		x = 0
+		y = 1
+		relative_position_id = LUX_allies_of_petite_entente
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_improve_governor
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = LUX_employment_promoted }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 2
+		relative_position_id = LUX_employment_promoted
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_scientific_exchange
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = LUX_employment_promoted focus = LUX_supply_of_industrial_consumer }
+		x = 2
+		y = 1
+		relative_position_id = LUX_employment_promoted
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	#germany
+	focus = {
+		id = LUX_allies_of_iron
+		icon = GFX_focus_chi_mission_to_germany
+		prerequisite = { focus = LUX_industrial_upgrading_of_steel }
+		x = -2
+		y = 1
+		relative_position_id = LUX_industrial_upgrading_of_steel
+
+		cost = 8
+		
+		available = {
+			root = {
+				exists = yes
+				has_capitulated = no
+			}
+			any_country = {
+				original_tag = GER
+				OR = {
+					is_in_faction_with = root
+					has_opinion = { target = root value > 24 }
+				}
+			}
+		}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			custom_effect_tooltip = if_they_accept_newline_tt
+			effect_tooltip = {
+				add_popularity = { ideology = GER popularity = 0.05 }
+				42 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = { type = industrial_complex level = 1 }
+					add_resource = { type = steel amount = 5 }
+				}
+				51 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = { type = industrial_complex level = 1 }
+					add_resource = { type = steel amount = 5 }
+				}
+				var:capital = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = { type = industrial_complex level = 1 }
+					add_resource = { type = steel amount = 10 }
+				}
+				add_cic = 3000
+			}
+		}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_supply_of_industrial_consumer
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = LUX_allies_of_iron }
+		mutually_exclusive = {
+			focus = LUX_substitute_trade_status_of_bel
+			focus = LUX_employment_promoted 
+			focus = LUX_letzbuergesch_prioriteit
+		}
+		x = 0
+		y = 1
+		relative_position_id = LUX_allies_of_iron
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_centralized_system
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = LUX_supply_of_industrial_consumer }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 2
+		relative_position_id = LUX_supply_of_industrial_consumer
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	#
+	focus = {
+		id = LUX_letzbuergesch_prioriteit #Lëtzebuergesch Prioritéit
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = LUX_industrial_upgrading_of_steel }
+		prerequisite = { focus = LUX_crisis_awareness }
+		mutually_exclusive = {
+			focus = LUX_substitute_trade_status_of_bel
+			focus = LUX_employment_promoted 
+			focus = LUX_supply_of_industrial_consumer
+		}
+
+		x = 2
+		y = 2
+		relative_position_id = LUX_industrial_upgrading_of_steel
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_distinctive_industrial_planning
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = LUX_letzbuergesch_prioriteit }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 2
+		relative_position_id = LUX_letzbuergesch_prioriteit
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_national_university_of_letzbuergesch
+		icon = GFX_focus_research
+		prerequisite = { focus = LUX_supply_of_industrial_consumer focus = LUX_letzbuergesch_prioriteit }
+		x = -2
+		y = 1
+		relative_position_id = LUX_letzbuergesch_prioriteit
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			add_research_slot = 1
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	### ARMY FACTORIES
+	focus = {
+		id = LUX_crisis_awareness
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = LUX_economic_effort }
+		#mutually_exclusive = { focus =  }
+		x = 2
+		y = 2
+		relative_position_id = LUX_economic_effort
+
+		cost = 8
+		
+		available = {
+			root = {
+				exists = yes
+				has_capitulated = no
+				has_civil_war = no
+				is_puppet = no
+				has_war_support > 0.10
+			}
+		}
+		
+		bypass = {
+			OR = {
+				threat > 0.26
+				has_war = yes
+			}
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			add_war_support = 0.05
+			if = {
+				limit = { has_idea = civilian_economy }
+				add_ideas = low_economic_mobilisation
+			}
+			add_timed_idea = { idea = LUX_crisis_awareness_idea years = 1 }
+		}
+		
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_national_army_factories
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = LUX_crisis_awareness }
+		#mutually_exclusive = { focus =  }
+		x = 2
+		y = 1
+		relative_position_id = LUX_crisis_awareness
+
+		cost = 8
+		
+		available = {
+			root = {
+				exists = yes
+				has_capitulated = no
+				has_civil_war = no
+			}
+			OR = {
+				has_war_support > 0.20
+				threat > 0.10
+			}
+			any_core_state = { is_fully_controlled_by = root }
+		}
+		
+		bypass = {
+			all_core_state = {
+				OR = {
+					NOT = { is_fully_controlled_by = root }
+					custom_trigger_tooltip = {
+						tooltip = production_effort_tt
+						all_owned_state = { free_building_slots = { building = arms_factory size < 1 include_locked = yes } }
+					}
+				}
+			}
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			#
+			add_war_support = 0.05
+			#
+			random_core_state = {
+				prioritize = { 8 }
+				limit = {
+					is_owned_and_controlled_by = root
+					free_building_slots = { building = arms_factory size > 1 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = arms_factory level = 2 }
+			}
+			random_core_state = {
+				limit = {
+					is_owned_and_controlled_by = root
+					free_building_slots = { building = arms_factory size > 1 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = arms_factory level = 2 }
+			}
+		}
+		
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_grand_battle_plan
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = LUX_national_army_factories }
+		prerequisite = { focus = LUX_fortress_of_territory }
+		mutually_exclusive = { focus = LUX_artillery_collaboration }
+		x = -1
+		y = 2
+		relative_position_id = LUX_national_army_factories
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_focus_on_volition
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = LUX_grand_battle_plan focus = LUX_artillery_collaboration }
+		mutually_exclusive = { focus =  LUX_focus_on_cycle }
+		x = 0
+		y = 1
+		relative_position_id = LUX_grand_battle_plan
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	#
+	focus = {
+		id = LUX_optimize_training
+		icon = GFX_focus_chi_army_reform
+		prerequisite = { focus = LUX_focus_on_volition }
+		x = 0
+		y = 1
+		relative_position_id = LUX_focus_on_volition
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_efficient_scheduling
+		icon = GFX_focus_generic_military_mission
+		prerequisite = { focus = LUX_optimize_training }
+		x = 0
+		y = 1
+		relative_position_id = LUX_optimize_training
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	#
+	focus = {
+		id = LUX_fortress_of_territory
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = LUX_crisis_awareness }
+		#mutually_exclusive = { focus =  }
+		x = 6
+		y = 1
+		relative_position_id = LUX_crisis_awareness
+
+		cost = 8
+		
+		available = {
+			root = {
+				exists = yes
+				has_capitulated = no
+				has_civil_war = no
+				is_puppet = no
+			}
+			OR = {
+				has_war_support > 0.20
+				threat > 0.05
+			}
+			any_core_state = { is_fully_controlled_by = root }
+		}
+		
+		bypass = {
+			any_core_state = {
+				OR = {
+					NOT = { is_fully_controlled_by = root }
+					custom_trigger_tooltip = {
+						tooltip = production_effort_tt
+						all_owned_state = { free_building_slots = { building = arms_factory size < 1 include_locked = yes } }
+					}
+				}
+			}
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			add_war_support = 0.05
+			#
+			custom_effect_tooltip = LUX_fortress_of_territory_tt
+			hidden_effect = {
+				random_core_state = {
+					prioritize = { 8 }
+					limit = {
+						is_owned_and_controlled_by = root
+						free_building_slots = { building = arms_factory size > 1 include_locked = yes }
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = { type = arms_factory level = 2 }
+				}
+				#
+				every_core_state = {
+					limit = {
+						is_owned_by = root
+						is_fully_controlled_by = root
+						is_border_state = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = { all_provinces = yes }
+					}
+				}
+			}
+		}
+
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_great_defense_theory
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = LUX_fortress_of_territory }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 2
+		relative_position_id = LUX_fortress_of_territory
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	#
+	focus = {
+		id = LUX_army_artillery_effort
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = LUX_national_army_factories }
+		prerequisite = { focus = LUX_fortress_of_territory }
+		#mutually_exclusive = { focus =  }
+		x = 2
+		y = 1
+		relative_position_id = LUX_national_army_factories
+
+		cost = 8
+		
+		available = {
+			root = {
+				exists = yes
+				has_capitulated = no
+				has_civil_war = no
+			}
+			OR = {
+				has_war_support > 0.20
+				threat > 0.10
+			}
+			any_core_state = { is_fully_controlled_by = root }
+		}
+		
+		bypass = {
+			all_core_state = {
+				OR = {
+					NOT = { is_fully_controlled_by = root }
+					custom_trigger_tooltip = {
+						tooltip = production_effort_tt
+						all_owned_state = { free_building_slots = { building = arms_factory size = 0 include_locked = yes } }
+					}
+				}
+			}
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = LUX_army_artillery_effort
+				uses = 1
+				bonus = 1.0
+				category = artillery
+			}
+			random_core_state = {
+				limit = {
+					is_owned_and_controlled_by = root
+					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = arms_factory level = 1 }
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_artillery_collaboration
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = LUX_army_artillery_effort }
+		mutually_exclusive = { focus = LUX_grand_battle_plan }
+		x = -1
+		y = 1
+		relative_position_id = LUX_army_artillery_effort
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_focus_on_cycle
+		icon = GFX_focus_BRA_rubber_war
+		prerequisite = { focus = LUX_grand_battle_plan focus = LUX_artillery_collaboration }
+		mutually_exclusive = { focus = LUX_focus_on_volition }
+		x = 0
+		y = 1
+		relative_position_id = LUX_artillery_collaboration
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_external_support
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = LUX_focus_on_cycle }
+		x = 0
+		y = 1
+		relative_position_id = LUX_focus_on_cycle
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_industrial_utmost_optimization
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = LUX_external_support }
+		x = 0
+		y = 1
+		relative_position_id = LUX_external_support
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	#
+	focus = {
+		id = LUX_consolidate_front_lines
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = LUX_army_artillery_effort }
+		x = 1
+		y = 1
+		relative_position_id = LUX_army_artillery_effort
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_armorization
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = LUX_consolidate_front_lines }
+		x = 0
+		y = 1
+		relative_position_id = LUX_consolidate_front_lines
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_diversified_warfare
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = LUX_armorization }
+		x = 0
+		y = 1
+		relative_position_id = LUX_armorization
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_future_weapons
+		icon = GFX_goal_generic_secret_weapon
+		prerequisite = { focus = LUX_diversified_warfare }
+		x = 0
+		y = 1
+		relative_position_id = LUX_diversified_warfare
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+### NAVY FOCUS
+	focus = {
+		id = LUX_sea_so_far
+		icon = GFX_goal_generic_demand_territory
+		x = 24
+		y = 0
+		#relative_position_id =
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_north_sea_fleet
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = LUX_sea_so_far }
+		#mutually_exclusive = { focus =  }
+		x = -2
+		y = 1
+		relative_position_id = LUX_sea_so_far
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_expanding_shipyard
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = LUX_sea_so_far }
+		#mutually_exclusive = { focus =  }
+		x = 2
+		y = 1
+		relative_position_id = LUX_sea_so_far
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_upgrade_the_hull
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = LUX_north_sea_fleet }
+		prerequisite = { focus = LUX_expanding_shipyard }
+		x = 0
+		y = 2
+		relative_position_id = LUX_sea_so_far
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+### AIRFORCE FOCUS
+	focus = {
+		id = LUX_pilot_training
+		icon = GFX_focus_SOV_women_in_aviation
+		prerequisite = { focus = LUX_crisis_awareness }
+		x = 10
+		y = 1
+		relative_position_id = LUX_crisis_awareness
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_informatics
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = LUX_fortress_of_territory }
+		prerequisite = { focus = LUX_pilot_training }
+		x = -2
+		y = 1
+		relative_position_id = LUX_pilot_training
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_aircraft_industries
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = LUX_pilot_training }
+		x = 1
+		y = 2
+		relative_position_id = LUX_pilot_training
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_light_aircraft
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = LUX_aircraft_industries }
+		x = -1
+		y = 1
+		relative_position_id = LUX_aircraft_industries
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_heavy_power
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = LUX_aircraft_industries }
+		x = 1
+		y = 1
+		relative_position_id = LUX_aircraft_industries
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = LUX_women_pilots
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = LUX_pilot_training }
+		x = 2
+		y = 1
+		relative_position_id = LUX_pilot_training
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
 ###red/black/blue
 	focus = {
 		id = LUX_farewell_your_majesty
 		icon = GFX_goal_tfv_sever_ties_with_uk
 		#prerequisite = { focus =  }
 		mutually_exclusive = { focus =  LUX_monarchy_of_luxembourg }
-		x = 42
+		x = 36
 		y = 0
 		
 		allow_branch = {
@@ -1295,8 +2734,9 @@ focus_tree = {
 		id = LUX_monarchy_of_luxembourg
 		icon = GFX_goal_tfv_strengthen_commonwealth_ties
 		mutually_exclusive = { focus = LUX_farewell_your_majesty }
-		x = 50
+		x = 8
 		y = 0
+		relative_position_id = LUX_farewell_your_majesty
 		
 		allow_branch = {
 			if = {
@@ -2040,65 +3480,6 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 	}
 	focus = {
-		id = LUX_letzbuergesch_prioriteit #Lëtzebuergesch Prioritéit
-		icon = GFX_goal_generic_territory_or_war
-		prerequisite = { focus = LUX_industrial_upgrading_of_steel }
-		prerequisite = { focus = LUX_crisis_awareness }
-		mutually_exclusive = {
-			focus = LUX_substitute_trade_status_of_bel
-			focus = LUX_employment_promoted 
-			focus = LUX_supply_of_industrial_consumer
-		}
-
-		x = 2
-		y = 2
-		relative_position_id = LUX_industrial_upgrading_of_steel
-
-		cost = 8
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-
-		search_filters = {FOCUS_FILTER_INDUSTRY}
-		
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
-		id = LUX_national_university_of_letzbuergesch
-		icon = GFX_focus_research
-		prerequisite = { focus = LUX_supply_of_industrial_consumer focus = LUX_letzbuergesch_prioriteit }
-		x = -2
-		y = 1
-		relative_position_id = LUX_letzbuergesch_prioriteit
-
-		cost = 8
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {
-			add_research_slot = 1
-		}
-		
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
 		id = LUX_
 		icon = GFX_goal_generic_demand_territory
 		#prerequisite = { focus =  }
@@ -2821,6 +4202,8 @@ focus_tree = {
 		y = 1
 		relative_position_id = LUX_claim_north_france
 
+		allow_branch = { has_global_flag = br_global_lux_eggs_flag }
+
 		cost = 8
 		
 		available = {}
@@ -2944,6 +4327,8 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = LUX_claim_eastern_franks
+
+		allow_branch = { has_global_flag = br_global_lux_eggs_flag }
 
 		cost = 8
 		
@@ -3149,56 +4534,6 @@ focus_tree = {
 	}
 ###
 	focus = {
-		id = LUX_
-		icon = GFX_goal_generic_demand_territory
-		#prerequisite = { focus =  }
-		#mutually_exclusive = { focus =  }
-		x = 0
-		y = 0
-		#relative_position_id =
-
-		cost = 8
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-		
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
-		id = LUX_1
-		icon = GFX_goal_generic_demand_territory
-		#prerequisite = { focus =  }
-		#mutually_exclusive = { focus =  }
-		x = 0
-		y = 0
-		#relative_position_id =
-
-		cost = 8
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-		
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
 		id = LUX_2
 		icon = GFX_goal_generic_demand_territory
 		#prerequisite = { focus =  }
@@ -3206,1383 +4541,6 @@ focus_tree = {
 		x = 0
 		y = 0
 		#relative_position_id =
-
-		cost = 8
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-		
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
-		id = LUX_
-		icon = GFX_goal_generic_demand_territory
-		#prerequisite = { focus =  }
-		#mutually_exclusive = { focus =  }
-		x = 0
-		y = 0
-		#relative_position_id =
-
-		cost = 8
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-
-		search_filters = {FOCUS_FILTER_INDUSTRY}
-		
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
-		id = LUX_
-		icon = GFX_goal_generic_demand_territory
-		#prerequisite = { focus =  }
-		#mutually_exclusive = { focus =  }
-		x = 0
-		y = 0
-		#relative_position_id =
-
-		cost = 8
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-
-		search_filters = {FOCUS_FILTER_INDUSTRY}
-		
-		ai_will_do = { factor = 1 }
-	}
-
-### IC FOCUS
-	focus = {
-		id = LUX_economic_effort
-		icon = GFX_goal_generic_construct_infrastructure
-		#prerequisite = { focus =  }
-		#mutually_exclusive = { focus =  }
-		x = 16
-		y = 0
-		#relative_position_id =
-
-		cost = 5
-		
-		available = {
-			root = {
-				exists = yes
-				has_capitulated = no
-				has_civil_war = no
-			}
-			var:capital = { is_fully_controlled_by = root }
-		}
-		
-		bypass = {
-			var:capital = {
-				OR = {
-					NOT = { is_fully_controlled_by = root }
-					custom_trigger_tooltip = {
-						tooltip = infrastructure_effort_tt
-						all_owned_state = { free_building_slots = { building = infrastructure size < 1 } }
-					}
-					custom_trigger_tooltip = {
-						tooltip = construction_effort_tt
-						all_owned_state = { free_building_slots = { building = industrial_complex size < 1 include_locked = yes } }
-					}
-				}
-			}
-		}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {
-			var:capital = {
-				add_building_construction = { type = infrastructure level = 1 }
-				add_extra_state_shared_building_slots = 1
-				if = {
-					limit = { infrastructure > 3 }
-					add_building_construction = { type = industrial_complex level = 1 }
-				}
-			}
-		}
-
-		search_filters = {FOCUS_FILTER_INDUSTRY}
-		
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
-		id = LUX_industrial_upgrading_of_steel
-		icon = GFX_goal_generic_construct_civilian
-		prerequisite = { focus = LUX_economic_effort }
-		#mutually_exclusive = { focus =  }
-		x = -2
-		y = 1
-		relative_position_id = LUX_economic_effort
-
-		cost = 8
-		
-		available = {
-			root = {
-				exists = yes
-				has_capitulated = no
-				has_civil_war = no
-			}
-			var:capital = { is_fully_controlled_by = root }
-		}
-		
-		bypass = {
-			var:capital = {
-				OR = {
-					NOT = { is_fully_controlled_by = root }
-					custom_trigger_tooltip = {
-						tooltip = infrastructure_effort_tt
-						all_owned_state = { free_building_slots = { building = infrastructure size < 1 } }
-					}
-					custom_trigger_tooltip = {
-						tooltip = construction_effort_tt
-						all_owned_state = { free_building_slots = { building = industrial_complex size < 1 include_locked = yes } }
-					}
-				}
-			}
-		}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {
-			var:capital = {
-				add_building_construction = { type = infrastructure level = 1 }
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = industrial_complex level = 1 }
-				add_resource = { type = steel amount = 10 }
-			}
-		}
-
-		search_filters = {FOCUS_FILTER_INDUSTRY}
-		
-		ai_will_do = { factor = 1 }
-	}
-	#england
-	focus = {
-		id = LUX_allies_of_bri_lux
-		icon = GFX_focus_chi_british_cooperation
-		prerequisite = { focus = LUX_industrial_upgrading_of_steel }
-		x = -10
-		y = 1
-		relative_position_id = LUX_industrial_upgrading_of_steel
-
-		cost = 8
-		
-		available = {
-			root = {
-				exists = yes
-				has_capitulated = no
-				has_civil_war = no
-				is_puppet = no
-			}
-			ENG = {
-				exists = yes
-				has_capitulated = no
-				has_civil_war = no
-				is_puppet = no
-				NOT = { has_war_with = root }
-				OR = {
-					has_government = root
-					has_opinion = { target = root value > 24 }
-				}
-			}
-		}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-
-		search_filters = {FOCUS_FILTER_INDUSTRY}
-		
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
-		id = LUX_substitute_trade_status_of_bel
-		icon = GFX_goal_generic_military_deal
-		prerequisite = { focus = LUX_allies_of_bri_lux }
-		mutually_exclusive = {
-			focus = LUX_employment_promoted
-			focus = LUX_supply_of_industrial_consumer
-			focus = LUX_letzbuergesch_prioriteit
-		}
-		x = 0
-		y = 1
-		relative_position_id = LUX_allies_of_bri_lux
-
-		cost = 8
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {
-			custom_effect_tooltip = if_they_accept_newline_tt
-			effect_tooltip = {
-				create_wargoal = { target = BEL type = annex_everything }
-				give_guarantee = no
-			}
-		}
-
-		search_filters = {FOCUS_FILTER_INDUSTRY}
-		
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
-		id = LUX_integrate_educational_resources
-		icon = GFX_focus_research2
-		prerequisite = { focus = LUX_substitute_trade_status_of_bel focus = LUX_employment_promoted }
-		x = 2
-		y = 1
-		relative_position_id = LUX_substitute_trade_status_of_bel
-
-		cost = 8
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-
-		search_filters = {FOCUS_FILTER_INDUSTRY}
-		
-		ai_will_do = { factor = 1 }
-	}
-	#france
-	focus = {
-		id = LUX_allies_of_petite_entente
-		icon = GFX_focus_chi_reach_out_to_france
-		prerequisite = { focus = LUX_industrial_upgrading_of_steel }
-		x = -6
-		y = 1
-		relative_position_id = LUX_industrial_upgrading_of_steel
-
-		cost = 8
-		
-		available = {
-			root = {
-				exists = yes
-				has_capitulated = no
-				has_war = no
-			}
-			any_country = {
-				original_tag = FRA
-				exists = yes
-				has_capitulated = no
-				is_faction_leader = yes
-				OR = {
-					is_in_faction_with = root
-					has_opinion = { target = root value > 24 }
-				}
-			}
-		}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {
-			custom_effect_tooltip = if_they_accept_newline_tt
-			effect_tooltip = {
-				18 = {
-					add_extra_state_shared_building_slots = 3
-					add_building_construction = { type = industrial_complex level = 1 }
-				}
-				51 = {
-					add_extra_state_shared_building_slots = 3
-					add_building_construction = { type = industrial_complex level = 1 }
-				}
-				var:capital = {
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = { type = industrial_complex level = 1 }
-					add_resource = { type = steel amount = 10 }
-				}
-				add_cic = 3000
-			}
-		}
-
-		search_filters = {FOCUS_FILTER_INDUSTRY}
-		
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
-		id = LUX_employment_promoted
-		icon = GFX_goal_generic_production
-		prerequisite = { focus = LUX_allies_of_petite_entente }
-		mutually_exclusive = {
-			focus = LUX_substitute_trade_status_of_bel
-			focus = LUX_supply_of_industrial_consumer
-			focus = LUX_letzbuergesch_prioriteit
-		}
-		x = 0
-		y = 1
-		relative_position_id = LUX_allies_of_petite_entente
-
-		cost = 8
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-
-		search_filters = {FOCUS_FILTER_INDUSTRY}
-		
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
-		id = LUX_scientific_exchange
-		icon = GFX_goal_generic_scientific_exchange
-		prerequisite = { focus = LUX_employment_promoted focus = LUX_supply_of_industrial_consumer }
-		x = 2
-		y = 1
-		relative_position_id = LUX_employment_promoted
-
-		cost = 8
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-
-		search_filters = {FOCUS_FILTER_INDUSTRY}
-		
-		ai_will_do = { factor = 1 }
-	}
-	#germany
-	focus = {
-		id = LUX_allies_of_iron
-		icon = GFX_focus_chi_mission_to_germany
-		prerequisite = { focus = LUX_industrial_upgrading_of_steel }
-		x = -2
-		y = 1
-		relative_position_id = LUX_industrial_upgrading_of_steel
-
-		cost = 8
-		
-		available = {
-			root = {
-				exists = yes
-				has_capitulated = no
-			}
-			any_country = {
-				original_tag = GER
-				OR = {
-					is_in_faction_with = root
-					has_opinion = { target = root value > 24 }
-				}
-			}
-		}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {
-			custom_effect_tooltip = if_they_accept_newline_tt
-			effect_tooltip = {
-				42 = {
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = { type = industrial_complex level = 1 }
-					add_resource = { type = steel amount = 5 }
-				}
-				51 = {
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = { type = industrial_complex level = 1 }
-					add_resource = { type = steel amount = 5 }
-				}
-				var:capital = {
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = { type = industrial_complex level = 1 }
-					add_resource = { type = steel amount = 10 }
-				}
-				add_cic = 3000
-			}
-		}
-
-		search_filters = {FOCUS_FILTER_INDUSTRY}
-		
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
-		id = LUX_supply_of_industrial_consumer
-		icon = GFX_goal_generic_positive_trade_relations
-		prerequisite = { focus = LUX_allies_of_iron }
-		mutually_exclusive = {
-			focus = LUX_substitute_trade_status_of_bel
-			focus = LUX_employment_promoted 
-			focus = LUX_letzbuergesch_prioriteit
-		}
-		x = 0
-		y = 1
-		relative_position_id = LUX_allies_of_iron
-
-		cost = 8
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-
-		search_filters = {FOCUS_FILTER_INDUSTRY}
-		
-		ai_will_do = { factor = 1 }
-	}
-	#
-	focus = {
-		id = LUX_letzbuergesch_prioriteit #Lëtzebuergesch Prioritéit
-		icon = GFX_goal_generic_territory_or_war
-		prerequisite = { focus = LUX_industrial_upgrading_of_steel }
-		prerequisite = { focus = LUX_crisis_awareness }
-		mutually_exclusive = {
-			focus = LUX_substitute_trade_status_of_bel
-			focus = LUX_employment_promoted 
-			focus = LUX_supply_of_industrial_consumer
-		}
-
-		x = 2
-		y = 2
-		relative_position_id = LUX_industrial_upgrading_of_steel
-
-		cost = 8
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-
-		search_filters = {FOCUS_FILTER_INDUSTRY}
-		
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
-		id = LUX_national_university_of_letzbuergesch
-		icon = GFX_focus_research
-		prerequisite = { focus = LUX_supply_of_industrial_consumer focus = LUX_letzbuergesch_prioriteit }
-		x = -2
-		y = 1
-		relative_position_id = LUX_letzbuergesch_prioriteit
-
-		cost = 8
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {
-			add_research_slot = 1
-		}
-		
-		ai_will_do = { factor = 1 }
-	}
-
-	### ARMY FACTORIES
-	focus = {
-		id = LUX_crisis_awareness
-		icon = GFX_goal_generic_military_sphere
-		prerequisite = { focus = LUX_economic_effort }
-		#mutually_exclusive = { focus =  }
-		x = 2
-		y = 2
-		relative_position_id = LUX_economic_effort
-
-		cost = 8
-		
-		available = {
-			root = {
-				exists = yes
-				has_capitulated = no
-				has_civil_war = no
-				is_puppet = no
-				has_war_support > 0.10
-			}
-		}
-		
-		bypass = {
-			OR = {
-				threat > 0.26
-				has_war = yes
-			}
-		}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {
-			add_war_support = 0.05
-			if = {
-				limit = { has_idea = civilian_economy }
-				add_ideas = low_economic_mobilisation
-			}
-			add_timed_idea = { idea = LUX_crisis_awareness_idea years = 1 }
-		}
-		
-		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
-
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
-		id = LUX_national_army_factories
-		icon = GFX_goal_generic_construct_mil_factory
-		prerequisite = { focus = LUX_crisis_awareness }
-		#mutually_exclusive = { focus =  }
-		x = 2
-		y = 1
-		relative_position_id = LUX_crisis_awareness
-
-		cost = 8
-		
-		available = {
-			root = {
-				exists = yes
-				has_capitulated = no
-				has_civil_war = no
-			}
-			OR = {
-				has_war_support > 0.20
-				threat > 0.10
-			}
-			any_core_state = { is_fully_controlled_by = root }
-		}
-		
-		bypass = {
-			all_core_state = {
-				OR = {
-					NOT = { is_fully_controlled_by = root }
-					custom_trigger_tooltip = {
-						tooltip = production_effort_tt
-						all_owned_state = { free_building_slots = { building = arms_factory size < 1 include_locked = yes } }
-					}
-				}
-			}
-		}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {
-			#
-			add_war_support = 0.05
-			#
-			random_core_state = {
-				prioritize = { 8 }
-				limit = {
-					is_owned_and_controlled_by = root
-					free_building_slots = { building = arms_factory size > 1 include_locked = yes }
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = arms_factory level = 2 }
-			}
-			random_core_state = {
-				limit = {
-					is_owned_and_controlled_by = root
-					free_building_slots = { building = arms_factory size > 1 include_locked = yes }
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = arms_factory level = 2 }
-			}
-		}
-		
-		search_filters = {FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INDUSTRY}
-		
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
-		id = LUX_grand_battle_plan
-		icon = GFX_goal_generic_army_doctrines
-		prerequisite = { focus = LUX_national_army_factories }
-		prerequisite = { focus = LUX_fortress_of_territory }
-		mutually_exclusive = { focus = LUX_artillery_collaboration }
-		x = -1
-		y = 2
-		relative_position_id = LUX_national_army_factories
-
-		cost = 8
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-		
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
-		id = LUX_focus_on_volition
-		icon = GFX_goal_generic_propaganda
-		prerequisite = { focus = LUX_grand_battle_plan focus = LUX_artillery_collaboration }
-		mutually_exclusive = { focus =  LUX_focus_on_cycle }
-		x = 0
-		y = 1
-		relative_position_id = LUX_grand_battle_plan
-
-		cost = 8
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-		
-		ai_will_do = { factor = 1 }
-	}
-	#
-	focus = {
-		id = LUX_optimize_training
-		icon = GFX_focus_chi_army_reform
-		prerequisite = { focus = LUX_focus_on_volition }
-		x = 0
-		y = 1
-		relative_position_id = LUX_focus_on_volition
-
-		cost = 8
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-		
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
-		id = LUX_efficient_scheduling
-		icon = GFX_focus_generic_military_mission
-		prerequisite = { focus = LUX_optimize_training }
-		x = 0
-		y = 1
-		relative_position_id = LUX_optimize_training
-
-		cost = 8
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-		
-		ai_will_do = { factor = 1 }
-	}
-	#
-	focus = {
-		id = LUX_fortress_of_territory
-		icon = GFX_goal_generic_construct_military
-		prerequisite = { focus = LUX_crisis_awareness }
-		#mutually_exclusive = { focus =  }
-		x = 6
-		y = 1
-		relative_position_id = LUX_crisis_awareness
-
-		cost = 8
-		
-		available = {
-			root = {
-				exists = yes
-				has_capitulated = no
-				has_civil_war = no
-				is_puppet = no
-			}
-			OR = {
-				has_war_support > 0.20
-				threat > 0.05
-			}
-			any_core_state = { is_fully_controlled_by = root }
-		}
-		
-		bypass = {
-			any_core_state = {
-				OR = {
-					NOT = { is_fully_controlled_by = root }
-					custom_trigger_tooltip = {
-						tooltip = production_effort_tt
-						all_owned_state = { free_building_slots = { building = arms_factory size < 1 include_locked = yes } }
-					}
-				}
-			}
-		}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {
-			add_war_support = 0.05
-			#
-			custom_effect_tooltip = LUX_fortress_of_territory_tt
-			hidden_effect = {
-				random_core_state = {
-					prioritize = { 8 }
-					limit = {
-						is_owned_and_controlled_by = root
-						free_building_slots = { building = arms_factory size > 1 include_locked = yes }
-					}
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = { type = arms_factory level = 2 }
-				}
-				#
-				every_core_state = {
-					limit = {
-						is_owned_by = root
-						is_fully_controlled_by = root
-						is_border_state = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 2
-						province = { all_provinces = yes }
-					}
-				}
-			}
-		}
-
-		search_filters = {FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INDUSTRY}
-		
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
-		id = LUX_great_defense_theory
-		icon = GFX_goal_generic_construction2
-		prerequisite = { focus = LUX_fortress_of_territory }
-		#mutually_exclusive = { focus =  }
-		x = 1
-		y = 2
-		relative_position_id = LUX_fortress_of_territory
-
-		cost = 8
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-		
-		ai_will_do = { factor = 1 }
-	}
-	#
-	focus = {
-		id = LUX_army_artillery_effort
-		icon = GFX_goal_generic_army_artillery
-		prerequisite = { focus = LUX_national_army_factories }
-		prerequisite = { focus = LUX_fortress_of_territory }
-		#mutually_exclusive = { focus =  }
-		x = 2
-		y = 1
-		relative_position_id = LUX_national_army_factories
-
-		cost = 8
-		
-		available = {
-			root = {
-				exists = yes
-				has_capitulated = no
-				has_civil_war = no
-			}
-			OR = {
-				has_war_support > 0.20
-				threat > 0.10
-			}
-			any_core_state = { is_fully_controlled_by = root }
-		}
-		
-		bypass = {
-			all_core_state = {
-				OR = {
-					NOT = { is_fully_controlled_by = root }
-					custom_trigger_tooltip = {
-						tooltip = production_effort_tt
-						all_owned_state = { free_building_slots = { building = arms_factory size = 0 include_locked = yes } }
-					}
-				}
-			}
-		}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {
-			add_tech_bonus = {
-				name = LUX_army_artillery_effort
-				uses = 1
-				bonus = 1.0
-				category = artillery
-			}
-			random_core_state = {
-				limit = {
-					is_owned_and_controlled_by = root
-					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = arms_factory level = 1 }
-			}
-		}
-		
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
-		id = LUX_artillery_collaboration
-		icon = GFX_goal_generic_national_unity
-		prerequisite = { focus = LUX_army_artillery_effort }
-		mutually_exclusive = { focus = LUX_grand_battle_plan }
-		x = -1
-		y = 1
-		relative_position_id = LUX_army_artillery_effort
-
-		cost = 8
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-		
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
-		id = LUX_focus_on_cycle
-		icon = GFX_focus_BRA_rubber_war
-		prerequisite = { focus = LUX_grand_battle_plan focus = LUX_artillery_collaboration }
-		mutually_exclusive = { focus = LUX_focus_on_volition }
-		x = 0
-		y = 1
-		relative_position_id = LUX_artillery_collaboration
-
-		cost = 8
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-		
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
-		id = LUX_external_support
-		icon = GFX_goal_generic_positive_trade_relations
-		prerequisite = { focus = LUX_focus_on_cycle }
-		x = 0
-		y = 1
-		relative_position_id = LUX_focus_on_cycle
-
-		cost = 8
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-
-		search_filters = {FOCUS_FILTER_INDUSTRY}
-		
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
-		id = LUX_industrial_utmost_optimization
-		icon = GFX_goal_generic_intelligence_exchange
-		prerequisite = { focus = LUX_external_support }
-		x = 0
-		y = 1
-		relative_position_id = LUX_external_support
-
-		cost = 8
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-		
-		ai_will_do = { factor = 1 }
-	}
-	#
-	focus = {
-		id = LUX_consolidate_front_lines
-		icon = GFX_goal_generic_army_artillery2
-		prerequisite = { focus = LUX_army_artillery_effort }
-		x = 1
-		y = 1
-		relative_position_id = LUX_army_artillery_effort
-
-		cost = 8
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-		
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
-		id = LUX_armorization
-		icon = GFX_goal_generic_build_tank
-		prerequisite = { focus = LUX_consolidate_front_lines }
-		x = 0
-		y = 1
-		relative_position_id = LUX_consolidate_front_lines
-
-		cost = 8
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-		
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
-		id = LUX_diversified_warfare
-		icon = GFX_goal_generic_production2
-		prerequisite = { focus = LUX_armorization }
-		x = 0
-		y = 1
-		relative_position_id = LUX_armorization
-
-		cost = 8
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-		
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
-		id = LUX_future_weapons
-		icon = GFX_goal_generic_secret_weapon
-		prerequisite = { focus = LUX_diversified_warfare }
-		x = 0
-		y = 1
-		relative_position_id = LUX_diversified_warfare
-
-		cost = 8
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-		
-		ai_will_do = { factor = 1 }
-	}
-	
-### NAVY FOCUS
-	focus = {
-		id = LUX_sea_so_far
-		icon = GFX_goal_generic_demand_territory
-		x = 26
-		y = 0
-		#relative_position_id =
-
-		cost = 8
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-		
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
-		id = LUX_north_sea_fleet
-		icon = GFX_goal_generic_demand_territory
-		prerequisite = { focus = LUX_sea_so_far }
-		#mutually_exclusive = { focus =  }
-		x = -2
-		y = 1
-		relative_position_id = LUX_sea_so_far
-
-		cost = 8
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-		
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
-		id = LUX_expanding_shipyard
-		icon = GFX_goal_generic_demand_territory
-		prerequisite = { focus = LUX_sea_so_far }
-		#mutually_exclusive = { focus =  }
-		x = 2
-		y = 1
-		relative_position_id = LUX_sea_so_far
-
-		cost = 8
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-		
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
-		id = LUX_upgrade_the_hull
-		icon = GFX_goal_generic_demand_territory
-		prerequisite = { focus = LUX_north_sea_fleet }
-		prerequisite = { focus = LUX_expanding_shipyard }
-		x = 0
-		y = 2
-		relative_position_id = LUX_sea_so_far
-
-		cost = 8
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-		
-		ai_will_do = { factor = 1 }
-	}
-### AIRFORCE FOCUS
-	focus = {
-		id = LUX_pilot_training
-		icon = GFX_focus_SOV_women_in_aviation
-		prerequisite = { focus = LUX_crisis_awareness }
-		x = 10
-		y = 1
-		relative_position_id = LUX_crisis_awareness
-
-		cost = 8
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-
-		search_filters = {FOCUS_FILTER_INDUSTRY}
-		
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
-		id = LUX_informatics
-		icon = GFX_goal_generic_demand_territory
-		prerequisite = { focus = LUX_fortress_of_territory }
-		prerequisite = { focus = LUX_pilot_training }
-		x = -2
-		y = 1
-		relative_position_id = LUX_pilot_training
-
-		cost = 8
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-
-		search_filters = {FOCUS_FILTER_INDUSTRY}
-		
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
-		id = LUX_aircraft_industries
-		icon = GFX_goal_generic_demand_territory
-		prerequisite = { focus = LUX_pilot_training }
-		x = 1
-		y = 2
-		relative_position_id = LUX_pilot_training
-
-		cost = 8
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-
-		search_filters = {FOCUS_FILTER_INDUSTRY}
-		
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
-		id = LUX_light_aircraft
-		icon = GFX_goal_generic_demand_territory
-		prerequisite = { focus = LUX_aircraft_industries }
-		x = -1
-		y = 1
-		relative_position_id = LUX_aircraft_industries
-
-		cost = 8
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-		
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
-		id = LUX_heavy_power
-		icon = GFX_goal_generic_demand_territory
-		prerequisite = { focus = LUX_aircraft_industries }
-		x = 1
-		y = 1
-		relative_position_id = LUX_aircraft_industries
-
-		cost = 8
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-		
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
-		id = LUX_women_pilots
-		icon = GFX_goal_generic_demand_territory
-		prerequisite = { focus = LUX_pilot_training }
-		x = 2
-		y = 1
-		relative_position_id = LUX_pilot_training
 
 		cost = 8
 		

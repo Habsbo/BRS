@@ -734,4 +734,41 @@ characters={
 			traits  = { sincere_conciliator }
 		}
 	}
+	LUX_jean_d_adler = { #让·达-德勒
+		name=LUX_jean_d_adler
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_europe_3"
+			}
+		}
+		advisor = {
+			slot = head_of_gov
+			idea_token = LUX_jean_d_adler_hog
+			allowed = { always = yes }
+			available = {
+				br_head_of_gov_generic_trigger = yes
+				br_ideology_fascism_nio = yes
+			}
+			
+			visible = {
+				#has_global_flag = br_global_lux_eggs_flag
+			}
+
+			traits = { afflatus_paladiness }
+
+			cost = 0
+			can_be_fired = no
+			ai_will_do = { factor = 1.000 }
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = LUX_jean_d_adler
+			allowed  = { original_tag  = LUX }
+			available = {
+				has_completed_focus = LUX_consolidate_charter
+				br_ideology_radical_communism_nio = yes
+			}
+			traits  = { sincere_conciliator }
+		}
+	}
 }

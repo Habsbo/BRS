@@ -8,14 +8,14 @@ br_hearts_of_lux = {
 					exists = no
 					has_capitulated = yes
 				}
-				all_core_state = { is_fully_controlled_by = root }
+				all_core_state = { is_fully_controlled_by = root compliance > 35 }
 			}
 			HOL = {
 				OR = {
 					exists = no
 					has_capitulated = yes
 				}
-				all_core_state = { is_fully_controlled_by = root }
+				all_core_state = { is_fully_controlled_by = root compliance > 35 }
 			}
 			LUX = {
 				exists = yes

@@ -190,4 +190,15 @@ leader_traits = {
 		ai_will_do = { factor = 0 }
 	}
 
+	afflatus_paladiness = {
+		random = no
+		sprite = 13
+		
+		war_support_weekly = 0.01
+		war_stability_factor = 0.50
+		compliance_growth = 0.15
+		non_core_manpower = 0.05
+
+		ai_will_do = { factor = 0 }
+	}
 }

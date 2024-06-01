@@ -62,6 +62,7 @@ recruit_character = LUX_martin_karp
 recruit_character = LUX_karlothringen_marquis
 recruit_character = LUX_friedrich_schreiwung
 recruit_character = LUX_ehrlich_swabian
+recruit_character = LUX_jean_d_adler
 #recruit_character = 
 
 set_politics = {

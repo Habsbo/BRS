@@ -8,16 +8,14 @@
  LUX_luxembourg_nation_united_front_desc: ""
  LUX_week_national_consciousness: "日渐衰弱的民族意识"
  LUX_week_national_consciousness_desc: ""
-# 
+# focus
  LUX_economic_effort: "重视经济"
  LUX_economic_effort_desc: ""
-
  LUX_industrial_upgrading_of_steel: "大炼钢铁"
  LUX_industrial_upgrading_of_steel_desc: ""
 
  LUX_crisis_awareness: "危机意识"
  LUX_crisis_awareness_desc: ""
-
  LUX_national_army_factories: "国家战备工厂"
  LUX_national_army_factories_desc: ""
  LUX_grand_battle_plan: "决战计划"
@@ -29,11 +27,16 @@
  LUX_allies_of_bri_lux_desc: ""
  LUX_substitute_trade_status_of_bel: "取代比利时的贸易地位"
  LUX_substitute_trade_status_of_bel_desc: ""
+ LUX_allies_around_north_sea: "拱卫北海的同盟"
+ LUX_allies_around_north_sea_desc: ""
  LUX_integrate_educational_resources: "教学资源整合"
  LUX_integrate_educational_resources_desc: ""
  LUX_allies_of_petite_entente: "供给小协约国"
  LUX_allies_of_petite_entente_desc: ""
  LUX_employment_promoted: "充分就业"
+ LUX_employment_promoted_desc: ""
+ LUX_improve_governor: "优化治理"
+ LUX_improve_governor_desc: ""
  LUX_scientific_exchange: "科研合作"
  LUX_scientific_exchange_desc: ""
  LUX_employment_promoted_desc: ""
@@ -41,8 +44,12 @@
  LUX_allies_of_iron_desc: ""
  LUX_supply_of_industrial_consumer: "工业产品供给"
  LUX_supply_of_industrial_consumer_desc: ""
+ LUX_centralized_system: "中心化工业体系"
+ LUX_centralized_system_desc: ""
  LUX_letzbuergesch_prioriteit: "自立自强"
  LUX_letzbuergesch_prioriteit_desc: ""
+ LUX_distinctive_industrial_planning: "探索新工业规划"
+ LUX_distinctive_industrial_planning_desc: ""
  LUX_national_university_of_letzbuergesch: "国立卢森堡大学"
  LUX_national_university_of_letzbuergesch_desc: ""
 
