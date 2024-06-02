@@ -118,6 +118,17 @@
 
 #HOL
 #BEL
+ BEL_sco_anarchism_party: "瓦隆共产主义无政府派"
+ BEL_vanwardism_party: "瓦隆共产主义工团派"
+ BEL_sci_socialism_party: "比利时共产党(PC)"
+ BEL_con_socialism_party: "比利时社会主义党(PS)" 
+ BEL_demo_socialism_party: "$LUX$社会民主党" #
+ BEL_demo_liberalism_party: "比利时自由党" #
+ BEL_demo_conservatism_party: "比利时天主教党"
+ BEL_authoritarian_party: ""
+ BEL_fascism_party: "比利时雷克斯党"
+ BEL_nationalism_party: "比利时雷克斯党"
+ BEL_supernationalism_party: "比利时雷克斯党"
 #LUX
  LUX_sco_anarchism_party: "$LUX$共产主义无政府派"
  LUX_vanwardism_party: "$LUX$共产主义工团派"
