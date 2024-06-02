@@ -3563,6 +3563,12 @@ focus_tree = {
 		
 		completion_reward = {
 			#
+			add_popularity = { ideology = sci_socialism popularity = -0.05 }
+			add_popularity = { ideology = con_socialism popularity = -0.05 }
+			add_popularity = { ideology = demo_socialism popularity = -0.05 }
+			add_popularity = { ideology = authoritarian popularity = 0.10 }
+			add_popularity = { ideology = fascism popularity = 0.10 }
+		
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = LUX_friedrich_schreiwung #it's a fictitious character
 		}

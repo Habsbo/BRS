@@ -690,7 +690,10 @@ characters={
 			idea_token = LUX_karlothringen_marquis
 			allowed  = { original_tag  = LUX }
 			available = {
-				has_completed_focus = LUX_strengthen_loyalists
+				OR = {
+					has_completed_focus = LUX_strengthen_loyalists
+					has_government = authoritarian
+				}
 				br_ideology_radical_communism_nio = yes
 				br_ideology_socialism_nio = yes
 			}
@@ -728,7 +731,11 @@ characters={
 			idea_token = LUX_ehrlich_swabian
 			allowed  = { original_tag  = LUX }
 			available = {
-				has_completed_focus = LUX_consolidate_charter
+				OR = {
+					has_completed_focus = LUX_consolidate_charter
+					br_ideology_capitalism_ruling = yes
+					br_ideology_authoritarian_ruling = yes
+				}
 				br_ideology_radical_communism_nio = yes
 			}
 			traits  = { sincere_conciliator }
@@ -750,25 +757,13 @@ characters={
 				br_ideology_fascism_nio = yes
 			}
 			
-			visible = {
-				#has_global_flag = br_global_lux_eggs_flag
-			}
+			visible = { has_global_flag = br_global_lux_eggs_flag }
 
 			traits = { afflatus_paladiness }
 
 			cost = 0
 			can_be_fired = no
 			ai_will_do = { factor = 1.000 }
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = LUX_jean_d_adler
-			allowed  = { original_tag  = LUX }
-			available = {
-				has_completed_focus = LUX_consolidate_charter
-				br_ideology_radical_communism_nio = yes
-			}
-			traits  = { sincere_conciliator }
 		}
 	}
 }

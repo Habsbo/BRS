@@ -1,0 +1,82 @@
+###
+
+###
+add_namespace = br_lux
+###
+country_event = { #egg
+	id = br_lux.1
+	title = br_lux.1.title
+	desc = br_lux.1.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = br_global_lux_eggs_flag
+			mark_focus_tree_layout_dirty = yes
+			#
+			if = {
+				limit = {
+					has_country_leader = { character = LUX_marie_adelaide_of_luxembourg ruling_only = yes }
+				}
+				#
+				add_country_leader_role = {
+					character = LUX_marie_adelaide_of_luxembourg
+					country_leader = {
+						expire = "1989.1.1"
+						ideology = enlightened_monarchy
+						traits = {  }
+					}
+					promote_leader = yes
+				}
+			}
+			if = {
+				limit = {
+					has_country_leader = { character = LUX_charlotte_of_luxembourg }
+				}
+				#
+				add_country_leader_role = {
+					character = LUX_marie_adelaide_of_luxembourg
+					country_leader = {
+						expire = "1989.1.1"
+						ideology = enlightened_monarchy
+						traits = {  }
+					}
+					promote_leader = yes
+				}
+			}
+			if = {
+				limit = {
+					has_country_leader = { character = LUX_jean_benoit_marc_d_aviano ruling_only = yes }
+				}
+				#
+				add_country_leader_role = {
+					character = LUX_marie_adelaide_of_luxembourg
+					country_leader = {
+						expire = "1989.1.1"
+						ideology = enlightened_monarchy
+						traits = {  }
+					}
+					promote_leader = yes
+				}
+			}
+		}
+	}
+
+	option = {
+		name =  br_lux.1.a #
+
+		set_politics = {
+			ruling_party = authoritarian
+			elections_allowed = no
+		}
+
+		custom_effect_tooltip = available_political_advisor
+		show_ideas_tooltip = LUX_jean_d_adler_hog
+		hidden_effect = { add_ideas = LUX_jean_d_adler_hog }
+
+		ai_chance = { factor = 5 }
+	}
+}
