@@ -201,4 +201,31 @@ leader_traits = {
 
 		ai_will_do = { factor = 0 }
 	}
+
+	knight_king = {
+		random = no
+		sprite = 13
+		
+		war_support_factor = 0.10
+		stability_factor = 0.10
+		conscription_factor = 0.50
+		army_core_attack_factor = 0.05
+		army_core_defence_factor = 0.05
+
+		ai_will_do = { factor = 0 }
+	}
+	
+	knight_king_hog = {
+		random = no
+		sprite = 13
+		
+		war_support_factor = 0.10
+		stability_factor = -0.10
+		conscription_factor = 0.50
+		army_core_attack_factor = 0.10
+		army_core_defence_factor = 0.10
+		army_org_regain = 0.50
+
+		ai_will_do = { factor = 0 }
+	}
 }

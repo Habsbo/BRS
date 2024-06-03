@@ -1,16 +1,48 @@
 characters={
 #kings
 	BEL_albert_i_of_belgium = { #阿尔贝一世
-		name=BEL_
+		name=BEL_leopold_iii_of_belgium
 		portraits={
 			civilian={
 				large=GFX_portrait_BEL_hubert_pierlot
 			}
 		}
 		country_leader={
-			ideology=conservatism
+			ideology=moderatism
 			expire="1965.1.1.1"
+			traits = { knight_king }
 			id=-1
+		}
+		country_leader={
+			ideology=enlightened_monarchy
+			expire="1965.1.1.1"
+			traits = { knight_king }
+			id=-1
+		}
+		advisor = {
+			slot = head_of_gov
+			idea_token = LUX_jean_d_adler_hog
+			allowed = { original_tag = BEL }
+			available = {
+				br_head_of_gov_generic_trigger = yes
+				has_government = authoritarian
+			}
+			
+			visible = { has_country_leader = { character = BEL_leopold_iii_of_belgium } }
+
+			traits = { knight_king_hog }
+
+			cost = 0
+			can_be_fired = no
+			ai_will_do = { factor = 1.000 }
+		}
+		field_marshal = {
+			skill = 1
+			traits = {  }
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
 		}
 	}
 	BEL_leopold_iii_of_belgium = { #利奥波德三世
@@ -20,11 +52,6 @@ characters={
 				large=GFX_portrait_BEL_hubert_pierlot
 			}
 		}
-		country_leader={
-			ideology=conservatism
-			expire="1965.1.1.1"
-			id=-1
-		}
 	}
 	BEL_baudouin_of_belgium = { #博杜安
 		name=BEL_baudouin_of_belgium
@@ -32,11 +59,6 @@ characters={
 			civilian={
 				large=GFX_portrait_BEL_hubert_pierlot
 			}
-		}
-		country_leader={
-			ideology=conservatism
-			expire="1965.1.1.1"
-			id=-1
 		}
 	}
 #
