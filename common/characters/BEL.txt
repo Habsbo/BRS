@@ -28,7 +28,7 @@ characters={
 				has_government = authoritarian
 			}
 			
-			visible = { has_country_leader = { character = BEL_leopold_iii_of_belgium } }
+			visible = { has_country_leader = { character = BEL_albert_i_of_belgium } }
 
 			traits = { knight_king_hog }
 
@@ -88,7 +88,7 @@ characters={
 			id=-1
 		}
 	}
-	BEL_leon_degrelle={ #
+	BEL_leon_degrelle={ #莱昂·约瑟夫·马里·伊尼亚斯·德格雷勒
 		name=BEL_leon_degrelle
 		portraits={
 			army = {
@@ -116,7 +116,78 @@ characters={
 			id=-1
 		}
 	}
-
+### communists historial
+	
+	BEL_joseph_jacquemotte={ #约瑟夫·雅各莫特
+		name=BEL_joseph_jacquemotte
+		portraits={
+			army = {
+				large=GFX_portrait_BEL_leon_degrelle
+				small=GFX_portrait_BEL_leon_degrelle_small
+			}
+		}
+		country_leader={
+			ideology=leninism
+			expire="1965.1.1.1"
+			id=-1
+		}
+		advisor={
+			slot = head_of_gov
+			idea_token = BEL_joseph_jacquemotte_hog
+			allowed = { original_tag = BEL }
+			available = {
+				br_head_of_gov_generic_trigger = yes
+				br_ideology_fascism_nio = yes
+			}
+			traits = {  }
+			cost =  0
+			can_be_fired = no
+			ai_will_do = { factor = 1.000 }
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = BEL_joseph_jacquemotte
+			allowed = { original_tag = BEL }
+			available = { br_ideology_fascism_nio = yes }
+			traits = { sci_socialist_revolutionary }
+			cost = 100
+			ai_will_do = { factor = 1.000 }
+		}
+	}
+	BEL_war_van_overstraeten={ #爱德华·范-奥弗斯特滕
+		name=BEL_war_van_overstraeten
+		portraits={
+			army = {
+				large=GFX_portrait_BEL_leon_degrelle
+				small=GFX_portrait_BEL_leon_degrelle_small
+			}
+		}
+		advisor={
+			slot = head_of_gov
+			idea_token = BEL_war_van_overstraeten_hog
+			allowed = { original_tag = BEL }
+			available = {
+				br_head_of_gov_generic_trigger = yes
+				br_ideology_fascism_nio = yes
+			}
+			traits = {  }
+			cost =  0
+			can_be_fired = no
+			ai_will_do = { factor = 1.000 }
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = BEL_war_van_overstraeten
+			allowed = { original_tag = BEL }
+			available = {
+				br_ideology_fascism_nio = yes
+			}
+			traits = { vanwardist_revolutionary }
+			cost = 100
+			ai_will_do = { factor = 1.000 }
+		}
+	}
+### historial characters but no data
 	BEL_mcl_keyaerts={ #M·C·L·凯尔茨
 		name=BEL_mcl_keyaerts
 		portraits={
@@ -167,7 +238,14 @@ characters={
 			id=-1
 		}
 	}
-	BEL_fritz_conrad={ #
+### not sure maybe unhistorial
+	BEL_fritz_conrad={ #弗里茨·康拉德
+		name=BEL_fritz_conrad
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_europe_2"
+			}
+		}
 		advisor={
 			slot = navy_chief
 			idea_token = BEL_fritz_conrad
@@ -182,14 +260,14 @@ characters={
 					factor = 1.000
 				}
 		}
-		name=BEL_fritz_conrad
+	}
+	BEL_raoul_overstraeten={ #拉乌尔·范奥弗斯特拉滕
+		name=BEL_raoul_overstraeten
 		portraits={
 			army={
-				small="GFX_idea_generic_navy_europe_2"
+				small="GFX_idea_generic_air_europe_3"
 			}
 		}
-	}
-	BEL_raoul_overstraeten={ #
 		advisor={
 			slot = air_chief
 			idea_token = BEL_raoul_overstraeten
@@ -203,39 +281,37 @@ characters={
 					factor = 1.000
 				}
 		}
-		name=BEL_raoul_overstraeten
-		portraits={
-			army={
-				small="GFX_idea_generic_air_europe_3"
-			}
-		}
 	}
-	BEL_georges_deffontaine={ #
-		advisor={
-			cost = 100
-			
-			slot = theorist
-			idea_token = BEL_georges_deffontaine
-			ledger = navy
-				allowed = {
-					original_tag = BEL
-				}
-				
-				traits = {
-					naval_theorist
-				}
-		}
+	BEL_georges_deffontaine={ #乔治·德方丹
 		name=BEL_georges_deffontaine
 		portraits={
 			army={
 				small="GFX_idea_generic_navy_europe_1"
 			}
 		}
-	}
-	BEL_victor_strydonck_burkel={ #
 		advisor={
+			cost = 100
 			
+			slot = theorist
+			idea_token = BEL_georges_deffontaine
+			ledger = navy
+			allowed = {
+				original_tag = BEL
+			}
 			
+			traits = {
+				naval_theorist
+			}
+		}
+	}
+	BEL_victor_strydonck_burkel={ #维克托·范斯特里登克·德·伯克尔
+		name=BEL_victor_strydonck_burkel
+		portraits={
+			army={
+				small="GFX_idea_generic_army_europe_3"
+			}
+		}
+		advisor={
 			slot = army_chief
 			idea_token = BEL_victor_strydonck_burkel
 			allowed = {
@@ -249,14 +325,14 @@ characters={
 					factor = 1.000
 				}
 		}
-		name=BEL_victor_strydonck_burkel
+	}
+	BEL_georges_vereecken={ #乔治·费雷肯
+		name=BEL_georges_vereecken
 		portraits={
 			army={
-				small="GFX_idea_generic_army_europe_3"
+				small="GFX_idea_generic_navy_europe_1"
 			}
 		}
-	}
-	BEL_georges_vereecken={ #
 		advisor={
 			slot = navy_chief
 			idea_token = BEL_georges_vereecken
@@ -271,14 +347,14 @@ characters={
 					factor = 1.000
 				}
 		}
-		name=BEL_georges_vereecken
+	}
+	BEL_jules_pire={ #朱尔斯·皮尔
+		name=BEL_jules_pire
 		portraits={
 			army={
-				small="GFX_idea_generic_navy_europe_1"
+				small="GFX_idea_generic_army_europe_6"
 			}
 		}
-	}
-	BEL_jules_pire={ #
 		advisor={
 			cost = 100
 			
@@ -293,14 +369,14 @@ characters={
 					military_theorist
 				}
 		}
-		name=BEL_jules_pire
+	}
+	BEL_oscar_michiels={ #奥斯卡·米希尔斯
+		name=BEL_oscar_michiels
 		portraits={
 			army={
-				small="GFX_idea_generic_army_europe_6"
+				small="GFX_idea_generic_army_europe_5"
 			}
 		}
-	}
-	BEL_oscar_michiels={ #
 		advisor={
 			slot = high_command
 			idea_token = BEL_oscar_michiels
@@ -316,59 +392,55 @@ characters={
 					factor = 1.000
 				}
 		}
-		name=BEL_oscar_michiels
-		portraits={
-			army={
-				small="GFX_idea_generic_army_europe_5"
-			}
-		}
 	}
-	BEL_charles_bastin={ #
-		advisor={
-			slot = army_chief
-			idea_token = BEL_charles_bastin
-			allowed = {
-					original_tag = BEL
-				}
-				traits = {
-					army_chief_morale_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
-		}
+	BEL_charles_bastin={ #查尔斯·巴斯廷
 		name=BEL_charles_bastin
 		portraits={
 			army={
 				small="GFX_idea_generic_army_europe_4"
 			}
 		}
-	}
-	BEL_yvan_gerard={ #
 		advisor={
-			slot = high_command
-			idea_token = BEL_yvan_gerard
-			ledger = navy
-				allowed = {
-					original_tag = BEL
-				}
-				traits = {
-					navy_naval_air_defense_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
+			slot = army_chief
+			idea_token = BEL_charles_bastin
+			allowed = {
+				original_tag = BEL
+			}
+			traits = {
+				army_chief_morale_2
+			}
+			cost = 100
+			ai_will_do = { factor = 1.000 }
 		}
+	}
+	BEL_yvan_gerard={ #伊万·热拉尔
 		name=BEL_yvan_gerard
 		portraits={
 			army={
 				small="GFX_idea_generic_navy_europe_2"
 			}
 		}
+		advisor={
+			slot = high_command
+			idea_token = BEL_yvan_gerard
+			ledger = navy
+			allowed = {
+				original_tag = BEL
+			}
+			traits = {
+				navy_naval_air_defense_2
+			}
+			cost = 100
+			ai_will_do = { factor = 1.000 }
+		}
 	}
-	BEL_rene_lagrou={ #
+	BEL_rene_lagrou={ #勒内·拉格鲁
+		name=BEL_rene_lagrou
+		portraits={
+			army={
+				small="GFX_idea_generic_air_europe_3"
+			}
+		}
 		advisor={
 			slot = high_command
 			idea_token = BEL_rene_lagrou
@@ -384,131 +456,139 @@ characters={
 					factor = 1.000
 				}
 		}
-		name=BEL_rene_lagrou
-		portraits={
-			army={
-				small="GFX_idea_generic_air_europe_3"
-			}
-		}
 	}
-	BEL_fritz_lob={ #
-		advisor={
-			cost = 100
-			slot = theorist
-			idea_token = BEL_fritz_lob
-			ledger = air
-				allowed = {
-					original_tag = BEL
-				}
-				
-				traits = {
-					air_warfare_theorist
-				}
-		}
+	BEL_fritz_lob={ #弗里茨·勒布
 		name=BEL_fritz_lob
 		portraits={
 			army={
 				small="GFX_idea_generic_air_europe_1"
 			}
 		}
-	}
-	BEL_jules_iserentant={ #
 		advisor={
-			slot = air_chief
-			idea_token = BEL_jules_iserentant
+			cost = 100
+			slot = theorist
+			idea_token = BEL_fritz_lob
+			ledger = air
 			allowed = {
-					original_tag = BEL
-				}
-				traits = {
-					air_chief_ground_support_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
+				original_tag = BEL
+			}
+			
+			traits = {
+				air_warfare_theorist
+			}
 		}
+	}
+	BEL_jules_iserentant={ #朱尔斯·伊塞朗唐
 		name=BEL_jules_iserentant
 		portraits={
 			army={
 				small="GFX_idea_generic_air_europe_3"
 			}
 		}
-	}
-	BEL_victor_van_strydonck_de_burkel={ #
 		advisor={
-			slot = high_command
-			idea_token = BEL_victor_van_strydonck_de_burkel
-			ledger = army
-				allowed = {
-					original_tag = BEL
-				}
-				traits = {
-					army_infantry_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
+			slot = air_chief
+			idea_token = BEL_jules_iserentant
+			allowed = {
+				original_tag = BEL
+			}
+			traits = {
+				air_chief_ground_support_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
 		}
+	}
+	BEL_victor_van_strydonck_de_burkel={ #维克托·范斯特里登克·德·伯克尔
 		name=BEL_victor_van_strydonck_de_burkel
 		portraits={
 			army={
 				small="GFX_idea_generic_army_europe_1"
 			}
 		}
-	}
-	BEL_paul-henri_spaak={ #
 		advisor={
-			slot = political_advisor
-			idea_token = BEL_paul-henri_spaak
-			allowed  = {
-					original_tag  = BEL
-				}
-				traits  = {
-					captain_of_industry 
-				}
+			slot = high_command
+			idea_token = BEL_victor_van_strydonck_de_burkel
+			ledger = army
+			allowed = {
+				original_tag = BEL
+			}
+			traits = {
+				army_infantry_2
+			}
+			cost = 100
+			ai_will_do = { factor = 1.000 }
 		}
+	}
+	BEL_paul-henri_spaak={ #保罗-亨利·斯巴克
 		name=BEL_paul-henri_spaak
 		portraits={
 			army={
 				small="GFX_idea_generic_political_advisor_europe_1"
 			}
 		}
-	}
-	BEL_gaston_eyskens={ #
 		advisor={
 			slot = political_advisor
-			idea_token = BEL_gaston_eyskens
+			idea_token = BEL_paul-henri_spaak
 			allowed  = {
-					original_tag  = BEL
-				}
-				traits  = {
-					armaments_organizer 
-				}
+				original_tag  = BEL
+			}
+			traits  = {
+				captain_of_industry 
+			}
 		}
+	}
+	BEL_gaston_eyskens={ #加斯顿·伊斯更斯
 		name=BEL_gaston_eyskens
 		portraits={
 			army={
 				small="GFX_idea_generic_political_advisor_europe_3"
 			}
 		}
-	}
-	BEL_paul_van_zeeland={ #
 		advisor={
 			slot = political_advisor
-			idea_token = BEL_paul_van_zeeland
+			idea_token = BEL_gaston_eyskens
 			allowed  = {
-					original_tag  = BEL
-				}
-				traits  = {
-					silent_workhorse 
-				}
+				original_tag  = BEL
+			}
+			traits  = {
+				armaments_organizer 
+			}
 		}
+	}
+	BEL_paul_van_zeeland={ #保罗·范泽兰
 		name=BEL_paul_van_zeeland
 		portraits={
 			army={
 				small="GFX_idea_generic_political_advisor_europe_2"
 			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = BEL_paul_van_zeeland
+			allowed  = {
+				original_tag  = BEL
+			}
+			traits  = {
+				silent_workhorse 
+			}
+		}
+	}
+### definitely unhistorial characters
+	
+	BEL_paul_maes={ #保罗·梅斯
+		name=BEL_paul_maes
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_europe_2"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = BEL_paul_maes
+			allowed  = { original_tag  = BEL }
+			traits  = { capitalism_economist }
 		}
 	}
 }
