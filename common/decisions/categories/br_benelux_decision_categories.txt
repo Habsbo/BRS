@@ -1,0 +1,16 @@
+#pays - bas
+br_united_
+#bel
+
+#lux
+br_hearts_of_lux = {
+	icon = GFX_generic_democracy
+	picture = GFX_decision_cat_picture_government_in_exile
+
+	visible = {
+		always = yes
+	}
+
+	priority = 1
+	visible_when_empty = no
+}

@@ -14,78 +14,9 @@
 
 	continuous_focus_position = { x = 50 y = 1500 }
 
+	shared_focus = DEUTSCH_kaiserreich_power
+
 #DKR
-	focus = {
-		id = DKR_kaiserreich_power
-		icon = GFX_focus_generic_treaty
-		#prerequisite = { focus =  }
-		x = 12
-		y = 0
-		#relative_position_id = 
-		
-		cost = 8
-		
-		available = {}
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		completion_reward = {}
-
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
-		id = DKR_intelligence_sharing
-		icon = GFX_focus_generic_secret_service_agency
-		prerequisite = { focus = DKR_kaiserreich_power }
-		#mutually_exclusive = { focus =  }
-		x = -4
-		y = 1
-		relative_position_id = DKR_kaiserreich_power
-		
-		cost = 8
-		
-		available = {}
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		completion_reward = {
-			create_intelligence_agency = yes
-			upgrade_intelligence_agency = yes
-		}
-
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
-		id = DKR_2
-		icon = GFX_focus_generic_agricultural_subsidies
-		prerequisite = { focus = DKR_kaiserreich_power }
-		#mutually_exclusive = { focus =  }
-		x = 2
-		y = 1
-		relative_position_id = DKR_kaiserreich_power
-		
-		cost = 8
-		
-		available = {}
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		completion_reward = {}
-
-		ai_will_do = { factor = 1 }
-	}
 	#
 	focus = {
 		id = DKR_1
