@@ -68,6 +68,48 @@ joint_focus = {
 	completion_reward_joint_member = {}
 }
 joint_focus = {
+	id = DEUTSCH_i1
+	icon = GFX_focus_generic_secret_service_agency
+	prerequisite = { focus = DEUTSCH_kaiserreich_power }
+	#mutually_exclusive = { focus =  }
+	x = -2
+	y = 1
+	relative_position_id = DEUTSCH_kaiserreich_power
+	cost = 8
+	ai_will_do = { factor = 1 }
+	joint_trigger = {}
+	available = {}
+	bypass = {}
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+	
+	completion_reward = {}
+	completion_reward_joint_originator = {}
+	completion_reward_joint_member = {}
+}
+joint_focus = {
+	id = DEUTSCH_i2
+	icon = GFX_focus_generic_secret_service_agency
+	prerequisite = { focus = DEUTSCH_kaiserreich_power }
+	#mutually_exclusive = { focus =  }
+	x = 2
+	y = 1
+	relative_position_id = DEUTSCH_kaiserreich_power
+	cost = 8
+	ai_will_do = { factor = 1 }
+	joint_trigger = {}
+	available = {}
+	bypass = {}
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+	
+	completion_reward = {}
+	completion_reward_joint_originator = {}
+	completion_reward_joint_member = {}
+}
+joint_focus = {
 	id = DEUTSCH_
 	icon = GFX_
 	#prerequisite = { focus = }
