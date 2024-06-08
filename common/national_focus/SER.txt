@@ -19,8 +19,8 @@ focus_tree = {
 		icon = GFX_
 		#prerequisite = { focus =  }
 		#mutually_exclusive = { focus =  }
-		x = 10
-		y = 0
+		x = 0
+		y = 1
 		#relative_position_id =
 
 		cost = 8
@@ -45,16 +45,27 @@ focus_tree = {
 		icon = GFX_
 		#prerequisite = { focus =  }
 		#mutually_exclusive = { focus =  }
-		x = 32
+		x = 24
 		y = 0
 		#relative_position_id =
 
 		cost = 8
 		
-		available = {}
+		available = {
+			OR = {
+				MAC = { is_puppet_of = BUL }
+				106 = { is_fully_controlled_by = BUL }
+			}
+		}
 		
 		bypass = {
-			has_war_with = BUL
+			OR = {
+				AND = {
+					NOT = { MAC = { is_puppet_of = BUL } }
+					NOT = { 106 = { is_fully_controlled_by = BUL } }
+				}
+				has_war_with = BUL
+			}
 		}
 		
 		cancel_if_invalid = yes
@@ -63,7 +74,11 @@ focus_tree = {
 		
 		complete_tooltip = {}
 		
-		completion_reward = {}
+		completion_reward = {
+			BUL = {
+				country_event = { id = br_ser.1 }
+			}
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -98,7 +113,7 @@ focus_tree = {
 		prerequisite = { focus = SER_greater_serbism focus = SER_pan_yugoslavism }
 		#mutually_exclusive = { focus =  }
 		x = 0
-		y = 3
+		y = 2
 		relative_position_id = SER_claim_vojvodina
 
 		cost = 5
@@ -271,13 +286,189 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 	}
 	focus = {
-		id = SER_
+		id = SER_secure_territory
 		icon = GFX_
 		prerequisite = { focus = SER_king_the_great focus = SER_uncivilized_civilians }
 		#mutually_exclusive = { focus =  }
 		x = 0
 		y = 2
 		relative_position_id = SER_a_great_victory_of_serbian
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = SER_fortress_line
+		icon = GFX_
+		prerequisite = { focus = SER_secure_territory }
+		#mutually_exclusive = { focus =  }
+		x = -3
+		y = 2
+		relative_position_id = SER_secure_territory
+
+		cost = 5
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = SER_arsenals_in_bosnia
+		icon = GFX_
+		prerequisite = { focus = SER_secure_territory }
+		#mutually_exclusive = { focus =  }
+		x = -1
+		y = 1
+		relative_position_id = SER_secure_territory
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = SER_strengthen_militaries_project
+		icon = GFX_
+		prerequisite = { focus = SER_secure_territory }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 1
+		relative_position_id = SER_secure_territory
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = SER_cooperating_with_landowners
+		icon = GFX_
+		prerequisite = { focus = SER_secure_territory }
+		#mutually_exclusive = { focus =  }
+		x = 3
+		y = 2
+		relative_position_id = SER_secure_territory
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = SER_artillery_academy
+		icon = GFX_
+		prerequisite = { focus = SER_arsenals_in_bosnia }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = SER_arsenals_in_bosnia
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = SER_national_reserve
+		icon = GFX_
+		prerequisite = { focus = SER_strengthen_militaries_project }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = SER_strengthen_militaries_project
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = SER_
+		icon = GFX_
+		prerequisite = { focus = SER_artillery_academy }
+		prerequisite = { focus = SER_national_reserve }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 3
+		relative_position_id = SER_secure_territory
 
 		cost = 8
 		
@@ -306,9 +497,34 @@ focus_tree = {
 			focus = SER_unite_resisters
 		}
 		mutually_exclusive = { focus = SER_pan_yugoslavism }
-		x = -1
+		x = -2
 		y = 1
 		relative_position_id = SER_claim_vojvodina
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = SER_serbian_owns_balkanland
+		icon = GFX_
+		prerequisite = { focus = SER_greater_serbism }
+		#mutually_exclusive = { focus =  }
+		x = -2
+		y = 3
+		relative_position_id = SER_greater_serbism
 
 		cost = 8
 		
@@ -332,8 +548,58 @@ focus_tree = {
 		prerequisite = { focus = SER_greater_serbism focus = SER_pan_yugoslavism }
 		mutually_exclusive = { focus = SER_unite_croatian }
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = SER_greater_serbism
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = SER_suppress_imro
+		icon = GFX_
+		prerequisite = { focus = SER_purge_the_group focus = SER_unite_croatian }
+		mutually_exclusive = { focus = SER_support_imro }
+		x = 1
+		y = 1
+		relative_position_id = SER_purge_the_group
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = SER_support_imro
+		icon = GFX_
+		prerequisite = { focus = SER_purge_the_group focus = SER_unite_croatian }
+		mutually_exclusive = { focus = SER_suppress_imro }
+		x = -1
+		y = 1
+		relative_position_id = SER_unite_croatian
 
 		cost = 8
 		
@@ -364,7 +630,7 @@ focus_tree = {
 			focus = SER_unite_resisters
 		}
 		mutually_exclusive = { focus = SER_greater_serbism }
-		x = 1
+		x = 2
 		y = 1
 		relative_position_id = SER_claim_vojvodina
 
@@ -390,7 +656,32 @@ focus_tree = {
 		prerequisite = { focus = SER_greater_serbism focus = SER_pan_yugoslavism }
 		mutually_exclusive = { focus = SER_purge_the_group }
 		x = 0
-		y = 1
+		y = 2
+		relative_position_id = SER_pan_yugoslavism
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = SER_
+		icon = GFX_
+		prerequisite = { focus = SER_pan_yugoslavism }
+		#mutually_exclusive = { focus =  }
+		x = 2
+		y = 3
 		relative_position_id = SER_pan_yugoslavism
 
 		cost = 8

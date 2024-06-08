@@ -59,3 +59,32 @@ country_event = { #
 		ai_chance = { factor = 3 }
 	}
 }
+
+#
+###
+add_namespace = br_ser
+###
+
+country_event = { #
+	id = br_ser.1
+	title = br_ser.1.title
+	desc = br_ser.1.desc
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			#
+		}
+	}
+
+	option = {
+		name = br_ser.1.a #
+
+		
+
+		ai_chance = { factor = 7 }
+	}
+}
