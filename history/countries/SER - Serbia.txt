@@ -97,7 +97,7 @@ set_politics = {
 	ruling_party = authoritarian
 	last_election = "1936.1.1"
 	election_frequency = 36
-	elections_allowed = yes
+	elections_allowed = no
 }
 
 set_popularities = {
@@ -163,4 +163,15 @@ create_country_leader = {
 declare_war_on = {
 	target = BUL
 	type = take_core_state
+}
+
+set_cosmetic_tag = SER_MNT_BOS_CRO
+
+add_ideas = {
+	br_laws_dictatorship
+	br_laws_monarchy
+	br_laws_suffrage_prohibited
+	br_laws_national_state
+	br_laws_religious_people
+	br_laws_bourgeoisie
 }

@@ -83,6 +83,20 @@
  CZE_kingdom: "波西米亚王国"
  CZE_maravian_kingdom: "大摩拉维亚王国"
  CZE_republic: "$CZE$共和国"
+
+ SER_MNT: "塞尔维亚-蒙特内格罗王国"
+ SER_MNT_DEF: "塞尔维亚-蒙特内格罗王国"
+ SER_MNT_ADJ: "塞尔维亚与蒙特内格罗"
+ SER_MNT_BOS: "塞尔维亚-蒙特内格罗-波斯尼亚王国"
+ SER_MNT_BOS_DEF: "塞尔维亚-蒙特内格罗-波斯尼亚王国"
+ SER_MNT_BOS_ADJ: "塞尔维亚-蒙特内格罗-波斯尼亚"
+ SER_MNT_BOS_CRO: "塞尔维亚-蒙特内格罗-波斯尼亚-克罗地亚王国"
+ SER_MNT_BOS_CRO_DEF: "塞尔维亚-蒙特内格罗-波斯尼亚-克罗地亚王国"
+ SER_MNT_BOS_CRO_ADJ: "南斯拉夫"
+ Yugo_Slavia: "南斯拉夫"
+ Yugo_Slavia_DEF: "南斯拉夫"
+ Yugo_Slavia_ADJ: "南斯拉夫"
+ 
 #中国
  MNG: "大明帝国"
 
@@ -93,6 +107,9 @@
  CCP: "中国共产党"
 #伊比利亚
  EUSKADI: "巴斯克"
+ EUSKADI_DEF: "巴斯克"
+ EUSKADI_ADJ: "巴斯克"
+
  CRE_ARAGON: "$ARAGON$地区防御委员会"
  ARAGON: "阿拉贡"
  SPR_kingdom: "$SPR$王国"

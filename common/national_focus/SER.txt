@@ -15,8 +15,8 @@ focus_tree = {
 	continuous_focus_position = { x = 50 y = 1500 }
 	
 	focus = {
-		id = SER
-		icon = GFX_goal_generic_demand_territory
+		id = SER_
+		icon = GFX_
 		#prerequisite = { focus =  }
 		#mutually_exclusive = { focus =  }
 		x = 10
@@ -24,8 +24,6 @@ focus_tree = {
 		#relative_position_id =
 
 		cost = 8
-		
-		ai_will_do = { factor = 1 }
 		
 		available = {}
 		
@@ -38,5 +36,377 @@ focus_tree = {
 		complete_tooltip = {}
 		
 		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+### balkan war
+	focus = {
+		id = SER_war_for_macedonia
+		icon = GFX_
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 32
+		y = 0
+		#relative_position_id =
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {
+			has_war_with = BUL
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = SER_claim_vojvodina
+		icon = GFX_
+		prerequisite = { focus = SER_war_for_macedonia }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 2
+		relative_position_id = SER_war_for_macedonia
+
+		cost = 5
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = SER_take_pristina_back
+		icon = GFX_
+		prerequisite = { focus = SER_greater_serbism focus = SER_pan_yugoslavism }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 3
+		relative_position_id = SER_claim_vojvodina
+
+		cost = 5
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = SER_national_catastrophe_today
+		icon = GFX_
+		prerequisite = { focus = SER_war_for_macedonia }
+		#mutually_exclusive = { focus = SER_a_great_victory_of_serbian }
+		x = 8
+		y = 1
+		relative_position_id = SER_war_for_macedonia
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	#
+	focus = {
+		id = SER_beaten_but_not_defeated
+		icon = GFX_
+		prerequisite = { focus = SER_national_catastrophe_today }
+		#mutually_exclusive = { focus =  }
+		x = -1
+		y = 1
+		relative_position_id = SER_national_catastrophe_today
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	#
+	focus = {
+		id = SER_unite_resisters
+		icon = GFX_
+		prerequisite = { focus = SER_national_catastrophe_today }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 1
+		relative_position_id = SER_national_catastrophe_today
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+### great serbia
+	focus = {
+		id = SER_a_great_victory_of_serbian
+		icon = GFX_
+		prerequisite = { focus = SER_war_for_macedonia }
+		#mutually_exclusive = { focus = SER_national_catastrophe_today }
+		x = -8
+		y = 1
+		relative_position_id = SER_war_for_macedonia
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = SER_king_the_great
+		icon = GFX_
+		prerequisite = { focus = SER_a_great_victory_of_serbian }
+		#mutually_exclusive = { focus =  }
+		x = -1
+		y = 1
+		relative_position_id = SER_a_great_victory_of_serbian
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = SER_uncivilized_civilians
+		icon = GFX_
+		prerequisite = { focus = SER_a_great_victory_of_serbian }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 1
+		relative_position_id = SER_a_great_victory_of_serbian
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = SER_
+		icon = GFX_
+		prerequisite = { focus = SER_king_the_great focus = SER_uncivilized_civilians }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 2
+		relative_position_id = SER_a_great_victory_of_serbian
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = SER_greater_serbism
+		icon = GFX_
+		prerequisite = {
+			focus = SER_claim_vojvodina
+			focus = SER_king_the_great
+			focus = SER_uncivilized_civilians
+			focus = SER_beaten_but_not_defeated
+			focus = SER_unite_resisters
+		}
+		mutually_exclusive = { focus = SER_pan_yugoslavism }
+		x = -1
+		y = 1
+		relative_position_id = SER_claim_vojvodina
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = SER_purge_the_group
+		icon = GFX_
+		prerequisite = { focus = SER_greater_serbism focus = SER_pan_yugoslavism }
+		mutually_exclusive = { focus = SER_unite_croatian }
+		x = 0
+		y = 1
+		relative_position_id = SER_greater_serbism
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+### pan yugoslavism
+	focus = {
+		id = SER_pan_yugoslavism
+		icon = GFX_
+		prerequisite = {
+			focus = SER_claim_vojvodina
+			focus = SER_king_the_great
+			focus = SER_uncivilized_civilians
+			focus = SER_beaten_but_not_defeated
+			focus = SER_unite_resisters
+		}
+		mutually_exclusive = { focus = SER_greater_serbism }
+		x = 1
+		y = 1
+		relative_position_id = SER_claim_vojvodina
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = SER_unite_croatian
+		icon = GFX_
+		prerequisite = { focus = SER_greater_serbism focus = SER_pan_yugoslavism }
+		mutually_exclusive = { focus = SER_purge_the_group }
+		x = 0
+		y = 1
+		relative_position_id = SER_pan_yugoslavism
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
 	}
 }

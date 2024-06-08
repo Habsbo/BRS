@@ -1126,3 +1126,26 @@ QNG_MAN = {
 	color = rgb { 255 182 30 }
 	color_ui = rgb { 255 182 30 }
 }
+
+#
+
+
+SER_MNT= {
+	color = rgb { 65 105 225 }
+	color_ui = rgb { 65 105 225 }
+}
+
+SER_MNT_BOS= {
+	color = rgb { 65 105 225 }
+	color_ui = rgb { 65 105 225 }
+}
+
+SER_MNT_BOS_CRO= {
+	color = rgb { 65 105 225 }
+	color_ui = rgb { 65 105 225 }
+}
+
+Yugo_Slavia= {
+	color = rgb { 25 25 112 }
+	color_ui = rgb { 25 25 112 }
+} #178 34 34
