@@ -101,6 +101,7 @@ add_ideas = {
 	#hog
 	LUX_joseph_bech_hog
 }
+set_country_flag = br_dynamic_modifier_not_generic_flag
 #dynamic modifier - industry
 
 #dynamic modifier - army

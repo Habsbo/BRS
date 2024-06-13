@@ -248,32 +248,37 @@ airforce_alt_dynamic_modifier = {
 	
 }
 #工业
-planned_industry_dynamic_modifier = {
-	icon = GFX_idea_generic_air_research
+national_industry_civilian_dynamic_modifier = {
+	icon = GFX_idea_SOV_third_five_year_plan_civilian
 
-	enable = {
-		OR = {
-			has_government = sco_anarchism
-			has_government = vanwardism
-			has_government = sci_socialism
-			has_government = con_socialism
-			has_government = demo_socialism
-		}
-	}
+	enable = {}
 	
+	consumer_goods_expected_value = nic_consumer_goods_expected_value
+	production_speed_buildings_factor = nic_production_speed_buildings_factor
+	#
+	conversion_cost_civ_to_mil_factor = nic_conversion_cost_civ_to_mil_factor
+	conversion_cost_mil_to_civ_factor = nic_conversion_cost_mil_to_civ_factor
+	#
+	industrial_capacity_factory = nic_industrial_capacity_factory
 }
-national_industry_alt_dynamic_modifier = {
-	icon = GFX_idea_generic_air_manufacturer_1
+#工业
+national_industry_military_dynamic_modifier = {
+	icon = GFX_idea_SOV_third_five_year_plan_military
 
-	enable = {
-		OR = {
-			has_government = demo_liberalism
-			has_government = demo_conservatism
-			has_government = authoritarian
-			has_government = fascism
-			has_government = nationalism
-			has_government = supernationalism
-		}
-	}
+	enable = {}
 	
+	#
+	production_speed_arms_factory_factor = nim_production_speed_arms_factory_factor
+	production_speed_dockyard_factor = nim_production_speed_dockyard_factor
+	#
+	production_factory_efficiency_gain_factor = nim_production_factory_efficiency_gain_factor
+	production_factory_start_efficiency_factor = nim_production_factory_start_efficiency_factor
+	production_factory_max_efficiency_factor = nim_production_factory_max_efficiency_factor
+	production_lack_of_resource_penalty_factor = nim_production_lack_of_resource_penalty_factor
+	#
+	conversion_cost_civ_to_mil_factor = nim_conversion_cost_civ_to_mil_factor
+	conversion_cost_mil_to_civ_factor = nim_conversion_cost_mil_to_civ_factor
+	#
+	max_fuel_factor = nim_max_fuel_factor
+	fuel_gain_factor = nim_fuel_gain_factor
 }
