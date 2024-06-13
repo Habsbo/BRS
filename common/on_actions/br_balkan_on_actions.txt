@@ -1,6 +1,25 @@
 on_actions = {
 	on_startup = {
 		effect = {
+			every_country = {
+				#dynamic modifier - army
+				add_dynamic_modifier = { modifier = black_force_dynamic_modifier }
+				add_dynamic_modifier = { modifier = red_army_dynamic_modifier }
+				add_dynamic_modifier = { modifier = land_force_alt_dynamic_modifier }
+				#dynamic modifier - military officier
+				add_dynamic_modifier = { modifier = committee_combat_dynamic_modifier }
+				add_dynamic_modifier = { modifier = political_commissar_dynamic_modifier }
+				add_dynamic_modifier = { modifier = officer_cap_dynamic_modifier }
+				#dynamic modifier - navy
+				add_dynamic_modifier = { modifier = red_navy_dynamic_modifier }
+				add_dynamic_modifier = { modifier = navy_alt_dynamic_modifier }
+				#dynamic modifier - airforce
+				add_dynamic_modifier = { modifier = red_airforce_dynamic_modifier }
+				add_dynamic_modifier = { modifier = airforce_alt_dynamic_modifier }
+				#dynamic modifier - ic
+				add_dynamic_modifier = { modifier = planned_industry_dynamic_modifier }
+				add_dynamic_modifier = { modifier = national_industry_alt_dynamic_modifier }
+			}
 			#RHE = {}
 		}
 	}

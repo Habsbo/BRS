@@ -8,6 +8,15 @@
  political_commissar_dynamic_modifier: "政治委员"
  officer_cap_dynamic_modifier: "[FROM.GetAdjective]的军官团"
 
+ red_navy_dynamic_modifier: "红海军"
+ navy_alt_dynamic_modifier: "[FROM.GetAdjective]海军"
+
+ red_airforce_dynamic_modifier: "红空军"
+ airforce_alt_dynamic_modifier: "[FROM.GetAdjective]空军"
+
+ planned_industry_dynamic_modifier: "工业规划"
+ national_industry_alt_dynamic_modifier: "[FROM.GetAdjective]国家工业"
+
  national_strikes_dynamic_modifier: "全国罢工"
  national_strikes_added_tt: "§Y$national_strikes_dynamic_modifier$§!追加效果："
 

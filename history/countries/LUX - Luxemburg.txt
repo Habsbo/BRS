@@ -104,9 +104,6 @@ add_ideas = {
 #dynamic modifier - industry
 
 #dynamic modifier - army
-add_dynamic_modifier = { modifier = black_force_dynamic_modifier }
-add_dynamic_modifier = { modifier = red_army_dynamic_modifier }
-add_dynamic_modifier = { modifier = land_force_alt_dynamic_modifier }
 set_variable = { troops_political_power_gain = 0.15 }
 set_variable = { troops_army_attack_factor = -0.10 }
 set_variable = { troops_army_defence_factor = -0.10 }
@@ -114,9 +111,6 @@ set_variable = { troops_army_speed_factor = -0.10 }
 set_variable = { troops_army_org_factor = -0.10 }
 set_variable = { troops_conscription_factor = 0.00 }
 #dynamic modifier - military officier
-add_dynamic_modifier = { modifier = committee_combat_dynamic_modifier }
-add_dynamic_modifier = { modifier = political_commissar_dynamic_modifier }
-add_dynamic_modifier = { modifier = officer_cap_dynamic_modifier }
 set_variable = { officer_cap_political_power_factor = 0.05 }
 set_variable = { officer_cap_army_advisor_cost_factor = -0.10 }
 set_variable = { officer_cap_planning_speed = -0.50 }

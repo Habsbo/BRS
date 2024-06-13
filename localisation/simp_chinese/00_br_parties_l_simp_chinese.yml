@@ -60,7 +60,7 @@
  CAT_vanwardism_party: "工团党"
  CAT_sci_socialism_party: "西班牙共产党"
  CAT_con_socialism_party: "西班牙共产党"
- CAT_demo_socialism_party: "共和左翼（ERC）"
+ CAT_demo_socialism_party: "共和左翼(ERC)"
  CAT_demo_liberalism_party: ""
  CAT_demo_conservatism_party: ""
  CAT_authoritarian_party: ""
@@ -75,16 +75,16 @@
  SPR_demo_socialism_party: ""
  SPR_demo_liberalism_party: ""
  SPR_demo_conservatism_party: "西班牙国民联盟"
- SPR_authoritarian_party: ""
- SPR_fascism_party: "长枪党"
+ SPR_authoritarian_party: "卡洛斯派"
+ SPR_fascism_party: "西班牙长枪党"
  SPR_nationalism_party: ""
  SPR_supernationalism_party: ""
 
  POL_sco_anarchism_party: "波兰农民无政府联盟"
- POL_vanwardism_party: "波兰和立陶宛社会民主党（SDKP）与犹太工人联盟（GJLB）" #而波兰工人共产党（KPRP）失败了
+ POL_vanwardism_party: "波兰和立陶宛社会民主党(SDKP)与犹太工人联盟(GJLB)" #而波兰工人共产党（KPRP）失败了
  POL_sci_socialism_party: "波兰工人党"
  POL_con_socialism_party: "波兰农民党"
- POL_demo_socialism_party: "波兰社会党（PPS）左翼"
+ POL_demo_socialism_party: "波兰社会党(PPS)左翼"
  POL_demo_liberalism_party: "波兰国家民主党"
  POL_demo_conservatism_party: "萨纳齐亚主义左派"
  POL_authoritarian_party: "萨纳齐亚主义右派" #帕克斯协会
@@ -94,8 +94,8 @@
 
  GRE_sco_anarchism_party: "希腊无政府主义联盟"
  GRE_vanwardism_party: "希腊工人联盟"
- GRE_sci_socialism_party: "希腊共产党（KKE）"
- GRE_con_socialism_party: "希腊共产党（KKE）"
+ GRE_sci_socialism_party: "希腊共产党(KKE)"
+ GRE_con_socialism_party: "希腊共产党(KKE)"
  GRE_demo_socialism_party: "民主激进左翼联盟"
  GRE_demo_liberalism_party: "自由党"
  GRE_demo_conservatism_party: "保皇民主党"
@@ -120,8 +120,8 @@
 #BEL
  BEL_sco_anarchism_party: "瓦隆共产主义无政府派"
  BEL_vanwardism_party: "瓦隆共产主义工团派"
- BEL_sci_socialism_party: "比利时共产党(PC)"
- BEL_con_socialism_party: "比利时社会主义党(PS)" 
+ BEL_sci_socialism_party: "比利时共产党(CPB)"
+ BEL_con_socialism_party: "比利时社会主义党(SPB)" 
  BEL_demo_socialism_party: "比利时社会民主党" #
  BEL_demo_liberalism_party: "比利时自由党" #
  BEL_demo_conservatism_party: "比利时天主教党"

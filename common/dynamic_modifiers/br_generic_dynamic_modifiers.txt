@@ -187,4 +187,93 @@ officer_cap_dynamic_modifier = {
 	#学说
 	land_doctrine_cost_factor = officer_cap_land_doctrine_cost_factor
 }
-#
+#海军
+red_navy_dynamic_modifier = {
+	icon = GFX_idea_generic_naval_manufacturer_3
+
+	enable = {
+		OR = {
+			has_government = sco_anarchism
+			has_government = vanwardism
+			has_government = sci_socialism
+			has_government = con_socialism
+			has_government = demo_socialism
+		}
+	}
+	
+}
+navy_alt_dynamic_modifier = {
+	icon = GFX_idea_generic_naval_manufacturer_1
+
+	enable = {
+		OR = {
+			has_government = demo_liberalism
+			has_government = demo_conservatism
+			has_government = authoritarian
+			has_government = fascism
+			has_government = nationalism
+			has_government = supernationalism
+		}
+	}
+	
+}
+#空军
+red_airforce_dynamic_modifier = {
+	icon = GFX_idea_generic_air_research
+
+	enable = {
+		OR = {
+			has_government = sco_anarchism
+			has_government = vanwardism
+			has_government = sci_socialism
+			has_government = con_socialism
+			has_government = demo_socialism
+		}
+	}
+	
+}
+airforce_alt_dynamic_modifier = {
+	icon = GFX_idea_generic_air_manufacturer_1
+
+	enable = {
+		OR = {
+			has_government = demo_liberalism
+			has_government = demo_conservatism
+			has_government = authoritarian
+			has_government = fascism
+			has_government = nationalism
+			has_government = supernationalism
+		}
+	}
+	
+}
+#工业
+planned_industry_dynamic_modifier = {
+	icon = GFX_idea_generic_air_research
+
+	enable = {
+		OR = {
+			has_government = sco_anarchism
+			has_government = vanwardism
+			has_government = sci_socialism
+			has_government = con_socialism
+			has_government = demo_socialism
+		}
+	}
+	
+}
+national_industry_alt_dynamic_modifier = {
+	icon = GFX_idea_generic_air_manufacturer_1
+
+	enable = {
+		OR = {
+			has_government = demo_liberalism
+			has_government = demo_conservatism
+			has_government = authoritarian
+			has_government = fascism
+			has_government = nationalism
+			has_government = supernationalism
+		}
+	}
+	
+}
