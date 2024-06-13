@@ -748,6 +748,14 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = { type = arms_factory level = 2 }
 			}
+			#
+			custom_effect_tooltip = national_industry_military_dynamic_modifier_added
+			add_to_variable = { nim_production_speed_arms_factory_factor = 0.05 tooltip = production_speed_arms_factory_factor_whitespace_tt }
+			#
+			add_to_variable = { nim_production_factory_max_efficiency_factor = 0.05 tooltip = production_factory_max_efficiency_factor_whitespace_tt }
+			add_to_variable = { nim_production_factory_start_efficiency_factor = 0.05 tooltip = production_factory_start_efficiency_factor_whitespace_tt }
+			add_to_variable = { nim_production_factory_efficiency_gain_factor = 0.05 tooltip = production_factory_efficiency_gain_factor_whitespace_tt }
+			add_to_variable = { nim_conversion_cost_civ_to_mil_factor = -0.05 tooltip = conversion_cost_civ_to_mil_factor_whitespace_tt }
 		}
 		
 		search_filters = {FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INDUSTRY}
@@ -1016,6 +1024,10 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = { type = arms_factory level = 1 }
 			}
+			#
+			custom_effect_tooltip = national_industry_military_dynamic_modifier_added
+			add_to_variable = { troops_army_attack_factor = 0.10 tooltip = army_attack_factor_tt }
+			#
 		}
 		
 		ai_will_do = { factor = 1 }
@@ -2450,7 +2462,14 @@ focus_tree = {
 		
 		complete_tooltip = {}
 		
-		completion_reward = {}
+		completion_reward = {
+			#
+			custom_effect_tooltip = red_army_dynamic_modifier_added
+			add_to_variable = {  troops_political_power_gain = 0.5 tooltip = political_power_gain_tt }
+			add_to_variable = { troops_army_org_factor = 0.05 tooltip = army_org_factor_tt }
+			add_to_variable = { troops_conscription_factor = 0.20 tooltip = conscription_factor_tt }
+			#
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -3431,9 +3450,24 @@ focus_tree = {
 		id = LUX_fight_against_colonialism
 		icon = GFX_focus_SOV_the_road_of_life
 		prerequisite = { focus = LUX_non_alignment }
-		x = 0
+		x = -1
 		y = 2
 		relative_position_id = LUX_non_alignment
+
+		offset = {
+			x = 1
+			y = 0
+			trigger = {
+				OR = {
+					has_completed_focus = LUX_integrate_to_democratic
+					has_completed_focus = LUX_monarchy_of_luxembourg
+				}
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
 
 		cost = 8
 		

@@ -3,19 +3,29 @@
  black_force_dynamic_modifier: "黑军"
  red_army_dynamic_modifier: "红军"
  land_force_alt_dynamic_modifier: "[FROM.GetAdjective]陆军"
+ black_force_dynamic_modifier_added: "§Y$black_force_dynamic_modifier$§!追加效果："
+ red_army_dynamic_modifier_added: "§Y$red_army_dynamic_modifier$§!追加效果："
+ land_force_alt_dynamic_modifier_added: "§Y$land_force_alt_dynamic_modifier$§!追加效果："
 
  committee_combat_dynamic_modifier: "战斗评估委员会"
  political_commissar_dynamic_modifier: "政治委员"
  officer_cap_dynamic_modifier: "[FROM.GetAdjective]的军官团"
+ committee_combat_dynamic_modifier_added: "§Y$committee_combat_dynamic_modifier$§!追加效果："
+ political_commissar_dynamic_modifier_added: "§Y$political_commissar_dynamic_modifier$§!追加效果："
+ officer_cap_dynamic_modifier_added: "§Y$officer_cap_dynamic_modifier$§!追加效果："
 
  red_navy_dynamic_modifier: "红海军"
  navy_alt_dynamic_modifier: "[FROM.GetAdjective]海军"
 
  red_airforce_dynamic_modifier: "红空军"
  airforce_alt_dynamic_modifier: "[FROM.GetAdjective]空军"
+ red_airforce_dynamic_modifier_added: "§Y$red_airforce_dynamic_modifier$§!追加效果："
+ airforce_alt_dynamic_modifier_added: "§Y$airforce_alt_dynamic_modifier$§!追加效果："
 
  national_industry_civilian_dynamic_modifier: "[FROM.GetAdjective]国家工业"
  national_industry_military_dynamic_modifier: "[FROM.GetAdjective]军事工业"
+ national_industry_civilian_dynamic_modifier_added: "§Y$national_industry_civilian_dynamic_modifier$§!追加效果："
+ national_industry_military_dynamic_modifier_added: "§Y$national_industry_military_dynamic_modifier$§!追加效果："
 
  national_strikes_dynamic_modifier: "全国罢工"
  national_strikes_added_tt: "§Y$national_strikes_dynamic_modifier$§!追加效果："
@@ -24,6 +34,13 @@
  industrial_capacity_factory_tt: " $MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: $RIGHT|+=%1$"
  industrial_capacity_dockyard_tt: " $MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: $RIGHT|+=%1$"
  production_speed_buildings_factor_tt: " $MODIFIER_PRODUCTION_SPEED_BUILDINGS_FACTOR$: $RIGHT|+=%1$"
+ 
+ production_factory_max_efficiency_factor_whitespace_tt: " $production_factory_max_efficiency_factor_tt$"
+ production_factory_start_efficiency_factor_whitespace_tt: " $production_factory_start_efficiency_factor_tt$"
+ production_factory_efficiency_gain_factor_whitespace_tt: " $production_factory_efficiency_gain_factor_tt$"
+ conversion_cost_civ_to_mil_factor_whitespace_tt: " §Y民转军消耗§!: $RIGHT|-=%1$"
+
+ political_power_gain_tt: " §Y政治点数§!: $RIGHT|+=1$"
 
  br_ideology_anarchism_ruling_tt: "§G执政党§!所属的意识形态是§Y无政府主义§!"
  br_ideology_radical_communism_ruling_tt: "§G执政党§!所属的意识形态是§Y激进共产主义§!的任意一种"
