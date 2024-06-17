@@ -25,6 +25,7 @@ ideas = {
 				consumer_goods_factor = -0.15
 				conversion_cost_civ_to_mil_factor = -0.25
 				production_speed_arms_factory_factor = 0.15
+				cic_construction_boost_factor = 0.10
 			}
 		}
 		#
@@ -97,7 +98,31 @@ ideas = {
 			#on_remove = {}
 
 			modifier = {
+				political_power_factor = -0.05
+				stability_factor = -0.15
 				fascism_drift = -0.01
+			}
+		}
+		#
+		LUX_combined_labor_union = {
+			picture = new_economic_policy
+
+			removal_cost = -1
+
+			allowed = { br_ideology_fascism_nio = yes }
+
+			allowed_civil_war = { br_ideology_fascism_nio = yes }
+
+			#on_add = {}
+
+			#on_remove = {}
+
+			modifier = {
+				war_support_factor = 0.10
+				stability_factor = 0.10
+				research_speed_factor = 0.08
+				consumer_goods_expected_value = 0.05
+				industrial_capacity_factory = 0.10
 			}
 		}
 	}

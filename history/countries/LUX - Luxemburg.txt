@@ -98,12 +98,28 @@ add_ideas = {
 	volunteer_only
 	free_trade
 	civilian_economy
+	#
+	LUX_week_national_consciousness
 	#hog
 	LUX_joseph_bech_hog
 }
 set_country_flag = br_dynamic_modifier_not_generic_flag
 #dynamic modifier - industry
-
+set_variable = { nic_consumer_goods_expected_value = 0.00 }
+set_variable = { nic_production_speed_buildings_factor = 0.00 }
+set_variable = { nic_conversion_cost_civ_to_mil_factor = 0.00 }
+set_variable = { nic_conversion_cost_mil_to_civ_factor = 0.00 }
+set_variable = { nic_industrial_capacity_factory = 0.00 }
+set_variable = { nim_production_speed_arms_factory_factor = 0.00 }
+set_variable = { nim_production_speed_dockyard_factor = 0.00 }
+set_variable = { nim_production_factory_start_efficiency_factor = 0.00 }
+set_variable = { nim_production_factory_max_efficiency_factor = 0.00 }
+set_variable = { nim_production_factory_efficiency_gain_factor = 0.00 }
+set_variable = { nim_production_lack_of_resource_penalty_factor = 0.00 }
+set_variable = { nim_conversion_cost_civ_to_mil_factor = 0.00 }
+set_variable = { nim_conversion_cost_mil_to_civ_factor = 0.00 }
+set_variable = { nim_max_fuel_factor = 0.00 }
+set_variable = { nim_fuel_gain_factor = 0.00 }
 #dynamic modifier - army
 set_variable = { troops_political_power_gain = 0.15 }
 set_variable = { troops_army_attack_factor = -0.10 }
@@ -121,3 +137,16 @@ set_variable = { officer_cap_land_doctrine_cost_factor = -0.10 }
 #dynamic modifier - navy
 
 #dynamic modifier - air
+
+#dynamic modifier - women movement
+set_variable = { women_movement_war_support_factor = 0.00 }
+set_variable = { women_movement_conscription_factor = 0.00 }
+set_variable = { women_movement_consumer_goods_expected_value = 0.00 }
+set_variable = { women_movement_research_speed_factor = 0.00 }
+set_variable = { women_movement_sco_anarchism_drift = 0.00 }
+set_variable = { women_movement_vanwardism_drift = 0.00 }
+set_variable = { women_movement_sci_socialism_drift = 0.00 }
+set_variable = { women_movement_con_socialism_drift = 0.00 }
+set_variable = { women_movement_demo_socialism_drift = 0.00 }
+set_variable = { women_movement_industrial_capacity_factory = 0.00 }
+set_variable = { women_movement_equipment_conversion_speed = 0.00 }

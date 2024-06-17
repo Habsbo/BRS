@@ -117,5 +117,30 @@ focus_tree = {
 		
 		completion_reward = {}
 	}
-	
+### political
+	focus = {
+		id = BEL_
+		icon = GFX_
+		#prerequisite = { focus = BEL_}
+		#mutually_exclusive = { focus =  }
+		x = 20
+		y = 0
+		#relative_position_id = BEL_
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
 }

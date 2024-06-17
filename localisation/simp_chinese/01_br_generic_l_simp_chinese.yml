@@ -1,4 +1,5 @@
 ﻿l_simp_chinese:
+ government: "政府"
  is_border_state_tt: "是§Y边境§!省份"
  black_force_dynamic_modifier: "黑军"
  red_army_dynamic_modifier: "红军"
@@ -29,6 +30,13 @@
 
  national_strikes_dynamic_modifier: "全国罢工"
  national_strikes_added_tt: "§Y$national_strikes_dynamic_modifier$§!追加效果："
+ 
+ women_movement_dynamic_modifier: "$LUX_women_movement$"
+ women_movement_dynamic_modifier_added_tt: "§Y$women_movement_dynamic_modifier$§!追加效果："
+ women_movement_dynamic_modifier_desc: ""
+
+ labour_union_dynamic_modifier: "工会"
+ labour_union_dynamic_modifier_added_tt: "§Y$labour_union_dynamic_modifier$§!追加效果："
 
  political_power_factor_tt: " $MODIFIER_POLITICAL_POWER_FACTOR$: $RIGHT|+=%1$"
  industrial_capacity_factory_tt: " $MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: $RIGHT|+=%1$"
@@ -39,8 +47,22 @@
  production_factory_start_efficiency_factor_whitespace_tt: " $production_factory_start_efficiency_factor_tt$"
  production_factory_efficiency_gain_factor_whitespace_tt: " $production_factory_efficiency_gain_factor_tt$"
  conversion_cost_civ_to_mil_factor_whitespace_tt: " §Y民转军消耗§!: $RIGHT|-=%1$"
-
+ consumer_goods_expected_value_tt: " §Y用于生产生活消费品的期望工厂数量§!: $RIGHT|-=%1$"
  political_power_gain_tt: " §Y政治点数§!: $RIGHT|+=1$"
+ conversion_cost_mil_to_civ_factor_tt: " §Y军用工厂转民用工厂花费§!: $RIGHT|-=%1$"
+ conversion_cost_civ_to_mil_factor_tt: " §Y民用工厂转军用工厂花费§!: $RIGHT|-=%1$"
+
+ sco_anarchism_drift_tt: " §Y$sco_anarchism_drift$§!: $RIGHT|+=0..2$"
+ vanwardism_drift_tt: " §Y$vanwardism_drift$§!: $RIGHT|+=0..2$"
+ sci_socialism_drift_tt: " §Y$sci_socialism_drift$§!: $RIGHT|+=0..2$"
+ con_socialism_drift_tt: " §Y$con_socialism_drift$§!: $RIGHT|+=0..2$"
+ demo_socialism_drift_tt: " §Y$demo_socialism_drift$§!: $RIGHT|+=0..2$"
+ demo_liberalism_drift_tt: " §Y$demo_liberalism_drift$§!: $RIGHT|+=0..2$"
+ demo_conservatism_drift_tt: " §Y$demo_conservatism_drift$§!: $RIGHT|+=0..2$"
+ authoritarian_drift_tt: " §Y$authoritarian_drift$§!: $RIGHT|+=0..2$"
+ fascism_drift_tt: " §Y$fascism_drift$§!: $RIGHT|+=0..2$"
+ nationalism_drift_tt: " §Y$nationalism_drift$§!: $RIGHT|+=0..2$"
+ supernationalism_drift_tt: " §Y$supernationalism_drift$§!: $RIGHT|+=0..2$"
 
  br_ideology_anarchism_ruling_tt: "§G执政党§!所属的意识形态是§Y无政府主义§!"
  br_ideology_radical_communism_ruling_tt: "§G执政党§!所属的意识形态是§Y激进共产主义§!的任意一种"

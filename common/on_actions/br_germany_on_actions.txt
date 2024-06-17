@@ -31,7 +31,8 @@ on_actions = {
 					authoritarian > 0.3
 					authoritarian > party_popularity@ruling_party
 					authoritarian > var:party_popularity@fascism
-					authoritarian > party_popularity@nationalism
+					authoritarian > var:party_popularity@nationalism
+					NOT = { has_global_flag = br_global_lux_eggs_flag }
 				}
 				LUX = {
 					country_event = { id = br_lux.1 }

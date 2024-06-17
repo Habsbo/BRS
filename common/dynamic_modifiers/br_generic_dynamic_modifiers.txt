@@ -282,3 +282,54 @@ national_industry_military_dynamic_modifier = {
 	max_fuel_factor = nim_max_fuel_factor
 	fuel_gain_factor = nim_fuel_gain_factor
 }
+
+#
+women_movement_dynamic_modifier = {
+	icon = GFX_idea_ARG_women_in_industry
+
+	enable = {
+		NOT = {
+			has_government = fascism
+			has_government = nationalism
+			has_government = supernationalism
+		}
+	}
+	
+	war_support_factor = women_movement_war_support_factor
+	conscription_factor = women_movement_conscription_factor
+	#
+	consumer_goods_expected_value = women_movement_consumer_goods_expected_value
+	#
+	research_speed_factor = women_movement_research_speed_factor
+	#
+	sco_anarchism_drift = women_movement_sco_anarchism_drift
+	vanwardism_drift = women_movement_vanwardism_drift
+	sci_socialism_drift = women_movement_sci_socialism_drift
+	con_socialism_drift = women_movement_con_socialism_drift
+	demo_socialism_drift = women_movement_demo_socialism_drift
+	#
+	industrial_capacity_factory = women_movement_industrial_capacity_factory
+	equipment_conversion_speed = women_movement_equipment_conversion_speed
+}
+#
+labour_union_dynamic_modifier = {
+	icon = GFX_idea_ARG_women_in_industry
+
+	enable = {
+		NOT = {
+			has_government = fascism
+			has_government = nationalism
+			has_government = supernationalism
+		}
+	}
+
+	#
+	stability_factor = labour_union_stability_factor
+	war_support_factor = labour_union_war_support_factor
+	#
+	research_speed_factor = labour_union_research_speed_factor
+	#
+	consumer_goods_expected_value = labour_union_consumer_goods_expected_value
+	industrial_capacity_factory = labour_union_industrial_capacity_factory
+
+}

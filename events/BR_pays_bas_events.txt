@@ -80,3 +80,204 @@ country_event = { #egg
 		ai_chance = { factor = 5 }
 	}
 }
+country_event = { #
+	id = br_lux.2
+	title = br_lux.2.title
+	desc = br_lux.2.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			#
+		}
+	}
+
+	option = {
+		name =  br_lux.2.a #
+
+		set_politics = {
+			ruling_party = democratic
+			election_frequency = 48
+			elections_allowed = yes
+		}
+
+		ai_chance = { factor = 5 }
+	}
+
+	option = {
+		name =  br_lux.2.b #
+
+		set_politics = {
+			ruling_party = democratic
+			election_frequency = 48
+			elections_allowed = yes
+		}
+
+		ai_chance = { factor = 5 }
+	}
+
+	option = {
+		name =  br_lux.2.c #
+
+		set_politics = {
+			ruling_party = democratic
+			election_frequency = 48
+			elections_allowed = yes
+		}
+
+		ai_chance = { factor = 5 }
+	}
+
+	option = {
+		name =  br_lux.2.d #
+
+		set_politics = {
+			ruling_party = democratic
+			election_frequency = 48
+			elections_allowed = yes
+		}
+
+		ai_chance = { factor = 5 }
+	}
+}
+###
+add_namespace = br_lux_hog
+#
+country_event = { #egg
+	id = br_lux_hog.1
+	title = br_lux_hog.1.title
+	desc = br_lux_hog.1.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {}
+	}
+
+	option = {
+		name =  br_lux_hog.1.a #
+
+		add_ideas = LUX_pierre_prvm_hog
+
+		ai_chance = { factor = 5 }
+	}
+
+	option = {
+		name =  br_lux_hog.1.b #
+
+		add_ideas = LUX_joseph_bech_hog
+
+		ai_chance = { factor = 5 }
+	}
+
+	option = {
+		name =  br_lux_hog.1.c #
+
+		add_ideas = LUX_pierre_fischbach_hog
+
+		ai_chance = { factor = 5 }
+	}
+
+	option = {
+		name =  br_lux_hog.1.d #
+
+		country_event = br_lux_hog.2
+
+		ai_chance = { factor = 5 }
+	}
+}
+
+country_event = { #egg
+	id = br_lux_hog.2
+	title = br_lux_hog.2.title
+	desc = br_lux_hog.2.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {}
+	}
+
+	option = {
+		name =  br_lux_hog.2.a #
+
+		add_ideas = LUX_pierre_dupong_hog
+		
+		ai_chance = { factor = 5 }
+	}
+
+	option = {
+		name =  br_lux_hog.2.b #
+
+		add_ideas = LUX_emile_reuter
+
+		ai_chance = { factor = 5 }
+	}
+
+	option = {
+		name =  br_lux_hog.2.c #
+
+		add_ideas = LUX_pierre_frieden
+
+		ai_chance = { factor = 5 }
+	}
+
+	option = {
+		name =  br_lux_hog.2.d #
+
+		country_event = br_lux_hog.3
+
+		ai_chance = { factor = 5 }
+	}
+}
+
+country_event = { #egg
+	id = br_lux_hog.3
+	title = br_lux_hog.3.title
+	desc = br_lux_hog.3.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {}
+	}
+
+	option = {
+		name =  br_lux_hog.3.a #
+
+		add_ideas = LUX_charles_marx
+		
+		ai_chance = { factor = 5 }
+	}
+
+	option = {
+		name =  br_lux_hog.3.b #
+
+		add_ideas = LUX_dominique_urbany
+
+		ai_chance = { factor = 5 }
+	}
+
+	option = {
+		name =  br_lux_hog.3.c #
+
+		ai_chance = { factor = 5 }
+	}
+
+	option = {
+		name =  br_lux_hog.3.d #
+
+		country_event = br_lux_hog.1
+
+		ai_chance = { factor = 5 }
+	}
+}
