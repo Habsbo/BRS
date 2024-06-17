@@ -1518,7 +1518,7 @@ focus_tree = {
 		}
 
 		offset = {
-			x = -6
+			x = -8
 			y = 0
 			trigger = {
 				has_completed_focus = LUX_integrate_to_democratic
@@ -1662,6 +1662,18 @@ focus_tree = {
 		x = -2
 		y = 2
 		relative_position_id = LUX_united_left_front
+
+		offset = {
+			x = 2
+			y = 0
+			trigger = {
+				has_completed_focus = LUX_united_left_front
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
 
 		cost = 8
 		
@@ -2095,7 +2107,7 @@ focus_tree = {
 		}
 
 		offset = {
-			x = -6
+			x = -4
 			y = 0
 			trigger = {
 				has_completed_focus = LUX_integrate_to_democratic
@@ -2152,12 +2164,12 @@ focus_tree = {
 		id = LUX_liberating_daitschland
 		icon = GFX_focus_attack_germany
 		prerequisite = { focus = LUX_flemish_wallonia_anarchists focus = LUX_internationale }
-		x = 1
+		x = -3
 		y = 1
-		relative_position_id = LUX_flemish_wallonia_anarchists
+		relative_position_id = LUX_internationale
 
 		offset = {
-			x = -1
+			x = 1
 			y = 0
 			trigger = {
 				has_completed_focus = LUX_united_left_front
@@ -2169,7 +2181,7 @@ focus_tree = {
 		}
 
 		offset = {
-			x = -6
+			x = 2
 			y = 0
 			trigger = {
 				has_completed_focus = LUX_integrate_to_democratic
@@ -2181,7 +2193,7 @@ focus_tree = {
 		}
 
 		offset = {
-			x = -10
+			x = 2
 			y = 0
 			trigger = {
 				has_completed_focus = LUX_monarchy_of_luxembourg
@@ -2193,7 +2205,7 @@ focus_tree = {
 		}
 
 		offset = {
-			x = 6
+			x = 12
 			y = 0
 			trigger = {
 				has_completed_focus = LUX_tolerate_moderate_socialists
@@ -2234,12 +2246,12 @@ focus_tree = {
 		id = LUX_liberating_frankreich
 		icon = GFX_focus_attack_france
 		prerequisite = { focus = LUX_flemish_wallonia_anarchists focus = LUX_internationale }
-		x = 3
+		x = -1
 		y = 1
-		relative_position_id = LUX_flemish_wallonia_anarchists
+		relative_position_id = LUX_internationale
 
 		offset = {
-			x = -1
+			x = 1
 			y = 0
 			trigger = {
 				has_completed_focus = LUX_united_left_front
@@ -2251,7 +2263,7 @@ focus_tree = {
 		}
 
 		offset = {
-			x = -6
+			x = 2
 			y = 0
 			trigger = {
 				has_completed_focus = LUX_integrate_to_democratic
@@ -2263,7 +2275,7 @@ focus_tree = {
 		}
 
 		offset = {
-			x = -10
+			x = 2
 			y = 0
 			trigger = {
 				has_completed_focus = LUX_monarchy_of_luxembourg
@@ -2275,7 +2287,7 @@ focus_tree = {
 		}
 
 		offset = {
-			x = 6
+			x = 12
 			y = 0
 			trigger = {
 				has_completed_focus = LUX_tolerate_moderate_socialists
@@ -2385,6 +2397,30 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = LUX_united_left_front
+
+		offset = {
+			x = -7
+			y = 0
+			trigger = {
+				has_completed_focus = LUX_united_left_front
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
+
+		offset = {
+			x = 2
+			y = 0
+			trigger = {
+				has_completed_focus = LUX_integrate_to_democratic
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
 
 		offset = {
 			x = -6
@@ -2505,6 +2541,30 @@ focus_tree = {
 		x = 6
 		y = 1
 		relative_position_id = LUX_united_left_front
+
+		offset = {
+			x = -1
+			y = 0
+			trigger = {
+				has_completed_focus = LUX_united_left_front
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
+
+		offset = {
+			x = 6
+			y = 0
+			trigger = {
+				has_completed_focus = LUX_integrate_to_democratic
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
 
 		offset = {
 			x = -6
@@ -2839,6 +2899,18 @@ focus_tree = {
 			}
 		}
 
+		offset = {
+			x = -2
+			y = 0
+			trigger = {
+				has_completed_focus = LUX_integrate_to_democratic
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
+
 		cost = 8
 		
 		available = {}
@@ -2986,7 +3058,7 @@ focus_tree = {
 		id = LUX_dancing_round_europa
 		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = LUX_tolerate_moderate_socialists focus = LUX_defend_territory }
-		x = -1
+		x = 0
 		y = 2
 		relative_position_id = LUX_defend_territory
 
@@ -3281,6 +3353,18 @@ focus_tree = {
 		y = 1
 		relative_position_id = LUX_tolerate_moderate_socialists
 
+		offset = {
+			x = 2
+			y = 0
+			trigger = {
+				has_completed_focus = LUX_united_left_front
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
+
 		cost = 8
 		
 		available = {}
@@ -3306,6 +3390,18 @@ focus_tree = {
 		x = -4
 		y = 1
 		relative_position_id = LUX_joint_governance
+
+		offset = {
+			x = 2
+			y = 0
+			trigger = {
+				has_completed_focus = LUX_integrate_to_democratic
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
 
 		offset = {
 			x = 2
@@ -3347,6 +3443,18 @@ focus_tree = {
 			x = 2
 			y = 0
 			trigger = {
+				has_completed_focus = LUX_integrate_to_democratic
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
+
+		offset = {
+			x = 2
+			y = 0
+			trigger = {
 				has_completed_focus = LUX_tolerate_moderate_socialists
 				has_game_rule = {
 					rule = obsolete_focus_branches_visibility
@@ -3378,6 +3486,18 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = LUX_joint_governance
+
+		offset = {
+			x = 2
+			y = 0
+			trigger = {
+				has_completed_focus = LUX_integrate_to_democratic
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
 
 		offset = {
 			x = 2
@@ -3415,6 +3535,18 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = LUX_providing_housing
+
+		offset = {
+			x = -2
+			y = 0
+			trigger = {
+				has_completed_focus = LUX_integrate_to_democratic
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
 
 		offset = {
 			x = 2
@@ -3583,6 +3715,18 @@ focus_tree = {
 		y = 2
 		relative_position_id = LUX_strengthen_loyalists
 
+		offset = {
+			x = -2
+			y = 0
+			trigger = {
+				has_completed_focus = LUX_integrate_to_democratic
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
+
 		cost = 8
 		
 		available = {}
@@ -3704,7 +3848,7 @@ focus_tree = {
 		icon = GFX_focus_ger_oppose_hitler
 		prerequisite = { focus = LUX_luxembourg_nation focus = LUX_defend_territory }
 		mutually_exclusive = { focus = LUX_ture_frankish_nation }
-		x = -2
+		x = 0
 		y = 2
 		relative_position_id = LUX_luxembourg_nation
 
@@ -3977,7 +4121,7 @@ focus_tree = {
 		icon = GFX_focus_generic_fascist_propaganda
 		prerequisite = { focus = LUX_luxembourg_nation }
 		mutually_exclusive = { focus = LUX_germany_union }
-		x = 2
+		x = 4
 		y = 2
 		relative_position_id = LUX_luxembourg_nation
 

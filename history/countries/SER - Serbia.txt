@@ -165,7 +165,7 @@ declare_war_on = {
 	type = take_core_state
 }
 
-set_cosmetic_tag = SER_MNT_BOS_CRO
+set_cosmetic_tag = SER_CRO
 
 add_ideas = {
 	br_laws_dictatorship

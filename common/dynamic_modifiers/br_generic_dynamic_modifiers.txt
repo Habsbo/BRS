@@ -152,7 +152,6 @@ political_commissar_dynamic_modifier = {
 			has_government = vanwardism
 			has_government = sci_socialism
 			has_government = con_socialism
-			has_government = demo_socialism
 		}
 	}
 
@@ -171,6 +170,7 @@ officer_cap_dynamic_modifier = {
 
 	enable = {
 		OR = {
+			has_government = demo_socialism
 			has_government = demo_liberalism
 			has_government = demo_conservatism
 			has_government = authoritarian
