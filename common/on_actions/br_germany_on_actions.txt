@@ -28,10 +28,7 @@ on_actions = {
 						has_idea = br_laws_cleric
 					}
 					has_idea = br_laws_spiritual
-					authoritarian > 0.3
 					authoritarian > party_popularity@ruling_party
-					authoritarian > var:party_popularity@fascism
-					authoritarian > var:party_popularity@nationalism
 					NOT = { has_global_flag = br_global_lux_eggs_flag }
 				}
 				LUX = {
