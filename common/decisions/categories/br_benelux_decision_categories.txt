@@ -1,7 +1,22 @@
 #pays - bas
 
 #bel
+br_electrification_of_benelux = {
+	icon = GFX_decision_category_generic_prospect_for_resources
+	#picture = GFX_decision_cat_picture_government_in_exile
 
+	allowed = {
+		OR = {
+			original_tag = HOL
+			original_tag = BEL
+			original_tag = LUX
+		}
+	}
+	#visible = {  }
+
+	priority = 1
+	visible_when_empty = no
+}
 #lux
 br_hearts_of_lux = {
 	icon = GFX_generic_democracy

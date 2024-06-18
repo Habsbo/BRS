@@ -870,3 +870,239 @@ br_hearts_of_lux = {
 		ai_will_do = { base = 10 }
 	}
 }
+
+br_electrification_of_benelux = {
+	br_electrification_of_benelux_mission.hol = {
+		icon = generic_electricity
+		activation = {
+			#
+		}
+
+		available = {
+			7 = { infrastructure > 3 industrial_complex > 7 }
+			35 = { infrastructure > 3 industrial_complex > 7 }
+			36 = { infrastructure > 3 industrial_complex > 7 }
+		}
+
+		cancel_trigger = {
+			OR = {
+				has_civil_war = yes
+				AND = {
+					7 = { NOT = { is_fully_controlled_by = root } }
+					35 = { NOT = { is_fully_controlled_by = root } }
+					36 = { NOT = { is_fully_controlled_by = root } }
+				}
+			}
+		}
+		
+		is_good = yes
+		days_mission_timeout = 365
+		selectable_mission = no
+
+		complete_effect = {
+			#
+		}
+
+		timeout_effect = {
+			#
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				OR = {
+					state = 7
+					state = 35
+					state = 36
+				}
+			}
+		}
+	}
+	br_electrification_of_benelux_mission.vlaams = {
+		icon = generic_electricity
+		activation = {
+			#
+		}
+
+		available = {
+			6 = { infrastructure > 3 industrial_complex > 7 }
+		}
+
+		cancel_trigger = {
+			OR = {
+				has_civil_war = yes
+				6 = {
+					NOT = { is_fully_controlled_by = root }
+				}
+			}
+		}
+		
+		is_good = yes
+		days_mission_timeout = 365
+		selectable_mission = no
+
+		complete_effect = {
+			#
+		}
+
+		timeout_effect = {
+			#
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				state = 6
+			}
+		}
+	}
+	br_electrification_of_benelux_mission.wallonia = {
+		icon = generic_electricity
+		activation = {
+			#
+		}
+
+		available = {
+			34 = { infrastructure > 3 industrial_complex > 7 }
+		}
+
+		cancel_trigger = {
+			OR = {
+				has_civil_war = yes
+				34 = {
+					NOT = { is_fully_controlled_by = root }
+				}
+			}
+		}
+		
+		is_good = yes
+		days_mission_timeout = 365
+		selectable_mission = no
+
+		complete_effect = {
+			#
+		}
+
+		timeout_effect = {
+			#
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				state = 34
+			}
+		}
+	}
+	br_electrification_of_benelux_mission.luxembourg = {
+		icon = generic_electricity
+		activation = {
+			#
+		}
+
+		available = {
+			8 = { infrastructure > 3 industrial_complex > 7 }
+		}
+
+		cancel_trigger = {
+			OR = {
+				has_civil_war = yes
+				8 = {
+					NOT = { is_fully_controlled_by = root }
+				}
+			}
+		}
+		
+		is_good = yes
+		days_mission_timeout = 365
+		selectable_mission = no
+
+		complete_effect = {
+			#
+		}
+
+		timeout_effect = {
+			#
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				state = 8
+			}
+		}
+	}
+	br_zoning_for_benelux_electrificating = {
+		icon = generic_construction
+		target_root_trigger = {
+			#
+		}
+		target_trigger = {
+			FROM = {
+				hidden_trigger = {
+					OR = {
+						state = 6
+						state = 7
+						state = 8
+						state = 34
+						state = 35
+						state = 36
+					}
+				}
+				is_owned_by = root
+			}
+		}
+
+		cost = 0
+
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 2
+			production_speed_infrastructure_factor = 0.05
+			cic_construction_boost_factor = 0.10
+		}
+
+		state_target = yes
+		on_map_mode = map_and_decisions_view
+
+		complete_effect = {
+			FROM = {
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	br_construction_for_benelux_electrificating = {
+		icon = generic_construction
+		target_root_trigger = {
+			#
+		}
+		target_trigger = {
+			FROM = {
+				OR = {
+					state = 6
+					state = 7
+					state = 8
+					state = 34
+					state = 35
+					state = 36
+				}
+				free_building_slots = { building = industrial_complex size > 0 include_locked = no }
+				is_owned_by = root
+			}
+		}
+
+		cost = 0
+
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+
+		state_target = yes
+		on_map_mode = map_and_decisions_view
+
+		complete_effect = {
+			FROM = {
+				add_building_construction = { type = industrial_complex level = 1 }
+			}
+		}
+	}
+}

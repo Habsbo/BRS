@@ -4,6 +4,25 @@ ideas = {
 	}
 	
 	country = {
+###bel
+		BEL_spoken_conflicts = {
+			picture = generic_neutrality_drift_bonus
+
+			removal_cost = -1
+
+			allowed = { always = yes }
+
+			allowed_civil_war = { always = yes }
+
+			#on_add = {}
+
+			#on_remove = {}
+
+			modifier = {
+				stability_factor = -0.10
+				stability_weekly_factor = -0.50
+			}
+		}
 ###lux
 		LUX_crisis_awareness_idea = {
 			picture = generic_pp_unity_bonus

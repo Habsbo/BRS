@@ -313,7 +313,7 @@ women_movement_dynamic_modifier = {
 }
 #
 labour_union_dynamic_modifier = {
-	icon = GFX_idea_ARG_women_in_industry
+	icon = GFX_idea_hol_haven_of_tolerance
 
 	enable = {
 		NOT = {

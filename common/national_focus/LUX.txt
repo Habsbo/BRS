@@ -1585,7 +1585,11 @@ focus_tree = {
 			}
 		}
 		
-		bypass = {}
+		bypass = {
+			NOT = {
+				has_idea = br_laws_monarchy
+			}
+		}
 		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -1656,7 +1660,12 @@ focus_tree = {
 		
 		available = {}
 		
-		bypass = {}
+		bypass = {
+			OR = {
+				br_ideology_radical_communism_ruling = yes
+				br_ideology_socialism_ruling = yes
+			}
+		}
 		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -1712,6 +1721,8 @@ focus_tree = {
 		complete_tooltip = {}
 		
 		completion_reward = {
+			#
+			country_event = br_lux.2
 			#
 			add_popularity = { ideology = sco_anarchism popularity = 0.03 }
 			add_popularity = { ideology = vanwardism popularity = 0.03 }
@@ -1881,7 +1892,11 @@ focus_tree = {
 		
 		complete_tooltip = {}
 		
-		completion_reward = {}
+		completion_reward = {
+			set_rule = {
+				can_create_factions = yes
+			}
+		}
 
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		
@@ -1897,9 +1912,21 @@ focus_tree = {
 
 		cost = 8
 		
-		available = {}
+		available = {
+			BEL = {
+				has_stability < 0.30
+			}
+		}
 		
-		bypass = {}
+		bypass = {
+			BEL = {
+				OR = {
+					exists = no
+					has_capitulated = yes
+					has_civil_war = yes
+				}
+			}
+		}
 		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -1907,7 +1934,14 @@ focus_tree = {
 		
 		complete_tooltip = {}
 		
-		completion_reward = {}
+		completion_reward = {
+			if = {
+				limit = {
+					
+				}
+				country_event = br_lux.11
+			}
+		}
 
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		

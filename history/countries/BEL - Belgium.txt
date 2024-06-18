@@ -77,4 +77,23 @@ set_popularities = {
 }
 
 set_convoys = 80
-set_stability = 0.75
+set_stability = 0.65
+set_war_support = 0.20
+
+add_ideas = {
+	#laws
+	disarmed_nation
+	civilian_economy
+	uncontrolled_exports
+	#br laws
+	br_laws_parliamentarism
+	br_laws_monarchy
+	br_laws_qualification
+	br_laws_mainstream
+	br_laws_religious_people
+	br_laws_loyalist
+	#head of gov
+
+	#national spirits
+	BEL_spoken_conflicts
+}

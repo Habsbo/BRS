@@ -92,14 +92,28 @@ country_event = { #
 	immediate = {
 		hidden_effect = {
 			#
+			add_ideas = br_laws_committee
+			add_ideas = br_laws_proletariat
+			if = {
+				limit = {
+					OR = {
+						has_idea = br_laws_suffrage_prohibited
+						has_idea = br_laws_landowner
+						has_idea = br_laws_asset
+					}
+				}
+				add_ideas = br_laws_qualification
+			}
 		}
 	}
 
 	option = {
-		name =  br_lux.2.a #
+		name = br_lux.2.a #
+		
+		complete_national_focus = LUX_communism_side
 
 		set_politics = {
-			ruling_party = democratic
+			ruling_party = sco_anarchism
 			election_frequency = 48
 			elections_allowed = yes
 		}
@@ -109,9 +123,11 @@ country_event = { #
 
 	option = {
 		name =  br_lux.2.b #
+		
+		complete_national_focus = LUX_communism_side
 
 		set_politics = {
-			ruling_party = democratic
+			ruling_party = vanwardism
 			election_frequency = 48
 			elections_allowed = yes
 		}
@@ -121,9 +137,11 @@ country_event = { #
 
 	option = {
 		name =  br_lux.2.c #
+		
+		complete_national_focus = LUX_socialism_side
 
 		set_politics = {
-			ruling_party = democratic
+			ruling_party = sci_socialism
 			election_frequency = 48
 			elections_allowed = yes
 		}
@@ -133,13 +151,51 @@ country_event = { #
 
 	option = {
 		name =  br_lux.2.d #
+		
+		complete_national_focus = LUX_socialism_side
 
 		set_politics = {
-			ruling_party = democratic
+			ruling_party = con_socialism
 			election_frequency = 48
 			elections_allowed = yes
 		}
 
+		ai_chance = { factor = 5 }
+	}
+}
+country_event = { #
+	id = br_lux.11
+	title = br_lux.11.title
+	desc = br_lux.11.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			#
+		}
+	}
+
+	option = {
+		name = br_lux.11.a #
+
+		BEL = {
+			start_civil_war = {
+				ruling_party = BEL
+				# Original country's ideology changes to communism
+				ideology = sco_anarchism
+				# Breakaway gets old ideology of ROOT
+				size = 0.8
+				capital = 34
+				states = { 34 }
+				keep_unit_leaders = {  }
+				keep_political_leader = yes
+				keep_political_party_members = yes
+			}
+		}
+		
 		ai_chance = { factor = 5 }
 	}
 }

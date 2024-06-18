@@ -1,5 +1,7 @@
 ﻿l_simp_chinese:
 #ideas
+ BEL_spoken_conflicts: "语言矛盾"
+ BEL_spoken_conflicts_desc: ""
  LUX_crisis_awareness_idea: "危机意识"
  LUX_crisis_awareness_idea_desc: ""
  LUX_consolidate_charter_idea: "[LUX.Getadjective]国家宪法"
@@ -11,6 +13,7 @@
  LUX_women_movement_1: "$LUX_women_movement$"
  LUX_women_movement_1_desc: ""
 # focus
+
  LUX_economic_effort: "重视经济"
  LUX_economic_effort_desc: ""
  LUX_industrial_upgrading_of_steel: "大炼钢铁"
@@ -282,6 +285,14 @@
  LUX_fortress_of_territory_tt: "为一个自己的§Y省份§!建造2个§Y军用工厂§!，优先为§Y首都§!。\n为每个§Y省份§!的单元格建造二级的§Y陆上要塞§!。"
 
 #
+ br_electrification_of_benelux: "通往电气之路：[root.GetAdjective]"
+ br_electrification_of_benelux_mission.hol: "低地电气化"
+ br_electrification_of_benelux_mission.vlaams: "弗拉芒电气化"
+ br_electrification_of_benelux_mission.wallonia: "瓦隆电气化"
+ br_electrification_of_benelux_mission.luxembourg: "卢森堡电气化"
+ br_zoning_for_benelux_electrificating: "为[from.GetName]的电气化规划土地"
+ br_construction_for_benelux_electrificating: "为[from.GetName]的电气化建设电网"
+
  br_hearts_of_lux: "卢森堡的雄心"
  br_hearts_of_lux_desc: "卢森堡的雄心"
  br_hearts_of_lux.1: "统一低地德意志"
@@ -309,10 +320,12 @@
  br_lux.1.title: "一场离奇的发布会"
  br_lux.1.desc: "一名修女宣称自己得到上帝的启示，卢森堡的当今大公有一位母系先祖同时流淌着卢森堡家族、加洛林家族和哈布斯堡家族的血液，她应当指引她的后代恢复被法国人非法废除的神圣帝国，直到加洛林与卢森堡的疆域重新归于帝国的统治之下。"
  br_lux.1.a: "不，主啊，我还没疯！"
- br_lux.2.title: ""
+ br_lux.2.title: "左翼政府选举"
  br_lux.2.desc: ""
- br_lux.3.a: ""
- br_lux.3.b: ""
+ br_lux.2.a: "无政府主义万岁！"
+ br_lux.2.b: "工人万岁！无产阶级万岁！"
+ br_lux.2.c: "一切权力归于党中央！"
+ br_lux.2.d: "党是无产阶级人民的喉舌。"
  br_lux_hog.1.title: "下一任的[root.GetAdjective]政府首脑"
  br_lux_hog.1.desc: ""
  br_lux_hog.1.a: "皮埃尔·普鲁姆。"
@@ -335,11 +348,29 @@
 
  BEL_beating_wallonia: "瓦隆的工业心脏"
  BEL_beating_wallonia_desc: ""
+ BEL_electrification_of_wallonia: "瓦隆尼亚电气化"
+ BEL_electrification_of_wallonia_desc: ""
 
  BEL_revitalization_of_vlaanderen: "弗兰德经济复兴"
  BEL_revitalization_of_vlaanderen_desc: ""
  
+ BEL_wallonne_keep_moving: "瓦隆尼亚稳步迈进"
+ BEL_wallonne_keep_moving_desc: ""
+ BEL_observe_as_neutral: "均衡中立"
+ BEL_observe_as_neutral_desc: ""
+ BEL_vlaams_rising: "弗拉芒崛起"
+ BEL_vlaams_rising_desc: ""
 
+ BEL_france_side: "偏向法国一侧"
+ BEL_france_side_desc: ""
+ BEL_dutch_side: "偏向德意志一侧"
+ BEL_dutch_side_desc: ""
+ BEL_labour_union_acts: "工会法案"
+ BEL_labour_union_acts_desc: ""
+ BEL_strengthen_power_belgium: "强化对比利时政权的共识"
+ BEL_strengthen_power_belgium_desc: ""
+ BEL_suppress_worker_revolution: "镇压工人运动"
+ BEL_suppress_worker_revolution_desc: ""
  : ""
  _desc: ""
  : ""
