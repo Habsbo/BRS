@@ -47,7 +47,7 @@ ideas = {
 		}
 		#
 		LUX_consolidate_charter_idea = {
-			picture = idea_generic_constitutional_guarantees
+			picture = generic_constitutional_guarantees
 
 			removal_cost = -1
 
