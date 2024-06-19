@@ -193,6 +193,8 @@ country_event = { #
 				keep_unit_leaders = {  }
 				keep_political_leader = yes
 				keep_political_party_members = yes
+				
+				set_cosmetic_tag = BEL_wallonia_anarchists
 			}
 		}
 		

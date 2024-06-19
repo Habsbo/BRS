@@ -228,4 +228,64 @@ leader_traits = {
 
 		ai_will_do = { factor = 0 }
 	}
+
+	knight_king_hog = {
+		random = no
+		sprite = 13
+		
+		war_support_factor = 0.10
+		stability_factor = -0.10
+		conscription_factor = 0.50
+		army_core_attack_factor = 0.10
+		army_core_defence_factor = 0.10
+		army_org_regain = 0.50
+
+		ai_will_do = { factor = 0 }
+	}
+
+	progressive_gentlemen = {
+		random = no
+		sprite = 13
+
+		political_power_factor = 0.05
+		political_advisor_cost_factor = -0.05
+		stability_factor = 0.10
+		drift_defence_factor = -0.20
+	}
+
+	seasoned_politician = {
+		random = no
+		sprite = 13
+
+		political_power_factor = 0.05
+		political_advisor_cost_factor = -0.05
+		stability_factor = 0.10
+		improve_relations_maintain_cost_factor = -0.10
+	}
+
+	conservative_royalist = {
+		random = no
+		sprite = 13
+
+		political_power_factor = 0.05
+		stability_factor = 0.05
+		legitimacy_gain_factor = 0.15
+		exiled_government_weekly_manpower = 100
+
+	}
+
+	skilled_in_finance = {
+		random = no
+		sprite = 13
+
+		consumer_goods_expected_value = -0.15
+	}
+
+	professional_intellectual = {
+		random = no
+		sprite = 13
+
+		political_advisor_cost_factor = -0.25
+		stability_factor = 0.05
+	}
 }

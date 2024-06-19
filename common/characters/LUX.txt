@@ -56,13 +56,9 @@ characters={
 				br_head_of_gov_generic_trigger = yes
 				br_ideology_fascism_nio = yes
 			}
-			traits = { generic_head_of_gov }
-			modifier = {
-				political_power_gain = 0.15
-				stability_weekly = 0.01
-			}
+			traits = { progressive_gentlemen }
 
-			cost = 100
+			cost = 0
 			can_be_fired = no
 			ai_will_do = { factor = 1.000 }
 		}
@@ -70,7 +66,9 @@ characters={
 			slot = political_advisor
 			idea_token = LUX_pierre_prvm
 			allowed = { always = yes }
-			available = { br_ideology_radical_communism_nio = yes }
+			available = {
+				br_ideology_radical_communism_nio = yes
+			}
 			traits = { democractic_coordinator }
 
 			cost = 100
@@ -93,11 +91,7 @@ characters={
 				br_head_of_gov_generic_trigger = yes
 				br_ideology_fascism_nio = yes
 			}
-			traits = { generic_head_of_gov }
-			modifier = {
-				political_power_gain = 0.15
-				stability_weekly = 0.01
-			}
+			traits = { seasoned_politician }
 
 			cost = 0
 			can_be_fired = no
@@ -108,7 +102,7 @@ characters={
 			idea_token = LUX_joseph_bech
 			allowed = { always = yes }
 			available = { br_ideology_radical_communism_nio = yes }
-			traits = { political_dancer }
+			traits = { silent_workhorse }
 
 			cost = 100
 			ai_will_do = { factor = 1.000 }
@@ -166,13 +160,7 @@ characters={
 				br_head_of_gov_generic_trigger = yes
 				br_ideology_fascism_nio = yes
 			}
-			traits = { generic_head_of_gov }
-			modifier = {
-				political_power_gain = 0.25
-				stability_factor = 0.05
-				legitimacy_gain_factor = 0.15
-				exiled_government_weekly_manpower = 100
-			}
+			traits = { conservative_royalist }
 
 			cost = 0
 			can_be_fired = no
@@ -228,7 +216,7 @@ characters={
 				br_head_of_gov_generic_trigger = yes
 				br_ideology_fascism_nio = yes
 			}
-			traits = { generic_head_of_gov }
+			traits = { democractic_coordinator }
 			modifier = { demo_conservatism_drift = 0.05 }
 
 			cost = 0
@@ -240,10 +228,53 @@ characters={
 			idea_token = LUX_pierre_frieden
 			allowed = { always = yes }
 			available = { br_ideology_radical_communism_nio = yes }
-			traits = { democractic_coordinator }
+			traits = { professional_intellectual }
 
 			cost = 100
 			ai_will_do = { factor = 1.000 }
+		}
+	}
+###
+	LUX_frédéric_nagelmackers={ #弗雷德里克·纳吉麦克
+		name=LUX_frederic_nagelmackers
+		portraits={
+			civilian={
+				large=GFX_portrait_Frederic_Nagelmackers
+			}
+		}
+		country_leader={
+			ideology=fascism_ideology
+			traits={ editor }
+			expire="1954.1.1.12"
+			id=-1
+		}
+	}
+	LUX_jean_pirson={ #让·皮尔森
+		name=LUX_jean_pirson
+		portraits={
+			civilian={
+				large=GFX_portrait_Jean_Pirson
+			}
+		}
+		country_leader={
+			ideology=oligarchism
+			traits={ quartermaster_general }
+			expire="1942.1.1.12"
+			id=-1
+		}
+	}
+	LUX_gustave_lebeau={ #古斯塔夫·勒博
+		name=LUX_gustave_lebeau
+		portraits={
+			civilian={
+				large=GFX_portrait_Gustave_Lebeau
+			}
+		}
+		country_leader={
+			ideology=stalinism
+			traits={ reluctant_interventionist }
+			expire="1951.1.1.12"
+			id=-1
 		}
 	}
 ### communists ###
@@ -348,79 +379,72 @@ characters={
 		}
 	}
 ###advisors ###
-	LUX_frédéric_nagelmackers={ #弗雷德里克·纳吉麦克
-		name=LUX_frederic_nagelmackers
+	#
+	LUX_pierre_werner={ #皮埃尔·维尔纳
+		name=LUX_pierre_werner
 		portraits={
 			civilian={
-				large=GFX_portrait_Frederic_Nagelmackers
+				large="GFX_Portrait_Europe_Generic_2"
+				small="GFX_idea_generic_political_advisor_europe_2"
 			}
 		}
-		country_leader={
-			ideology=fascism_ideology
-			traits={ editor }
-			expire="1954.1.1.12"
-			id=-1
+		advisor = {
+			slot = political_advisor
+			idea_token = LUX_pierre_werner
+			allowed = { always = yes }
+			available = { br_ideology_radical_communism_nio = yes }
+			traits = { skilled_in_finance }
+
+			cost = 150
+			ai_will_do = { factor = 1.000 }
 		}
 	}
-	LUX_jean_pirson={ #让·皮尔森
-		name=LUX_jean_pirson
-		portraits={
-			civilian={
-				large=GFX_portrait_Jean_Pirson
-			}
-		}
-		country_leader={
-			ideology=oligarchism
-			traits={ quartermaster_general }
-			expire="1942.1.1.12"
-			id=-1
-		}
-	}
-	LUX_damien_roeser={ #达米恩·勒泽
-		name=LUX_damien_roeser
+	LUX_martin_karp={
+		name=LUX_martin_karp
 		portraits={
 			army={
-				small="GFX_idea_generic_air_europe_2"
+				small="GFX_idea_generic_political_advisor_europe_2"
 			}
 		}
 		advisor={
-			slot = high_command
-			idea_token = LUX_damien_roeser
-			ledger = air
-				allowed = {
-					original_tag = LUX
-				}
-				traits = {
-					air_air_superiority_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
+			slot = political_advisor
+			idea_token = LUX_martin_karp
+			allowed  = { original_tag  = LUX }
+			traits  = { war_industrialist }
 		}
-		# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
 	}
-	LUX_florent_destriveaux={ #弗洛伦特·德西提沃，存疑
-		# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
-		name="Florent Destriveaux"
+	LUX_pierre_krier={ #克里尔
+		name=LUX_pierre_krier
 		portraits={
 			army={
-				small="GFX_idea_generic_navy_europe_1"
+				small="GFX_idea_generic_political_advisor_europe_3"
+			}
+		}	
+		advisor={
+			slot = political_advisor
+			idea_token = LUX_pierre_krier
+			allowed  = { original_tag  = LUX }
+			traits  = { captain_of_industry }
+		}
+	}
+	### army ###
+	LUX_lambert_schaus={ #兰伯特·邵斯
+		name=LUX_lambert_schaus
+		portraits={
+			army={
+				small="GFX_idea_generic_army_europe_3"
 			}
 		}
 		advisor={
-			cost = 100
+			cost = 50
 			
-			slot = theorist
-			idea_token = LUX_florent_destriveaux
-			ledger = navy
-				allowed = {
-					original_tag = LUX
-				}
-				
-				traits = {
-					naval_theorist
-				}
+			slot = army_chief
+			idea_token = LUX_lambert_schaus
+			ledger = army
+			
+			allowed = { original_tag = LUX }
+			
+			traits = { army_regrouping_2 }
 		}
 	}
 	LUX_alexander_von_falkenhausen={ #法肯豪森
@@ -439,64 +463,24 @@ characters={
 			ai_will_do = { factor = 1.000 }
 		}
 	}
-	LUX_gustave_lebeau={ #古斯塔夫·勒博
-		name=LUX_gustave_lebeau
-		portraits={
-			civilian={
-				large=GFX_portrait_Gustave_Lebeau
-			}
-		}
-		country_leader={
-			ideology=stalinism
-			traits={ reluctant_interventionist }
-			expire="1951.1.1.12"
-			id=-1
-		}
-	}
-	LUX_guillaume_soisson={ #纪尧姆·苏瓦松
-		name=LUX_guillaume_soisson
+	LUX_emile_speller={ #埃米尔·斯佩勒
+		name=LUX_emile_speller
 		portraits={
 			army={
-				small="GFX_idea_generic_air_europe_3"
+				small="GFX_idea_generic_army_europe_4"
 			}
 		}
 		advisor={
-			slot = air_chief
-			idea_token = LUX_guillaume_soisson
-			allowed = {
-					original_tag = LUX
-				}
-				traits = {
-					air_chief_reform_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
-		}
-	}
-	LUX_alex_federspiel={ #埃里克斯·菲德斯宾，不确定
-		name=LUX_alex_federspiel
-		portraits={
-			army={
-				small="GFX_idea_generic_army_europe_1"
-			}
-		}
-		advisor={
+			slot = army_chief
+			idea_token = LUX_emile_speller
+			allowed = { original_tag = LUX }
+			traits = { army_chief_defensive_2 }
 			cost = 100
-			
-			slot = theorist
-			idea_token = LUX_alex_federspiel
-			ledger = army
-				allowed = {
-					original_tag = LUX
-				}
-				
-				traits = {
-					military_theorist
-				}
+			ai_will_do = { factor = 1.000 }
 		}
 	}
+
+	### navy ###
 	LUX_henri_ahnen={ #亨利·埃门，不确定
 		name=LUX_henri_ahnen
 		portraits={
@@ -513,66 +497,89 @@ characters={
 			ai_will_do = { factor = 1.000 }
 		}
 	}
-	LUX_emile_speller={
-		name=LUX_emile_speller
+	LUX_paul_medinger={ #保罗
+		name=LUX_paul_medinger
 		portraits={
 			army={
-				small="GFX_idea_generic_army_europe_4"
+				small="GFX_idea_generic_navy_europe_3"
 			}
 		}
 		advisor={
-			slot = army_chief
-			idea_token = LUX_emile_speller
+			slot = navy_chief
+			idea_token = LUX_paul_medinger
 			allowed = { original_tag = LUX }
-			traits = { army_chief_defensive_2 }
+			traits = { navy_chief_decisive_battle_2 }
 			cost = 100
 			ai_will_do = { factor = 1.000 }
 		}
 	}
-	LUX_francois_schammel={
-		name=LUX_francois_schammel
+	### air ###
+	LUX_guillaume_soisson={ #纪尧姆·苏瓦松
+		name=LUX_guillaume_soisson
+		portraits={
+			army={
+				small="GFX_idea_generic_air_europe_3"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = LUX_guillaume_soisson
+			allowed = { original_tag = LUX }
+			traits = { air_chief_reform_2 }
+			cost = 100
+			ai_will_do = { factor = 1.000 }
+		}
+	}
+	LUX_nicholas_diedrich={ #迪德里克
+		name=LUX_nicholas_diedrich
+		portraits={
+			army={
+				small="GFX_idea_generic_air_europe_1"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = LUX_nicholas_diedrich
+			allowed = { original_tag = LUX }
+			traits = { air_chief_ground_support_2 }
+			cost = 100
+			ai_will_do = { factor = 1.000 }
+		}
+	}
+	### theorist ###
+	LUX_alex_federspiel={ #埃里克斯·菲德斯宾，不确定
+		name=LUX_alex_federspiel
 		portraits={
 			army={
 				small="GFX_idea_generic_army_europe_1"
 			}
 		}
 		advisor={
-			slot = high_command
-			idea_token = LUX_francois_schammel
+			cost = 100
+			
+			slot = theorist
+			idea_token = LUX_alex_federspiel
 			ledger = army
-				allowed = {
-					original_tag = LUX
-				}
-				traits = {
-					army_infantry_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
+			allowed = { original_tag = LUX }
+			traits = { military_theorist }
 		}
 	}
-	LUX_aloyse_glodt={ #埃洛伊·格洛特
-		name=LUX_aloyse_glodt
+	LUX_florent_destriveaux={ #弗洛伦特·德西提沃，存疑
+		# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Florent Destriveaux"
 		portraits={
 			army={
-				small="GFX_idea_generic_army_europe_3"
+				small="GFX_idea_generic_navy_europe_1"
 			}
 		}
 		advisor={
-			slot = high_command
-			idea_token = LUX_aloyse_glodt
-			ledger = army
-				allowed = {
-					original_tag = LUX
-				}
-				traits = {
-					army_armored_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
+			cost = 100
+			
+			slot = theorist
+			idea_token = LUX_florent_destriveaux
+			ledger = navy
+			allowed = { original_tag = LUX }
+			traits = { naval_theorist }
 		}
 	}
 	LUX_nicolas_de_dixmude={ #尼古拉斯
@@ -588,93 +595,62 @@ characters={
 			slot = theorist
 			idea_token = LUX_nicolas_de_dixmude
 			ledger = air
-				allowed = {
-					original_tag = LUX
-				}
-				
-				traits = {
-					air_warfare_theorist
-				}
+			allowed = { original_tag = LUX }
+			traits = { air_warfare_theorist }
 		}
 	}
-	LUX_paul_medinger={ #保罗
-		name=LUX_paul_medinger
+
+	###high command ###
+	LUX_damien_roeser={ #达米恩·勒泽
+		name=LUX_damien_roeser
 		portraits={
 			army={
-				small="GFX_idea_generic_navy_europe_3"
+				small="GFX_idea_generic_air_europe_2"
 			}
 		}
 		advisor={
-			slot = navy_chief
-			idea_token = LUX_paul_medinger
-			allowed = {
-					original_tag = LUX
-				}
-				traits = {
-					navy_chief_decisive_battle_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
+			slot = high_command
+			idea_token = LUX_damien_roeser
+			ledger = air
+			allowed = { original_tag = LUX }
+			traits = { air_air_superiority_2 }
+			cost = 100
+			ai_will_do = { factor = 1.000 }
 		}
+		# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
 	}
-	LUX_nicholas_diedrich={ #迪德里克
-		name=LUX_nicholas_diedrich
+	LUX_francois_schammel={ #
+		name=LUX_francois_schammel
 		portraits={
 			army={
-				small="GFX_idea_generic_air_europe_1"
+				small="GFX_idea_generic_army_europe_1"
 			}
 		}
 		advisor={
-			slot = air_chief
-			idea_token = LUX_nicholas_diedrich
-			allowed = {
-					original_tag = LUX
-				}
-				traits = {
-					air_chief_ground_support_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
+			slot = high_command
+			idea_token = LUX_francois_schammel
+			ledger = army
+			allowed = { original_tag = LUX }
+			traits = { army_infantry_2 }
+			cost = 100
+			ai_will_do = { factor = 1.000 }
 		}
 	}
-	LUX_pierre_krier={ #克里尔
-		name=LUX_pierre_krier
+	LUX_aloyse_glodt={ #埃洛伊·格洛特
+		name=LUX_aloyse_glodt
 		portraits={
 			army={
-				small="GFX_idea_generic_political_advisor_europe_3"
-			}
-		}	
-		advisor={
-			slot = political_advisor
-			idea_token = LUX_pierre_krier
-			allowed  = {
-					original_tag  = LUX
-				}
-				traits  = {
-					captain_of_industry 
-				}
-		}
-	}
-	LUX_martin_karp={
-		name=LUX_martin_karp
-		portraits={
-			army={
-				small="GFX_idea_generic_political_advisor_europe_2"
+				small="GFX_idea_generic_army_europe_3"
 			}
 		}
 		advisor={
-			slot = political_advisor
-			idea_token = LUX_martin_karp
-			allowed  = {
-					original_tag  = LUX
-				}
-				traits  = {
-					war_industrialist 
-				}
+			slot = high_command
+			idea_token = LUX_aloyse_glodt
+			ledger = army
+			allowed = { original_tag = LUX }
+			traits = { army_armored_2 }
+			cost = 100
+			ai_will_do = { factor = 1.000 }
 		}
 	}
 ### unhistorical chars ###

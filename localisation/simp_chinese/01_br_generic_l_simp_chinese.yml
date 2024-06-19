@@ -1,6 +1,15 @@
 ﻿l_simp_chinese:
  government: "政府"
  is_border_state_tt: "是§Y边境§!省份"
+#
+ communism_calling: "共产主义的召唤"
+ communism_calling.anarchism.1: "共产主义的召唤"
+ communism_calling.anarchism.2: "共产主义的召唤"
+ communism_calling.anarchism.3: "共产主义的召唤"
+ communism_calling.vanwardism.1: "共产主义的召唤"
+ communism_calling.vanwardism.2: "共产主义的召唤"
+ communism_calling.vanwardism.3: "共产主义的召唤"
+#
  black_force_dynamic_modifier: "黑军"
  red_army_dynamic_modifier: "红军"
  land_force_alt_dynamic_modifier: "[FROM.GetAdjective]陆军"
@@ -101,6 +110,12 @@
  talented_demonic_demagogue: "天赋异禀的恶魔"
  harsh_conscription_officer: "严苛的征兵官"
  sincere_conciliator: "真挚的调解人"
+ progressive_gentlemen: "不固步自封的绅士"
+ seasoned_politician: "老练的政治家"
+ conservative_royalist: "保守主义忠信派"
+ skilled_in_finance: "精于财政"
+ professional_intellectual: "文化人"
+#
  afflatus_paladiness: "受启示的圣战修女"
  knight_king: "骑士王"
  knight_king_hog: "骑士王"

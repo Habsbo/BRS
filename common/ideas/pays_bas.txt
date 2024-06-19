@@ -25,15 +25,13 @@ ideas = {
 		}
 ###lux
 		LUX_crisis_awareness_idea = {
-			picture = generic_pp_unity_bonus
+			picture = FRA_national_mobilization_focus
 
 			removal_cost = -1
 
 			allowed = { has_war = no }
 
-			allowed_civil_war = {
-				always = yes
-			}
+			allowed_civil_war = { always = no }
 
 			#on_add = {}
 
@@ -49,7 +47,7 @@ ideas = {
 		}
 		#
 		LUX_consolidate_charter_idea = {
-			picture = generic_pp_unity_bonus
+			picture = idea_generic_constitutional_guarantees
 
 			removal_cost = -1
 
@@ -142,6 +140,138 @@ ideas = {
 				research_speed_factor = 0.08
 				consumer_goods_expected_value = 0.05
 				industrial_capacity_factory = 0.10
+			}
+		}
+
+		communism_calling.anarchism.1 = {
+			picture = por_iberian_workers_united
+
+			removal_cost = -1
+
+			allowed = { br_ideology_radical_communism_nio = yes }
+
+			allowed_civil_war = { br_ideology_radical_communism_nio = yes }
+
+			on_add = { country_event = br_communism.1 }
+
+			#on_remove = {}
+
+			modifier = {
+				stability_weekly = -0.01
+				drift_defence_factor = -0.50
+				sco_anarchism_drift = 0.03
+				industrial_capacity_factory = -0.10
+			}
+		}
+		communism_calling.anarchism.2 = {
+			picture = por_iberian_workers_united
+
+			removal_cost = -1
+
+			allowed = { br_ideology_radical_communism_nio = yes }
+
+			allowed_civil_war = { br_ideology_radical_communism_nio = yes }
+
+			on_add = { country_event = br_communism.1 }
+
+			#on_remove = {}
+
+			modifier = {
+				political_power_factor = -0.05
+				stability_weekly = -0.03
+				drift_defence_factor = -0.50
+				sco_anarchism_drift = 0.05
+				industrial_capacity_factory = -0.20
+			}
+		}
+		communism_calling.anarchism.3 = {
+			picture = por_iberian_workers_united
+
+			removal_cost = -1
+
+			allowed = { br_ideology_radical_communism_nio = yes }
+
+			allowed_civil_war = { br_ideology_radical_communism_nio = yes }
+
+			on_add = { country_event = br_communism.1 }
+
+			#on_remove = {}
+
+			modifier = {
+				political_power_factor = -0.15
+				stability_weekly = -0.05
+				drift_defence_factor = -0.50
+				sco_anarchism_drift = 0.08
+				industrial_capacity_factory = -0.20
+			}
+		}
+		communism_calling.vanwardism.1 = {
+			picture = por_iberian_workers_united
+
+			removal_cost = -1
+
+			allowed = { br_ideology_radical_communism_nio = yes }
+
+			allowed_civil_war = { br_ideology_radical_communism_nio = yes }
+
+			on_add = { country_event = br_communism.2 }
+
+			#on_remove = {}
+
+			modifier = {
+				political_power_factor = -0.05
+				drift_defence_factor = -0.50
+				stability_weekly = -0.05
+				sco_anarchism_drift = 0.02
+				vanwardism_drift = 0.02
+				sci_socialism = 0.02
+				industrial_capacity_factory = -0.20
+			}
+		}
+		communism_calling.vanwardism.2 = {
+			picture = por_iberian_workers_united
+
+			removal_cost = -1
+
+			allowed = { br_ideology_radical_communism_nio = yes }
+
+			allowed_civil_war = { br_ideology_radical_communism_nio = yes }
+
+			on_add = { country_event = br_communism.2 }
+
+			#on_remove = {}
+
+			modifier = {
+				political_power_factor = -0.05
+				drift_defence_factor = -0.50
+				stability_weekly = -0.05
+				sco_anarchism_drift = 0.02
+				vanwardism_drift = 0.02
+				sci_socialism = 0.02
+				industrial_capacity_factory = -0.20
+			}
+		}
+		communism_calling.vanwardism.3 = {
+			picture = por_iberian_workers_united
+
+			removal_cost = -1
+
+			allowed = { br_ideology_radical_communism_nio = yes }
+
+			allowed_civil_war = { br_ideology_radical_communism_nio = yes }
+
+			on_add = { country_event = br_communism.2 }
+
+			#on_remove = {}
+
+			modifier = {
+				political_power_factor = -0.05
+				drift_defence_factor = -0.50
+				stability_weekly = -0.05
+				sco_anarchism_drift = 0.02
+				vanwardism_drift = 0.02
+				sci_socialism = 0.02
+				industrial_capacity_factory = -0.20
 			}
 		}
 	}

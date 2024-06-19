@@ -1253,7 +1253,7 @@ focus_tree = {
 ### NAVY FOCUS
 	focus = {
 		id = LUX_sea_so_far
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_goal_generic_navy_cruiser
 		x = 24
 		y = 0
 		#relative_position_id =
@@ -1278,7 +1278,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LUX_north_sea_fleet
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_goal_generic_navy_battleship
 		prerequisite = { focus = LUX_sea_so_far }
 		#mutually_exclusive = { focus =  }
 		x = -2
@@ -1303,7 +1303,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LUX_expanding_shipyard
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_goal_generic_construct_naval_dockyard
 		prerequisite = { focus = LUX_sea_so_far }
 		#mutually_exclusive = { focus =  }
 		x = 2
@@ -1328,7 +1328,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LUX_upgrade_the_hull
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = LUX_north_sea_fleet }
 		prerequisite = { focus = LUX_expanding_shipyard }
 		x = 0
@@ -1354,7 +1354,7 @@ focus_tree = {
 ### AIRFORCE FOCUS
 	focus = {
 		id = LUX_pilot_training
-		icon = GFX_focus_SOV_women_in_aviation
+		icon = GFX_focus_SOV_flying_clubs
 		prerequisite = { focus = LUX_crisis_awareness }
 		x = 10
 		y = 1
@@ -1382,7 +1382,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LUX_informatics
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_goal_generic_production2
 		prerequisite = { focus = LUX_fortress_of_territory }
 		prerequisite = { focus = LUX_pilot_training }
 		x = -2
@@ -1409,7 +1409,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LUX_aircraft_industries
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_focus_generic_aircraft_production
 		prerequisite = { focus = LUX_pilot_training }
 		x = 0
 		y = 2
@@ -1435,7 +1435,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LUX_light_aircraft
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_goal_generic_air_fighter
 		prerequisite = { focus = LUX_aircraft_industries }
 		x = -1
 		y = 1
@@ -1459,7 +1459,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LUX_heavy_power
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_goal_generic_air_bomber
 		prerequisite = { focus = LUX_aircraft_industries }
 		x = 1
 		y = 1
@@ -1483,7 +1483,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LUX_women_pilots
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_focus_SOV_women_in_aviation
 		prerequisite = { focus = LUX_pilot_training }
 		x = 2
 		y = 1
@@ -1501,7 +1501,22 @@ focus_tree = {
 		
 		complete_tooltip = {}
 		
-		completion_reward = {}
+		completion_reward = {
+			air_experience = 100
+			add_war_support = 0.05
+			if = {
+				limit = { br_ideology_radical_communism_ruling = yes }
+				custom_effect_tooltip = black_force_dynamic_modifier_added
+			}
+			else_if = {
+				limit = { br_ideology_socialism_ruling = yes }
+				custom_effect_tooltip = red_army_dynamic_modifier_added
+			}
+			else = {
+				custom_effect_tooltip = land_force_alt_dynamic_modifier_added
+			}
+			add_to_variable = { troops_conscription_factor = 0.20 tooltip = conscription_factor_tt }
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -1876,8 +1891,8 @@ focus_tree = {
 		id = LUX_communism_theory
 		icon = GFX_focus_spr_unify_the_london_bureau
 		prerequisite = { focus = LUX_anarchic_society }
-		x = 0
-		y = 1
+		x = -1
+		y = 2
 		relative_position_id = LUX_anarchic_society
 
 		cost = 8
@@ -1950,7 +1965,7 @@ focus_tree = {
 	focus = {
 		id = LUX_revolutionary_komune
 		icon = GFX_focus_generic_communist_industry
-		prerequisite = { focus = LUX_flemish_wallonia_anarchists }
+		prerequisite = { focus = LUX_communism_theory focus = LUX_flemish_wallonia_anarchists }
 		x = -1
 		y = 2
 		relative_position_id = LUX_flemish_wallonia_anarchists
@@ -2162,58 +2177,10 @@ focus_tree = {
 		icon = GFX_goal_molotov_ribbentrop_pact
 		prerequisite = { focus = LUX_singleparty_govern_by_multiparty_supervise focus = LUX_joint_governance }
 		mutually_exclusive = { focus = LUX_non_alignment }
-		x = -1
-		y = 2
-		relative_position_id = LUX_singleparty_govern_by_multiparty_supervise
-
-		offset = {
-			x = -2
-			y = 0
-			trigger = {
-				has_completed_focus = LUX_united_left_front
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-			}
-		}
-
-		offset = {
-			x = -4
-			y = 0
-			trigger = {
-				has_completed_focus = LUX_integrate_to_democratic
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-			}
-		}
-
-		offset = {
-			x = -10
-			y = 0
-			trigger = {
-				has_completed_focus = LUX_monarchy_of_luxembourg
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-			}
-		}
-
-		offset = {
-			x = 4
-			y = 0
-			trigger = {
-				has_completed_focus = LUX_tolerate_moderate_socialists
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-			}
-		}
-
+		x = -3
+		y = 1
+		relative_position_id = LUX_information_publicizative
+		
 		cost = 8
 		
 		available = {}
@@ -2241,6 +2208,18 @@ focus_tree = {
 		relative_position_id = LUX_internationale
 
 		offset = {
+			x = 2
+			y = 0
+			trigger = {
+				has_completed_focus = LUX_monarchy_of_luxembourg
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
+
+		offset = {
 			x = 1
 			y = 0
 			trigger = {
@@ -2257,30 +2236,6 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_completed_focus = LUX_integrate_to_democratic
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-			}
-		}
-
-		offset = {
-			x = 2
-			y = 0
-			trigger = {
-				has_completed_focus = LUX_monarchy_of_luxembourg
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-			}
-		}
-
-		offset = {
-			x = 12
-			y = 0
-			trigger = {
-				has_completed_focus = LUX_tolerate_moderate_socialists
 				has_game_rule = {
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
@@ -2359,7 +2314,7 @@ focus_tree = {
 		}
 
 		offset = {
-			x = 12
+			x = 0
 			y = 0
 			trigger = {
 				has_completed_focus = LUX_tolerate_moderate_socialists
@@ -3205,6 +3160,22 @@ focus_tree = {
 		relative_position_id = LUX_defend_territory
 
 		offset = {
+			x = 1
+			y = 0
+			trigger = {
+				has_completed_focus = LUX_integrate_to_democratic
+				NOT = {
+					has_completed_focus = LUX_tolerate_moderate_socialists
+					has_completed_focus = LUX_defend_territory
+				}
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
+
+		offset = {
 			x = 8
 			y = 0
 			trigger = {
@@ -3549,6 +3520,7 @@ focus_tree = {
 			x = 2
 			y = 0
 			trigger = {
+				NOT = { has_completed_focus = LUX_integrate_to_democratic }
 				has_completed_focus = LUX_tolerate_moderate_socialists
 				has_game_rule = {
 					rule = obsolete_focus_branches_visibility
@@ -3597,6 +3569,7 @@ focus_tree = {
 			x = 2
 			y = 0
 			trigger = {
+				NOT = { has_completed_focus = LUX_integrate_to_democratic }
 				has_completed_focus = LUX_tolerate_moderate_socialists
 				has_game_rule = {
 					rule = obsolete_focus_branches_visibility
@@ -3645,6 +3618,7 @@ focus_tree = {
 			x = 2
 			y = 0
 			trigger = {
+				NOT = { has_completed_focus = LUX_integrate_to_democratic }
 				has_completed_focus = LUX_tolerate_moderate_socialists
 				has_game_rule = {
 					rule = obsolete_focus_branches_visibility
@@ -3674,21 +3648,9 @@ focus_tree = {
 		icon = GFX_goal_generic_territory_or_war
 		prerequisite = { focus = LUX_singleparty_govern_by_multiparty_supervise focus = LUX_joint_governance }
 		mutually_exclusive = { focus = LUX_internationale }
-		x = 1
+		x = 3
 		y = 1
-		relative_position_id = LUX_providing_housing
-
-		offset = {
-			x = -2
-			y = 0
-			trigger = {
-				has_completed_focus = LUX_integrate_to_democratic
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-			}
-		}
+		relative_position_id = LUX_information_publicizative
 
 		offset = {
 			x = 2
@@ -3983,6 +3945,8 @@ focus_tree = {
 				}
 			}
 			#
+			remove_ideas = LUX_week_national_consciousness
+			#
 			hidden_effect = {
 				br_game_rule_hide_focus_reload = yes
 			}
@@ -4232,7 +4196,7 @@ focus_tree = {
 		complete_tooltip = {}
 		
 		completion_reward = {
-			set_cosmetic_tag = LUX_Lotharingia
+			set_cosmetic_tag = Lotharingia
 			unlock_decision_tooltip = br_hearts_of_lux.7
 		}
 		
@@ -4465,7 +4429,7 @@ focus_tree = {
 			17 = { add_claim_by = root }
 			28 = { add_claim_by = root }
 			#
-			set_cosmetic_tag = LUX_Lorraine
+			set_cosmetic_tag = Lorraine_grand_duchy
 			#war with germany
 			effect_tooltip = {
 				create_wargoal = {
