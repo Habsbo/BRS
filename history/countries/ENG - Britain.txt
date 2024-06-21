@@ -210,7 +210,7 @@ set_politics = {
 }
 
 set_popularities = {
-	sco_anarchism = 0 #无政府主义
+	soc_anarchism = 0 #无政府主义
 	vanwardism = 0 #革命社会主义
 	sci_socialism = 20 #科学社会主义
 	con_socialism = 0#保守社会主义

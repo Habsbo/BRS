@@ -402,7 +402,7 @@ br_political_actions = {
 		cost = 50
 
 		modifier = {
-			sco_anarchism_drift = -0.05
+			soc_anarchism_drift = -0.05
 			vanwardism_drift = -0.05
 		}
 
@@ -435,7 +435,7 @@ br_political_actions = {
 		cost = 100
 
 		modifier = {
-			sco_anarchism_drift = -0.01
+			soc_anarchism_drift = -0.01
 		}
 
 		complete_effect = {

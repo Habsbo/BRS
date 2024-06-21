@@ -34,7 +34,7 @@ leader_traits = {
 		random = no
 		sprite = 13
 
-		sco_anarchism_drift = 0.10
+		soc_anarchism_drift = 0.10
 		stability_factor = -0.05
 
 		ai_will_do = { factor = 0 }
@@ -44,7 +44,7 @@ leader_traits = {
 		random = no
 		sprite = 13
 
-		sco_anarchism_drift = 0.02
+		soc_anarchism_drift = 0.02
 		vanwardism_drift = 0.08
 
 		ai_will_do = { factor = 0 }

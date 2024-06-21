@@ -1,7 +1,7 @@
 ﻿l_simp_chinese:
- sco_anarchism: "社会无政府主义"
- sco_anarchism_noun: "社会无政府主义"
- sco_anarchism_desc: "无政府委员会"
+ soc_anarchism: "社会无政府主义"
+ soc_anarchism_noun: "社会无政府主义"
+ soc_anarchism_desc: "无政府委员会"
  vanwardism: "先锋社会主义"
  vanwardism_noun: "先锋社会主义"
  vanwardism_desc: "无政府社会政体"
@@ -33,8 +33,8 @@
  supernationalism_noun: "超民族社会主义"
  supernationalism_desc: "极权政体"
 
- sco_anarchism_drift: "§Y$sco_anarchism$§!意识形态增长"
- sco_anarchism_acceptance: "§Y$sco_anarchism$§!接受度"
+ soc_anarchism_drift: "§Y$soc_anarchism$§!意识形态增长"
+ soc_anarchism_acceptance: "§Y$soc_anarchism$§!接受度"
  vanwardism_drift: "§Y$vanwardism$§!意识形态增长"
  vanwardism_acceptance: "§Y$vanwardism$§!接受度"
  sci_socialism_drift: "§Y$sci_socialism$§!意识形态增长"
@@ -56,7 +56,7 @@
  supernationalism_drift: "§Y$supernationalism$§!意识形态增长"
  supernationalism_acceptance: "§Y$supernationalism$§!接受度"
 
- CAT_sco_anarchism_party: "CNT-FAI（全国劳工联盟）"
+ CAT_soc_anarchism_party: "CNT-FAI（全国劳工联盟）"
  CAT_vanwardism_party: "工团党"
  CAT_sci_socialism_party: "西班牙共产党"
  CAT_con_socialism_party: "西班牙共产党"
@@ -68,7 +68,7 @@
  CAT_nationalism_party: ""
  CAT_supernationalism_party: ""
 
- SPR_sco_anarchism_party: "CNT-FAI（全国劳工联盟）"
+ SPR_soc_anarchism_party: "CNT-FAI（全国劳工联盟）"
  SPR_vanwardism_party: "工团党"
  SPR_sci_socialism_party: "西班牙共产党"
  SPR_con_socialism_party: "西班牙共产党"
@@ -80,7 +80,7 @@
  SPR_nationalism_party: ""
  SPR_supernationalism_party: ""
 
- POL_sco_anarchism_party: "波兰农民无政府联盟"
+ POL_soc_anarchism_party: "波兰农民无政府联盟"
  POL_vanwardism_party: "波兰和立陶宛社会民主党(SDKP)与犹太工人联盟(GJLB)" #而波兰工人共产党（KPRP）失败了
  POL_sci_socialism_party: "波兰工人党"
  POL_con_socialism_party: "波兰农民党"
@@ -92,7 +92,7 @@
  POL_nationalism_party: "波兰纳粹党"
  POL_supernationalism_party: "波兰纳粹党极端派"
 
- GRE_sco_anarchism_party: "希腊无政府主义联盟"
+ GRE_soc_anarchism_party: "希腊无政府主义联盟"
  GRE_vanwardism_party: "希腊工人联盟"
  GRE_sci_socialism_party: "希腊共产党(KKE)"
  GRE_con_socialism_party: "希腊共产党(KKE)"
@@ -104,7 +104,7 @@
  GRE_nationalism_party: "人民东正教阵线"
  GRE_supernationalism_party: "金色黎明"
 
- UKR_sco_anarchism_party: "$UKR$平台主义(RIAU)"
+ UKR_soc_anarchism_party: "$UKR$平台主义(RIAU)"
  UKR_vanwardism_party: "$UKR$革命工团派"
  UKR_sci_socialism_party: "$UKR$人民苏维埃"
  UKR_con_socialism_party: "$UKR$布尔什维克支部"
@@ -118,7 +118,7 @@
 
 #HOL
 #BEL
- BEL_sco_anarchism_party: "瓦隆共产主义无政府派"
+ BEL_soc_anarchism_party: "瓦隆共产主义无政府派"
  BEL_vanwardism_party: "瓦隆共产主义工团派"
  BEL_sci_socialism_party: "比利时共产党(CPB)"
  BEL_con_socialism_party: "比利时社会主义党(SPB)" 
@@ -130,7 +130,7 @@
  BEL_nationalism_party: "比利时雷克斯党"
  BEL_supernationalism_party: "比利时雷克斯党"
 #LUX
- LUX_sco_anarchism_party: "$LUX$共产主义无政府派"
+ LUX_soc_anarchism_party: "$LUX$共产主义无政府派"
  LUX_vanwardism_party: "$LUX$共产主义工团派"
  LUX_sci_socialism_party: "$LUX$共产党(KPL)"
  LUX_con_socialism_party: "$LUX$左翼党(DL)" 

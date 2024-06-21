@@ -1,6 +1,6 @@
 ideologies = {
 	#社会主义无政府
-	sco_anarchism = {
+	soc_anarchism = {
 
 		types = {
 			anarchism = {

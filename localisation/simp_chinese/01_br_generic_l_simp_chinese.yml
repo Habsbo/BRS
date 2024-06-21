@@ -61,7 +61,7 @@
  conversion_cost_mil_to_civ_factor_tt: " §Y军用工厂转民用工厂花费§!: $RIGHT|-=%1$"
  conversion_cost_civ_to_mil_factor_tt: " §Y民用工厂转军用工厂花费§!: $RIGHT|-=%1$"
 
- sco_anarchism_drift_tt: " §Y$sco_anarchism_drift$§!: $RIGHT|+=0..2$"
+ soc_anarchism_drift_tt: " §Y$soc_anarchism_drift$§!: $RIGHT|+=0..2$"
  vanwardism_drift_tt: " §Y$vanwardism_drift$§!: $RIGHT|+=0..2$"
  sci_socialism_drift_tt: " §Y$sci_socialism_drift$§!: $RIGHT|+=0..2$"
  con_socialism_drift_tt: " §Y$con_socialism_drift$§!: $RIGHT|+=0..2$"

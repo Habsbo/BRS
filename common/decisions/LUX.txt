@@ -1114,3 +1114,100 @@ br_electrification_of_benelux = {
 		}
 	}
 }
+
+br_benelux_calling_of_communism = {
+	br_benelux_calling_of_communism.anarchism = {
+		icon = generic_construction
+		target_root_trigger = {
+			OR = {
+				has_completed_focus = LUX_calling_of_communism
+			}
+			has_government = soc_anarchism
+		}
+		target_trigger = {
+			FROM = {
+				OR = {
+					original_tag = HOL
+					original_tag = BEL
+					original_tag = LUX
+				}
+			}
+		}
+
+		cost = 0
+
+		days_remove = 60
+
+		modifier = {
+			war_support_weekly = 0.01
+		}
+
+		#state_target = yes
+		on_map_mode = decision_view_only
+
+		complete_effect = {
+			FROM = {
+				if = {
+					limit = { has_idea = communism_calling_anarchism_2 }
+					remove_ideas = communism_calling_anarchism_2
+					add_timed_idea = { idea = communism_calling_anarchism_3 days = 181 }
+				}
+				else_if = {
+					limit = { has_idea = communism_calling_anarchism_1 }
+					remove_ideas = communism_calling_anarchism_1
+					add_timed_idea = { idea = communism_calling_anarchism_2 days = 181 }
+				}
+				else = {
+					add_timed_idea = { idea = communism_calling_anarchism_1 days = 181 }
+				}
+			}
+		}
+	}
+	br_benelux_calling_of_communism.vanwardism = {
+		icon = generic_construction
+		target_root_trigger = {
+			OR = {
+				has_completed_focus = LUX_calling_of_communism
+			}
+			has_government = vanwardism
+		}
+		target_trigger = {
+			FROM = {
+				OR = {
+					original_tag = HOL
+					original_tag = BEL
+					original_tag = LUX
+				}
+			}
+		}
+
+		cost = 0
+
+		days_remove = 60
+
+		modifier = {
+			war_support_weekly = 0.01
+		}
+
+		#state_target = yes
+		on_map_mode = decision_view_only
+
+		complete_effect = {
+			FROM = {
+				if = {
+					limit = { has_idea = communism_calling_vanwardism_2 }
+					remove_ideas = communism_calling_vanwardism_2
+					add_timed_idea = { idea = communism_calling_vanwardism_3 days = 181 }
+				}
+				else_if = {
+					limit = { has_idea = communism_calling_vanwardism_1 }
+					remove_ideas = communism_calling_vanwardism_1
+					add_timed_idea = { idea = communism_calling_vanwardism_2 days = 181 }
+				}
+				else = {
+					add_timed_idea = { idea = communism_calling_vanwardism_1 days = 181 }
+				}
+			}
+		}
+	}
+}

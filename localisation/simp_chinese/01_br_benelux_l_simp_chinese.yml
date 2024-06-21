@@ -12,6 +12,19 @@
  LUX_week_national_consciousness_desc: ""
  LUX_women_movement_1: "$LUX_women_movement$"
  LUX_women_movement_1_desc: ""
+ communism_calling_anarchism_1: "社会无政府运动：初步兴起"
+ communism_calling_anarchism_1_desc: ""
+ communism_calling_anarchism_2: "社会无政府运动：广泛传播"
+ communism_calling_anarchism_2_desc: ""
+ communism_calling_anarchism_3: "社会无政府运动：庞然安影"
+ communism_calling_anarchism_3_desc: ""
+ communism_calling_vanwardism_1: "工团主义运动：初步兴起"
+ communism_calling_vanwardism_1_desc: ""
+ communism_calling_vanwardism_2: "工团主义运动：广泛传播"
+ communism_calling_vanwardism_2_desc: ""
+ communism_calling_vanwardism_3: "工团主义运动：庞然黯影"
+ communism_calling_vanwardism_3_desc: ""
+
 # focus
 
  LUX_economic_effort: "重视经济"
@@ -293,6 +306,10 @@
  br_zoning_for_benelux_electrificating: "为[from.GetName]的电气化规划土地"
  br_construction_for_benelux_electrificating: "为[from.GetName]的电气化建设电网"
 
+ br_benelux_calling_of_communism: "这共产主义的召唤！"
+ br_benelux_calling_of_communism_desc: ""
+ br_benelux_calling_of_communism.anarchism: "在[from.GetAdjective]传播无政府主义"
+ br_benelux_calling_of_communism.vanwardism: "在[from.GetAdjective]传播工团主义"
  br_hearts_of_lux: "卢森堡的雄心"
  br_hearts_of_lux_desc: "卢森堡的雄心"
  br_hearts_of_lux.1: "统一低地德意志"

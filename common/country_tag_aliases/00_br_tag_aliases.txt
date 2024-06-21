@@ -121,7 +121,7 @@ AR1 = {
 	tag = ARA
 	
 	OR= {
-		has_government = sco_anarchism
+		has_government = soc_anarchism
 		has_government = vanwardism
 		has_government = sci_socialism
 		has_government = con_socialism
@@ -137,7 +137,7 @@ AR2 = {
 	tag = ARA
 	
 	OR= {
-		has_government = sco_anarchism
+		has_government = soc_anarchism
 		has_government = vanwardism
 		has_government = sci_socialism
 		has_government = con_socialism
@@ -237,7 +237,7 @@ EUS = {
 	original_tag = NAV
 
 	OR= {
-		has_government = sco_anarchism
+		has_government = soc_anarchism
 		has_government = vanwardism
 		has_government = sci_socialism
 		has_government = con_socialism

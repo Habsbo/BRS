@@ -53,8 +53,8 @@ characters = {
 			}
 			modifier = {
 				political_power_gain = 0.35
-				sco_anarchism_drift = 0.08
-				sco_anarchism_acceptance = 80
+				soc_anarchism_drift = 0.08
+				soc_anarchism_acceptance = 80
 			}
 		}
 		corps_commander={

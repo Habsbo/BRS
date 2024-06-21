@@ -471,8 +471,8 @@ spriteTypes = {
 #ideology
 
 	spriteType = {
-		name = "GFX_ideology_sco_anarchism_group"
-		texturefile = "gfx/interface/ideologies/sco_anarchism_group.png"
+		name = "GFX_ideology_soc_anarchism_group"
+		texturefile = "gfx/interface/ideologies/soc_anarchism_group.png"
 	}
 
 	spriteType = {

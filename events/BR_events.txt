@@ -25,7 +25,7 @@ country_event = { #
 		name = br_political_actions.1.a #
 
 		hidden_effect = {
-			set_temp_variable = { deny_ideology_var = party_popularity@sco_anarchism }
+			set_temp_variable = { deny_ideology_var = party_popularity@soc_anarchism }
 			add_to_temp_variable = { deny_ideology_var = party_popularity@vanwardism }
 			multiply_temp_variable = { var = deny_ideology_var value = -0.33 }
 		}
@@ -55,12 +55,12 @@ country_event = { #
 		name = br_political_actions.2.a #
 
 		hidden_effect = {
-			set_temp_variable = { ban_ideology_var_ideology.1 = party_popularity@sco_anarchism }
+			set_temp_variable = { ban_ideology_var_ideology.1 = party_popularity@soc_anarchism }
 			set_temp_variable = { ban_ideology_var_ideology.2 = party_popularity@vanwardism }
 			multiply_temp_variable = { ban_ideology_var_ideology.1 = -1 }
 			multiply_temp_variable = { ban_ideology_var_ideology.2 = -1 }
 		}
-		add_popularity = { ideology = sco_anarchism popularity = ban_ideology_var_ideology.1 }
+		add_popularity = { ideology = soc_anarchism popularity = ban_ideology_var_ideology.1 }
 		add_popularity = { ideology = vanwardism popularity = ban_ideology_var_ideology.2 }
 		#
 		hidden_effect = {
@@ -668,7 +668,7 @@ country_event = { #
 			}
 
 			set_popularities = {
-				sco_anarchism = 2 #无政府主义
+				soc_anarchism = 2 #无政府主义
 				vanwardism = 1 #革命社会主义
 				sci_socialism = 43 #科学社会主义
 				con_socialism = 34 #保守社会主义
@@ -788,7 +788,7 @@ country_event = { #
 
 	immediate = {
 		hidden_effect = {
-			add_popularity = { ideology = sco_anarchism popularity = 0.01 }
+			add_popularity = { ideology = soc_anarchism popularity = 0.01 }
 			add_stability = -0.01
 		}
 	}
@@ -797,7 +797,7 @@ country_event = { #
 		name =  br_communism.1.a #
 
 		effect_tooltip = {
-			add_popularity = { ideology = sco_anarchism popularity = 0.01 }
+			add_popularity = { ideology = soc_anarchism popularity = 0.01 }
 			add_stability = -0.01
 		}
 

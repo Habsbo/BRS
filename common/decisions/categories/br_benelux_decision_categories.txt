@@ -18,8 +18,19 @@ br_electrification_of_benelux = {
 	visible_when_empty = no
 }
 #lux
-br_hearts_of_lux = {
+br_benelux_calling_of_communism = {
 	icon = GFX_generic_democracy
+	picture = GFX_decision_cat_picture_government_in_exile
+
+	allowed = { original_tag = LUX }
+	visible = { original_tag = LUX }
+
+	priority = 1
+	visible_when_empty = no
+}
+
+br_hearts_of_lux = {
+	icon = generic_democracy
 	picture = GFX_decision_cat_picture_government_in_exile
 
 	allowed = { original_tag = LUX }

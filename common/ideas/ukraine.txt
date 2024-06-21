@@ -7,7 +7,7 @@ ideas = {
 
 			allowed_civil_war = {
 				OR = {
-					has_government = sco_anarchism
+					has_government = soc_anarchism
 					has_government = vanwardism
 				}
 			}
@@ -16,7 +16,7 @@ ideas = {
 			picture = generic_pp_unity_bonus
 			
 			modifier = {
-				sco_anarchism_drift = 0.08
+				soc_anarchism_drift = 0.08
 				vanwardism_drift = 0.05
 			}
 		}
@@ -27,7 +27,7 @@ ideas = {
 
 			allowed_civil_war = {
 				OR = {
-					has_government = sco_anarchism
+					has_government = soc_anarchism
 					has_government = vanwardism
 				}
 			}

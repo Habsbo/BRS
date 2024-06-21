@@ -2,14 +2,14 @@
 	br_ideology_anarchism_ruling = { #无政府主义
 		custom_trigger_tooltip = {
 			tooltip = br_ideology_anarchism_ruling_tt
-			has_government = sco_anarchism
+			has_government = soc_anarchism
 		}
 	}
 	br_ideology_radical_communism_ruling = { #激进共产主义
 		custom_trigger_tooltip = {
 			tooltip = br_ideology_radical_communism_ruling_tt
 			OR = {
-				has_government = sco_anarchism
+				has_government = soc_anarchism
 				has_government = vanwardism
 			}
 		}
@@ -54,14 +54,14 @@
 	br_ideology_anarchism_nio = { #无政府主义
 		custom_trigger_tooltip = {
 			tooltip = br_ideology_anarchism_nio_tt
-			NOT = { has_government = sco_anarchism }
+			NOT = { has_government = soc_anarchism }
 		}
 	}
 	br_ideology_radical_communism_nio = { #激进共产主义
 		custom_trigger_tooltip = {
 			tooltip = br_ideology_radical_communism_nio_tt
 			NOT = {
-				has_government = sco_anarchism
+				has_government = soc_anarchism
 				has_government = vanwardism
 			}
 		}

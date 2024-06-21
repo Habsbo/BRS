@@ -196,7 +196,7 @@ IF = {
 	recruit_character = ETH_senedu_gebru
 	recruit_character = ETH_random_sud_advisor
 	recruit_character = ETH_random_som_advisor
-	recruit_character = ETH_sco_anarchism_council
+	recruit_character = ETH_soc_anarchism_council
 	recruit_character = ETH_prov_mil_admin
 	
 	# Military Advisors

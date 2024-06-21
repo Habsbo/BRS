@@ -143,7 +143,7 @@ ideas = {
 			}
 		}
 
-		communism_calling.anarchism.1 = {
+		communism_calling_anarchism_1 = {
 			picture = por_iberian_workers_united
 
 			removal_cost = -1
@@ -159,11 +159,11 @@ ideas = {
 			modifier = {
 				stability_weekly = -0.01
 				drift_defence_factor = -0.50
-				sco_anarchism_drift = 0.03
+				soc_anarchism_drift = 0.03
 				industrial_capacity_factory = -0.10
 			}
 		}
-		communism_calling.anarchism.2 = {
+		communism_calling_anarchism_2 = {
 			picture = por_iberian_workers_united
 
 			removal_cost = -1
@@ -180,11 +180,11 @@ ideas = {
 				political_power_factor = -0.05
 				stability_weekly = -0.03
 				drift_defence_factor = -0.50
-				sco_anarchism_drift = 0.05
+				soc_anarchism_drift = 0.05
 				industrial_capacity_factory = -0.20
 			}
 		}
-		communism_calling.anarchism.3 = {
+		communism_calling_anarchism_3 = {
 			picture = por_iberian_workers_united
 
 			removal_cost = -1
@@ -201,11 +201,11 @@ ideas = {
 				political_power_factor = -0.15
 				stability_weekly = -0.05
 				drift_defence_factor = -0.50
-				sco_anarchism_drift = 0.08
+				soc_anarchism_drift = 0.08
 				industrial_capacity_factory = -0.20
 			}
 		}
-		communism_calling.vanwardism.1 = {
+		communism_calling_vanwardism_1 = {
 			picture = por_iberian_workers_united
 
 			removal_cost = -1
@@ -222,13 +222,11 @@ ideas = {
 				political_power_factor = -0.05
 				drift_defence_factor = -0.50
 				stability_weekly = -0.05
-				sco_anarchism_drift = 0.02
 				vanwardism_drift = 0.02
-				sci_socialism = 0.02
 				industrial_capacity_factory = -0.20
 			}
 		}
-		communism_calling.vanwardism.2 = {
+		communism_calling_vanwardism_2 = {
 			picture = por_iberian_workers_united
 
 			removal_cost = -1
@@ -245,13 +243,11 @@ ideas = {
 				political_power_factor = -0.05
 				drift_defence_factor = -0.50
 				stability_weekly = -0.05
-				sco_anarchism_drift = 0.02
-				vanwardism_drift = 0.02
-				sci_socialism = 0.02
+				vanwardism_drift = 0.05
 				industrial_capacity_factory = -0.20
 			}
 		}
-		communism_calling.vanwardism.3 = {
+		communism_calling_vanwardism_3 = {
 			picture = por_iberian_workers_united
 
 			removal_cost = -1
@@ -268,9 +264,7 @@ ideas = {
 				political_power_factor = -0.05
 				drift_defence_factor = -0.50
 				stability_weekly = -0.05
-				sco_anarchism_drift = 0.02
-				vanwardism_drift = 0.02
-				sci_socialism = 0.02
+				vanwardism_drift = 0.08
 				industrial_capacity_factory = -0.20
 			}
 		}

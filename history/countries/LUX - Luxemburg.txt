@@ -148,7 +148,7 @@ set_variable = { women_movement_war_support_factor = 0.00 }
 set_variable = { women_movement_conscription_factor = 0.00 }
 set_variable = { women_movement_consumer_goods_expected_value = 0.00 }
 set_variable = { women_movement_research_speed_factor = 0.00 }
-set_variable = { women_movement_sco_anarchism_drift = 0.00 }
+set_variable = { women_movement_soc_anarchism_drift = 0.00 }
 set_variable = { women_movement_vanwardism_drift = 0.00 }
 set_variable = { women_movement_sci_socialism_drift = 0.00 }
 set_variable = { women_movement_con_socialism_drift = 0.00 }

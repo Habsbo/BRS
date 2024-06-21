@@ -1739,7 +1739,7 @@ focus_tree = {
 			#
 			country_event = br_lux.2
 			#
-			add_popularity = { ideology = sco_anarchism popularity = 0.03 }
+			add_popularity = { ideology = soc_anarchism popularity = 0.03 }
 			add_popularity = { ideology = vanwardism popularity = 0.03 }
 			add_popularity = { ideology = sci_socialism popularity = 0.05 }
 			add_popularity = { ideology = con_socialism popularity = 0.05 }
@@ -1802,6 +1802,7 @@ focus_tree = {
 		
 		completion_reward = {
 			add_war_support = 0.05
+			unlock_decision_category_tooltip = br_benelux_calling_of_communism
 		}
 
 		search_filters = {FOCUS_FILTER_POLITICAL}
@@ -2488,7 +2489,7 @@ focus_tree = {
 						br_ideology_socialism_ruling = yes
 					}
 				}
-				add_to_variable = { women_movement_sco_anarchism_drift = 0.03 tooltip = sco_anarchism_drift_tt }
+				add_to_variable = { women_movement_soc_anarchism_drift = 0.03 tooltip = soc_anarchism_drift_tt }
 				add_to_variable = { women_movement_vanwardism_drift = 0.02 tooltip = vanwardism_drift_tt }
 				add_to_variable = { women_movement_sci_socialism_drift = 0.05 tooltip = sci_socialism_drift_tt }
 				add_to_variable = { women_movement_con_socialism_drift = 0.03 tooltip = con_socialism_drift_tt }
@@ -2575,7 +2576,7 @@ focus_tree = {
 						br_ideology_socialism_ruling = yes
 					}
 				}
-				add_to_variable = { women_movement_sco_anarchism_drift = 0.03 tooltip = sco_anarchism_drift_tt }
+				add_to_variable = { women_movement_soc_anarchism_drift = 0.03 tooltip = soc_anarchism_drift_tt }
 				add_to_variable = { women_movement_vanwardism_drift = 0.02 tooltip = vanwardism_drift_tt }
 				add_to_variable = { women_movement_sci_socialism_drift = 0.05 tooltip = sci_socialism_drift_tt }
 				add_to_variable = { women_movement_con_socialism_drift = 0.03 tooltip = con_socialism_drift_tt }

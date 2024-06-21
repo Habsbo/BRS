@@ -1015,7 +1015,7 @@ focus_tree = {
 		complete_tooltip = {}
 		
 		completion_reward = {
-			add_popularity = { ideology = sco_anarchism popularity = -0.05 }
+			add_popularity = { ideology = soc_anarchism popularity = -0.05 }
 			add_popularity = { ideology = vanwardism popularity = -0.05 }
 			add_popularity = { ideology = sci_socialism popularity = -0.08 }
 			add_stability = -0.15

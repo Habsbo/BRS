@@ -61,7 +61,7 @@ black_force_dynamic_modifier = { #
 	icon = GFX_idea_ARG_women_in_industry
 
 	enable = {
-		has_government = sco_anarchism
+		has_government = soc_anarchism
 	}
 
 	remove_trigger = {}
@@ -134,7 +134,7 @@ committee_combat_dynamic_modifier = {
 	icon = GFX_idea_ARG_no_gods_no_masters
 	
 	enable = {
-		has_government = sco_anarchism
+		has_government = soc_anarchism
 	}
 	
 	army_advisor_cost_factor = officer_cap_army_advisor_cost_factor #军官团雇佣价格
@@ -193,7 +193,7 @@ red_navy_dynamic_modifier = {
 
 	enable = {
 		OR = {
-			has_government = sco_anarchism
+			has_government = soc_anarchism
 			has_government = vanwardism
 			has_government = sci_socialism
 			has_government = con_socialism
@@ -223,7 +223,7 @@ red_airforce_dynamic_modifier = {
 
 	enable = {
 		OR = {
-			has_government = sco_anarchism
+			has_government = soc_anarchism
 			has_government = vanwardism
 			has_government = sci_socialism
 			has_government = con_socialism
@@ -302,7 +302,7 @@ women_movement_dynamic_modifier = {
 	#
 	research_speed_factor = women_movement_research_speed_factor
 	#
-	sco_anarchism_drift = women_movement_sco_anarchism_drift
+	soc_anarchism_drift = women_movement_soc_anarchism_drift
 	vanwardism_drift = women_movement_vanwardism_drift
 	sci_socialism_drift = women_movement_sci_socialism_drift
 	con_socialism_drift = women_movement_con_socialism_drift

@@ -52,7 +52,7 @@ br_debug_decisions = {
 	debug_ideo.1 = {
 		fire_only_once = no
 		complete_effect = {
-			set_politics = { ruling_party = sco_anarchism }
+			set_politics = { ruling_party = soc_anarchism }
 		}
 	}
 	debug_ideo.2 = {

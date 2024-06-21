@@ -557,13 +557,13 @@
 		
 		available = {
 			OR = {
-				has_government = sco_anarchism
+				has_government = soc_anarchism
 				has_government = vanwardism
 			}
 		}
 		bypass = {
 			NOT = {
-				has_government = sco_anarchism
+				has_government = soc_anarchism
 				has_government = vanwardism
 			}
 		}
@@ -575,7 +575,7 @@
 		complete_tooltip = {}
 		completion_reward = {
 			army_experience = 50
-			add_popularity = { ideology = sco_anarchism popularity = 0.05 }
+			add_popularity = { ideology = soc_anarchism popularity = 0.05 }
 		}
 
 		ai_will_do = { factor = 1 }

@@ -130,7 +130,7 @@ set_politics = {
 }
 
 set_popularities = {
-	sco_anarchism = 0
+	soc_anarchism = 0
 	vanwardism = 30
 	sci_socialism = 10
 	con_socialism = 0
