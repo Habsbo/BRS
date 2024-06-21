@@ -4,6 +4,9 @@ on_actions = {
 			POL = {
 				set_variable = { VL_status_var = 4 }
 			}
+			LUX = {
+				#set_variable = { VL_status_var = 4 }
+			}
 		}
 	}
 }

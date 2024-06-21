@@ -66,9 +66,8 @@ characters={
 			slot = political_advisor
 			idea_token = LUX_pierre_prvm
 			allowed = { always = yes }
-			available = {
-				br_ideology_radical_communism_nio = yes
-			}
+			available = { br_ideology_radical_communism_nio = yes }
+			visible = { NOT = { has_idea = LUX_pierre_prvm_hog } }
 			traits = { democractic_coordinator }
 
 			cost = 100
@@ -102,6 +101,7 @@ characters={
 			idea_token = LUX_joseph_bech
 			allowed = { always = yes }
 			available = { br_ideology_radical_communism_nio = yes }
+			visible = { NOT = { has_idea = LUX_joseph_bech_hog } }
 			traits = { silent_workhorse }
 
 			cost = 100
@@ -132,6 +132,7 @@ characters={
 			idea_token = LUX_pierre_fischbach
 			ledger = navy
 			allowed = { original_tag = LUX }
+			visible = { NOT = { has_idea = LUX_pierre_fischbach_hog } }
 			traits = { navy_fleet_logistics_2 }
 			cost = 100
 			ai_will_do = { factor = 1.000 }
@@ -145,13 +146,6 @@ characters={
 				small="GFX_idea_generic_political_advisor_europe_1"
 			}
 		}
-		advisor={
-			slot = political_advisor
-			idea_token = LUX_pierre_dupong
-			allowed  = { original_tag  = LUX }
-			traits  = { silent_workhorse }
-			ai_will_do = { factor = 1.000 }
-		}
 		advisor = {
 			slot = head_of_gov
 			idea_token = LUX_pierre_dupong_hog
@@ -164,6 +158,14 @@ characters={
 
 			cost = 0
 			can_be_fired = no
+			ai_will_do = { factor = 1.000 }
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = LUX_pierre_dupong
+			allowed  = { original_tag  = LUX }
+			visible = { NOT = { has_idea = LUX_pierre_dupong_hog } }
+			traits  = { silent_workhorse }
 			ai_will_do = { factor = 1.000 }
 		}
 	}
@@ -194,6 +196,7 @@ characters={
 			idea_token = LUX_emile_reuter
 			allowed = { always = yes }
 			available = { br_ideology_radical_communism_nio = yes }
+			visible = { NOT = { has_idea = LUX_emile_reuter_hog } }
 			traits = { democractic_coordinator }
 
 			cost = 100
@@ -228,6 +231,7 @@ characters={
 			idea_token = LUX_pierre_frieden
 			allowed = { always = yes }
 			available = { br_ideology_radical_communism_nio = yes }
+			visible = { NOT = { has_idea = LUX_pierre_frieden_hog } }
 			traits = { professional_intellectual }
 
 			cost = 100
@@ -313,17 +317,6 @@ characters={
 			expire="1965.1.1.1"
 			id=-1
 		}
-		advisor={
-			slot = political_advisor
-			idea_token = LUX_charles_marx
-			allowed  = { original_tag  = LUX }
-			available = {
-				has_completed_focus = LUX_appoint_communists_as_minister
-				br_ideology_fascism_nio = yes
-			}
-			traits  = { anti_imperialism_revolutionary }
-			ai_will_do = { factor = 1.000 }
-		}
 		advisor = {
 			slot = head_of_gov
 			idea_token = LUX_charles_marx_hog
@@ -336,6 +329,18 @@ characters={
 			traits = { anti_imperialism_revolutionary }
 			cost = 0
 			can_be_fired = no
+			ai_will_do = { factor = 1.000 }
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = LUX_charles_marx
+			allowed  = { original_tag  = LUX }
+			available = {
+				has_completed_focus = LUX_appoint_communists_as_minister
+				br_ideology_fascism_nio = yes
+			}
+			visible = { NOT = { has_idea = LUX_charles_marx_hog } }
+			traits  = { anti_imperialism_revolutionary }
 			ai_will_do = { factor = 1.000 }
 		}
 	}
@@ -352,17 +357,6 @@ characters={
 			expire="1965.1.1.1"
 			id=-1
 		}
-		advisor={
-			slot = political_advisor
-			idea_token = LUX_dominique_urbany
-			allowed  = { original_tag  = LUX }
-			available = {
-				has_completed_focus = LUX_appoint_communists_as_minister
-				br_ideology_fascism_nio = yes
-			}
-			traits  = { anti_imperialism_revolutionary }
-			ai_will_do = { factor = 1.000 }
-		}
 		advisor = {
 			slot = head_of_gov
 			idea_token = LUX_dominique_urbany_hog
@@ -375,6 +369,18 @@ characters={
 			traits = { anti_imperialism_revolutionary }
 			cost = 0
 			can_be_fired = no
+			ai_will_do = { factor = 1.000 }
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = LUX_dominique_urbany
+			allowed  = { original_tag  = LUX }
+			available = {
+				has_completed_focus = LUX_appoint_communists_as_minister
+				br_ideology_fascism_nio = yes
+			}
+			visible = { NOT = { has_idea = LUX_dominique_urbany_hog } }
+			traits  = { anti_imperialism_revolutionary }
 			ai_will_do = { factor = 1.000 }
 		}
 	}

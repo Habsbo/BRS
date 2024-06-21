@@ -262,12 +262,25 @@
  AUS_republic: "奥地利共和国"
  AUS_republic_DEF: "奥地利共和国"
  AUS_republic_ADJ: "奥地利共和国"
+
  HUN_kingdom: "匈牙利王国"
  HUN_kingdom_DEF: "匈牙利王国"
  HUN_kingdom_ADJ: "匈牙利"
  HUN_republic: "匈牙利共和国"
  HUN_republic_DEF: "匈牙利共和国"
  HUN_republic_ADJ: "匈牙利"
+
+ CZE_kingdom: "波西米亚王国"
+ CZE_kingdom_DEF: "波西米亚王国"
+ CZE_kingdom_ADJ: "波西米亚"
+ CZE_republic: "捷克共和国"
+ CZE_republic_DEF: "捷克共和国"
+ CZE_republic_ADJ: "捷克"
+ Maravian_kingdom: "大摩拉维亚王国"
+ Maravian_kingdom_DEF: "大摩拉维亚王国"
+ Maravian_kingdom_ADJ: "大摩拉维亚王国"
+ Nitra_duchy: "尼特拉公国"
+ Nitra_duchy_DEF: "尼特拉公国"
 
 #伊朗
  PER_pahlavi_dynasty: "巴列维王朝"
@@ -1576,18 +1589,8 @@
  ENE_fascist: "诺德兰帝国"
  ENE_fascist_def: "$ENM_fascist$"
 
-#捷克斯洛伐克
- CZE_kingdom: "波西米亚王国"
- CZE_kingdom_DEF: "波西米亚王国"
- CZE_kingdom_ADJ: "波西米亚"
- CZE_republic: "捷克共和国"
- CZE_republic_DEF: "捷克共和国"
- CZE_republic_ADJ: "捷克"
- Maravian_kingdom: "大摩拉维亚王国"
- Maravian_kingdom_DEF: "大摩拉维亚王国"
- Maravian_kingdom_ADJ: "大摩拉维亚王国"
- Nitra_duchy: "尼特拉公国"
- Nitra_duchy_DEF: "尼特拉公国"
+
+#
  : ""
  _DEF: ""
  _ADJ: ""

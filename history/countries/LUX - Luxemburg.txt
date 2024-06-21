@@ -108,7 +108,7 @@ add_ideas = {
 	#hog
 	LUX_joseph_bech_hog
 }
-set_country_flag = br_dynamic_modifier_not_generic_flag
+set_country_flag = br_dynamic_modifier_not_generic_var_flag
 #dynamic modifier - industry
 set_variable = { nic_consumer_goods_expected_value = 0.00 }
 set_variable = { nic_production_speed_buildings_factor = 0.00 }
