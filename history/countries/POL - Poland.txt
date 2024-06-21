@@ -90,6 +90,10 @@ if = {
 	}
 }
 
+set_country_flag = br_dynamic_modifier_not_generic_var_flag
+set_country_flag = br_dynamic_modifier_not_generic_flag
+#stank tones, fun of foolish talk
+
 set_variable = { POL_TGR_mobilization_speed_var = -0.20 }
 set_variable = { POL_TGR_consumer_goods_factor_var = 0.30 }
 set_variable = { POL_TGR_production_speed_industrial_complex_factor_var = 0.30 }
