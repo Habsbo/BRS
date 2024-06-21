@@ -1,10 +1,10 @@
 ﻿l_simp_chinese:
  GER: "德意志"
- GER_DEF: "德国"
+ GER_DEF: "德意志"
  GER_ADJ: "德国"
-
+ #
  ENG: "英格兰"
- ENG_DEF: "英国"
+ ENG_DEF: "英格兰"
  ENG_ADJ: "英国"
  WLS: "威尔士"
  WLS_DEF: "威尔士"
@@ -12,8 +12,8 @@
  NIR: "北爱尔兰"
  NIR_DEF: "北爱尔兰"
  NIR_ADJ: "北爱尔兰"
-
- SOV: "$RUS$苏维埃"
+ #
+ SOV: "苏维埃$RUS$"
  SOV_DEF: "苏俄"
  SOV_ADJ: "苏俄"
 

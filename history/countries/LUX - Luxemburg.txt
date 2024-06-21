@@ -90,6 +90,8 @@ set_popularities = {
 #diplomacy
 #GER = { give_guarantee = root }
 
+set_cosmetic_tag = LUX_grand_duchy
+
 add_ideas = {
 	br_laws_parliamentarism
 	br_laws_monarchy

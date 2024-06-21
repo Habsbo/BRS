@@ -97,3 +97,5 @@ add_ideas = {
 	#national spirits
 	BEL_spoken_conflicts
 }
+
+set_cosmetic_tag = BEL_kingdom

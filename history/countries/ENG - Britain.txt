@@ -1132,7 +1132,7 @@ if = {
 
 
 #国名
-set_cosmetic_tag = ENG_republic_mosley
+set_cosmetic_tag = ENG_great_britain_empire_mosley
 #法律
 add_ideas = {
 	br_laws_dictatorship
