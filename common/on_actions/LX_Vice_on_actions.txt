@@ -1,0 +1,9 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			POL = {
+				set_variable = { VL_status_var = 4 }
+			}
+		}
+	}
+}
