@@ -33,8 +33,20 @@ br_hearts_of_lux = {
 	icon = generic_democracy
 	picture = GFX_decision_cat_picture_government_in_exile
 
-	allowed = { original_tag = LUX }
-	visible = { original_tag = LUX }
+	allowed = {
+		OR = {
+			original_tag = HOL
+			original_tag = BEL
+			original_tag = LUX
+		}
+	}
+	visible = {
+		OR = {
+			original_tag = HOL
+			original_tag = BEL
+			original_tag = LUX
+		}
+	}
 
 	priority = 1
 	visible_when_empty = no
