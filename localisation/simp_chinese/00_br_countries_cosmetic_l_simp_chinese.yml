@@ -21,6 +21,15 @@
  FRA_republic: "法兰西共和国"
  FRA_republic_DEF: "法兰西共和国"
  FRA_republic_ADJ: "法国"
+ FRA_empire: "法兰西帝国"
+ FRA_empire_DEF: "法兰西帝国"
+ FRA_empire_ADJ: "法国"
+ FRA_kingdom: "法兰西王国"
+ FRA_kingdom_DEF: "法兰西王国"
+ FRA_kingdom_ADJ: "法国"
+ FRA_angevin_empire: "安茹帝国"
+ FRA_angevin_empire_DEF: "安茹帝国"
+ FRA_angevin_empire_ADJ: "法国"
 
 #大不列颠区域 Great British Islands Region
  ENG_republic: "英格兰共和国"
