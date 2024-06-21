@@ -1,0 +1,92 @@
+﻿focus_tree = {
+	id = br_united_states_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 0
+			tag = IRE
+		}
+	}
+	
+	default = no
+
+	continuous_focus_position = { x = 50 y = 1500 }
+	
+	focus = {
+		id = USA_1
+		icon = GFX_
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 10
+		y = 0
+		#relative_position_id =
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+	focus = {
+		id = USA_2
+		icon = GFX_
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 10
+		y = 0
+		#relative_position_id =
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+	focus = {
+		id = USA_
+		icon = GFX_
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 0
+		#relative_position_id =
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+}
