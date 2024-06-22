@@ -2,7 +2,72 @@
 # Generate them from a generic template
 
 # Political advisors
-
+every_possible_country = {
+	limit = {
+		has_focus_tree = br_generic_focus
+	}
+	# generic political advisors
+	generate_character = {
+		token_base = generic_syndicalist_revolutionary
+		advisor = {
+			slot = political_advisor
+			traits = { syndicalist_revolutionary }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_political_advisor_europe_1 }
+		}
+	}
+	generate_character = {
+		token_base = generic_sci_socialist_revolutionary
+		advisor = {
+			slot = political_advisor
+			traits = { sci_socialist_revolutionary }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_political_advisor_europe_2 }
+		}
+	}
+	generate_character = {
+		token_base = generic_anti_imperialism_revolutionary
+		advisor = {
+			slot = political_advisor
+			traits = { anti_imperialism_revolutionary }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_political_advisor_europe_3 }
+		}
+	}
+	generate_character = {
+		token_base = generic_demo_social_reformer
+		advisor = {
+			slot = political_advisor
+			traits = { demo_social_reformer }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_political_advisor_europe_1 }
+		}
+	}
+	generate_character = {
+		token_base = generic_democractic_coordinator
+		advisor = {
+			slot = political_advisor
+			traits = { democractic_coordinator }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_political_advisor_europe_2 }
+		}
+	}
+	generate_character = {
+		token_base = generic_fascism_theorist
+		advisor = {
+			slot = political_advisor
+			traits = { fascism_theorist }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_political_advisor_europe_3 }
+		}
+	}
+}
 # Military advisors
 every_possible_country = {
 	limit = {

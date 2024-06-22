@@ -16,7 +16,7 @@
 }
 
 focus_tree = {
-	id = generic_focus
+	id = br_generic_focus
 	
 	country = {
 		factor = 1
@@ -1845,5 +1845,131 @@ focus_tree = {
 				always = yes
 			}
 		}
+	}
+###	
+	focus = {
+		id = political_effort
+		icon = GFX_goal_generic_demand_territory
+		x = 24
+		y = 0
+
+		cost = 5
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = anti_gov
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = political_effort }
+		#mutually_exclusive = { focus =  }
+		x = -6
+		y = 1
+		relative_position_id = political_effort
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = 12
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = political_effort }
+		#mutually_exclusive = { focus =  }
+		x = -2
+		y = 1
+		relative_position_id = political_effort
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = 11
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = political_effort }
+		#mutually_exclusive = { focus =  }
+		x = 2
+		y = 1
+		relative_position_id = political_effort
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = 12
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = political_effort }
+		#mutually_exclusive = { focus =  }
+		x = 6
+		y = 1
+		relative_position_id = political_effort
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
 	}
 }

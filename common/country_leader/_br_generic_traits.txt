@@ -30,6 +30,7 @@ leader_traits = {
 		}
 	}
 
+#advisors ideologies
 	anarchist_revolutionary = {
 		random = no
 		sprite = 13
@@ -83,7 +84,7 @@ leader_traits = {
 		ai_will_do = { factor = 0 }
 	}
 
-	social_reformer = {
+	demo_social_reformer = {
 		random = no
 		sprite = 13
 		
@@ -201,7 +202,7 @@ leader_traits = {
 
 		ai_will_do = { factor = 0 }
 	}
-
+#
 	knight_king = {
 		random = no
 		sprite = 13
