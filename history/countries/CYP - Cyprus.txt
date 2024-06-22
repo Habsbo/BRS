@@ -22,16 +22,4 @@ set_popularities = {
 	demo_conservatism = 70 #保守民主主义
 }
 
-
-set_autonomy = {
-	target = RAJ
-	autonomous_state = autonomy_colony
-	freedom_level = 0.35
-}
-set_autonomy = {
-	target = SAF
-	autonomous_state = autonomy_dominion
-	freedom_level = 0.4
-}
-
 set_cosmetic_tag = CYP_UK_exiled

@@ -19,7 +19,7 @@ focus_tree = {
 	id = generic_focus
 	
 	country = {
-		factor = 2
+		factor = 1
 	}
 	
 	default = yes
@@ -40,13 +40,17 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			army_experience = 5
+			army_experience = 50
+			#
 			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
 				cost_reduction = 0.5
 				uses = 1
 				category = land_doctrine
 			}
+			#
+			custom_effect_tooltip = generic_military_dynamic_modifier_added
+			add_to_variable = { troops_army_org_factor = 0.05 tooltip = army_org_factor_tt }
 		}
 	}
 
@@ -71,6 +75,10 @@ focus_tree = {
 				category = infantry_weapons
 				category = artillery
 			}
+			#
+			custom_effect_tooltip = generic_military_dynamic_modifier_added
+			add_to_variable = { troops_army_attack_factor = 0.05 tooltip = army_attack_factor_tt }
+			add_to_variable = { troops_army_defence_factor = 0.05 tooltip = army_defence_factor_tt }
 		}
 	}
 
@@ -82,7 +90,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = army_effort
-		cost = 8
+		cost = 5
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 		
@@ -94,6 +102,9 @@ focus_tree = {
 				bonus = 3.0
 				technology = motorised_infantry
 			}
+			#
+			custom_effect_tooltip = generic_military_dynamic_modifier_added
+			add_to_variable = { troops_army_speed_factor = 0.05 tooltip = army_speed_factor_tt }
 		}
 	}
 
@@ -111,13 +122,21 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			army_experience = 5
+			army_experience = 50
 			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
 				cost_reduction = 0.5
 				uses = 1
 				category = land_doctrine
 			}
+			#
+			custom_effect_tooltip = generic_military_dynamic_modifier_added
+			add_to_variable = { troops_army_org_factor = 0.05 tooltip = army_org_factor_tt }
+			#
+			custom_effect_tooltip = generic_officer_cap_dynamic_modifier_added
+			add_to_variable = { officer_cap_army_advisor_cost_factor = -0.10 tooltip = army_advisor_cost_factor_tt }
+			add_to_variable = { officer_cap_land_doctrine_cost_factor = -0.10 tooltip = land_doctrine_cost_factor_tt }			
+			add_to_variable = { officer_cap_command_abilities_cost_factor = -0.05 tooltip = command_abilities_cost_factor_tt }
 		}
 	}
 
@@ -142,6 +161,10 @@ focus_tree = {
 				category = infantry_weapons
 				category = artillery
 			}
+			#
+			custom_effect_tooltip = generic_military_dynamic_modifier_added
+			add_to_variable = { troops_army_attack_factor = 0.05 tooltip = army_attack_factor_tt }
+			add_to_variable = { troops_army_defence_factor = 0.05 tooltip = army_defence_factor_tt }
 		}
 	}
 
@@ -165,6 +188,9 @@ focus_tree = {
 				uses = 1
 				category = motorized_equipment
 			}
+			#
+			custom_effect_tooltip = generic_military_dynamic_modifier_added
+			add_to_variable = { troops_army_speed_factor = 0.05 tooltip = army_speed_factor_tt }
 		}
 	}
 
@@ -182,13 +208,21 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			army_experience = 5
+			army_experience = 50
 			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
 				cost_reduction = 0.5
 				uses = 1
 				category = land_doctrine
 			}
+			#
+			custom_effect_tooltip = generic_military_dynamic_modifier_added
+			add_to_variable = { troops_army_org_factor = 0.10 tooltip = army_org_factor_tt }
+			#
+			custom_effect_tooltip = generic_officer_cap_dynamic_modifier_added
+			add_to_variable = { officer_cap_experience_gain_army_factor = 0.10 tooltip = experience_gain_army_factor_tt }
+			add_to_variable = { officer_cap_command_abilities_cost_factor = -0.05 tooltip = command_abilities_cost_factor_tt }
+			add_to_variable = { officer_cap_unit_leader_as_advisor_cp_cost_factor = -0.10 tooltip = unit_leader_as_advisor_cp_cost_factor_tt }
 		}
 	}
 
@@ -213,6 +247,10 @@ focus_tree = {
 				category = infantry_weapons
 				category = artillery
 			}
+			#
+			custom_effect_tooltip = generic_military_dynamic_modifier_added
+			add_to_variable = { troops_army_attack_factor = 0.05 tooltip = army_attack_factor_tt }
+			add_to_variable = { troops_army_defence_factor = 0.10 tooltip = army_defence_factor_tt }
 		}
 	}
 
@@ -236,6 +274,10 @@ focus_tree = {
 				uses = 2
 				category = armor
 			}
+			#
+			custom_effect_tooltip = generic_military_dynamic_modifier_added
+			add_to_variable = { troops_army_attack_factor = 0.05 tooltip = army_attack_factor_tt }
+			add_to_variable = { troops_army_speed_factor = 0.10 tooltip = army_speed_factor_tt }
 		}
 	}
 
@@ -255,6 +297,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+			army_experience = 100
 			add_ideas = special_forces
 			add_tech_bonus = {
 				name = special_forces_bonus
@@ -296,7 +339,7 @@ focus_tree = {
 				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
-			}			
+			}	
 		}
 
 		completion_reward = {
@@ -352,6 +395,9 @@ focus_tree = {
 				uses = 1
 				category = air_doctrine
 			}
+			#
+			custom_effect_tooltip = generic_officer_cap_dynamic_modifier_added
+			add_to_variable = { officer_cap_air_advisor_cost_factor = -0.10 tooltip = air_advisor_cost_factor_tt }
 		}
 	}
 
@@ -700,7 +746,13 @@ focus_tree = {
 						instant_build = yes
 					}
 				}
-			}			
+			}
+			#
+			custom_effect_tooltip = generic_officer_cap_dynamic_modifier_added
+			add_to_variable = { officer_cap_navy_advisor_cost_factor = -0.10 tooltip = navy_advisor_cost_factor_tt }
+			#
+			custom_effect_tooltip = national_industry_military_dynamic_modifier_added
+			add_to_variable = { nim_production_speed_dockyard_factor = 0.10 tooltip = production_speed_dockyard_factor_tt }
 		}
 	}
 
@@ -743,6 +795,9 @@ focus_tree = {
 				technology = advanced_submarine_warfare
 				technology = combined_operations_raiding
 			}
+			#
+			custom_effect_tooltip = national_industry_military_dynamic_modifier_added
+			add_to_variable = { nim_fuel_gain_factor = 0.10 tooltip = fuel_gain_factor_tt }
 		}
 	}
 
@@ -781,6 +836,9 @@ focus_tree = {
 				uses = 2
 				category = fleet_in_being_tree
 			}
+			#
+			custom_effect_tooltip = national_industry_military_dynamic_modifier_added
+			add_to_variable = { nim_max_fuel_factor = 0.10 tooltip = max_fuel_factor_tt }
 		}
 	}
 
@@ -957,6 +1015,10 @@ focus_tree = {
 				uses = 1
 				category = industry
 			}
+			#
+			custom_effect_tooltip = national_industry_civilian_dynamic_modifier_added
+			add_to_variable = { nic_consumer_goods_expected_value = -0.05 tooltip = consumer_goods_expected_value_tt }
+			add_to_variable = { nic_production_speed_buildings_factor = 0.05 tooltip = production_speed_buildings_factor_tt }
 		}
 
 		ai_will_do = {
@@ -1054,6 +1116,14 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			#
+			custom_effect_tooltip = national_industry_civilian_dynamic_modifier_added
+			add_to_variable = { nic_production_speed_buildings_factor = 0.05 tooltip = production_speed_buildings_factor_tt }
+			#
+			custom_effect_tooltip = national_industry_military_dynamic_modifier_added
+			add_to_variable = { nim_conversion_cost_mil_to_civ_factor = -0.05 tooltip = conversion_cost_mil_to_civ_factor_tt }
+			#
+			add_cic = 3000
 		}
 	}
 
@@ -1128,6 +1198,12 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			#
+			custom_effect_tooltip = national_industry_civilian_dynamic_modifier_added
+			add_to_variable = { nic_conversion_cost_civ_to_mil_factor = -0.10 tooltip = conversion_cost_civ_to_mil_factor_tt }
+			#
+			custom_effect_tooltip = national_industry_military_dynamic_modifier_added
+			add_to_variable = { nim_production_speed_arms_factory_factor = 0.05 tooltip = production_speed_arms_factory_factor_tt }
 		}
 	}
 
@@ -1202,6 +1278,14 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			#
+			custom_effect_tooltip = national_industry_civilian_dynamic_modifier_added
+			add_to_variable = { nic_production_speed_buildings_factor = 0.05 tooltip = production_speed_buildings_factor_tt }
+			#
+			custom_effect_tooltip = national_industry_military_dynamic_modifier_added
+			add_to_variable = { nim_conversion_cost_mil_to_civ_factor = -0.05 tooltip = conversion_cost_mil_to_civ_factor_tt }
+			#
+			add_cic = 3000
 		}
 	}
 
@@ -1276,6 +1360,15 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			#
+			custom_effect_tooltip = national_industry_military_dynamic_modifier_added
+			add_to_variable = { nim_production_speed_arms_factory_factor = 0.05 tooltip = production_speed_arms_factory_factor_tt }
+			add_to_variable = { nim_conversion_cost_civ_to_mil_factor = -0.05 tooltip = conversion_cost_civ_to_mil_factor_tt }
+			#
+			add_to_variable = { nim_production_factory_efficiency_gain_factor = 0.05 tooltip = production_factory_efficiency_gain_factor_whitespace_tt }
+			add_to_variable = { nim_production_factory_start_efficiency_factor = 0.05 tooltip = production_factory_start_efficiency_factor_whitespace_tt }
+			add_to_variable = { nim_production_factory_max_efficiency_factor = 0.05 tooltip = production_factory_max_efficiency_factor_whitespace_tt }
+			add_to_variable = { nim_production_lack_of_resource_penalty_factor = -0.05 tooltip = production_lack_of_resource_penalty_factor_whitespace_tt }
 		}
 	}
 
@@ -1372,6 +1465,14 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			#
+			custom_effect_tooltip = national_industry_civilian_dynamic_modifier_added
+			add_to_variable = { nic_consumer_goods_expected_value = -0.05 tooltip = consumer_goods_expected_value_tt }
+			add_to_variable = { nic_industrial_capacity_factory = 0.05 tooltip = industrial_capacity_factory_tt }
+			add_to_variable = { nic_conversion_cost_civ_to_mil_factor = -0.05 tooltip = conversion_cost_civ_to_mil_factor_tt }
+			add_to_variable = { nic_conversion_cost_mil_to_civ_factor = -0.05 tooltip = conversion_cost_mil_to_civ_factor_tt }
+			#
+			add_cic = 3000
 		}
 	}
 
@@ -1446,6 +1547,15 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			#
+			custom_effect_tooltip = national_industry_military_dynamic_modifier_added
+			add_to_variable = { nim_production_speed_arms_factory_factor = 0.10 tooltip = production_speed_arms_factory_factor_tt }
+			#
+			add_to_variable = { nim_production_factory_efficiency_gain_factor = 0.05 tooltip = production_factory_efficiency_gain_factor_whitespace_tt }
+			add_to_variable = { nim_production_factory_start_efficiency_factor = 0.05 tooltip = production_factory_start_efficiency_factor_whitespace_tt }
+			add_to_variable = { nim_production_factory_max_efficiency_factor = 0.05 tooltip = production_factory_max_efficiency_factor_whitespace_tt }
+			add_to_variable = { nim_production_lack_of_resource_penalty_factor = -0.05 tooltip = production_lack_of_resource_penalty_factor_whitespace_tt }
+			add_to_variable = { nim_conversion_cost_civ_to_mil_factor = -0.05 tooltip = conversion_cost_civ_to_mil_factor_tt }
 		}
 	}
 
@@ -1542,6 +1652,14 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			#
+			custom_effect_tooltip = national_industry_civilian_dynamic_modifier_added
+			add_to_variable = { nic_consumer_goods_expected_value = -0.05 tooltip = consumer_goods_expected_value_tt }
+			add_to_variable = { nic_industrial_capacity_factory = 0.05 tooltip = industrial_capacity_factory_tt }
+			add_to_variable = { nic_conversion_cost_civ_to_mil_factor = -0.05 tooltip = conversion_cost_civ_to_mil_factor_tt }
+			add_to_variable = { nic_conversion_cost_mil_to_civ_factor = -0.05 tooltip = conversion_cost_mil_to_civ_factor_tt }
+			#
+			add_cic = 3000
 		}
 	}
 
@@ -1616,6 +1734,12 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			#
+			custom_effect_tooltip = national_industry_civilian_dynamic_modifier_added
+			add_to_variable = { nic_consumer_goods_expected_value = -0.05 tooltip = consumer_goods_expected_value_tt }
+			add_to_variable = { nic_production_speed_buildings_factor = 0.05 tooltip = production_speed_buildings_factor_tt }
+			add_to_variable = { nic_industrial_capacity_factory = 0.10 tooltip = industrial_capacity_factory_tt }
+			add_to_variable = { nic_conversion_cost_mil_to_civ_factor = -0.10 tooltip = conversion_cost_mil_to_civ_factor_tt }
 		}
 	}
 

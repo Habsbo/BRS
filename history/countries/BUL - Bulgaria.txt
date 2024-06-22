@@ -311,12 +311,17 @@ set_politics = { #VANILLA
 }
 
 set_popularities = {
-	sci_socialism = 10 #科学社会主义
-	demo_liberalism = 10 #社会自由主义
-	demo_conservatism = 10 #保守民主主义
-	authoritarian = 40 #威权主义
-	fascism = 30 #民族主义/束棒
+	sci_socialism = 10
+	#
+	demo_liberalism = 10
+	demo_conservatism = 10
+	#
+	authoritarian = 40
+	#
+	fascism = 30
 }
+
+set_cosmetic_tag = BUL_tsar_empire
 
 set_autonomy = {
 	target = MAC

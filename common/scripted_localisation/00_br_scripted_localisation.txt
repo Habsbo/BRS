@@ -42,3 +42,48 @@ defined_text = { # Country
 		localization_key = GethellenicCountryconfidence_ruins
 	}
 }
+
+defined_text = { # Country
+	name = GetGMDynMAdded
+	text = {
+		trigger = {
+			br_ideology_anarchism_ruling = yes
+		}
+		localization_key = black_force_dynamic_modifier_added
+	}
+	text = {
+		trigger = {
+			br_ideology_socialism_ruling_no_ds = yes
+		}
+		localization_key = red_army_dynamic_modifier_added
+	}
+	text = {
+		trigger = {
+			br_ideology_radical_communism_nio = yes
+			br_ideology_socialism_nio_no_ds = yes
+		}
+		localization_key = land_force_alt_dynamic_modifier_added
+	}
+}
+defined_text = { # Country
+	name = GetGOCDynMAdded
+	text = {
+		trigger = {
+			br_ideology_anarchism_ruling = yes
+		}
+		localization_key = committee_combat_dynamic_modifier_added
+	}
+	text = {
+		trigger = {
+			br_ideology_socialism_ruling_no_ds = yes
+		}
+		localization_key = political_commissar_dynamic_modifier_added
+	}
+	text = {
+		trigger = {
+			br_ideology_radical_communism_nio = yes
+			br_ideology_socialism_nio_no_ds = yes
+		}
+		localization_key = officer_cap_dynamic_modifier_added
+	}
+}
