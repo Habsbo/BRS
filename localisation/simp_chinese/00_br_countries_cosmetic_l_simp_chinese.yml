@@ -151,6 +151,8 @@
  Yugo_Slavia: "南斯拉夫"
  Yugo_Slavia_DEF: "南斯拉夫"
  Yugo_Slavia_ADJ: "南斯拉夫"
+ BUL_tsar_empire: "保加利亚沙皇国"
+ BUL_tsar_empire_DEF: "保加利亚沙皇国"
  
 #低地 Benelux
  HOL_orange: "尼德兰联省"
@@ -248,13 +250,8 @@
  ROM_republic: "$ROM$共和国"
 
 #乌克兰&俄罗斯&波兰
- UKR_liberated_area: "$UKR$农民解放区"
- POL_kingdom: "波兰王国"
- POL_kingdom_DEF: "波兰王国"
- POL_kingdom_ADJ: "波兰"
- POL_republic: "波兰共和国"
- POL_republic_DEF: "波兰共和国"
- POL_republic_ADJ: "波兰"
+ UKR_liberated_area: "乌克兰农民解放区"
+ UKR_liberated_area_DEF: "乌克兰农民解放区"
 
  ROR: "$RUS$共和国"
  ROR_interim_government: "$ROR$临时政府"
@@ -266,6 +263,33 @@
  SOR_DEF: "$SOV$共和国"
  SOR_ADJ: "$SOV$"
 
+ POL_kingdom: "波兰王国"
+ POL_kingdom_DEF: "波兰王国"
+ POL_kingdom_ADJ: "波兰"
+ POL_republic: "波兰共和国"
+ POL_republic_DEF: "波兰共和国"
+ POL_republic_ADJ: "波兰"
+ POL_DEU: "德属波兰"
+ POL_DEU_DEF: "德属波兰"
+ Teutonic_Order: "条顿骑士团"
+ Teutonic_Order_DEF: "条顿骑士团"
+ Teutonic_Order_ADJ: "条顿"
+#波罗的海the Baltic
+ LIT_grand_duchy: "立陶宛大公国"
+ LIT_grand_duchy_DEF: "立陶宛大公国"
+ LIT_republic: "立陶宛共和国"
+ LIT_republic_DEF: "立陶宛共和国"
+ Polish_Lithuanian_commonwealth: "波兰-立陶宛联邦"
+ Polish_Lithuanian_commonwealth_DEF: "波兰-立陶宛联邦"
+ Livonian_Order: "利沃尼亚骑士团"
+ Livonian_Order_DEF: "利沃尼亚骑士团"
+ Livonian_Order_ADJ: "利沃尼亚"
+ Baltic_deutschland_reich: "波罗的德意志国"
+ Baltic_deutschland_reich_DEF: "波罗的德意志国"
+ Baltic_deutschland_reich_ADJ: "波罗的德意志国"
+ 
+#北欧 Norse
+ 
 #多瑙河
  AUS_archduchy: "奥地利大公国"
  AUS_archduchy_DEF: "奥地利大公国"

@@ -1150,6 +1150,11 @@ Yugo_Slavia= {
 	color_ui = rgb { 25 25 112 }
 } #178 34 34
 
+OTTOMAN_empire = {
+	color = rgb { 112 41 99 }
+	color_ui = rgb { 112 41 99 }
+}
+
 KMT = {
 	color = rgb { 25 25 139 }
 	color_ui = rgb { 25 25 139 }
