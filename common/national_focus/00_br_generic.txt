@@ -1872,9 +1872,10 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+	#
 	focus = {
-		id = anti_gov
-		icon = GFX_goal_generic_demand_territory
+		id = communism_rising
+		icon = GFX_goal_generic_forceful_treaty
 		prerequisite = { focus = political_effort }
 		#mutually_exclusive = { focus =  }
 		x = -6
@@ -1898,11 +1899,62 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 	}
 	focus = {
-		id = 12
-		icon = GFX_goal_generic_demand_territory
+		id = 3
+		icon = GFX_
+		prerequisite = { focus = communism_rising }
+		#mutually_exclusive = { focus =  }
+		x = -1
+		y = 1
+		relative_position_id = communism_rising
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = 4
+		icon = GFX_
+		prerequisite = { focus = communism_rising }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 1
+		relative_position_id = communism_rising
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	#
+	focus = {
+		id = reconciliation_of_gov
+		icon = GFX_focus_ARG_strengthening_the_concordancia
 		prerequisite = { focus = political_effort }
 		#mutually_exclusive = { focus =  }
-		x = -2
+		x = 0
 		y = 1
 		relative_position_id = political_effort
 
@@ -1922,34 +1974,10 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
-	focus = {
-		id = 11
-		icon = GFX_goal_generic_demand_territory
-		prerequisite = { focus = political_effort }
-		#mutually_exclusive = { focus =  }
-		x = 2
-		y = 1
-		relative_position_id = political_effort
-
-		cost = 8
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-		
-		ai_will_do = { factor = 1 }
-	}
+	#
 	focus = {
 		id = 12
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_focus_generic_fascist_propaganda
 		prerequisite = { focus = political_effort }
 		#mutually_exclusive = { focus =  }
 		x = 6

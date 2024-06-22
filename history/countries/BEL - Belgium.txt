@@ -99,3 +99,10 @@ add_ideas = {
 }
 
 set_cosmetic_tag = BEL_kingdom
+
+set_power_balance = {
+	id = BEL_two_nations_balance
+	left_side = BEL_flemish_left_side
+	right_side = BEL_wallonia_right_side
+	set_default = yes
+}

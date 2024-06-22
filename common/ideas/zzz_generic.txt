@@ -281,6 +281,7 @@ ideas = {
 			}
 		}
 
+		#ideo
 		fascist_influence = {
 			
 			allowed = {
@@ -300,7 +301,6 @@ ideas = {
 				fascism_acceptance = 85
 			}
 		}
-		
 		communist_influence = {
 			
 			
@@ -359,6 +359,24 @@ ideas = {
 				neutrality_acceptance = 85
 			}
 		}
+
+		radicalization_of_communists = {
+			picture = generic_communism_drift_bonus
+			
+			allowed = { always = no }
+
+			allowed_civil_war = { has_government = communism }
+
+			removal_cost = -1
+			
+			modifier = {
+				soc_anarchism_drift = 0.05
+				vanwardism_drift = 0.05
+				soc_anarchism_acceptance = 75
+				vanwardism_acceptance = 75
+			}
+		}
+		
 
 		#Weaker version
 		fascist_influence_weak = {
@@ -1320,6 +1338,20 @@ ideas = {
 			modifier = {
 			}
 		}
+
+		criminal_tribals = { #
+			picture = generic_production_bonus
+
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.05
+				stability_factor = -0.15
+			}
+		}
 	}
 
 	# TECHNOLOGY
@@ -1950,5 +1982,4 @@ ideas = {
 			traits = { artillery_manufacturer }
 		}
 	}
-
 }

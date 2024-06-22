@@ -223,9 +223,9 @@ br_political_actions = {
 
 		custom_cost_trigger = { has_stability > 0.10 }
 		custom_cost_text = decision_cost_S_10
-		fire_only_once = no
-		days_remove = 60
-		days_re_enable = 90
+
+		fire_only_once = yes
+		days_remove = 90
 
 		modifier = { war_support_weekly = 0.01 }
 
@@ -248,21 +248,26 @@ br_political_actions = {
 		icon = generic_form_nation
 
 		available = {
-			has_war_support > 0.60
+			has_war_support > 0.40
 			threat > 0.24
 			NOT = { has_idea = tot_economic_mobilisation }
 		}
 
 		visible = {
-			#has_war_support > 0.60
+			OR = {
+				has_war = no
+				has_civil_war = yes
+			}
+			#has_war_support > 0.40
 			#threat > 0.24
 		}
 		
 		custom_cost_trigger = { has_war_support > 0.10 }
 		custom_cost_text = decision_cost_WS_10
-		fire_only_once = no
-		days_remove = 60
-		days_re_enable = 90
+
+		fire_only_once = yes
+		days_remove = 90
+		cancel_if_not_visible = yes
 
 		modifier = { stability_weekly = 0.01 }
 
@@ -283,6 +288,20 @@ br_political_actions = {
 			}
 		}
 
+		remove_effect = {
+			if = {
+				limit = { is_major = yes }
+				add_threat = -5
+			}
+			else = {
+				add_threat = -1
+			}
+		}
+
+		cancel_effect = {
+			add_stability = -0.05
+		}
+
 		ai_will_do = { base = 0 }
 	}
 #劳动
@@ -290,7 +309,7 @@ br_political_actions = {
 		icon = generic_political_discourse
 
 		available = {
-			always = yes
+			#
 		}
 
 		visible = {
@@ -298,11 +317,24 @@ br_political_actions = {
 		}
 
 		fire_only_once = no
+		days_remove = 90
+		days_re_enable = 90
+		cancel_if_not_visible = yes
 
-		cost = 0
+		cost = 100
+
+		modifier = {
+			political_power_factor = -0.05
+			consumer_goods_factor = 0.15
+			conscription_factor = -0.50
+			production_speed_infrastructure_factor = 0.05
+			production_speed_industrial_complex_factor = 0.05
+			industrial_capacity_factory = 0.1
+			industrial_capacity_dockyard = 0.1
+		}
 
 		complete_effect = {
-			#
+			add_stability = 0.05
 		}
 
 		ai_will_do = {
@@ -321,11 +353,20 @@ br_political_actions = {
 		}
 
 		fire_only_once = no
+		days_remove = 90
+		days_re_enable = 90
+		cancel_if_not_visible = yes
 
-		cost = 0
+		cost = 100
 
-		complete_effect = {
-			#
+		modifier = {
+			political_power_factor = -0.05
+			conscription_factor = -0.50
+			consumer_goods_factor = 0.25
+			production_speed_buildings_factor = 0.10
+			production_factory_max_efficiency_factor = 0.10
+			production_factory_start_efficiency_factor = 0.05
+			production_factory_efficiency_gain_factor = 0.05
 		}
 
 		ai_will_do = {
@@ -345,11 +386,23 @@ br_political_actions = {
 		}
 
 		fire_only_once = no
+		days_remove = 56
+		days_re_enable = 60
+		cancel_if_not_visible = yes
 
-		cost = 0
+		custom_cost_trigger = { has_stability > 0.05 }
+		custom_cost_text = decision_cost_S_5
+
+		modifier = {
+			political_power_factor = 0.05
+			political_advisor_cost_factor = -0.05
+			drift_defence_factor = -1.00
+		}
 
 		complete_effect = {
-			#
+			hidden_effect = {
+				add_stability = -0.05
+			}
 		}
 
 		ai_will_do = {
@@ -368,11 +421,28 @@ br_political_actions = {
 		}
 
 		fire_only_once = no
+		days_remove = 28
+		days_re_enable = 60
+		cancel_if_not_visible = yes
 
-		cost = 0
+		custom_cost_trigger = { command_power > 15 }
+		custom_cost_text = decision_cost_CP_15
+
+		modifier = {
+			political_power_factor = -0.05
+			political_advisor_cost_factor = 0.05
+			stability_weekly = 0.01
+			drift_defence_factor = 0.50
+		}
 
 		complete_effect = {
-			#
+			hidden_effect = {
+				add_command_power = -15
+			}
+		}
+
+		remove_effect = {
+			add_popularity = { ideology = root popularity = 0.10 }
 		}
 
 		ai_will_do = {
@@ -597,7 +667,7 @@ br_political_actions = {
 
 		complete_effect = {
 			set_country_flag = br_political_action_fascism_suppressed_flag
-			country_event = br_political_actions.1
+			country_event = br_political_actions.7
 		}
 
 		ai_will_do = { base = 0 }
@@ -628,7 +698,7 @@ br_political_actions = {
 
 		complete_effect = {
 			set_country_flag = br_political_action_fascism_suppressed_flag
-			country_event = br_political_actions.2
+			country_event = br_political_actions.8
 		}
 
 		ai_will_do = { base = 0 }
@@ -752,11 +822,11 @@ br_alsace = {
 		cost = 0
 
 		complete_effect = {
-			#
+			28 = { add_compliance = 20 }
 		}
 
 		ai_will_do = {
-			base = 0
+			base = 1
 		}
 	}
 	#兵役优待
