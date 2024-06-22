@@ -1149,3 +1149,8 @@ Yugo_Slavia= {
 	color = rgb { 25 25 112 }
 	color_ui = rgb { 25 25 112 }
 } #178 34 34
+
+KMT = {
+	color = rgb { 25 25 139 }
+	color_ui = rgb { 25 25 139 }
+}

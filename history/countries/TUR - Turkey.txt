@@ -521,4 +521,4 @@ if = {
 }
 
 #
-set_cosmetic_tag = TUR_republic
+set_cosmetic_tag = OTTOMAN_empire
