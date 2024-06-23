@@ -155,6 +155,14 @@
  BUL_tsar_empire_DEF: "保加利亚沙皇国"
  
 #低地 Benelux
+ HOL_Koninkrijk_der_Nederlanden: "尼德兰王国"
+ HOL_Koninkrijk_der_Nederlanden_DEF: "尼德兰王国"
+ HOL_De_Republiek_der_Zeven_Verenigde_Nederlanden: "尼德兰联省共和国"
+ HOL_De_Republiek_der_Zeven_Verenigde_Nederlanden_ADJ: "尼德兰联省共和国"
+ HOL_De_Republiek_der_Zeven_Verenigde_Nederlanden_orange: "尼德兰联省共和国"
+ HOL_De_Republiek_der_Zeven_Verenigde_Nederlanden_orange_ADJ: "尼德兰联省共和国"
+ HOL_Bataafse_Republiek: "巴达维亚共和国"
+ HOL_Bataafse_Republiek_DEF: "巴达维亚共和国"
  HOL_orange: "尼德兰联省"
  HOL_orange_DEF: "尼德兰联省"
  HOL_orange_ADJ: "尼德兰"
@@ -164,6 +172,8 @@
  Utrecht: "乌德勒支"
  Utrecht_DEF: "乌德勒支"
  Utrecht_ADJ: "乌德勒支"
+
+
  BEL_kingdom: "比利时王国"
  BEL_kingdom_DEF: "比利时王国"
  BEL_kingdom_ADJ: "比利时"

@@ -20,6 +20,23 @@ focus_tree = {
 	
 	country = {
 		factor = 1
+		modifier = {
+			factor = 20
+			OR = {
+				#
+				original_tag = NOR
+				original_tag = SWD
+				original_tag = FIN
+				original_tag = DEN
+				#
+				original_tag = EST
+				original_tag = LAT
+				original_tag = LIT
+				#
+				original_tag = SWI
+				#original_tag = 
+			}
+		}
 	}
 	
 	default = yes

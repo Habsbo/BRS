@@ -356,3 +356,5 @@ if = {
 		}
 	}
 }
+
+set_cosmetic_tag = HOL_Koninkrijk_der_Nederlanden
