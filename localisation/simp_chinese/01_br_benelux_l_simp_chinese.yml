@@ -362,7 +362,18 @@
  br_lux_hog.3.c: ""
  br_lux_hog.3.d: "或许会有更合适的人？"
 #
-
+#bop - bel
+ BEL_two_nations_balance: "两个主体民族的割裂"
+ BEL_vlaams_left_side: "弗拉芒人"
+ BEL_wallonia_right_side: "瓦隆人"
+ BEL_two_nations_mid_range: "两族共享权力：平衡"
+ BEL_vlaams_left_side_range.1: "弗拉芒人强势：尚且平衡"
+ BEL_vlaams_left_side_range.2: "弗拉芒人强势：瓦隆势微"
+ BEL_vlaams_left_side_range.3: "弗拉芒人强势：弗拉芒万岁！"
+ BEL_wallonia_right_side_range.1: "瓦隆人强势：尚且平衡"
+ BEL_wallonia_right_side_range.2: "瓦隆人强势：弗拉芒势弱"
+ BEL_wallonia_right_side_range.3: "瓦隆人强势：唯有瓦隆！"
+#
  BEL_beating_wallonia: "瓦隆的工业心脏"
  BEL_beating_wallonia_desc: ""
  BEL_electrification_of_wallonia: "瓦隆尼亚电气化"

@@ -472,6 +472,8 @@ ideas = {
 				OR = {
 					has_idea = br_laws_elected_president
 					has_idea = br_laws_parliamentarism
+					has_idea = br_laws_committee
+					has_idea = br_laws_technocracy
 				}
 			}
 			
