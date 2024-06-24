@@ -1,5 +1,6 @@
 ﻿l_simp_chinese:
  government: "政府"
+ ok: "好"
  is_border_state_tt: "是§Y边境§!省份"
 #
  the_House_of_Habsburg: "哈布斯堡王朝"
@@ -141,3 +142,4 @@
  afflatus_paladiness: "受启示的圣战修女"
  knight_king: "骑士王"
  knight_king_hog: "骑士王"
+ labour_lawyer: "劳动者的律师"

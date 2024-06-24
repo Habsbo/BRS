@@ -98,6 +98,50 @@ defined_text = {
 	text = {
 		trigger = {
 			FROM = {
+				NOT = {
+					tag = MNG
+					original_tag = GER
+					original_tag = BUL
+					original_tag = SOV
+				}
+				has_idea = br_laws_monarchy
+			}
+		}
+		localization_key = CL_King
+	}
+	text = {
+		trigger = {
+			FROM = {
+				tag = MNG
+				has_idea = br_laws_monarchy
+			}
+		}
+		localization_key = CL_Emperor
+	}
+	text = {
+		trigger = {
+			FROM = {
+				original_tag = GER
+				has_idea = br_laws_monarchy
+			}
+		}
+		localization_key = CL_Kaiser
+	}
+	text = {
+		trigger = {
+			FROM = {
+				OR = {
+					original_tag = BUL
+					original_tag = SOV
+				}
+				has_idea = br_laws_monarchy
+			}
+		}
+		localization_key = CL_Tsar
+	}
+	text = {
+		trigger = {
+			FROM = {
 				original_tag = PAP
 				has_idea = br_laws_cleric
 				has_idea = br_laws_spiritual

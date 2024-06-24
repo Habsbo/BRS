@@ -93,6 +93,18 @@
  
  HRE: "神圣罗马帝国"
  HRE_DEF: "神圣罗马帝国"
+ Swiss_republic: "瑞士共和国"
+ Swiss_republic_DEF: "瑞士共和国"
+ Swiss_Confederation: "瑞士联邦"
+ Swiss_Confederation_DEF: "瑞士联邦"
+ Swiss_kingdom: "瑞士王国"
+ Swiss_kingdom_DEF: "瑞士王国"
+ Swiss_duchy: "瑞士公国"
+ Swiss_duchy_DEF: "瑞士公国"
+ Swiss_socialism_republic: "瑞士社会主义共和国"
+ Swiss_socialism_republic_DEF: "瑞士社会主义共和国"
+ Swiss_commune: "瑞士公社"
+ Swiss_commune_DEF: "瑞士公社"
 
 #意大利 Italy
  ITA_socialist_republic: "$ITA$社会主义共和国"

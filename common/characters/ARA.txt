@@ -35,39 +35,27 @@ characters = {
 		}
 		advisor={
 			slot = political_advisor
-			idea_token = CAT_benito_pabon_y_suarez_de_urbina
 			name = CAT_benito_pabon_y_suarez_de_urbina
-			allowed = {
-				#
-			}
-
-			visible = {
-				#
-			}
-
+			idea_token = CAT_benito_pabon_y_suarez_de_urbina
+			allowed = {}
+			visible = { NOT = { has_idea = CAT_benito_pabon_hog } }
 			available = {
-				#
+				OR = {
+					br_ideology_radical_communism_ruling = yes
+					br_ideology_socialism_ruling = yes
+				}
 			}
-			traits = {
-				#
-			}
-			modifier = {
-				political_power_gain = 0.35
-				soc_anarchism_drift = 0.08
-				soc_anarchism_acceptance = 80
-			}
+			traits = { labour_lawyer }
 		}
 		advisor={
 			slot = head_of_gov
 			name = CAT_benito_pabon_y_suarez_de_urbina
 			idea_token = CAT_benito_pabon_y_suarez_de_urbina_hog
 			allowed = {}
-
 			visible = {}
-
 			available = { br_head_of_gov_generic_trigger = yes }
 
-			traits = {}
+			traits = { labour_lawyer }
 
 			cost = 0
 			can_be_fired = no

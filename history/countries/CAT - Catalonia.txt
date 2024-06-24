@@ -92,10 +92,11 @@ add_ideas = {
 	br_laws_mainstream
 	br_laws_freedom_belief
 	br_laws_proletariat
-	#
 }
-#head of gov
-add_ideas = CAT_benito_pabon_y_suarez_de_urbina_hog
+1931.1.1 = {
+	#head of gov
+	add_ideas = CAT_benito_pabon_y_suarez_de_urbina_hog
+}
 #
 set_variable = { VL_status_var = 12 } #政府领袖是 总书记 - the head of gov is general secretary!
 #政治家
