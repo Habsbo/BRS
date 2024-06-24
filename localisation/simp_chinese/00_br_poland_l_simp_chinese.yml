@@ -33,7 +33,7 @@ l_simp_chinese:
  VL_name_Moscicki: "$Ignacy_Moscicki$"
  VL_trait_Moscicki: "§Y$chemical_educator$§!\n  - $MODIFIER_POLITICAL_POWER_FACTOR$: §R-5%§!\n  - $MODIFIER_LOCAL_RESOURCES_FACTOR$: §G+10.00%§!\n  - $MODIFIER_RESEARCH_SPEED_FACTOR$: §G+5.00%§!"
  VL_state_Moscicki: "§Y$Ignacy_Moscicki$§!\n$VL_trait_Moscicki$"
- VL_Dip_state_Moscicki: "§Y$Ignacy_Moscicki$§!\n$GetDipStatus$\nVL_trait_Moscicki$"
+ VL_Dip_state_Moscicki: "§Y$Ignacy_Moscicki$§!\n$GetDipStatus$\n$VL_trait_Moscicki$"
  VL_desc_Moscicki: "§g§!"
  
  

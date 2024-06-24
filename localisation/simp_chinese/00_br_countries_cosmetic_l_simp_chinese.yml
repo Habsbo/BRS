@@ -107,9 +107,14 @@
  Swiss_commune_DEF: "瑞士公社"
 
 #意大利 Italy
- ITA_socialist_republic: "$ITA$社会主义共和国"
- ITA_socialist_republic_DEF: "$ITA$社会主义共和国"
- ITA_socialist_republic_ADJ: "$ITA$共和国"
+ ITA_socialist_republic: "意大利社会主义共和国"
+ ITA_socialist_republic_DEF: "意大利社会主义共和国"
+ ITA_socialist_republic_ADJ: "意大利共和国"
+ 
+ papal_states: "教宗国"
+ papal_states_DEF: "教宗国"
+ papal_states_communism: "天主教人民联盟"
+ papal_states_communism_DEF: "天主教人民联盟"
 #伊比利亚
  EUSKADI: "巴斯克"
  EUSKADI_DEF: "巴斯克"
@@ -1390,14 +1395,6 @@
  regnum_bospori_democratic: "博斯普鲁斯共和国"
  regnum_bospori_democratic_DEF: "博斯普鲁斯共和国"
  regnum_bospori_ADJ: "博斯普鲁斯-本都"
- papal_states_neutrality: "教宗国"
- papal_states_neutrality_DEF: "教宗国"
- papal_states_fascism: "天主的国"
- papal_states_fascism_DEF: "天主的国"
- papal_states_democratic: "教宗属邦"
- papal_states_democratic_DEF: "教宗国"
- papal_states_communism: "意大利人民天主教联盟"
- papal_states_communism_DEF: "意大利人民天主教联盟"
  ITA_socialist_republic_neutrality: "意大利"
  ITA_socialist_republic_neutrality_DEF: "意大利"
  ITA_socialist_republic_fascism: "意大利国家联盟"

@@ -72,6 +72,13 @@ add_ideas = {
 	closed_economy
 	service_by_requirement
 	partial_economic_mobilisation
+	#
+	br_laws_elected_president
+	br_laws_premier
+	br_laws_qualification
+	br_laws_national_state
+	br_laws_atheism
+	br_laws_bourgeoisie
 }
 
 if = {

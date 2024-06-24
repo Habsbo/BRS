@@ -95,6 +95,7 @@ defined_text = {
 #
 defined_text = {
 	name = GetPLStatus
+	#国王
 	text = {
 		trigger = {
 			FROM = {
@@ -148,6 +149,24 @@ defined_text = {
 			}
 		}
 		localization_key = CL_Pap
+	}
+	text = {
+		trigger = {
+			FROM = {
+				NOT = { original_tag = PAP }
+				has_idea = br_laws_cleric
+				has_idea = br_laws_spiritual
+			}
+		}
+		localization_key = CL_Bishop
+	}
+	text = {
+		trigger = {
+			FROM = {
+				has_idea = br_laws_elected_president
+			}
+		}
+		localization_key = CL_President
 	}
 	text = {
 		trigger = {

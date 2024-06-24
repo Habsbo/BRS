@@ -135,6 +135,8 @@ add_ideas = {
 	#
 }
 
+set_cosmetic_tag = papal_states
+
 ### VARIANTS ###
 # 1936 Start #
 #plane variants
