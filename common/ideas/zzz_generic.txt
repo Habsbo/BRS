@@ -282,81 +282,126 @@ ideas = {
 		}
 
 		#ideo
-		fascist_influence = {
+		communist_influence_1 = {
+			picture = generic_communism_drift_bonus
 			
-			allowed = {
-				always = no
-			}
+			allowed = { always = no }
 
 			allowed_civil_war = {
-				has_government = fascism
+				OR = {
+					br_ideology_radical_communism_ruling = yes
+					br_ideology_socialism_ruling = yes
+				}
 			}
 
 			removal_cost = -1
-
-			picture = generic_fascism_drift_bonus
 			
 			modifier = {
-				fascism_drift = 0.1
+				soc_anarchism_drift = 0.08
+				vanwardism_drift = 0.08
+				soc_anarchism_acceptance = 85
+				vanwardism_acceptance = 85
+			}
+		}
+		communist_influence_2 = {
+			picture = generic_communism_drift_bonus
+			
+			allowed = { always = no }
+
+			allowed_civil_war = {
+				OR = {
+					br_ideology_radical_communism_ruling = yes
+					br_ideology_socialism_ruling = yes
+				}
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				sci_socialism_drift = 0.08
+				con_socialism_drift = 0.08
+				demo_socialism_drift = 0.02
+				sci_socialism_acceptance = 85
+				con_socialism_acceptance = 85
+				demo_socialism_acceptance = 85
+			}
+		}
+		democratic_influence_1 = {
+			picture = generic_democratic_drift_bonus
+			
+			allowed = { always = no }
+
+			allowed_civil_war = {
+				br_ideology_capitalism_ruling_with_ds = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				demo_socialism_drift = 0.08
+				demo_liberalism_drift = 0.02
+				demo_socialism_acceptance = 85
+				demo_liberalism_acceptance = 85
+			}
+		}
+		democratic_influence_2 = {
+			picture = generic_democratic_drift_bonus
+			
+			allowed = { always = no }
+
+			allowed_civil_war = {
+				br_ideology_capitalism_ruling_with_ds = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				demo_liberalism_drift = 0.08
+				demo_conservatism_drift = 0.08
+				demo_liberalism_acceptance = 85
+				demo_conservatism_acceptance = 85
+			}
+		}
+		fascist_influence_1 = {
+			picture = generic_fascism_drift_bonus
+			
+			allowed = { always = no }
+
+			allowed_civil_war = { has_government = fascism }
+
+			removal_cost = -1
+			
+			modifier = {
+				fascism_drift = 0.10
 				fascism_acceptance = 85
 			}
 		}
-		communist_influence = {
+		fascist_influence_2 = {
+			picture = generic_fascism_drift_bonus
 			
-			
-			allowed = {
-				always = no
-			}
+			allowed = { always = no }
 
-			allowed_civil_war = {
-				has_government = communism
-			}
+			allowed_civil_war = { has_government = nationalism }
 
 			removal_cost = -1
-
-			picture = generic_communism_drift_bonus
 			
 			modifier = {
-				communism_drift = 0.1
-				communism_acceptance = 85
-			}
-		}
-		democratic_influence = {
-			
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				has_government = democratic
-			}
-
-			removal_cost = -1
-
-			picture = generic_democratic_drift_bonus
-			
-			modifier = {
-				democratic_drift = 0.1
-				democratic_acceptance = 85
+				nationalism_drift = 0.1
+				nationalism_acceptance = 85
 			}
 		}
 		neutrality_influence = {
-			allowed = {
-				always = no
-			}
+			picture = generic_pp_unity_bonus
 
-			allowed_civil_war = {
-				has_government = neutrality
-			}
+			allowed = { always = no }
+
+			allowed_civil_war = { has_government = authoritarian }
 
 			removal_cost = -1
-
-			picture = generic_pp_unity_bonus
 			
 			modifier = {
-				neutrality_drift = 0.1
-				neutrality_acceptance = 85
+				authoritarian_drift = 0.1
+				authoritarian_acceptance = 85
 			}
 		}
 

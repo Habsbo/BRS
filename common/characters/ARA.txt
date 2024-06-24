@@ -183,17 +183,9 @@ characters = {
 			slot = political_advisor
 			idea_token = CAT_miguel_chueca_cuartero
 			name = CAT_miguel_chueca_cuartero
-			allowed = {
-				#
-			}
-
-			visible = {
-				#
-			}
-
-			available = {
-				#
-			}
+			allowed = {}
+			visible = {}
+			available = {}
 			traits = {
 				#
 			}
@@ -212,17 +204,9 @@ characters = {
 			slot = political_advisor
 			idea_token = CAT_luis_montoliu_salado
 			name = CAT_luis_montoliu_salado
-			allowed = {
-				#
-			}
-
-			visible = {
-				#
-			}
-
-			available = {
-				#
-			}
+			allowed = {}
+			visible = {}
+			available = {}
 			traits = {
 				#
 			}
@@ -241,17 +225,9 @@ characters = {
 			slot = political_advisor
 			idea_token = CAT_evelio_martinez
 			name = CAT_evelio_martinez
-			allowed = {
-				#
-			}
-
-			visible = {
-				#
-			}
-
-			available = {
-				#
-			}
+			allowed = {}
+			visible = {}
+			available = {}
 			traits = {
 				#
 			}
@@ -270,17 +246,9 @@ characters = {
 			slot = political_advisor
 			idea_token = CAT_jose_ignacio_mantecon
 			name = CAT_jose_ignacio_mantecon
-			allowed = {
-				#
-			}
-
-			visible = {
-				#
-			}
-
-			available = {
-				#
-			}
+			allowed = {}
+			visible = {}
+			available = {}
 			traits = {
 				#
 			}
@@ -299,17 +267,9 @@ characters = {
 			slot = political_advisor
 			idea_token = CAT_jesus_gracia
 			name = CAT_jesus_gracia
-			allowed = {
-				#
-			}
-
-			visible = {
-				#
-			}
-
-			available = {
-				#
-			}
+			allowed = {}
+			visible = {}
+			available = {}
 			traits = {
 				#
 			}
@@ -328,17 +288,9 @@ characters = {
 			slot = political_advisor
 			idea_token = CAT_manuel_latorre
 			name = CAT_manuel_latorre
-			allowed = {
-				#
-			}
-
-			visible = {
-				#
-			}
-
-			available = {
-				#
-			}
+			allowed = {}
+			visible = {}
+			available = {}
 			traits = {
 				#
 			}
@@ -357,17 +309,9 @@ characters = {
 			slot = political_advisor
 			idea_token = CAT_jose_ruiz_borao
 			name = CAT_jose_ruiz_borao
-			allowed = {
-				#
-			}
-
-			visible = {
-				#
-			}
-
-			available = {
-				#
-			}
+			allowed = {}
+			visible = {}
+			available = {}
 			traits = {
 				#
 			}
@@ -386,17 +330,9 @@ characters = {
 			slot = political_advisor
 			idea_token = CAT_jose_duque
 			name = CAT_jose_duque
-			allowed = {
-				#
-			}
-
-			visible = {
-				#
-			}
-
-			available = {
-				#
-			}
+			allowed = {}
+			visible = {}
+			available = {}
 			traits = {
 				#
 			}
@@ -415,17 +351,9 @@ characters = {
 			slot = political_advisor
 			idea_token = CAT_custodio_pennarrocha
 			name = CAT_custodio_pennarrocha
-			allowed = {
-				#
-			}
-
-			visible = {
-				#
-			}
-
-			available = {
-				#
-			}
+			allowed = {}
+			visible = {}
+			available = {}
 			traits = {
 				#
 			}
@@ -458,16 +386,8 @@ characters = {
 				has_dlc = "La Resistance"
 				original_tag = CAT
 			}
-			visible = {
-				NOT = {
-					tag = SPA
-					tag = SPB
-				}
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-			}
-			available = {
-				has_completed_focus = SPR_communal_military_strategies
-			}
+			visible = {}
+			available = {}
 			traits = { council_of_theorists }
 		}
 	}
@@ -487,21 +407,8 @@ characters = {
 				has_dlc = "La Resistance"
 				original_tag = CAT
 			}
-			visible = {
-				NOT = {
-					tag = SPA
-					tag = SPB
-				}
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-			}
-			available = {
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-				has_completed_focus = SPR_masters_of_our_own_fate
-				custom_trigger_tooltip = {
-					tooltip = SPR_not_nationalist_spain_tt
-					NOT = { tag = SPA }
-				}
-			}
+			visible = {}
+			available = {}
 			traits = { army_chief_defensive_2 }
 			cost = 100
 		}
@@ -522,21 +429,8 @@ characters = {
 				has_dlc = "La Resistance"
 				original_tag = CAT
 			}
-			visible = {
-				NOT = {
-					tag = SPA
-					tag = SPB
-				}
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-			}
-			available = {
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-				has_completed_focus = SPR_masters_of_our_own_fate
-				custom_trigger_tooltip = {
-					tooltip = SPR_not_nationalist_spain_tt
-					NOT = { tag = SPA }
-				}
-			}
+			visible = {}
+			available = {}
 			traits = { army_chief_offensive_2 }
 			cost = 100
 		}
@@ -557,21 +451,8 @@ characters = {
 				has_dlc = "La Resistance"
 				original_tag = CAT
 			}
-			visible = {
-				NOT = {
-					tag = SPA
-					tag = SPB
-				}
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-			}
-			available = {
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-				has_completed_focus = SPR_masters_of_our_own_fate
-				custom_trigger_tooltip = {
-					tooltip = SPR_not_nationalist_spain_tt
-					NOT = { tag = SPA }
-				}
-			}
+			visible = {}
+			available = {}
 			traits = { army_chief_organizational_2 }
 			cost = 100
 		}
@@ -592,21 +473,8 @@ characters = {
 				has_dlc = "La Resistance"
 				original_tag = CAT
 			}
-			visible = {
-				NOT = {
-					tag = SPA
-					tag = SPB
-				}
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-			}
-			available = {
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-				has_completed_focus = SPR_masters_of_our_own_fate
-				custom_trigger_tooltip = {
-					tooltip = SPR_not_nationalist_spain_tt
-					NOT = { tag = SPA }
-				}
-			}
+			visible = {}
+			available = {}
 			traits = { air_chief_safety_2 }
 			cost = 100
 		}
@@ -627,21 +495,8 @@ characters = {
 				has_dlc = "La Resistance"
 				original_tag = CAT
 			}
-			visible = {
-				NOT = {
-					tag = SPA
-					tag = SPB
-				}
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-			}
-			available = {
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-				has_completed_focus = SPR_masters_of_our_own_fate
-				custom_trigger_tooltip = {
-					tooltip = SPR_not_nationalist_spain_tt
-					NOT = { tag = SPA }
-				}
-			}
+			visible = {}
+			available = {}
 			traits = { air_chief_all_weather_2 }
 			cost = 100
 		}
@@ -662,21 +517,8 @@ characters = {
 				has_dlc = "La Resistance"
 				original_tag = CAT
 			}
-			visible = {
-				NOT = {
-					tag = SPA
-					tag = SPB
-				}
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-			}
-			available = {
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-				has_completed_focus = SPR_masters_of_our_own_fate
-				custom_trigger_tooltip = {
-					tooltip = SPR_not_nationalist_spain_tt
-					NOT = { tag = SPA }
-				}
-			}
+			visible = {}
+			available = {}
 			traits = { navy_chief_commerce_raiding_2 }
 			cost = 100
 		}
@@ -697,21 +539,8 @@ characters = {
 				has_dlc = "La Resistance"
 				original_tag = CAT
 			}
-			visible = {
-				NOT = {
-					tag = SPA
-					tag = SPB
-				}
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-			}
-			available = {
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-				has_completed_focus = SPR_masters_of_our_own_fate
-				custom_trigger_tooltip = {
-					tooltip = SPR_not_nationalist_spain_tt
-					NOT = { tag = SPA }
-				}
-			}
+			visible = {}
+			available = {}
 			traits = { navy_chief_reform_2 }
 			cost = 100
 		}
@@ -732,21 +561,8 @@ characters = {
 				has_dlc = "La Resistance"
 				original_tag = CAT
 			}
-			visible = {
-				NOT = {
-					tag = SPA
-					tag = SPB
-				}
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-			}
-			available = {
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-				has_completed_focus = SPR_masters_of_our_own_fate
-				custom_trigger_tooltip = {
-					tooltip = SPR_not_nationalist_spain_tt
-					NOT = { tag = SPA }
-				}
-			}
+			visible = {}
+			available = {}
 			traits = { army_infantry_3 }
 			cost = 200
 		}
@@ -767,21 +583,8 @@ characters = {
 				has_dlc = "La Resistance"
 				original_tag = CAT
 			}
-			visible = {
-				NOT = {
-					tag = SPA
-					tag = SPB
-				}
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-			}
-			available = {
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-				has_completed_focus = SPR_masters_of_our_own_fate
-				custom_trigger_tooltip = {
-					tooltip = SPR_not_nationalist_spain_tt
-					NOT = { tag = SPA }
-				}
-			}
+			visible = {}
+			available = {}
 			traits = { army_regrouping_2 }
 			cost = 100
 		}
@@ -802,21 +605,8 @@ characters = {
 				has_dlc = "La Resistance"
 				original_tag = CAT
 			}
-			visible = {
-				NOT = {
-					tag = SPA
-					tag = SPB
-				}
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-			}
-			available = {
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-				has_completed_focus = SPR_masters_of_our_own_fate
-				custom_trigger_tooltip = {
-					tooltip = SPR_not_nationalist_spain_tt
-					NOT = { tag = SPA }
-				}
-			}
+			visible = {}
+			available = {}
 			traits = { army_concealment_2 }
 			cost = 100
 		}
@@ -837,21 +627,8 @@ characters = {
 				has_dlc = "La Resistance"
 				original_tag = CAT
 			}
-			visible = {
-				NOT = {
-					tag = SPA
-					tag = SPB
-				}
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-			}
-			available = {
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-				has_completed_focus = SPR_masters_of_our_own_fate
-				custom_trigger_tooltip = {
-					tooltip = SPR_not_nationalist_spain_tt
-					NOT = { tag = SPA }
-				}
-			}
+			visible = {}
+			available = {}
 			traits = { air_naval_strike_2 }
 			cost = 100
 		}
@@ -872,21 +649,8 @@ characters = {
 				has_dlc = "La Resistance"
 				original_tag = CAT
 			}
-			visible = {
-				NOT = {
-					tag = SPA
-					tag = SPB
-				}
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-			}
-			available = {
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-				has_completed_focus = SPR_masters_of_our_own_fate
-				custom_trigger_tooltip = {
-					tooltip = SPR_not_nationalist_spain_tt
-					NOT = { tag = SPA }
-				}
-			}
+			visible = {}
+			available = {}
 			traits = { air_close_air_support_2 }
 			cost = 100
 		}
@@ -907,21 +671,8 @@ characters = {
 				has_dlc = "La Resistance"
 				original_tag = CAT
 			}
-			visible = {
-				NOT = {
-					tag = SPA
-					tag = SPB
-				}
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-			}
-			available = {
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-				has_completed_focus = SPR_masters_of_our_own_fate
-				custom_trigger_tooltip = {
-					tooltip = SPR_not_nationalist_spain_tt
-					NOT = { tag = SPA }
-				}
-			}
+			visible = {}
+			available = {}
 			traits = { navy_fleet_logistics_2 }
 			cost = 100
 		}
@@ -942,21 +693,8 @@ characters = {
 				has_dlc = "La Resistance"
 				original_tag = CAT
 			}
-			visible = {
-				NOT = {
-					tag = SPA
-					tag = SPB
-				}
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-			}
-			available = {
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-				has_completed_focus = SPR_masters_of_our_own_fate
-				custom_trigger_tooltip = {
-					tooltip = SPR_not_nationalist_spain_tt
-					NOT = { tag = SPA }
-				}
-			}
+			visible = {}
+			available = {}
 			traits = { navy_anti_submarine_2 }
 			cost = 100
 		}
