@@ -3,10 +3,9 @@
  benito_pabon_y_suarez_de_urbina: "$CAT_benito_pabon_y_suarez_de_urbina$"
  VL_name_benito_pabon_y_suarez_de_urbina: "$benito_pabon_y_suarez_de_urbina$"
  VL_trait_benito_pabon_y_suarez_de_urbina: "§Y$labour_lawyer$§!\n - 政治点数：§G+5%§!\n - 稳定度：§G+5%§!"
- VL_state_benito_pabon_y_suarez_de_urbina: "§Y$benito_pabon_y_suarez_de_urbina$§!\n@CAT$VL_trait_benito_pabon_y_suarez_de_urbina$"
- VL_Dip_state_benito_pabon_y_suarez_de_urbina: "§Y$benito_pabon_y_suarez_de_urbina$§!\n$VL_OF$\n\n$VL_trait_benito_pabon_y_suarez_de_urbina$"
+ VL_state_benito_pabon_y_suarez_de_urbina: "§Y$benito_pabon_y_suarez_de_urbina$§!\n$VL_trait_benito_pabon_y_suarez_de_urbina$"
+ VL_Dip_state_benito_pabon_y_suarez_de_urbina: "§Y$benito_pabon_y_suarez_de_urbina$§!\n$GetDipStatus$\n$VL_trait_benito_pabon_y_suarez_de_urbina$"
  VL_desc_benito_pabon_y_suarez_de_urbina: "§g§!"
- VL_OF: "§Y[From.GetName]§!的[From.GetVLStatus]"
  RULER_OF: "@$TAG$$COUNTRY|Y$的国家元首"
 #focus
  CAT_united_espannol: "团结西班牙人民阵线"
