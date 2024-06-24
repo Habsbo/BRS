@@ -26,7 +26,7 @@
 	}
 	br_ideology_socialism_ruling_no_ds = { #社会主义
 		custom_trigger_tooltip = {
-			tooltip = br_ideology_socialism_ruling_tt
+			tooltip = br_ideology_socialism_ruling_no_ds_tt
 			OR = {
 				has_government = sci_socialism
 				has_government = con_socialism
@@ -35,7 +35,7 @@
 	}
 	br_ideology_capitalism_ruling_with_ds = { #资本主义
 		custom_trigger_tooltip = {
-			tooltip = br_ideology_capitalism_ruling_tt
+			tooltip = br_ideology_capitalism_ruling_with_ds_tt
 			OR = {
 				has_government = demo_socialism
 				has_government = demo_liberalism
@@ -97,7 +97,7 @@
 	}
 	br_ideology_socialism_nio_no_ds = { #社会主义
 		custom_trigger_tooltip = {
-			tooltip = br_ideology_socialism_nio_tt
+			tooltip = br_ideology_socialism_nio_no_ds_tt
 			NOT = {
 				has_government = sci_socialism
 				has_government = con_socialism
@@ -115,7 +115,7 @@
 	}
 	br_ideology_capitalism_nio_with_ds = { #资本主义
 		custom_trigger_tooltip = {
-			tooltip = br_ideology_capitalism_nio_tt
+			tooltip = br_ideology_capitalism_nio_with_ds_tt
 			NOT = {
 				has_government = demo_socialism
 				has_government = demo_liberalism
