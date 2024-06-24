@@ -95,51 +95,70 @@ defined_text = {
 #
 defined_text = {
 	name = GetPLStatus
-	#国王
+#君主制
+	#霸权
 	text = {
 		trigger = {
 			FROM = {
-				NOT = {
-					tag = MNG
-					original_tag = GER
-					original_tag = BUL
-					original_tag = SOV
-				}
-				has_idea = br_laws_monarchy
-			}
-		}
-		localization_key = CL_King
-	}
-	text = {
-		trigger = {
-			FROM = {
-				tag = MNG
+				check_variable = { state_rank = 0 }
 				has_idea = br_laws_monarchy
 			}
 		}
 		localization_key = CL_Emperor
 	}
+	#帝国 -
 	text = {
 		trigger = {
 			FROM = {
-				original_tag = GER
+				check_variable = { state_rank = 1 }
 				has_idea = br_laws_monarchy
 			}
 		}
-		localization_key = CL_Kaiser
+		localization_key = CL_Emperor
 	}
+	#王国 - 
 	text = {
 		trigger = {
 			FROM = {
-				OR = {
-					original_tag = BUL
-					original_tag = SOV
-				}
+				check_variable = { state_rank = 2 }
 				has_idea = br_laws_monarchy
 			}
 		}
-		localization_key = CL_Tsar
+		localization_key = CL_King
 	}
+	#大公国
+	text = {
+		trigger = {
+			FROM = {
+				check_variable = { state_rank = 3 }
+				has_idea = br_laws_monarchy
+			}
+		}
+		localization_key = CL_Grand_Duchy
+	}
+	#公国
+	text = {
+		trigger = {
+			FROM = {
+				check_variable = { state_rank = 4 }
+				has_idea = br_laws_monarchy
+			}
+		}
+		localization_key = CL_Duchy
+	}
+	#伯国
+	text = {
+		trigger = {
+			FROM = {
+				check_variable = { state_rank = 5 }
+				has_idea = br_laws_monarchy
+			}
+		}
+		localization_key = CL_Earl
+	}
+	#
+#神权制 - 天主教
+	#教宗国
 	text = {
 		trigger = {
 			FROM = {
@@ -150,6 +169,7 @@ defined_text = {
 		}
 		localization_key = CL_Pap
 	}
+	#
 	text = {
 		trigger = {
 			FROM = {
@@ -158,16 +178,29 @@ defined_text = {
 				has_idea = br_laws_spiritual
 			}
 		}
-		localization_key = CL_Bishop
+		localization_key = CL_Archbishop
+	}
+#总统制
+	text = {
+		trigger = {
+			FROM = {
+				check_variable = { state_rank = 0 }
+				has_idea = br_laws_elected_president
+			}
+		}
+		localization_key = CL_Prime_President
 	}
 	text = {
 		trigger = {
 			FROM = {
+				check_variable = { state_rank > 0 }
 				has_idea = br_laws_elected_president
 			}
 		}
 		localization_key = CL_President
 	}
+#
+#社会主义
 	text = {
 		trigger = {
 			FROM = {

@@ -2,6 +2,14 @@ on_actions = {
 	on_startup = {
 		effect = {
 			every_country = {
+				limit = { is_major = yes }
+				set_variable = { state_rank = 0 }
+			}
+			every_country = {
+				limit = { is_major = no }
+				set_variable = { state_rank = 2 }
+			}
+			every_country = {
 				limit = { NOT = { has_country_flag = br_dynamic_modifier_not_generic_flag } }
 				#dynamic modifier - ic
 				add_dynamic_modifier = { modifier = national_industry_civilian_dynamic_modifier }

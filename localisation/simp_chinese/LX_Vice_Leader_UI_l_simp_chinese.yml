@@ -32,10 +32,12 @@
  CL_Earl: "伯爵"
  CL_Pap: "圣座"
  CL_Cardinal: "枢机主教"
+ CL_Archbishop: "大主教"
  CL_Bishop: "主教"
 
  CL_Prime_Minister: "首相"
  CL_Marshal: "元帅"
+ CL_Prime_President: "大统领"
  CL_President: "总统"
  CL_Vice_President: "副总统"
  CL_Speaker_of_House_of_Representatives: "众议院院长"
