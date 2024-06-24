@@ -4,12 +4,12 @@ characters = {
 		name=CAT_joaquin_ascaso_budria
 		portraits={
 			civilian={
-				large="GFX_portrait_Draza_Mihailovic"
+				large="GFX_portrait_Joaquin_Ascaso"
 				small="GFX_idea_generic_political_advisor_europe_3"
 			}
 
 			army={
-				large="GFX_portrait_Draza_Mihailovic"
+				large="GFX_portrait_Joaquin_Ascaso"
 				small="GFX_idea_generic_political_advisor_europe_3"
 			}
 		}
@@ -24,7 +24,7 @@ characters = {
 		name=CAT_benito_pabon_y_suarez_de_urbina
 		portraits={
 			army={
-				large="GFX_portrait_LAT_hermanis_buks"
+				large="GFX_portrait_Benito_Pabon"
 				small="GFX_idea_SPA_mauricio_de_sivatte"
 			}
 		}
@@ -57,6 +57,22 @@ characters = {
 				soc_anarchism_acceptance = 80
 			}
 		}
+		advisor={
+			slot = head_of_gov
+			name = CAT_benito_pabon_y_suarez_de_urbina
+			idea_token = CAT_benito_pabon_y_suarez_de_urbina_hog
+			allowed = {}
+
+			visible = {}
+
+			available = { br_head_of_gov_generic_trigger = yes }
+
+			traits = {}
+
+			cost = 0
+			can_be_fired = no
+		}
+
 		corps_commander={
 			traits={ brilliant_strategist }
 			skill=2

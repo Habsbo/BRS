@@ -4,6 +4,16 @@ defined_text = {
 		trigger = { TAG = POL }
 		localization_key = [POL_VL_picture]
 	}
+	text = {
+		trigger = {
+			OR = {
+				original_tag = SPR
+				original_tag = NAV
+				original_tag = CAT
+			}
+		}
+		localization_key = [SPR_VL_picture]
+	}
 	text = { localization_key = GFX_leader_unknown }
 }
 
@@ -12,6 +22,16 @@ defined_text = {
 	text = {
 		trigger = { TAG = POL }
 		localization_key = [POL_VL_name]
+	}
+	text = {
+		trigger = {
+			OR = {
+				original_tag = SPR
+				original_tag = NAV
+				original_tag = CAT
+			}
+		}
+		localization_key = [SPR_VL_name]
 	}
 	text = { localization_key = VL_name }
 }
@@ -22,6 +42,16 @@ defined_text = {
 		trigger = { TAG = POL }
 		localization_key = [POL_VL_state]
 	}
+	text = {
+		trigger = {
+			OR = {
+				original_tag = SPR
+				original_tag = NAV
+				original_tag = CAT
+			}
+		}
+		localization_key = [SPR_VL_state]
+	}
 	text = { localization_key = VL_state }
 }
 
@@ -30,6 +60,16 @@ defined_text = {
 	text = {
 		trigger = { TAG = POL }
 		localization_key = [POL_VL_Dip_state]
+	}
+	text = {
+		trigger = {
+			OR = {
+				original_tag = SPR
+				original_tag = NAV
+				original_tag = CAT
+			}
+		}
+		localization_key = [SPR_VL_Dip_state]
 	}
 	text = { localization_key = VL_Dip_state }
 }
@@ -40,54 +80,102 @@ defined_text = {
 		trigger = { TAG = POL }
 		localization_key = [POL_VL_desc]
 	}
+	text = {
+		trigger = {
+			OR = {
+				original_tag = SPR
+				original_tag = NAV
+				original_tag = CAT
+			}
+		}
+		localization_key = [SPR_VL_desc]
+	}
 	text = { localization_key = VL_desc }
+}
+#
+defined_text = {
+	name = GetPLStatus
+	text = {
+		trigger = {
+			FROM = {
+				original_tag = PAP
+				has_idea = br_laws_cleric
+				has_idea = br_laws_spiritual
+			}
+		}
+		localization_key = CL_Pap
+	}
+	text = {
+		trigger = {
+			FROM = {
+				has_idea = br_laws_committee
+				has_idea = br_laws_proletariat
+			}
+		}
+		localization_key = CL_Chairman
+	}
+	text = { localization_key = PL_country_leader }
 }
 
 defined_text = {
 	name = GetVLStatus
 	text = {
 		trigger = { FROM = { check_variable = { VL_status_var = 1 } } }
-		localization_key = VL_Queen
+		localization_key = CL_Queen
 	}
 	text = {
 		trigger = { FROM = { check_variable = { VL_status_var = 2 } } }
-		localization_key = VL_King
+		localization_key = CL_King
 	}
 	text = {
 		trigger = { FROM = { check_variable = { VL_status_var = 3 } } }
-		localization_key = VL_Prime_Minister
+		localization_key = CL_Prime_Minister
 	}
 	text = {
 		trigger = { FROM = { check_variable = { VL_status_var = 4 } } }
-		localization_key = VL_Premier
+		localization_key = CL_Premier
 	}
 	text = {
 		trigger = { FROM = { check_variable = { VL_status_var = 5 } } }
-		localization_key = VL_President
+		localization_key = CL_President
 	}
 	text = {
 		trigger = { FROM = { check_variable = { VL_status_var = 6 } } }
-		localization_key = VL_Vice_President
+		localization_key = CL_Vice_President
 	}
 	text = {
 		trigger = { FROM = { check_variable = { VL_status_var = 7 } } }
-		localization_key = VL_Marshal
+		localization_key = CL_Marshal
 	}
 	text = {
 		trigger = { FROM = { check_variable = { VL_status_var = 8 } } }
-		localization_key = VL_Speaker_of_House_of_Representatives
+		localization_key = CL_Speaker_of_House_of_Representatives
 	}
 	text = {
 		trigger = { FROM = { check_variable = { VL_status_var = 9 } } }
-		localization_key = VL_Cabinet_Secretary
+		localization_key = CL_Cabinet_Secretary
 	}
 	text = {
 		trigger = { FROM = { check_variable = { VL_status_var = 10 } } }
-		localization_key = VL_Vice_Fuhrer
+		localization_key = CL_Vice_Fuhrer
 	}
 	text = {
 		trigger = { FROM = { check_variable = { VL_status_var = 11 } } }
-		localization_key = VL_Foreign_Secretary
+		localization_key = CL_Foreign_Secretary
+	}
+	text = {
+		trigger = { FROM = { check_variable = { VL_status_var = 12 } } }
+		localization_key = CL_General_Secretary
+	}
+	text = {
+		trigger = {
+			FROM = {
+				original_tag = PAP
+				has_idea = br_laws_cleric
+				has_idea = br_laws_spiritual
+			}
+		}
+		localization_key = CL_Cardinal
 	}
 	text = { localization_key = VL_normal_status }
 }

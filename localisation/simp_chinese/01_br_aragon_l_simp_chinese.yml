@@ -1,4 +1,11 @@
 ﻿l_simp_chinese:
+#
+ benito_pabon_y_suarez_de_urbina: "$CAT_benito_pabon_y_suarez_de_urbina$"
+ VL_name_benito_pabon_y_suarez_de_urbina: "$benito_pabon_y_suarez_de_urbina$"
+ VL_trait_benito_pabon_y_suarez_de_urbina: ""
+ VL_state_benito_pabon_y_suarez_de_urbina: "§Y$benito_pabon_y_suarez_de_urbina$§!\n$VL_trait_benito_pabon_y_suarez_de_urbina$"
+ VL_Dip_state_benito_pabon_y_suarez_de_urbina: "§Y$benito_pabon_y_suarez_de_urbina$§!\n$VL_trait_benito_pabon_y_suarez_de_urbina$"
+ VL_desc_benito_pabon_y_suarez_de_urbina: "§g§!"
 #focus
  CAT_united_espannol: "团结西班牙人民阵线"
  CAT_united_espannol_desc: ""

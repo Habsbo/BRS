@@ -1,0 +1,15 @@
+spriteTypes = {
+
+	# leaders we need to override in DLC go in this file
+
+	spriteType = {
+		name = "GFX_portrait_Joaquin_Ascaso"
+		texturefile = "gfx/leaders/ARA/Portrait_Joaquin_Ascaso.tga"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_Benito_Pabon"
+		texturefile = "gfx/leaders/ARA/Portrait_Benito_Pabón_y_Suárez_de_Urbina_Panama.tga"
+	}
+
+}

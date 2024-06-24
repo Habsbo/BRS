@@ -1,13 +1,11 @@
 ﻿capital = 2
 
-
-
 set_research_slots = 3
 set_stability = 0.5
 set_war_support = 0.5
 add_ideas = {
-}
 
+}
 
 # Starting tech
 set_technology = {
@@ -99,32 +97,56 @@ if = {
 set_convoys = 60
 
 set_politics = {
-	ruling_party = neutrality
-	last_election = "1934.3.26"
-	election_frequency = 60
+	ruling_party = demo_conservatism
 	elections_allowed = no
 }
+
 set_popularities = {
-	democratic = 10
-	fascism = 10
-	communism = 0
-	neutrality = 80
+	#
+	soc_anarchism = 0
+	vanwardism = 0
+	#
+	sci_socialism = 5
+	con_socialism = 10
+	demo_socialism = 20
+	#
+	demo_liberalism = 10
+	demo_conservatism = 35
+	#
+	authoritarian = 20
+	#
+	fascism = 0
+	nationalism = 0
+	supernationalism = 0
 }
 
-
+add_ideas = {
+	#
+	disarmed_nation
+	civilian_economy
+	free_trade
+	#
+	br_laws_technocracy
+	br_laws_cleric
+	br_laws_qualification
+	br_laws_diversity
+	br_laws_spiritual
+	br_laws_bourgeoisie
+	#
+}
 
 ### VARIANTS ###
 # 1936 Start #
 #plane variants
 create_equipment_variant = {
-		name = "CR.42"
-		type = fighter_equipment_0
-		upgrades = {
-			plane_gun_upgrade = 1
-			plane_range_upgrade = 0  
-			plane_engine_upgrade = 2
-			plane_reliability_upgrade = 1
-		}
+	name = "CR.42"
+	type = fighter_equipment_0
+	upgrades = {
+		plane_gun_upgrade = 1
+		plane_range_upgrade = 0  
+		plane_engine_upgrade = 2
+		plane_reliability_upgrade = 1
+	}
 }
 if = {
 	limit = {
