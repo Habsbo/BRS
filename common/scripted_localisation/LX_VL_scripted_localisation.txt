@@ -215,6 +215,7 @@ defined_text = {
 
 defined_text = {
 	name = GetVLStatus
+#
 	text = {
 		trigger = { FROM = { check_variable = { VL_status_var = 1 } } }
 		localization_key = CL_Queen
