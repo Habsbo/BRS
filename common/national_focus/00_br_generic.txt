@@ -1937,7 +1937,12 @@ focus_tree = {
 
 		cost = 8
 		
-		available = {}
+		available = {
+			OR = {
+				vanwardism > 0.3
+				sci_socialism > 0.3
+			}
+		}
 		
 		bypass = {}
 		
@@ -2047,7 +2052,9 @@ focus_tree = {
 		
 		complete_tooltip = {}
 		
-		completion_reward = {}
+		completion_reward = {
+			add_research_slot = 1
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -2062,7 +2069,12 @@ focus_tree = {
 
 		cost = 8
 		
-		available = {}
+		available = {
+			OR = {
+				con_socialism > 0.3
+				demo_socialism > 0.3
+			}
+		}
 		
 		bypass = {}
 		
@@ -2272,7 +2284,7 @@ focus_tree = {
 	focus = {
 		id = enlightened_democratic_under_monarch_ruling
 		icon = GFX_
-		prerequisite = { focus = loyalists_power }
+		prerequisite = { focus = loyalists_power focus = isolationism_honorably }
 		#mutually_exclusive = { focus = }
 		x = 0
 		y = 1
@@ -2290,7 +2302,9 @@ focus_tree = {
 		
 		complete_tooltip = {}
 		
-		completion_reward = {}
+		completion_reward = {
+			add_research_slot = 1
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -2325,7 +2339,7 @@ focus_tree = {
 	focus = {
 		id = the_way_of_inner_sage
 		icon = GFX_
-		prerequisite = { focus = isolationism_honorably }
+		prerequisite = { focus = loyalists_power focus = isolationism_honorably }
 		#mutually_exclusive = { focus = }
 		x = 0
 		y = 1
@@ -2429,7 +2443,14 @@ focus_tree = {
 		
 		complete_tooltip = {}
 		
-		completion_reward = {}
+		completion_reward = {
+			add_political_power = 50
+			add_war_support = 0.10
+			add_stability = -0.10
+			army_experience = 50
+			add_popularity = { ideology = fascism popularity = 0.05 }
+			add_popularity = { ideology = nationalism popularity = 0.05 }
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -2454,7 +2475,9 @@ focus_tree = {
 		
 		complete_tooltip = {}
 		
-		completion_reward = {}
+		completion_reward = {
+			add_timed_idea = { idea = fascist_influence_1 days = 181 }
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -2504,7 +2527,9 @@ focus_tree = {
 		
 		complete_tooltip = {}
 		
-		completion_reward = {}
+		completion_reward = {
+			add_timed_idea = { idea = fascist_influence_2 days = 181 }
+		}
 		
 		ai_will_do = { factor = 1 }
 	}

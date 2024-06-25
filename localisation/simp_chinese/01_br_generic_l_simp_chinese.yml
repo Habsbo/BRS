@@ -12,6 +12,10 @@
  communism_calling.vanwardism.1: "共产主义的召唤"
  communism_calling.vanwardism.2: "共产主义的召唤"
  communism_calling.vanwardism.3: "共产主义的召唤"
+ communist_influence_1: "$communist_influence$"
+ communist_influence_1_desc: "$communist_influence_desc$"
+ communist_influence_2: "$communist_influence$"
+ communist_influence_2_desc: "$communist_influence_desc$"
 
 #
  black_force_dynamic_modifier: "黑军"

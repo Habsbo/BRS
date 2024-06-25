@@ -578,15 +578,7 @@ ideas = {
 
 		free_trade = {
 
-			available = {
-				if = {
-					limit = {
-						original_tag = SPR
-						has_dlc = "La Resistance"
-					}
-					NOT = { has_completed_focus = SPR_all_must_bear_the_torch }
-				}
-			}
+			available = {}
 
 			cost = 150
 			removal_cost = -1
@@ -641,23 +633,7 @@ ideas = {
 
 		export_focus = {
 
-			available = {
-
-				if = {
-					limit = {
-						original_tag = CHI
-						has_dlc = "Waking the Tiger"
-					}
-					NOT = { has_idea = CHI_nine_power_treaty }
-				}
-				if = {
-					limit = {
-						original_tag = SPR
-						has_dlc = "La Resistance"
-					}
-					NOT = { has_completed_focus = SPR_all_must_bear_the_torch }
-				}
-			}
+			available = {}
 
 
 			cost = 150
@@ -708,7 +684,6 @@ ideas = {
 			available = {
 				OR = {
 					AND = {
-						has_government = democratic
 						has_war = yes
 						any_enemy_country = {
 							ic_ratio = {
@@ -718,29 +693,12 @@ ideas = {
 						}
 					}
 					AND = {
-						NOT = { has_government = democratic }
 						OR = {
 							has_idea = partial_economic_mobilisation
 							has_idea = war_economy
 							has_idea = tot_economic_mobilisation
 						}
 					}
-				}
-
-
-				if = {
-					limit = {
-						original_tag = CHI
-						has_dlc = "Waking the Tiger"
-					}
-					NOT = { has_idea = CHI_nine_power_treaty }
-				}
-				if = {
-					limit = {
-						original_tag = SPR
-						has_dlc = "La Resistance"
-					}
-					NOT = { has_completed_focus = SPR_all_must_bear_the_torch }
 				}
 			}
 
@@ -802,24 +760,8 @@ ideas = {
 			available = {
 				has_war = yes
 				OR = {
-					has_government = fascism
-					has_government = communism
-				}
-				OR = {
 					has_idea = war_economy
 					has_idea = tot_economic_mobilisation
-				}
-				OR = {
-					NOT = {	tag = SOV }
-					NOT = { has_opinion_modifier = MR_pact }
-				}
-
-				if = {
-					limit = {
-						original_tag = CHI
-						has_dlc = "Waking the Tiger"
-					}
-					NOT = { has_idea = CHI_nine_power_treaty }
 				}
 			}
 

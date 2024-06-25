@@ -7,15 +7,16 @@ br_debug_decisions = {
 }
 
 br_na_war_decisions = {
-	icon = generic_research
-	allowed = {
+	icon = usa_intervention_mandate
+	visible = {
 		OR = {
-			original_tag = SPR
-			original_tag = MOR
-			original_tag = RIF
+			has_country_flag = br_na_war_aggressor_flag
+			has_country_flag = br_na_war_resister_flag
+			has_country_flag = br_na_war_intervener_flag
+			has_country_flag = br_na_war_morocco_flag
 		}
 	}
-	priority = 100
+	priority = 10
 }
 
 br_na_rif_decisions = {
@@ -23,7 +24,7 @@ br_na_rif_decisions = {
 	allowed = {
 		original_tag = RIF
 	}
-	priority = 100
+	priority = 10
 }
 
 br_na_generic_decisions = {

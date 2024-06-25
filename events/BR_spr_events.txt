@@ -1,7 +1,6 @@
 add_namespace = br_spain_event
 add_namespace = br_portugual_event
 add_namespace = br_spain_civilwar_event
-add_namespace = br_rif
 
 country_event = { #
 	id = br_spain_event.1
@@ -20,6 +19,39 @@ country_event = { #
 	}
 }
 
+
+#
+###
+add_namespace = br_ser
+###
+
+country_event = { #
+	id = br_ser.1
+	title = br_ser.1.title
+	desc = br_ser.1.desc
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			#
+		}
+	}
+
+	option = {
+		name = br_ser.1.a #
+
+		
+
+		ai_chance = { factor = 7 }
+	}
+}
+
+###
+add_namespace = br_rif
+###
 country_event = { #
 	id = br_rif.1
 	title = br_rif.1.title
@@ -60,15 +92,10 @@ country_event = { #
 	}
 }
 
-#
-###
-add_namespace = br_ser
-###
-
 country_event = { #
-	id = br_ser.1
-	title = br_ser.1.title
-	desc = br_ser.1.desc
+	id = br_rif.2
+	title = br_rif.2.title
+	desc = br_rif.2.desc
 	picture = GFX_report_event_chinese_soldiers_fighting
 
 	fire_only_once = yes
@@ -81,10 +108,42 @@ country_event = { #
 	}
 
 	option = {
-		name = br_ser.1.a #
+		name = br_rif.2.a #
 
 		
 
 		ai_chance = { factor = 7 }
+	}
+}
+
+##
+add_namespace = br_news_rif
+
+news_event = {
+	id = br_news_rif.1
+	title = br_news_rif.1.title
+	desc = br_news_rif.1.desc
+
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = br_news_rif.1.a
+		trigger = {
+
+		}
+	}
+	
+	option = {
+		name = br_news_rif.1.b
+		trigger = {}
+	}
+
+	option = {
+		name = br_news_rif.1.c
+		trigger = {
+			NOT = { original_tag = SPR }
+			has_country_flag = br_na_war_aggressor_flag
+		}
 	}
 }

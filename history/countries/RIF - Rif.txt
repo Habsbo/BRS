@@ -15,6 +15,9 @@ set_technology = {
 
 set_convoys = 10
 
+set_stability = 0.60
+set_war_support = 1.00
+
 set_politics = {
 	ruling_party = authoritarian
 	last_election = "1936.1.1"
@@ -33,14 +36,21 @@ set_popularities = {
 	supernationalism = 0 #超国家社会主义
 }
 
-declare_war_on = {
-	target = SPR
-	type = liberate_wargoal
-}
+add_ideas = {
+	all_adults_serve
+	closed_economy
+	tot_economic_mobilisation
+	#
+	br_laws_feudalism
+	br_laws_monarchy
+	br_laws_suffrage_prohibited
+	br_laws_national_state
+	br_laws_spiritual
+	br_laws_loyalist
+	#head of gov
 
-declare_war_on = {
-	target = MOR
-	type = annex_everything
+	#
+	AMAZIGA_countries
 }
 
 set_cosmetic_tag = RIF_republic

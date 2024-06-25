@@ -1,19 +1,10 @@
 ideas = {
 	country = {
 		FRA_influence_from_france = {
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				#
-			}
-			
+			picture = FRA_undividable
+			allowed = { NOT = { has_war_with = FRA } }
+			allowed_civil_war = { NOT = { has_war_with = FRA } }
 			removal_cost = -1
-
-			picture = state_shintoism
-			
 			modifier = {
 				political_power_cost = 0.2
 				political_advisor_cost_factor = 0.05
@@ -23,18 +14,10 @@ ideas = {
 		}
 
 		AMAZIGA_countries = {
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
+			picture = generic_morale_bonus
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
 			removal_cost = -1
-
-			picture = state_shintoism
 			
 			modifier = {
 				conscription = 0.03
@@ -44,19 +27,14 @@ ideas = {
 		}
 
 		MOR_arabian_dynasty = {
-
+			picture = chi_wargaming_division
 			allowed = {
 				always = no
 			}
-
 			allowed_civil_war = {
 				always = yes
 			}
-			
 			removal_cost = -1
-
-			#picture = state_shintoism
-			
 			modifier = {
 				political_power_cost = 0.05
 				political_advisor_cost_factor = 0.05

@@ -62,10 +62,29 @@ if = {
 }
 
 set_politics = {
-	ruling_party = democratic
-	last_election = "1936.1.1"
+	ruling_party = demo_conservatism
+	last_election = "1931.1.1"
 	election_frequency = 48
 	elections_allowed = yes
+}
+
+set_popularities = {
+	#
+	soc_anarchism = 0
+	vanwardism = 0
+	#
+	sci_socialism = 10
+	con_socialism = 20
+	demo_socialism = 20
+	#
+	demo_liberalism = 10
+	demo_conservatism = 30
+	#
+	authoritarian = 0
+	#
+	fascism = 10
+	nationalism = 0
+	supernationalism = 0
 }
 
 create_country_leader = {
@@ -79,19 +98,11 @@ create_country_leader = {
 	}
 }
 
-set_popularities = {
-	democratic = 33
-	neutrality = 33
-	communism = 34
-}
-
 recruit_character = TRA_pot
 recruit_character = TRA_awt
-recruit_character = TRA_communist_guy
 recruit_character = TRA_ncm
 recruit_character = TRA_acgs
 recruit_character = TRA_nccr
-recruit_character = TRA_fascist_guy
 recruit_character = TRA_ar
 recruit_character = TRA_stc
 recruit_character = TRA_aco2
@@ -100,7 +111,6 @@ recruit_character = TRA_ncs
 recruit_character = TRA_nt
 recruit_character = TRA_acas
 recruit_character = TRA_acd2
-recruit_character = TRA_democratic_guy
 recruit_character = TRA_mt
 recruit_character = TRA_ai2
 recruit_character = TRA_coi
