@@ -200,6 +200,8 @@ defined_text = {
 		localization_key = CL_President
 	}
 #
+
+#
 #社会主义
 	text = {
 		trigger = {

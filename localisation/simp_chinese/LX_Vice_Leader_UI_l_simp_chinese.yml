@@ -16,11 +16,14 @@
  L_name_tt: "[FROM.GetLeader]"
  Country_Vice_Header: "[GetVLStatus]"
  CL_Emperor: "皇帝"
+ CL_Emperor_china_flavor_1: "大行皇帝"
+ CL_Emperor_china_flavor_2: "天子"
  CL_Emperor_jap_flavor: "天皇"
  CL_Imperator: "英白拉多"
  CL_Augustus: "奥古斯都"
  CL_Basileus: "巴西琉斯"
  CL_Basilissa: "巴塞丽莎"
+ CL_Co_Emperor: "共治皇帝"
  CL_King_hellenic_flavor: "亲王国"
  CL_General: "将军"
  CL_Kaiser: "凯撒"
@@ -41,8 +44,10 @@
  CL_Vice_President: "副总统"
  CL_Speaker_of_House_of_Representatives: "众议院院长"
  CL_Cabinet_Secretary: "内阁首辅"
+ CL_Junji_Dachen: "军机大臣"
  CL_Fuhrer: "元首"
  CL_Vice_Fuhrer: "副元首"
+ CL_Foreign_Secretary_monar: "外交大臣"
  CL_Foreign_Secretary: "外交大臣"
  CL_Viceroy: "总督"
  CL_Premier: "总理"
@@ -50,7 +55,43 @@
  CL_Chairman: "主席"
  CL_General_Secretary: "总书记"
  VL_normal_status: "副手"
- 
+ CL_Khalīfah: "哈里发"
+ CL_Vizier: "维齐尔"
+ CL_Sultan: "苏丹"
+ CL_Emir: "埃米尔"
+ CL_Sheikh: "谢赫"
+ CL_Bey: "贝伊"
+ CL_Dai_Khan: "大汗"
+ CL_Khan: "汗"
+ CL_Bhak: "伯克"
+ CL_Bay: "巴依"
+ CL_KMT_leader: "委员长"
+ CL_Warlord: "老总"
+ CL_Shah: "沙阿"
+ CL_Shahanshah: "沙罕沙"
+ CL_Padeshah: "帕迪沙"
+ CL_Shahrdar: "国主"
+ CL_Amir: "异密" #iran style emir
+ CL_Kagan: "可汗" #iran style khan
+ CL_Ispahbad: "斯帕巴德" #iran style Marshal
+ CL_Al_Daula: "阿尔道莱" #means owner of the country, iranian
+ CL_Raja: "罗阇"
+ CL_Maharaja: "摩诃罗阇"
+ CL_Rajadhiraja: "罗阇帝罗阇"
+ CL_Maharajadhiraja: "摩诃罗阇帝罗阇"
+ CL_Maharani: "摩诃拉尼" #queen
+ CL_Rajamata: "罗阇母妲" #raja's mon
+ CL_Yuvraja: "玉罗阇" #crown prince
+ CL_Dhramaraja: "达摩罗阇" #
+ CL_Da_Tianshi: "大天师"
+ CL_Guru: "上师"
+ CL_Bla_Ma: "喇嘛" #guru, tsang flavour
+ CL_Sprul_Sku: "珠古"
+ CL_rin_po_che: "仁波切"
+ CL_Xubilgan: "呼毕勒罕"
+ CL_Panchen: "班禅"
+ CL_Dalai: "达赖"
+ CL_Dalai_Lama: "达赖喇嘛"
  #you'd better put them to another .yml file
  VL_name: "暂无"
  VL_state: ""
