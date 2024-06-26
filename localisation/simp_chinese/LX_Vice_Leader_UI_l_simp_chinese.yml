@@ -10,7 +10,7 @@
  VL_Dip_state_tt: "[VL_Dip_state]"
  VL_desc_tt: "[VL_desc]"
  
- GetDipStatus: "[FROM.GetFlag]§Y[FROM.GetName]§!的§C[FROM.GetVLStatus]§!\n"
+ GetDipStatus: "[FROM.GetFlag]§Y[FROM.GetName]§!的[FROM.GetVLStatus]\n"
  Country_Header: "[GetPLStatus]"
  PL_country_leader: "国家元首"
  L_name_tt: "[FROM.GetLeader]"
@@ -55,7 +55,7 @@
  CL_Chairman: "主席"
  CL_General_Secretary: "总书记"
  VL_normal_status: "副手"
- CL_Khalīfah: "哈里发"
+ CL_Khalifah: "哈里发"
  CL_Vizier: "维齐尔"
  CL_Sultan: "苏丹"
  CL_Emir: "埃米尔"

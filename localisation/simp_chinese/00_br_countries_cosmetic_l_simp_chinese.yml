@@ -275,8 +275,19 @@
  ROM_kingdom: "$ROM$王国"
  ROM_republic: "$ROM$共和国"
 #乌克兰&俄罗斯&波兰
- UKR_liberated_area: "乌克兰农民解放区"
- UKR_liberated_area_DEF: "乌克兰农民解放区"
+ BLR_kingdom_deutsch: "白鲁塞尼亚王国"
+ BLR_kingdom_deutsch_DEF: "白鲁塞尼亚王国"
+ BLR_kingdom_deutsch_ADJ: "白鲁塞尼亚"
+ UKR_liberated_area: "乌克兰解放区"
+ UKR_liberated_area_DEF: "乌克兰解放区"
+ UKR_liberated_area_ADJ: "乌克兰"
+
+ UKR_UPR: "乌克兰人民共和国"
+ UKR_UPR_DEF: "乌克兰人民共和国"
+ UKR_UPR_ADJ: "乌克兰"
+ UKR_USSR: "乌克兰苏维埃社会主义共和国"
+ UKR_USSR_DEF: "乌克兰苏维埃社会主义共和国"
+ UKR_USSR_ADJ: "乌克兰"
 
  ROR: "$RUS$共和国"
  ROR_interim_government: "$ROR$临时政府"

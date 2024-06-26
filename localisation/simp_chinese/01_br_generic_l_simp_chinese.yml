@@ -1,6 +1,6 @@
 ﻿l_simp_chinese:
  government: "政府"
- ok: "好"
+ OK: "好的"
  is_border_state_tt: "是§Y边境§!省份"
 #
  the_House_of_Habsburg: "哈布斯堡王朝"
@@ -17,6 +17,7 @@
  communist_influence_2: "$communist_influence$"
  communist_influence_2_desc: "$communist_influence_desc$"
 
+ br_countryleader_custom_flavour_trigger_tt: "是拥有风味化称呼的国家"
 #
  black_force_dynamic_modifier: "黑军"
  red_army_dynamic_modifier: "红军"

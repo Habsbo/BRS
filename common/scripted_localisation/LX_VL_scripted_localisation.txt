@@ -212,6 +212,15 @@ defined_text = {
 		}
 		localization_key = CL_Chairman
 	}
+#flavours
+	text = {
+		trigger = {
+			FROM = {
+				#has_country_flag = 
+			}
+		}
+		localization_key = CL_Shah
+	}
 	text = { localization_key = PL_country_leader }
 }
 

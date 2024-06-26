@@ -831,18 +831,29 @@ add_ideas = {
 set_convoys = 50
 
 set_politics = {
-	ruling_party = sci_socialism
-	last_election = "1933.7.1"
+	ruling_party = soc_anarchism
+	last_election = "1931.1.1"
 	election_frequency = 48
 	elections_allowed = yes
 }
 
 set_popularities = {
-	vanwardism = 10 #革命社会主义
-	sci_socialism = 48 #科学社会主义
-	con_socialism = 29 #保守社会主义
-	demo_socialism = 7 #社会民主主义
-	authoritarian = 6 #威权主义
+	#
+	soc_anarchism = 50
+	vanwardism = 20
+	#
+	sci_socialism = 10
+	con_socialism = 10
+	demo_socialism = 0
+	#
+	demo_liberalism = 0
+	demo_conservatism = 5
+	#
+	authoritarian = 5
+	#
+	fascism = 0
+	nationalism = 0
+	supernationalism = 0
 }
 
 create_faction = Comintern
@@ -1335,4 +1346,19 @@ if = {
 	}
 }
 
-set_cosmetic_tag = SOR
+add_ideas = {
+	#
+	service_by_requirement
+	closed_economy
+	tot_economic_mobilisation
+	#
+	br_laws_committee
+	br_laws_premier
+	br_laws_free
+	br_laws_national_state
+	br_laws_atheism
+	br_laws_proletariat
+	#
+}
+
+set_cosmetic_tag = UKR_liberated_area

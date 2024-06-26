@@ -104,17 +104,17 @@
  GRE_nationalism_party: "人民东正教阵线"
  GRE_supernationalism_party: "金色黎明"
 
- UKR_soc_anarchism_party: "$UKR$平台主义(RIAU)"
- UKR_vanwardism_party: "$UKR$革命工团派"
- UKR_sci_socialism_party: "$UKR$人民苏维埃"
- UKR_con_socialism_party: "$UKR$布尔什维克支部"
- UKR_demo_socialism_party: "$UKR$社会主义民主派"
- UKR_demo_liberalism_party: "$UKR$中央拉达"
- UKR_demo_conservatism_party: "$UKR$中央拉达"
- UKR_authoritarian_party: "$UKR$中央拉达"
- UKR_fascism_party: "$UKR$长枪党"
- UKR_nationalism_party: "$UKR$国家社会工人党"
- UKR_supernationalism_party: "$UKR$国家社会工人党"
+ UKR_soc_anarchism_party: "乌克兰平台主义(RIAU)"
+ UKR_vanwardism_party: "乌克兰革命工团派"
+ UKR_sci_socialism_party: "乌克兰人民苏维埃"
+ UKR_con_socialism_party: "乌克兰布尔什维克支部"
+ UKR_demo_socialism_party: "乌克兰社会主义民主派"
+ UKR_demo_liberalism_party: "乌克兰中央拉达"
+ UKR_demo_conservatism_party: "乌克兰中央拉达"
+ UKR_authoritarian_party: "乌克兰中央拉达"
+ UKR_fascism_party: "乌克兰长枪党"
+ UKR_nationalism_party: "乌克兰国家社会工人党"
+ UKR_supernationalism_party: "乌克兰国家社会工人党激进派"
 
 #HOL
 #BEL
@@ -125,19 +125,19 @@
  BEL_demo_socialism_party: "比利时社会民主党" #
  BEL_demo_liberalism_party: "比利时自由党" #
  BEL_demo_conservatism_party: "比利时天主教党"
- BEL_authoritarian_party: ""
+ BEL_authoritarian_party: "比利时君主派"
  BEL_fascism_party: "比利时雷克斯党"
  BEL_nationalism_party: "比利时雷克斯党"
  BEL_supernationalism_party: "比利时雷克斯党"
 #LUX
- LUX_soc_anarchism_party: "$LUX$共产主义无政府派"
- LUX_vanwardism_party: "$LUX$共产主义工团派"
- LUX_sci_socialism_party: "$LUX$共产党(KPL)"
- LUX_con_socialism_party: "$LUX$左翼党(DL)" 
- LUX_demo_socialism_party: "$LUX$社会民主党(LSAP)" #卢森堡社会工人党(POSL)
- LUX_demo_liberalism_party: "$LUX$独立国家党" #
- LUX_demo_conservatism_party: "$LUX$民主党(DP)" #基督教社会人民党(CSV)
- LUX_authoritarian_party: "$LUX$君主派"
- LUX_fascism_party: "$LUX$法西斯国家党"
+ LUX_soc_anarchism_party: "卢森堡共产主义无政府派"
+ LUX_vanwardism_party: "卢森堡共产主义工团派"
+ LUX_sci_socialism_party: "卢森堡共产党(KPL)"
+ LUX_con_socialism_party: "卢森堡左翼党(DL)" 
+ LUX_demo_socialism_party: "卢森堡社会民主党(LSAP)" #卢森堡社会工人党(POSL)
+ LUX_demo_liberalism_party: "卢森堡独立国家党" #
+ LUX_demo_conservatism_party: "卢森堡民主党(DP)" #基督教社会人民党(CSV)
+ LUX_authoritarian_party: "卢森堡君主派"
+ LUX_fascism_party: "卢森堡法西斯国家党"
  LUX_nationalism_party: "国家社会工人党"
  LUX_supernationalism_party: "国家社会工人党巴伐利亚学派"
