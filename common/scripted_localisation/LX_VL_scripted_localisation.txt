@@ -101,6 +101,7 @@ defined_text = {
 		trigger = {
 			FROM = {
 				check_variable = { state_rank = 0 }
+				NOT = { has_country_flag = br_cl_status_flavour_flag }
 				has_idea = br_laws_monarchy
 			}
 		}
@@ -111,6 +112,7 @@ defined_text = {
 		trigger = {
 			FROM = {
 				check_variable = { state_rank = 1 }
+				NOT = { has_country_flag = br_cl_status_flavour_flag }
 				has_idea = br_laws_monarchy
 			}
 		}
@@ -121,6 +123,7 @@ defined_text = {
 		trigger = {
 			FROM = {
 				check_variable = { state_rank = 2 }
+				NOT = { has_country_flag = br_cl_status_flavour_flag }
 				has_idea = br_laws_monarchy
 			}
 		}
@@ -131,6 +134,7 @@ defined_text = {
 		trigger = {
 			FROM = {
 				check_variable = { state_rank = 3 }
+				NOT = { has_country_flag = br_cl_status_flavour_flag }
 				has_idea = br_laws_monarchy
 			}
 		}
@@ -141,6 +145,7 @@ defined_text = {
 		trigger = {
 			FROM = {
 				check_variable = { state_rank = 4 }
+				NOT = { has_country_flag = br_cl_status_flavour_flag }
 				has_idea = br_laws_monarchy
 			}
 		}
@@ -151,6 +156,7 @@ defined_text = {
 		trigger = {
 			FROM = {
 				check_variable = { state_rank = 5 }
+				NOT = { has_country_flag = br_cl_status_flavour_flag }
 				has_idea = br_laws_monarchy
 			}
 		}
@@ -216,7 +222,7 @@ defined_text = {
 	text = {
 		trigger = {
 			FROM = {
-				#has_country_flag = 
+				
 			}
 		}
 		localization_key = CL_Shah
