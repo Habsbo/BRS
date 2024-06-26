@@ -75,7 +75,7 @@ ideas = {
 			cancel_if_invalid = yes
 		}
 		#民主授权制
-		br_laws_elected_president = {
+		br_laws_representative = {
 
 			allowed = { always = yes }
 
@@ -105,39 +105,6 @@ ideas = {
 				#
 			}
 
-			cancel_if_invalid = yes
-		}
-		#议会制
-		br_laws_parliamentarism = {
-
-			allowed = { always = yes }
-
-			available = {
-				OR = {
-					br_ideology_socialism_ruling = yes
-					br_ideology_capitalism_ruling = yes
-					br_ideology_fascism_ruling = yes
-				}
-			}
-
-			removal_cost = -1
-
-			modifier = {
-				#
-			}
-
-			allowed_to_remove = {
-				#
-			}
-			
-			on_add = {
-				#
-			}
-
-			on_remove = {
-				#
-			}
-			
 			cancel_if_invalid = yes
 		}
 		#委员会制
@@ -304,6 +271,39 @@ ideas = {
 				#
 			}
 
+			cancel_if_invalid = yes
+		}
+		#议会制
+		br_laws_parliamentarism = {
+
+			allowed = { always = yes }
+
+			available = {
+				OR = {
+					br_ideology_socialism_ruling = yes
+					br_ideology_capitalism_ruling = yes
+					br_ideology_fascism_ruling = yes
+				}
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+			
+			on_add = {
+				#
+			}
+
+			on_remove = {
+				#
+			}
+			
 			cancel_if_invalid = yes
 		}
 		#代表制

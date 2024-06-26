@@ -144,16 +144,7 @@
 		custom_trigger_tooltip = {
 			tooltip = br_countryleader_custom_flavour_trigger_tt
 			OR = {
-				original_tag = GER
-				original_tag = PAP
-				original_tag = MNG
-				original_tag = CHI
-				original_tag = MAN
-				original_tag = MON
-				original_tag = MEN
-				original_tag = SIK
-				original_tag = TIB
-				original_tag = JAP
+				has_country_flag = br_cl_status_flavour_flag
 			}
 		}
 	}

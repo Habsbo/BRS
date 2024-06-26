@@ -10,7 +10,7 @@
 
  br_laws_feudalism_hidden: "$br_laws_feudalism$"
  br_laws_dictatorship_hidden: "$br_laws_dictatorship$"
- br_laws_elected_president_hidden: "$br_laws_elected_president$"
+ br_laws_representative_hidden: "$br_laws_representative$"
  br_laws_parliamentarism_hidden: "$br_laws_parliamentarism$"
  br_laws_committee_hidden: "$br_laws_committee$"
 

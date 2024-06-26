@@ -89,23 +89,36 @@ if = {
 }
 
 set_politics = {
-	ruling_party = demo_socialism
-	last_election = "1936.1.1"
+	ruling_party = demo_conservatism
+	last_election = "1931.1.1"
 	election_frequency = 48
 	elections_allowed = yes
 }
 
 set_popularities = {
-	soc_anarchism = 2 #社会无政府主义
-	vanwardism = 2 #革命社会主义
-	sci_socialism = 6 #科学社会主义
-	con_socialism = 10 #保守社会主义
-	demo_socialism = 40 #社会民主主义
-	demo_liberalism = 20 #社会自由主义
-	demo_conservatism = 10 #保守民主主义
-	fascism = 10 #民族主义/束棒
+	#
+	soc_anarchism = 0
+	vanwardism = 0
+	#
+	sci_socialism = 5
+	con_socialism = 0
+	demo_socialism = 10
+	#
+	demo_liberalism = 20
+	demo_conservatism = 35
+	#
+	authoritarian = 30
+	#
+	fascism = 0
+	nationalism = 0
+	supernationalism = 0
 }
 
+set_cosmetic_tag = BLR_kingdom_deutsch
+
+LAT = {
+	set_cosmetic_tag = Baltic_deutschland_reich
+}
 
 create_country_leader = {
     name = "Vasil Zacharka"

@@ -191,7 +191,7 @@ defined_text = {
 		trigger = {
 			FROM = {
 				check_variable = { state_rank = 0 }
-				has_idea = br_laws_elected_president
+				has_idea = br_laws_proxy
 			}
 		}
 		localization_key = CL_Prime_President
@@ -200,7 +200,7 @@ defined_text = {
 		trigger = {
 			FROM = {
 				check_variable = { state_rank > 0 }
-				has_idea = br_laws_elected_president
+				has_idea = br_laws_proxy
 			}
 		}
 		localization_key = CL_President
@@ -222,7 +222,21 @@ defined_text = {
 	text = {
 		trigger = {
 			FROM = {
-				
+				check_variable = { state_rank = 0 }
+				original_tag = GER
+				has_country_flag = br_cl_status_flavour_flag
+				has_idea = br_laws_monarchy
+			}
+		}
+		localization_key = CL_Kaiser
+	}
+	text = {
+		trigger = {
+			FROM = {
+				check_variable = { state_rank < 3 }
+				original_tag = PER
+				has_country_flag = br_cl_status_flavour_flag
+				has_idea = br_laws_monarchy
 			}
 		}
 		localization_key = CL_Shah

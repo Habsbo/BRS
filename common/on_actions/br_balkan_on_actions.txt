@@ -1,6 +1,13 @@
 on_actions = {
 	on_startup = {
 		effect = {
+			GER = {
+				set_country_flag = br_cl_status_flavour_flag
+				set_variable = { custom_cl_var = 0 }
+			}
+			PER = {
+				set_country_flag = br_cl_status_flavour_flag
+			}
 			SPR = {
 				set_country_flag = br_na_war_aggressor_flag
 				declare_war_on = { target = RIF type = annex_everything }
