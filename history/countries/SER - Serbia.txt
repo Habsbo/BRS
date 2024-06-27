@@ -168,10 +168,5 @@ declare_war_on = {
 set_cosmetic_tag = SER_CRO
 
 add_ideas = {
-	br_laws_dictatorship
-	br_laws_monarchy
-	br_laws_suffrage_prohibited
-	br_laws_national_state
-	br_laws_religious_people
-	br_laws_bourgeoisie
+	#
 }

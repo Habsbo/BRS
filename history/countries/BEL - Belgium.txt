@@ -86,12 +86,7 @@ add_ideas = {
 	civilian_economy
 	uncontrolled_exports
 	#br laws
-	br_laws_parliamentarism
-	br_laws_monarchy
-	br_laws_qualification
-	br_laws_mainstream
-	br_laws_religious_people
-	br_laws_loyalist
+	
 	#head of gov
 
 	#national spirits

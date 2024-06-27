@@ -92,18 +92,6 @@ country_event = { #
 	immediate = {
 		hidden_effect = {
 			#
-			add_ideas = br_laws_committee
-			add_ideas = br_laws_proletariat
-			if = {
-				limit = {
-					OR = {
-						has_idea = br_laws_suffrage_prohibited
-						has_idea = br_laws_landowner
-						has_idea = br_laws_asset
-					}
-				}
-				add_ideas = br_laws_qualification
-			}
 		}
 	}
 

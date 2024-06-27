@@ -443,10 +443,6 @@ ideas = {
 
 			available = {
 				has_idea = br_laws_loyalist
-				NOT = {
-					has_idea = br_laws_elected_president
-					has_idea = br_laws_parliamentarism
-				}
 			}
 			
 			removal_cost = -1
@@ -507,19 +503,7 @@ ideas = {
 			level = 1
 
 			available = {
-				NOT = {
-					has_idea = br_laws_feudalism
-					has_idea = br_laws_dictatorship
-					has_idea = br_laws_loyalist
-					has_idea = br_laws_pure_race
-					has_idea = br_laws_apartheid
-				}
-				OR = {
-					has_idea = br_laws_elected_president
-					has_idea = br_laws_parliamentarism
-					has_idea = br_laws_committee
-					has_idea = br_laws_technocracy
-				}
+				#
 			}
 			
 			removal_cost = -1

@@ -212,7 +212,7 @@ defined_text = {
 	text = {
 		trigger = {
 			FROM = {
-				has_idea = br_laws_committee
+				#has_idea = br_laws_committee
 				has_idea = br_laws_proletariat
 			}
 		}

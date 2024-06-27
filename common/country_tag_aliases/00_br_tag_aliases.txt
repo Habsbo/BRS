@@ -173,7 +173,7 @@ KPD = { #DDR
 	country_score = {
 		base = 0
 		modifier = {
-			has_idea = br_laws_committee
+			#has_idea = br_laws_committee
 			add = 10
 		}
 		modifier = {

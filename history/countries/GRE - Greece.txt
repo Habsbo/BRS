@@ -362,12 +362,7 @@ if = {
 set_cosmetic_tag = HEL_kingdom
 #法律
 add_ideas = {
-	br_laws_parliamentarism
-	br_laws_monarchy
-	br_laws_asset
-	br_laws_national_state
-	br_laws_religious_people
-	br_laws_bourgeoisie
+	#
 }
 #dynamic modifier - army
 add_dynamic_modifier = { modifier = black_force_dynamic_modifier }

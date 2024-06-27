@@ -93,12 +93,6 @@ set_popularities = {
 set_cosmetic_tag = LUX_grand_duchy
 
 add_ideas = {
-	br_laws_parliamentarism
-	br_laws_monarchy
-	br_laws_asset
-	br_laws_national_state
-	br_laws_spiritual
-	br_laws_bourgeoisie
 	#
 	volunteer_only
 	free_trade

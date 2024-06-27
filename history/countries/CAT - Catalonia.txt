@@ -86,12 +86,6 @@ add_ideas = {
 	#
 
 	#
-	br_laws_committee
-	br_laws_premier
-	br_laws_free
-	br_laws_mainstream
-	br_laws_freedom_belief
-	br_laws_proletariat
 }
 1931.1.1 = {
 	#head of gov

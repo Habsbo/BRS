@@ -402,11 +402,11 @@ br_na_generic_decisions = {#成立摩洛哥共和国
 			if = {
 				limit = {
 					OR = {
-						has_idea = br_laws_feudalism
-						has_idea = br_laws_dictatorship
+						#has_idea = br_laws_feudalism
+						#has_idea = br_laws_dictatorship
 					}
 				}
-				set_cosmetic_tag = AMAZIGA_empire
+				#set_cosmetic_tag = AMAZIGA_empire
 			}
 			else = {
 				set_cosmetic_tag = AMAZIGA_republic

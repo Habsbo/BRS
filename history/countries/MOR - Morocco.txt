@@ -48,9 +48,5 @@ add_ideas = {
 }
 #法律
 add_ideas = {
-	br_laws_feudalism
-	br_laws_suffrage_prohibited
-	br_laws_national_state
-	br_laws_spiritual
-	br_laws_loyalist
+	#
 }
