@@ -201,6 +201,13 @@ add_ideas = {
 	limited_conscription
 	partial_economic_mobilisation
 	#
+	br_laws_monarchy
+
+	br_laws_asset
+	br_laws_national_state
+	br_laws_religious_people
+	br_laws_bourgeoisie
+	#
 #	SWE_historical_trade_with_Germany_dummy CUT
 }
 add_ideas = GER_mefo_bills_1
@@ -831,7 +838,7 @@ add_to_faction = POL
 #add_to_faction = BUL
 #add_to_faction = HOL
 
-#set_autonomy = { target = BAY autonomy_state = autonomy_br_self_governance }
+set_autonomy = { target = LIT autonomy_state = autonomy_br_self_governance }
 #rhe
 create_dynamic_country = {
 	original_tag = GER

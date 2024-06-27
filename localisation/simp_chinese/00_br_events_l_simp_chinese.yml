@@ -1,7 +1,7 @@
 ﻿l_simp_chinese:
  laws: "法律"
  national_laws: "政府法律"
- state_system: "元首与国家体制"
+ state_system: "国家体制与元首"
  gov_leader: "政府领袖"
  election_right: "选举权"
  culture_laws: "文化法律"
@@ -13,7 +13,7 @@
  br_laws_monarchy: "君主制"
  br_laws_monarchy_desc: ""
  br_laws_cleric: "神权制"
- br_laws_cleric: ""
+ br_laws_cleric_desc: ""
  br_laws_proxy: "总统制"
  br_laws_proxy_desc: ""
  br_laws_parliamentarism: "议会制"
