@@ -73,7 +73,7 @@ add_ideas = {
 	service_by_requirement
 	partial_economic_mobilisation
 	#
-	br_laws_democratic
+	
 	br_laws_premier
 	br_laws_qualification
 	br_laws_national_state

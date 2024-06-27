@@ -35,10 +35,9 @@ idea_categories = {
 	}
 
 	national_laws = {
-		slot = nation_cheif #国家元首
+		slot = state_system #国体
 		slot = gov_leader #
 		slot = election_right #选举权
-		slot = state_system #国体
 		slot = culture_laws #文化法律
 		slot = faith_laws #信仰法律
 		slot = ruling_class #统治阶级

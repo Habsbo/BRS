@@ -3,18 +3,12 @@ ideas = {
 	state_system = {
 		law = yes
 		use_list_view = yes
-		#封建制
+		#封建制（部落、封建君主）
 		br_laws_feudalism = {
 
 			allowed = { always = yes }
 
 			available = {
-				#
-				OR = {
-					has_idea = br_laws_monarchy
-					has_idea = br_laws_cleric
-					has_idea = br_laws_archon
-				}
 				#
 				has_idea = br_laws_loyalist
 				#
@@ -42,75 +36,7 @@ ideas = {
 			default = yes
 			cancel_if_invalid = yes
 		}
-		#民主制
-		br_laws_democratic = {
-
-			allowed = { always = yes }
-
-			available = {
-				OR = {
-					br_ideology_socialism_ruling = yes
-					br_ideology_capitalism_ruling = yes
-					br_ideology_fascism_ruling = yes
-				}
-			}
-
-			removal_cost = -1
-
-			modifier = {
-				#
-			}
-
-			allowed_to_remove = {
-				#
-			}
-
-			on_add = {
-				#
-			}
-
-			on_remove = {
-				#
-			}
-
-			cancel_if_invalid = yes
-		}
-		#委员会制
-		br_laws_committee = {
-
-			allowed = { always = yes }
-
-			available = {
-				has_idea = br_laws_proletariat
-			}
-
-			removal_cost = -1
-
-			modifier = {
-				#
-			}
-
-			allowed_to_remove = {
-				#
-			}
-			
-			on_add = {
-				#
-			}
-
-			on_remove = {
-				#
-			}
-			
-			cancel_if_invalid = yes
-		}
-		#无政府
-	}
-
-	nation_cheif = {
-		law = yes
-		use_list_view = yes
-		#世袭君主制
+		#世袭君主制（立宪制）
 		br_laws_monarchy = {
 
 			allowed = { always = yes }
@@ -149,36 +75,8 @@ ideas = {
 			default = yes
 			cancel_if_invalid = yes
 		}
-		#选举君主制
-		br_laws_electoral_monarch = {
-
-			allowed = { always = yes }
-
-			available = {}
-
-			removal_cost = -1
-
-			modifier = {
-				#
-			}
-
-			allowed_to_remove = {
-				#
-			}
-
-			on_add = {
-				#
-			}
-
-			on_remove = {
-				#
-			}
-
-			cancel_if_invalid = yes
-		}
 		#神权制
 		br_laws_cleric = {
-
 			allowed = { always = yes }
 
 			available = {
@@ -209,20 +107,16 @@ ideas = {
 
 			cancel_if_invalid = yes
 		}
-		#元首制
-		br_laws_archon = {
+		#代议总统制
+		br_laws_proxy = {
 
 			allowed = { always = yes }
 
 			available = {
-				OR = {
-					has_idea = br_laws_feudalism
-					has_idea = br_laws_dictatorship
-					has_idea = br_laws_parliamentarism
-				}
-				OR = {
+				NOT = {
+					has_idea = br_laws_suffrage_prohibited
+					#
 					has_idea = br_laws_loyalist
-					has_idea = br_laws_bourgeoisie
 				}
 			}
 
@@ -238,7 +132,7 @@ ideas = {
 
 			cancel_if_invalid = yes
 		}
-		#议会制
+		#代议议会制
 		br_laws_parliamentarism = {
 
 			allowed = { always = yes }
@@ -271,17 +165,13 @@ ideas = {
 			
 			cancel_if_invalid = yes
 		}
-		#代表制
-		br_laws_proxy = {
+		#委员会制
+		br_laws_committee = {
 
 			allowed = { always = yes }
 
 			available = {
-				NOT = {
-					has_idea = br_laws_suffrage_prohibited
-					#
-					has_idea = br_laws_loyalist
-				}
+				has_idea = br_laws_proletariat
 			}
 
 			removal_cost = -1
@@ -293,9 +183,18 @@ ideas = {
 			allowed_to_remove = {
 				#
 			}
+			
+			on_add = {
+				#
+			}
 
+			on_remove = {
+				#
+			}
+			
 			cancel_if_invalid = yes
 		}
+		#无政府
 	}
 
 	gov_leader = {

@@ -163,7 +163,7 @@ add_ideas = {
 	war_economy
 	#
 	br_laws_parliamentarism
-	br_laws_archon
+	#
 	br_laws_landowner
 	br_laws_national_state
 	br_laws_religious_people

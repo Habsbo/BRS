@@ -2602,8 +2602,7 @@ focus_tree = {
 		complete_tooltip = {}
 		
 		completion_reward = {
-			add_ideas = br_laws_elected_representative
-			add_ideas = br_laws_archon
+			#
 		}
 		
 		ai_will_do = { factor = 1 }

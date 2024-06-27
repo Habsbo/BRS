@@ -602,7 +602,6 @@ br_hearts_of_lux = {
 				OR = {
 					has_idea = br_laws_monarchy
 					has_idea = br_laws_cleric
-					has_idea = br_laws_archon
 				}
 				has_idea = br_laws_spiritual
 			}
