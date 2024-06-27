@@ -74,6 +74,16 @@ characters={
 			expire="1965.1.1.1"
 			id=-1
 		}
+		advisor={
+			slot = head_of_gov
+			idea_token = BEL_hubert_pierlot_hog
+			allowed = { original_tag = BEL }
+			available = { br_ideology_fascism_nio = yes }
+			traits = {  }
+			cost = 0
+			can_be_fired = no
+			ai_will_do = { factor = 1.000 }
+		}
 	}
 	BEL_joseph_jacquemotte={ #约瑟夫·雅克莫特
 		name=BEL_joseph_jacquemotte
@@ -99,16 +109,10 @@ characters={
 		advisor={
 			slot = army_chief
 			idea_token = BEL_leon_degrelle
-			allowed = {
-					original_tag = BEL
-				}
-				traits = {
-					army_chief_defensive_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
+			allowed = { original_tag = BEL }
+			traits = { army_chief_defensive_2 }
+			cost = 100
+			ai_will_do = { factor = 1.000 }
 		}
 		country_leader={
 			ideology=rexism

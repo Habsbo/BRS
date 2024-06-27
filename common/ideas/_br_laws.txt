@@ -1,4 +1,5 @@
 ideas = {
+	
 	state_system = {
 		law = yes
 		use_list_view = yes
@@ -41,41 +42,8 @@ ideas = {
 			default = yes
 			cancel_if_invalid = yes
 		}
-		#独裁制
-		br_laws_dictatorship = {
-
-			allowed = { always = yes }
-
-			available = {
-				OR = {
-					br_ideology_capitalism_ruling = yes
-					br_ideology_authoritarian_ruling = yes
-					br_ideology_fascism_ruling = yes
-				}
-			}
-
-			removal_cost = -1
-
-			modifier = {
-				#
-			}
-
-			allowed_to_remove = {
-				#
-			}
-
-			on_add = {
-				#
-			}
-
-			on_remove = {
-				#
-			}
-
-			cancel_if_invalid = yes
-		}
-		#民主授权制
-		br_laws_representative = {
+		#民主制
+		br_laws_democratic = {
 
 			allowed = { always = yes }
 
@@ -136,43 +104,13 @@ ideas = {
 			
 			cancel_if_invalid = yes
 		}
-		#技术治国
-		br_laws_technocracy = {
-
-			allowed = { always = yes }
-
-			available = {
-				NOT = {
-					#
-					has_idea = br_laws_feudalism
-					has_idea = br_laws_dictatorship
-					#
-					has_idea = br_laws_monarchy
-
-					#
-					has_idea = br_laws_loyalist
-				}
-			}
-
-			removal_cost = -1
-
-			modifier = {
-				#
-			}
-
-			allowed_to_remove = {
-				#
-			}
-			
-			cancel_if_invalid = yes
-		}
 		#无政府
 	}
 
 	nation_cheif = {
 		law = yes
 		use_list_view = yes
-		#君主制
+		#世袭君主制
 		br_laws_monarchy = {
 
 			allowed = { always = yes }
@@ -209,6 +147,33 @@ ideas = {
 			}
 
 			default = yes
+			cancel_if_invalid = yes
+		}
+		#选举君主制
+		br_laws_electoral_monarch = {
+
+			allowed = { always = yes }
+
+			available = {}
+
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+
+			on_add = {
+				#
+			}
+
+			on_remove = {
+				#
+			}
+
 			cancel_if_invalid = yes
 		}
 		#神权制
@@ -331,6 +296,67 @@ ideas = {
 
 			cancel_if_invalid = yes
 		}
+	}
+
+	gov_leader = {
+		law = yes
+		use_list_view = yes
+
+		#独裁制
+		br_laws_dictatorship = {
+
+			allowed = { always = yes }
+
+			available = {}
+
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+
+			on_add = {
+				#
+			}
+
+			on_remove = {
+				#
+			}
+
+			default = yes
+			cancel_if_invalid = yes
+		}
+		#选举官僚
+		br_laws_electoral_politician = {
+
+			allowed = { always = yes }
+
+			available = {}
+
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+
+			on_add = {
+				#
+			}
+
+			on_remove = {
+				#
+			}
+
+			cancel_if_invalid = yes
+		}
 		#责任制
 		br_laws_premier = {
 
@@ -339,6 +365,25 @@ ideas = {
 			available = {
 				NOT = { has_idea = br_laws_loyalist }
 			}
+
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+			
+			cancel_if_invalid = yes
+		}
+		#技术治国
+		br_laws_technocracy = {
+
+			allowed = { always = yes }
+
+			available = {}
 
 			removal_cost = -1
 
