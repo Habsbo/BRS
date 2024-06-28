@@ -14,19 +14,6 @@ if = {
 
 set_research_slots = 3
 
-if = {
-	limit = {
-		has_DLC = "No Step Back"
-	}
-	add_ideas = {
-		limited_conscription
-		LIT_iron_wolf_idea_bad_1
-		LIT_agrarian_society
-		LIT_military_idea_1
-		LIT_seimas_idea_1
-	}
-}
-
 set_variable = {
 	var = iron_wolf_days_var
 	value = 100
@@ -95,4 +82,22 @@ set_popularities = {
 	demo_conservatism = 10 #保守民主主义
 	authoritarian = 40 #威权主义
 	fascism = 10 #民族主义/束棒
+}
+
+set_cosmetic_tag = LIT_DEU_monarchy
+
+add_ideas = {
+	limited_conscription
+	LIT_iron_wolf_idea_bad_1
+	LIT_agrarian_society
+	LIT_military_idea_1
+	LIT_seimas_idea_1
+	#
+	br_laws_monarchy
+	br_laws_dictatorship
+	br_laws_suffrage_prohibited
+	br_laws_national_state
+	br_laws_spiritual
+	br_laws_bourgeoisie
+	#
 }

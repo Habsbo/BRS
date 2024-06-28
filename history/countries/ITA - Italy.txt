@@ -1,4 +1,5 @@
-﻿capital = 2
+﻿capital = 159 #MILANO, NOT ROMA
+
 ETH_set_up_lon_arms_resolution_effect = yes 
 if = {
 	limit = {
