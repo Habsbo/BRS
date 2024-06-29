@@ -1,5 +1,208 @@
 ###
+add_namespace = br_bel
+###
+country_event = { #
+	id = br_bel.1
+	title = br_bel.1.title
+	desc = br_bel.1.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
 
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			every_state = {
+				limit = { is_core_of = WAL }
+				remove_core_of = WAL
+			}
+		}
+	}
+
+	option = {
+		name = br_bel.1.a #
+
+		set_cosmetic_tag = Vlaams
+		set_country_flag = BEL_Vlaams_flag
+
+		34 = {
+			transfer_state_to = WAL
+			add_core_of = WAL
+			remove_core_of = root
+		}
+
+		country_event = br_bel.2
+		
+		WAL = {
+			FRA = { give_guarantee = prev }
+			set_variable = { state_rank = 3 }
+			set_politics = {
+				ruling_party = demo_liberalism
+				last_election = "1931.1.1"
+				election_frequency = 48
+				elections_allowed = yes
+			}
+			set_popularities = {
+				#
+				soc_anarchism = 0
+				vanwardism = 0
+				#
+				sci_socialism = 5
+				con_socialism = 0
+				demo_socialism = 20
+				#
+				demo_liberalism = 45
+				demo_conservatism = 0
+				#
+				authoritarian = 0
+				#
+				fascism = 30
+				nationalism = 0
+				supernationalism = 0
+			}
+			#dynamic modifier - ic
+			add_dynamic_modifier = { modifier = national_industry_civilian_dynamic_modifier }
+			add_dynamic_modifier = { modifier = national_industry_military_dynamic_modifier }
+			#dynamic modifier - army
+			add_dynamic_modifier = { modifier = black_force_dynamic_modifier }
+			add_dynamic_modifier = { modifier = red_army_dynamic_modifier }
+			add_dynamic_modifier = { modifier = land_force_alt_dynamic_modifier }
+			#dynamic modifier - military officier
+			add_dynamic_modifier = { modifier = committee_combat_dynamic_modifier }
+			add_dynamic_modifier = { modifier = political_commissar_dynamic_modifier }
+			add_dynamic_modifier = { modifier = officer_cap_dynamic_modifier }
+			#dynamic modifier - navy
+			add_dynamic_modifier = { modifier = red_navy_dynamic_modifier }
+			add_dynamic_modifier = { modifier = navy_alt_dynamic_modifier }
+			#dynamic modifier - airforce
+			add_dynamic_modifier = { modifier = red_airforce_dynamic_modifier }
+			add_dynamic_modifier = { modifier = airforce_alt_dynamic_modifier }
+			#dynamic modifier - ic
+			set_variable = { nic_consumer_goods_expected_value = root.nic_consumer_goods_expected_value }
+			set_variable = { nic_production_speed_buildings_factor = root.nic_production_speed_buildings_factor }
+			set_variable = { nic_conversion_cost_civ_to_mil_factor = root.nic_conversion_cost_civ_to_mil_factor }
+			set_variable = { nic_conversion_cost_mil_to_civ_factor = root.nic_conversion_cost_mil_to_civ_factor }
+			set_variable = { nic_industrial_capacity_factory = root.nic_industrial_capacity_factory }
+			set_variable = { nim_production_speed_arms_factory_factor = root.nim_production_speed_arms_factory_factor }
+			set_variable = { nim_production_speed_dockyard_factor = root.nim_production_speed_dockyard_factor }
+			set_variable = { nim_production_factory_start_efficiency_factor = root.nim_production_factory_start_efficiency_factor }
+			set_variable = { nim_production_factory_max_efficiency_factor = root.nim_production_factory_max_efficiency_factor }
+			set_variable = { nim_production_factory_efficiency_gain_factor = root.nim_production_factory_efficiency_gain_factor }
+			set_variable = { nim_production_lack_of_resource_penalty_factor = root.nim_production_lack_of_resource_penalty_factor }
+			set_variable = { nim_conversion_cost_civ_to_mil_factor = root.nim_conversion_cost_civ_to_mil_factor }
+			set_variable = { nim_conversion_cost_mil_to_civ_factor = root.nim_conversion_cost_mil_to_civ_factor }
+			set_variable = { nim_max_fuel_factor = root.nim_max_fuel_factor }
+			set_variable = { nim_fuel_gain_factor = root.nim_fuel_gain_factor }
+			#dynamic modifier - army
+			set_variable = { troops_political_power_gain = root.troops_political_power_gain }
+			set_variable = { troops_army_attack_factor = root.troops_army_attack_factor }
+			set_variable = { troops_army_defence_factor = root.troops_army_defence_factor }
+			set_variable = { troops_army_speed_factor = root.troops_army_speed_factor }
+			set_variable = { troops_army_org_factor = root.troops_army_org_factor }
+			set_variable = { troops_conscription_factor = root.troops_conscription_factor }
+			#dynamic modifier - military officier
+			set_variable = { officer_cap_political_power_factor = root.officer_cap_political_power_factor }
+			set_variable = { officer_cap_army_advisor_cost_factor = root.officer_cap_army_advisor_cost_factor }
+			set_variable = { officer_cap_planning_speed = root.officer_cap_planning_speed }
+			set_variable = { officer_cap_experience_gain_army_factor = root.officer_cap_experience_gain_army_factor }
+			set_variable = { officer_cap_command_abilities_cost_factor = root.officer_cap_command_abilities_cost_factor }
+			set_variable = { officer_cap_land_doctrine_cost_factor = root.officer_cap_land_doctrine_cost_factor }
+			#dynamic modifier - navy
+			
+			#dynamic modifier - airforce
+			
+		}
+		
+		ai_chance = { factor = 5 }
+	}
+
+	option = {
+		name = br_bel.1.b #
+		
+		set_cosmetic_tag = Wallonia
+
+		country_event = br_bel.3
+
+		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = { #
+	id = br_bel.2
+	title = br_bel.2.title
+	desc = br_bel.2.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			GER = {
+				add_to_faction = VLM
+			}
+		}
+	}
+
+	option = {
+		name = br_bel.2.a #
+
+		ai_chance = { factor = 5 }
+	}
+}
+
+country_event = { #
+	id = br_bel.3
+	title = br_bel.3.title
+	desc = br_bel.3.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			#
+		}
+	}
+
+	option = {
+		name = br_bel.3.a #
+
+		ai_chance = { factor = 5 }
+	}
+}
+
+
+country_event = { #
+	id = br_bel.10
+	title = br_bel.10.title
+	desc = br_bel.10.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = VLM
+						is_core_of = WAL
+					}
+				}
+				set_demilitarized_zone = no
+			}
+		}
+	}
+
+	option = {
+		name = br_bel.10.a #
+
+		ai_chance = { factor = 1 }
+	}
+}
 ###
 add_namespace = br_lux
 ###

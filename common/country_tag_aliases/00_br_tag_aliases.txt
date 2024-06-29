@@ -244,3 +244,13 @@ EUS = {
 		has_government = demo_socialism
 	}
 }
+
+WAL = {
+	original_tag = BEL
+	has_country_flag = BEL_Wallonia_flag
+}
+
+VLM = {
+	original_tag = BEL
+	has_country_flag = BEL_Vlaams_flag
+}

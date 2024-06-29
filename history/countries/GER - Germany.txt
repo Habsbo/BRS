@@ -211,9 +211,9 @@ add_ideas = {
 #	SWE_historical_trade_with_Germany_dummy CUT
 }
 add_ideas = GER_mefo_bills_1
-
 activate_mission = GER_mefo_bills_mission
 
+recruit_character = GER_wilhelm_ii
 recruit_character = GER_wilhelm_pieck
 recruit_character = GER_konrad_adenauer
 recruit_character = GER_adolf_hitler

@@ -6,7 +6,7 @@ focus_tree = {
 		
 		modifier = {
 			add = 10
-			tag = BEL
+			original_tag = BEL
 		}
 	}
 	
@@ -25,8 +25,6 @@ focus_tree = {
 		#relative_position_id =
 
 		cost = 8
-		
-		ai_will_do = { factor = 1 }
 		
 		available = {
 			34 = {
@@ -56,6 +54,8 @@ focus_tree = {
 			add_to_variable = { nic_consumer_goods_expected_value = -0.05 tooltip = consumer_goods_expected_value_tt }
 			add_to_variable = { nic_production_speed_buildings_factor = 0.05 tooltip = production_speed_buildings_factor_tt }
 		}
+		
+		ai_will_do = { factor = 1 }
 	}
 	focus = {
 		id = BEL_electrification_of_wallonia
@@ -67,8 +67,6 @@ focus_tree = {
 		relative_position_id = BEL_beating_wallonia
 
 		cost = 8
-		
-		ai_will_do = { factor = 1 }
 		
 		available = {}
 		
@@ -89,6 +87,8 @@ focus_tree = {
 			#
 			add_cic = 3000
 		}
+		
+		ai_will_do = { factor = 1 }
 	}
 	focus = {
 		id = BEL_suppress_worker_revolution
@@ -101,8 +101,6 @@ focus_tree = {
 
 		cost = 8
 		
-		ai_will_do = { factor = 1 }
-		
 		available = {}
 		
 		bypass = {}
@@ -114,6 +112,8 @@ focus_tree = {
 		complete_tooltip = {}
 		
 		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
 	}
 	focus = {
 		id = BEL_1
@@ -126,8 +126,6 @@ focus_tree = {
 
 		cost = 8
 		
-		ai_will_do = { factor = 1 }
-		
 		available = {}
 		
 		bypass = {}
@@ -139,6 +137,8 @@ focus_tree = {
 		complete_tooltip = {}
 		
 		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
 	}
 	focus = {
 		id = BEL_labour_union_acts
@@ -151,8 +151,6 @@ focus_tree = {
 
 		cost = 8
 		
-		ai_will_do = { factor = 1 }
-		
 		available = {}
 		
 		bypass = {}
@@ -164,31 +162,8 @@ focus_tree = {
 		complete_tooltip = {}
 		
 		completion_reward = {}
-	}
-	focus = {
-		id = BEL_12
-		icon = GFX_
-		prerequisite = { focus = BEL_labour_union_acts focus = BEL_france_side }
-		#mutually_exclusive = { focus =  }
-		x = -2
-		y = 1
-		relative_position_id = BEL_france_side
-
-		cost = 8
 		
 		ai_will_do = { factor = 1 }
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
 	}
 	
 ###ic - vlaanderen
@@ -203,8 +178,6 @@ focus_tree = {
 
 		cost = 8
 		
-		ai_will_do = { factor = 1 }
-		
 		available = {}
 		
 		bypass = {}
@@ -216,6 +189,8 @@ focus_tree = {
 		complete_tooltip = {}
 		
 		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
 	}
 	focus = {
 		id = BEL__vlaanderen
@@ -228,8 +203,6 @@ focus_tree = {
 
 		cost = 8
 		
-		ai_will_do = { factor = 1 }
-		
 		available = {}
 		
 		bypass = {}
@@ -241,12 +214,19 @@ focus_tree = {
 		complete_tooltip = {}
 		
 		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
 	}
 ### political
 	#french style
 	focus = {
 		id = BEL_wallonne_keep_moving
 		icon = GFX_
+		prerequisite = {
+			focus = BEL_neutralization
+			focus = BEL_king_save_the_nation
+			focus = BEL_vive_la_republique
+		}
 		mutually_exclusive = {
 			focus = BEL_observe_as_neutral
 			focus = BEL_vlaams_rising
@@ -279,10 +259,12 @@ focus_tree = {
 		x = -1
 		y = 2
 		relative_position_id = BEL_wallonne_keep_moving
+		
+		allow_branch = {
+			NOT = { has_completed_focus = BEL_strengthen_power_belgium }
+		}
 
 		cost = 8
-		
-		ai_will_do = { factor = 1 }
 		
 		available = {}
 		
@@ -295,11 +277,14 @@ focus_tree = {
 		complete_tooltip = {}
 		
 		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
 	}
 	focus = {
-		id = BEL_2
-		icon = GFX_
+		id = BEL_petite_entente
+		icon = GFX_focus_generic_little_entente
 		prerequisite = { focus = BEL_france_side }
+		prerequisite = { focus = BEL_remilitarization }
 		#mutually_exclusive = { focus =  }
 		x = 0
 		y = 2
@@ -307,6 +292,31 @@ focus_tree = {
 
 		cost = 8
 		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = BEL_fort_line
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = BEL_petite_entente }
+		#mutually_exclusive = { focus =  }
+		x = -1
+		y = 1
+		relative_position_id = BEL_petite_entente
+
+		cost = 8
+		
 		ai_will_do = { factor = 1 }
 		
 		available = {}
@@ -321,17 +331,130 @@ focus_tree = {
 		
 		completion_reward = {}
 	}
+	focus = {
+		id = BEL_french_training
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = BEL_petite_entente }
+		prerequisite = {
+			focus = BEL_militia_training
+			focus = BEL_enlist_volunteers
+		}
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 1
+		relative_position_id = BEL_petite_entente
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+	focus = {
+		id = BEL_1
+		icon = GFX_
+		prerequisite = { focus = BEL_fort_line }
+		#mutually_exclusive = { focus =  }
+		x = -1
+		y = 1
+		relative_position_id = BEL_fort_line
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = BEL_artillery_effort
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = BEL_fort_line }
+		prerequisite = { focus = BEL_french_training }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 1
+		relative_position_id = BEL_fort_line
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	#
+	focus = {
+		id = BEL_2
+		icon = GFX_
+		prerequisite = { focus = BEL_france_side }
+		#mutually_exclusive = { focus =  }
+		x = -6
+		y = 1
+		relative_position_id = BEL_france_side
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
 
 	#belgium
 	focus = {
 		id = BEL_observe_as_neutral
 		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = {
+			focus = BEL_neutralization
+			focus = BEL_king_save_the_nation
+			focus = BEL_vive_la_republique
+		}
 		mutually_exclusive = {
 			focus = BEL_wallonne_keep_moving
 			focus = BEL_vlaams_rising
 		}
-		x = 12
-		y = 0
+		x = 0
+		y = 1
+		relative_position_id = BEL_neutralization
 
 		cost = 8
 		
@@ -370,26 +493,26 @@ focus_tree = {
 		
 		complete_tooltip = {}
 		
-		completion_reward = {}
+		completion_reward = {
+			mark_focus_tree_layout_dirty = yes
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
 	focus = {
-		id = BEL_3
+		id = BEL_5
 		icon = GFX_
-		prerequisite = {
-			focus = BEL_france_side
-			focus = BEL_dutch_side
-			focus = BEL_strengthen_power_belgium
-		}
+		prerequisite = { focus = BEL_strengthen_power_belgium }
 		#mutually_exclusive = { focus =  }
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = BEL_strengthen_power_belgium
 
+		allow_branch = {
+			has_completed_focus = BEL_strengthen_power_belgium
+		}
+
 		cost = 8
-		
-		ai_will_do = { factor = 1 }
 		
 		available = {}
 		
@@ -402,12 +525,127 @@ focus_tree = {
 		complete_tooltip = {}
 		
 		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	#re-militarization
+	focus = {
+		id = BEL_remilitarization
+		icon = GFX_
+		prerequisite = {
+			focus = BEL_france_side
+			focus = BEL_dutch_side
+		}
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 2
+		relative_position_id = BEL_strengthen_power_belgium
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = BEL_militia_training
+		icon = GFX_
+		prerequisite = { focus = BEL_remilitarization }
+		mutually_exclusive = { focus = BEL_enlist_volunteers }
+		x = -1
+		y = 1
+		relative_position_id = BEL_remilitarization
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = BEL_enlist_volunteers
+		icon = GFX_
+		prerequisite = { focus = BEL_remilitarization }
+		mutually_exclusive = { focus = BEL_militia_training }
+		x = 1
+		y = 1
+		relative_position_id = BEL_remilitarization
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = BEL_6
+		icon = GFX_
+		prerequisite = {
+			focus = BEL_militia_training
+			focus = BEL_enlist_volunteers
+		}
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 1
+		relative_position_id = BEL_militia_training
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
 	}
 
 	#germanic&dutch
 	focus = {
 		id = BEL_vlaams_rising
 		icon = GFX_
+		prerequisite = {
+			focus = BEL_neutralization
+			focus = BEL_king_save_the_nation
+			focus = BEL_vive_la_republique
+		}
 		mutually_exclusive = {
 			focus = BEL_wallonne_keep_moving
 			focus = BEL_observe_as_neutral
@@ -441,6 +679,10 @@ focus_tree = {
 		y = 2
 		relative_position_id = BEL_vlaams_rising
 
+		allow_branch = {
+			NOT = { has_completed_focus = BEL_strengthen_power_belgium }
+		}
+
 		cost = 8
 		
 		ai_will_do = { factor = 1 }
@@ -457,15 +699,132 @@ focus_tree = {
 		
 		completion_reward = {}
 	}
-
 	focus = {
-		id = BEL_
+		id = BEL_3
 		icon = GFX_
-		#prerequisite = { focus = BEL_}
+		prerequisite = { focus = BEL_dutch_side }
+		prerequisite = { focus = BEL_remilitarization }
 		#mutually_exclusive = { focus =  }
 		x = 0
+		y = 2
+		relative_position_id = BEL_dutch_side
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	#
+	focus = {
+		id = BEL_4
+		icon = GFX_
+		prerequisite = { focus = BEL_dutch_side }
+		#mutually_exclusive = { focus =  }
+		x = 6
 		y = 1
-		#relative_position_id = BEL_
+		relative_position_id = BEL_dutch_side
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+###
+	focus = {
+		id = BEL_germany_militaries_left
+		icon = GFX_
+		mutually_exclusive = { focus = BEL_discrete_nations }
+		x = 13
+		y = 0
+
+		cost = 8
+		
+		available = { always = no }
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = BEL_discrete_nations
+		icon = GFX_
+		mutually_exclusive = { focus = BEL_germany_militaries_left }
+		x = 2
+		y = 0
+		relative_position_id = BEL_germany_militaries_left
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			create_dynamic_country = {
+				original_tag = root
+				set_country_flag = BEL_Wallonia_flag
+				set_politics = { ruling_party = authoritarian }
+				set_cosmetic_tag = Wallonia
+				set_research_slots = 3
+				reserve_dynamic_country = yes
+			}
+			country_event = br_bel.1
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = BEL_king_save_the_nation
+		icon = GFX_
+		prerequisite = {
+			focus = BEL_germany_militaries_left
+			focus = BEL_discrete_nations
+		}
+		mutually_exclusive = {
+			focus = BEL_neutralization
+			focus = BEL_vive_la_republique
+		}
+		x = -1
+		y = 1
+		relative_position_id = BEL_germany_militaries_left
 
 		cost = 8
 		
@@ -482,5 +841,120 @@ focus_tree = {
 		complete_tooltip = {}
 		
 		completion_reward = {}
+	}
+	focus = {
+		id = BEL_neutralization
+		icon = GFX_focus_ARG_strengthening_the_concordancia
+		prerequisite = {
+			focus = BEL_germany_militaries_left
+			focus = BEL_discrete_nations
+		}
+		mutually_exclusive = {
+			focus = BEL_vive_la_republique
+			focus = BEL_king_save_the_nation
+		}
+		x = 1
+		y = 1
+		relative_position_id = BEL_germany_militaries_left
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = BEL_vive_la_republique
+		icon = GFX_
+		prerequisite = {
+			focus = BEL_germany_militaries_left
+			focus = BEL_discrete_nations
+		}
+		mutually_exclusive = {
+			focus = BEL_neutralization
+			focus = BEL_king_save_the_nation
+		}
+		x = 1
+		y = 1
+		relative_position_id = BEL_discrete_nations
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+
+
+	focus = {
+		id = BEL_
+		icon = GFX_
+		#prerequisite = { focus = BEL_}
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		#relative_position_id = BEL_
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = BEL_
+		icon = GFX_
+		#prerequisite = { focus = BEL_}
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		#relative_position_id = BEL_
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
 	}
 }

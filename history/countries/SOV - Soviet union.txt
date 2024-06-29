@@ -856,11 +856,11 @@ set_popularities = {
 	supernationalism = 0
 }
 
-create_faction = Comintern
-add_to_faction = SOV
+#create_faction = Comintern
+#add_to_faction = SOV
 #add_to_faction = MON
-add_to_faction = FER
-add_to_faction = TAN
+#add_to_faction = FER
+#add_to_faction = TAN
 
 if = {
 	limit = {

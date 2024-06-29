@@ -325,7 +325,6 @@ if = {
 	recruit_character = TUR_abdulmejid_ii #Empty char. Can become country leader later
 	recruit_character = TUR_hazi_aslanov #Empty Char. Can become unit leader later
 }
-
 if = {
 	limit = { NOT = { has_dlc = "Battle for the Bosporus" } }
 	recruit_character = TUR_ismet_inonu
@@ -351,7 +350,6 @@ if = {
 	recruit_character = TUR_mumtaz_okmen
 	recruit_character = TUR_kazim_orbay
 }
-
 if = {
 	limit = {
 		AND = {
@@ -522,3 +520,5 @@ if = {
 
 #
 set_cosmetic_tag = OTTOMAN_empire
+
+set_major = yes
