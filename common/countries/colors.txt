@@ -875,7 +875,7 @@ SPM = {
 	color_ui = rgb { 0 179 179 }
 }
 TTS = {
-	color = rgb { 230 230 0 }
+	color = rgb { 230 130 20 }
 	color_ui = rgb { 179 179 0 }
 }
 GRN = {

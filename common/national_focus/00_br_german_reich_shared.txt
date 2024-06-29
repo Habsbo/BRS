@@ -8,15 +8,14 @@
 ### search_filters = {FOCUS_FILTER_ANNEXATION}
 #complete_tooltip = {}
 shared_focus = {
-	id = CHI_
+	id = DEUTSCH_1
 	icon = GFX_
 	#prerequisite = { focus = }
 	#mutually_exclusive = { focus =  }
 	x = 0
 	y = 0
 	#relative_position_id = 
-	cost = 10
-	ai_will_do = { factor = 1 }
+	cost = 8
 	available = {}
 	bypass = {}
 	cancel_if_invalid = yes
@@ -24,6 +23,7 @@ shared_focus = {
 	available_if_capitulated = no
 	complete_tooltip = {}
 	completion_reward = {}
+	ai_will_do = { factor = 1 }
 }
 joint_focus = {
 	id = DEUTSCH_kaiserreich_power
@@ -34,7 +34,6 @@ joint_focus = {
 	y = 0
 	#relative_position_id = 
 	cost = 8
-	ai_will_do = { factor = 1 }
 	joint_trigger = {}
 	available = {}
 	bypass = {}
@@ -45,6 +44,7 @@ joint_focus = {
 	completion_reward = {}
 	completion_reward_joint_originator = {}
 	completion_reward_joint_member = {}
+	ai_will_do = { factor = 1 }
 }
 joint_focus = {
 	id = DEUTSCH_intelligence_sharing
@@ -55,7 +55,6 @@ joint_focus = {
 	y = 2
 	relative_position_id = DEUTSCH_kaiserreich_power
 	cost = 8
-	ai_will_do = { factor = 1 }
 	joint_trigger = {}
 	available = {}
 	bypass = {}
@@ -66,6 +65,7 @@ joint_focus = {
 	completion_reward = {}
 	completion_reward_joint_originator = {}
 	completion_reward_joint_member = {}
+	ai_will_do = { factor = 1 }
 }
 joint_focus = {
 	id = DEUTSCH_i1
@@ -76,7 +76,6 @@ joint_focus = {
 	y = 1
 	relative_position_id = DEUTSCH_kaiserreich_power
 	cost = 8
-	ai_will_do = { factor = 1 }
 	joint_trigger = {}
 	available = {}
 	bypass = {}
@@ -87,6 +86,7 @@ joint_focus = {
 	completion_reward = {}
 	completion_reward_joint_originator = {}
 	completion_reward_joint_member = {}
+	ai_will_do = { factor = 1 }
 }
 joint_focus = {
 	id = DEUTSCH_i2
@@ -97,7 +97,6 @@ joint_focus = {
 	y = 1
 	relative_position_id = DEUTSCH_kaiserreich_power
 	cost = 8
-	ai_will_do = { factor = 1 }
 	joint_trigger = {}
 	available = {}
 	bypass = {}
@@ -108,6 +107,7 @@ joint_focus = {
 	completion_reward = {}
 	completion_reward_joint_originator = {}
 	completion_reward_joint_member = {}
+	ai_will_do = { factor = 1 }
 }
 joint_focus = {
 	id = DEUTSCH_
@@ -118,7 +118,6 @@ joint_focus = {
 	y = 0
 	#relative_position_id = 
 	cost = 8
-	ai_will_do = { factor = 1 }
 	joint_trigger = {}
 	available = {}
 	bypass = {}
@@ -129,4 +128,5 @@ joint_focus = {
 	completion_reward = {}
 	completion_reward_joint_originator = {}
 	completion_reward_joint_member = {}
+	ai_will_do = { factor = 1 }
 }
