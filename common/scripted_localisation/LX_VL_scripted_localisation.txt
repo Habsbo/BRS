@@ -123,11 +123,23 @@ defined_text = {
 		trigger = {
 			FROM = {
 				check_variable = { state_rank = 2 }
+				NOT = { is_female = yes }
 				NOT = { has_country_flag = br_cl_status_flavour_flag }
 				has_idea = br_laws_monarchy
 			}
 		}
 		localization_key = CL_King
+	}
+	text = {
+		trigger = {
+			FROM = {
+				check_variable = { state_rank = 2 }
+				is_female = yes
+				NOT = { has_country_flag = br_cl_status_flavour_flag }
+				has_idea = br_laws_monarchy
+			}
+		}
+		localization_key = CL_Queen
 	}
 	#大公国
 	text = {
