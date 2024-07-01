@@ -11,6 +11,9 @@ on_actions = {
 			TUR = {
 				set_country_flag = br_cl_status_flavour_flag
 			}
+			RUS = {
+				set_country_flag = br_cl_status_flavour_flag
+			}
 			SPR = {
 				set_country_flag = br_na_war_aggressor_flag
 				declare_war_on = { target = RIF type = annex_everything }
