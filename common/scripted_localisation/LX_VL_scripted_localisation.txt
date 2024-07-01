@@ -253,6 +253,47 @@ defined_text = {
 		}
 		localization_key = CL_Kaiser
 	}
+	#Byzantium countries
+	text = {
+		trigger = {
+			FROM = {
+				OR = {
+					AND = {
+						check_variable = { state_rank = 2 }
+						is_puppet = no
+					}
+					check_variable = { state_rank < 2 }
+				}
+				OR = {
+					tag = BYZ
+					#is Byzantium Diadochis
+				}
+				NOT = { is_female = yes }
+				has_country_flag = br_cl_status_flavour_flag
+				has_idea = br_laws_monarchy
+			}
+		}
+		localization_key = CL_Basileus
+	}
+	text = {
+		trigger = {
+			FROM = {
+				OR = {
+					AND = {
+						check_variable = { state_rank = 2 }
+						is_puppet = no
+					}
+					check_variable = { state_rank < 2 }
+				}
+				tag = BYZ
+				is_female = yes
+				has_country_flag = br_cl_status_flavour_flag
+				has_idea = br_laws_monarchy
+			}
+		}
+		localization_key = CL_Basilissa
+	}
+	#
 	text = {
 		trigger = {
 			FROM = {

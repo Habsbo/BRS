@@ -245,6 +245,7 @@ EUS = {
 	}
 }
 
+#benelux
 WAL = {
 	original_tag = BEL
 	has_country_flag = BEL_Wallonia_flag
