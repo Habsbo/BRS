@@ -2,6 +2,12 @@
 #ideas
  BEL_spoken_conflicts: "语言矛盾"
  BEL_spoken_conflicts_desc: ""
+ BEL_vlaams_fostered: "弗拉芒人受扶植"
+ BEL_vlaams_fostered_desc: ""
+ BEL_wallonia_fostered: "瓦隆人受扶植"
+ BEL_wallonia_fostered_desc: ""
+ BEL_need_more_jobs: "失业率"
+ BEL_need_more_jobs_desc: ""
  LUX_crisis_awareness_idea: "危机意识"
  LUX_crisis_awareness_idea_desc: ""
  LUX_consolidate_charter_idea: "[LUX.Getadjective]国家宪法"
@@ -373,6 +379,9 @@
  BEL_wallonia_right_side_range.1: "瓦隆人强势：尚且平衡"
  BEL_wallonia_right_side_range.2: "瓦隆人强势：弗拉芒势弱"
  BEL_wallonia_right_side_range.3: "瓦隆人强势：唯有瓦隆！"
+
+ br_bel_bop_mission.vlaams: "政治平衡倒向弗拉芒"
+ br_bel_bop_mission.wallonia: "政治平衡倒向瓦隆"
 #
  BEL_beating_wallonia: "瓦隆的工业心脏"
  BEL_beating_wallonia_desc: ""

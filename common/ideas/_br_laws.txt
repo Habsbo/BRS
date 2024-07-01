@@ -229,6 +229,38 @@ ideas = {
 			default = yes
 			cancel_if_invalid = yes
 		}
+		#军官管制
+		br_laws_military_regulation = {
+
+			allowed = { always = yes }
+
+			available = {
+				OR = {
+					is_puppet = yes
+				}
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+
+			on_add = {
+				#
+			}
+
+			on_remove = {
+				#
+			}
+
+			default = yes
+			cancel_if_invalid = yes
+		}
 		#选举官僚
 		br_laws_electoral_politician = {
 
@@ -310,7 +342,7 @@ ideas = {
 			level = 5
 
 			available = {
-				#
+				#has_idea = br_laws_military_regulation
 			}
 
 			removal_cost = -1

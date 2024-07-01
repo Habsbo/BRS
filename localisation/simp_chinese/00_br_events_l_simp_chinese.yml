@@ -23,6 +23,8 @@
 
  br_laws_dictatorship: "独裁制"
  br_laws_dictatorship_desc: ""
+ br_laws_military_regulation: "军队管制"
+ br_laws_military_regulation_desc: ""
  br_laws_electoral_politician: "选举官僚制"
  br_laws_electoral_politician_desc: ""
  br_laws_premier: "责任制政府"

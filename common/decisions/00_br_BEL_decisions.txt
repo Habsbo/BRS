@@ -1,1 +1,75 @@
 #
+br_bel_bop = {
+	br_bel_bop_mission.vlaams = {
+		icon = generic_political_address
+
+		activation = {
+			#always = no
+		}
+
+		available = { always = no }
+
+		cancel_trigger = {
+			NOT = { has_idea = BEL_vlaams_fostered }
+		}
+
+		is_good = no
+		days_mission_timeout = 7
+		selectable_mission = no
+
+		complete_effect = {}
+
+		timeout_effect = {
+			add_power_balance_value = {
+				id = BEL_two_nations_balance
+				value = -0.01
+				tooltip_side = BEL_vlaams_left_side
+			}
+			add_popularity = { ideology = DKR popularity = 0.005 }
+			hidden_effect = {
+				if = {
+					limit = { has_idea = BEL_vlaams_fostered }
+					activate_mission = br_bel_bop_mission.vlaams
+				}
+			}
+		}
+
+		priority = 10
+	}
+	br_bel_bop_mission.wallonia = {
+		icon = generic_political_address
+
+		activation = {
+			#always = no
+		}
+
+		available = { always = no }
+
+		cancel_trigger = {
+			NOT = { has_idea = BEL_wallonia_fostered }
+		}
+
+		is_good = no
+		days_mission_timeout = 7
+		selectable_mission = no
+
+		complete_effect = {}
+
+		timeout_effect = {
+			add_power_balance_value = {
+				id = BEL_two_nations_balance
+				value = 0.01
+				tooltip_side = BEL_wallonia_right_side
+			}
+			add_popularity = { ideology = FRA popularity = 0.005 }
+			hidden_effect = {
+				if = {
+					limit = { has_idea = BEL_wallonia_fostered }
+					activate_mission = br_bel_bop_mission.wallonia
+				}
+			}
+		}
+
+		priority = 10
+	}
+}

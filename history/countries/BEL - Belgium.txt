@@ -83,11 +83,17 @@ add_ideas = {
 	civilian_economy
 	uncontrolled_exports
 	#br laws
-	
+	br_laws_monarchy
+	br_laws_suffrage_prohibited
+	br_laws_mainstream
+	br_laws_religious_people
+	br_laws_bourgeoisie
 	#head of gov
 
 	#national spirits
 	BEL_spoken_conflicts
+	BEL_vlaams_fostered
+	BEL_need_more_jobs
 }
 
 set_cosmetic_tag = BEL_kingdom

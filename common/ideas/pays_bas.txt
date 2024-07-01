@@ -23,6 +23,58 @@ ideas = {
 				stability_weekly_factor = -0.50
 			}
 		}
+		#
+		BEL_vlaams_fostered = {
+			picture = generic_deal_with_the_devil
+
+			removal_cost = -1
+
+			allowed = { always = yes }
+
+			allowed_civil_war = { always = yes }
+
+			#on_add = {}
+
+			#on_remove = {}
+
+			modifier = {
+				#
+			}
+		}
+		BEL_wallonia_fostered = {
+			picture = generic_deal_with_the_devil2
+
+			removal_cost = -1
+
+			allowed = { always = yes }
+
+			allowed_civil_war = { always = yes }
+
+			#on_add = {}
+
+			#on_remove = {}
+
+			modifier = {
+				#
+			}
+		}
+		BEL_need_more_jobs = {
+			picture = generic_production_bonus
+
+			removal_cost = -1
+
+			allowed = { always = yes }
+
+			allowed_civil_war = { always = yes }
+
+			#on_add = {}
+
+			#on_remove = {}
+
+			modifier = {
+				#
+			}
+		}
 ###lux
 		LUX_crisis_awareness_idea = {
 			picture = FRA_national_mobilization_focus
