@@ -118,15 +118,15 @@
 
 #HOL
 #BEL
- BEL_soc_anarchism_party: "瓦隆共产主义无政府派"
- BEL_vanwardism_party: "瓦隆共产主义工团派"
- BEL_sci_socialism_party: "比利时共产党(CPB)"
- BEL_con_socialism_party: "比利时社会主义党(SPB)" 
- BEL_demo_socialism_party: "比利时社会民主党" #
- BEL_demo_liberalism_party: "比利时自由党" #
- BEL_demo_conservatism_party: "比利时天主教党"
- BEL_authoritarian_party: "比利时君主派"
- BEL_fascism_party: "比利时雷克斯党"
+ BEL_soc_anarchism_party: "比利时共产主义无政府派"
+ BEL_vanwardism_party: "比利时共产主义工团派"
+ BEL_sci_socialism_party: "比利时共产党(KPB/PCB)" #Kommunistische Partij van België/Parti Communiste de Belgique
+ BEL_con_socialism_party: "比利时工人党(BWP/POB)" #
+ BEL_demo_socialism_party: "比利时工人党(BWP/POB)" #Belgische Werkliedenpartij/Parti ouvrier belge
+ BEL_demo_liberalism_party: "比利时自由党(LP/PL)" #Liberale Partij/Parti libéral
+ BEL_demo_conservatism_party: "比利时天主教党(KP/PC)" #Katholieke Partij/Parti catholique
+ BEL_authoritarian_party: "比利时君主派" #中立派/老兵(Veterans)/农民(Farmers)
+ BEL_fascism_party: "比利时雷克斯党" #The Frontpartij (Front Party) ,vlaams
  BEL_nationalism_party: "比利时雷克斯党"
  BEL_supernationalism_party: "比利时雷克斯党"
 #LUX
@@ -138,6 +138,6 @@
  LUX_demo_liberalism_party: "卢森堡独立国家党" #
  LUX_demo_conservatism_party: "卢森堡民主党(DP)" #基督教社会人民党(CSV)
  LUX_authoritarian_party: "卢森堡君主派"
- LUX_fascism_party: "卢森堡法西斯国家党"
+ LUX_fascism_party: "卢森堡法西斯国家党" 
  LUX_nationalism_party: "国家社会工人党"
  LUX_supernationalism_party: "国家社会工人党巴伐利亚学派"
