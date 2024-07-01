@@ -62,7 +62,7 @@ focus_tree = {
 		icon = GFX_
 		prerequisite = { focus = BEL_beating_wallonia }
 		#mutually_exclusive = { focus =  }
-		x = 0
+		x = -2
 		y = 1
 		relative_position_id = BEL_beating_wallonia
 
@@ -91,13 +91,13 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 	}
 	focus = {
-		id = BEL_suppress_worker_revolution
-		icon = GFX_goal_generic_political_pressure
-		prerequisite = { focus = BEL_electrification_of_wallonia }
-		mutually_exclusive = { focus = BEL_labour_union_acts }
-		x = -1
+		id = BEL_wllonian_labout_movement
+		icon = GFX_
+		prerequisite = { focus = BEL_beating_wallonia }
+		#mutually_exclusive = { focus =  }
+		x = 2
 		y = 1
-		relative_position_id =  BEL_electrification_of_wallonia
+		relative_position_id = BEL_beating_wallonia
 
 		cost = 8
 		
@@ -116,13 +116,13 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 	}
 	focus = {
-		id = BEL_1
-		icon = GFX_
-		prerequisite = { focus = BEL_suppress_worker_revolution }
-		#mutually_exclusive = { focus =  }
-		x = -2
+		id = BEL_suppress_worker_revolution
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = BEL_wllonian_labout_movement }
+		mutually_exclusive = { focus = BEL_labour_union_acts }
+		x = -1
 		y = 1
-		relative_position_id = BEL_suppress_worker_revolution
+		relative_position_id = BEL_wllonian_labout_movement
 
 		cost = 8
 		
@@ -143,11 +143,11 @@ focus_tree = {
 	focus = {
 		id = BEL_labour_union_acts
 		icon = GFX_focus_generic_treaty
-		prerequisite = { focus = BEL_electrification_of_wallonia }
+		prerequisite = { focus = BEL_wllonian_labout_movement }
 		#mutually_exclusive = { focus =  }
 		x = 1
 		y = 1
-		relative_position_id =  BEL_electrification_of_wallonia
+		relative_position_id = BEL_wllonian_labout_movement
 
 		cost = 8
 		
@@ -172,7 +172,7 @@ focus_tree = {
 		icon = GFX_
 		#prerequisite = { focus =  }
 		#mutually_exclusive = { focus =  }
-		x = 20
+		x = 24
 		y = 0
 		#relative_position_id =
 
@@ -361,12 +361,37 @@ focus_tree = {
 		completion_reward = {}
 	}
 	focus = {
-		id = BEL_1
-		icon = GFX_
+		id = BEL_strengthen_command_chain
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = BEL_french_training }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 2
+		relative_position_id = BEL_french_training
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = BEL_procurement_of_french_tank
+		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = BEL_fort_line }
 		#mutually_exclusive = { focus =  }
-		x = -1
-		y = 1
+		x = 0
+		y = 2
 		relative_position_id = BEL_fort_line
 
 		cost = 8
@@ -411,16 +436,91 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+	focus = {
+		id = BEL_projection_of_aviators_traning
+		icon = GFX_focus_SOV_flying_clubs
+		prerequisite = { focus = BEL_fort_line }
+		#mutually_exclusive = { focus =  }
+		x = -2
+		y = 1
+		relative_position_id = BEL_fort_line
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = BEL_cooperation_of_aircraft
+		icon = GFX_focus_generic_cas_aircraft
+		prerequisite = { focus = BEL_projection_of_aviators_traning }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = BEL_projection_of_aviators_traning
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
 
 	#
 	focus = {
-		id = BEL_2
-		icon = GFX_
+		id = BEL_democratic_by_hand_in_hand
+		icon = GFX_focus_generic_treaty
 		prerequisite = { focus = BEL_france_side }
 		#mutually_exclusive = { focus =  }
 		x = -6
 		y = 1
 		relative_position_id = BEL_france_side
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = BEL_
+		icon = GFX_
+		#prerequisite = { focus = BEL_}
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		#relative_position_id = BEL_
 
 		cost = 8
 		
@@ -494,13 +594,14 @@ focus_tree = {
 		complete_tooltip = {}
 		
 		completion_reward = {
+			custom_effect_tooltip = BEL_strengthen_power_belgium_tt
 			mark_focus_tree_layout_dirty = yes
 		}
 		
 		ai_will_do = { factor = 1 }
 	}
 	focus = {
-		id = BEL_5
+		id = BEL_ask_for_help_from_outside
 		icon = GFX_
 		prerequisite = { focus = BEL_strengthen_power_belgium }
 		#mutually_exclusive = { focus =  }
@@ -609,7 +710,7 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 	}
 	focus = {
-		id = BEL_6
+		id = BEL_a1
 		icon = GFX_
 		prerequisite = {
 			focus = BEL_militia_training
@@ -619,6 +720,56 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = BEL_militia_training
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = BEL_1
+		icon = GFX_
+		prerequisite = { focus = BEL_ask_for_help_from_outside }
+		#mutually_exclusive = { focus =  }
+		x = -1
+		y = 1
+		relative_position_id = BEL_ask_for_help_from_outside
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = BEL_2
+		icon = GFX_
+		prerequisite = { focus = BEL_ask_for_help_from_outside }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 1
+		relative_position_id = BEL_ask_for_help_from_outside
 
 		cost = 8
 		

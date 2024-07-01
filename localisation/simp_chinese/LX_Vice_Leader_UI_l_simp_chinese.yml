@@ -28,6 +28,7 @@
  CL_General: "将军"
  CL_Kaiser: "凯撒"
  CL_Tsar: "沙皇"
+ CL_Duma: "国家杜马"
  CL_Queen: "女王"
  CL_King: "国王"
  CL_Grand_Duchy: "大公"
