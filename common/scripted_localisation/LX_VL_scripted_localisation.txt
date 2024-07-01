@@ -319,7 +319,18 @@ defined_text = {
 		}
 		localization_key = CL_Shah
 	}
-	#
+	#Russia Tsar
+	text = {
+		trigger = {
+			FROM = {
+				check_variable = { state_rank < 2 }
+				original_tag = RUS
+				has_country_flag = br_cl_status_flavour_flag
+				has_idea = br_laws_monarchy
+			}
+		}
+		localization_key = CL_Tsar
+	}
 	text = { localization_key = PL_country_leader }
 }
 
