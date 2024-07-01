@@ -231,6 +231,7 @@ defined_text = {
 		localization_key = CL_Chairman
 	}
 #flavours - monarchy
+	#Khalifah, Arab and Ottoman
 	text = {
 		trigger = {
 			FROM = {
@@ -242,6 +243,7 @@ defined_text = {
 		}
 		localization_key = CL_Khalifah
 	}
+	#Kaiser, Germany Reich OR HRE Emperor
 	text = {
 		trigger = {
 			FROM = {
@@ -293,7 +295,19 @@ defined_text = {
 		}
 		localization_key = CL_Basilissa
 	}
-	#
+	text = {
+		trigger = {
+			FROM = {
+				check_variable = { state_rank = 2 }
+				is_puppet = yes
+				original_tag = GRE
+				has_country_flag = br_cl_status_flavour_flag
+				has_idea = br_laws_monarchy
+			}
+		}
+		localization_key = CL_King_hellenic_flavor
+	}
+	#Persia
 	text = {
 		trigger = {
 			FROM = {
@@ -305,6 +319,7 @@ defined_text = {
 		}
 		localization_key = CL_Shah
 	}
+	#
 	text = { localization_key = PL_country_leader }
 }
 
