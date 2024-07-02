@@ -85,17 +85,36 @@ characters={
 			ai_will_do = { factor = 1.000 }
 		}
 	}
-	BEL_joseph_jacquemotte={ #约瑟夫·雅克莫特
-		name=BEL_joseph_jacquemotte
+	BEL_paul_van_zeeland={ #保罗·范-泽兰 - 
+		name=BEL_paul_van_zeeland
 		portraits={
 			civilian={
-				large=GFX_portrait_BEL_joseph_jacquemotte
+				large=GFX_portrait_BEL_hubert_pierlot
 			}
 		}
 		country_leader={
-			ideology=anarchist_communism
+			ideology=conservatism
 			expire="1965.1.1.1"
 			id=-1
+		}
+		advisor={
+			slot = head_of_gov
+			idea_token = BEL_paul_van_zeeland_hog
+			allowed = { original_tag = BEL }
+			available = { br_ideology_fascism_nio = yes }
+			traits = {  }
+			cost = 0
+			can_be_fired = no
+			ai_will_do = { factor = 1.000 }
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = BEL_joseph_jacquemotte
+			allowed = { original_tag = BEL }
+			available = { br_ideology_fascism_nio = yes }
+			traits = { sci_socialist_revolutionary }
+			cost = 100
+			ai_will_do = { factor = 1.000 }
 		}
 	}
 	BEL_leon_degrelle={ #莱昂·约瑟夫·马里·伊尼亚斯·德格雷勒
@@ -121,12 +140,34 @@ characters={
 		}
 	}
 ### communists historial
-	
+	BEL_julien_lahaut = { #朱利安·拉奥
+		name=BEL_julien_lahaut
+		portraits={
+			army = {
+				large=GFX_portrait_BEL_leon_degrelle
+				small=GFX_portrait_BEL_leon_degrelle_small
+			}
+		}
+		country_leader={
+			ideology=leninism
+			expire="1965.1.1.1"
+			id=-1
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = BEL_joseph_jacquemotte
+			allowed = { original_tag = BEL }
+			available = { br_ideology_fascism_nio = yes }
+			traits = { sci_socialist_revolutionary }
+			cost = 100
+			ai_will_do = { factor = 1.000 }
+		}
+	}
 	BEL_joseph_jacquemotte={ #约瑟夫·雅各莫特
 		name=BEL_joseph_jacquemotte
 		portraits={
 			army = {
-				large=GFX_portrait_BEL_leon_degrelle
+				large=GFX_portrait_BEL_joseph_jacquemotte
 				small=GFX_portrait_BEL_leon_degrelle_small
 			}
 		}

@@ -28,7 +28,7 @@
  BEL_albert_i_of_belgium: "阿尔贝Ⅰ"
  BEL_leopold_iii_of_belgium: "利奥波德Ⅲ"
  BEL_baudouin_of_belgium: "博杜安"
-
+ BEL_paul_van_zeeland: "保罗·范-泽兰"
  BEL_war_van_overstraeten: "爱德华·范-奥弗斯特滕"
 #lux
  LUX_marie_adelaide: "玛丽·阿黛拉伊德"
@@ -69,3 +69,6 @@
  LUX_jean_d_adler: "让·达-德勒"
 #HELLAS
  GRE_regency_council: "摄政议会"
+
+#surname(chinese han/man and some nations) 姓
+ : ""

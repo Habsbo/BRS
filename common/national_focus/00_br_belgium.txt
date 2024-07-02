@@ -949,6 +949,7 @@ focus_tree = {
 		complete_tooltip = {}
 		
 		completion_reward = {
+			
 			create_dynamic_country = {
 				original_tag = root
 				set_country_flag = BEL_Wallonia_flag
