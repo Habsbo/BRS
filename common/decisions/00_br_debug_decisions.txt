@@ -182,9 +182,13 @@ br_debug_decisions = {
 	debug_LUX.1 = {
 		fire_only_once = no
 		complete_effect = {
-			FRA = { every_core_state = { transfer_state_to = LUX } }
-			ENG = { every_core_state = { transfer_state_to = LUX } }
-			ITA = { every_core_state = { transfer_state_to = LUX } }
+			every_controlled_state = { add_compliance = 100 }
+			FRA = { every_core_state = { transfer_state_to = LUX add_compliance = 100 } }
+			ENG = { every_core_state = { transfer_state_to = LUX add_compliance = 100 } }
+			ITA = { every_core_state = { transfer_state_to = LUX add_compliance = 100 } }
+			SWI = { every_core_state = { transfer_state_to = LUX add_compliance = 100 } }
+			AUS = { every_core_state = { transfer_state_to = LUX add_compliance = 100 } }
+			GER = { every_core_state = { transfer_state_to = LUX add_compliance = 100 } }
 		}
 	}
 }
