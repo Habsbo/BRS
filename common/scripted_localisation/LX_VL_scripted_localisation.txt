@@ -314,7 +314,10 @@ defined_text = {
 				check_variable = { state_rank < 3 }
 				original_tag = PER
 				has_country_flag = br_cl_status_flavour_flag
-				has_idea = br_laws_monarchy
+				OR = {
+					has_idea = br_laws_feudalism
+					has_idea = br_laws_monarchy
+				}
 			}
 		}
 		localization_key = CL_Shah

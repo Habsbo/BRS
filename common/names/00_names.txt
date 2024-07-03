@@ -1172,16 +1172,28 @@ JAP = {
 CHI = {
 	male = {
 		names = {
-			name_shek name_
+			#
 		}
 	}
 	female = {
-		names = {}
+		names = {
+			#
+		}
 	}
-	surnames = {}
+	surnames = {
+		s_li s_wang s_zhang s_liu s_chen s_yang s_chao s_hwang #李 王 张 刘 陈 杨 赵 黄
+		s_chou s_wu s_xu s_sun s_hu s_zhu s_gao s_lin #周 吴 徐 孙 胡 朱 高 林
+		s_ho s_guo s_ma s_zang s_zou s_song s_lok s_chiang #何 郭 马 臧 邹 宋 陆 蒋
+		s_qian s_tang s_shek s_kim s_guan s_guh s_gu s_tong #钱 唐 石 金 关 顾 谷 佟
+		s_wan s_cao s_hou s_pong s_yue s_mon s_cheng s_tsia #万 曹 侯 彭 岳 孟 程 夏
+		s_zhuge s_oyang s_sima s_dongye # 诸葛 欧阳 司马 东野
+	}
 	callsigns = {}
 	prefix = o_operation
-	operation = {}
+	operation = {
+		20 = {}
+		10 = {}
+	}
 	first = {}
 	second = {}
 }
