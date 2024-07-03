@@ -102,7 +102,10 @@ defined_text = {
 			FROM = {
 				check_variable = { state_rank = 0 }
 				NOT = { has_country_flag = br_cl_status_flavour_flag }
-				has_idea = br_laws_monarchy
+				OR = {
+					has_idea = br_laws_feudalism
+					has_idea = br_laws_monarchy
+				}
 			}
 		}
 		localization_key = CL_Emperor
@@ -113,7 +116,10 @@ defined_text = {
 			FROM = {
 				check_variable = { state_rank = 1 }
 				NOT = { has_country_flag = br_cl_status_flavour_flag }
-				has_idea = br_laws_monarchy
+				OR = {
+					has_idea = br_laws_feudalism
+					has_idea = br_laws_monarchy
+				}
 			}
 		}
 		localization_key = CL_Emperor
@@ -125,7 +131,10 @@ defined_text = {
 				check_variable = { state_rank = 2 }
 				NOT = { is_female = yes }
 				NOT = { has_country_flag = br_cl_status_flavour_flag }
-				has_idea = br_laws_monarchy
+				OR = {
+					has_idea = br_laws_feudalism
+					has_idea = br_laws_monarchy
+				}
 			}
 		}
 		localization_key = CL_King
@@ -136,7 +145,10 @@ defined_text = {
 				check_variable = { state_rank = 2 }
 				is_female = yes
 				NOT = { has_country_flag = br_cl_status_flavour_flag }
-				has_idea = br_laws_monarchy
+				OR = {
+					has_idea = br_laws_feudalism
+					has_idea = br_laws_monarchy
+				}
 			}
 		}
 		localization_key = CL_Queen
@@ -147,7 +159,10 @@ defined_text = {
 			FROM = {
 				check_variable = { state_rank = 3 }
 				NOT = { has_country_flag = br_cl_status_flavour_flag }
-				has_idea = br_laws_monarchy
+				OR = {
+					has_idea = br_laws_feudalism
+					has_idea = br_laws_monarchy
+				}
 			}
 		}
 		localization_key = CL_Grand_Duchy
@@ -158,7 +173,10 @@ defined_text = {
 			FROM = {
 				check_variable = { state_rank = 4 }
 				NOT = { has_country_flag = br_cl_status_flavour_flag }
-				has_idea = br_laws_monarchy
+				OR = {
+					has_idea = br_laws_feudalism
+					has_idea = br_laws_monarchy
+				}
 			}
 		}
 		localization_key = CL_Duchy
@@ -169,7 +187,10 @@ defined_text = {
 			FROM = {
 				check_variable = { state_rank = 5 }
 				NOT = { has_country_flag = br_cl_status_flavour_flag }
-				has_idea = br_laws_monarchy
+				OR = {
+					has_idea = br_laws_feudalism
+					has_idea = br_laws_monarchy
+				}
 			}
 		}
 		localization_key = CL_Earl
@@ -238,7 +259,10 @@ defined_text = {
 				check_variable = { state_rank = 0 }
 				original_tag = TUR
 				has_country_flag = br_cl_status_flavour_flag
-				has_idea = br_laws_monarchy
+				OR = {
+					has_idea = br_laws_feudalism
+					has_idea = br_laws_monarchy
+				}
 			}
 		}
 		localization_key = CL_Khalifah
@@ -272,7 +296,10 @@ defined_text = {
 				}
 				NOT = { is_female = yes }
 				has_country_flag = br_cl_status_flavour_flag
-				has_idea = br_laws_monarchy
+				OR = {
+					has_idea = br_laws_feudalism
+					has_idea = br_laws_monarchy
+				}
 			}
 		}
 		localization_key = CL_Basileus
@@ -290,7 +317,10 @@ defined_text = {
 				tag = BYZ
 				is_female = yes
 				has_country_flag = br_cl_status_flavour_flag
-				has_idea = br_laws_monarchy
+				OR = {
+					has_idea = br_laws_feudalism
+					has_idea = br_laws_monarchy
+				}
 			}
 		}
 		localization_key = CL_Basilissa
@@ -302,7 +332,10 @@ defined_text = {
 				is_puppet = yes
 				original_tag = GRE
 				has_country_flag = br_cl_status_flavour_flag
-				has_idea = br_laws_monarchy
+				OR = {
+					has_idea = br_laws_feudalism
+					has_idea = br_laws_monarchy
+				}
 			}
 		}
 		localization_key = CL_King_hellenic_flavor
@@ -329,7 +362,10 @@ defined_text = {
 				check_variable = { state_rank < 2 }
 				original_tag = RUS
 				has_country_flag = br_cl_status_flavour_flag
-				has_idea = br_laws_monarchy
+				OR = {
+					has_idea = br_laws_feudalism
+					has_idea = br_laws_monarchy
+				}
 			}
 		}
 		localization_key = CL_Tsar
