@@ -377,11 +377,21 @@ defined_text = {
 	name = GetVLStatus
 #
 	text = {
-		trigger = { FROM = { check_variable = { VL_status_var = 1 } } }
+		trigger = {
+			FROM = {
+				check_variable = { VL_status_var = 1 }
+				is_female = yes
+			}
+		}
 		localization_key = CL_Queen
 	}
 	text = {
-		trigger = { FROM = { check_variable = { VL_status_var = 2 } } }
+		trigger = {
+			FROM = {
+				check_variable = { VL_status_var = 1 }
+				is_female = no
+			}
+		}
 		localization_key = CL_King
 	}
 	text = {
