@@ -23,7 +23,6 @@ ideas = {
 				stability_weekly_factor = -0.50
 			}
 		}
-		#
 		BEL_vlaams_fostered = {
 			picture = generic_deal_with_the_devil
 

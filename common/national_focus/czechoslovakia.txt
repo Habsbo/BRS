@@ -58,14 +58,12 @@
 	focus = {
 		id = CZE_fortification_studies
 		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = CZE_military_research_institute }
 		x = 4
-		y = 0
+		y = 1
+		relative_position_id = CZE_military_research_institute
 
 		cost = 8
-
-		ai_will_do = {
-			factor = 200			
-		}
 
 		available = {
 
@@ -84,13 +82,15 @@
 			army_experience = 10
 			add_ideas = CZE_fortification_focus
 		}
+
+		ai_will_do = { factor = 200 }
 	}
 
 	focus = {
 		id = CZE_sudeten_1
 		icon = GFX_goal_generic_construct_military
-		prerequisite = { focus = CZE_fortification_studies }
-		x = 0
+		prerequisite = { focus = CZE_fortification_studies  focus = CZE_strengthen_sudeten  }
+		x = 2
 		y = 1
 		relative_position_id = CZE_fortification_studies
 
@@ -243,7 +243,7 @@
 	focus = {
 		id = CZE_sudeten_2
 		icon = GFX_goal_generic_construct_military
-		prerequisite = { focus = CZE_sudeten_1 focus = CZE_strengthen_sudeten }
+		prerequisite = { focus = CZE_sudeten_1 }
 		x = 0
 		y = 1
 		relative_position_id = CZE_sudeten_1
@@ -740,6 +740,77 @@
 		}
 	}
 	focus = {
+		id = CZE_motorization_scheme
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = CZE_fallback_line }
+		x = 1
+		y = 1
+		relative_position_id = CZE_fallback_line
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+			has_tech = motorised_infantry
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 3.0
+				technology = motorised_infantry
+			}
+		}
+	}
+	focus = {
+		id = CZE_mechanization
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = CZE_motorization_scheme }
+		x = 0
+		y = 1
+		relative_position_id = CZE_motorization_scheme
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = CZE_mechanization #@#
+				bonus = 1.0
+				uses = 1
+				category = cat_mechanized_equipment
+			}
+		}
+	}
+	focus = {
 		id = CZE_
 		icon = GFX_
 		prerequisite = { focus = CZE_internal_redoubts focus = CZE_fallback_line }
@@ -769,9 +840,9 @@
 	focus = {
 		id = CZE_industrial_legacy
 		icon = GFX_goal_generic_construct_civ_factory
-		x = 8
+		x = 16
 		y = 0
-		relative_position_id = CZE_fortification_studies
+		relative_position_id = CZE_military_research_institute
 
 		cost = 8
 
@@ -1090,8 +1161,11 @@
 	focus = {
 		id = CZE_subsidizing_agriculture
 		icon = GFX_
-		prerequisite = { focus = CZE_central_savings }
-		prerequisite = { focus = CZE_expanding_brno focus = CZE_arms_exports_1 }
+		prerequisite = {
+			focus = CZE_central_savings
+			focus = CZE_expanding_brno
+			focus = CZE_arms_exports_1
+		}
 		#mutually_exclusive = { focus =  }
 		x = 1
 		y = 1
@@ -1193,8 +1267,8 @@
 		id = CZE_arms_exports_2
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = CZE_expanding_brno focus = CZE_arms_exports_1 }
-		x = 1
-		y = 1
+		x = 0
+		y = 2
 		relative_position_id = CZE_arms_exports_1
 
 		cost = 8
@@ -1233,7 +1307,7 @@
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = CZE_arms_exports_2 }
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = CZE_arms_exports_2
 
 		cost = 8
@@ -1275,7 +1349,7 @@
 	focus = {
 		id = CZE_political_direction
 		icon = GFX_goal_generic_intelligence_exchange
-		x = 12
+		x = 24
 		y = 0
 		relative_position_id = CZE_industrial_legacy
 
@@ -1356,8 +1430,8 @@
 	focus = {
 		id = CZE_military_research_institute
 		icon = GFX_focus_CZE_military_research_institute
-		x = 4
-		y = 5
+		x = 3
+		y = 0
 
 		cost = 8
 
@@ -1385,10 +1459,10 @@
 	focus = {
 		id = CZE_mountain_bonus
 		icon = GFX_goal_generic_special_forces
-		prerequisite = { focus = CZE_military_research_institute }
+		prerequisite = { focus = CZE_internal_redoubts }
 		x = -3
 		y = 1
-		relative_position_id = CZE_military_research_institute
+		relative_position_id = CZE_internal_redoubts
 
 		cost = 8
 
@@ -1423,10 +1497,10 @@
 	focus = {
 		id = CZE_inf_and_artillery_advancement
 		icon = GFX_goal_rhineland
-		prerequisite = { focus = CZE_military_research_institute }
+		prerequisite = { focus = CZE_internal_redoubts }
 		x = -1
 		y = 1
-		relative_position_id = CZE_military_research_institute
+		relative_position_id = CZE_internal_redoubts
 
 		cost = 8
 
@@ -1459,56 +1533,12 @@
 	}
 
 	focus = {
-		id = CZE_support_bonus
-		icon = GFX_goal_generic_army_artillery
-		prerequisite = { focus = CZE_mountain_bonus }
-		x = -3
-		y = 2
-		relative_position_id = CZE_military_research_institute
-
-		cost = 8
-
-		ai_will_do = {
-			factor = 60
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = CZE_support_bonus #@#
-				bonus = 1.0
-				uses = 2
-				category = support_tech	
-			}
-			add_tech_bonus = {
-				name = CZE_support_bonus #@#
-				bonus = 1.0
-				uses = 1
-				technology = support_weapons2
-				technology = support_weapons3
-			}
-		}
-	}
-
-	focus = {
 		id = CZE_inf_and_artillery_advancement_2
 		icon = GFX_goal_generic_army_artillery2
 		prerequisite = { focus = CZE_inf_and_artillery_advancement }
 		x = -1
 		y = 2
-		relative_position_id = CZE_military_research_institute
+		relative_position_id = CZE_internal_redoubts
 
 		cost = 8
 
@@ -1543,11 +1573,10 @@
 	focus = {
 		id = CZE_doctrine_bonus
 		icon = GFX_goal_generic_army_doctrines
-		prerequisite = { focus = CZE_support_bonus }
-		prerequisite = { focus = CZE_inf_and_artillery_advancement_2 }
-		x = -2
-		y = 3
-		relative_position_id = CZE_military_research_institute
+		prerequisite = { focus = CZE_mountain_bonus }
+		x = 0
+		y = 1
+		relative_position_id = CZE_mountain_bonus
 
 		cost = 8
 
@@ -1579,198 +1608,13 @@
 	}
 
 	focus = {
-		id = CZE_motorization_scheme
-		icon = GFX_goal_generic_army_motorized
-		prerequisite = { focus = CZE_military_research_institute }
-		x = 1
-		y = 1
-		relative_position_id = CZE_military_research_institute
-
-		cost = 8
-
-		ai_will_do = {
-			factor = 60
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-			has_tech = motorised_infantry
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = motorized_bonus
-				bonus = 3.0
-				technology = motorised_infantry
-			}
-		}
-	}
-
-	focus = {
-		id = CZE_armour_bonus_1
-		icon = GFX_goal_generic_army_tanks
-		prerequisite = { focus = CZE_military_research_institute }
-		x = 3
-		y = 1
-		relative_position_id = CZE_military_research_institute
-
-		cost = 8
-
-		ai_will_do = {
-			factor = 70
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = armor_bonus
-				bonus = 1.0
-				uses = 1
-				category = armor
-			}
-		}
-	}
-
-	focus = {
-		id = CZE_mechanization
-		icon = GFX_goal_generic_production2
-		prerequisite = { focus = CZE_motorization_scheme }
-		x = 1
-		y = 2
-		relative_position_id = CZE_military_research_institute
-
-		cost = 8
-
-		ai_will_do = {
-			factor = 50
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = CZE_mechanization #@#
-				bonus = 1.0
-				uses = 1
-				category = cat_mechanized_equipment
-			}
-		}
-	}
-
-	focus = {
-		id = CZE_armour_bonus_ii
-		icon = GFX_goal_generic_army_tanks
-		prerequisite = { focus = CZE_armour_bonus_1 }
-		x = 3
-		y = 2
-		relative_position_id = CZE_military_research_institute
-
-		cost = 8
-
-		ai_will_do = {
-			factor = 60
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = armor_bonus
-				bonus = 1.0
-				uses = 1
-				category = armor
-			}
-		}
-	}
-
-	focus = {
-		id = CZE_doctrine_bonus_2
-		icon = GFX_goal_generic_army_doctrines
-		prerequisite = { focus = CZE_mechanization }
-		prerequisite = { focus = CZE_armour_bonus_ii }
-		x = 2
-		y = 3
-		relative_position_id = CZE_military_research_institute
-
-		cost = 8
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		completion_reward = {
-			add_doctrine_cost_reduction = {
-				name = land_doc_bonus
-				cost_reduction = 0.5
-				uses = 2
-				category = land_doctrine
-			}
-		}
-	}
-
-	focus = {
 		id = CZE_war_college
 		icon = GFX_goal_generic_build_tank
 		prerequisite = { focus = CZE_doctrine_bonus }
-		prerequisite = { focus = CZE_doctrine_bonus_2 }
-		x = 0
-		y = 4
-		relative_position_id = CZE_military_research_institute
+		prerequisite = { focus = CZE_inf_and_artillery_advancement_2 }
+		x = 1
+		y = 1
+		relative_position_id = CZE_doctrine_bonus
 
 		cost = 8
 
@@ -1810,9 +1654,9 @@
 	focus = {
 		id = CZE_military_aeronautical_institute
 		icon = GFX_focus_CZE_military_aeronautical_institute
-		x = 8
-		y = 0
-		relative_position_id = CZE_military_research_institute
+		x = 12
+		y = 10
+		#relative_position_id = CZE_military_research_institute
 
 		cost = 8
 
