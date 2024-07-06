@@ -1,16 +1,6 @@
 ﻿capital = 6
 
 #oob = "BEL_1936"
-if = {
-	limit = { has_dlc = "By Blood Alone" }
-		set_air_oob = "BEL_1936_air_bba"
-	else = {
-		set_air_oob = "BEL_1936_air_legacy"
-		set_technology = {
-			early_fighter = 1
-		}
-	}
-}
 
 set_technology = {
 	infantry_weapons = 1
@@ -25,17 +15,21 @@ set_technology = {
 	fuel_refining = 1
 	basic_train = 1
 }
+
 #KINGS
 recruit_character = BEL_albert_i_of_belgium
 recruit_character = BEL_leopold_iii_of_belgium
 recruit_character = BEL_baudouin_of_belgium
+#prime
+recruit_character = BEL_paul_van_zeeland
+
 #communists
+recruit_character = BEL_julien_lahaut
 recruit_character = BEL_joseph_jacquemotte
 recruit_character = BEL_war_van_overstraeten
 
 #
 recruit_character = BEL_hubert_pierlot
-recruit_character = BEL_joseph_jacquemotte
 recruit_character = BEL_mcl_keyaerts
 recruit_character = BEL_georges_timmermans
 recruit_character = BEL_gilles_wyvekens
@@ -55,7 +49,6 @@ recruit_character = BEL_jules_iserentant
 recruit_character = BEL_victor_van_strydonck_de_burkel
 recruit_character = BEL_paul-henri_spaak
 recruit_character = BEL_gaston_eyskens
-recruit_character = BEL_paul_van_zeeland
 
 set_politics = {
 	ruling_party = demo_liberalism
@@ -91,7 +84,7 @@ add_ideas = {
 	#head of gov
 
 	#national spirits
-	BEL_limited_by_treaty
+	BEL_limited_by_treaty1
 	BEL_betrayed_by_former_allies
 	BEL_spoken_conflicts
 	BEL_vlaams_fostered

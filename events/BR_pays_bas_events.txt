@@ -1,7 +1,7 @@
 ###
 add_namespace = br_bel
 ###
-country_event = { #
+country_event = { #驻军问题
 	id = br_bel.1
 	title = br_bel.1.title
 	desc = br_bel.1.desc
@@ -11,16 +11,199 @@ country_event = { #
 	is_triggered_only = yes
 
 	immediate = {
+		hidden_effect = {}
+	}
+
+	option = {
+		name = br_bel.1.a #
+
+		country_event = { id = br_bel.2 days = 0 }
+
+		ai_chance = { factor = 5 }
+	}
+
+	option = {
+		name = br_bel.1.b #
+
+		custom_effect_tooltip = br_bel.1.b_tt
+
+		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = { #
+	id = br_bel.2
+	title = br_bel.2.title
+	desc = br_bel.2.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {}
+	}
+
+	option = {
+		name = br_bel.2.a #
+
+		FRA = { country_event = { id = br_bel.3 days = 1 } }
+
+		ai_chance = { factor = 5 }
+	}
+
+	option = {
+		name = br_bel.2.b #
+
+		GER = { country_event = { id = br_bel.3 days = 1 } }
+
+		ai_chance = { factor = 5 }
+	}
+
+}
+
+country_event = { #
+	id = br_bel.3
+	title = br_bel.3.title
+	desc = br_bel.3.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {}
+	}
+
+	option = {
+		name = br_bel.3.a #
+
+		if = {
+			limit = { original_tag = GER }
+			BEL = { complete_national_focus = BEL_germany_militaries_left }
+		}
+
+		ai_chance = { factor = 5 }
+	}
+
+	option = {
+		name = br_bel.3.b #
+
+		ai_chance = { factor = 5 }
+	}
+
+	option = {
+		name = br_bel.3.b #
+
+		ai_chance = { factor = 5 }
+	}
+}
+
+country_event = { #
+	id = br_bel.4
+	title = br_bel.4.title
+	desc = br_bel.4.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {}
+	}
+
+	option = {
+		name = br_bel.4.a #
+
+		ai_chance = { factor = 5 }
+	}
+
+	option = {
+		name = br_bel.4.b #
+
+		ai_chance = { factor = 5 }
+	}
+}
+
+country_event = { #
+	id = br_bel.4
+	title = br_bel.4.title
+	desc = br_bel.4.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {}
+	}
+
+	option = {
+		name = br_bel.5.a #
+
+		ai_chance = { factor = 5 }
+	}
+
+	option = {
+		name = br_bel.5.b #
+
+		ai_chance = { factor = 5 }
+	}
+}
+
+country_event = { #
+	id = br_bel.3
+	title = br_bel.3.title
+	desc = br_bel.3.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {}
+	}
+
+	option = {
+		name = br_bel.3.a #
+
+		ai_chance = { factor = 5 }
+	}
+}
+
+
+country_event = { #
+	id = br_bel.10
+	title = br_bel.10.title
+	desc = br_bel.10.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
 		hidden_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = VLM
+						is_core_of = WAL
+					}
+				}
+				set_demilitarized_zone = no
+			}
 			every_state = {
 				limit = { is_core_of = WAL }
 				remove_core_of = WAL
+			}
+			GER = {
+				add_to_faction = VLM
 			}
 		}
 	}
 
 	option = {
-		name = br_bel.1.a #
+		name = br_bel.10.a #
 
 		set_cosmetic_tag = Vlaams
 		set_country_flag = BEL_Vlaams_flag
@@ -31,7 +214,7 @@ country_event = { #
 			remove_core_of = root
 		}
 
-		country_event = br_bel.2
+		#country_event = br_bel.
 		
 		WAL = {
 			FRA = { give_guarantee = prev }
@@ -113,93 +296,6 @@ country_event = { #
 			
 		}
 		
-		ai_chance = { factor = 5 }
-	}
-
-	option = {
-		name = br_bel.1.b #
-		
-		set_cosmetic_tag = Wallonia
-
-		country_event = br_bel.3
-
-		ai_chance = { factor = 0 }
-	}
-}
-
-country_event = { #
-	id = br_bel.2
-	title = br_bel.2.title
-	desc = br_bel.2.desc
-	#picture = GFX_report_event_chinese_soldiers_fighting
-
-	fire_only_once = no
-	is_triggered_only = yes
-
-	immediate = {
-		hidden_effect = {
-			GER = {
-				add_to_faction = VLM
-			}
-		}
-	}
-
-	option = {
-		name = br_bel.2.a #
-
-		ai_chance = { factor = 5 }
-	}
-}
-
-country_event = { #
-	id = br_bel.3
-	title = br_bel.3.title
-	desc = br_bel.3.desc
-	#picture = GFX_report_event_chinese_soldiers_fighting
-
-	fire_only_once = no
-	is_triggered_only = yes
-
-	immediate = {
-		hidden_effect = {
-			#
-		}
-	}
-
-	option = {
-		name = br_bel.3.a #
-
-		ai_chance = { factor = 5 }
-	}
-}
-
-
-country_event = { #
-	id = br_bel.10
-	title = br_bel.10.title
-	desc = br_bel.10.desc
-	#picture = GFX_report_event_chinese_soldiers_fighting
-
-	fire_only_once = no
-	is_triggered_only = yes
-
-	immediate = {
-		hidden_effect = {
-			every_state = {
-				limit = {
-					OR = {
-						is_core_of = VLM
-						is_core_of = WAL
-					}
-				}
-				set_demilitarized_zone = no
-			}
-		}
-	}
-
-	option = {
-		name = br_bel.10.a #
-
 		ai_chance = { factor = 1 }
 	}
 }

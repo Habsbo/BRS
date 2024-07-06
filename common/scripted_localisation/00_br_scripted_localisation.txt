@@ -87,3 +87,19 @@ defined_text = { # Country
 		localization_key = officer_cap_dynamic_modifier_added
 	}
 }
+#bel
+defined_text = { # 
+	name = GetCountryNameBELFRAGER
+	text = {
+		trigger = {
+			original_tag = FRA
+		}
+		localization_key = GetCountryNameBELGER
+	}
+	text = {
+		trigger = {
+			original_tag = GER
+		}
+		localization_key = GetCountryNameBELFRA
+	}
+}

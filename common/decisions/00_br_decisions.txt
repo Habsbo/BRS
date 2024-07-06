@@ -325,7 +325,7 @@ br_political_actions = {
 
 		modifier = {
 			political_power_factor = -0.05
-			consumer_goods_factor = 0.15
+			consumer_goods_expected_value = 0.10
 			conscription_factor = -0.50
 			production_speed_infrastructure_factor = 0.05
 			production_speed_industrial_complex_factor = 0.05
@@ -362,7 +362,7 @@ br_political_actions = {
 		modifier = {
 			political_power_factor = -0.05
 			conscription_factor = -0.50
-			consumer_goods_factor = 0.25
+			consumer_goods_expected_value = 0.10
 			production_speed_buildings_factor = 0.10
 			production_factory_max_efficiency_factor = 0.10
 			production_factory_start_efficiency_factor = 0.05

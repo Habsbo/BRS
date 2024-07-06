@@ -1159,3 +1159,33 @@ KMT = {
 	color = rgb { 25 25 139 }
 	color_ui = rgb { 25 25 139 }
 }
+
+#Belgium
+Wallonia = {
+	color = rgb { 230 0 41 }
+	color_ui = rgb { 230 0 41 }
+}
+BEL_wallonia_anarchists = {
+	color = rgb { 230 0 41 }
+	color_ui = rgb { 230 0 41 }
+}
+Vlaams = {
+	color = rgb { 255 235 39 }
+	color_ui = rgb { 255 235 39 }
+}
+Antwerpen = {
+	color = rgb { 39 81 139 }
+	color_ui = rgb { 39 81 139 }
+}
+BEL_kingdom = {
+	color = rgb { 244 164 96 }
+	color_ui = rgb { 244 164 96 }
+}
+BEL_republic = {
+	color = rgb { 255 127 80 }
+	color_ui = rgb { 255 127 80 }
+}
+BEL_federal = {
+	color = rgb { 255 125 39 }
+	color_ui = rgb { 255 125 39 }
+}

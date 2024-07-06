@@ -1,7 +1,7 @@
 characters={
 #kings
 	BEL_albert_i_of_belgium = { #阿尔贝一世
-		name=BEL_leopold_iii_of_belgium
+		name=BEL_albert_i_of_belgium
 		portraits={
 			civilian={
 				large=GFX_portrait_BEL_hubert_pierlot
@@ -21,7 +21,7 @@ characters={
 		}
 		advisor = {
 			slot = head_of_gov
-			idea_token = LUX_jean_d_adler_hog
+			idea_token = BEL_albert_i_of_belgium_hog
 			allowed = { original_tag = BEL }
 			available = {
 				br_head_of_gov_generic_trigger = yes
@@ -37,12 +37,12 @@ characters={
 			ai_will_do = { factor = 1.000 }
 		}
 		field_marshal = {
-			skill = 1
+			skill = 4
 			traits = {  }
-			attack_skill = 1
-			defense_skill = 2
+			attack_skill = 3
+			defense_skill = 4
 			planning_skill = 2
-			logistics_skill = 1
+			logistics_skill = 4
 		}
 	}
 	BEL_leopold_iii_of_belgium = { #利奥波德三世
@@ -78,7 +78,10 @@ characters={
 			slot = head_of_gov
 			idea_token = BEL_hubert_pierlot_hog
 			allowed = { original_tag = BEL }
-			available = { br_ideology_fascism_nio = yes }
+			available = {
+				br_ideology_fascism_nio = yes
+				br_head_of_gov_generic_trigger = yes
+			}
 			traits = {  }
 			cost = 0
 			can_be_fired = no
@@ -101,7 +104,10 @@ characters={
 			slot = head_of_gov
 			idea_token = BEL_paul_van_zeeland_hog
 			allowed = { original_tag = BEL }
-			available = { br_ideology_fascism_nio = yes }
+			available = {
+				br_ideology_fascism_nio = yes
+				br_head_of_gov_generic_trigger = yes
+			}
 			traits = {  }
 			cost = 0
 			can_be_fired = no
