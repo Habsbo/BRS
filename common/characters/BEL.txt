@@ -112,7 +112,7 @@ characters={
 			idea_token = BEL_joseph_jacquemotte
 			allowed = { original_tag = BEL }
 			available = { br_ideology_fascism_nio = yes }
-			traits = { sci_socialist_revolutionary }
+			traits = {  }
 			cost = 100
 			ai_will_do = { factor = 1.000 }
 		}
