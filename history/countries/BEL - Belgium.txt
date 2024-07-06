@@ -91,6 +91,8 @@ add_ideas = {
 	#head of gov
 
 	#national spirits
+	BEL_limited_by_treaty
+	BEL_betrayed_by_former_allies
 	BEL_spoken_conflicts
 	BEL_vlaams_fostered
 	BEL_need_more_jobs

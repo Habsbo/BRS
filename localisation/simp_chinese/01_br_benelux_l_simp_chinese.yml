@@ -1,5 +1,9 @@
 ﻿l_simp_chinese:
 #ideas
+ BEL_limited_by_treaty: "受到条约的限制"
+ BEL_limited_by_treaty_desc: ""
+ BEL_betrayed_by_former_allies: "故友的背叛"
+ BEL_betrayed_by_former_allies_desc: ""
  BEL_spoken_conflicts: "语言矛盾"
  BEL_spoken_conflicts_desc: ""
  BEL_vlaams_fostered: "弗拉芒人受扶植"
