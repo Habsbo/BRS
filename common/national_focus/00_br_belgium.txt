@@ -637,9 +637,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = BEL_germany_militaries_left
 
-		cost = 8
-		
-		ai_will_do = { factor = 1 }
+		cost = 5
 		
 		available = {}
 		
@@ -651,7 +649,17 @@ focus_tree = {
 		
 		complete_tooltip = {}
 		
-		completion_reward = {}
+		completion_reward = {
+			#
+			add_political_power = -50
+			add_war_support = 0.05
+			add_stability = 0.05
+			#
+			add_popularity = { ideology = demo_conservatism popularity = 0.05 }
+			add_popularity = { ideology = authoritarian popularity = 0.05 }
+		}
+		
+		ai_will_do = { factor = 1 }
 	}
 	focus = {
 		id = BEL_neutralization
@@ -668,7 +676,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = BEL_germany_militaries_left
 
-		cost = 8
+		cost = 5
 		
 		available = {}
 		
@@ -680,7 +688,13 @@ focus_tree = {
 		
 		complete_tooltip = {}
 		
-		completion_reward = {}
+		completion_reward = {
+			add_political_power = 150
+			add_war_support = -0.05
+			add_stability = 0.10
+			add_popularity = { ideology = demo_liberalism popularity = 0.05 }
+			add_popularity = { ideology = demo_conservatism popularity = 0.05 }
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -699,7 +713,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = BEL_discrete_nations
 
-		cost = 8
+		cost = 5
 		
 		available = {}
 		
@@ -711,7 +725,13 @@ focus_tree = {
 		
 		complete_tooltip = {}
 		
-		completion_reward = {}
+		completion_reward = {
+			add_political_power = 50
+			add_war_support = 0.05
+			add_stability = 0.05
+			add_popularity = { ideology = demo_socialism popularity = 0.05 }
+			add_popularity = { ideology = demo_liberalism popularity = 0.05 }
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -744,7 +764,14 @@ focus_tree = {
 		
 		complete_tooltip = {}
 		
-		completion_reward = {}
+		completion_reward = {
+			
+			34 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = { type = arms_factory level = 1 }
+				add_building_construction = { type = industrial_complex level = 2 }
+			}
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -1519,7 +1546,18 @@ focus_tree = {
 		
 		complete_tooltip = {}
 		
-		completion_reward = {}
+		completion_reward = {
+			custom_effect_tooltip = generic_military_dynamic_modifier_added
+			add_to_variable = { troops_army_org_factor = 0.10 tooltip = army_org_factor_tt }
+			#
+			custom_effect_tooltip = generic_officer_cap_dynamic_modifier_added
+			add_to_variable = { officer_cap_army_advisor_cost_factor = -0.10 tooltip = army_advisor_cost_factor_tt }
+			#
+			custom_effect_tooltip = if_they_accept_newline_tt
+			effect_tooltip = {
+				add_ideas = volunteer_only
+			}
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -1632,7 +1670,13 @@ focus_tree = {
 		
 		complete_tooltip = {}
 		
-		completion_reward = {}
+		completion_reward = {
+			6 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = { type = arms_factory level = 2 }
+				add_building_construction = { type = dockyard level = 1 }
+			}
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
