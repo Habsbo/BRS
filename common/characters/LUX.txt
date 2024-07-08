@@ -4,8 +4,8 @@ characters={
 		name=LUX_marie_adelaide
 		portraits={
 			civilian={
-				large=GFX_portrait_Gustave_Lebeau
-				small="GFX_idea_generic_air_europe_1"
+				large=GFX_portrait_luxembourg_marie_adelaide
+				#small="GFX_idea_generic_air_europe_1"
 			}
 		}
 		gender = female

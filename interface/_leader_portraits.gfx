@@ -17,9 +17,8 @@ spriteTypes = {
 		texturefile = "gfx/leaders/leader_unknown_female.dds"
 	}
 
-
 	### GER
-
+	
 	spriteType = {
 		name = "GFX_portrait_ger_felix_steiner"
 		texturefile = "gfx/leaders/GER/portrait_ger_felix_steiner.dds"
@@ -1811,15 +1810,7 @@ spriteTypes = {
 		name = "GFX_portrait_el_salvador_maximiliano_hernandez_martinez_small"
 		texturefile = "gfx/interface/ideas/idea_ELS_maximiliano_hernandez_martinez.dds"
 	}
-	spriteType = {
-		name = "GFX_portrait_luxembourg_joseph_bech"
-		texturefile = "gfx/leaders/LUX/portrait_lux_joseph_bech.dds"
-	}
 
-	spriteType = {
-		name = "GFX_portrait_luxembourg_joseph_bech_small"
-		texturefile = "gfx/interface/ideas/idea_LUX_joseph_bech.dds"
-	}
 	spriteType = {
 		name = "GFX_portrait_costa_rica_ricardo_jiminez_oreamuno"
 		texturefile = "gfx/leaders/COS/portrait_cos_ricardo_jiminez_oreamuno.dds"
@@ -3198,6 +3189,12 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/idea_europe_generic_land_2.dds"
 	}
 
+#bel
+	spriteType = {
+		name = GFX_portrait_bel_albert_i_of_belgium
+		texturefile = "gfx/leaders/Benelux/Portrait_BEL_albert_i_of_belgium.tga"
+	}
+	
 	spriteType = {
 		name = GFX_portrait_BEL_hubert_pierlot
 		texturefile = "gfx/leaders/BEL/Portrait_Belgium_Hubert_Pierlot.dds"
@@ -3243,6 +3240,18 @@ spriteTypes = {
 		texturefile = "gfx/leaders/Europe/portrait_europe_generic_6.dds"
 	}
 
+#LUX
+	spriteType = {
+		name = GFX_portrait_luxembourg_marie_adelaide
+		texturefile = "gfx/leaders/Benelux/portrait_lux_marie_adelaide.tga"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_luxembourg_joseph_bech"
+		texturefile = "gfx/leaders/LUX/portrait_lux_joseph_bech.dds"
+	}
+
+#
 	spriteType = {
 		name = GFX_portrait_Tsarong_Wangyal
 		texturefile = "gfx/leaders/Asia/Portrait_Asia_Generic_2.dds"
