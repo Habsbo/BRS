@@ -354,6 +354,8 @@
  RUS_Federation_DEF: "俄罗斯联邦"
  RUS_Empire: "俄罗斯帝国"
  RUS_Empire_DEF: "俄罗斯帝国"
+ RUS_Tsar_Empire: "沙皇俄罗斯帝国"
+ RUS_Tsar_Empire_DEF: "沙皇俄罗斯帝国"
  ROR_interim_government: "$ROR$临时政府"
  ROR_interim_government_DEF: "$ROR_DEF$临时政府"
 
