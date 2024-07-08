@@ -1,4 +1,6 @@
 #
+
+#
 br_bel_bop = {
 	br_bel_bop_mission.vlaams = {
 		icon = generic_political_address
@@ -71,5 +73,213 @@ br_bel_bop = {
 		}
 
 		priority = 10
+	}
+}
+
+br_bel_the_treaty = {
+	br_bel_the_treaty_reinforce.fra = {
+		icon = generic_protection
+
+		activation = {
+			#always = no
+		}
+
+		available = { always = no }
+
+		cancel_trigger = {
+			#NOT = { has_idea = }
+		}
+
+		is_good = no
+		days_mission_timeout = 14
+		selectable_mission = no
+
+		complete_effect = {}
+
+		timeout_effect = {
+			add_power_balance_value = {
+				id = BEL_two_nations_balance
+				value = 0.01
+				tooltip_side = BEL_wallonia_right_side
+			}
+			add_popularity = { ideology = FRA popularity = 0.005 }
+			hidden_effect = {
+				if = {
+					limit = {  }
+					activate_mission = br_bel_the_treaty_reinforce.fra
+				}
+			}
+		}
+
+		priority = 10
+	}
+	br_bel_the_treaty_reinforce.ger = {
+		icon = generic_protection
+
+		activation = {
+			#always = no
+		}
+
+		available = { always = no }
+
+		cancel_trigger = {
+			#NOT = { has_idea = }
+		}
+
+		is_good = no
+		days_mission_timeout = 14
+		selectable_mission = no
+
+		complete_effect = {}
+
+		timeout_effect = {
+			add_power_balance_value = {
+				id = BEL_two_nations_balance
+				value = -0.01
+				tooltip_side = BEL_vlaams_left_side
+			}
+			add_popularity = { ideology = DKR popularity = 0.005 }
+			hidden_effect = {
+				if = {
+					limit = {  }
+					activate_mission = br_bel_the_treaty_reinforce.ger
+				}
+			}
+		}
+
+		priority = 10
+	}
+	br_bel_the_treaty_workers_protesting.wallonia = {
+		icon = generic_political_rally
+
+		activation = {
+			#always = no
+		}
+
+		available = { always = no }
+
+		cancel_trigger = {
+			#NOT = { has_idea = }
+		}
+
+		is_good = no
+		days_mission_timeout = 14
+		selectable_mission = no
+
+		complete_effect = {}
+
+		timeout_effect = {
+			add_power_balance_value = {
+				id = BEL_two_nations_balance
+				value = 0.01
+				tooltip_side = BEL_wallonia_right_side
+			}
+			add_popularity = { ideology = vanwardism popularity = 0.005 }
+			add_popularity = { ideology = sci_socialism popularity = 0.005 }
+			hidden_effect = {
+				if = {
+					limit = {  }
+					activate_mission = br_bel_the_treaty_workers_protesting.wallonia
+				}
+			}
+		}
+
+		priority = 10
+	}
+	br_bel_the_treaty_workers_protesting.vlaams = {
+		icon = generic_political_rally
+
+		activation = {
+			#always = no
+		}
+
+		available = { always = no }
+
+		cancel_trigger = {
+			#NOT = { has_idea = }
+		}
+
+		is_good = no
+		days_mission_timeout = 14
+		selectable_mission = no
+
+		complete_effect = {}
+
+		timeout_effect = {
+			add_power_balance_value = {
+				id = BEL_two_nations_balance
+				value = -0.01
+				tooltip_side = BEL_vlaams_left_side
+			}
+			add_popularity = { ideology = DKR popularity = 0.005 }
+			hidden_effect = {
+				if = {
+					limit = {  }
+					activate_mission = br_bel_the_treaty_workers_protesting.vlaams
+				}
+			}
+		}
+
+		priority = 10
+	}
+	br_bel_ = {
+		icon = generic_political_discourse
+
+		available = {
+			#
+		}
+
+		visible = {
+			#
+		}
+
+		fire_only_once = no
+		days_remove = 90
+		days_re_enable = 90
+		cancel_if_not_visible = yes
+
+		cost = 100
+
+		modifier = {
+			#
+		}
+
+		complete_effect = {
+			#
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+	br_bel_ = {
+		icon = generic_political_discourse
+
+		available = {
+			#
+		}
+
+		visible = {
+			#
+		}
+
+		fire_only_once = no
+		days_remove = 90
+		days_re_enable = 90
+		cancel_if_not_visible = yes
+
+		cost = 100
+
+		modifier = {
+			#
+		}
+
+		complete_effect = {
+			#
+		}
+
+		ai_will_do = {
+			base = 0
+		}
 	}
 }

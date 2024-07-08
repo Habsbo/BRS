@@ -157,7 +157,7 @@ ideas = {
 			#on_remove = {}
 
 			modifier = {
-				#
+				custom_modifier_tooltip = BEL_need_more_jobs_tt
 			}
 		}
 ###lux

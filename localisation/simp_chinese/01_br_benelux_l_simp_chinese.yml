@@ -19,6 +19,7 @@
  BEL_wallonia_fostered_desc: ""
  BEL_need_more_jobs: "失业率"
  BEL_need_more_jobs_desc: ""
+ BEL_need_more_jobs_tt: "失业率：\n带来的影响："
  LUX_crisis_awareness_idea: "危机意识"
  LUX_crisis_awareness_idea_desc: ""
  LUX_consolidate_charter_idea: "[LUX.Getadjective]国家宪法"
@@ -350,6 +351,18 @@
 #
  LUX_appoint_communists_as_minister_tt: "如果左翼政党在未来胜选，他们也会有机会成为§Y政府首脑§!。"
 #
+ br_bel_the_treaty: "第一次世界大战的和平条约"
+ br_bel_the_treaty_desc: "第一次世界大战的和平条约"
+ br_bel_the_treaty_ger_icon_value: "§Y[?root.br_bel_the_treaty_ger_value|0H]§!"
+ br_bel_the_treaty_ger_desc: "德国在我国的驻军共有§R[?root.br_bel_the_treaty_ger_value|0H]§!个师。"
+ br_bel_the_treaty_fra_icon_value: "§Y[?root.br_bel_the_treaty_fra_value|0H]§!"
+ br_bel_the_treaty_fra_desc: "法国在我国的驻军共有§R[?root.br_bel_the_treaty_fra_value|0H]§!个师。"
+
+ br_bel_the_treaty_reinforce.fra: "法国为在我国的驻地增兵"
+ br_bel_the_treaty_reinforce.ger: "德国为在我国的驻地增兵"
+ br_bel_the_treaty_workers_protesting.wallonia: "瓦隆尼亚工人抗议"
+ br_bel_the_treaty_workers_protesting.vlaams: "弗拉芒劳动者抗议"
+#events
  br_bel.1.title: "德法在我国的驻军"
  br_bel.1.desc: ""
  br_bel.1.a: "我们的行为正如唐·吉诃德。"

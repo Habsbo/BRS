@@ -1,6 +1,4 @@
 #pays - bas
-
-#bel
 br_electrification_of_benelux = {
 	icon = GFX_decision_category_generic_prospect_for_resources
 	#picture = GFX_decision_cat_picture_government_in_exile
@@ -17,6 +15,8 @@ br_electrification_of_benelux = {
 	priority = 1
 	visible_when_empty = no
 }
+
+#bel
 br_bel_bop = {
 	icon = GFX_decision_category_generic_prospect_for_resources
 	#picture = GFX_decision_cat_picture_government_in_exile
@@ -32,6 +32,42 @@ br_bel_bop = {
 
 	priority = 1
 	visible_when_empty = no
+}
+br_bel_the_treaty = {
+	icon = GFX_decision_category_generic_prospect_for_resources
+	picture = GFX_decision_cat_picture_concessions_to_the_trade_unions
+
+	allowed = { original_tag = BEL }
+	visible = {
+		OR = {
+			has_idea = BEL_limited_by_treaty1
+			has_idea = BEL_limited_by_treaty2
+			has_idea = BEL_limited_by_treaty3
+		}
+	}
+
+	priority = 10
+	visible_when_empty = no
+
+	custom_icon = {
+		tag = GER
+		value = br_bel_the_treaty_ger_icon_value
+		desc = br_bel_the_treaty_ger_desc
+
+		visible = {
+			NOT = { has_global_flag = br_bel_the_treaty_ger_withdraw }
+		}
+	}
+
+	custom_icon = {
+		tag = FRA
+		value = br_bel_the_treaty_fra_icon_value
+		desc = br_bel_the_treaty_fra_desc
+
+		visible = {
+			NOT = { has_global_flag = br_bel_the_treaty_fra_withdraw }
+		}
+	}
 }
 #lux
 br_benelux_calling_of_communism = {

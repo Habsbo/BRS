@@ -299,6 +299,32 @@ country_event = { #
 		ai_chance = { factor = 1 }
 	}
 }
+
+country_event = { #
+	id = br_bel.101
+	title = br_bel.101.title
+	desc = br_bel.101.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {}
+	}
+
+	option = {
+		name = br_bel.101.a #
+
+		ai_chance = { factor = 5 }
+	}
+
+	option = {
+		name = br_bel.101.b #
+
+		ai_chance = { factor = 5 }
+	}
+}
 ###
 add_namespace = br_lux
 ###
