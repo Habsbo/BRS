@@ -1,5 +1,5 @@
 focus_tree = {
-	id =  MNG_focus
+	id = br_ming_focus
 	
 	country = {
 		factor = 0
