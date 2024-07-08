@@ -431,8 +431,8 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 	}
 	focus = {
-		id = BEL_
-		icon = GFX_
+		id = BEL_development_of_vlaanderen
+		icon = GFX_focus_generic_low_cost_housing
 		prerequisite = { focus =  BEL_interests_of_offshore_oil }
 		#mutually_exclusive = { focus =  }
 		x = 0
@@ -455,6 +455,83 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+	focus = {
+		id = BEL_highway_and_agricultural_machinery
+		icon = GFX_focus_generic_road_investment
+		prerequisite = { focus = BEL_development_of_vlaanderen }
+		#mutually_exclusive = { focus =  }
+		x = -1
+		y = 1
+		relative_position_id = BEL_development_of_vlaanderen
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = BEL_education_of_vlaams
+		icon = GFX_focus_generic_university_1
+		prerequisite = { focus = BEL_development_of_vlaanderen }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 1
+		relative_position_id = BEL_development_of_vlaanderen
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = BEL_industrial_workers
+		icon = GFX_focus_generic_refit_civilian_ships
+		prerequisite = { focus = BEL_highway_and_agricultural_machinery }
+		prerequisite = { focus = BEL_education_of_vlaams }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 1
+		relative_position_id = BEL_highway_and_agricultural_machinery
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	#
 	focus = {
 		id = BEL_support_vlaanderen_shipbuilding_industry
 		icon = GFX_goal_generic_construct_naval_dockyard
@@ -506,6 +583,31 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 	}
 	focus = {
+		id = BEL_medium_hull_and_artillery
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = BEL_light_hull_project }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = BEL_light_hull_project
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
 		id = BEL_marine_training
 		icon = GFX_focus_generic_naval_discipline
 		prerequisite = { focus = BEL_support_vlaanderen_shipbuilding_industry }
@@ -530,6 +632,57 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+	focus = {
+		id = BEL_maritime_combat_platforms
+		icon = GFX_goal_generic_navy_carrier
+		prerequisite = { focus = BEL_marine_training }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = BEL_marine_training
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = BEL_naval_theory_reform
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = BEL_medium_hull_and_artillery }
+		prerequisite = { focus = BEL_maritime_combat_platforms }
+		x = 1
+		y = 1
+		relative_position_id = BEL_medium_hull_and_artillery
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
 ### political
 	focus = {
 		id = BEL_germany_militaries_left
@@ -1120,6 +1273,7 @@ focus_tree = {
 	focus = {
 		id = BEL_democratic_by_hand_in_hand
 		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = BEL_standard_education }
 		prerequisite = { focus = BEL_france_side }
 		#mutually_exclusive = { focus =  }
 		x = -6
@@ -1194,6 +1348,32 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 	}
 	focus = {
+		id = BEL_last_king
+		icon = GFX_
+		prerequisite = { focus = BEL_communism_minister }
+		mutually_exclusive = { focus = BEL_next_king }
+		x = -1
+		y = 2
+		relative_position_id = BEL_communism_minister
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
 		id = BEL_united_left
 		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = BEL_democratic_by_hand_in_hand }
@@ -1219,7 +1399,7 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 	}
 	focus = {
-		id = BEL_g1
+		id = BEL_livelihood_reform
 		icon = GFX_goal_support_democracy
 		prerequisite = { focus = BEL_united_left}
 		#mutually_exclusive = { focus =  }
@@ -1243,6 +1423,32 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+	focus = {
+		id = BEL_next_king
+		icon = GFX_
+		prerequisite = { focus = BEL_livelihood_reform }
+		mutually_exclusive = { focus = BEL_last_king }
+		x = 1
+		y = 2
+		relative_position_id = BEL_livelihood_reform
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
 	focus = {
 		id = BEL_seats_reform
 		icon = GFX_goal_generic_improve_relations
@@ -1268,7 +1474,6 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
-
 	focus = {
 		id = BEL_guid_labour_union
 		icon = GFX_focus_eng_concessions_to_the_trade_unions
@@ -1277,6 +1482,30 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BEL_seats_reform
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = BEL_guarantee_peasantry_s_benefits
+		icon = GFX_
+		prerequisite = { focus = BEL_communism_minister focus = BEL_livelihood_reform }
+		x = 0
+		y = 1
+		relative_position_id = BEL_guid_labour_union
 
 		cost = 8
 		
@@ -1915,6 +2144,7 @@ focus_tree = {
 	focus = {
 		id = BEL_
 		icon = GFX_
+		prerequisite = { focus = BEL_industrial_workers }
 		prerequisite = { focus = BEL_vlaams_benelux_nationalism }
 		#mutually_exclusive = { focus =  }
 		x = 0
