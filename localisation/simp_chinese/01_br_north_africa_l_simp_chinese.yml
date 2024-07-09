@@ -2,7 +2,7 @@
 #ideas
  FRA_influence_from_france: "$FRA_DEF$施加的影响"
  FRA_influence_from_france_desc: "尽管随着经济危机的蔓延，[FRA.GetName]对北非地区的控制力越发贫弱，但是仍然掌握着我国的银行业和工农业基础。从经济上捏死了我们彻底独立自主的道路。我们无法奢望人民能靠喝沙子啃盐巴和法国人斗到底，屈服意味着他们迟早会重新以征服者的姿态回来。"
- AMAZIGA_countries: "$AMAZIGA$-阿拉伯国家"
+ AMAZIGA_countries: "$AMAZIGA$国家"
  AMAZIGA_countries_desc: "$AMAZIGA$和伊斯兰文化作为底蕴的人们将永远地居住在属于他们的土地上，不管征服者们怎样欺侮，我们永远渴望并争取自由，几千年前如此，几千年后亦如此。"
  MOR_arabian_dynasty: "阿拉伯宗室"
  MOR_arabian_dynasty_desc: "$MOR$得天独厚的环境使得王国的主体意识变得不那么典型。阿拉伯风格的宫廷和来自阿拉伯的王朝血脉使得柏柏尔人对我们的统治并非完全向心。"

@@ -1,6 +1,23 @@
 ideas = {
 	hidden_ideas = {
 		#
+		BEL_unemployment = {
+			picture = generic_production_bonus
+
+			removal_cost = -1
+
+			allowed = { always = yes }
+
+			allowed_civil_war = { always = yes }
+
+			#on_add = {}
+
+			#on_remove = {}
+
+			modifier = {
+				custom_modifier_tooltip = BEL_need_more_jobs_tt
+			}
+		}
 	}
 	
 	country = {

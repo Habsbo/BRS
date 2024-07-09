@@ -103,3 +103,93 @@ defined_text = { #
 		localization_key = GetCountryNameBELFRA
 	}
 }
+
+defined_text = { # 
+	name = GetUnemployment
+	text = {
+		trigger = {
+			check_variable = { generic_unemployment_var = 0 compare = greater_than }
+			check_variable = { generic_unemployment_var = 0.1 compare = less_than_or_equals }
+		}
+		localization_key = GetUnemployment.1
+	}
+	text = {
+		trigger = {
+			check_variable = { generic_unemployment_var = 0.1 compare = greater_than }
+			check_variable = { generic_unemployment_var = 1.0 compare = less_than_or_equals }
+		}
+		localization_key = GetUnemployment.2
+	}
+	text = {
+		trigger = {
+			check_variable = { generic_unemployment_var = 1.0 compare = greater_than }
+			check_variable = { generic_unemployment_var = 3.0 compare = less_than_or_equals }
+		}
+		localization_key = GetUnemployment.3
+	}
+	text = {
+		trigger = {
+			check_variable = { generic_unemployment_var = 3.0 compare = greater_than }
+			check_variable = { generic_unemployment_var = 5.0 compare = less_than_or_equals }
+		}
+		localization_key = GetUnemployment.4
+	}
+	text = {
+		trigger = {
+			check_variable = { generic_unemployment_var = 5.0 compare = greater_than }
+			check_variable = { generic_unemployment_var = 10.0 compare = less_than_or_equals }
+		}
+		localization_key = GetUnemployment.5
+	}
+	text = {
+		trigger = {
+			check_variable = { generic_unemployment_var = 10.0 compare = greater_than }
+		}
+		localization_key = GetUnemployment.6
+	}
+}
+
+defined_text = { # 
+	name = GetBelNMJideatt
+	text = {
+		trigger = {
+			check_variable = { generic_unemployment_var = 0 compare = greater_than }
+			check_variable = { generic_unemployment_var = 0.1 compare = less_than_or_equals }
+		}
+		localization_key = GetBelNMJideatt.1
+	}
+	text = {
+		trigger = {
+			check_variable = { generic_unemployment_var = 0.1 compare = greater_than }
+			check_variable = { generic_unemployment_var = 1.0 compare = less_than_or_equals }
+		}
+		localization_key = GetBelNMJideatt.2
+	}
+	text = {
+		trigger = {
+			check_variable = { generic_unemployment_var = 1.0 compare = greater_than }
+			check_variable = { generic_unemployment_var = 3.0 compare = less_than_or_equals }
+		}
+		localization_key = GetBelNMJideatt.3
+	}
+	text = {
+		trigger = {
+			check_variable = { generic_unemployment_var = 3.0 compare = greater_than }
+			check_variable = { generic_unemployment_var = 5.0 compare = less_than_or_equals }
+		}
+		localization_key = GetBelNMJideatt.4
+	}
+	text = {
+		trigger = {
+			check_variable = { generic_unemployment_var = 5.0 compare = greater_than }
+			check_variable = { generic_unemployment_var = 10.0 compare = less_than_or_equals }
+		}
+		localization_key = GetBelNMJideatt.5
+	}
+	text = {
+		trigger = {
+			check_variable = { generic_unemployment_var = 10.0 compare = greater_than }
+		}
+		localization_key = GetBelNMJideatt.6
+	}
+}

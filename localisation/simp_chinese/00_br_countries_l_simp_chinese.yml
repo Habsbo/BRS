@@ -646,6 +646,8 @@
  TUN: "突尼斯"
  TUN_DEF: "突尼斯"
  TUN_ADJ: "突尼斯"
+ TUN_FRA_subject: "法属突尼斯"
+ TUN_FRA_subject_DEF: "法属突尼斯"
 
  SUD: "苏丹"
  SUD_DEF: "苏丹"

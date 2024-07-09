@@ -60,7 +60,7 @@ create_country_leader = {
 }
 
 #国名
-set_cosmetic_tag = TUN_republic
+#set_cosmetic_tag = TUN_republic
 #国家精神
 add_ideas = {
 	FRA_influence_from_france

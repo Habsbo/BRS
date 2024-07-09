@@ -1152,3 +1152,7 @@ set_autonomy = {
 	target = ALG
 	autonomous_state = autonomy_br_self_governance
 }
+set_autonomy = {
+	target = TUN
+	autonomous_state = autonomy_br_self_governance
+}
