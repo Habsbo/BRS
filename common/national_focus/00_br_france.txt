@@ -6,7 +6,7 @@
 		
 		modifier = {
 			add = 100
-			tag = FRA
+			tag = TUN
 		}
 	}
 	
@@ -17,7 +17,7 @@
 ###人民阵线 - Popular Front
 	focus = {
 		id = FRA_publicizing_front_populaire
-		icon = GFX_
+		icon = GFX_goal_generic_national_unity
 		#prerequisite = { focus =  }
 		#mutually_exclusive = { focus =  }
 		x = 20
@@ -92,7 +92,7 @@
 	}
 	focus = {
 		id = FRA_integrate_pcf
-		icon = GFX_
+		icon = GFX_goal_support_communism
 		prerequisite = { focus = FRA_sign_matignon_agreements }
 		#mutually_exclusive = { focus =  }
 		x = -4
@@ -222,7 +222,7 @@
 		id = FRA_commune_de_france
 		icon = GFX_
 		prerequisite = { focus = FRA_celebrate_the_commune focus = FRA_womens_suffrage }
-		#mutually_exclusive = { focus =  }
+		mutually_exclusive = { focus = FRA_republique_socialiste_francaise }
 		x = -1
 		y = 2
 		relative_position_id = FRA_celebrate_the_commune
@@ -252,7 +252,7 @@
 		id = FRA_republique_socialiste_francaise
 		icon = GFX_
 		prerequisite = { focus = FRA_celebrate_the_commune focus = FRA_womens_suffrage }
-		#mutually_exclusive = { focus =  }
+		mutually_exclusive = { focus = FRA_commune_de_france }
 		x = 1
 		y = 2
 		relative_position_id = FRA_celebrate_the_commune
@@ -892,13 +892,163 @@
 
 	#
 	focus = {
-		id = FRA_1
+		id = FRA_affairs_about_french_africa
 		icon = GFX_
 		prerequisite = { focus = FRA_internationale }
 		#mutually_exclusive = { focus = FRA_internationale }
-		x = 20
+		x = 26
 		y = 1
 		relative_position_id = FRA_internationale
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = FRA_blum_viollette_proposal
+		icon = GFX_
+		prerequisite = { focus = FRA_affairs_about_french_africa }
+		mutually_exclusive = { focus = FRA_limited_colony_citizen_rights }
+		x = -1
+		y = 1
+		relative_position_id = FRA_affairs_about_french_africa
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = FRA_popularize_the_equal_citizenship
+		icon = GFX_
+		prerequisite = { focus = FRA_blum_viollette_proposal }
+		#mutually_exclusive = { focus =  }
+		x = -1
+		y = 2
+		relative_position_id = FRA_blum_viollette_proposal
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = FRA_limited_colony_citizen_rights
+		icon = GFX_
+		prerequisite = { focus = FRA_affairs_about_french_africa }
+		mutually_exclusive = { focus = FRA_blum_viollette_proposal }
+		x = 1
+		y = 1
+		relative_position_id = FRA_affairs_about_french_africa
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = FRA_2
+		icon = GFX_
+		prerequisite = { focus = FRA_limited_colony_citizen_rights }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 2
+		relative_position_id = FRA_limited_colony_citizen_rights
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = FRA_morocco_war
+		icon = GFX_
+		prerequisite = { focus = FRA_blum_viollette_proposal focus = FRA_limited_colony_citizen_rights }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = FRA_blum_viollette_proposal
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = FRA_2
+		icon = GFX_
+		prerequisite = { focus = FRA_blum_viollette_proposal focus = FRA_limited_colony_citizen_rights }
+		#mutually_exclusive = { focus =  }
+		x = 2
+		y = 1
+		relative_position_id = FRA_blum_viollette_proposal
 
 		cost = 8
 		
