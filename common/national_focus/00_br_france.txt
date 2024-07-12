@@ -42,7 +42,7 @@
 	}
 	focus = {
 		id = FRA_sign_matignon_agreements
-		icon = GFX_
+		icon = GFX_focus_generic_treaty
 		prerequisite = { focus = FRA_publicizing_front_populaire }
 		#mutually_exclusive = { focus =  }
 		x = 0
@@ -70,7 +70,7 @@
 		icon = GFX_
 		prerequisite = { focus = FRA_sign_matignon_agreements }
 		#mutually_exclusive = { focus =  }
-		x = -8
+		x = -6
 		y = 1
 		relative_position_id = FRA_sign_matignon_agreements
 
@@ -117,7 +117,7 @@
 	}
 	focus = {
 		id = FRA_integrate_republicanism_left
-		icon = GFX_
+		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = FRA_sign_matignon_agreements }
 		#mutually_exclusive = { focus =  }
 		x = -2
@@ -155,6 +155,113 @@
 		cost = 8
 		
 		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = FRA_celebrate_the_commune
+		icon = GFX_
+		prerequisite = { focus = FRA_anarchists focus = FRA_integrate_pcf }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 2
+		relative_position_id = FRA_integrate_pcf
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = FRA_womens_suffrage
+		icon = GFX_
+		prerequisite = { focus = FRA_anarchists focus = FRA_integrate_republicanism_left }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 2
+		relative_position_id = FRA_integrate_republicanism_left
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = FRA_commune_de_france
+		icon = GFX_
+		prerequisite = { focus = FRA_celebrate_the_commune focus = FRA_womens_suffrage }
+		#mutually_exclusive = { focus =  }
+		x = -1
+		y = 2
+		relative_position_id = FRA_celebrate_the_commune
+
+		cost = 8
+		
+		available = {
+			OR = {
+				has_completed_focus = FRA_anarchists
+				has_completed_focus = FRA_integrate_pcf
+			}
+		}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = FRA_republique_socialiste_francaise
+		icon = GFX_
+		prerequisite = { focus = FRA_celebrate_the_commune focus = FRA_womens_suffrage }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 2
+		relative_position_id = FRA_celebrate_the_commune
+
+		cost = 8
+		
+		available = {
+			NOT = { has_completed_focus = FRA_anarchists }
+		}
 				
 		bypass = {}
 		
@@ -227,6 +334,31 @@
 		x = -2
 		y = 1
 		relative_position_id = FRA_strengthen_cgt
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = FRA_nationalization
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = FRA_redistribution_of_means }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = FRA_redistribution_of_means
 
 		cost = 8
 		
@@ -812,31 +944,6 @@
 	}
 
 	#
-	focus = {
-		id = FRA_1
-		icon = GFX_
-		#prerequisite = { focus =  }
-		#mutually_exclusive = { focus =  }
-		x = 10
-		y = 0
-		#relative_position_id =
-
-		cost = 8
-		
-		available = {}
-				
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-		
-		ai_will_do = { factor = 1 }
-	}
 	focus = {
 		id = FRA_2
 		icon = GFX_
