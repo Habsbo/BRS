@@ -14,26 +14,20 @@
 
 	continuous_focus_position = { x = 50 y = 1500 }
 
+###人民阵线 - Popular Front
 	focus = {
-		id = FRA_
-		icon = GFX_goal_generic_demand_territory
+		id = FRA_publicizing_front_populaire
+		icon = GFX_
 		#prerequisite = { focus =  }
 		#mutually_exclusive = { focus =  }
-		x = 10
+		x = 20
 		y = 0
 		#relative_position_id =
 
 		cost = 8
 		
-		ai_will_do = { factor = 1 }
-		
-		available = {
-amount_taken_ideas = {
-									amount < 1
-									slots = { head_of_gov }
-								}
-}
-		
+		available = {}
+				
 		bypass = {}
 		
 		cancel_if_invalid = yes
@@ -43,6 +37,879 @@ amount_taken_ideas = {
 		complete_tooltip = {}
 		
 		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
 	}
-	
+	focus = {
+		id = FRA_sign_matignon_agreements
+		icon = GFX_
+		prerequisite = { focus = FRA_publicizing_front_populaire }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 2
+		relative_position_id = FRA_publicizing_front_populaire
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = FRA_anarchists
+		icon = GFX_
+		prerequisite = { focus = FRA_sign_matignon_agreements }
+		#mutually_exclusive = { focus =  }
+		x = -8
+		y = 1
+		relative_position_id = FRA_sign_matignon_agreements
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = FRA_integrate_pcf
+		icon = GFX_
+		prerequisite = { focus = FRA_sign_matignon_agreements }
+		#mutually_exclusive = { focus =  }
+		x = -4
+		y = 1
+		relative_position_id = FRA_sign_matignon_agreements
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = FRA_integrate_republicanism_left
+		icon = GFX_
+		prerequisite = { focus = FRA_sign_matignon_agreements }
+		#mutually_exclusive = { focus =  }
+		x = -2
+		y = 1
+		relative_position_id = FRA_sign_matignon_agreements
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = FRA_united_petite_bourgeoisie
+		icon = GFX_
+		prerequisite = {
+			focus = FRA_integrate_pcf
+			focus = FRA_integrate_republicanism_left
+		}
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 1
+		relative_position_id = FRA_integrate_pcf
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	#labour union
+	focus = {
+		id = FRA_general_strike
+		icon = GFX_
+		prerequisite = { focus = FRA_sign_matignon_agreements }
+		#mutually_exclusive = { focus =  }
+		x = 2
+		y = 1
+		relative_position_id = FRA_sign_matignon_agreements
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = FRA_strengthen_cgt
+		icon = GFX_
+		prerequisite = { focus = FRA_general_strike }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = FRA_general_strike
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = FRA_redistribution_of_means
+		icon = GFX_
+		prerequisite = { focus = FRA_strengthen_cgt }
+		#mutually_exclusive = { focus =  }
+		x = -2
+		y = 1
+		relative_position_id = FRA_strengthen_cgt
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = FRA_public_education
+		icon = GFX_
+		prerequisite = { focus = FRA_strengthen_cgt }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = FRA_strengthen_cgt
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = FRA_womens_in_industries
+		icon = GFX_
+		prerequisite = { focus = FRA_strengthen_cgt focus = FRA_international_conference_in_1931 }
+		#mutually_exclusive = { focus =  }
+		x = 2
+		y = 1
+		relative_position_id = FRA_strengthen_cgt
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	#
+	focus = {
+		id = FRA_internationale
+		icon = GFX_
+		prerequisite = { focus = FRA_publicizing_front_populaire }
+		#mutually_exclusive = { focus =  }
+		x = 8
+		y = 2
+		relative_position_id = FRA_publicizing_front_populaire
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = FRA_international_conference_in_1931
+		icon = GFX_
+		prerequisite = { focus = FRA_internationale }
+		#mutually_exclusive = { focus = FRA_internationale }
+		x = 0
+		y = 1
+		relative_position_id = FRA_internationale
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	#
+	focus = {
+		id = FRA_1
+		icon = GFX_
+		prerequisite = { focus = FRA_international_conference_in_1931 }
+		x = 0
+		y = 1
+		relative_position_id = FRA_international_conference_in_1931
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	#spanish civilwar
+	focus = {
+		id = FRA_support_revolution_of_spain
+		icon = GFX_
+		prerequisite = { focus = FRA_international_conference_in_1931 }
+		#mutually_exclusive = { focus =  }
+		x = 4
+		y = 1
+		relative_position_id = FRA_international_conference_in_1931
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = FRA_republican_spain
+		icon = GFX_
+		prerequisite = { focus = FRA_support_revolution_of_spain }
+		mutually_exclusive = { focus = FRA_communism_spain }
+		x = -1
+		y = 1
+		relative_position_id = FRA_support_revolution_of_spain
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = FRA_communism_spain
+		icon = GFX_
+		prerequisite = { focus = FRA_support_revolution_of_spain }
+		mutually_exclusive = { focus = FRA_republican_spain }
+		x = 1
+		y = 1
+		relative_position_id = FRA_support_revolution_of_spain
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	#Asia
+	focus = {
+		id = FRA_support_revolution_of_asia
+		icon = GFX_
+		prerequisite = { focus = FRA_international_conference_in_1931 }
+		x = 8
+		y = 1
+		relative_position_id = FRA_international_conference_in_1931
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id =  FRA_invite_communist_party_of_china
+		icon = GFX_
+		prerequisite = { focus = FRA_support_revolution_of_asia }
+		#mutually_exclusive = { focus =  }
+		x = -1
+		y = 1
+		relative_position_id = FRA_support_revolution_of_asia
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = FRA_invite_kuomintang_of_china
+		icon = GFX_
+		prerequisite = { focus = FRA_support_revolution_of_asia }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 1
+		relative_position_id = FRA_support_revolution_of_asia
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = FRA_liberation_of_china
+		icon = GFX_
+		prerequisite = {
+			focus = FRA_invite_communist_party_of_china
+			focus = FRA_invite_kuomintang_of_china
+		}
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 2
+		relative_position_id = FRA_support_revolution_of_asia
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = FRA_anti_colonialism
+		icon = GFX_
+		prerequisite = {
+			focus = FRA_liberation_of_china
+			focus = FRA_joint_advance
+			focus = FRA_work_out_their_own_salvation
+		}
+		mutually_exclusive = { focus = FRA_recognize_the_claim_of_tibet_by_raj }
+		x = 0
+		y = 1
+		relative_position_id = FRA_liberation_of_china
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = FRA_regroup_progressive_forces_of_indochina
+		icon = GFX_
+		prerequisite = { focus = FRA_anti_colonialism }
+		#mutually_exclusive = { focus =  }
+		x = -1
+		y = 1
+		relative_position_id = FRA_anti_colonialism
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = FRA_invite_communists_and_socialists_in_india
+		icon = GFX_
+		prerequisite = { focus = FRA_support_revolution_of_asia }
+		#mutually_exclusive = { focus =  }
+		x = 4
+		y = 1
+		relative_position_id = FRA_support_revolution_of_asia
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = FRA_joint_advance
+		icon = GFX_
+		prerequisite = { focus = FRA_invite_communists_and_socialists_in_india }
+		mutually_exclusive = { focus = FRA_work_out_their_own_salvation }
+		x = -1
+		y = 1
+		relative_position_id = FRA_invite_communists_and_socialists_in_india
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = FRA_work_out_their_own_salvation
+		icon = GFX_
+		prerequisite = { focus = FRA_invite_communists_and_socialists_in_india }
+		mutually_exclusive = { focus = FRA_joint_advance }
+		x = 1
+		y = 1
+		relative_position_id = FRA_invite_communists_and_socialists_in_india
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = FRA_recognize_the_claim_of_tibet_by_raj
+		icon = GFX_
+		prerequisite = {
+			focus = FRA_liberation_of_china
+			focus = FRA_joint_advance
+			focus = FRA_work_out_their_own_salvation
+		}
+		mutually_exclusive = { focus = FRA_anti_colonialism }
+		x = 0
+		y = 2
+		relative_position_id = FRA_invite_communists_and_socialists_in_india
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	#
+	focus = {
+		id = FRA_1
+		icon = GFX_
+		prerequisite = { focus = FRA_international_conference_in_1931 }
+		x = 16
+		y = 1
+		relative_position_id = FRA_international_conference_in_1931
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	#
+	focus = {
+		id = FRA_1
+		icon = GFX_
+		prerequisite = { focus = FRA_international_conference_in_1931 }
+		x = 20
+		y = 1
+		relative_position_id = FRA_international_conference_in_1931
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	#
+	focus = {
+		id = FRA_1
+		icon = GFX_
+		prerequisite = { focus = FRA_internationale }
+		#mutually_exclusive = { focus = FRA_internationale }
+		x = 20
+		y = 1
+		relative_position_id = FRA_internationale
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+###	
+	focus = {
+		id = FRA_2
+		icon = GFX_
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 10
+		y = 0
+		#relative_position_id =
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	#
+	focus = {
+		id = FRA_1
+		icon = GFX_
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 10
+		y = 0
+		#relative_position_id =
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = FRA_2
+		icon = GFX_
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 10
+		y = 0
+		#relative_position_id =
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = FRA_1
+		icon = GFX_
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 10
+		y = 0
+		#relative_position_id =
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = FRA_2
+		icon = GFX_
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 10
+		y = 0
+		#relative_position_id =
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
 }

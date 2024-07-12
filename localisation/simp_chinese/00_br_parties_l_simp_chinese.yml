@@ -115,6 +115,18 @@
  UKR_fascism_party: "乌克兰长枪党"
  UKR_nationalism_party: "乌克兰国家社会工人党"
  UKR_supernationalism_party: "乌克兰国家社会工人党激进派"
+#France
+ FRA_soc_anarchism_party: "无政府共产主义"
+ FRA_vanwardism_party: "工人国际法国支部(SFIO)"
+ FRA_sci_socialism_party: "法兰西共产党(SFIC/PCF)"
+ FRA_con_socialism_party: "社会主义共和联盟(USR)与激进社会主义党-卡米尔·佩莱坦派(PRS-CP)" #Union Socialist républicaine, Parti radical-socialiste Camille Pelletan
+ FRA_demo_socialism_party: "共和、激进与激进－社会主义党(PRRRS)与前线党(FP)" #Parti républicain, radical et radical-socialiste, Frontist Party
+ FRA_demo_liberalism_party: "民主共和联盟、激进独立党与大众民主党(AD/ARD-RI-PDP)与独立左派(GI)" #Alliance républicaine démocratique, Radicaux independents, Parti démocrate populaire, Gauche indépendante
+ FRA_demo_conservatism_party: "共和联合会(FR)与经济、社会和农民行动独立党(IAESP)" #Fédération républicaine, Indépendants d'action économique, sociale et paysanne
+ FRA_authoritarian_party: "独立党" #Indépendants/Indépendants républicains
+ FRA_fascism_party: "国民阵线(RN)" #Rassemblement national
+ FRA_nationalism_party: "国民阵线(RN)"
+ FRA_supernationalism_party: "火十字运动"
 
 #HOL
 #BEL

@@ -391,18 +391,21 @@
  RAJ_DEF: "印度"
  RAJ_ADJ: "印度"
 
- CRO: "克罗地亚"
- CRO_DEF: "克罗地亚"
- CRO_ADJ: "克罗地亚"
-
-
  KOR: "朝鲜"
  KOR_DEF: "朝鲜"
  KOR_ADJ: "朝鲜"
 
+ CRO: "克罗地亚"
+ CRO_DEF: "克罗地亚"
+ CRO_ADJ: "克罗地亚"
+
  SER: "塞尔维亚"
  SER_DEF: "塞尔维亚"
  SER_ADJ: "塞尔维亚"
+
+ MNT: "黑山"
+ MNT_DEF: "黑山"
+ MNT_ADJ: "黑山"
 
  ICE: "冰岛"
  ICE_DEF: "冰岛"
@@ -448,6 +451,10 @@
  VIN_DEF: "越南"
  VIN_ADJ: "越南"
 
+ LAO: "老挝"
+ LAO_DEF: "老挝"
+ LAO_ADJ: "老挝"
+
  CAM: "柬埔寨"
  CAM_DEF: "柬埔寨"
  CAM_ADJ: "柬埔寨"
@@ -460,37 +467,29 @@
  MAL_DEF: "马来西亚"
  MAL_ADJ: "马来西亚"
 
- LAO: "老挝"
- LAO_DEF: "老挝"
- LAO_ADJ: "老挝"
-
- MNT: "黑山"
- MNT_DEF: "黑山"
- MNT_ADJ: "黑山"
-
  UKR: "乌克兰"
  UKR_DEF: "乌克兰"
  UKR_ADJ: "乌克兰"
 
+ BLR: "白俄罗斯"
+ BLR_DEF: "白俄罗斯"
+ BLR_ADJ: "白俄罗斯"
+ BLR_demo_socialism: "白俄罗斯社会主义共和国"
+ BLR_demo_socialism_DEF: "白俄罗斯社会主义共和国"
+
  GEO: "格鲁吉亚"
  GEO_DEF: "格鲁吉亚"
  GEO_ADJ: "格鲁吉亚"
-
- KAZ: "哈萨克斯坦"
- KAZ_DEF: "哈萨克斯坦"
- KAZ_ADJ: "哈萨克"
-
+ ARM: "亚美尼亚"
+ ARM_DEF: "亚美尼亚"
+ ARM_ADJ: "亚美尼亚"
  AZR: "阿塞拜疆"
  AZR_DEF: "阿塞拜疆"
  AZR_ADJ: "阿塞拜疆"
 
- ARM: "亚美尼亚"
- ARM_DEF: "亚美尼亚"
- ARM_ADJ: "亚美尼亚"
-
- BLR: "白俄罗斯"
- BLR_DEF: "白俄罗斯"
- BLR_ADJ: "白俄罗斯"
+ KAZ: "哈萨克斯坦"
+ KAZ_DEF: "哈萨克斯坦"
+ KAZ_ADJ: "哈萨克"
 
  ANG: "安哥拉"
  ANG_DEF: "安哥拉"
