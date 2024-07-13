@@ -5,6 +5,7 @@ ideas = {
 		use_list_view = yes
 		#封建制（部落、封建君主）
 		br_laws_feudalism = {
+			icon = br_laws_feudalism
 
 			allowed = { always = yes }
 
@@ -38,6 +39,7 @@ ideas = {
 		}
 		#世袭君主制（立宪制）
 		br_laws_monarchy = {
+			icon = br_laws_monarchy
 
 			allowed = { always = yes }
 
@@ -77,6 +79,8 @@ ideas = {
 		}
 		#神权制
 		br_laws_cleric = {
+			icon = br_laws_cleric
+
 			allowed = { always = yes }
 
 			available = {
@@ -109,7 +113,8 @@ ideas = {
 		}
 		#代议总统制
 		br_laws_proxy = {
-
+			icon = br_laws_proxy
+			
 			allowed = { always = yes }
 
 			available = {
@@ -134,6 +139,7 @@ ideas = {
 		}
 		#代议议会制
 		br_laws_parliamentarism = {
+			icon = br_laws_parliamentarism
 
 			allowed = { always = yes }
 
@@ -167,6 +173,7 @@ ideas = {
 		}
 		#委员会制
 		br_laws_committee = {
+			icon = br_laws_laws_committee
 
 			allowed = { always = yes }
 
@@ -195,6 +202,35 @@ ideas = {
 			cancel_if_invalid = yes
 		}
 		#无政府
+		br_laws_anarchy = {
+			icon = br_laws_anarchy
+
+			allowed = { always = yes }
+
+			available = {
+				has_idea = br_laws_proletariat
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				#
+			}
+
+			allowed_to_remove = {
+				#
+			}
+			
+			on_add = {
+				#
+			}
+
+			on_remove = {
+				#
+			}
+			
+			cancel_if_invalid = yes
+		}
 	}
 
 	gov_leader = {
@@ -231,11 +267,17 @@ ideas = {
 		}
 		#军官管制
 		br_laws_military_regulation = {
+			icon = br_laws_military_regulation
 
 			allowed = { always = yes }
 
 			available = {
 				OR = {
+					AND = {
+						is_faction_leader = no
+						is_in_faction = yes
+						is_major = no
+					}
 					is_puppet = yes
 				}
 			}
@@ -409,6 +451,7 @@ ideas = {
 		}
 		#资格选举
 		br_laws_qualification = {
+			icon = br_laws_qualification
 			
 			allowed = { always = yes }
 			
@@ -457,6 +500,8 @@ ideas = {
 
 		#纯净种族
 		br_laws_pure_race = {
+			icon = br_laws_pure_race
+
 			allowed = { always = yes }
 
 			available = {
@@ -481,6 +526,8 @@ ideas = {
 		}
 		#种族隔离
 		br_laws_apartheid = {
+			icon = br_laws_apartheid
+
 			allowed = { always = yes }
 
 			level = 5
@@ -671,6 +718,7 @@ ideas = {
 
 		#地主阶级
 		br_laws_loyalist = {
+			icon = br_laws_loyalist
 
 			available = {
 				OR = {
@@ -701,6 +749,7 @@ ideas = {
 		}
 		#资产阶级
 		br_laws_bourgeoisie = {
+			icon = br_laws_bourgeoisie
 
 			available = {
 				OR = {
@@ -730,6 +779,7 @@ ideas = {
 		}
 		#无产阶级
 		br_laws_proletariat = {
+			icon = br_laws_proletariat
 			
 			available = {
 				OR = {

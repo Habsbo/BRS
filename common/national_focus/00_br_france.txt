@@ -5,8 +5,8 @@
 		factor = 0
 		
 		modifier = {
-			add = 100
-			tag = TUN
+			add = 30
+			tag = FRA
 		}
 	}
 	

@@ -1,4 +1,169 @@
-### made by Leader ###
+### pictures made by no mans lands ###
 spriteTypes = {
+#state system
+	spriteType = {
+		name = "GFX_idea_br_laws_feudalism"
+		texturefile = "gfx/interface/laws/state_system/laws_feudalism.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_br_laws_monarchy"
+		texturefile = "gfx/interface/laws/state_system/laws_monarchy.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_br_laws_cleric"
+		texturefile = "gfx/interface/laws/state_system/laws_cleric.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_br_laws_proxy"
+		texturefile = "gfx/interface/laws/state_system/laws_proxy.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_br_laws_parliamentarism"
+		texturefile = "gfx/interface/laws/state_system/laws_parliamentarism.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_br_laws_committee"
+		texturefile = "gfx/interface/laws/state_system/laws_committee.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_br_laws_anarchy"
+		texturefile = "gfx/interface/laws/state_system/laws_anarchy.png"
+	}
+#gov leader
+
+	spriteType = {
+		name = "GFX_idea_br_laws_military_regulation"
+		texturefile = "gfx/interface/laws/gov_leader/laws_military_regulation.png"
+	}
+#election right
+	spriteType = {
+		name = "GFX_idea_br_laws_asset"
+		texturefile = "gfx/interface/laws/election_right/laws_asset.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_br_laws_qualification"
+		texturefile = "gfx/interface/laws/election_right/laws_qualification.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_br_laws_free"
+		texturefile = "gfx/interface/laws/election_right/laws_free.png"
+	}
+#culture laws
+	spriteType = {
+		name = "GFX_idea_br_laws_pure_race"
+		texturefile = "gfx/interface/laws/culture_laws/laws_pure_race.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_br_laws_apartheid"
+		texturefile = "gfx/interface/laws/culture_laws/laws_apartheid.png"
+	}
+#publications
+	spriteType = {
+		name = "GFX_idea_br_laws_publication_1"
+		texturefile = "gfx/interface/laws/publications/laws_publication_1.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_br_laws_publication_2"
+		texturefile = "gfx/interface/laws/publications/laws_publication_2.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_br_laws_publication_3"
+		texturefile = "gfx/interface/laws/publications/laws_publication_3.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_br_laws_publication_4"
+		texturefile = "gfx/interface/laws/publications/laws_publication_4.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_br_laws_publication_5"
+		texturefile = "gfx/interface/laws/publications/laws_publication_5.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_br_laws_publication_6"
+		texturefile = "gfx/interface/laws/publications/laws_publication_6.png"
+	}
+
+#ruling class
+	spriteType = {
+		name = "GFX_idea_br_laws_loyalist"
+		texturefile = "gfx/interface/laws/ruling_class/laws_loyalist.png"
+	}
+	spriteType = {
+		name = "GFX_idea_br_laws_bourgeoisie"
+		texturefile = "gfx/interface/laws/ruling_class/laws_bourgeoisie.png"
+	}
+	spriteType = {
+		name = "GFX_idea_br_laws_proletariat"
+		texturefile = "gfx/interface/laws/ruling_class/laws_proletariat.png"
+	}
+#insurance
+	spriteType = {
+		name = "GFX_idea_br_laws_insurance_none"
+		texturefile = "gfx/interface/laws/insurance/laws_insurance_none.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_br_laws_insurance_1"
+		texturefile = "gfx/interface/laws/insurance/laws_insurance_1.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_br_laws_insurance_2"
+		texturefile = "gfx/interface/laws/insurance/laws_insurance_2.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_br_laws_insurance_3"
+		texturefile = "gfx/interface/laws/insurance/laws_insurance_3.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_br_laws_insurance_4"
+		texturefile = "gfx/interface/laws/insurance/laws_insurance_4.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_br_laws_insurance_5"
+		texturefile = "gfx/interface/laws/insurance/laws_insurance_5.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_br_laws_insurance_6"
+		texturefile = "gfx/interface/laws/insurance/laws_insurance_6.png"
+	}
+#welfare
+	spriteType = {
+		name = "GFX_idea_br_laws_welfare_none"
+		texturefile = "gfx/interface/laws/welfare/laws_welfare_none.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_br_laws_welfare_basic"
+		texturefile = "gfx/interface/laws/welfare/laws_welfare_basic.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_br_laws_welfare_better"
+		texturefile = "gfx/interface/laws/welfare/laws_welfare_better.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_br_laws_welfare_advance"
+		texturefile = "gfx/interface/laws/welfare/laws_welfare_advance.png"
+	}
 
 }
