@@ -1378,7 +1378,7 @@
 	}
 	focus = {
 		id = CZE_pan_nationalism
-		icon = GFX_
+		icon = GFX_focus_generic_citizen_power_1
 		prerequisite = { focus = CZE_political_direction }
 		mutually_exclusive = { focus = CZE_promote_nationalism }
 		x = -1
@@ -1401,7 +1401,7 @@
 	}
 	focus = {
 		id = CZE_promote_nationalism
-		icon = GFX_
+		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = CZE_political_direction }
 		mutually_exclusive = { focus = CZE_pan_nationalism }
 		x = 1

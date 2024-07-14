@@ -36,6 +36,37 @@
 		
 		complete_tooltip = {}
 		
+		completion_reward = {
+			add_political_power = 200
+			add_stability = -0.05
+			add_popularity = { ideology = sci_socialism popularity = 0.02 }
+			add_popularity = { ideology = con_socialism popularity = 0.03 }
+			add_popularity = { ideology = demo_socialism popularity = 0.05 }
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = FRA_prohibit_rassemblement_national
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = FRA_publicizing_front_populaire }
+		#mutually_exclusive = { focus = FRA_pull_centre_over_to_our_side }
+		x = -2
+		y = 2
+		relative_position_id = FRA_publicizing_front_populaire
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
 		completion_reward = {}
 		
 		ai_will_do = { factor = 1 }
@@ -44,7 +75,6 @@
 		id = FRA_sign_matignon_agreements
 		icon = GFX_focus_generic_treaty
 		prerequisite = { focus = FRA_publicizing_front_populaire }
-		#mutually_exclusive = { focus =  }
 		x = 0
 		y = 2
 		relative_position_id = FRA_publicizing_front_populaire
@@ -65,6 +95,7 @@
 		
 		ai_will_do = { factor = 1 }
 	}
+	#
 	focus = {
 		id = FRA_anarchists
 		icon = GFX_
@@ -141,6 +172,30 @@
 		ai_will_do = { factor = 1 }
 	}
 	focus = {
+		id = FRA_support_avant_garde_artist
+		icon = GFX_
+		prerequisite = { focus = FRA_anarchists focus = FRA_integrate_pcf }
+		x = 1
+		y = 1
+		relative_position_id = FRA_anarchists
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
 		id = FRA_united_petite_bourgeoisie
 		icon = GFX_
 		prerequisite = {
@@ -169,8 +224,33 @@
 		ai_will_do = { factor = 1 }
 	}
 	focus = {
-		id = FRA_celebrate_the_commune
+		id = FRA_c2
 		icon = GFX_
+		prerequisite = { focus = FRA_anarchists }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 2
+		relative_position_id = FRA_anarchists
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = FRA_celebrate_the_commune
+		icon = GFX_focus_por_workers_of_iberia
 		prerequisite = { focus = FRA_anarchists focus = FRA_integrate_pcf }
 		#mutually_exclusive = { focus =  }
 		x = 0
@@ -196,7 +276,10 @@
 	focus = {
 		id = FRA_womens_suffrage
 		icon = GFX_
-		prerequisite = { focus = FRA_anarchists focus = FRA_integrate_republicanism_left }
+		prerequisite = {
+			focus =  FRA_anarchists
+			focus = FRA_anarchists
+			focus = FRA_integrate_republicanism_left }
 		#mutually_exclusive = { focus =  }
 		x = 0
 		y = 2
@@ -250,7 +333,7 @@
 	}
 	focus = {
 		id = FRA_republique_socialiste_francaise
-		icon = GFX_
+		icon = GFX_focus_generic_soviet_politics
 		prerequisite = { focus = FRA_celebrate_the_commune focus = FRA_womens_suffrage }
 		mutually_exclusive = { focus = FRA_commune_de_france }
 		x = 1
@@ -429,7 +512,7 @@
 	#
 	focus = {
 		id = FRA_internationale
-		icon = GFX_
+		icon = GFX_focus_generic_red_flag_2
 		prerequisite = { focus = FRA_publicizing_front_populaire }
 		#mutually_exclusive = { focus =  }
 		x = 8
@@ -1152,6 +1235,130 @@
 		x = 10
 		y = 0
 		#relative_position_id =
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+###国民联盟 - national union
+	focus = {
+		id = FRA_rassemblement_national_rising
+		icon = GFX_focus_generic_strike_at_democracy2
+		mutually_exclusive = { focus = FRA_publicizing_front_populaire }
+		x = 12
+		y = 0
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = FRA_pull_centre_over_to_our_side
+		icon = GFX_focus_generic_citizen_power_2
+		prerequisite = { focus = FRA_rassemblement_national_rising focus = FRA_publicizing_front_populaire }
+		#mutually_exclusive = { focus = FRA_prohibit_rassemblement_national }
+		x = 4
+		y = 1
+		relative_position_id = FRA_rassemblement_national_rising
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = FRA_restore_justice
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = FRA_pull_centre_over_to_our_side }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = FRA_pull_centre_over_to_our_side
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = FRA_canvass_for_more_campaign_funds
+		icon = GFX_
+		prerequisite = { focus = FRA_rassemblement_national_rising }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = FRA_rassemblement_national_rising
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = FRA_march_over_to_palais_du_luxembourg
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = FRA_rassemblement_national_rising }
+		#mutually_exclusive = { focus =  }
+		x = 2
+		y = 2
+		relative_position_id = FRA_rassemblement_national_rising
 
 		cost = 8
 		

@@ -1843,4 +1843,43 @@ characters = {
 			}
 		}
 	}
+
+###
+	POL_władysław_wróblewski={ #瓦迪斯瓦夫·符卢勃列夫斯基 - władysław_wróblewski
+		name=POL_wladyslaw_wróblewski
+		portraits={
+			army={
+				#large = 
+				small="GFX_idea_generic_political_advisor_europe_3" #No Portrait
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = POL_władysław_wróblewski
+			available = {}
+			allowed = { original_tag = POL }
+			traits = {  }
+		}
+	}
+	POL_józef_świeżyński={ #约瑟夫·希维任斯基 - Józef Świeżyński
+		name=POL_józef_świeżyński
+		portraits={
+			army={
+				#large = 
+				small="GFX_idea_generic_political_advisor_europe_3" #No Portrait
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = POL_józef_świeżyński
+			available = {}
+			allowed = {
+				OR = {
+					original_tag = POL
+					original_tag = RUS
+				}
+			}
+			traits = {}
+		}
+	}
 }

@@ -1,0 +1,63 @@
+### pictures made by no mans lands ###
+spriteTypes = {
+
+	SpriteType = {
+		name = "GFX_focus_generic_ban_opium_1"
+		texturefile = "gfx/interface/goals/generic/generic_ban_opium_1.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_generic_ban_opium_2"
+		texturefile = "gfx/interface/goals/generic/generic_ban_opium_2.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_generic_brain_upgrade"
+		texturefile = "gfx/interface/goals/generic/generic_brain_upgrade.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_generic_citizen_power_1"
+		texturefile = "gfx/interface/goals/generic/generic_citizen_power_1.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_generic_citizen_power_2"
+		texturefile = "gfx/interface/goals/generic/generic_citizen_power_1.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_generic_opium_1"
+		texturefile = "gfx/interface/goals/generic/generic_opium_1.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_generic_opium_2"
+		texturefile = "gfx/interface/goals/generic/generic_opium_2.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_generic_opium_3"
+		texturefile = "gfx/interface/goals/generic/generic_opium_3.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_generic_political_military"
+		texturefile = "gfx/interface/goals/generic/generic_political_military.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_generic_scientific_cooperation"
+		texturefile = "gfx/interface/goals/generic/generic_scientific_cooperation.png"			
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_generic_red_flag_1"
+		texturefile = "gfx/interface/goals/generic/generic_red_flag_1.png"			
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_generic_red_flag_2"
+		texturefile = "gfx/interface/goals/generic/generic_red_flag_2.png"			
+	}
+}
