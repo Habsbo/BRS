@@ -50,7 +50,7 @@
 		id = FRA_prohibit_rassemblement_national
 		icon = GFX_goal_generic_forceful_treaty
 		prerequisite = { focus = FRA_publicizing_front_populaire }
-		#mutually_exclusive = { focus = FRA_pull_centre_over_to_our_side }
+		mutually_exclusive = { focus = FRA_restore_justice }
 		x = -2
 		y = 2
 		relative_position_id = FRA_publicizing_front_populaire
@@ -1305,7 +1305,10 @@
 		id = FRA_restore_justice
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = FRA_pull_centre_over_to_our_side }
-		#mutually_exclusive = { focus =  }
+		mutually_exclusive = {
+			focus = FRA_march_over_to_palais_du_luxembourg
+			focus = FRA_prohibit_rassemblement_national
+		}
 		x = 0
 		y = 1
 		relative_position_id = FRA_pull_centre_over_to_our_side
@@ -1353,9 +1356,9 @@
 	}
 	focus = {
 		id = FRA_march_over_to_palais_du_luxembourg
-		icon = GFX_goal_generic_major_war
+		icon = GFX_
 		prerequisite = { focus = FRA_rassemblement_national_rising }
-		#mutually_exclusive = { focus =  }
+		mutually_exclusive = { focus = FRA_restore_justice }
 		x = 2
 		y = 2
 		relative_position_id = FRA_rassemblement_national_rising
