@@ -361,7 +361,7 @@
 	#labour union
 	focus = {
 		id = FRA_general_strike
-		icon = GFX_
+		icon = GFX_focus_generic_workers_strike_1
 		prerequisite = { focus = FRA_sign_matignon_agreements }
 		#mutually_exclusive = { focus =  }
 		x = 2
@@ -461,7 +461,7 @@
 	}
 	focus = {
 		id = FRA_public_education
-		icon = GFX_
+		icon = GFX_focus_generic_brain_upgrade
 		prerequisite = { focus = FRA_strengthen_cgt }
 		#mutually_exclusive = { focus =  }
 		x = 0

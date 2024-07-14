@@ -60,4 +60,19 @@ spriteTypes = {
 		name = "GFX_focus_generic_red_flag_2"
 		texturefile = "gfx/interface/goals/generic/generic_red_flag_2.png"			
 	}
+	
+	SpriteType = {
+		name = "GFX_focus_generic_anti_fascism"
+		texturefile = "gfx/interface/goals/generic/generic_anti_fascism.png"			
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_generic_workers_strike_1"
+		texturefile = "gfx/interface/goals/generic/generic_workers_strike_1.png"			
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_generic_workers_strike_2"
+		texturefile = "gfx/interface/goals/generic/generic_workers_strike_2.png"			
+	}
 }
