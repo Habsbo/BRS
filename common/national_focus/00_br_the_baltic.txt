@@ -5,8 +5,12 @@
 		factor = 0
 		
 		modifier = {
-			add = 50
-			tag = DKR
+			add = 20
+			OR = {
+				original_tag = LIT
+				original_tag = LAT
+				original_tag = EST
+			}
 		}
 	}
 	

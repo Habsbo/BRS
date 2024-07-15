@@ -1,5 +1,27 @@
 ideas = {
 	country = {
+		intelligence_department_1 = {
+			picture = FRA_undividable
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				operative_slot = 1
+				intel_network_gain_factor = 0.10
+			}
+		}
+		
+		intelligence_department_2 = {
+			picture = FRA_undividable
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				operative_slot = 3
+				intel_network_gain_factor = 0.20
+			}
+		}
+
 		FRA_influence_from_france = {
 			picture = FRA_undividable
 			allowed = { NOT = { has_war_with = FRA } }

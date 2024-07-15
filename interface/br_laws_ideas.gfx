@@ -36,12 +36,26 @@ spriteTypes = {
 		texturefile = "gfx/interface/laws/state_system/laws_anarchy.png"
 	}
 #gov leader
+	spriteType = {
+		name = "GFX_idea_br_laws_dictatorship"
+		texturefile = "gfx/interface/laws/gov_leader/laws_dictatorship.png"
+	}
 
 	spriteType = {
 		name = "GFX_idea_br_laws_military_regulation"
 		texturefile = "gfx/interface/laws/gov_leader/laws_military_regulation.png"
 	}
 #election right
+	spriteType = {
+		name = "GFX_idea_br_laws_suffrage_prohibited"
+		texturefile = "gfx/interface/laws/election_right/laws_suffrage_prohibited.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_br_laws_landowner"
+		texturefile = "gfx/interface/laws/election_right/laws_landowner.png"
+	}
+
 	spriteType = {
 		name = "GFX_idea_br_laws_asset"
 		texturefile = "gfx/interface/laws/election_right/laws_asset.png"
@@ -66,6 +80,13 @@ spriteTypes = {
 		name = "GFX_idea_br_laws_apartheid"
 		texturefile = "gfx/interface/laws/culture_laws/laws_apartheid.png"
 	}
+
+#faith laws
+	spriteType = {
+		name = "GFX_idea_br_laws_spiritual"
+		texturefile = "gfx/interface/laws/faith_laws/laws_spiritual.png"
+	}
+
 #publications
 	spriteType = {
 		name = "GFX_idea_br_laws_publication_1"

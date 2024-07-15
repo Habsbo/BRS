@@ -42,8 +42,12 @@ joint_focus = {
 	available_if_capitulated = no
 	
 	completion_reward = {}
-	completion_reward_joint_originator = {}
-	completion_reward_joint_member = {}
+	completion_reward_joint_originator = {
+		add_stability = 0.05
+	}
+	completion_reward_joint_member = {
+		add_stability = 0.01
+	}
 	ai_will_do = { factor = 1 }
 }
 joint_focus = {
@@ -63,12 +67,18 @@ joint_focus = {
 	available_if_capitulated = no
 	
 	completion_reward = {}
-	completion_reward_joint_originator = {}
-	completion_reward_joint_member = {}
+	completion_reward_joint_originator = {
+		create_intelligence_agency = yes
+		add_ideas = intelligence_department_2
+	}
+	completion_reward_joint_member = {
+		create_intelligence_agency = yes
+		add_ideas = intelligence_department_1
+	}
 	ai_will_do = { factor = 1 }
 }
 joint_focus = {
-	id = DEUTSCH_i1
+	id = DEUTSCH_economics
 	icon = GFX_focus_generic_secret_service_agency
 	prerequisite = { focus = DEUTSCH_kaiserreich_power }
 	#mutually_exclusive = { focus =  }

@@ -239,6 +239,7 @@ ideas = {
 
 		#独裁制
 		br_laws_dictatorship = {
+			icon = br_laws_dictatorship
 
 			allowed = { always = yes }
 
@@ -305,6 +306,7 @@ ideas = {
 		}
 		#选举官僚
 		br_laws_electoral_politician = {
+			icon = br_laws_electoral_politician
 
 			allowed = { always = yes }
 
@@ -332,7 +334,8 @@ ideas = {
 		}
 		#责任制
 		br_laws_premier = {
-
+			icon = br_laws_premier
+			
 			allowed = { always = yes }
 
 			available = {
@@ -353,6 +356,7 @@ ideas = {
 		}
 		#技术治国
 		br_laws_technocracy = {
+			icon = br_laws_technocracy
 
 			allowed = { always = yes }
 

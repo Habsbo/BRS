@@ -3,8 +3,9 @@
  Kaiserreich_Power: "帝国同盟"
  Central_Power: "同盟国"
 #
- DKR_kaiserreich_power: "巩固帝国同盟"
- DKR_kaiserreich_power_desc: ""
-
- DKR_intelligence_sharing: "情报共享"
- DKR_intelligence_sharing_desc: ""
+ DEUTSCH_kaiserreich_power: "巩固帝国"
+ DEUTSCH_kaiserreich_power_desc: ""
+ DEUTSCH_intelligence_sharing: "情报共享"
+ DEUTSCH_intelligence_sharing_desc: ""
+ : ""
+ _desc: ""
