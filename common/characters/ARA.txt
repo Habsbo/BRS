@@ -60,7 +60,6 @@ characters = {
 			cost = 0
 			can_be_fired = no
 		}
-
 		corps_commander={
 			traits={ brilliant_strategist }
 			skill=2

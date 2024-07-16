@@ -14,6 +14,12 @@ defined_text = {
 		}
 		localization_key = [SPR_VL_picture]
 	}
+	text = {
+		trigger = {
+			original_tag = FRA
+		}
+		localization_key = [FRA_VL_picture]
+	}
 	text = { localization_key = GFX_leader_unknown }
 }
 
@@ -32,6 +38,12 @@ defined_text = {
 			}
 		}
 		localization_key = [SPR_VL_name]
+	}
+	text = {
+		trigger = {
+			original_tag = FRA
+		}
+		localization_key = [FRA_VL_name]
 	}
 	text = { localization_key = VL_name }
 }
@@ -52,6 +64,12 @@ defined_text = {
 		}
 		localization_key = [SPR_VL_state]
 	}
+	text = {
+		trigger = {
+			original_tag = FRA
+		}
+		localization_key = [FRA_VL_state]
+	}
 	text = { localization_key = VL_state }
 }
 
@@ -71,6 +89,12 @@ defined_text = {
 		}
 		localization_key = [SPR_VL_Dip_state]
 	}
+	text = {
+		trigger = {
+			original_tag = FRA
+		}
+		localization_key = [FRA_VL_Dip_state]
+	}
 	text = { localization_key = VL_Dip_state }
 }
 
@@ -89,6 +113,12 @@ defined_text = {
 			}
 		}
 		localization_key = [SPR_VL_desc]
+	}
+	text = {
+		trigger = {
+			original_tag = FRA
+		}
+		localization_key = [FRA_VL_desc]
 	}
 	text = { localization_key = VL_desc }
 }

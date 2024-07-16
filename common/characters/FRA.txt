@@ -95,7 +95,23 @@ characters={
 				factor  = 0.000
 			}
 		}
-		
+		advisor={
+			slot = head_of_gov
+			idea_token = maurice_thorez_hog
+			allowed  = { original_tag  = FRA }
+			available  = {
+				if  = {
+					limit  = { has_dlc = "Man the Guns" }
+					not  = { has_autonomy_state  = autonomy_supervised_state }
+				}
+				br_head_of_gov_generic_trigger = yes
+			}
+			traits  = {}
+			do_effect  = {}
+			on_add  = {}
+			cost = 0
+			can_be_fired = no
+		}
 		country_leader={
 			ideology=stalinism
 			expire="1965.1.1.1"
@@ -124,9 +140,6 @@ characters={
 				large=GFX_portrait_FRA_philippe_petain
 			}
 		}
-		
-		
-		
 		
 		
 	}
@@ -1118,28 +1131,38 @@ characters={
 			allowed  = { original_tag  = FRA }
 			available  = {
 				NOT  = {
-					has_country_leader  = {
-						character  = FRA_philippe_petain
-						ruling_only  = yes 
-					}
+					has_country_leader  = { character  = FRA_philippe_petain ruling_only  = yes }
 				}
 				if  = {
-					limit  = {
-						has_dlc = "Man the Guns"
-					}
+					limit  = { has_dlc = "Man the Guns" }
 					NOT  = { has_autonomy_state  = autonomy_supervised_state }
 				}
 			}
 			traits  = { democratic_reformer }
 
 			do_effect  = {
-				NOT  = {
-					has_government  = democratic 
-				}
+				NOT  = { has_government  = democratic }
 			}
 			ai_will_do  = {
 				factor  = 0.000
 			}
+		}
+		advisor={
+			slot = head_of_gov
+			idea_token = leon_blum_hog
+			allowed  = { original_tag  = FRA }
+			available  = {
+				if  = {
+					limit  = { has_dlc = "Man the Guns" }
+					not  = { has_autonomy_state  = autonomy_supervised_state }
+				}
+				br_head_of_gov_generic_trigger = yes
+			}
+			traits  = {}
+			do_effect  = {}
+			on_add  = {}
+			cost = 0
+			can_be_fired = no
 		}
 	}
 

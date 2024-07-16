@@ -1845,8 +1845,8 @@ characters = {
 	}
 
 ###
-	POL_władysław_wróblewski={ #瓦迪斯瓦夫·符卢勃列夫斯基 - władysław_wróblewski
-		name=POL_wladyslaw_wróblewski
+	POL_wladyslaw_wroblewski={ #瓦迪斯瓦夫·符卢勃列夫斯基 - władysław_wróblewski
+		name=POL_wladyslaw_wroblewski
 		portraits={
 			army={
 				#large = 
@@ -1861,8 +1861,8 @@ characters = {
 			traits = {  }
 		}
 	}
-	POL_józef_świeżyński={ #约瑟夫·希维任斯基 - Józef Świeżyński
-		name=POL_józef_świeżyński
+	POL_jozef_swiezynski={ #约瑟夫·希维任斯基 - Józef Świeżyński
+		name=POL_jozef_swiezynski
 		portraits={
 			army={
 				#large = 

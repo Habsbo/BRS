@@ -68,12 +68,15 @@
  LUX_friedrich_schreiwung: "弗里德里希·苏瓦松"
  LUX_ehrlich_swabian: "阿尔利希·士瓦本"
  LUX_jean_d_adler: "让·达-德勒"
+#
+ leon_blum: "莱昂·布鲁姆"
+ leon_blum_hog: "$leon_blum$"
 #HELLAS
  GRE_regency_council: "摄政议会"
 
 #poland
- POL_józef_świezyński: "约瑟夫·希维任斯基"
- POL_wladyslaw_wróblewski: "瓦迪斯瓦夫·符卢勃列夫斯基"
+ POL_jozef_swiezynski: "约瑟夫·希维任斯基"
+ POL_wladyslaw_wroblewski: "瓦迪斯瓦夫·符卢勃列夫斯基"
 #surname(chinese han/man and some nations) - 姓
  s_li: "李"
  s_wang: "王"

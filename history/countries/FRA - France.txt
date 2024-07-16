@@ -1146,6 +1146,10 @@ add_ideas = {
 	br_laws_national_state
 	br_laws_freedom_belief
 	br_laws_bourgeoisie
+	#
+	
+	#
+	leon_blum_hog
 }
 #国家关系
 set_autonomy = {

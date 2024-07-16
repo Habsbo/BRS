@@ -1,0 +1,15 @@
+﻿l_simp_chinese:
+#bleon blum - 莱昂·布鲁姆
+ leon_blum: "$leon_blum$"
+ VL_name_bleon_blum: "$leon_blum$"
+ VL_trait_bleon_blum: "§Y$$§!\n - 政治点数: §G+5%§!\n - 稳定度: §G+5%§!"
+ VL_state_bleon_blum: "§Y$leon_blum$§!\n$VL_trait_leon_blum$"
+ VL_Dip_state_bleon_blum: "§Y$leon_blum$§!\n$GetDipStatus$\n$VL_trait_leon_blum$"
+ VL_desc_bleon_blum: "§g§!"
+#
+ maurice_thorez: "$FRA_maurice_thorez$"
+ VL_name_maurice_thorez: "$maurice_thorez$"
+ VL_trait_maurice_thorez: "§Y$$§!\n - 政治点数: §G+5%§!\n - 稳定度: §G+5%§!"
+ VL_state_maurice_thorez: "§Y$maurice_thorez$§!\n$VL_trait_maurice_thorez$"
+ VL_Dip_state_maurice_thorez: "§Y$maurice_thorez$§!\n$GetDipStatus$\n$VL_trait_maurice_thorez$"
+ VL_desc_maurice_thorez: "§g§!"

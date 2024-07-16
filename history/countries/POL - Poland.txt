@@ -201,8 +201,8 @@ recruit_character = POL_rudinger_von_der_goltz
 recruit_character = POL_vladislav_korchits
 recruit_character = POL_wojtek
 
-recruit_character = POL_józef_świeżyński
-recruit_character = POL_władysław_wróblewski
+recruit_character = POL_jozef_swiezynski
+recruit_character = POL_wladyslaw_wroblewski
 
 if = {
 	limit = {

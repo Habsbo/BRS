@@ -34,7 +34,12 @@ joint_focus = {
 	y = 0
 	#relative_position_id = 
 	cost = 8
-	joint_trigger = {}
+	joint_trigger = {
+		is_in_faction_with = DKR
+		OR = {
+
+		}
+	}
 	available = {}
 	bypass = {}
 	cancel_if_invalid = yes
