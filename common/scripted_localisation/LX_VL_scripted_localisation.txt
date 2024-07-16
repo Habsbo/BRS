@@ -474,6 +474,16 @@ defined_text = {
 		}
 		localization_key = CL_Cardinal
 	}
+	#总统制下的责任内阁制
+	text = {
+		trigger = {
+			FROM = {
+				has_idea = br_laws_proxy
+				has_idea = br_laws_premier
+			}
+		}
+		localization_key = CL_Premier
+	}
 	text = { localization_key = VL_normal_status }
 }
 

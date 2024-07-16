@@ -43,48 +43,82 @@ defined_text = {
 	text = { localization_key = VL_desc }
 }
 #FRA
-	#Leon blum
+#leon blum
+#edouard daladier
+#maurice thorez
 	defined_text = {
 		name = FRA_VL_picture
 		text = {
 			trigger = { has_idea = leon_blum_hog }
 			localization_key = GFX_portrait_fra_leon_blum
 		}
+		text = {
+			trigger = { has_idea = maurice_thorez_hog }
+			localization_key = GFX_portrait_fra_maurice_thorez
+		}
 		text = { localization_key = GFX_leader_unknown }
 	}
-
 	defined_text = {
 		name = FRA_VL_name
 		text = {
 			trigger = { has_idea = leon_blum_hog }
-			localization_key = VL_name_bleon_blum
+			localization_key = VL_name_leon_blum
+		}
+		text = {
+			trigger = { has_idea = edouard_daladier_hog }
+			localization_key = VL_name_edouard_daladier
+		}
+		text = {
+			trigger = { has_idea = maurice_thorez_hog }
+			localization_key = VL_name_maurice_thorez
 		}
 		text = { localization_key = VL_name }
 	}
-
 	defined_text = {
 		name = FRA_VL_state
 		text = {
 			trigger = { has_idea = leon_blum_hog }
-			localization_key = VL_state_bleon_blum
+			localization_key = VL_state_leon_blum
+		}
+		text = {
+			trigger = { has_idea = edouard_daladier_hog }
+			localization_key = VL_state_edouard_daladier
+		}
+		text = {
+			trigger = { has_idea = maurice_thorez_hog }
+			localization_key = VL_state_maurice_thorez
 		}
 		text = { localization_key = VL_state }
 	}
-
 	defined_text = {
 		name = FRA_VL_Dip_state
 		text = {
 			trigger = { has_idea = leon_blum_hog }
-			localization_key = VL_Dip_state_bleon_blum
+			localization_key = VL_Dip_state_leon_blum
+		}
+		text = {
+			trigger = { has_idea = edouard_daladier_hog }
+			localization_key = VL_Dip_state_edouard_daladier
+		}
+		text = {
+			trigger = { has_idea = maurice_thorez_hog }
+			localization_key = VL_Dip_state_maurice_thorez
 		}
 		text = { localization_key = VL_Dip_state }
 	}
-
 	defined_text = {
 		name = FRA_VL_desc
 		text = {
 			trigger = { has_idea = leon_blum_hog }
-			localization_key = VL_desc_bleon_blum
+			localization_key = VL_desc_leon_blum
+		}
+		text = {
+			trigger = { has_idea = edouard_daladier_hog }
+			localization_key = VL_desc_state_edouard_daladier
+		}
+		text = {
+			trigger = { has_idea = maurice_thorez_hog }
+			localization_key = VL_desc_maurice_thorez
 		}
 		text = { localization_key = VL_desc }
 	}

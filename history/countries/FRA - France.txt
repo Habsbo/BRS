@@ -1140,7 +1140,7 @@ if = {
 set_cosmetic_tag = FRA_republic
 #法律
 add_ideas = {
-	br_laws_elected_representative
+	br_laws_proxy
 	br_laws_premier
 	br_laws_asset
 	br_laws_national_state

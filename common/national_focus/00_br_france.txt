@@ -132,7 +132,11 @@
 
 		cost = 8
 		
-		available = {}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = has_hog_from_communism_party_tt
+			}
+		}
 				
 		bypass = {}
 		
@@ -157,7 +161,11 @@
 
 		cost = 8
 		
-		available = {}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = has_hog_from_republicanism_party_tt
+			}
+		}
 				
 		bypass = {}
 		
