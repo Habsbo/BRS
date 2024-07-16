@@ -1,4 +1,4 @@
-br_laws_decisions = {
+br_politicals_and_laws_decisions = {
 	br_laws_decisions_conflicts_mission = { #抵抗法律变化
 
 		icon = generic_research

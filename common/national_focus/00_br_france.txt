@@ -20,7 +20,7 @@
 		icon = GFX_goal_generic_national_unity
 		#prerequisite = { focus =  }
 		#mutually_exclusive = { focus =  }
-		x = 20
+		x = 30
 		y = 0
 		#relative_position_id =
 
@@ -43,31 +43,6 @@
 			add_popularity = { ideology = con_socialism popularity = 0.03 }
 			add_popularity = { ideology = demo_socialism popularity = 0.05 }
 		}
-		
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
-		id = FRA_prohibit_rassemblement_national
-		icon = GFX_goal_generic_forceful_treaty
-		prerequisite = { focus = FRA_publicizing_front_populaire }
-		mutually_exclusive = { focus = FRA_restore_justice }
-		x = -2
-		y = 2
-		relative_position_id = FRA_publicizing_front_populaire
-
-		cost = 8
-		
-		available = {}
-				
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -146,7 +121,18 @@
 		
 		complete_tooltip = {}
 		
-		completion_reward = {}
+		completion_reward = {
+			set_party_name = {
+				ideology = vanwardism
+				long_name = FRA_vanwardism_party_pcf_name_long
+				name = FRA_vanwardism_party_pcf_name_short
+			}
+			set_party_name = {
+				ideology = sci_socialism
+				long_name = FRA_sci_socialism_party_pcf_name_long
+				name = FRA_sci_socialism_party_pcf_name_short
+			}
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -529,7 +515,14 @@
 
 		cost = 8
 		
-		available = {}
+		available = {
+			OR = {
+				br_ideology_socialism_ruling = yes
+				custom_trigger_tooltip = {
+					tooltip = has_hog_from_communism_party_tt
+				}
+			}
+		}
 				
 		bypass = {}
 		
@@ -549,7 +542,7 @@
 		prerequisite = { focus = FRA_internationale }
 		#mutually_exclusive = { focus = FRA_internationale }
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = FRA_internationale
 
 		cost = 8
@@ -985,15 +978,21 @@
 	focus = {
 		id = FRA_affairs_about_french_africa
 		icon = GFX_
-		prerequisite = { focus = FRA_internationale }
+		#prerequisite = {
+		#	focus = FRA_march_over_to_palais_du_luxembourg
+		#	focus = FRA_restore_justice
+		#	focus = FRA_prohibit_rassemblement_national
+		#}
 		#mutually_exclusive = { focus = FRA_internationale }
-		x = 26
+		x = 0
 		y = 1
-		relative_position_id = FRA_internationale
+		relative_position_id =  FRA_restore_justice
 
-		cost = 8
+		cost = 0
 		
-		available = {}
+		available = {
+			always = no
+		}
 				
 		bypass = {}
 		
@@ -1265,7 +1264,7 @@
 		id = FRA_rassemblement_national_rising
 		icon = GFX_focus_generic_strike_at_democracy2
 		mutually_exclusive = { focus = FRA_publicizing_front_populaire }
-		x = 12
+		x = 10
 		y = 0
 
 		cost = 8
@@ -1289,7 +1288,7 @@
 		icon = GFX_focus_generic_citizen_power_2
 		prerequisite = { focus = FRA_rassemblement_national_rising focus = FRA_publicizing_front_populaire }
 		#mutually_exclusive = { focus = FRA_prohibit_rassemblement_national }
-		x = 4
+		x = 10
 		y = 1
 		relative_position_id = FRA_rassemblement_national_rising
 
@@ -1318,6 +1317,31 @@
 			focus = FRA_prohibit_rassemblement_national
 		}
 		x = 0
+		y = 1
+		relative_position_id = FRA_pull_centre_over_to_our_side
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = FRA_prohibit_rassemblement_national
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = FRA_publicizing_front_populaire }
+		mutually_exclusive = { focus = FRA_restore_justice }
+		x = 2
 		y = 1
 		relative_position_id = FRA_pull_centre_over_to_our_side
 
@@ -1367,9 +1391,9 @@
 		icon = GFX_
 		prerequisite = { focus = FRA_rassemblement_national_rising }
 		mutually_exclusive = { focus = FRA_restore_justice }
-		x = 2
-		y = 2
-		relative_position_id = FRA_rassemblement_national_rising
+		x = -2
+		y = 1
+		relative_position_id = FRA_pull_centre_over_to_our_side
 
 		cost = 8
 		

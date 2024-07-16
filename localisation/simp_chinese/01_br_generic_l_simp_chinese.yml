@@ -20,6 +20,8 @@
 
  br_countryleader_custom_flavour_trigger_tt: "是拥有风味化称呼的国家"
 #
+ br_politicals_and_laws_decisions: "[root.GetName]的政治与法律境况"
+#
  black_force_dynamic_modifier: "黑军"
  red_army_dynamic_modifier: "红军"
  land_force_alt_dynamic_modifier: "[FROM.GetAdjective]陆军"

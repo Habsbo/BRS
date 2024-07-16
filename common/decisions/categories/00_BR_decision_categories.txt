@@ -1,4 +1,4 @@
-br_laws_decisions = {
+br_politicals_and_laws_decisions = {
 	icon = SWI_absolute_neutrality
 
 	allowed = { always = yes }
