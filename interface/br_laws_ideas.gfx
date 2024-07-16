@@ -81,6 +81,11 @@ spriteTypes = {
 		texturefile = "gfx/interface/laws/culture_laws/laws_apartheid.png"
 	}
 
+	spriteType = {
+		name = "GFX_idea_br_laws_national_state"
+		texturefile = "gfx/interface/laws/culture_laws/laws_national_state.png"
+	}
+
 #faith laws
 	spriteType = {
 		name = "GFX_idea_br_laws_spiritual"
