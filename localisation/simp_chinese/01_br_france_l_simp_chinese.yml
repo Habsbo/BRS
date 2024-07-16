@@ -22,6 +22,6 @@
  VL_desc_maurice_thorez: "§g§!"
 
 #
- has_hog_from_communism_party_tt: "拥有一名来自§7[root.GetAdjective]共产党§!的§Y政府首脑§!"
- has_hog_from_socialism_party_tt: "拥有一名来自§7[root.GetAdjective]的社会主义或左翼民主主义党派§!的§Y政府首脑§!"
- has_hog_from_republicanism_party_tt: "拥有一名来自§7[root.GetAdjective]的民主共和主义党派§!的§Y政府首脑§!"
+ has_hog_from_communism_party_tt: "拥有一名来自§R[root.GetAdjective]共产党§!的§Y政府首脑§!"
+ has_hog_from_socialism_party_tt: "拥有一名来自§B[root.GetAdjective]的社会主义或左翼民主主义党派§!的§Y政府首脑§!"
+ has_hog_from_republicanism_party_tt: "拥有一名来自§B[root.GetAdjective]的民主共和主义党派§!的§Y政府首脑§!"
