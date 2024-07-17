@@ -30,6 +30,7 @@ l_simp_chinese:
  chemical_educator: "化学教育家"
  head_of_national_security: "国防安全部长"
  piano_diplomatist: "钢琴外交官"
+ responsible_banker: "尽职的银行家"
  
  VL_name_Moscicki: "$Ignacy_Moscicki$"
  VL_trait_Moscicki: "§Y$chemical_educator$§!\n  - $MODIFIER_POLITICAL_POWER_FACTOR$: §R-5%§!\n  - $MODIFIER_LOCAL_RESOURCES_FACTOR$: §G+10.00%§!\n  - $MODIFIER_RESEARCH_SPEED_FACTOR$: §G+5.00%§!"

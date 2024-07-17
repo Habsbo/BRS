@@ -90,13 +90,8 @@ ideas = {
 			}
 
 			removal_cost = -1
-			
-			modifier = {
-				stability_factor = 0.30
-				consumer_goods_factor = -0.10
-			}
 
-			traits = {  }
+			traits = { responsible_banker }
 		}
 		
 		POL_leagcy_of_grabski = {

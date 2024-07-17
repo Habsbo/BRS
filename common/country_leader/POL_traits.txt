@@ -79,6 +79,17 @@ leader_traits = {
 		}
 	}
 
+	responsible_banker = {
+		random = no
+		
+		stability_factor = 0.30
+		consumer_goods_factor = -0.10
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
 	piano_diplomatist = {
 		random = no
 		sprite = 13
