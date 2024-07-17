@@ -103,11 +103,17 @@ set_variable = { POL_TGR_party_popularity_stability_factor_var = 0 }
 
 add_ideas = {
 	POL_hanging_throne
-	POL_tight_grain_reserves_5
+	POL_army_buff
+	POL_army_buff_hidden
+	POL_wladyslaw_wroblewski
+	POL_leagcy_of_grabski
+	POL_nominal_sejm
 	POL_socialist_covert_activities
-	POL_nationalist_military
-	POL_nationalist_military_hidden
-	POL_spear_of_revenge
+	POL_tight_grain_reserves_5
+	POL_immigration_craze
+	POL_underdeveloped_southern_region
+	POL_german_influence
+	POL_poor_ethnic_policies
 }
 
 recruit_character = POL_Parliament
