@@ -155,6 +155,7 @@
  knight_king: "骑士王"
  knight_king_hog: "骑士王"
  labour_lawyer: "劳动者的律师"
+ prrrs_leader: "激进党领袖"
 #
  communism_rising: "社会主义崛起"
  communism_rising_desc: ""
@@ -202,3 +203,7 @@
  pride_our_nation_desc: ""
  lebensraum: "生存空间"
  lebensraum_desc: ""
+#
+ br_will_add_popularity_of_our_rulling_party_tt: "将会增加§Y执政党§!的§G选举人气§!！"
+ br_will_add_popularity_of_our_left_parties_tt: "将会增加§R左翼党派§!的§G选举人气§!！"
+ br_will_add_popularity_of_our_right_parties_tt: "将会增加§L右翼党派§!的§G选举人气§!！"

@@ -26,7 +26,9 @@
 
 		cost = 8
 		
-		available = {}
+		available = {
+			#
+		}
 				
 		bypass = {}
 		
@@ -42,6 +44,15 @@
 			add_popularity = { ideology = sci_socialism popularity = 0.02 }
 			add_popularity = { ideology = con_socialism popularity = 0.03 }
 			add_popularity = { ideology = demo_socialism popularity = 0.05 }
+			#
+			if = {
+				limit = {
+					has_country_leader = {
+						character = FRA_leon_blum
+						ruling_only = yes
+					}
+				}
+			}
 		}
 		
 		ai_will_do = { factor = 1 }
@@ -474,7 +485,9 @@
 		
 		complete_tooltip = {}
 		
-		completion_reward = {}
+		completion_reward = {
+			add_research_slot = 1
+		}
 		
 		ai_will_do = { factor = 1 }
 	}

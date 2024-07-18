@@ -35,3 +35,12 @@ GRE_civilwar_dc_var_add = {
 		add_to_variable = { gre_civil_war_divisions_counter_var = 1 }
 	}
 }
+
+
+br_will_add_popularity_of_our_left_parties = {
+	custom_effect_tooltip = br_will_add_popularity_of_our_left_parties_tt
+}
+
+br_will_add_popularity_of_our_right_parties = {
+	custom_effect_tooltip = br_will_add_popularity_of_our_right_parties_tt
+}

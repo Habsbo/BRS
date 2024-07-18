@@ -831,3 +831,66 @@ country_event = { #
 		ai_chance = { factor = 5 }
 	}
 }
+
+#
+add_namespace = br_north_afican_war
+#
+country_event = { #
+	id = br_north_afican_war.1
+	title = br_north_afican_war.1.title
+	desc = br_north_afican_war.1.desc
+	picture = GFX_report_event_spr_army_of_africa
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			#
+		}
+	}
+
+	option = {
+		name = br_north_afican_war.1.a #
+
+		add_political_power = -200
+		add_war_support = 0.05
+		add_stability = -0.10
+		add_popularity = { ideology = con_socialism popularity = 0.05 }
+		add_popularity = { ideology = demo_socialism popularity = 0.05 }
+
+		br_will_add_popularity_of_our_left_parties = yes
+		br_will_add_popularity_of_our_rulling_party = yes
+
+		ai_chance = { factor = 10 }
+	}
+
+	option = {
+		name = br_north_afican_war.1.b #
+
+		add_political_power = -50
+		add_war_support = 0.05
+		add_stability = -0.05
+		add_popularity = { ideology = con_socialism popularity = 0.01 }
+		add_popularity = { ideology = demo_socialism popularity = 0.01 }
+
+		br_will_add_popularity_of_our_left_parties = yes
+		br_will_add_popularity_of_our_rulling_party = yes
+
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = br_north_afican_war.1.c #
+
+		add_political_power = 150
+		add_war_support = -0.05
+		add_stability = 0.10
+		add_popularity = { ideology = con_socialism popularity = -0.02 }
+		add_popularity = { ideology = demo_socialism popularity = -0.02 }
+
+		br_will_add_popularity_of_our_right_parties = yes
+
+		ai_chance = { factor = 5 }
+	}
+}

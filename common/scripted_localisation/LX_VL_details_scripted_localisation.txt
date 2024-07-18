@@ -53,6 +53,10 @@ defined_text = {
 			localization_key = GFX_portrait_fra_leon_blum
 		}
 		text = {
+			trigger = { has_idea = edouard_daladier_hog }
+			localization_key = GFX_portrait_FRA_edouard_daladier
+		}
+		text = {
 			trigger = { has_idea = maurice_thorez_hog }
 			localization_key = GFX_portrait_fra_maurice_thorez
 		}

@@ -1,4 +1,61 @@
 characters={
+#present
+	FRA_leon_blum={ #莱昂·布鲁姆
+		name=FRA_leon_blum
+		portraits={
+			army={
+				small="GFX_idea_leon_blum"
+			}
+			civilian = {
+				large="GFX_portrait_fra_leon_blum"
+			}
+		}
+		country_leader={
+			ideology=socialism
+			traits={ reluctant_interventionist stout_defender }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = leon_blum
+			allowed  = { original_tag  = FRA }
+			available  = {
+				NOT  = {
+					has_country_leader  = { character  = FRA_philippe_petain ruling_only  = yes }
+				}
+				if  = {
+					limit  = { has_dlc = "Man the Guns" }
+					NOT  = { has_autonomy_state  = autonomy_supervised_state }
+				}
+			}
+			traits  = { democratic_reformer }
+
+			do_effect  = {
+				NOT  = { has_government  = democratic }
+			}
+			ai_will_do  = {
+				factor  = 0.000
+			}
+		}
+		advisor={
+			slot = head_of_gov
+			idea_token = leon_blum_hog
+			allowed  = { original_tag  = FRA }
+			available  = {
+				if  = {
+					limit  = { has_dlc = "Man the Guns" }
+					not  = { has_autonomy_state  = autonomy_supervised_state }
+				}
+				br_head_of_gov_generic_trigger = yes
+			}
+			traits  = {}
+			do_effect  = {}
+			on_add  = {}
+			cost = 0
+			can_be_fired = no
+		}
+	}
 	FRA_pierre_laval={ #Democratic Leader 皮埃尔·赖伐尔
 		name=FRA_pierre_laval
 		portraits={
@@ -19,13 +76,25 @@ characters={
 		portraits={
 			civilian={
 				large=GFX_portrait_FRA_edouard_daladier
+				small=GFX_portrait_FRA_rene_nicod_small
 			}
 		}
-		country_leader={
-			ideology=socialism
-			traits={ stout_defender }
-			expire="1965.1.1.1"
-			id=-1
+		advisor={
+			slot = head_of_gov
+			idea_token = edouard_daladier_hog
+			allowed  = { original_tag  = FRA }
+			available  = {
+				if  = {
+					limit  = { has_dlc = "Man the Guns" }
+					not  = { has_autonomy_state  = autonomy_supervised_state }
+				}
+				br_head_of_gov_generic_trigger = yes
+			}
+			traits  = { prrrs_leader stout_defender }
+			do_effect  = {}
+			on_add  = {}
+			cost = 0
+			can_be_fired = no
 		}
 	}
 
@@ -36,12 +105,12 @@ characters={
 				large=GFX_portrait_FRA_denis_guillaumat
 			}
 		}
-		country_leader={
-			ideology=centrism
-			traits={ editor eager_collaborator }
-			expire="1949.1.1.12"
-			id=-1
-		}
+		#country_leader={
+		#	ideology=centrism
+		#	traits={ editor eager_collaborator }
+		#	expire="1949.1.1.12"
+		#	id=-1
+		#}
 	}
 
 	FRA_maurice_thorez={ #Communist Leader 莫里斯·多列士
@@ -294,7 +363,7 @@ characters={
 		}
 	}
 
-	FRA_charles_de_gaulle={
+	FRA_charles_de_gaulle={ #戴高乐
 		name=FRA_charles_de_gaulle
 		portraits={
 			army={
@@ -1091,57 +1160,6 @@ characters={
 	### POLITICAL ADVISORS ###
 
 	# Thorez up there
-
-	FRA_leon_blum={
-		name=FRA_leon_blum
-		portraits={
-			army={
-				small="GFX_idea_leon_blum"
-			}
-			civilian = {
-				large="GFX_portrait_fra_leon_blum"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = leon_blum
-			allowed  = { original_tag  = FRA }
-			available  = {
-				NOT  = {
-					has_country_leader  = { character  = FRA_philippe_petain ruling_only  = yes }
-				}
-				if  = {
-					limit  = { has_dlc = "Man the Guns" }
-					NOT  = { has_autonomy_state  = autonomy_supervised_state }
-				}
-			}
-			traits  = { democratic_reformer }
-
-			do_effect  = {
-				NOT  = { has_government  = democratic }
-			}
-			ai_will_do  = {
-				factor  = 0.000
-			}
-		}
-		advisor={
-			slot = head_of_gov
-			idea_token = leon_blum_hog
-			allowed  = { original_tag  = FRA }
-			available  = {
-				if  = {
-					limit  = { has_dlc = "Man the Guns" }
-					not  = { has_autonomy_state  = autonomy_supervised_state }
-				}
-				br_head_of_gov_generic_trigger = yes
-			}
-			traits  = {}
-			do_effect  = {}
-			on_add  = {}
-			cost = 0
-			can_be_fired = no
-		}
-	}
 
 	FRA_marcel_bucard={
 		name=FRA_marcel_bucard

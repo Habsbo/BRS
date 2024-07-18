@@ -1136,9 +1136,9 @@ if = {
 	}
 }
 
-#国名
+#国名 - country name
 set_cosmetic_tag = FRA_republic
-#法律
+#法律 - laws
 add_ideas = {
 	br_laws_proxy
 	br_laws_premier
@@ -1149,9 +1149,10 @@ add_ideas = {
 	#
 	
 	#
-	leon_blum_hog
+	edouard_daladier_hog
 }
-#国家关系
+#国家关系 - gov relationship
+give_guarantee = CZE
 set_autonomy = {
 	target = ALG
 	autonomous_state = autonomy_br_self_governance
