@@ -402,6 +402,7 @@ focus_tree = {
 			add_to_variable = { nic_consumer_goods_expected_value = -0.05 tooltip = consumer_goods_expected_value_tt }
 			add_to_variable = { nic_production_speed_buildings_factor = 0.05 tooltip = production_speed_buildings_factor_tt }
 			#
+			add_cic = 9000
 		}
 		
 		ai_will_do = { factor = 1 }
@@ -427,7 +428,13 @@ focus_tree = {
 		
 		complete_tooltip = {}
 		
-		completion_reward = {}
+		completion_reward = {
+			6 = {
+				add_resource = { type = oil amount = 6 }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = industrial_complex level = 2 }
+			}
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -452,7 +459,20 @@ focus_tree = {
 		
 		complete_tooltip = {}
 		
-		completion_reward = {}
+		completion_reward = {
+			#
+			custom_effect_tooltip = national_industry_civilian_dynamic_modifier_added
+			add_to_variable = { nic_consumer_goods_expected_value = -0.05 tooltip = consumer_goods_expected_value_tt }
+			add_to_variable = { nic_production_speed_buildings_factor = 0.05 tooltip = production_speed_buildings_factor_tt }
+			#
+			6 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = infrastructure level = 1 }
+				add_building_construction = { type = industrial_complex level = 2 }
+			}
+			#
+			add_cic = 3000
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -477,7 +497,18 @@ focus_tree = {
 		
 		complete_tooltip = {}
 		
-		completion_reward = {}
+		completion_reward = {
+			#
+			custom_effect_tooltip = national_industry_civilian_dynamic_modifier_added
+			add_to_variable = { nic_consumer_goods_expected_value = -0.05 tooltip = consumer_goods_expected_value_tt }
+			add_to_variable = { nic_production_speed_buildings_factor = 0.05 tooltip = production_speed_buildings_factor_tt }
+			#
+			6 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = infrastructure level = 1 }
+				add_building_construction = { type = industrial_complex level = 1 }
+			}
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -502,7 +533,9 @@ focus_tree = {
 		
 		complete_tooltip = {}
 		
-		completion_reward = {}
+		completion_reward = {
+			add_research_slot = 1
+		}
 		
 		ai_will_do = { factor = 1 }
 	}

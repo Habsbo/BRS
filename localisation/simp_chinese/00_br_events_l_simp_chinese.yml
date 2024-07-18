@@ -101,10 +101,26 @@
 
 
 #
- br_rif.1.title: "§G$RIF$§!抵抗者宣告夺取§G$MOR$§!政权"
- br_rif.1.desc: "§G$RIF$§!抵抗者们已经取得了初步胜利，我们的军队被驱逐出西属北非，摩洛哥的国王也被这群柏柏尔人擒获。"
- br_rif.1.a: "我们只能接受这一现实。"
- br_rif.1.b: "我们不能放弃北非"
+ br_rif.1.title: ""
+ br_rif.1.desc: ""
+ br_rif.1.a: ""
+ br_rif.1.b: ""
+ br_rif.11.title: "§G$RIF$§!的抵抗者"
+ br_rif.11.desc: ""
+ br_rif.11.a: "我们失去的是鲜血，获得的是自由！"
+ br_rif.12.title: "§G$RIF$§!的通牒"
+ br_rif.12.desc: ""
+ br_rif.12.a: "我们干什么要违抗法国人？"
+ br_rif.12.b: ""
+ br_rif.13.title: "§G[FROM.GETName]§!拒绝合作"
+ br_rif.13.desc: ""
+ br_rif.13.a: "这群帝国主义的走狗！"
+ br_rif.13.b: "等着吧，我们自己也能行！"
+
+ br_rif.21.title: "§G$RIF$§!抵抗者宣告夺取§G$MOR$§!政权"
+ br_rif.21.desc: "§G$RIF$§!抵抗者们已经取得了初步胜利，我们的军队被驱逐出西属北非，摩洛哥的国王也被这群柏柏尔人擒获。"
+ br_rif.21.a: "我们只能接受这一现实。"
+ br_rif.21.b: "我们不能放弃北非"
 
 #
  br_political_actions.1.title: "[FROM.GetName]无政府主义者的抵抗"

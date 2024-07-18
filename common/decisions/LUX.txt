@@ -1067,7 +1067,7 @@ br_electrification_of_benelux = {
 		}
 
 		state_target = yes
-		on_map_mode = map_and_decisions_view
+		on_map_mode = decision_view_only
 
 		complete_effect = {
 			FROM = {
@@ -1104,7 +1104,7 @@ br_electrification_of_benelux = {
 		}
 
 		state_target = yes
-		on_map_mode = map_and_decisions_view
+		on_map_mode = decision_view_only
 
 		remove_effect = {
 			FROM = {

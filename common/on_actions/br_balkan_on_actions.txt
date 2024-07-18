@@ -14,16 +14,6 @@ on_actions = {
 			RUS = {
 				set_country_flag = br_cl_status_flavour_flag
 			}
-			SPR = {
-				set_country_flag = br_na_war_aggressor_flag
-				declare_war_on = { target = RIF type = annex_everything }
-			}
-			RIF = {
-				set_country_flag = br_na_war_resister_flag
-				activate_mission = br_na_war_mission.1
-				declare_war_on = { target = MOR type = annex_everything }
-			}
-			MOR = { set_country_flag = br_na_war_morocco_flag } 
 			every_country = {
 				limit = { is_major = yes }
 				set_variable = { state_rank = 0 }

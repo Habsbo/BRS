@@ -6,7 +6,7 @@
 		
 		modifier = {
 			add = 20
-			original_tag = GER
+			has_cosmetic_tag = DKR
 		}
 	}
 	
@@ -14,18 +14,64 @@
 
 	continuous_focus_position = { x = 50 y = 1500 }
 
-	shared_focus = DEUTSCH_kaiserreich_power
+	#shared_focus = DEUTSCH_kaiserreich_power
 
 #DKR
 	#
 	focus = {
-		id = DKR_1
+		id = DKR_four_years_plan
 		icon = GFX_focus_generic_treaty
 		#prerequisite = { focus =  }
 		#mutually_exclusive = { focus =  }
-		x = 0
+		x = 10
 		y = 0
 		#relative_position_id = 
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = DKR_1
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = DKR_four_years_plan }
+		#mutually_exclusive = { focus =  }
+		x = -3
+		y = 1
+		relative_position_id = DKR_four_years_plan
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = DKR_1
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = DKR_four_years_plan }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = DKR_four_years_plan
 		
 		cost = 8
 		
@@ -87,14 +133,62 @@
 
 		ai_will_do = { factor = 1 }
 	}
+###
+	focus = {
+		id = DKR_dismantle_belgium
+		icon = GFX_goal_generic_political_pressure
+		mutually_exclusive = { focus = DKR_left_belgium }
+		x = 20
+		y = 0
+		#relative_position_id = 
+		
+		cost = 0
+		
+		available = { always = no }
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = DKR_left_belgium
+		icon = GFX_focus_generic_treaty
+		mutually_exclusive = { focus = DKR_dismantle_belgium }
+		x = 2
+		y = 0
+		relative_position_id = DKR_dismantle_belgium
+		
+		cost = 0
+		
+		available = { always = no }
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
 	focus = {
 		id = DKR_1
 		icon = GFX_focus_generic_treaty
-		#prerequisite = { focus =  }
+		prerequisite = {
+			focus = DKR_dismantle_belgium
+			focus = DKR_left_belgium
+		}
 		#mutually_exclusive = { focus =  }
-		x = 0
-		y = 0
-		#relative_position_id = 
+		x = 1
+		y = 1
+		relative_position_id = DKR_dismantle_belgium
 		
 		cost = 8
 		
@@ -110,18 +204,24 @@
 
 		ai_will_do = { factor = 1 }
 	}
+###
 	focus = {
-		id = DKR_1
-		icon = GFX_focus_generic_treaty
+		id = DKR_integrate_alsace
+		icon = GFX_goal_generic_major_alliance
 		#prerequisite = { focus =  }
 		#mutually_exclusive = { focus =  }
-		x = 0
+		x = 24
 		y = 0
 		#relative_position_id = 
 		
 		cost = 8
 		
-		available = {}
+		available = {
+			28 = {
+				is_owned_and_controlled_by = root
+				compliance > 90
+			}
+		}
 		bypass = {}
 		
 		cancel_if_invalid = yes
@@ -129,9 +229,10 @@
 		available_if_capitulated = no
 		
 		complete_tooltip = {}
-		completion_reward = {}
+		completion_reward = {
+			28 = { add_core_of = root }
+		}
 
 		ai_will_do = { factor = 1 }
 	}
-
 }

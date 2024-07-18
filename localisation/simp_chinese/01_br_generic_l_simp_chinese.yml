@@ -17,7 +17,7 @@
  communist_influence_1_desc: "$communist_influence_desc$"
  communist_influence_2: "$communist_influence$"
  communist_influence_2_desc: "$communist_influence_desc$"
-
+ br_can_not_change_laws_flag: "§R因国家精神而无法改变法律！§!"
  br_countryleader_custom_flavour_trigger_tt: "是拥有风味化称呼的国家"
 #
  br_politicals_and_laws_decisions: "[root.GetName]的政治与法律境况"

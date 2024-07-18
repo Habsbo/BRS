@@ -8,7 +8,7 @@
 ### search_filters = {FOCUS_FILTER_ANNEXATION}
 #complete_tooltip = {}
 shared_focus = {
-	id = DEUTSCH_1
+	id = DEUTSCH_
 	icon = GFX_
 	#prerequisite = { focus = }
 	#mutually_exclusive = { focus =  }
@@ -83,7 +83,7 @@ joint_focus = {
 	ai_will_do = { factor = 1 }
 }
 joint_focus = {
-	id = DEUTSCH_economics
+	id = DEUTSCH_schacht_plan
 	icon = GFX_focus_generic_secret_service_agency
 	prerequisite = { focus = DEUTSCH_kaiserreich_power }
 	#mutually_exclusive = { focus =  }

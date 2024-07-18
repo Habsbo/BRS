@@ -1,9 +1,5 @@
 ﻿l_simp_chinese:
 #中国
- MNG: "大明帝国"
- MNG_DEF: "大明帝国"
- MNG_ADJ: "中国"
-
  QNG: "大清帝国"
  QNG: "大清帝国"
  QNG_ADJ: "大清帝国"
@@ -17,6 +13,9 @@
  CCP: "中国共产党"
  CCP_DEF: "中国共产党"
  CCP_ADJ: "中国"
+ MNG: "大明帝国"
+ MNG_DEF: "大明帝国"
+ MNG_ADJ: "中国"
 #法国
  FRA_republic: "法兰西共和国"
  FRA_republic_DEF: "法兰西共和国"

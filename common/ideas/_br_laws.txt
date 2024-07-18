@@ -14,6 +14,7 @@ ideas = {
 				has_idea = br_laws_loyalist
 				#
 				br_ideology_authoritarian_ruling = yes
+				#
 			}
 
 			removal_cost = -1
@@ -23,7 +24,7 @@ ideas = {
 			}
 
 			allowed_to_remove = {
-				#
+				NOT = { has_country_flag = br_can_not_change_laws_flag }
 			}
 
 			on_add = {
@@ -63,7 +64,7 @@ ideas = {
 			}
 
 			allowed_to_remove = {
-				#
+				NOT = { has_country_flag = br_can_not_change_laws_flag }
 			}
 
 			on_add = {
@@ -98,7 +99,7 @@ ideas = {
 			}
 
 			allowed_to_remove = {
-				#
+				NOT = { has_country_flag = br_can_not_change_laws_flag }
 			}
 			
 			on_add = {
@@ -132,7 +133,7 @@ ideas = {
 			}
 
 			allowed_to_remove = {
-				#
+				NOT = { has_country_flag = br_can_not_change_laws_flag }
 			}
 
 			cancel_if_invalid = yes
@@ -158,7 +159,7 @@ ideas = {
 			}
 
 			allowed_to_remove = {
-				#
+				NOT = { has_country_flag = br_can_not_change_laws_flag }
 			}
 			
 			on_add = {
@@ -188,7 +189,7 @@ ideas = {
 			}
 
 			allowed_to_remove = {
-				#
+				NOT = { has_country_flag = br_can_not_change_laws_flag }
 			}
 			
 			on_add = {
@@ -218,7 +219,7 @@ ideas = {
 			}
 
 			allowed_to_remove = {
-				#
+				NOT = { has_country_flag = br_can_not_change_laws_flag }
 			}
 			
 			on_add = {
@@ -252,7 +253,7 @@ ideas = {
 			}
 
 			allowed_to_remove = {
-				#
+				NOT = { has_country_flag = br_can_not_change_laws_flag }
 			}
 
 			on_add = {
@@ -290,7 +291,7 @@ ideas = {
 			}
 
 			allowed_to_remove = {
-				#
+				NOT = { has_country_flag = br_can_not_change_laws_flag }
 			}
 
 			on_add = {
@@ -319,7 +320,7 @@ ideas = {
 			}
 
 			allowed_to_remove = {
-				#
+				NOT = { has_country_flag = br_can_not_change_laws_flag }
 			}
 
 			on_add = {
@@ -349,7 +350,7 @@ ideas = {
 			}
 
 			allowed_to_remove = {
-				#
+				NOT = { has_country_flag = br_can_not_change_laws_flag }
 			}
 			
 			cancel_if_invalid = yes
@@ -369,7 +370,7 @@ ideas = {
 			}
 
 			allowed_to_remove = {
-				#
+				NOT = { has_country_flag = br_can_not_change_laws_flag }
 			}
 			
 			cancel_if_invalid = yes
@@ -398,7 +399,7 @@ ideas = {
 			}
 
 			allowed_to_remove = {
-				#
+				NOT = { has_country_flag = br_can_not_change_laws_flag }
 			}
 
 			on_add = {
@@ -429,7 +430,7 @@ ideas = {
 			}
 
 			allowed_to_remove = {
-				#
+				NOT = { has_country_flag = br_can_not_change_laws_flag }
 			}
 
 			cancel_if_invalid = yes
@@ -448,7 +449,7 @@ ideas = {
 			}
 
 			allowed_to_remove = {
-				#
+				NOT = { has_country_flag = br_can_not_change_laws_flag }
 			}
 
 			cancel_if_invalid = yes
@@ -468,7 +469,7 @@ ideas = {
 			}
 
 			allowed_to_remove = {
-				#
+				NOT = { has_country_flag = br_can_not_change_laws_flag }
 			}
 
 			cancel_if_invalid = yes
@@ -491,7 +492,7 @@ ideas = {
 			}
 
 			allowed_to_remove = {
-				#
+				NOT = { has_country_flag = br_can_not_change_laws_flag }
 			}
 
 			cancel_if_invalid = yes
@@ -523,7 +524,7 @@ ideas = {
 			}
 
 			allowed_to_remove = {
-				#
+				NOT = { has_country_flag = br_can_not_change_laws_flag }
 			}
 			
 			cancel_if_invalid = yes
@@ -542,7 +543,7 @@ ideas = {
 			}
 
 			allowed_to_remove = {
-				#
+				NOT = { has_country_flag = br_can_not_change_laws_flag }
 			}
 			
 			cancel_if_invalid = no
@@ -560,7 +561,7 @@ ideas = {
 			}
 
 			allowed_to_remove = {
-				#
+				NOT = { has_country_flag = br_can_not_change_laws_flag }
 			}
 			
 			default = yes
@@ -578,7 +579,7 @@ ideas = {
 			}
 
 			allowed_to_remove = {
-				#
+				NOT = { has_country_flag = br_can_not_change_laws_flag }
 			}
 			
 			cancel_if_invalid = no
@@ -595,7 +596,7 @@ ideas = {
 			}
 
 			allowed_to_remove = {
-				#
+				NOT = { has_country_flag = br_can_not_change_laws_flag }
 			}
 			
 			cancel_if_invalid = no
@@ -612,7 +613,7 @@ ideas = {
 			}
 
 			allowed_to_remove = {
-				#
+				NOT = { has_country_flag = br_can_not_change_laws_flag }
 			}
 			
 			cancel_if_invalid = no
@@ -636,7 +637,7 @@ ideas = {
 			}
 
 			allowed_to_remove = {
-				#
+				NOT = { has_country_flag = br_can_not_change_laws_flag }
 			}
 			
 			cancel_if_invalid = no
@@ -654,7 +655,7 @@ ideas = {
 			}
 
 			allowed_to_remove = {
-				#
+				NOT = { has_country_flag = br_can_not_change_laws_flag }
 			}
 			
 			default = yes
@@ -673,7 +674,7 @@ ideas = {
 			}
 
 			allowed_to_remove = {
-				#
+				NOT = { has_country_flag = br_can_not_change_laws_flag }
 			}
 			
 			cancel_if_invalid = no
@@ -691,7 +692,7 @@ ideas = {
 			}
 
 			allowed_to_remove = {
-				#
+				NOT = { has_country_flag = br_can_not_change_laws_flag }
 			}
 			
 			cancel_if_invalid = no
@@ -709,7 +710,7 @@ ideas = {
 			}
 
 			allowed_to_remove = {
-				#
+				NOT = { has_country_flag = br_can_not_change_laws_flag }
 			}
 			
 			cancel_if_invalid = no
@@ -739,7 +740,7 @@ ideas = {
 			}
 
 			allowed_to_remove = {
-				always = yes
+				NOT = { has_country_flag = br_can_not_change_laws_flag }
 			}
 
 			on_add = { country_event = br_laws.1 }
@@ -772,6 +773,7 @@ ideas = {
 
 			allowed_to_remove = {
 				br_ideology_capitalism_nio = yes
+				NOT = { has_country_flag = br_can_not_change_laws_flag }
 			}
 			
 			on_add = { country_event = br_laws.2 }
@@ -804,6 +806,7 @@ ideas = {
 					br_ideology_socialism_nio = yes
 					has_government = demo_socialism
 				}
+				NOT = { has_country_flag = br_can_not_change_laws_flag }
 			}
 			
 			on_add = { country_event = br_laws.3 }

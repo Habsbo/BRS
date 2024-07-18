@@ -484,6 +484,16 @@ defined_text = {
 		}
 		localization_key = CL_Premier
 	}
+	#君主立宪制下的责任内阁制
+	text = {
+		trigger = {
+			FROM = {
+				has_idea = br_laws_monarchy
+				has_idea = br_laws_premier
+			}
+		}
+		localization_key = CL_Prime_Minister
+	}
 	text = { localization_key = VL_normal_status }
 }
 
