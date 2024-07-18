@@ -8,9 +8,7 @@ POL_spear_of_revenge_decision_category = {
 	picture = GFX_decision_cat_picture_faction_management_bulgaria
 	allowed = { original_tag = POL }
 	visible = {
-		has_dynamic_modifier = {
-			modifier = POL_spear_of_revenge_sanation_dynamic_modifier
-		}
+		always = no
 	}
 }
 

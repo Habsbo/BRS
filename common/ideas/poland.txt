@@ -2,8 +2,8 @@
 ideas = {
 
 	hidden_ideas = {
-		POL_nationalist_military_hidden = {
-			name = POL_nationalist_military
+		POL_army_buff_hidden = {
+			name = POL_army_buff
 
 			allowed = {
 				original_tag = POL
@@ -13,13 +13,13 @@ ideas = {
 				always = no
 			}
 			
-			available = { has_idea = POL_nationalist_military }
+			available = { has_idea = POL_army_buff }
 
 			removal_cost = -1
 
 			modifier = {
-				army_core_attack_factor = 0.10
-				army_core_defence_factor = 0.10
+				army_core_attack_factor = 0.25
+				army_core_defence_factor = 0.25
 			}
 		}
 	}
@@ -43,9 +43,80 @@ ideas = {
 			}
 		}
 		
-		POL_tight_grain_reserves_5 = {
-			name = POL_tight_grain_reserves
-			picture = raj_risk_of_famine
+		POL_army_buff = {
+			picture = POL_nationalist_military
+
+			allowed = {
+				original_tag = POL
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_attack_factor = 0.10
+				army_morale_factor = 0.10
+				custom_modifier_tooltip = POL_army_buff_mtt
+			}
+			
+			on_add = {
+				if = {
+					limit = { NOT = { has_idea = POL_army_buff_hidden } }
+					add_ideas = POL_army_buff_hidden
+				}
+			}
+			
+			on_remove = {
+				if = {
+					limit = { has_idea = POL_army_buff_hidden }
+					remove_ideas = POL_army_buff_hidden
+				}
+			}
+		}
+		
+		POL_wladyslaw_wroblewski = {
+			name = Wladyslaw_Wroblewski
+			picture = generic_political_advisor_europe_5
+
+			allowed = {
+				original_tag = POL
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			traits = { responsible_banker }
+		}
+		
+		POL_leagcy_of_grabski = {
+			picture = POL_disjointed_industry
+
+			allowed = {
+				original_tag = POL
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = -0.10
+				industrial_capacity_factory = -0.10
+				line_change_production_efficiency_factor = -0.10
+			}
+		}
+		
+		POL_nominal_sejm = {
+			picture = CHL_ligas_patrioticas
 
 			allowed = {
 				original_tag = POL
@@ -59,99 +130,18 @@ ideas = {
 
 			modifier = {
 				stability_factor = -0.10
-			}
-		}
-		
-		POL_tight_grain_reserves_4 = {
-			name = POL_tight_grain_reserves
-			picture = raj_risk_of_famine
-
-			allowed = {
-				original_tag = POL
-			}
-
-			allowed_civil_war = {
-				always = no
-			}
-
-			removal_cost = -1
-
-			modifier = {
-				stability_factor = -0.08
-			}
-		}
-		
-		POL_tight_grain_reserves_3 = {
-			name = POL_tight_grain_reserves
-			picture = raj_risk_of_famine
-
-			allowed = {
-				original_tag = POL
-			}
-
-			allowed_civil_war = {
-				always = no
-			}
-
-			removal_cost = -1
-
-			modifier = {
-				stability_factor = -0.06
-			}
-		}
-		
-		POL_tight_grain_reserves_2 = {
-			name = POL_tight_grain_reserves
-			picture = raj_risk_of_famine
-
-			allowed = {
-				original_tag = POL
-			}
-
-			allowed_civil_war = {
-				always = no
-			}
-
-			removal_cost = -1
-
-			modifier = {
-				stability_factor = -0.04
-			}
-		}
-		
-		POL_tight_grain_reserves_1 = {
-			name = POL_tight_grain_reserves
-			picture = raj_risk_of_famine
-
-			allowed = {
-				original_tag = POL
-			}
-
-			allowed_civil_war = {
-				always = no
-			}
-
-			removal_cost = -1
-
-			modifier = {
-				stability_factor = -0.02
-			}
-		}
-		
-		POL_tight_grain_reserves = {
-			picture = raj_risk_of_famine
-
-			allowed = {
-				original_tag = POL
-			}
-
-			allowed_civil_war = {
-				always = no
-			}
-
-			removal_cost = -1
-
-			modifier = {
+				war_support_factor = -0.10
+				political_power_gain = -0.3
+				soc_anarchism_drift = 0.01
+				vanwardism_drift = 0.01
+				sci_socialism_drift = 0.01
+				con_socialism_drift = 0.01
+				demo_socialism_drift = 0.01
+				authoritarian_drift = 0.01
+				soc_anarchism_drift = 0.01
+				fascism_drift = 0.01
+				nationalism_drift = 0.01
+				supernationalism_drift = 0.01
 			}
 		}
 		
@@ -169,9 +159,8 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				stability_factor = -0.10
+				stability_factor = -0.30
 				operative_slot = 1
-				political_power_factor = -0.10
 				soc_anarchism_drift = 0.01
 				vanwardism_drift = 0.01
 				sci_socialism_drift = 0.01
@@ -180,7 +169,9 @@ ideas = {
 			}
 		}
 		
-		POL_nationalist_military = {
+		POL_tight_grain_reserves_5 = {
+			name = POL_tight_grain_reserves
+			picture = raj_risk_of_famine
 
 			allowed = {
 				original_tag = POL
@@ -193,36 +184,35 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				stability_factor = -0.10
-				custom_modifier_tooltip = POL_nationalist_military_mtt
-				fascism_drift = 0.01
-				nationalism_drift = 0.01
-				supernationalism_drift = 0.01
-				surrender_limit = 0.05
-				mobilization_laws_cost_factor = -0.10
-			}
-			
-			on_add = {
-				hidden_effect = {
-					if = {
-						limit = { NOT = { has_idea = POL_nationalist_military_hidden } }
-						add_ideas = POL_nationalist_military_hidden
-					}
-				}
-			}
-			
-			on_remove = {
-				hidden_effect = {
-					if = {
-						limit = { has_idea = POL_nationalist_military_hidden }
-						remove_ideas = POL_nationalist_military_hidden
-					}
-				}
+				stability_factor = -0.30
+				war_support_factor = -0.30
+				production_speed_buildings_factor = -0.40
 			}
 		}
 		
-		POL_spear_of_revenge = {
-			picture = POL_spear_of_revenge_sanation
+		POL_immigration_craze = {
+			picture = prc_low_popular_support3
+
+			allowed = {
+				original_tag = POL
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				monthly_population = -0.10
+				conscription = -0.01
+				production_speed_buildings_factor = -0.10
+				industrial_capacity_factory = -0.10
+			}
+		}
+		
+		POL_underdeveloped_southern_region = {
+			picture = hol_prepare_the_inundation_lines
 
 			allowed = {
 				original_tag = POL
@@ -239,7 +229,61 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				war_support_factor = 0.10
+				stability_factor = -0.10
+				war_support_factor = -0.10
+				global_building_slots_factor = -0.25
+				custom_modifier_tooltip = POL_underdeveloped_southern_region_mtt
+			}
+		}
+		
+		POL_german_influence = {
+			picture = hol_caved_to_the_germans
+
+			allowed = {
+				original_tag = POL
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			available = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = -0.1
+				experience_gain_army = -0.02
+				local_resources_factor = -0.40
+				land_doctrine_cost_factor = 1.00
+				air_doctrine_cost_factor = 1.00
+			}
+		}
+		
+		POL_poor_ethnic_policies = {
+			picture = hol_de_vaarplicht
+
+			allowed = {
+				original_tag = POL
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			available = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.20
+				war_support_factor = -0.10
+				compliance_growth = -0.05
+				resistance_growth = 0.10
 			}
 		}
 		
