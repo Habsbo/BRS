@@ -13,6 +13,9 @@ on_actions = {
 			DBR = {
 				every_state = { limit = { is_core_of = prev } remove_core_of = prev }
 			}
+			SPR = {
+				country_event = { id = br_rif.1 days = 14 }
+			}
 		}
 	}
 
