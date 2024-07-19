@@ -58,7 +58,9 @@ br_na_war_decisions = {
 		activation = { always = no }
 
 		available = {
-			tag = RIF
+			#
+			hidden_trigger = { tag = RIF }
+			#
 			MOR = {
 				OR = {
 					exists = no
@@ -70,9 +72,11 @@ br_na_war_decisions = {
 				has_capitulated = no
 				is_subject = no
 			}
+			#
 			290 = { is_owned_and_controlled_by = RIF }
 			461 = { is_owned_and_controlled_by = RIF }
 			462 = { is_owned_and_controlled_by = RIF }
+			#
 			RIF = { NOT = { any_core_state = { is_controlled_by = SPR } } }
 		}
 
@@ -86,7 +90,10 @@ br_na_war_decisions = {
 		}
 
 		cancel_trigger = {
-			RIF = { has_capitulated = yes }
+			RIF = {
+				exists = no
+				has_capitulated = yes
+			}
 		}
 
 		is_good = no
