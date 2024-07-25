@@ -47,6 +47,8 @@ ideologies = {
 			}
 			syndicalism = {
 			}
+			forwardism = {
+			}
 		}
 
 		dynamic_faction_names = {

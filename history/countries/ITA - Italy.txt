@@ -1715,3 +1715,10 @@ if = {
 }
 
 set_cosmetic_tag = ITA_socialist_republic
+
+add_ideas = {
+	ITA_benito_mussolini_hog
+}
+#
+set_country_flag = br_dynamic_modifier_not_generic_var_flag
+set_country_flag = br_dynamic_modifier_not_generic_flag

@@ -20,6 +20,16 @@ defined_text = {
 		}
 		localization_key = [FRA_VL_picture]
 	}
+	text = {
+		trigger = {
+			OR = {
+				original_tag = ITA
+				original_tag = SPM
+				original_tag = PAP
+			}
+		}
+		localization_key = [ITA_VL_picture]
+	}
 	text = { localization_key = GFX_leader_unknown }
 }
 
@@ -44,6 +54,16 @@ defined_text = {
 			original_tag = FRA
 		}
 		localization_key = [FRA_VL_name]
+	}
+	text = {
+		trigger = {
+			OR = {
+				original_tag = ITA
+				original_tag = SPM
+				original_tag = PAP
+			}
+		}
+		localization_key = [ITA_VL_name]
 	}
 	text = { localization_key = VL_name }
 }
@@ -70,6 +90,16 @@ defined_text = {
 		}
 		localization_key = [FRA_VL_state]
 	}
+	text = {
+		trigger = {
+			OR = {
+				original_tag = ITA
+				original_tag = SPM
+				original_tag = PAP
+			}
+		}
+		localization_key = [ITA_VL_state]
+	}
 	text = { localization_key = VL_state }
 }
 
@@ -95,6 +125,16 @@ defined_text = {
 		}
 		localization_key = [FRA_VL_Dip_state]
 	}
+	text = {
+		trigger = {
+			OR = {
+				original_tag = ITA
+				original_tag = SPM
+				original_tag = PAP
+			}
+		}
+		localization_key = [ITA_VL_Dip_state]
+	}
 	text = { localization_key = VL_Dip_state }
 }
 
@@ -119,6 +159,16 @@ defined_text = {
 			original_tag = FRA
 		}
 		localization_key = [FRA_VL_desc]
+	}
+	text = {
+		trigger = {
+			OR = {
+				original_tag = ITA
+				original_tag = SPM
+				original_tag = PAP
+			}
+		}
+		localization_key = [ITA_VL_desc]
 	}
 	text = { localization_key = VL_desc }
 }

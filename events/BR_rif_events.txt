@@ -12,7 +12,7 @@ add_namespace = br_rif
 
 		immediate = {
 			hidden_effect = {
-				#
+				290 = { transfer_state_to = RIF }
 			}
 		}
 

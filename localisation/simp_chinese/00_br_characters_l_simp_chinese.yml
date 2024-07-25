@@ -125,4 +125,9 @@
  s_sima: "司马"
  s_dongye: "东野"
 #name(chinese han/man and some nations) - 名字
- 
+#benito mussolini
+ VL_name_benito_mussolini: "$ITA_benito_mussolini$"
+ VL_trait_benito_mussolini: ""
+ VL_state_benito_mussolini: "§Y$ITA_benito_mussolini$§!\n$VL_trait_benito_mussolini$"
+ VL_Dip_state_benito_mussolini: "§Y$ITA_benito_mussolini$§!\n$GetDipStatus$\n$VL_trait_benito_mussolini$"
+ VL_desc_benito_mussolini: "§g§!"
