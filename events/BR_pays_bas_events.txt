@@ -1,7 +1,7 @@
 ###
 add_namespace = br_bel
 ###
-country_event = { #驻军问题
+country_event = { #
 	id = br_bel.1
 	title = br_bel.1.title
 	desc = br_bel.1.desc
@@ -17,7 +17,7 @@ country_event = { #驻军问题
 	option = {
 		name = br_bel.1.a #
 
-		country_event = { id = br_bel.2 days = 0 }
+		country_event = { id = br_bel.2 days = 0 } #
 
 		ai_chance = { factor = 5 }
 	}
