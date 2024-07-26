@@ -180,3 +180,13 @@
 			}
 		}
 	}
+
+###
+	br_special_chars_holding_gov = {
+		OR = {
+			has_idea = Leader_ioannes_hog
+			has_idea = LingXia_hog
+			#has_idea = 
+			#has_idea = 
+		}
+	}

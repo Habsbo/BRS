@@ -26,6 +26,18 @@ add_namespace = br_rif
 
 			ai_chance = { factor = 7 }
 		}
+
+		option = {
+			name = br_rif.1.b #
+			
+			RIF = {
+				change_tag_from = ROOT
+				declare_war_on = { target = root type = independence_wargoal }
+				country_event = { id = br_rif.2 days = 1 }
+			}
+
+			ai_chance = { factor = 7 }
+		}
 	}
 	country_event = { #
 		id = br_rif.2

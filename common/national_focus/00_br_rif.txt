@@ -16,16 +16,14 @@ focus_tree = {
 	
 	focus = {
 		id = RIF_focus_1
-		icon = GFX_goal_
+		icon = GFX_focus_SMB_atacama_training
 		#prerequisite = { focus =  }
 		#mutually_exclusive = { focus =  }
 		x = 10
 		y = 0
 		#relative_position_id =
 
-		cost = 8
-		
-		ai_will_do = { factor = 1 }
+		cost = 1
 		
 		available = {}
 		
@@ -36,21 +34,451 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		complete_tooltip = {}
+		completion_reward = {
+			add_war_support = 0.05
+			add_timed_idea = { idea = RIF_stand_for_fight days = 181 }
+			complete_national_focus = RIF_focus_2
+		}
 		
-		completion_reward = {}
+		ai_will_do = { factor = 1 }
 	}
+	#dip line
 	focus = {
 		id = RIF_focus_2
-		icon = GFX_goal_
+		icon = GFX_goal_generic_forceful_treaty
 		prerequisite = { focus = RIF_focus_1 }
+		#mutually_exclusive = { focus =  }
+		x = 6
+		y = 1
+		relative_position_id = RIF_focus_1
+
+		cost = 0
+		
+		available = { always = no }
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	#French
+	focus = {
+		id = RIF_focus_5
+		icon = GFX_focus_chi_reach_out_to_france
+		prerequisite = { focus = RIF_focus_2 }
+		#mutually_exclusive = { focus =  }
+		x = -2
+		y = 1
+		relative_position_id = RIF_focus_2
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {
+			custom_effect_tooltip = RIF_focus_french_1_tt
+			custom_effect_tooltip = if_they_accept_newline_tt
+			effect_tooltip = {
+				add_offsite_building = { type = arms_factory level = 2 }
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = RIF_focus_8
+		icon = GFX_focus_focus_fra_revolution_utmost
+		prerequisite = { focus = RIF_focus_5 }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = RIF_focus_5
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {
+			add_timed_idea = { idea = SPR_international_brigades years = 3 }
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	#Italian
+	focus = {
+		id = RIF_focus_6
+		icon = GFX_focus_generic_italy_propaganda
+		prerequisite = { focus = RIF_focus_2 }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = RIF_focus_2
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {
+			#
+			custom_effect_tooltip = if_they_accept_newline_tt
+			effect_tooltip = {
+				add_offsite_building = { type = arms_factory level = 2 }
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = RIF_focus_9
+		icon = GFX_focus_ETH_invite_italian_settlers
+		prerequisite = { focus = RIF_focus_6 }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = RIF_focus_6
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	#Britain
+	focus = {
+		id = RIF_focus_7
+		icon = GFX_focus_chi_british_cooperation
+		prerequisite = { focus = RIF_focus_2 }
 		#mutually_exclusive = { focus =  }
 		x = 2
 		y = 1
+		relative_position_id = RIF_focus_2
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {
+			#
+			custom_effect_tooltip = if_they_accept_newline_tt
+			effect_tooltip = {
+				add_offsite_building = { type = arms_factory level = 2 }
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = RIF_focus_10
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		prerequisite = { focus = RIF_focus_7 }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = RIF_focus_7
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	#
+	focus = {
+		id = RIF_focus_11
+		icon = GFX_
+		prerequisite = {
+			focus = RIF_focus_8
+			focus = RIF_focus_9
+			focus = RIF_focus_10
+		}
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = RIF_focus_9
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	#military line
+	focus = {
+		id = RIF_focus_3
+		icon = GFX_focus_secret_rearmament
+		prerequisite = { focus = RIF_focus_1 }
+		#mutually_exclusive = { focus =  }
+		x = -6
+		y = 1
+		relative_position_id = RIF_focus_1
+
+		cost = 2
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					is_in_home_area = yes
+					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = RIF_focus_12
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = RIF_focus_3 }
+		#mutually_exclusive = { focus =  }
+		x = -1
+		y = 1
+		relative_position_id = RIF_focus_3
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = RIF_focus_13
+		icon = GFX_focus_chi_army_reform
+		prerequisite = { focus = RIF_focus_3 }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 1
+		relative_position_id = RIF_focus_3
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = RIF_focus_14
+		icon = GFX_focus_generic_full_employment
+		prerequisite = {
+			focus = RIF_focus_12
+			focus = RIF_focus_13
+		}
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 2
+		relative_position_id = RIF_focus_3
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = RIF_focus_15
+		icon = GFX_focus_generic_modernize_industry
+		prerequisite = { focus = RIF_focus_14 }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = RIF_focus_14
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = RIF_focus_16
+		icon = GFX_focus_generic_camel_corps
+		prerequisite = { focus = RIF_focus_14 }
+		#mutually_exclusive = { focus =  }
+		x = -1
+		y = 2
+		relative_position_id = RIF_focus_14
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = RIF_focus_17
+		icon = GFX_focus_generic_annex_country
+		prerequisite = { focus = RIF_focus_14 }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 2
+		relative_position_id = RIF_focus_14
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	#political line
+	focus = {
+		id = RIF_focus_4
+		icon = GFX_focus_hol_the_foundations_of_defense
+		prerequisite = { focus = RIF_focus_1 }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 2
 		relative_position_id = RIF_focus_1
 
 		cost = 8
 		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
 		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = RIF_focus_18
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = RIF_focus_4 }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 2
+		relative_position_id = RIF_focus_4
+
+		cost = 8
 		
 		available = {}
 		
@@ -61,7 +489,32 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		complete_tooltip = {}
-		
 		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = RIF_focus_0
+		icon = GFX_focus_generic_annex_country
+		#prerequisite = { focus = RIF_focus_14 }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 2
+		#relative_position_id = RIF_focus_14
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
 	}
 }

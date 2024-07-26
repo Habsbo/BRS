@@ -98,3 +98,5 @@
  decision_cost_AE_100: "£GFX_army_experience §Y100§!"
  decision_cost_AE_100_blocked: "£GFX_army_experience §R100§!"
  decision_cost_AE_100_tooltip: "需要£GFX_army_experience §Y100§! 以执行此决议"
+
+ br_debug_decisions: "测试，我们的国家等级变量是：[?root.state_rank|0H]"

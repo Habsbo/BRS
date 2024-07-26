@@ -1,3 +1,4 @@
+#
 defined_text = {
 	name = VL_picture
 	text = {
@@ -29,6 +30,10 @@ defined_text = {
 			}
 		}
 		localization_key = [ITA_VL_picture]
+	}
+	text = {
+		trigger = { br_special_chars_holding_gov = yes }
+		localization_key = [SP_Chars_VL_picture]
 	}
 	text = { localization_key = GFX_leader_unknown }
 }
@@ -65,6 +70,10 @@ defined_text = {
 		}
 		localization_key = [ITA_VL_name]
 	}
+	text = {
+		trigger = { br_special_chars_holding_gov = yes }
+		localization_key = [SP_Chars_VL_name]
+	}
 	text = { localization_key = VL_name }
 }
 
@@ -99,6 +108,10 @@ defined_text = {
 			}
 		}
 		localization_key = [ITA_VL_state]
+	}
+	text = {
+		trigger = { br_special_chars_holding_gov = yes }
+		localization_key = [SP_Chars_VL_state]
 	}
 	text = { localization_key = VL_state }
 }
@@ -135,6 +148,10 @@ defined_text = {
 		}
 		localization_key = [ITA_VL_Dip_state]
 	}
+	text = {
+		trigger = { br_special_chars_holding_gov = yes }
+		localization_key = [SP_Chars_VL_Dip_state]
+	}
 	text = { localization_key = VL_Dip_state }
 }
 
@@ -169,6 +186,10 @@ defined_text = {
 			}
 		}
 		localization_key = [ITA_VL_desc]
+	}
+	text = {
+		trigger = { br_special_chars_holding_gov = yes }
+		localization_key = [SP_Chars_VL_desc]
 	}
 	text = { localization_key = VL_desc }
 }

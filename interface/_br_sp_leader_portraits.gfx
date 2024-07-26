@@ -1,0 +1,24 @@
+spriteTypes = {
+
+	# leaders we need to override in SP go in this file
+
+	spriteType = {
+		name = "GFX_portrait_Astesia"
+		texturefile = "gfx/leaders/sp/LX/Astesia.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_Astesia_small"
+		texturefile = "gfx/leaders/sp/LX/idea_advisor_Astesia.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Portrait_Leader_ioannes_oikos"
+		texturefile = "gfx/leaders/sp/Leader/Portrait_Leader_ioannes_oikos.png"
+	}
+
+	spriteType = {
+		name = "GFX_Portrait_Leader_ioannes_oikos_small"
+		texturefile = "gfx/leaders/sp/Leader/Portrait_Leader_ioannes_oikos_small.png"
+	}
+}

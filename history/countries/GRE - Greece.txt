@@ -423,3 +423,8 @@ set_variable = { var = gre_pbdt_the_ifc_ita_var value = 3000 }
 set_variable = { var = gre_pbdt_the_ifc_usa_var value = 8000 }
 set_variable = { var = gre_pbdt_the_ifc_mng_var value = 6000 }
 set_variable = { var = gre_pbdt_the_ifc_jap_var value = 1000 }
+#
+1931.1.1 = {
+	recruit_character = Leader_ioannes
+	recruit_character = LingXia
+}

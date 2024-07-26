@@ -1,0 +1,63 @@
+characters={
+	Leader_ioannes = {
+		name = Leader_ioannes_oikos
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_Leader_ioannes_oikos
+				small = GFX_Portrait_Leader_ioannes_oikos_small
+			}
+			army = {
+				large = GFX_Portrait_Leader_ioannes_oikos
+				small = GFX_Portrait_Leader_ioannes_oikos_small
+			}
+		}
+		country_leader = {
+			ideology = socialism
+			traits = {  }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+		advisor = {
+			slot = head_of_gov
+			idea_token = Leader_ioannes_hog
+			allowed = { always = yes }
+			available = {
+				br_head_of_gov_generic_trigger = yes
+			}
+			cost = 0
+			can_be_fired = no
+			traits = { generic_head_of_gov generic_head_of_gov_hidden }
+		}
+	}
+	LingXia = {
+		name = LingXia
+		portraits = {
+			civilian = {
+				large = GFX_portrait_Astesia
+				small = GFX_portrait_Astesia_small
+			}
+			army = {
+				large = GFX_portrait_Astesia
+				small = GFX_portrait_Astesia_small
+			}
+		}
+		gender = female 
+		country_leader = {
+			ideology = leninism
+			traits = {  }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+		advisor = {
+			slot = head_of_gov
+			idea_token = LingXia_hog
+			allowed = { always = yes }
+			available = {
+				br_head_of_gov_generic_trigger = yes
+			}
+			cost = 0
+			can_be_fired = no
+			traits = { generic_head_of_gov generic_head_of_gov_hidden }
+		}
+	}
+}

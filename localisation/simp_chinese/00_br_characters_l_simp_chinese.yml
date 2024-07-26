@@ -131,3 +131,19 @@
  VL_state_benito_mussolini: "§Y$ITA_benito_mussolini$§!\n$VL_trait_benito_mussolini$"
  VL_Dip_state_benito_mussolini: "§Y$ITA_benito_mussolini$§!\n$GetDipStatus$\n$VL_trait_benito_mussolini$"
  VL_desc_benito_mussolini: "§g§!"
+
+#SP chars
+#Leader1
+ Leader_ioannes_oikos: "伊奥尼斯·阿伊科斯"
+ VL_name_Leader_ioannes: "$Leader_ioannes_oikos$"
+ VL_trait_Leader_ioannes: ""
+ VL_state_Leader_ioannes: "§Y$Leader_ioannes_oikos$§!\n$VL_trait_Leader_ioannes$"
+ VL_Dip_state_Leader_ioannes: "§Y$Leader_ioannes_oikos$§!\n$GetDipStatus$\n$VL_trait_Leader_ioannes$"
+ VL_desc_Leader_ioannes: "§g§!"
+#ling xia
+ LingXia: "Ling Xia"
+ VL_name_LingXia: "$LingXia$"
+ VL_trait_LingXia: ""
+ VL_state_LingXia: "§Y$LingXia$§!\n$VL_trait_LingXia$"
+ VL_Dip_state_LingXia: "§Y$LingXia$§!\n$GetDipStatus$\n$VL_trait_LingXia$"
+ VL_desc_LingXia: "§g§!"

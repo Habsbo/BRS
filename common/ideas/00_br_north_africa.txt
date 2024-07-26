@@ -63,6 +63,23 @@ ideas = {
 				stability_factor = -0.05
 			}
 		}
+
+		RIF_stand_for_fight = {
+			picture = chi_wargaming_division
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				conscription = 0.05
+				war_support_factor = 0.5
+				surrender_limit = 1.00
+				#
+				army_core_attack_factor = 0.10
+				army_core_defence_factor = 0.10
+				#
+				
+			}
+		}
 	}
 
 }

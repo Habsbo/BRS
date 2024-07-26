@@ -117,6 +117,22 @@ br_debug_decisions = {
 			add_ideas = CAT_benito_pabon_y_suarez_de_urbina_hog
 		}
 	}
+	debug_vl.2 = {
+		fire_only_once = no
+		complete_effect = {
+			GRE = {
+				Leader_ioannes = {
+					set_nationality = ROOT
+				}
+			}
+		}
+	}
+	debug_vl.3 = {
+		fire_only_once = no
+		complete_effect = {
+			add_ideas = Leader_ioannes_hog
+		}
+	}
 	#
 	debug_poland.1 = {
 
