@@ -13,7 +13,7 @@ characters={
 		}
 		country_leader = {
 			ideology = socialism
-			traits = {  }
+			traits = { leaderone }
 			expire = "1965.1.1.1"
 			id = -1
 		}
@@ -26,7 +26,7 @@ characters={
 			}
 			cost = 0
 			can_be_fired = no
-			traits = { generic_head_of_gov generic_head_of_gov_hidden }
+			traits = { leaderone }
 		}
 	}
 	LingXia = {
@@ -58,6 +58,48 @@ characters={
 			cost = 0
 			can_be_fired = no
 			traits = { generic_head_of_gov generic_head_of_gov_hidden }
+		}
+	}
+	kwangxu = {
+		name = kwangxu
+		portraits = {
+			civilian = {
+				#large = GFX_portrait_Astesia
+				#small = GFX_portrait_Astesia_small
+			}
+			army = {
+				#large = GFX_portrait_Astesia
+				#small = GFX_portrait_Astesia_small
+			}
+		}
+		#gender = 
+		#country_leader = {
+		#	ideology = leninism
+		#	traits = {  }
+		#	expire = "1965.1.1.1"
+		#	id = -1
+		#}
+		advisor = {
+			slot = head_of_gov
+			idea_token = kwangxu_hog
+			allowed = { always = yes }
+			available = {
+				br_head_of_gov_generic_trigger = yes
+			}
+			cost = 0
+			can_be_fired = no
+			traits = { trait_guangxu }
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = kwangxu
+			allowed = { always = yes }
+			available = {
+				br_head_of_gov_generic_trigger = yes
+			}
+			cost = 0
+			can_be_fired = no
+			traits = { trait_guangxu }
 		}
 	}
 }

@@ -201,14 +201,14 @@ add_ideas = {
 	limited_conscription
 	partial_economic_mobilisation
 	#
-	br_laws_monarchy
-
+	
+	br_laws_premier
 	br_laws_asset
 	br_laws_national_state
 	br_laws_religious_people
 	br_laws_bourgeoisie
 	#
-#	SWE_historical_trade_with_Germany_dummy CUT
+	#SWE_historical_trade_with_Germany_dummy CUT
 }
 add_ideas = GER_mefo_bills_1
 activate_mission = GER_mefo_bills_mission

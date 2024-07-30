@@ -2,7 +2,10 @@
 defined_text = {
 	name = VL_picture
 	text = {
-		trigger = { TAG = POL }
+		trigger = {
+			original_tag = POL
+			NOT = { br_special_chars_holding_gov = yes }
+		}
 		localization_key = [POL_VL_picture]
 	}
 	text = {
@@ -12,12 +15,14 @@ defined_text = {
 				original_tag = NAV
 				original_tag = CAT
 			}
+			NOT = { br_special_chars_holding_gov = yes }
 		}
 		localization_key = [SPR_VL_picture]
 	}
 	text = {
 		trigger = {
 			original_tag = FRA
+			NOT = { br_special_chars_holding_gov = yes }
 		}
 		localization_key = [FRA_VL_picture]
 	}
@@ -28,6 +33,7 @@ defined_text = {
 				original_tag = SPM
 				original_tag = PAP
 			}
+			NOT = { br_special_chars_holding_gov = yes }
 		}
 		localization_key = [ITA_VL_picture]
 	}
@@ -41,7 +47,10 @@ defined_text = {
 defined_text = {
 	name = VL_name
 	text = {
-		trigger = { TAG = POL }
+		trigger = {
+			original_tag = POL
+			NOT = { br_special_chars_holding_gov = yes }
+		}
 		localization_key = [POL_VL_name]
 	}
 	text = {
@@ -51,6 +60,7 @@ defined_text = {
 				original_tag = NAV
 				original_tag = CAT
 			}
+			NOT = { br_special_chars_holding_gov = yes }
 		}
 		localization_key = [SPR_VL_name]
 	}
@@ -67,6 +77,7 @@ defined_text = {
 				original_tag = SPM
 				original_tag = PAP
 			}
+			NOT = { br_special_chars_holding_gov = yes }
 		}
 		localization_key = [ITA_VL_name]
 	}
@@ -80,7 +91,10 @@ defined_text = {
 defined_text = {
 	name = VL_state
 	text = {
-		trigger = { TAG = POL }
+		trigger = {
+			original_tag = POL
+			NOT = { br_special_chars_holding_gov = yes }
+		}
 		localization_key = [POL_VL_state]
 	}
 	text = {
@@ -90,12 +104,14 @@ defined_text = {
 				original_tag = NAV
 				original_tag = CAT
 			}
+			NOT = { br_special_chars_holding_gov = yes }
 		}
 		localization_key = [SPR_VL_state]
 	}
 	text = {
 		trigger = {
 			original_tag = FRA
+			NOT = { br_special_chars_holding_gov = yes }
 		}
 		localization_key = [FRA_VL_state]
 	}
@@ -106,6 +122,7 @@ defined_text = {
 				original_tag = SPM
 				original_tag = PAP
 			}
+			NOT = { br_special_chars_holding_gov = yes }
 		}
 		localization_key = [ITA_VL_state]
 	}
@@ -119,7 +136,10 @@ defined_text = {
 defined_text = {
 	name = VL_Dip_state
 	text = {
-		trigger = { TAG = POL }
+		trigger = {
+			original_tag = POL
+			NOT = { br_special_chars_holding_gov = yes }
+		}
 		localization_key = [POL_VL_Dip_state]
 	}
 	text = {
@@ -129,6 +149,7 @@ defined_text = {
 				original_tag = NAV
 				original_tag = CAT
 			}
+			NOT = { br_special_chars_holding_gov = yes }
 		}
 		localization_key = [SPR_VL_Dip_state]
 	}
@@ -145,6 +166,7 @@ defined_text = {
 				original_tag = SPM
 				original_tag = PAP
 			}
+			NOT = { br_special_chars_holding_gov = yes }
 		}
 		localization_key = [ITA_VL_Dip_state]
 	}
@@ -158,7 +180,10 @@ defined_text = {
 defined_text = {
 	name = VL_desc
 	text = {
-		trigger = { TAG = POL }
+		trigger = {
+			original_tag = POL
+			NOT = { br_special_chars_holding_gov = yes }
+		}
 		localization_key = [POL_VL_desc]
 	}
 	text = {
@@ -168,12 +193,14 @@ defined_text = {
 				original_tag = NAV
 				original_tag = CAT
 			}
+			NOT = { br_special_chars_holding_gov = yes }
 		}
 		localization_key = [SPR_VL_desc]
 	}
 	text = {
 		trigger = {
 			original_tag = FRA
+			NOT = { br_special_chars_holding_gov = yes }
 		}
 		localization_key = [FRA_VL_desc]
 	}
@@ -184,6 +211,7 @@ defined_text = {
 				original_tag = SPM
 				original_tag = PAP
 			}
+			NOT = { br_special_chars_holding_gov = yes }
 		}
 		localization_key = [ITA_VL_desc]
 	}

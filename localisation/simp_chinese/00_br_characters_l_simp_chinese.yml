@@ -147,3 +147,10 @@
  VL_state_LingXia: "§Y$LingXia$§!\n$VL_trait_LingXia$"
  VL_Dip_state_LingXia: "§Y$LingXia$§!\n$GetDipStatus$\n$VL_trait_LingXia$"
  VL_desc_LingXia: "§g§!"
+#guangxu
+ kwangxu: "光绪"
+ VL_name_kwangxu: "$kwangxu$"
+ VL_trait_kwangxu: ""
+ VL_state_kwangxu: "§Y$kwangxu$§!\n$VL_trait_kwangxu$"
+ VL_Dip_state_kwangxu: "§Y$kwangxu$§!\n$GetDipStatus$\n$VL_trait_kwangxu$"
+ VL_desc_kwangxu: "§g§!"

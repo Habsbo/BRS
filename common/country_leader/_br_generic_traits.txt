@@ -306,4 +306,19 @@ leader_traits = {
 		demo_socialism_drift = 0.03
 	}
 
+#
+	leaderone = {
+		random = no
+		sprite = 13
+
+		political_power_factor = 0.15
+		stability_factor = -0.10
+	}
+
+	trait_guangxu = {
+		random = no
+		sprite = 13
+
+		stability_factor = 0.20
+	}
 }

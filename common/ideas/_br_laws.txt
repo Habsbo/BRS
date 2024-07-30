@@ -45,11 +45,11 @@ ideas = {
 			allowed = { always = yes }
 
 			available = {
-				OR = {
-					has_idea = br_laws_feudalism
-					has_idea = br_laws_dictatorship
-					has_idea = br_laws_parliamentarism
-				}
+				#OR = {
+				#	has_idea = br_laws_feudalism
+				#	has_idea = br_laws_dictatorship
+				#	has_idea = br_laws_parliamentarism
+				#}
 				NOT = { has_idea = br_laws_atheism }
 				OR = {
 					has_idea = br_laws_loyalist

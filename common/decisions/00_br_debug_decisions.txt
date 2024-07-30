@@ -49,26 +49,39 @@ br_debug_decisions = {
 			base = 0
 		}
 	}
+#
 	debug_ideo.1 = {
 		fire_only_once = no
+		visible = {
+			NOT = { has_global_flag = debug_ideo_hidden_global_flag }
+		}
 		complete_effect = {
 			set_politics = { ruling_party = soc_anarchism }
 		}
 	}
 	debug_ideo.2 = {
 		fire_only_once = no
+		visible = {
+			NOT = { has_global_flag = debug_ideo_hidden_global_flag }
+		}
 		complete_effect = {
 			set_politics = { ruling_party = vanwardism }
 		}
 	}
 	debug_ideo.3 = {
 		fire_only_once = no
+		visible = {
+			NOT = { has_global_flag = debug_ideo_hidden_global_flag }
+		}
 		complete_effect = {
 			set_politics = { ruling_party = sci_socialism }
 		}
 	}
 	debug_ideo.4 = {
 		fire_only_once = no
+		visible = {
+			NOT = { has_global_flag = debug_ideo_hidden_global_flag }
+		}
 		complete_effect = {
 			set_politics = { ruling_party = con_socialism }
 		}
@@ -76,41 +89,71 @@ br_debug_decisions = {
 	
 	debug_ideo.5 = {
 		fire_only_once = no
+		visible = {
+			NOT = { has_global_flag = debug_ideo_hidden_global_flag }
+		}
 		complete_effect = {
 			set_politics = { ruling_party = demo_socialism }
 		}
 	}
 	debug_ideo.6 = {
 		fire_only_once = no
+		visible = {
+			NOT = { has_global_flag = debug_ideo_hidden_global_flag }
+		}
 		complete_effect = {
 			set_politics = { ruling_party = demo_liberalism }
 		}
 	}
 	debug_ideo.7 = {
 		fire_only_once = no
+		visible = {
+			NOT = { has_global_flag = debug_ideo_hidden_global_flag }
+		}
 		complete_effect = {
 			set_politics = { ruling_party = demo_conservatism }
 		}
 	}
 	debug_ideo.8 = {
 		fire_only_once = no
+		visible = {
+			NOT = { has_global_flag = debug_ideo_hidden_global_flag }
+		}
 		complete_effect = {
 			set_politics = { ruling_party = authoritarian }
 		}
 	}
 	debug_ideo.9 = {
 		fire_only_once = no
+		visible = {
+			NOT = { has_global_flag = debug_ideo_hidden_global_flag }
+		}
 		complete_effect = {
 			set_politics = { ruling_party = fascism }
 		}
 	}
 	debug_ideo.10 = {
 		fire_only_once = no
+		visible = {
+			NOT = { has_global_flag = debug_ideo_hidden_global_flag }
+		}
 		complete_effect = {
 			set_politics = { ruling_party = nationalism }
 		}
 	}
-	#
+	debug_ideo_hidden = {
+		fire_only_once = no
+		complete_effect = {
+			set_global_flag = debug_ideo_hidden_global_flag
+		}
+	}
+	debug_ideo_show = {
+		fire_only_once = no
+		complete_effect = {
+			clr_global_flag = debug_ideo_hidden_global_flag
+		}
+	}
+#
 	debug_vl.1 = {
 		fire_only_once = no
 		complete_effect = {
@@ -133,7 +176,7 @@ br_debug_decisions = {
 			add_ideas = Leader_ioannes_hog
 		}
 	}
-	#
+#
 	debug_poland.1 = {
 
 		icon = generic_research
@@ -193,24 +236,6 @@ br_debug_decisions = {
 
 		ai_will_do = {
 			base = 0
-		}
-	}
-	debug_LUX.1 = {
-		fire_only_once = no
-		complete_effect = {
-			every_controlled_state = { add_compliance = 100 }
-			FRA = { every_core_state = { transfer_state_to = LUX add_compliance = 100 } }
-			ENG = { every_core_state = { transfer_state_to = LUX add_compliance = 100 } }
-			ITA = { every_core_state = { transfer_state_to = LUX add_compliance = 100 } }
-			SWI = { every_core_state = { transfer_state_to = LUX add_compliance = 100 } }
-			AUS = { every_core_state = { transfer_state_to = LUX add_compliance = 100 } }
-			GER = { every_core_state = { transfer_state_to = LUX add_compliance = 100 } }
-		}
-	}
-	debug_blr.1 = {
-		fire_only_once = no
-		complete_effect = {
-			set_cosmetic_tag = BLR_UKR_union
 		}
 	}
 }
