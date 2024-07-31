@@ -156,7 +156,7 @@
  VL_Dip_state_Leader_ioannes: "§Y$Leader_ioannes_oikos$§!\n$GetDipStatus$\n$VL_trait_Leader_ioannes$"
  VL_desc_Leader_ioannes: "§g§!"
 #ling xia
- LingXia: "Ling Xia"
+ LingXia: "泠夏"
  VL_name_LingXia: "$LingXia$"
  VL_trait_LingXia: ""
  VL_state_LingXia: "§Y$LingXia$§!\n$VL_trait_LingXia$"
