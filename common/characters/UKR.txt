@@ -1,0 +1,167 @@
+characters={
+###anarchy ukraine
+	UKR_nestor_ivanovych_makhno = {
+		name = UKR_nestor_ivanovych_makhno
+		portraits = {
+			civilian = {
+				#large = GFX_Portrait_Leader_ioannes_oikos
+				#small = GFX_Portrait_Leader_ioannes_oikos_small
+			}
+		}
+		country_leader = {
+			ideology = anarchism
+			traits = {  }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+		advisor = {
+			slot = head_of_gov
+			idea_token = UKR_nestor_ivanovych_makhno_hog
+			allowed = { always = yes }
+			available = {
+				br_head_of_gov_generic_trigger = yes
+			}
+			cost = 0
+			can_be_fired = no
+			traits = {  }
+		}
+	}
+	UKR_halyna_kuzmenko = {
+		name = UKR_halyna_kuzmenko
+		portraits = {
+			civilian = {
+				#large = GFX_Portrait_Leader_ioannes_oikos
+				#small = GFX_Portrait_Leader_ioannes_oikos_small
+			}
+		}
+		gender = female
+		#country_leader = {
+		#	ideology = anarchism
+		#	traits = {  }
+		#	expire = "1965.1.1.1"
+		#	id = -1
+		#}
+		advisor = {
+			slot = head_of_gov
+			idea_token = UKR_halyna_kuzmenko_hog
+			allowed = { always = yes }
+			available = {
+				br_head_of_gov_generic_trigger = yes
+			}
+			cost = 0
+			can_be_fired = no
+			traits = {  }
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = UKR_halyna_kuzmenko
+			allowed = { always = yes }
+			available = {  }
+			cost = 0
+			traits = {  }
+		}
+	}
+	UKR_viktor_bilash = {
+		name = UKR_viktor_bilash
+		portraits = {
+			civilian = {
+				#large = GFX_Portrait_Leader_ioannes_oikos
+				#small = GFX_Portrait_Leader_ioannes_oikos_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = UKR_viktor_bilash
+			allowed = { always = yes }
+			available = {  }
+			cost = 0
+			traits = {  }
+		}
+	}
+	BEL_victor_serge = {
+		name = BEL_victor_serge
+		portraits = {
+			civilian = {
+				#large = GFX_Portrait_Leader_ioannes_oikos
+				#small = GFX_Portrait_Leader_ioannes_oikos_small
+			}
+		}
+		#country_leader = {
+		#	ideology = anarchism
+		#	traits = {  }
+		#	expire = "1965.1.1.1"
+		#	id = -1
+		#}
+		advisor = {
+			slot = head_of_gov
+			idea_token = BEL_victor_serge_hog
+			allowed = { always = yes }
+			available = {
+				br_head_of_gov_generic_trigger = yes
+			}
+			cost = 0
+			can_be_fired = no
+			traits = {  }
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = BEL_victor_serge
+			allowed = { always = yes }
+			available = {  }
+			cost = 0
+			traits = {  }
+		}
+	}
+###
+	RUS_vsevolod_volin = { #vsevolod mikhailovich eikhenbaum
+		name = RUS_vsevolod_volin
+		portraits = {
+			civilian = {
+				#large = GFX_Portrait_
+				#small = GFX_Portrait_
+			}
+		}
+		#country_leader = {
+		#	ideology = anarchism
+		#	traits = {  }
+		#	expire = "1965.1.1.1"
+		#	id = -1
+		#}
+		advisor = {
+			slot = head_of_gov
+			idea_token = RUS_vsevolod_volin_hog
+			allowed = { always = yes }
+			available = {
+				br_head_of_gov_generic_trigger = yes
+			}
+			cost = 0
+			can_be_fired = no
+			traits = {  }
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = RUS_vsevolod_volin
+			allowed = { always = yes }
+			available = {  }
+			cost = 0
+			traits = {  }
+		}
+	}
+	RUS_boris_eikhenbaum = {
+		name = RUS_boris_eikhenbaum
+		portraits = {
+			civilian = {
+				#large = GFX_Portrait_
+				#small = GFX_Portrait_
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = RUS_boris_eikhenbaum
+			allowed = { always = yes }
+			available = {  }
+			cost = 0
+			traits = {  }
+		}
+	}
+}

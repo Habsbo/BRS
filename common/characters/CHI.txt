@@ -771,7 +771,7 @@ characters={
 		}
 	}
 	
-	CHI_soong_mei_ling={
+	CHI_soong_mei_ling={ #宋美玲
 		name=CHI_soong_mei_ling
 		portraits={
 			civilian={
@@ -795,6 +795,22 @@ characters={
 			traits  = {
 				first_lady 
 			}
+		}
+	}
+
+	CHI_gao_gang = { #高岗
+		name=CHI_gao_gang
+		portraits={
+			civilian={
+				large="GFX_portrait_chi_du_yuming"
+				small="GFX_idea_CHI_chen_guofu"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = CHI_gao_gang
+			allowed  = {}
+			traits  = {}
 		}
 	}
 }
