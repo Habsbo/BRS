@@ -82,5 +82,29 @@ on_actions = {
 			#SER = {}
 		}
 	}
-
+	on_startup = {
+		effect = {
+			every_possible_country = {
+				set_variable = { br_exchequer_var = 0 }
+				set_variable = { br_eco_var = var:num_of_civilian_factories }
+				set_variable = { br_free_ic_var = var:num_of_civilian_factories_available_for_projects }
+				multiply_variable = { br_free_ic_var = -1 }
+				add_to_variable = { br_eco_var = br_free_ic_var }
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			every_country = {
+				limit = {
+					exists = yes
+				}
+				set_variable = { br_eco_var = var:num_of_civilian_factories }
+				set_variable = { br_free_ic_var = var:num_of_civilian_factories_available_for_projects }
+				multiply_variable = { br_free_ic_var = -1 }
+				add_to_variable = { br_eco_var = br_free_ic_var }
+				add_to_variable = { br_exchequer_var = br_eco_var }
+			}
+		}
+	}
 }

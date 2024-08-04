@@ -70,12 +70,12 @@
 
  SPR_soc_anarchism_party: "CNT-FAI（全国劳工联盟）"
  SPR_vanwardism_party: "工团党"
- SPR_sci_socialism_party: "西班牙共产党"
- SPR_con_socialism_party: "西班牙共产党"
- SPR_demo_socialism_party: "共和左翼(ERC)"
+ SPR_sci_socialism_party: "人民阵线：西班牙共产党"
+ SPR_con_socialism_party: "人民阵线：西班牙共产党"
+ SPR_demo_socialism_party: "人民阵线：共和左翼(ERC)"
  SPR_demo_liberalism_party: ""
  SPR_demo_conservatism_party: "西班牙国民联盟"
- SPR_authoritarian_party: "卡洛斯派"
+ SPR_authoritarian_party: "波旁王朝" #卡洛斯派
  SPR_fascism_party: "西班牙长枪党"
  SPR_nationalism_party: "西班牙长枪党右翼"
  SPR_supernationalism_party: ""

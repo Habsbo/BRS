@@ -39,6 +39,7 @@
 		complete_tooltip = {}
 		
 		completion_reward = {
+			#
 			add_political_power = 200
 			add_stability = -0.05
 			add_popularity = { ideology = sci_socialism popularity = 0.02 }

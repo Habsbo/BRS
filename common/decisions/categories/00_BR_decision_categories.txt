@@ -98,3 +98,12 @@ br_alsace = {
 		visible = { has_event_target = scope_SWI }
 	}
 }
+
+br_economic = {
+	icon = generic_economy
+
+	visible = { always = yes }
+
+	priority = 99
+	visible_when_empty = yes
+}

@@ -15,17 +15,15 @@ focus_tree = {
 	continuous_focus_position = { x = 50 y = 1500 }
 	
 	focus = {
-		id = SPR_
+		id = SPR_gran_espanna
 		icon = GFX_
 		#prerequisite = { focus =  }
 		#mutually_exclusive = { focus =  }
-		x = 0
-		y = 1
+		x = 12
+		y = 0
 		#relative_position_id =
 
 		cost = 8
-		
-		ai_will_do = { factor = 1 }
 		
 		available = {}
 		
@@ -38,5 +36,387 @@ focus_tree = {
 		complete_tooltip = {}
 		
 		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	
+###rif war lost
+	focus = {
+		id = SPR_lose_rif_war
+		icon = GFX_
+		mutually_exclusive = { focus = SPR_win_rif_war }
+		x = 16
+		y = 0
+
+		cost = 0
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+###rif war won
+	focus = {
+		id = SPR_win_rif_war
+		icon = GFX_
+		mutually_exclusive = { focus = SPR_lose_rif_war }
+		x = 18
+		y = 0
+
+		cost = 0
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+###continue the war
+	focus = {
+		id = SPR_continue_the_war
+		icon = GFX_
+		prerequisite = {
+			focus = SPR_lose_rif_war
+			focus = SPR_win_rif_war
+		}
+		#mutually_exclusive = { focus =  }
+		x = 17
+		y = 1
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = SPR_reorganized_north_african_legion
+		icon = GFX_
+		prerequisite = { focus = SPR_continue_the_war }
+		x = -1
+		y = 1
+		relative_position_id = SPR_continue_the_war
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = SPR_promote_franco
+		icon = GFX_
+		prerequisite = { focus = SPR_continue_the_war }
+		x = 1
+		y = 1
+		relative_position_id = SPR_continue_the_war
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = SPR_
+		icon = GFX_
+		prerequisite = {
+			focus = SPR_reorganized_north_african_legion
+			focus = SPR_promote_franco 
+		}
+		x = 0
+		y = 2
+		relative_position_id = SPR_continue_the_war
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+###frente popular
+	focus = {
+		id = SPR_anti_the_war_and_anticolonialism
+		icon = GFX_
+		prerequisite = { focus = SPR_lose_rif_war }
+		#mutually_exclusive = { focus =  }
+		x = -8
+		y = 1
+		relative_position_id = SPR_lose_rif_war
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = SPR_rex_was_vermin
+		icon = GFX_
+		prerequisite = { focus = SPR_anti_the_war_and_anticolonialism }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = SPR_anti_the_war_and_anticolonialism
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = SPR_calling_of_democratic_republic
+		icon = GFX_
+		prerequisite = { focus = SPR_rex_was_vermin }
+		#mutually_exclusive = { focus =  }
+		x = -1
+		y = 1
+		relative_position_id = SPR_rex_was_vermin
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = SPR_1
+		icon = GFX_
+		prerequisite = { focus = SPR_rex_was_vermin }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 1
+		relative_position_id = SPR_rex_was_vermin
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+###gran espanna
+	focus = {
+		id = SPR_
+		icon = GFX_
+		prerequisite = { focus = SPR_win_rif_war }
+		#mutually_exclusive = { focus =  }
+		x = 8
+		y = 1
+		relative_position_id = SPR_win_rif_war
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = SPR_
+		icon = GFX_
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		#relative_position_id =
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = SPR_
+		icon = GFX_
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		#relative_position_id =
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = SPR_
+		icon = GFX_
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		#relative_position_id =
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = SPR_
+		icon = GFX_
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		#relative_position_id =
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
 	}
 }

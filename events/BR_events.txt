@@ -626,3 +626,36 @@ country_event = { #
 		ai_chance = { factor = 5 }
 	}
 }
+
+#
+
+###
+	add_namespace = br_mapmapomevoz_basileus
+	###
+	country_event = { #
+		id = br_mapmapomevoz_basileus.1
+		title = br_mapmapomevoz_basileus.1.title
+		desc = br_mapmapomevoz_basileus.1.desc
+		#picture = GFX_report_event_chinese_soldiers_fighting
+
+		fire_only_once = no
+		is_triggered_only = yes
+
+		immediate = {
+			hidden_effect = {
+				#
+			}
+		}
+
+		option = {
+			name =  br_mapmapomevoz_basileus.1.a #
+
+			hidden_effect = {
+				#
+			}
+			#
+
+			ai_chance = { factor = 5 }
+		}
+
+	}
