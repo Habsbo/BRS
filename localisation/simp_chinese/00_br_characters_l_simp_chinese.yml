@@ -176,3 +176,11 @@
  VL_state_zhanguo: "§Y$zhanguo$§!\n$VL_trait_zhanguo$"
  VL_Dip_state_zhanguo: "§Y$zhanguo$§!\n$GetDipStatus$\n$VL_trait_zhanguo$"
  VL_desc_zhanguo: "§g§!"
+
+#
+ YUG_teto: "铁托"
+ VL_name_teto: "$YUG_teto$"
+ VL_trait_teto: ""
+ VL_state_teto: "§Y$YUG_teto$§!\n$VL_trait_teto$"
+ VL_Dip_state_teto: "§Y$YUG_teto$§!\n$GetDipStatus$\n$VL_trait_teto$"
+ VL_desc_teto: "§g§!"

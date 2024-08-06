@@ -102,4 +102,46 @@ characters={
 			traits = { trait_guangxu }
 		}
 	}
+	#
+	YUG_teto = {
+		name = YUG_teto
+		portraits = {
+			civilian = {
+				large = GFX_portrait_kasane_teto
+				small = GFX_portrait_kasane_teto_small
+			}
+			army = {
+				large = GFX_portrait_kasane_teto
+				small = GFX_portrait_kasane_teto_small
+			}
+		}
+		gender = female #actually his/her gender is chimera
+		country_leader = {
+			ideology = socialism
+			traits = {}
+			expire = "1965.1.1.1"
+			id = -1
+		}
+		advisor = {
+			slot = head_of_gov
+			idea_token = YUG_teto_hog
+			allowed = { always = yes }
+			available = {
+				br_head_of_gov_generic_trigger = yes
+			}
+			cost = 0
+			can_be_fired = no
+			traits = {}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = YUG_teto_hog
+			allowed = { always = yes }
+			available = {
+				br_head_of_gov_generic_trigger = yes
+			}
+			cost = 75
+			traits = {}
+		}
+	}
 }

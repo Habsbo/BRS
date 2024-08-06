@@ -8465,5 +8465,14 @@ spriteTypes = {
 		name = "GFX_portrait_MNT_blazo_dukanovic"
 		texturefile = "gfx/leaders/ITA/portrait_MNT_blazo_dukanovic.dds"
 	}
-	
+#
+	spriteType = {
+		name = "GFX_portrait_kasane_teto"
+		texturefile = "gfx/leaders/Yugo_Slavia/Portrait_kasane_teto.png"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_kasane_teto_small"
+		texturefile = "gfx/interface/ideas/Yugo_Slavia/Portrait_kasane_teto_small.png"
+	}
 }
