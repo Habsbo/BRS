@@ -35,7 +35,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = POL_nothing_today
+		id = POL_dark_future
 		icon = GFX_focus_generic_military_dictatorship
 		#prerequisite = { focus = ENG_twenty_passed }
 		#relative_position_id = ENG_twenty_passed
@@ -49,10 +49,390 @@ focus_tree = {
 			base = 1
 		}
 		bypass = {}
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			add_stability = 0.05
-			add_political_power = 10
+			
+		}
+	}
+
+	focus = {
+		id = POL_open_meeting
+		icon = GFX_focus_generic_military_dictatorship
+		prerequisite = { focus = POL_dark_future }
+		relative_position_id = POL_dark_future
+		x = 0
+		y = 1
+		cost = 5
+		available = {
+			
+		}
+		ai_will_do = {
+			base = 1
+		}
+		bypass = {}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = POL_discuss_issues
+		icon = GFX_focus_generic_military_dictatorship
+		prerequisite = { focus = POL_dark_future }
+		relative_position_id = POL_dark_future
+		x = 2
+		y = 1
+		cost = 5
+		available = {
+			
+		}
+		ai_will_do = {
+			base = 1
+		}
+		bypass = {}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = POL_election_in_struggle
+		icon = GFX_focus_generic_military_dictatorship
+		prerequisite = { focus = POL_open_meeting }
+		relative_position_id = POL_open_meeting
+		x = -2
+		y = 1
+		cost = 0
+		available = {
+			always = no
+		}
+		ai_will_do = {
+			base = 1
+		}
+		bypass = {}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = POL_future_of_kingdom
+		icon = GFX_focus_generic_military_dictatorship
+		prerequisite = { focus = POL_election_in_struggle }
+		relative_position_id = POL_election_in_struggle
+		x = 0
+		y = 1
+		cost = 5
+		available = {
+			
+		}
+		ai_will_do = {
+			base = 1
+		}
+		bypass = {}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = POL_capital_bans
+		icon = GFX_focus_generic_military_dictatorship
+		prerequisite = { focus = POL_future_of_kingdom }
+		relative_position_id = POL_future_of_kingdom
+		x = 2
+		y = 1
+		cost = 0
+		available = {
+			always = no
+		}
+		ai_will_do = {
+			base = 1
+		}
+		bypass = {}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = POL_new_regent
+		icon = GFX_focus_generic_military_dictatorship
+		prerequisite = { focus = POL_capital_bans }
+		relative_position_id = POL_capital_bans
+		x = 2
+		y = 1
+		cost = 5
+		available = {
+			
+		}
+		ai_will_do = {
+			base = 1
+		}
+		bypass = {}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = POL_sanacja
+		icon = GFX_focus_generic_military_dictatorship
+		prerequisite = { focus = POL_new_regent }
+		relative_position_id = POL_new_regent
+		x = 0
+		y = 1
+		cost = 5
+		available = {
+			
+		}
+		ai_will_do = {
+			base = 1
+		}
+		bypass = {}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = POL_continue_grabski_reform
+		icon = GFX_focus_generic_military_dictatorship
+		prerequisite = { focus = POL_sanacja }
+		relative_position_id = POL_sanacja
+		x = -3
+		y = 1
+		cost = 5
+		available = {
+			
+		}
+		ai_will_do = {
+			base = 1
+		}
+		bypass = {}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = POL_combat_corruption
+		icon = GFX_focus_generic_military_dictatorship
+		prerequisite = { focus = POL_continue_grabski_reform }
+		relative_position_id = POL_continue_grabski_reform
+		x = 0
+		y = 1
+		cost = 5
+		available = {
+			
+		}
+		ai_will_do = {
+			base = 1
+		}
+		bypass = {}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = POL_open_economy_investment
+		icon = GFX_focus_generic_military_dictatorship
+		prerequisite = { focus = POL_combat_corruption }
+		relative_position_id = POL_combat_corruption
+		x = 0
+		y = 1
+		cost = 5
+		available = {
+			
+		}
+		ai_will_do = {
+			base = 1
+		}
+		bypass = {}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = POL_unite_support_party
+		icon = GFX_focus_generic_military_dictatorship
+		prerequisite = { focus = POL_sanacja }
+		relative_position_id = POL_sanacja
+		x = 3
+		y = 1
+		cost = 5
+		available = {
+			
+		}
+		ai_will_do = {
+			base = 1
+		}
+		bypass = {}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = POL_watch_left
+		icon = GFX_focus_generic_military_dictatorship
+		prerequisite = { focus = POL_unite_support_party }
+		relative_position_id = POL_unite_support_party
+		x = 0
+		y = 1
+		cost = 5
+		available = {
+			
+		}
+		ai_will_do = {
+			base = 1
+		}
+		bypass = {}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = POL_tightening_review_mechanism
+		icon = GFX_focus_generic_military_dictatorship
+		prerequisite = { focus = POL_watch_left }
+		relative_position_id = POL_watch_left
+		x = 0
+		y = 1
+		cost = 5
+		available = {
+			
+		}
+		ai_will_do = {
+			base = 1
+		}
+		bypass = {}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = POL_land_reform_under_sanacja
+		icon = GFX_focus_generic_military_dictatorship
+		prerequisite = { focus = POL_sanacja }
+		relative_position_id = POL_sanacja
+		x = -1
+		y = 1
+		cost = 5
+		available = {
+			
+		}
+		ai_will_do = {
+			base = 1
+		}
+		bypass = {}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = POL_raise_acquisition_price
+		icon = GFX_focus_generic_military_dictatorship
+		prerequisite = { focus = POL_land_reform_under_sanacja }
+		relative_position_id = POL_land_reform_under_sanacja
+		x = 0
+		y = 2
+		cost = 5
+		available = {
+			
+		}
+		ai_will_do = {
+			base = 1
+		}
+		bypass = {}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = POL_limited_external_immigration
+		icon = GFX_focus_generic_military_dictatorship
+		prerequisite = { focus = POL_land_reform_under_sanacja }
+		relative_position_id = POL_land_reform_under_sanacja
+		x = 1
+		y = 1
+		cost = 5
+		available = {
+			
+		}
+		ai_will_do = {
+			base = 1
+		}
+		bypass = {}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = POL_negotiation_with_rome
+		icon = GFX_focus_generic_military_dictatorship
+		prerequisite = { focus = POL_sanacja }
+		relative_position_id = POL_sanacja
+		x = 1
+		y = 3
+		cost = 5
+		available = {
+			
+		}
+		ai_will_do = {
+			base = 1
+		}
+		bypass = {}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = POL_reborn_under_sanacja
+		icon = GFX_focus_generic_military_dictatorship
+		prerequisite = { focus = POL_open_economy_investment }
+		prerequisite = { focus = POL_tightening_review_mechanism }
+		prerequisite = { focus = POL_raise_acquisition_price }
+		prerequisite = { focus = POL_negotiation_with_rome }
+		relative_position_id = POL_sanacja
+		x = 0
+		y = 4
+		cost = 5
+		available = {
+			
+		}
+		ai_will_do = {
+			base = 1
+		}
+		bypass = {}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
 		}
 	}
 }

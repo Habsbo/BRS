@@ -5,14 +5,14 @@ focus_tree = {
 	country = {
 		factor = 0
 		
-		modifier = {
-			add = 10
-			tag = POL
-			OR = {
-				has_dlc = "Poland: United and Ready"
-				has_dlc = "No Step Back"
-			}
-		}
+		#modifier = {
+		#	add = 10
+		#	tag = POL
+		#	OR = {
+		#		has_dlc = "Poland: United and Ready"
+		#		has_dlc = "No Step Back"
+		#	}
+		#}
 	}
 	default = no
 
