@@ -157,29 +157,29 @@ br_debug_decisions = {
 	debug_vl.1 = {
 		fire_only_once = no
 		complete_effect = {
-			add_ideas = CAT_benito_pabon_y_suarez_de_urbina_hog
-		}
-	}
-	debug_vl.2 = {
-		fire_only_once = no
-		complete_effect = {
-			GRE = {
-				Leader_ioannes = {
-					set_nationality = ROOT
+			#
+			ITA_vittorio_emanuele_iii = { set_nationality = root }
+			add_country_leader_role = {
+				character = ITA_vittorio_emanuele_iii
+				promote_leader = yes
+				country_leader = {
+					ideology = fascism_type
+					expire = "1965.1.1.1"
+					traits = { war_industrialist }
 				}
 			}
-		}
-	}
-	debug_vl.3 = {
-		fire_only_once = no
-		complete_effect = {
-			add_ideas = Leader_ioannes_hog
 		}
 	}
 	debug_gui.1 = {
 		fire_only_once = no
 		complete_effect = {
 			set_country_flag = br_elections_view_switch_on_flag
+		}
+	}
+	debug_event.1 = {
+		fire_only_once = no
+		complete_effect = {
+			country_event = br_rif.101
 		}
 	}
 #

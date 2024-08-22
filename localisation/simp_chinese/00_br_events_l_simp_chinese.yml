@@ -68,38 +68,6 @@
  br_laws.3.a: "革命万岁！"
 
 ###
- SPR_great_spain: "大西班牙"
- SPR_carlism: "卡洛斯国王"
- SPR_nation_state_family: "民族、国家、家庭"
- SPR_modern_empire: "帝国新风"
- SPR_fe_cristiana: "基督教信仰"
- SPR_frente_de_la_patria: "捍卫祖国与家庭的前线"
- SPR_spaniards: "西班牙民族"
- SPR_a_french_king: "法裔国王"
- SPR_a_germany_king: "德裔国王"
- SPR_comunion_tradicionalista: "Comunión Tradicionalista"
- SPR_requetez: "呼啸兵团"
- SPR_vetar_las_elecciones: "否决政府选举"
- SPR_expand_requetes: "扩大呼啸兵团"
- SPR_kingz_governor: "国王享有唯一主权"
- SPR_the_anointed: "受膏者"
- SPR_dynasty_succession_male_by_blood: "仅男性血脉的王朝继承"
- SPR_protector_of_christianity: "基督教世界的捍卫者"
- SPR_iberia_be_one: "伊比利亚归于统一"
- SPR_reconquista_crusades: "再征服十字军"
- SPR_claim_france: "宣称法王权位"
- SPR_retake_napoles: "夺回两西西里"
- SPR_retake_provinces_of_netherland: "重新建立北方行省"
- SPR_claim_habsburg: "宣称哈布斯堡王位"
- SPR_bring_hre_back: "帝国归来"
- SPR_italy_war: "意大利战争"
- SPR_divin_right_of_kings: "君权神授"
- SPR_provinces_of_africa: "建立阿非利加省"
- SPR_latin_empire: "重建拉丁帝国"
- SPR_kingdom_of_jerusalem: "重建耶路撒冷王国"
- SPR_take_egypt: "驱逐埃及的异教徒"
-
-
 #
 #
  br_political_actions.1.title: "[FROM.GetName]无政府主义者的抵抗"
@@ -135,3 +103,7 @@
  br_cb_barcelona.1.desc: "[FROM.GetName]发出了最后通牒，如果我们不愿交出巴塞罗那，战争将不可避免。"
  br_cb_barcelona.1.a: "他们想要那就用他们战士的尸体来拿吧！"
 #
+ br_fra.1.title: "释放政治犯？"
+ br_fra.1.desc: ""
+ br_fra.1.a: "签了。"
+ br_fra.1.b: "这些人出狱会威胁法兰西的安全。"

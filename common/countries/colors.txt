@@ -871,8 +871,8 @@ TOS = {
 	color_ui = rgb { 204 0 0 }
 }
 SPM = {
-	color = rgb { 0 255 255 }
-	color_ui = rgb { 0 179 179 }
+	color = rgb { 65 105 225 }
+	color_ui = rgb { 65 105 225 }
 }
 TTS = {
 	color = rgb { 230 130 20 }

@@ -1,5 +1,5 @@
 characters = {
-	####阿拉贡####
+####阿拉贡####
 	CAT_joaquin_ascaso_budria = { #主席 华金·阿斯卡索
 		name=CAT_joaquin_ascaso_budria
 		portraits={
@@ -18,10 +18,19 @@ characters = {
 			expire="1965.1.1.1"
 			id=11000000002
 		}
+		corps_commander={
+			traits={ brilliant_strategist }
+			skill=2
+			attack_skill=3
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
 	}
 
-	CAT_benito_pabon_y_suarez_de_urbina = { #总书记 贝尼托·帕彭
-		name=CAT_benito_pabon_y_suarez_de_urbina
+	CAT_benito_pabon = { #总书记 贝尼托·帕彭
+		name=CAT_benito_pabon
 		portraits={
 			army={
 				large="GFX_portrait_Benito_Pabon"
@@ -35,8 +44,8 @@ characters = {
 		}
 		advisor={
 			slot = political_advisor
-			name = CAT_benito_pabon_y_suarez_de_urbina
-			idea_token = CAT_benito_pabon_y_suarez_de_urbina
+			name = CAT_benito_pabon
+			idea_token = CAT_benito_pabon
 			allowed = {}
 			visible = { NOT = { has_idea = CAT_benito_pabon_hog } }
 			available = {
@@ -49,8 +58,8 @@ characters = {
 		}
 		advisor={
 			slot = head_of_gov
-			name = CAT_benito_pabon_y_suarez_de_urbina
-			idea_token = CAT_benito_pabon_y_suarez_de_urbina_hog
+			name = CAT_benito_pabon
+			idea_token = CAT_benito_pabon_hog
 			allowed = {}
 			visible = {}
 			available = { br_head_of_gov_generic_trigger = yes }
@@ -698,4 +707,85 @@ characters = {
 			cost = 100
 		}
 	}
+### cat ###
+	CAT_lluis_companys_i_jover = { #加泰罗尼亚总统 - 
+		name=CAT_lluís_companys
+		portraits={
+			civilian={
+				large="GFX_portrait_Joaquin_Ascaso"
+				small="GFX_idea_generic_political_advisor_europe_3"
+			}
+
+			army={
+				large="GFX_portrait_Joaquin_Ascaso"
+				small="GFX_idea_generic_political_advisor_europe_3"
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	CAT_andreu_nin = { #安德烈乌·宁
+		name=CAT_andreu_nin
+		portraits={
+			civilian={
+				large="GFX_portrait_Joaquin_Ascaso"
+				small="GFX_idea_generic_political_advisor_europe_3"
+			}
+
+			army={
+				large="GFX_portrait_Joaquin_Ascaso"
+				small="GFX_idea_generic_political_advisor_europe_3"
+			}
+		}
+		country_leader={
+			ideology=anarchism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	CAT_daniel_cardona= { #丹尼尔·卡多那
+		name=CAT_daniel_cardona
+		portraits={
+			civilian={
+				large="GFX_portrait_Joaquin_Ascaso"
+				small="GFX_idea_generic_political_advisor_europe_3"
+			}
+
+			army={
+				large="GFX_portrait_Joaquin_Ascaso"
+				small="GFX_idea_generic_political_advisor_europe_3"
+			}
+		}
+	}
+	CAT_francesc_cambo_i_batlle= { #弗朗切斯科·坎博·巴特尔
+		name=CAT_francesc_cambó
+		portraits={
+			civilian={
+				large="GFX_portrait_Francesc_Cambo_i_Batlle"
+				small="GFX_idea_generic_political_advisor_europe_3"
+			}
+		}
+
+		army={
+			large="GFX_portrait_Francesc_Cambo_i_Batlle"
+			small="GFX_idea_generic_political_advisor_europe_3"
+		}
+
+		advisor={
+			slot = political_advisor
+			idea_token = CAT_francesc_cambó
+			name = CAT_francesc_cambó
+			allowed = {}
+			visible = {}
+			available = {}
+			traits = {
+				#
+			}
+		}
+
+	}
+	
 }

@@ -176,9 +176,9 @@ set_popularities = {
 
 #create_faction = Comintern
 
-set_cosmetic_tag = ROR_interim_government #RUS_republic
+set_cosmetic_tag = russian_empire #RUS_republic
 
-set_autonomy = {
-	target = BSK
-	autonomy_state = autonomy_br_protectorate
-}
+#set_autonomy = {
+#	target = BSK
+#	autonomy_state = autonomy_br_protectorate
+#}

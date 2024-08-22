@@ -8475,4 +8475,10 @@ spriteTypes = {
 		name = "GFX_portrait_kasane_teto_small"
 		texturefile = "gfx/interface/ideas/Yugo_Slavia/Portrait_kasane_teto_small.png"
 	}
+	
+#
+	spriteType = {
+		name = "GFX_portrait_SPR_alfonso_xiii"
+		texturefile = "gfx/leaders/SPR_Reino_de_Espanna/portrait_spr_alfonso_xiii.dds"
+	}
 }

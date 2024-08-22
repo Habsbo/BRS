@@ -78,24 +78,9 @@ create_country_leader = {
 	ideology = centrism
 }
 
-#国名&地区名
-set_cosmetic_tag = CRE_ARAGON
-save_global_event_target_as = Aragon
-#法律
-add_ideas = {
-	#
-
-	#
-}
-1931.1.1 = {
-	#head of gov
-	add_ideas = CAT_benito_pabon_y_suarez_de_urbina_hog
-}
-#
-set_variable = { VL_status_var = 12 } #政府领袖是 总书记 - the head of gov is general secretary!
 #政治家
 recruit_character = CAT_joaquin_ascaso_budria #华金·阿斯卡索·博得里亚
-recruit_character = CAT_benito_pabon_y_suarez_de_urbina #贝尼托·帕彭
+recruit_character = CAT_benito_pabon #贝尼托·帕彭
 recruit_character = CAT_adolfo_ballano #阿道夫·巴拉诺
 recruit_character = CAT_adolfo_arnal #阿道夫·阿纳尔
 recruit_character = CAT_evaristo_vinuales_larroy #埃瓦里斯托·维纽莱斯·劳里
@@ -108,3 +93,19 @@ recruit_character = CAT_manuel_latorre #曼努埃尔·拉托雷
 recruit_character = CAT_jose_ruiz_borao #何塞·鲁伊斯·波劳
 recruit_character = CAT_jose_duque #何塞·杜克
 recruit_character = CAT_custodio_pennarrocha #库斯托迪奥·佩纳罗查
+#
+recruit_character = CAT_lluis_companys_i_jover #加泰罗尼亚总统 
+recruit_character = CAT_andreu_nin #安德烈乌·宁
+recruit_character = CAT_daniel_cardona #丹尼尔·卡多那
+recruit_character = CAT_francesc_cambo_i_batlle #弗朗切斯科·坎博·巴特尔
+#国名&地区名
+set_cosmetic_tag = CRE_ARAGON
+save_global_event_target_as = Aragon
+#法律
+add_ideas = {
+	#
+	CAT_benito_pabon_hog
+	#
+}
+#
+set_variable = { VL_status_var = 12 } #政府领袖是 总书记 - the head of gov is general secretary!

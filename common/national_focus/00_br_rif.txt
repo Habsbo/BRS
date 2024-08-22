@@ -12,18 +12,19 @@ focus_tree = {
 	
 	default = no
 
-	continuous_focus_position = { x = 50 y = 1500 }
-	
+	continuous_focus_position = { x = 5 y = 1500 }
+
+###
 	focus = {
 		id = RIF_focus_1
 		icon = GFX_focus_SMB_atacama_training
 		#prerequisite = { focus =  }
 		#mutually_exclusive = { focus =  }
-		x = 10
+		x = 16
 		y = 0
 		#relative_position_id =
 
-		cost = 1
+		cost = 5
 		
 		available = {}
 		
@@ -36,7 +37,9 @@ focus_tree = {
 		complete_tooltip = {}
 		completion_reward = {
 			add_war_support = 0.05
+			#
 			add_timed_idea = { idea = RIF_stand_for_fight days = 181 }
+			#
 			complete_national_focus = RIF_focus_2
 		}
 		
@@ -45,10 +48,10 @@ focus_tree = {
 	#dip line
 	focus = {
 		id = RIF_focus_2
-		icon = GFX_goal_generic_forceful_treaty
+		icon = GFX_focus_generic_league_of_nations
 		prerequisite = { focus = RIF_focus_1 }
 		#mutually_exclusive = { focus =  }
-		x = 6
+		x = 8
 		y = 1
 		relative_position_id = RIF_focus_1
 
@@ -63,7 +66,16 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		complete_tooltip = {}
-		completion_reward = {}
+		completion_reward = {
+			add_political_power = 150
+			add_popularity = { ideology = vanwardism popularity = 0.01 }
+			add_popularity = { ideology = sci_socialism popularity = 0.01 }
+			add_popularity = { ideology = con_socialism popularity = 0.01 }
+			add_popularity = { ideology = demo_socialism popularity = 0.01 }
+			add_popularity = { ideology = demo_liberalism popularity = 0.01 }
+			#
+			#country_event = { id =  }
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -77,9 +89,20 @@ focus_tree = {
 		y = 1
 		relative_position_id = RIF_focus_2
 
-		cost = 8
+		cost = 5
 		
-		available = {}
+		available = {
+			ROOT = {
+				exists = yes
+				has_capitulated = no
+				has_civil_war = no
+			}
+			FRA = {
+				exists = yes
+				has_capitulated = no
+				has_civil_war = no
+			}
+		}
 		
 		bypass = {}
 		
@@ -89,9 +112,22 @@ focus_tree = {
 		
 		complete_tooltip = {}
 		completion_reward = {
+			add_popularity = { ideology = con_socialism popularity = 0.01 }
+			add_popularity = { ideology = demo_socialism popularity = 0.01 }
+			add_popularity = { ideology = demo_liberalism popularity = 0.01 }
 			custom_effect_tooltip = RIF_focus_french_1_tt
+			FRA = {
+				country_event = { id = br_rif.101 }
+			}
 			custom_effect_tooltip = if_they_accept_newline_tt
 			effect_tooltip = {
+				FRA = {
+					add_manpower = -500
+					add_stability = -0.01
+					add_popularity = { ideology = con_socialism popularity = 0.01 }
+					add_popularity = { ideology = demo_socialism popularity = 0.01 }
+				}
+				add_manpower = 500
 				add_offsite_building = { type = arms_factory level = 2 }
 			}
 		}
@@ -101,7 +137,11 @@ focus_tree = {
 	focus = {
 		id = RIF_focus_8
 		icon = GFX_focus_focus_fra_revolution_utmost
-		prerequisite = { focus = RIF_focus_5 }
+		prerequisite = {
+			focus = RIF_focus_5
+			focus = RIF_focus_6
+			focus = RIF_focus_7
+		}
 		#mutually_exclusive = { focus =  }
 		x = 0
 		y = 1
@@ -109,7 +149,19 @@ focus_tree = {
 
 		cost = 8
 		
-		available = {}
+		available = {
+			any_other_country = {
+				OR = {
+					is_major = yes
+					#
+					is_menber_of_berne_concert = yes
+				}
+				OR = {
+					has_country_flag = br_support_volunteers_to_rif_flag
+					has_country_flag = br_volunteers_support_rif_only_flag
+				}
+			}
+		}
 		
 		bypass = {}
 		
@@ -119,7 +171,7 @@ focus_tree = {
 		
 		complete_tooltip = {}
 		completion_reward = {
-			add_timed_idea = { idea = SPR_international_brigades years = 3 }
+			add_timed_idea = { idea = RIF_international_brigades years = 3 }
 		}
 		
 		ai_will_do = { factor = 1 }
@@ -134,7 +186,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = RIF_focus_2
 
-		cost = 8
+		cost = 5
 		
 		available = {}
 		
@@ -146,9 +198,28 @@ focus_tree = {
 		
 		complete_tooltip = {}
 		completion_reward = {
+			add_popularity = { ideology = vanwardism popularity = 0.01 }
+			add_popularity = { ideology = sci_socialism popularity = 0.01 }
+			add_popularity = { ideology = con_socialism popularity = 0.01 }
+			#
+			ITA = {
+				country_event = { id = br_rif.101 }
+			}
 			#
 			custom_effect_tooltip = if_they_accept_newline_tt
 			effect_tooltip = {
+				ITA = {
+					add_manpower = -5000
+					add_war_support = 0.05
+					add_stability = 0.05
+					send_equipment = {
+						equipment = infantry_equipment
+						amount = 5000
+						target = RIF
+					}
+				}
+				add_manpower = 5000
+				add_command_power = 50
 				add_offsite_building = { type = arms_factory level = 2 }
 			}
 		}
@@ -175,7 +246,11 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		complete_tooltip = {}
-		completion_reward = {}
+		completion_reward = {
+			army_experience = 50
+			air_experience = 50
+			navy_experience = 25
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -189,9 +264,11 @@ focus_tree = {
 		y = 1
 		relative_position_id = RIF_focus_2
 
-		cost = 8
+		cost = 5
 		
-		available = {}
+		available = {
+			NOT = { has_completed_focus = RIF_focus_4 }
+		}
 		
 		bypass = {}
 		
@@ -202,8 +279,18 @@ focus_tree = {
 		complete_tooltip = {}
 		completion_reward = {
 			#
+			ENG = {
+				country_event = { id = br_rif.101 }
+			}
 			custom_effect_tooltip = if_they_accept_newline_tt
 			effect_tooltip = {
+				ENG = {
+					add_manpower = -500
+					add_stability = -0.01
+					add_popularity = { ideology = con_socialism popularity = 0.01 }
+					add_popularity = { ideology = demo_socialism popularity = 0.01 }
+				}
+				add_manpower = 500
 				add_offsite_building = { type = arms_factory level = 2 }
 			}
 		}
@@ -213,7 +300,11 @@ focus_tree = {
 	focus = {
 		id = RIF_focus_10
 		icon = GFX_focus_eng_concessions_to_the_trade_unions
-		prerequisite = { focus = RIF_focus_7 }
+		prerequisite = {
+			focus = RIF_focus_5
+			focus = RIF_focus_6
+			focus = RIF_focus_7
+		}
 		#mutually_exclusive = { focus =  }
 		x = 0
 		y = 1
@@ -237,7 +328,7 @@ focus_tree = {
 	#
 	focus = {
 		id = RIF_focus_11
-		icon = GFX_
+		icon = GFX_goal_generic_neutrality_focus
 		prerequisite = {
 			focus = RIF_focus_8
 			focus = RIF_focus_9
@@ -248,7 +339,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = RIF_focus_9
 
-		cost = 8
+		cost = 5
 		
 		available = {}
 		
@@ -263,21 +354,25 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
-	#military line
+### military line ###
 	focus = {
 		id = RIF_focus_3
 		icon = GFX_focus_secret_rearmament
 		prerequisite = { focus = RIF_focus_1 }
 		#mutually_exclusive = { focus =  }
-		x = -6
+		x = -8
 		y = 1
 		relative_position_id = RIF_focus_1
 
 		cost = 2
 		
-		available = {}
+		available = {
+			has_war = yes
+		}
 		
-		bypass = {}
+		bypass = {
+			has_war = no
+		}
 		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -285,9 +380,10 @@ focus_tree = {
 		
 		complete_tooltip = {}
 		completion_reward = {
-			every_owned_state = {
+			every_controlled_state = {
 				limit = {
 					is_in_home_area = yes
+					is_core_of = root
 					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
 				}
 				add_extra_state_shared_building_slots = 1
@@ -306,9 +402,15 @@ focus_tree = {
 		y = 1
 		relative_position_id = RIF_focus_3
 
-		cost = 8
+		cost = 4
 		
-		available = {}
+		available = {
+			ROOT = {
+				exists = yes
+				has_capitulated = no
+			}
+			290 = { is_controlled_by = root }
+		}
 		
 		bypass = {}
 		
@@ -317,7 +419,16 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		complete_tooltip = {}
-		completion_reward = {}
+		completion_reward = {
+			add_ideas = RIF_rifle_manufacturing
+			add_tech_bonus = {
+				name = RIF_focus_12
+				bonus = 0.25
+				uses = 2
+				category = infantry_weapons
+				category = artillery
+			}
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -330,7 +441,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = RIF_focus_3
 
-		cost = 8
+		cost = 4
 		
 		available = {}
 		
@@ -341,7 +452,9 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		complete_tooltip = {}
-		completion_reward = {}
+		completion_reward = {
+			add_ideas = RIF_inseparable_military
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -357,7 +470,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = RIF_focus_3
 
-		cost = 8
+		cost = 5
 		
 		available = {}
 		
@@ -368,7 +481,17 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		complete_tooltip = {}
-		completion_reward = {}
+		completion_reward = {
+			every_controlled_state = {
+				limit = {
+					is_in_home_area = yes
+					is_core_of = root
+					free_building_slots = { building = arms_factory size > 1 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = arms_factory level = 2 instant_build = yes }
+			}
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -396,6 +519,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+	#
 	focus = {
 		id = RIF_focus_16
 		icon = GFX_focus_generic_camel_corps
@@ -405,7 +529,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = RIF_focus_14
 
-		cost = 8
+		cost = 5
 		
 		available = {}
 		
@@ -429,6 +553,68 @@ focus_tree = {
 		y = 2
 		relative_position_id = RIF_focus_14
 
+		cost = 5
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {
+			every_core_state = {
+				limit = {
+					is_controlled_by = root
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_building_construction = { type = infrastructure level = 1 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 }
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = RIF_focus_18
+		icon = GFX_focus_generic_limited_social_mobilization
+		prerequisite = { focus = RIF_focus_16 }
+		#mutually_exclusive = { focus =  }
+		x = -2
+		y = 2
+		relative_position_id = RIF_focus_16
+
+		cost = 5
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = RIF_focus_23
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = RIF_focus_18 }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = RIF_focus_18
+
 		cost = 8
 		
 		available = {}
@@ -444,7 +630,458 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
-	#political line
+	focus = {
+		id = RIF_focus_28
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = RIF_focus_23 }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = RIF_focus_23
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = RIF_focus_24
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = RIF_focus_18 }
+		#mutually_exclusive = { focus =  }
+		x = -2
+		y = 1
+		relative_position_id = RIF_focus_18
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = RIF_focus_25
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = RIF_focus_24 }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = RIF_focus_24
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = RIF_focus_26
+		icon = GFX_goal_generic_cavalry
+		prerequisite = { focus = RIF_focus_18 }
+		#mutually_exclusive = { focus =  }
+		x = -4
+		y = 1
+		relative_position_id = RIF_focus_18
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = RIF_focus_27
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = RIF_focus_26 }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = RIF_focus_26
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = RIF_focus_29
+		icon = GFX_goal_generic_construct_military
+		prerequisite = {
+			focus = RIF_focus_25
+			focus = RIF_focus_27
+			focus = RIF_focus_28
+		}
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = RIF_focus_28
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	#
+	#
+	focus = {
+		id = RIF_focus_20
+		icon = GFX_focus_generic_treaty
+		prerequisite = {
+			focus = RIF_focus_16
+			focus = RIF_focus_17
+		}
+		mutually_exclusive = { focus = RIF_focus_21 }
+		x = 0
+		y = 1
+		relative_position_id = RIF_focus_16
+
+		cost = 8
+		
+		available = {
+			#
+		}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = RIF_focus_21
+		icon = GFX_focus_SWE_neither_death_nor_dishonor
+		prerequisite = {
+			focus = RIF_focus_16
+			focus = RIF_focus_17
+		}
+		mutually_exclusive = { focus = RIF_focus_20 }
+		x = 0
+		y = 1
+		relative_position_id = RIF_focus_17
+
+		cost = 8
+		
+		available = {
+			FRA = {
+				OR = {
+					NOT = { has_country_flag = br_support_volunteers_to_rif_flag }
+					MOR = {
+						any_core_state = {
+							NOT = {
+								is_owned_by = PREV
+								is_controlled_by = PREV
+							}
+						}
+						NOT = { is_puppet_of = PREV }
+					}
+				}
+			}
+		}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {
+			#
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = RIF_focus_22
+		icon = GFX_focus_generic_little_entente
+		prerequisite = {
+			focus = RIF_focus_20
+			focus = RIF_focus_21
+		}
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 3
+		relative_position_id = RIF_focus_15
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {
+			controls_province = 7069
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = RIF_focus_19
+		icon = GFX_focus_generic_full_social_mobilization
+		prerequisite = { focus = RIF_focus_17 }
+		#mutually_exclusive = { focus =  }
+		x = 2
+		y = 2
+		relative_position_id = RIF_focus_17
+
+		cost = 8
+		
+		available = {
+			has_completed_focus = RIF_focus_16
+			num_of_military_factories > 9
+		}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = RIF_focus_30
+		icon = GFX_goal_rhineland
+		prerequisite = { focus = RIF_focus_19 }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = RIF_focus_19
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = RIF_focus_33
+		icon = GFX_focus_generic_military_academy
+		prerequisite = { focus = RIF_focus_30 }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = RIF_focus_30
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = RIF_focus_31
+		icon = GFX_focus_generic_military_mission
+		prerequisite = { focus = RIF_focus_19 }
+		#mutually_exclusive = { focus =  }
+		x = 2
+		y = 1
+		relative_position_id = RIF_focus_19
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = RIF_focus_34
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = RIF_focus_31 }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = RIF_focus_31
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = RIF_focus_32
+		icon = GFX_focus_ETH_ecole_militaire_haile_selassie_1er #
+		prerequisite = { focus = RIF_focus_19 }
+		#mutually_exclusive = { focus =  }
+		x = 4
+		y = 1
+		relative_position_id = RIF_focus_19
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = RIF_focus_35
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = RIF_focus_32 }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = RIF_focus_32
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = RIF_focus_36
+		icon = GFX_focus_generic_little_entente
+		prerequisite = {
+			focus = RIF_focus_33
+			focus = RIF_focus_34
+			focus = RIF_focus_35
+		}
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = RIF_focus_33
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+### political line ###
 	focus = {
 		id = RIF_focus_4
 		icon = GFX_focus_hol_the_foundations_of_defense
@@ -454,6 +1091,178 @@ focus_tree = {
 		y = 2
 		relative_position_id = RIF_focus_1
 
+		cost = 5
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+### airforce ###
+	focus = {
+		id = RIF_airforce_focus_1
+		icon = GFX_focus_generic_university_2
+		x = 32
+		y = 0
+		#relative_position_id = RIF_focus_14
+
+		cost = 5
+		
+		available = {}
+		
+		bypass = {
+			num_of_military_factories > 20
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = {
+			base = 5
+			modifier = {
+				factor = 0
+				NOT = { has_completed_focus = RIF_focus_1 }
+			}
+			modifier = {
+				factor = 0.2
+				NOT = { has_completed_focus = RIF_focus_11 }
+			}
+		}
+	}
+	focus = {
+		id = RIF_airforce_focus_2
+		icon = GFX_focus_generic_air_bases
+		prerequisite = { focus = RIF_airforce_focus_1 }
+		#mutually_exclusive = { focus =  }
+		x = -1
+		y = 1
+		relative_position_id = RIF_airforce_focus_1
+
+		cost = 2
+		
+		available = {}
+		
+		bypass = {
+			any_controlled_state = {
+				air_base > 0
+			}
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {
+			random_core_state = {
+				limit = {
+					is_controlled_by = root
+					free_building_slots = {
+						building = air_base
+						size > 0
+					}
+				}
+				add_building_construction = { type = air_base level = 1 }
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = RIF_airforce_focus_3
+		icon = GFX_focus_SOV_flying_clubs
+		prerequisite = { focus = RIF_airforce_focus_1 }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 1
+		relative_position_id = RIF_airforce_focus_1
+
+		cost = 2
+		
+		available = { always = no }
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {
+			air_experience = 5
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = RIF_airforce_focus_4
+		icon = GFX_goal_generic_build_airforce
+		prerequisite = { focus = RIF_airforce_focus_2 }
+		prerequisite = { focus = RIF_airforce_focus_3 }
+		x = 0
+		y = 2
+		relative_position_id = RIF_airforce_focus_1
+
+		cost = 0
+		
+		available = { always = no }
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = RIF_airforce_focus_5
+		icon = GFX_goal_generic_air_fighter2
+		prerequisite = { focus = RIF_airforce_focus_4 }
+		#mutually_exclusive = { focus =  }
+		x = -3
+		y = 1
+		relative_position_id = RIF_airforce_focus_4
+
+		cost = 5
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = RIF_airforce_focus_6
+		icon = GFX_focus_generic_annex_country
+		prerequisite = { focus = RIF_airforce_focus_4 }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = RIF_airforce_focus_4
+
 		cost = 8
 		
 		available = {}
@@ -470,17 +1279,310 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 	}
 	focus = {
-		id = RIF_focus_18
-		icon = GFX_goal_support_democracy
-		prerequisite = { focus = RIF_focus_4 }
+		id = RIF_airforce_focus_7
+		icon = GFX_focus_generic_aircraft_production
+		prerequisite = { focus = RIF_airforce_focus_4 }
 		#mutually_exclusive = { focus =  }
-		x = 0
-		y = 2
-		relative_position_id = RIF_focus_4
+		x = 3
+		y = 1
+		relative_position_id = RIF_airforce_focus_4
 
 		cost = 8
 		
 		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = RIF_airforce_focus_0
+		icon = GFX_focus_generic_annex_country
+		#prerequisite = { focus = RIF_focus_14 }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 0
+		#relative_position_id = RIF_focus_14
+
+		cost = 8
+		
+		available = { always = no }
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+### navy ###
+	focus = {
+		id = RIF_naval_focus_1
+		icon = GFX_focus_generic_naval_discipline
+		x = 6
+		y = 0
+		relative_position_id = RIF_airforce_focus_1
+
+		cost = 2
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = RIF_naval_focus_2
+		icon = GFX_goal_generic_production
+		#mutually_exclusive = { focus =  }
+		x = 2
+		y = 0
+		relative_position_id = RIF_naval_focus_1
+
+		cost = 2
+		
+		available = {
+			has_war = no
+		}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {
+			navy_experience = 25
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = RIF_naval_focus_3
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = RIF_naval_focus_1 }
+		prerequisite = { focus = RIF_naval_focus_2 }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 1
+		relative_position_id = RIF_naval_focus_1
+
+		cost = 2
+		
+		available = {
+			#
+			all_controlled_state = { dockyard < 1 }
+			any_controlled_state = {
+				is_coastal = yes
+				is_core_of = root
+				hidden_trigger = { is_in_home_area = yes }
+				free_building_slots = { building = dockyard size > 0 }
+			}
+		}
+		
+		bypass = {
+			any_controlled_state = { dockyard > 0 }
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {
+			random_core_state = {
+				prioritize = { 290 }
+				limit = {
+					is_coastal = yes
+					is_in_home_area = yes
+					is_controlled_by = root
+					free_building_slots = { building = dockyard size > 0 }
+				}
+				add_building_construction = { type = dockyard level = 1 }
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = RIF_naval_focus_4
+		icon = GFX_focus_POL_develop_polish_shipbuilding
+		prerequisite = { focus = RIF_naval_focus_3 }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = RIF_naval_focus_3
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = RIF_naval_focus_5
+		icon = GFX_focus_generic_refit_civilian_ships
+		prerequisite = { focus = RIF_naval_focus_4 }
+		#mutually_exclusive = { focus =  }
+		x =  -1
+		y = 1
+		relative_position_id = RIF_naval_focus_4
+
+		cost = 5
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = RIF_naval_focus_6
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = RIF_naval_focus_4 }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 1
+		relative_position_id = RIF_naval_focus_4
+
+		cost = 5
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = RIF_naval_focus_8
+		icon = GFX_focus_generic_navy_battleship2
+		prerequisite = { focus = RIF_naval_focus_5 }
+		prerequisite = { focus = RIF_naval_focus_6 }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 2
+		relative_position_id = RIF_naval_focus_4
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = RIF_naval_focus_9
+		icon = GFX_goal_generic_amphibious_assault
+		prerequisite = { focus = RIF_naval_focus_5 }
+		prerequisite = { focus = RIF_naval_focus_6 }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 1
+		relative_position_id = RIF_naval_focus_6
+
+		cost = 8
+		
+		available = { always = no }
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = RIF_naval_focus_7
+		icon = GFX_goal_generic_navy_carrier
+		prerequisite = { focus = RIF_airforce_focus_7 }
+		prerequisite = { focus = RIF_naval_focus_5 }
+		prerequisite = { focus = RIF_naval_focus_6 }
+		#mutually_exclusive = { focus =  }
+		x = -2
+		y = 1
+		relative_position_id = RIF_naval_focus_5
+
+		cost = 8
+		
+		available = { always = no }
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = RIF_naval_focus_0
+		icon = GFX_focus_generic_annex_country
+		#prerequisite = { focus = RIF_focus_14 }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 0
+		#relative_position_id = RIF_focus_14
+
+		cost = 8
+		
+		available = { always = no }
 		
 		bypass = {}
 		
@@ -498,13 +1600,13 @@ focus_tree = {
 		icon = GFX_focus_generic_annex_country
 		#prerequisite = { focus = RIF_focus_14 }
 		#mutually_exclusive = { focus =  }
-		x = 1
-		y = 2
+		x = 0
+		y = 0
 		#relative_position_id = RIF_focus_14
 
 		cost = 8
 		
-		available = {}
+		available = { always = no }
 		
 		bypass = {}
 		

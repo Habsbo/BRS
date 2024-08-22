@@ -193,3 +193,27 @@ defined_text = { #
 		localization_key = GetBelNMJideatt.6
 	}
 }
+
+#rif
+defined_text = { # 
+	name = GetFriendscript
+	text = {
+		trigger = {
+			original_tag = FRA
+		}
+		localization_key = GetFriendscript_amis
+	}
+	text = {
+		trigger = {
+			original_tag = ITA
+		}
+		localization_key = GetFriendscript_amici
+	}
+	text = {
+		trigger = {
+			original_tag = ENG
+		}
+		localization_key = GetFriendscript_friend
+	}
+	text = { localization_key = GetFriendscript_defult }
+}

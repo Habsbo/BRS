@@ -12,7 +12,7 @@ add_namespace = br_rif
 
 		immediate = {
 			hidden_effect = {
-				290 = { transfer_state_to = RIF }
+				
 			}
 		}
 
@@ -33,7 +33,6 @@ add_namespace = br_rif
 			RIF = {
 				change_tag_from = ROOT
 				declare_war_on = { target = root type = independence_wargoal }
-				country_event = { id = br_rif.2 days = 1 }
 			}
 
 			ai_chance = { factor = 7 }
@@ -50,16 +49,19 @@ add_namespace = br_rif
 
 		immediate = {
 			hidden_effect = {
-				from = {
-					set_country_flag = br_na_war_resister_flag
-					declare_war_on = { target = root type = annex_everything }
-				}
-				set_country_flag = br_na_war_resister_flag
+				#
 			}
 		}
 
 		option = {
 			name = br_rif.2.a #
+			
+			290 = {
+				remove_building = {
+					type = air_base
+					level = 3
+				}
+			}
 
 			ai_chance = { factor = 7 }
 		}
@@ -82,7 +84,8 @@ add_namespace = br_rif
 		option = {
 			name = br_rif.3.a #
 
-			
+			add_war_support = -0.05
+			add_stability = -0.03
 
 			ai_chance = { factor = 7 }
 		}
@@ -98,7 +101,7 @@ add_namespace = br_rif
 
 		immediate = {
 			hidden_effect = {
-				#
+				290 = { transfer_state_to = RIF }
 			}
 		}
 
@@ -121,7 +124,11 @@ add_namespace = br_rif
 
 		immediate = {
 			hidden_effect = {
-				#
+				FROM = {
+					set_country_flag = br_na_war_resister_flag
+					declare_war_on = { target = root type = annex_everything }
+				}
+				set_country_flag = br_na_war_resister_flag
 			}
 		}
 
@@ -417,6 +424,268 @@ add_namespace = br_rif
 			}
 
 			ai_chance = { factor = 3 }
+		}
+	}
+###接触外邦
+	country_event = { #
+		id = br_rif.101
+		title = br_rif.101.title
+		desc = br_rif.101.desc
+		picture = GFX_report_event_chinese_soldiers_fighting
+
+		is_triggered_only = yes
+
+		immediate = {
+			#
+		}
+
+		option = {
+			name = br_rif.101.a #
+
+			#
+			set_country_flag = br_support_volunteers_to_rif_flag
+			#
+			add_manpower = -5000
+			add_war_support = 0.05
+			add_stability = 0.05
+			send_equipment = {
+				equipment = infantry_equipment
+				amount = 5000
+				target = from
+			}
+			#
+			FROM = {
+				country_event = { id = br_rif.102 days = 7 random_days = 14 }
+			}
+
+			ai_chance = {
+				base = 1
+				modifier = {
+					factor = 0
+					OR = {
+						original_tag = FRA
+						original_tag = ENG
+					}
+					br_ideology_radical_communism_nio = yes
+					br_ideology_socialism_nio_no_ds = yes
+				}
+				modifier = {
+					factor = 0
+					OR = {
+						br_ideology_authoritarian_ruling = yes
+						br_ideology_fascism_ruling = yes
+					}
+				}
+				modifier = {
+					factor = 12
+					original_tag = ITA
+					OR = {
+						br_ideology_radical_communism_ruling = yes
+						br_ideology_socialism_ruling_no_ds = yes
+					}
+				}
+			}
+		}
+
+		option = {
+			name = br_rif.101.b #
+
+			#
+			set_country_flag = br_volunteers_support_rif_only_flag
+			#
+			add_manpower = -500
+			add_stability = -0.01
+			#
+			add_popularity = { ideology = sci_socialism popularity = 0.01 }
+			add_popularity = { ideology = con_socialism popularity = 0.01 }
+			#
+			FROM = {
+				country_event = { id = br_rif.103 days = 7 random_days = 14 }
+			}
+
+			ai_chance = {
+				base = 8
+				modifier = {
+					factor = 0
+					OR = {
+						br_ideology_authoritarian_ruling = yes
+						br_ideology_fascism_ruling = yes
+					}
+				}
+				modifier = {
+					factor = 0
+					original_tag = ITA
+					OR = {
+						br_ideology_radical_communism_ruling = yes
+						br_ideology_socialism_ruling_no_ds = yes
+					}
+				}
+			}
+		}
+
+		option = {
+			name = br_rif.101.c #
+
+			add_political_power = -100
+			add_stability = -0.05
+			add_popularity = { ideology = vanwardism popularity = 0.01 }
+			add_popularity = { ideology = sci_socialism popularity = 0.03 }
+			add_popularity = { ideology = con_socialism popularity = 0.03 }
+			#
+			FROM = {
+				country_event = { id = br_rif.104 days = 7 random_days = 14 }
+			}
+
+			ai_chance = {
+				base = 1
+				modifier = {
+					factor = 0
+					OR = {
+						br_ideology_radical_communism_ruling = yes
+						br_ideology_socialism_ruling_no_ds = yes
+					}
+				}
+				modifier = {
+					factor = 5
+					br_ideology_capitalism_ruling_with_ds = yes
+				}
+				modifier = {
+					factor = 2
+					OR = {
+						br_ideology_authoritarian_ruling = yes
+						br_ideology_fascism_ruling = yes
+					}
+				}
+			}
+		}
+
+		option = {
+			name = br_rif.101.d #
+
+			#
+			add_political_power = -100
+			#
+			add_popularity = { ideology = vanwardism popularity = 0.01 }
+			add_popularity = { ideology = sci_socialism popularity = 0.01 }
+			add_popularity = { ideology = con_socialism popularity = 0.01 }
+			add_popularity = { ideology = demo_socialism popularity = 0.01 }
+			#
+			add_timed_idea = { idea = has_forfeitted_citizens_property days = 90 }
+			#
+			FROM = {
+				country_event = { id = br_rif.104 days = 7 random_days = 14 }
+			}
+
+			ai_chance = {
+				base = 1
+				modifier = {
+					factor = 0
+					OR = {
+						br_ideology_radical_communism_ruling = yes
+						br_ideology_socialism_ruling = yes
+					}
+				}
+				modifier = {
+					factor = 5
+					OR = {
+						br_ideology_capitalism_ruling_with_ds = yes
+						br_ideology_authoritarian_ruling = yes
+						br_ideology_fascism_ruling = yes
+					}
+				}
+			}
+		}
+	}
+	country_event = { #
+		id = br_rif.102
+		title = br_rif.102.title
+		desc = br_rif.102.desc
+		picture = GFX_report_event_chinese_soldiers_fighting
+
+		is_triggered_only = yes
+
+		immediate = {
+			#
+		}
+
+		option = {
+			name = br_rif.102.a #
+
+			#
+			effect_tooltip = {
+				FROM = {
+					add_manpower = -5000
+					add_war_support = 0.05
+					add_stability = 0.05
+					send_equipment = {
+						equipment = infantry_equipment
+						amount = 5000
+						target = root
+					}
+				}
+			}
+			#
+			add_manpower = 5000
+			add_command_power = 50
+			add_offsite_building = { type = arms_factory level = 2 }
+			#
+
+			ai_chance = { factor = 7 }
+		}
+	}
+	country_event = { #
+		id = br_rif.103
+		title = br_rif.103.title
+		desc = br_rif.103.desc
+		picture = GFX_report_event_chinese_soldiers_fighting
+
+		is_triggered_only = yes
+
+		immediate = {
+			#
+		}
+
+		option = {
+			name = br_rif.103.a #
+
+			#
+			effect_tooltip = {
+				FROM = {
+					#
+					add_manpower = -500
+					add_stability = -0.01
+					#
+					add_popularity = { ideology = sci_socialism popularity = 0.01 }
+					add_popularity = { ideology = con_socialism popularity = 0.01 }
+				}
+			}
+			add_manpower = 500
+			add_offsite_building = { type = arms_factory level = 2 }
+			#
+
+			ai_chance = { factor = 7 }
+		}
+	}
+	country_event = { #
+		id = br_rif.104
+		title = br_rif.104.title
+		desc = br_rif.104.desc
+		picture = GFX_report_event_chinese_soldiers_fighting
+
+		is_triggered_only = yes
+
+		immediate = {
+			#
+		}
+
+		option = {
+			name = br_rif.104.a #
+
+			#
+
+			#
+
+			ai_chance = { factor = 7 }
 		}
 	}
 ###

@@ -79,11 +79,11 @@ characters={
 				large=GFX_portrait_SPR_alejandro_lerroux
 			}
 		}
-		country_leader={
-			ideology=conservatism
-			expire="1965.1.1.1"
-			id=1100
-		}
+		#country_leader={
+		#	ideology=conservatism
+		#	expire="1965.1.1.1"
+		#	id=1100
+		#}
 	}
 
 	SPA_jose_antonio_primo_de_rivera={
@@ -122,12 +122,12 @@ characters={
 			}
 		}
 
-		country_leader={
-			ideology=despotism
-			traits={ sins_of_the_father }
-			expire="1965.1.1.1"
-			id=-1
-		}
+		#country_leader={
+		#	ideology=despotism
+		#	traits={ sins_of_the_father }
+		#	expire="1965.1.1.1"
+		#	id=-1
+		#}
 	}
 
 	SPR_manuel_fal_conde={
@@ -137,12 +137,12 @@ characters={
 				large="GFX_portrait_SPA_manuel_fal_conde"
 			}
 		}
-		country_leader={
-			ideology=despotism
-			traits={ jefe }
-			expire="1965.1.1.1"
-			id=-1
-		}
+		#country_leader={
+		#	ideology=despotism
+		#	traits={ jefe }
+		#	expire="1965.1.1.1"
+		#	id=-1
+		#}
 	}
 
 	# Unit Leaders

@@ -2,7 +2,7 @@
  head_of_gov: "政府首脑"
 #Aragon
  CAT_joaquin_ascaso_budria: "华金·阿斯卡索·博得里亚"
- CAT_benito_pabon_y_suarez_de_urbina: "贝尼托·帕彭-苏亚雷斯·德-乌尔维纳"
+ CAT_benito_pabon: "贝尼托·帕彭"
  CAT_adolfo_ballano: "阿道夫·巴拉诺"
  CAT_adolfo_arnal: "阿道夫·阿纳尔"
  CAT_evaristo_vinuales_larroy: "埃瓦里斯托·维纽莱斯·劳里"
@@ -17,6 +17,14 @@
  CAT_custodio_pennarrocha: "库斯托迪奥·佩纳罗查"
  CHI_leader_huan: "李德焕"
  CHI_juan_leo_hogario: "胡安·里奥-霍加诺"
+#Catalan
+ CAT_lluis_companys: "路易斯·坎帕尼斯"
+ CAT_andreu_nin: "安德烈乌·宁"
+ CAT_daniel_cardona: "丹尼尔·卡多那"
+ CAT_francesc_cambo: "弗朗西斯科·坎博"
+#
+ SPR_alfonso_xiii_de_Espanna: "西班牙的§Y阿方索XIII§!国王"
+ SPR_miguel_primo_de_rivera: "米格尔·普里奥·德·里维拉"
 #jap
  JAP_osachi_hamaguchi: "滨口雄幸"
  JAP_tsuyoshi_inukai: "犬养毅"
@@ -26,9 +34,9 @@
  JAP_senjuro_hayashi: "林铣十郎"
  JAP_fumimaro_konoe: "近卫文磨"
 #bel
- BEL_albert_i_of_belgium: "阿尔贝Ⅰ·比利时"
- BEL_leopold_iii_of_belgium: "利奥波德Ⅲ·比利时"
- BEL_baudouin_of_belgium: "博杜安·比利时"
+ BEL_albert_i_of_belgium: "比利时的§Y阿尔贝Ⅰ§!国王"
+ BEL_leopold_iii_of_belgium: "比利时的§Y利奥波德Ⅲ§!国王"
+ BEL_baudouin_of_belgium: "比利时的§Y博杜安§!国王"
  BEL_paul_van_zeeland: "保罗·范-泽兰"
  BEL_war_van_overstraeten: "爱德华·范-奥弗斯特滕"
  BEL_julien_lahaut: "朱利安·拉奥"
@@ -71,9 +79,7 @@
  LUX_ehrlich_swabian: "阿尔利希·士瓦本"
  LUX_jean_d_adler: "让·达-德勒"
 #
- leon_blum: "莱昂·布鲁姆"
- edouard_daladier: "爱德华·达拉第" 
- maurice_thorez: "莫里斯·多列士"
+
 #HELLAS
  GRE_regency_council: "摄政议会"
 

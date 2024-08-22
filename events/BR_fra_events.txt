@@ -1,0 +1,41 @@
+add_namespace = br_fra
+
+country_event = { #
+	id = br_fra.1
+	title = br_fra.1.title
+	desc = br_fra.1.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		#
+	}
+
+	option = {
+		name = br_fra.1.a #
+
+		add_political_power = 15
+		add_stability = 0.01
+		#
+		add_popularity = { ideology = con_socialism popularity = 0.02 }
+		add_popularity = { ideology = demo_socialism popularity = 0.02 }
+		add_popularity = { ideology = authoritarian popularity = 0.02 }
+		add_popularity = { ideology = fascism popularity = 0.02 }
+		#
+		hidden_effect = {
+			SPR = { 
+				country_event = { id = br_rif.1.1 days = 1 } #random_days = 28 
+			}
+		}
+
+		ai_chance = { factor = 0 }
+	}
+
+	#option = {
+	#	name = br_fra.1.b #
+	#
+	#	ai_chance = { factor = 0 }
+	#}
+}

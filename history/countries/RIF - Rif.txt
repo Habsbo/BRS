@@ -43,7 +43,12 @@ add_ideas = {
 	#
 	#
 	#head of gov
-
+	br_laws_feudalism
+	br_laws_dictatorship
+	br_laws_suffrage_prohibited
+	br_laws_national_state
+	br_laws_spiritual
+	br_laws_loyalist
 	#
 	AMAZIGA_countries
 }

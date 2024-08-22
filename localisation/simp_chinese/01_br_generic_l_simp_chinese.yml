@@ -212,7 +212,7 @@
  br_will_add_popularity_of_our_rulling_party_tt: "将会增加§Y执政党§!的§G选举人气§!！"
  br_will_add_popularity_of_our_left_parties_tt: "将会增加§R左翼党派§!的§G选举人气§!！"
  br_will_add_popularity_of_our_right_parties_tt: "将会增加§L右翼党派§!的§G选举人气§!！"
-
+ is_menber_of_berne_concert_tt: "是§Y伯尔尼协议§!的一员"
 #economic system
  br_economic: "经济系统（BETA）"
  br_economic_desc: "政府的财政状况:[?root.br_exchequer_var|H]\n您的政府每月可以获得[?root.br_eco_var|H]的财政收入。其中基于从用于生产生活消费品(已经被人口全部消费掉的部分)的民用工厂获取的税收为[?root.br_pop_consuming_var|H]，结算周期以当月月底用于生产的民用工厂为准，并基于人口总体的财富等级进行加权（未实装）。"

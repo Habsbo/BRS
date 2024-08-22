@@ -154,7 +154,7 @@
 			tooltip = x
 		}
 	}
-
+###
 	
 	is_border_state = {
 		custom_trigger_tooltip = {
@@ -164,7 +164,12 @@
 			}
 		}
 	}
-
+	is_menber_of_berne_concert = {
+		custom_trigger_tooltip = {
+			tooltip = is_menber_of_berne_concert_tt
+			has_country_flag = br_menber_of_berne_concert_flag
+		}
+	}
 ###
 
 	br_head_of_gov_generic_trigger = {

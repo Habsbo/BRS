@@ -1,0 +1,30 @@
+characters={
+### kings ###
+	SPR_alfonso_de_bourbon = { #阿方索十三世 - Alfonso León Fernando María Jaime Isidro Pascual Antonio de Borbón y Habsburgo-Lorena
+		name = SPR_alfonso_xiii_de_Espanna
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_SPR_alfonso_xiii"
+				#small = ""
+			}
+		}
+		
+		country_leader={
+			ideology=despotism
+			traits={}
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+### prime ###
+	SPR_miguel_primo_de_rivera = { #米格尔·普里莫·德·里维拉
+		name = SPR_miguel_primo_de_rivera #
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_SPR_miguel_primo_de_rivera"
+				#small = ""
+			}
+		}
+		
+	}
+}
