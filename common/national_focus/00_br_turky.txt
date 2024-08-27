@@ -5,27 +5,26 @@
 		factor = 0
 		
 		modifier = {
-			add = 0
-			tag = TUR
+			add = 10
+			tag = irq
 		}
 	}
 	
 	default = no
 
 	continuous_focus_position = { x = 50 y = 1500 }
-	
+
+### political ###
 	focus = {
 		id = TUR_1
 		icon = GFX_
 		#prerequisite = { focus =  }
 		#mutually_exclusive = { focus =  }
-		x = 10
+		x = 0
 		y = 0
 		#relative_position_id =
 
 		cost = 8
-		
-		ai_will_do = { factor = 1 }
 		
 		available = {}
 		
@@ -36,7 +35,235 @@
 		available_if_capitulated = no
 		
 		complete_tooltip = {}
-		
 		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+### military ###
+	focus = {
+		id = TUR_wounds_from_the_great_war
+		icon = GFX_goal_generic_attack_allies
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 10
+		y = 0
+		#relative_position_id =
+
+		cost = 5
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = TUR_the_needs_of_military_innovation
+		icon = GFX_focus_generic_military_academy
+		prerequisite = { focus = TUR_wounds_from_the_great_war }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = TUR_wounds_from_the_great_war
+
+		cost = 5
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	#
+	focus = {
+		id = TUR_germanic_officers
+		icon = GFX_
+		prerequisite = { focus = TUR_the_needs_of_military_innovation }
+		#mutually_exclusive = { focus =  }
+		x = -2
+		y = 1
+		relative_position_id = TUR_the_needs_of_military_innovation
+
+		cost = 5
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = TUR_classical_prussian_army
+		icon = GFX_
+		prerequisite = { focus = TUR_germanic_officers }
+		mutually_exclusive = { focus = TUR_prepare_for_modern_warfare }
+		x = -1
+		y = 1
+		relative_position_id = TUR_germanic_officers
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = TUR_prepare_for_modern_warfare
+		icon = GFX_
+		prerequisite = { focus = TUR_germanic_officers }
+		mutually_exclusive = { focus = TUR_classical_prussian_army }
+		x = 1
+		y = 1
+		relative_position_id = TUR_germanic_officers
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	#
+	focus = {
+		id = TUR_french_trainning
+		icon = GFX_
+		prerequisite = { focus = TUR_the_needs_of_military_innovation }
+		#mutually_exclusive = { focus =  }
+		x = 2
+		y = 1
+		relative_position_id = TUR_the_needs_of_military_innovation
+
+		cost = 5
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+### navy ###
+	focus = {
+		id = TUR_2
+		icon = GFX_
+		#prerequisite = { focus = TUR_wounds_from_the_great_war }
+		#mutually_exclusive = { focus =  }
+		x = 8
+		y = 0
+		relative_position_id = TUR_wounds_from_the_great_war
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = TUR_2
+		icon = GFX_
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		#relative_position_id =
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+### ###
+	focus = {
+		id = TUR_2
+		icon = GFX_
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		#relative_position_id =
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
 	}
 }

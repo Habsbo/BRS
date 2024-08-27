@@ -1,12 +1,13 @@
 ﻿l_simp_chinese:
 #中国
  QNG: "大清帝国"
- QNG: "大清帝国"
+ QNG_DEF: "大清帝国"
  QNG_ADJ: "大清帝国"
  QNG_MAN: "岱青固伦"
  QNG_MAN_DEF: "岱青固伦"
  QNG_MAN_ADJ: "岱青固伦"
-
+ China_Republic: "中华共和国"
+ China_Republic_DEF: "中华共和国"
  KMT: "中国国民党"
  KMT_DEF: "中国国民党"
  KMT_ADJ: "中国"
@@ -16,6 +17,9 @@
  MNG: "大明帝国"
  MNG_DEF: "大明帝国"
  MNG_ADJ: "中国"
+ MAN_soviet_china: "中华苏维埃满洲根据地"
+ MAN_soviet_china_DEF: "中华苏维埃满洲根据地"
+ MAN_soviet_china_ADJ: "中国满洲"
 #法国
  FRA_republic: "法兰西共和国"
  FRA_republic_DEF: "法兰西共和国"
@@ -117,6 +121,8 @@
  papal_states_DEF: "教宗国"
  papal_states_communism: "天主教人民联盟"
  papal_states_communism_DEF: "天主教人民联盟"
+ ITA_italian_kingdom: "意大利王国"
+ ITA_italian_kingdom_DEF: "意大利王国"
 #伊比利亚
  EUSKADI: "巴斯克"
  EUSKADI_DEF: "巴斯克"

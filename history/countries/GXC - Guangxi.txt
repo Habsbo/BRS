@@ -57,3 +57,6 @@ set_popularities = {
 	demo_conservatism = 45 #保守民主主义
 	fascism = 10 #民族主义/束棒
 }
+
+set_cosmetic_tag = China_Republic
+set_country_flag = China_Republic_flag

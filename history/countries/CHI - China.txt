@@ -283,16 +283,11 @@ if = {
 	}
 }
 
-set_cosmetic_tag = MNG
-set_country_flag = MNG_empire_ruling_flag
+set_cosmetic_tag = QNG
+#set_country_flag = MNG_empire_ruling_flag
 
 set_autonomy = {
 	target = YUN
-	autonomy_state = autonomy_br_mandate_puppet
-}
-
-set_autonomy = {
-	target = GXC
 	autonomy_state = autonomy_br_mandate_puppet
 }
 
@@ -303,5 +298,15 @@ set_autonomy = {
 
 set_autonomy = {
 	target = MEN
+	autonomy_state = autonomy_br_mandate_puppet
+}
+
+set_autonomy = {
+	target = SIK
+	autonomy_state = autonomy_br_mandate_puppet
+}
+
+set_autonomy = {
+	target = TIB
 	autonomy_state = autonomy_br_mandate_puppet
 }

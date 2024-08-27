@@ -208,6 +208,7 @@ set_autonomy = {
 	autonomous_state =  autonomy_puppet
 }
 
+recruit_character = USA_alf_landon
 recruit_character = USA_earl_browder
 recruit_character = USA_william_dudley_pelley
 recruit_character = USA_franklin_delano_roosevelt

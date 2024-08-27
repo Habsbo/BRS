@@ -173,6 +173,23 @@ ideas = {
 				stability_factor = -0.05
 			}
 		}
+
+		SER_patriotic_propaganda = {
+			picture = spr_seize_the_gold_reserves
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			modifier = {
+				political_power_cost = 0.10
+				research_speed_factor = 0.03
+			}
+		}
 	}
 
 }

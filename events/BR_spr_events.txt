@@ -43,6 +43,36 @@ country_event = { #
 	option = {
 		name = br_ser.1.a #
 
+		FROM = {
+			create_wargoal = {
+				target = ROOT
+				type = take_claimed_state
+				generator = { 106 }
+			}
+		}
+
+		ai_chance = { factor = 7 }
+	}
+}
+
+country_event = { #
+	id = br_ser.2
+	title = br_ser.2.title
+	desc = br_ser.2.desc
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			#
+		}
+	}
+
+	option = {
+		name = br_ser.2.a #
+
 		
 
 		ai_chance = { factor = 7 }

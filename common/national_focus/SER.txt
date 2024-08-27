@@ -49,7 +49,7 @@ focus_tree = {
 		y = 0
 		#relative_position_id =
 
-		cost = 8
+		cost = 5
 		
 		available = {
 			OR = {
@@ -75,6 +75,9 @@ focus_tree = {
 		complete_tooltip = {}
 		
 		completion_reward = {
+			#
+			106 = { add_claim_by = root }
+			#
 			BUL = {
 				country_event = { id = br_ser.1 }
 			}
@@ -169,7 +172,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = SER_war_for_macedonia
 
-		cost = 8
+		cost = 5
 		
 		available = {}
 		
@@ -194,7 +197,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = SER_a_great_victory_of_serbian
 
-		cost = 8
+		cost = 5
 		
 		available = {}
 		
@@ -206,7 +209,9 @@ focus_tree = {
 		
 		complete_tooltip = {}
 		
-		completion_reward = {}
+		completion_reward = {
+			add_country_leader_trait = the_great
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -219,7 +224,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = SER_a_great_victory_of_serbian
 
-		cost = 8
+		cost = 5
 		
 		available = {}
 		
@@ -231,7 +236,9 @@ focus_tree = {
 		
 		complete_tooltip = {}
 		
-		completion_reward = {}
+		completion_reward = {
+			add_ideas = SER_patriotic_propaganda
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -296,9 +303,31 @@ focus_tree = {
 
 		cost = 8
 		
-		available = {}
+		available = {
+			104 = {
+				is_fully_controlled_by = root
+				#
+				free_building_slots = {
+					building = arms_factory
+					size > 1
+					include_locked = yes
+				}
+			}
+		}
 		
-		bypass = {}
+		bypass = {
+			104 = {
+				OR = {
+					is_fully_controlled_by = root
+					#
+					free_building_slots = {
+						building = arms_factory
+						size < 2
+						include_locked = yes
+					}
+				}
+			}
+		}
 		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -306,7 +335,24 @@ focus_tree = {
 		
 		complete_tooltip = {}
 		
-		completion_reward = {}
+		completion_reward = {
+			104 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+					}
+				}
+			}
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -472,7 +518,15 @@ focus_tree = {
 
 		cost = 8
 		
-		available = {}
+		available = {
+			OR = {
+				BUL = {
+					exists = no
+					all_core_state = { is_controlled_by = root }
+				}
+				BUL = { is_puppet_of = root }
+			}
+		}
 		
 		bypass = {}
 		

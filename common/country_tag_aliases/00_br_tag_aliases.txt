@@ -60,6 +60,10 @@ KMT = {
 	original_tag = CHI
 	has_country_flag = CHI_KMT_flag
 }
+
+CNR = {
+	has_country_flag = China_Republic_flag
+}
 #
 HEL = {
 	original_tag = GRE

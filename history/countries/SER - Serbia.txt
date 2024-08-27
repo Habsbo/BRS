@@ -159,13 +159,18 @@ create_country_leader = {
 	}
 }
 
-declare_war_on = {
-	target = BUL
-	type = take_core_state
-}
+#declare_war_on = {
+#	target = BUL
+#	type = take_core_state
+#}
 
 set_cosmetic_tag = SER_CRO
 
 add_ideas = {
 	#
+	export_focus
+	war_economy
+	#
+	br_laws_monarchy
+	br_laws_national_state
 }

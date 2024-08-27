@@ -100,6 +100,9 @@
  boris_mikhailovich_eikhenbaum: "鲍里斯·米哈伊洛维奇·艾肯鲍姆"
  RUS_boris_eikhenbaum: "$boris_mikhailovich_eikhenbaum$"
 
+#U.S.
+ alfred_mossman_landon: "阿尔弗雷德·莫兹曼·兰登"
+ USA_alfred_mossman_landon: "$alfred_mossman_landon$"
 #surname(chinese han/man and some nations) - 姓
  s_li: "李"
  s_wang: "王"

@@ -1,4 +1,19 @@
 characters={
+	USA_alf_landon = { #埃弗雷·兰登
+		name=USA_alfred_mossman_landon
+		portraits={
+			civilian={
+				large=GFX_portrait_Alf_Landon
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			traits={}
+			expire="1987.10.12.1"
+			id=-1
+		}
+	}
+
 	USA_franklin_delano_roosevelt={ #罗斯福
 		name=USA_franklin_delano_roosevelt
 		portraits={

@@ -997,3 +997,8 @@ if = {
 			}
 		}
 }
+
+set_autonomy = {
+	target = KOR
+	autonomy_state = autonomy_dominion
+}

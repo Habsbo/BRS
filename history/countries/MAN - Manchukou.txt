@@ -62,100 +62,24 @@ set_convoys = 5
 	add_dynamic_modifier = { modifier = dense_rural_infrastructure }
 }
 
-1939.1.1 = {
-
-	add_to_war = {
-		targeted_alliance = JAP
-		enemy = CHI
-		hostility_reason = puppet
-	}
-	
-	add_political_power = 1198
-	add_command_power = 100
-	
-	#generic focuses
-	complete_national_focus = army_effort
-	complete_national_focus = equipment_effort
-	complete_national_focus = motorization_effort
-	complete_national_focus = aviation_effort
-	complete_national_focus = naval_effort
-	complete_national_focus = flexible_navy
-	complete_national_focus = industrial_effort
-	complete_national_focus = construction_effort
-	complete_national_focus = production_effort
-
-
-	if = {
-		limit = { has_dlc = "Waking the Tiger" }
-
-		
-		#No bandits
-		unlock_national_focus = MAN_pacify_the_countryside
-		remove_ideas = MAN_banditry
-
-		complete_national_focus = MAN_army_modernization
-		complete_national_focus = MAN_mukden_military_academy
-		complete_national_focus = MAN_law_university
-		complete_national_focus = MAN_obedience
-
-		#Five year plan
-		unlock_national_focus = MAN_first_five_year_plan
-		add_timed_idea = { days = 1275 idea = MAN_five_year_plan_industry }
-
-		complete_national_focus = MAN_trade_delegation
-		complete_national_focus = MAN_expand_the_textile_industry
-		complete_national_focus = MAN_hoankyoku
-		complete_national_focus = MAN_invite_japanese_investors
-		complete_national_focus = MAN_expand_the_railways
-		complete_national_focus = MAN_develop_aluminum_sources
-		complete_national_focus = MAN_social_research_unit
-	}
-	
-	oob = "MAN_1939"
-	set_technology = {
-		#doctrines
-		grand_battle_plan = 1
-		trench_warfare = 1
-		fleet_in_being = 1
-		battlefleet_concentration = 1
-
-		#electronics
-		electronic_mechanical_engineering = 1
-		radio = 1
-		radio_detection = 1
-		mechanical_computing = 1
-
-		#industry
-		basic_machine_tools = 1
-		improved_machine_tools = 1
-		advanced_machine_tools = 1
-		fuel_silos = 1
-		construction1 = 1
-		construction2 = 1
-		dispersed_industry = 1
-		dispersed_industry2 = 1
-	}
-}
-
 set_politics = {
-	ruling_party = authoritarian
-	last_election = "1936.1.1"
+	ruling_party = con_socialism
+	last_election = "1931.1.1"
 	election_frequency = 48
 	elections_allowed = no
 }
 
 set_popularities = {
-	sci_socialism = 5 #科学社会主义
-	demo_liberalism = 10 #社会自由主义
-	demo_conservatism = 20 #保守民主主义
-	authoritarian = 60 #威权主义
-	fascism = 5 #民族主义/束棒
+	#
+	soc_anarchism = 5
+	vanwardism = 10
+	#
+	sci_socialism = 20
+	con_socialism = 40
+	#
+	demo_socialism = 15
+	demo_liberalism = 10
 }
 
 
-set_cosmetic_tag = QNG_MAN
-
-set_autonomy = {
-	target = KOR
-	autonomy_state = autonomy_dominion
-}
+set_cosmetic_tag = MAN_soviet_china
