@@ -90,4 +90,403 @@ focus_tree = {
 
 		ai_will_do = { factor = 1 }
 	}
+### austria empire ###	
+	focus = {
+		id = AUS_the_holy_empire
+		icon = GFX_focus_generic_treaty
+		#prerequisite = { focus = }
+		mutually_exclusive = { focus = AUS_danube_federation }
+		x = 24
+		y = 0
+		#relative_position_id = AUS
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = AUS_danube_federation
+		icon = GFX_focus_generic_treaty
+		#prerequisite = { focus =  }
+		mutually_exclusive = { focus = AUS_the_holy_empire }
+		x = 6
+		y = 0
+		relative_position_id =  AUS_the_holy_empire
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+	###
+	focus = {
+		id = AUS_germanic_country
+		icon = GFX_focus_generic_treaty
+		prerequisite = {
+			focus = AUS_the_holy_empire
+			focus = AUS_danube_federation
+		}
+		mutually_exclusive = { focus = AUS_multi_ethnics_nation }
+		x = 2
+		y = 1
+		relative_position_id = AUS_the_holy_empire
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+	
+	focus = {
+		id = AUS_the_act_integrate_slovakia
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_germanic_country }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = AUS_germanic_country
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+	###
+	focus = {
+		id = AUS_multi_ethnics_nation
+		icon = GFX_focus_generic_treaty
+		prerequisite = {
+			focus = AUS_the_holy_empire
+			focus = AUS_danube_federation
+		}
+		mutually_exclusive = { focus = AUS_germanic_country }
+		x = -2
+		y = 1
+		relative_position_id = AUS_danube_federation
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = AUS_equal_rights
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_multi_ethnics_nation }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = AUS_multi_ethnics_nation
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = AUS_reconquer_bohemia
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_the_holy_empire }
+		#mutually_exclusive = { focus =  }
+		x = -4
+		y = 2
+		relative_position_id = AUS_the_holy_empire
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {
+			effect_tooltip = {
+				create_wargoal = {
+					target = CZE
+					type = puppet_wargoal_focus
+				}
+			}
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = AUS_reconquer_illyria
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_reconquer_bohemia }
+		#mutually_exclusive = { focus =  }
+		x = -2
+		y = 1
+		relative_position_id = AUS_reconquer_bohemia
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = AUS_lead_albanian
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_reconquer_illyria }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = AUS_reconquer_illyria
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = AUS_punish_hungary_kingdom
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_reconquer_bohemia }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = AUS_reconquer_bohemia
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = AUS_common_kingdoms
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_punish_hungary_kingdom }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = AUS_punish_hungary_kingdom
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = AUS_claim_galicia
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_reconquer_bohemia }
+		#mutually_exclusive = { focus =  }
+		x = 2
+		y = 1
+		relative_position_id = AUS_reconquer_bohemia
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = AUS_germanization_of_slavic
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_claim_galicia }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = AUS_claim_galicia
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = AUS_latin_empire_in_new_era
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_lead_albanian }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 2
+		relative_position_id = AUS_lead_albanian
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = AUS_hearts_of_the_empire
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_lead_albanian }
+		prerequisite = { focus = AUS_common_kingdoms }
+		prerequisite = { focus = AUS_germanization_of_slavic }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = AUS_common_kingdoms
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+	###
+	focus = {
+		id = AUS_compromise_with_czech
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_danube_federation }
+		#mutually_exclusive = { focus =  }
+		x = 4
+		y = 2
+		relative_position_id = AUS_danube_federation
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
 }
