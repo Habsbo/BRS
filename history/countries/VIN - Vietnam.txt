@@ -92,16 +92,28 @@ if = {
 }
 
 set_politics = {
-	ruling_party = democratic
+	ruling_party = demo_liberalism
 	last_election = "1933.2.16"
 	election_frequency = 36
 	elections_allowed = yes
 }
 set_popularities = {
-	democratic = 35
-	fascism = 15
-	communism = 15
-	neutrality = 35
+	#
+	soc_anarchism = 0
+	vanwardism = 0
+	#
+	sci_socialism = 10
+	con_socialism = 10
+	demo_socialism = 0
+	#
+	demo_liberalism = 40
+	demo_conservatism = 20
+	#
+	authoritarian = 20
+	#
+	fascism = 0
+	nationalism = 0
+	supernationalism = 0
 }
 
 #NOTICE# please watch out for spelling, im using Vietnamese names as they spell them, game might not support these characters!
@@ -151,4 +163,4 @@ create_country_leader = {
 }
 
 
-
+set_cosmetic_tag = VIN_french_indochina

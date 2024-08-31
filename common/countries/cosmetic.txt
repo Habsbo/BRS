@@ -1189,3 +1189,8 @@ BEL_federal = {
 	color = rgb { 255 125 39 }
 	color_ui = rgb { 255 125 39 }
 }
+
+VIN_french_indochina = {
+	color = rgb { 65 105 225 }
+	color_ui = rgb { 65 105 225 }
+}

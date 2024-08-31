@@ -1952,7 +1952,15 @@ focus_tree = {
 		
 		complete_tooltip = {}
 		
-		completion_reward = {}
+		completion_reward = {
+			add_war_support = 0.10
+			add_popularity = { ideology = vanwardism popularity = 0.10 }
+			add_popularity = { ideology = sci_socialism popularity = 0.10 }
+			set_rule = {
+				can_create_factions = yes
+				can_force_government = yes
+			}
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -1992,7 +2000,12 @@ focus_tree = {
 
 		cost = 8
 		
-		available = {}
+		available = {
+			OR = {#
+				sci_socialism > 0.45
+				con_socialism > 0.45
+			}
+		}
 		
 		bypass = {}
 		
@@ -2002,7 +2015,24 @@ focus_tree = {
 		
 		complete_tooltip = {}
 		
-		completion_reward = {}
+		completion_reward = {
+			#
+			if = {
+				limit = {
+					sci_socialism > var:party_popularity@con_socialism
+				}
+				set_politics = {
+					ruling_party = sci_socialism
+					elections_allowed = no
+				}
+			}
+			else = {
+				set_politics = {
+					ruling_party = con_socialism
+					elections_allowed = no
+				}
+			}
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -2084,7 +2114,18 @@ focus_tree = {
 		
 		complete_tooltip = {}
 		
-		completion_reward = {}
+		completion_reward = {
+			#
+			add_political_power = 200
+			add_popularity = { ideology = sci_socialism popularity = 0.05 }
+			add_popularity = { ideology = con_socialism popularity = 0.05 }
+			add_popularity = { ideology = demo_socialism popularity = 0.10 }
+			#
+			set_rule = {
+				can_boost_own_ideology = no
+				can_force_government = no
+			}
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -2099,7 +2140,12 @@ focus_tree = {
 
 		cost = 8
 		
-		available = {}
+		available = {
+			OR = {
+				vanwardism > 0.45
+				sci_socialism > 0.45
+			}
+		}
 		
 		bypass = {}
 		
@@ -2249,7 +2295,10 @@ focus_tree = {
 		
 		complete_tooltip = {}
 		
-		completion_reward = {}
+		completion_reward = {
+			add_stability = 0.10
+			add_popularity = { ideology = root popularity = 0.10 }
+		}
 		
 		ai_will_do = { factor = 1 }
 	}

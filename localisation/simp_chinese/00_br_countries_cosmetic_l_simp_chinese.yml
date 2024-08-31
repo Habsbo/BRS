@@ -476,7 +476,11 @@
 
 #伊朗
  PER_pahlavi_dynasty: "巴列维王朝"
-
+ PER_pahlavi_dynasty_DEF: "巴列维王朝"
+#东南亚
+ VIN_french_indochina: "法属印度支那"
+ VIN_french_indochina_DEF: "法属印度支那"
+ VIN_french_indochina_ADJ: "法属印支"
 #美国
  LSA: "美利坚合众国"
  LSA_DEF: "美利坚合众国"
@@ -494,7 +498,7 @@
  ESA_DEF: "美利坚帝国"
  FSA: "美利坚国家联盟"
  FSA_DEF: "美利坚国家联盟"
-
+#
  INS_HOL_democratic: "荷属东印度"
  INS_HOL_democratic_DEF: "荷属东印度"
  INS_subject: "$OVERLORDADJ$属东印度"
@@ -1688,9 +1692,6 @@
 
 
 #
- : ""
- _DEF: ""
- _ADJ: ""
  : ""
  _DEF: ""
  _ADJ: ""

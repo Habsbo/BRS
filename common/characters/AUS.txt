@@ -9,7 +9,7 @@ characters={
 		}
 		country_leader={
 			ideology=constitutional_monarchy #despotism
-			traits={  }
+			traits={ the_emperor }
 			expire="1965.1.1.1"
 			id=-1
 		}
