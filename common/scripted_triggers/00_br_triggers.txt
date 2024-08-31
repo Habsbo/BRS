@@ -195,3 +195,16 @@
 			#has_idea = 
 		}
 	}
+###
+	br_not_have_any_main_nations = {
+		NOT = {
+			has_idea = br_laws_diversity
+			has_idea = br_laws_whole_in_unity
+		}
+	}
+	br_is_deutsch_country = {
+		custom_trigger_tooltip = {
+			tooltip = br_is_deutsch_country_tt
+			check_variable = { br_culture_deutsch = 1 }
+		}
+	}

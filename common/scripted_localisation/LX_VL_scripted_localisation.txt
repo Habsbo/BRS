@@ -401,7 +401,7 @@ defined_text = {
 		trigger = {
 			FROM = {
 				check_variable = { state_rank = 0 }
-				original_tag = GER
+				check_variable = { br_culture_deutsch = 1 }
 				has_country_flag = br_cl_status_flavour_flag
 				has_idea = br_laws_monarchy
 			}

@@ -1,5 +1,3 @@
-
-
 focus_tree = {
 	id = Kaisertum_Usterreich_focus
 	
@@ -14,17 +12,17 @@ focus_tree = {
 	
 	default = no
 
-	continuous_focus_position = { x = 50 y = 1500 }
+	continuous_focus_position = { x = 50 y = 950 }
 
 	#shared_focus = 
 
-#AUS
+### political line - aus empire
 	focus = {
 		id = AUS_strengthen_the_crown
 		icon = GFX_focus_generic_treaty
 		#prerequisite = { focus = AUS_ }
-		#mutually_exclusive = { focus =  }
-		x = 10
+		mutually_exclusive = { focus =  AUS_dnsap_rising }
+		x = 22
 		y = 0
 		#relative_position_id = 
 		
@@ -90,14 +88,38 @@ focus_tree = {
 
 		ai_will_do = { factor = 1 }
 	}
+### political line - NAZI
+	focus = {
+		id = AUS_dnsap_rising
+		icon = GFX_focus_generic_treaty
+		#prerequisite = { focus = AUS_ }
+		mutually_exclusive = { focus = AUS_strengthen_the_crown }
+		x = 28
+		y = 0
+		#relative_position_id = 
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
 ### austria empire ###	
 	focus = {
 		id = AUS_the_holy_empire
 		icon = GFX_focus_generic_treaty
 		#prerequisite = { focus = }
 		mutually_exclusive = { focus = AUS_danube_federation }
-		x = 24
-		y = 0
+		x = 22
+		y = 8
 		#relative_position_id = AUS
 		
 		cost = 8
@@ -241,6 +263,129 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 	}
 
+	focus = {
+		id = AUS_reintegrate_hungary
+		icon = GFX_focus_generic_treaty
+		prerequisite = {
+			focus = AUS_the_act_integrate_slovakia
+			focus = AUS_equal_rights
+		}
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 1
+		relative_position_id = AUS_the_act_integrate_slovakia
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = AUS_united_croatian
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_reintegrate_hungary }
+		#mutually_exclusive = { focus =  }
+		x = -1
+		y = 1
+		relative_position_id = AUS_reintegrate_hungary
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = AUS_master_of_balkan
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_united_croatian }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = AUS_united_croatian
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = AUS_intervene_tTransylvania
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_reintegrate_hungary }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 1
+		relative_position_id = AUS_reintegrate_hungary
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = AUS_advance_to_black_sea
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_intervene_tTransylvania }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = AUS_intervene_tTransylvania
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+###
 	focus = {
 		id = AUS_reconquer_bohemia
 		icon = GFX_focus_generic_treaty
@@ -441,6 +586,54 @@ focus_tree = {
 	}
 
 	focus = {
+		id = AUS_support_mega_idea
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_latin_empire_in_new_era }
+		mutually_exclusive = { focus = AUS_barbarossa }
+		x = -1
+		y = 1
+		relative_position_id = AUS_latin_empire_in_new_era
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = AUS_barbarossa
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_latin_empire_in_new_era }
+		mutually_exclusive = { focus = AUS_support_mega_idea }
+		x = 1
+		y = 1
+		relative_position_id = AUS_latin_empire_in_new_era
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
 		id = AUS_hearts_of_the_empire
 		icon = GFX_focus_generic_treaty
 		prerequisite = { focus = AUS_lead_albanian }
@@ -465,7 +658,7 @@ focus_tree = {
 
 		ai_will_do = { factor = 1 }
 	}
-	###
+###
 	focus = {
 		id = AUS_compromise_with_czech
 		icon = GFX_focus_generic_treaty
@@ -474,6 +667,1617 @@ focus_tree = {
 		x = 4
 		y = 2
 		relative_position_id = AUS_danube_federation
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = AUS_
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_compromise_with_czech }
+		#mutually_exclusive = { focus =  }
+		x = -2
+		y = 1
+		relative_position_id = AUS_compromise_with_czech
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = AUS_
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_compromise_with_czech }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = AUS_compromise_with_czech
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = AUS_
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_compromise_with_czech }
+		#mutually_exclusive = { focus =  }
+		x = 2
+		y = 1
+		relative_position_id = AUS_compromise_with_czech
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+### IC ###
+	focus = {
+		id = AUS_industrial_effort
+		icon = GFX_focus_generic_treaty
+		#prerequisite = { focus = }
+		#mutually_exclusive = { focus =  }
+		x = 12
+		y = 0
+		#relative_position_id = AUS
+		
+		cost = 5
+		
+		available = {
+			ROOT = {
+				exists = yes
+				has_capitulated = no
+			}
+			num_of_civilian_factories_available_for_projects > 1
+		}
+		bypass = {
+			all_core_state = {
+				NOT = { is_controlled_by = root }
+				free_building_slots = {
+					building = industrial_complex
+					size = 0
+					include_locked = yes
+				}
+			}
+		}
+		cancel = {
+			ROOT = {
+				OR = {
+					exists = no
+					has_capitulated = yes
+				}
+			}
+			num_of_civilian_factories_available_for_projects < 2
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		select_effect = {
+			add_ideas = AUS_industrial_effort
+		}
+		cancel_effect = {
+			remove_ideas = AUS_industrial_effort
+		}
+		complete_tooltip = {
+			custom_effect_tooltip = AUS_industrial_effort_tt
+		}
+		completion_reward = {
+			custom_effect_tooltip = AUS_industrial_effort_tt
+			hidden_effect = {
+				remove_ideas = AUS_industrial_effort
+			}
+			random_core_state = {
+				prioritize = { 4 }
+				limit = {
+					is_in_home_area = yes
+					is_controlled_by = root
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = industrial_complex level = 2 }
+			}
+			random_core_state = {
+				limit = {
+					is_in_home_area = yes
+					is_controlled_by = root
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 }
+			}
+			random_core_state = {
+				limit = {
+					is_in_home_area = yes
+					is_controlled_by = root
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 }
+			}
+			if = {
+				limit = {
+					any_core_state = {
+						is_in_home_area = yes
+						is_fully_controlled_by = root
+						is_coastal = yes
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+				}
+				random_core_state = {
+					limit = {
+						is_in_home_area = yes
+						is_fully_controlled_by = root
+						is_coastal = yes
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = { type = industrial_complex level = 1 }
+					add_building_construction = { type = dockyard level = 1 }
+				}
+			}
+			else = {
+				random_core_state = {
+					limit = {
+						is_in_home_area = yes
+						is_controlled_by = root
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = { type = industrial_complex level = 1 }
+				}
+			}
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = AUS_four_years_plan
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_industrial_effort }
+		#mutually_exclusive = { focus =  }
+		x = -6
+		y = 1
+		relative_position_id = AUS_industrial_effort
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = AUS_invest_ic
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_four_years_plan }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = AUS_four_years_plan
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = AUS_expand_alpine_montangesellschaft
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_invest_ic }
+		#mutually_exclusive = { focus =  }
+		x = -6
+		y = 1
+		relative_position_id = AUS_invest_ic
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = { #伯勒钢铁公司
+		id = AUS_acquiring_BUHLER
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_expand_alpine_montangesellschaft }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = AUS_expand_alpine_montangesellschaft
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = AUS_invest_lohnerwerke_GmbH
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_invest_ic }
+		#mutually_exclusive = { focus =  }
+		x = 2
+		y = 1
+		relative_position_id = AUS_invest_ic
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = AUS_cooperate_with_germany_reich
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_invest_ic }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = AUS_invest_ic
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+	#Austro-Daimler
+	focus = {
+		id = AUS_expand_austro_daimler
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_cooperate_with_germany_reich }
+		#mutually_exclusive = { focus =  }
+		x = -4
+		y = 1
+		relative_position_id = AUS_cooperate_with_germany_reich
+
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+	#Automobil- und Aviatik
+	focus = {
+		id = AUS_expand_automobil_und_aviatik
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_cooperate_with_germany_reich }
+		#mutually_exclusive = { focus =  }
+		x = -2
+		y = 1
+		relative_position_id = AUS_cooperate_with_germany_reich
+
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+	#Hansa- und Brandenburgische Flugzeugwerke AG
+	focus = {
+		id = AUS_expand_hansa_und_brandenburgische_flugzeugwerke_AG
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_cooperate_with_germany_reich }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = AUS_cooperate_with_germany_reich
+
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+	#Bayer AG
+	focus = {
+		id = AUS_expand_bayer_AG
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_cooperate_with_germany_reich }
+		#mutually_exclusive = { focus =  }
+		x = 2
+		y = 1
+		relative_position_id = AUS_cooperate_with_germany_reich
+
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = AUS_national_infrastructure_construction
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_industrial_effort }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = AUS_industrial_effort
+		
+		cost = 5
+		
+		available = {
+			ROOT = {
+				exists = yes
+				has_capitulated = no
+				is_puppet = no
+			}
+			num_of_civilian_factories_available_for_projects > 1
+		}
+		bypass = {
+			all_core_state = {
+				NOT = { is_controlled_by = root }
+				free_building_slots = { building = infrastructure size = 0 }
+			}
+		}
+		cancel = {
+			ROOT = {
+				OR = {
+					exists = no
+					has_capitulated = yes
+					is_puppet = yes
+				}
+			}
+			num_of_civilian_factories_available_for_projects < 2
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		select_effect = {
+			add_ideas = AUS_national_infrastructure_construction_1
+		}
+		cancel_effect = {
+			remove_ideas = AUS_national_infrastructure_construction_1
+		}
+		
+		complete_tooltip = {}
+		completion_reward = {
+			custom_effect_tooltip = AUS_national_infrastructure_construction_tt
+			hidden_effect = {
+				add_timed_idea = { idea = AUS_national_infrastructure_construction_2 years = 1 }
+				swap_ideas = {
+					remove_idea = AUS_national_infrastructure_construction_1
+					add_idea = AUS_national_infrastructure_construction_3
+				}
+			}
+			random_core_state = {
+				prioritize = { 4 }
+				limit = {
+					is_controlled_by = root
+					free_building_slots = { building = infrastructure size > 0 }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = infrastructure level = 1 }
+			}
+			random_core_state = {
+				prioritize = { 152 153 }
+				limit = {
+					is_controlled_by = root
+					free_building_slots = { building = infrastructure size > 0 }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = infrastructure level = 1 }
+			}
+			random_core_state = {
+				prioritize = { 152 153 }
+				limit = {
+					is_controlled_by = root
+					free_building_slots = { building = infrastructure size > 0 }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = infrastructure level = 1 }
+			}
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = AUS_transport_department
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_national_infrastructure_construction }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = AUS_national_infrastructure_construction
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+	#ÖAF
+	focus = {
+		id = AUS_strenghen_usterreichische_automobil_fabrik
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_cooperate_with_germany_reich }
+		prerequisite = { focus = AUS_transport_department }
+		#mutually_exclusive = { focus =  }
+		x = -2
+		y = 2
+		relative_position_id = AUS_transport_department
+		
+		cost = 5
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = AUS_invest_puchwerke_AG
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_transport_department }
+		#mutually_exclusive = { focus =  }
+		x = -1
+		y = 1
+		relative_position_id = AUS_transport_department
+		
+		cost = 5
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = AUS_invest_kapsch_traffic_Com_AG
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_transport_department }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 1
+		relative_position_id = AUS_transport_department
+		
+		cost = 5
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = AUS_railways_department
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_national_infrastructure_construction }
+		#mutually_exclusive = { focus =  }
+		x = 2
+		y = 1
+		relative_position_id = AUS_national_infrastructure_construction
+		
+		cost = 5
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = AUS_invest_ganz_konzern
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_railways_department }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 2
+		relative_position_id = AUS_railways_department
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+	
+	focus = {
+		id = AUS_eruption_of_ic
+		icon = GFX_focus_generic_treaty
+		prerequisite = {
+			focus = AUS_acquiring_BUHLER
+			focus = AUS_expand_austro_daimler
+			focus = AUS_expand_automobil_und_aviatik
+			focus = AUS_expand_hansa_und_brandenburgische_flugzeugwerke_AG
+			focus = AUS_expand_bayer_AG
+			focus = AUS_strenghen_usterreichische_automobil_fabrik
+			focus = AUS_invest_ganz_konzern
+		}
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 2
+		relative_position_id = AUS_cooperate_with_germany_reich
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = AUS_benefit_the_people
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_eruption_of_ic }
+		mutually_exclusive = { focus = AUS_war_economy }
+		x = -1
+		y = 1
+		relative_position_id = AUS_eruption_of_ic
+		
+		cost = 26
+		
+		available = {}
+		bypass = {}
+		cancel = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		select_effect = {
+			#
+		}
+		cancel_effect = {
+			#
+		}
+		complete_tooltip = {}
+		completion_reward = {
+			uncomplete_national_focus = { focus = AUS_benefit_the_people }
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = AUS_war_economy
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_eruption_of_ic }
+		mutually_exclusive = { focus = AUS_benefit_the_people }
+		x = 1
+		y = 1
+		relative_position_id = AUS_eruption_of_ic
+		
+		cost = 26
+		
+		available = {}
+		bypass = {}
+		cancel = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		select_effect = {
+			#
+		}
+		cancel_effect = {
+			#
+		}
+		complete_tooltip = {}
+		completion_reward = {
+			uncomplete_national_focus = { focus = AUS_war_economy }
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = AUS_eagle_castle
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_industrial_effort }
+		#mutually_exclusive = { focus =  }
+		x = 4
+		y = 1
+		relative_position_id = AUS_industrial_effort
+		
+		cost = 5
+		
+		available = {
+			ROOT = {
+				exists = yes
+				has_capitulated = no
+			}
+			num_of_civilian_factories_available_for_projects > 1
+		}
+		bypass = {}
+		cancel = {
+			ROOT = {
+				OR = {
+					exists = no
+					has_capitulated = yes
+				}
+			}
+			num_of_civilian_factories_available_for_projects < 2
+		}
+		
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		select_effect = {
+			add_ideas = AUS_eagle_castle_1
+		}
+		cancel_effect = {
+			remove_ideas = AUS_eagle_castle_1
+		}
+		complete_tooltip = {
+			custom_effect_tooltip = AUS_eagle_castle_tt
+		}
+		completion_reward = {
+			custom_effect_tooltip = AUS_eagle_castle_tt
+			153 = {
+				add_building_construction = { type = bunker province = 6673 level = 1 instant_build = yes }
+				add_building_construction = { type = bunker province = 671 level = 1 instant_build = yes }
+			}
+			39 = {
+				add_building_construction = { type = bunker province = 11615 level = 1 instant_build = yes }
+				add_building_construction = { type = bunker province = 656 level = 1 instant_build = yes }
+				add_building_construction = { type = bunker province = 11598 level = 1 instant_build = yes }
+				add_building_construction = { type = bunker province = 6675 level = 1 instant_build = yes }
+			}
+			hidden_effect = {
+				#
+			}
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+### MILITARY ###
+	focus = {
+		id = AUS_focus_military
+		icon = GFX_focus_generic_treaty
+		#prerequisite = { focus = AUS_compromise_with_czech }
+		#mutually_exclusive = { focus =  }
+		x = 36
+		y = 0
+		#relative_position_id = AUS_compromise_with_czech
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {
+			army_experience = 50
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+	#
+	focus = {
+		id = AUS_focus_on_manpower
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_focus_military }
+		#mutually_exclusive = { focus =  }
+		x = -2
+		y = 1
+		relative_position_id = AUS_focus_military
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = AUS_infantry_training
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_focus_on_manpower }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = AUS_focus_on_manpower
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = AUS_reform_tactics_i
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_infantry_training }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = AUS_infantry_training
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = AUS_reform_tactics_ii
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_reform_tactics_i }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = AUS_reform_tactics_i
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+	#
+	focus = {
+		id = AUS_focus_on_tech
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_focus_military }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = AUS_focus_military
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = AUS_rifle_effort
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_focus_on_tech }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = AUS_focus_on_tech
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = AUS_light_artillery_effort
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_rifle_effort }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = AUS_rifle_effort
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = AUS_heavy_fire
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_light_artillery_effort }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = AUS_light_artillery_effort
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+	#
+	focus = {
+		id = AUS_focus_on_base
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_focus_military }
+		#mutually_exclusive = { focus =  }
+		x = 2
+		y = 1
+		relative_position_id = AUS_focus_military
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = { #希尔滕贝格控股有限公司
+		id = AUS_hirtenberger_holding_gmbh
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_focus_on_base }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = AUS_focus_on_base
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = { #加塞尔公司
+		id = AUS_gasser_waffenfabrik
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_focus_on_base }
+		#mutually_exclusive = { focus =  }
+		x = 2
+		y = 1
+		relative_position_id = AUS_focus_on_base
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = { #菲尼克斯飞行工厂
+		id = AUS_phunix_lugzeugwerke
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_focus_on_base }
+		prerequisite = { focus = AUS_expanding_airbase }
+		#mutually_exclusive = { focus =  }
+		x = 3
+		y = 3
+		relative_position_id = AUS_focus_on_base
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = { #奥法格公司
+		id = AUS_fate_of_oeffag
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_focus_on_base }
+		prerequisite = { focus = AUS_expanding_airbase }
+		#mutually_exclusive = { focus =  }
+		x = 5
+		y = 3
+		relative_position_id = AUS_focus_on_base
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = AUS_focus_on_performance
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_phunix_lugzeugwerke }
+		mutually_exclusive = { focus = AUS_focus_on_production }
+		x = 0
+		y = 1
+		relative_position_id = AUS_phunix_lugzeugwerke
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = AUS_focus_on_production
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_fate_of_oeffag }
+		mutually_exclusive = { focus = AUS_focus_on_performance }
+		x = 0
+		y = 1
+		relative_position_id = AUS_fate_of_oeffag
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = AUS_ground_service
+		icon = GFX_focus_generic_treaty
+		prerequisite = {
+			focus = AUS_focus_on_performance
+			focus = AUS_focus_on_production
+		}
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 1
+		relative_position_id = AUS_focus_on_performance
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+### airforce ###
+	focus = {
+		id = AUS_focus_on_air_force
+		icon = GFX_focus_generic_treaty
+		#prerequisite = { focus = }
+		#mutually_exclusive = { focus =  }
+		x = 9
+		y = 0
+		relative_position_id = AUS_focus_military
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+	#
+	focus = {
+		id = AUS_expanding_airbase
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_focus_on_air_force }
+		#mutually_exclusive = { focus =  }
+		x = -3
+		y = 1
+		relative_position_id = AUS_focus_on_air_force
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+	#
+	focus = {
+		id = AUS_aviators_club
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_focus_on_air_force }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = AUS_focus_on_air_force
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = AUS_foreign_pilots_coach
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_aviators_club }
+		mutually_exclusive = { focus = AUS_escalading_the_peak }
+		x = -1
+		y = 1
+		relative_position_id = AUS_aviators_club
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = AUS_escalading_the_peak
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_aviators_club }
+		mutually_exclusive = { focus = AUS_foreign_pilots_coach }
+		x = 1
+		y = 1
+		relative_position_id = AUS_aviators_club
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = AUS_aces_from_hell
+		icon = GFX_focus_generic_treaty
+		prerequisite = {
+			focus = AUS_foreign_pilots_coach
+			focus = AUS_escalading_the_peak
+		}
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 2
+		relative_position_id = AUS_aviators_club
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+	#
+	focus = {
+		id = AUS_arts_of_the_air
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_focus_on_air_force }
+		#mutually_exclusive = { focus =  }
+		x = 3
+		y = 4
+		relative_position_id = AUS_focus_on_air_force
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = AUS_bomber
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_arts_of_the_air }
+		#mutually_exclusive = { focus =  }
+		x = -2
+		y = 1
+		relative_position_id = AUS_arts_of_the_air
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = AUS_fighter
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_arts_of_the_air }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = AUS_arts_of_the_air
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = AUS_supportor
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_arts_of_the_air }
+		#mutually_exclusive = { focus =  }
+		x = 2
+		y = 1
+		relative_position_id = AUS_arts_of_the_air
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = AUS_master_air
+		icon = GFX_focus_generic_treaty
+		prerequisite = {
+			focus = AUS_bomber
+			focus = AUS_fighter
+			focus = AUS_supportor
+		}
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 2
+		relative_position_id = AUS_arts_of_the_air
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+### naval ###
+	focus = {
+		id = AUS_focus_on_navy
+		icon = GFX_focus_generic_treaty
+		#prerequisite = { focus = }
+		#mutually_exclusive = { focus =  }
+		x = 9
+		y = 0
+		relative_position_id = AUS_focus_on_air_force
+				
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+	
+	focus = {
+		id = AUS_1
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = AUS_focus_on_navy }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = AUS_focus_on_navy
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+	
+	focus = {
+		id = AUS_1
+		icon = GFX_focus_generic_treaty
+		#prerequisite = { focus = }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		#relative_position_id = AUS
 		
 		cost = 8
 		

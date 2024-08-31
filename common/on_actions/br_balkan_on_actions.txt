@@ -1,9 +1,21 @@
 on_actions = {
 	on_startup = {
 		effect = {
+			every_country = {
+				limit = { is_major = yes }
+				set_variable = { state_rank = 0 }
+			}
+			every_possible_country = {
+				limit = { is_major = no }
+				set_variable = { state_rank = 2 }
+			}
 			GER = {
 				set_country_flag = br_cl_status_flavour_flag
 				set_variable = { custom_cl_var = 0 }
+			}
+			AUS = {
+				set_country_flag = br_cl_status_flavour_flag
+				set_variable = { custom_cl_var = 1 }
 			}
 			PER = {
 				set_country_flag = br_cl_status_flavour_flag
@@ -13,14 +25,6 @@ on_actions = {
 			}
 			RUS = {
 				set_country_flag = br_cl_status_flavour_flag
-			}
-			every_country = {
-				limit = { is_major = yes }
-				set_variable = { state_rank = 0 }
-			}
-			every_possible_country = {
-				limit = { is_major = no }
-				set_variable = { state_rank = 2 }
 			}
 			every_country = {
 				limit = { NOT = { has_country_flag = br_dynamic_modifier_not_generic_flag } }

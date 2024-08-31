@@ -1,0 +1,310 @@
+ideas = {
+	hidden_ideas = {
+		#
+
+		AUS_industrial_effort = {
+			removal_cost = -1
+
+			allowed = { always = yes }
+
+			allowed_civil_war = { always = yes }
+
+			#on_add = {}
+
+			#on_remove = {}
+
+			modifier = {
+				civilian_factory_use = 2
+			}
+		}
+		
+		AUS_national_infrastructure_construction_1 = {
+			removal_cost = -1
+
+			allowed = { always = yes }
+
+			allowed_civil_war = { always = yes }
+
+			#on_add = {}
+
+			#on_remove = {}
+
+			modifier = {
+				civilian_factory_use = 2
+				production_speed_infrastructure_factor = 0.20
+			}
+		}
+		
+		AUS_national_infrastructure_construction_2 = {
+			removal_cost = -1
+
+			allowed = { always = yes }
+
+			allowed_civil_war = { always = yes }
+
+			#on_add = {}
+
+			#on_remove = {}
+
+			modifier = {
+				production_speed_infrastructure_factor = 0.10
+			}
+		}
+		
+		AUS_national_infrastructure_construction_3 = {
+			removal_cost = -1
+
+			allowed = { always = yes }
+
+			allowed_civil_war = { always = yes }
+
+			#on_add = {}
+
+			#on_remove = {}
+
+			modifier = {
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		AUS_eagle_castle_1 = {
+			removal_cost = -1
+
+			allowed = { always = yes }
+
+			allowed_civil_war = { always = yes }
+
+			#on_add = {}
+
+			#on_remove = {}
+
+			modifier = {
+				civilian_factory_use = 2
+				production_speed_bunker_factor = 0.20
+			}
+		}
+
+		AUS_eagle_castle_2 = {
+			removal_cost = -1
+
+			allowed = { always = yes }
+
+			allowed_civil_war = { always = yes }
+
+			#on_add = {}
+
+			#on_remove = {}
+
+			modifier = {
+				production_speed_bunker_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
+
+		AUS_puppet_hun_ganz_konzern_am = {
+			removal_cost = -1
+
+			allowed = { always = yes }
+
+			allowed_civil_war = { always = yes }
+
+			available = { is_puppet_of = AUS }
+
+			#on_add = {}
+
+			#on_remove = {}
+
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+	}
+	
+	country = {
+		#
+	}
+	
+	#materiel_manufacturer = {}
+
+	#tank_manufacturer = {}
+
+	#naval_manufacturer = {}
+
+	#aircraft_manufacturer = {}
+
+	industrial_concern = {
+		AUS_alpine_montangesellschaft = {
+			
+			picture = generic_industrial_concern_3
+		
+			allowed = {
+				original_tag = AUS
+			}
+
+			visible = {
+				#
+			}
+
+			available = {
+				#
+			}
+
+			modifier = {
+				#custom_modifier_tooltip = AUS_national_industrial_concern_upgrade_tt
+				local_resources_factor = 0.05
+			}
+			
+			research_bonus = {
+				industry = 0.1
+			}
+			
+			traits = { industrial_concern }
+		}
+		
+		AUS_BUHLER = { #BÖHLER
+			
+			picture = generic_industrial_concern_3
+		
+			allowed = {
+				original_tag = AUS
+			}
+
+			visible = {
+				#
+			}
+
+			available = {
+				#
+			}
+
+			modifier = {
+				#custom_modifier_tooltip = AUS_national_industrial_concern_upgrade_tt
+				local_resources_factor = 0.05
+			}
+			
+			research_bonus = {
+				industry = 0.1
+			}
+			
+			traits = { industrial_concern }
+		}
+
+		AUS_ganz_konzern_agricultural_machinery = { #
+			
+			picture = generic_industrial_concern_3
+		
+			allowed = {
+				original_tag = AUS
+			}
+
+			visible = {
+				#
+			}
+
+			available = {
+				OR = {
+					any_country = {
+						original_tag = HUN
+						exists = yes
+						has_capitulated = no
+						is_puppet_of = root
+					}
+					any_country = {
+						original_tag = HUN
+						OR = {
+							exists = no
+							has_capitulated = yes
+						}
+						any_core_state = {
+							is_controlled_by = root
+						}
+					}
+				}
+			}
+
+			on_add = {
+				every_country = {
+					limit = {
+						original_tag = HUN
+						is_puppet_of = root
+					}
+					add_ideas = AUS_puppet_hun_ganz_konzern_am
+				}
+			}
+
+			on_remove = {
+				every_country = {
+					limit = {
+						original_tag = HUN
+						is_puppet_of = root
+					}
+					remove_ideas = AUS_puppet_hun_ganz_konzern_am
+				}
+			}
+
+			modifier = {
+				#custom_modifier_tooltip = AUS_national_industrial_concern_upgrade_tt
+				consumer_goods_factor = -0.10
+			}
+			
+			research_bonus = {
+				industry = 0.1
+			}
+			
+			traits = { industrial_concern }
+		}
+
+		AUS_ganz_konzern_agricultural_electrified_railway = { #
+			
+			picture = generic_industrial_concern_3
+		
+			allowed = {
+				original_tag = AUS
+			}
+
+			visible = {
+				#
+			}
+
+			available = {
+				has_completed_focus = AUS_invest_ganz_konzern
+			}
+
+			modifier = {
+				#custom_modifier_tooltip = AUS_national_industrial_concern_upgrade_tt
+				production_speed_rail_way_factor = 0.05
+				supply_consumption_factor = -0.05
+				supply_factor = 0.05
+			}
+			
+			research_bonus = {
+				industry = 0.1
+			}
+			
+			traits = { industrial_concern }
+		}
+
+		AUS_kapsch_traffic_Com_AG = {
+			
+			picture = generic_electronics_concern_1
+
+			allowed = {
+				original_tag = AUS
+			}
+			
+			cost = 75
+			removal_cost = 10
+			
+			modifier = {
+				#custom_modifier_tooltip = AUS_national_industrial_concern_upgrade_tt
+				#
+			}
+
+			research_bonus = {
+				electronics = 0.15
+			}
+			
+			traits = { electronics_concern }
+		}
+	}
+}
