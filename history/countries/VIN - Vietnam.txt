@@ -97,6 +97,7 @@ set_politics = {
 	election_frequency = 36
 	elections_allowed = yes
 }
+
 set_popularities = {
 	#
 	soc_anarchism = 0
@@ -164,3 +165,46 @@ create_country_leader = {
 
 
 set_cosmetic_tag = VIN_french_indochina
+
+add_ideas = {
+	volunteer_only
+	export_focus
+	civilian_economy
+	#
+	br_laws_proxy
+	br_laws_military_regulation
+	br_laws_suffrage_prohibited
+	br_laws_apartheid
+	br_laws_religious_people
+	br_laws_bourgeoisie
+	#
+
+}
+
+1931.1.1 = {
+	set_politics = {
+		ruling_party = dem_liberalism
+		last_election = "1933.2.16"
+		election_frequency = 36
+		elections_allowed = yes
+	}
+
+	set_popularities = {
+		#
+		soc_anarchism = 0
+		vanwardism = 0
+		#
+		sci_socialism = 10
+		con_socialism = 10
+		dem_socialism = 0
+		#
+		dem_liberalism = 40
+		dem_conservatism = 20
+		#
+		authoritarian = 20
+		#
+		fascism = 0
+		nationalism = 0
+		supernationalism = 0
+	}
+}

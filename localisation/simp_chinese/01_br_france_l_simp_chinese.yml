@@ -33,3 +33,37 @@
  FRA_vanwardism_party_pcf_name_short: "法国共产党工团与先锋派(PCF)"
  FRA_sci_socialism_party_pcf_name_long: "人民阵线：法国共产党马克思派(PCF)"
  FRA_sci_socialism_party_pcf_name_short: "法国共产党马克思派(PCF)"
+
+#
+ br_indochina.1.title: "法属印度支那的命运"
+ br_indochina.1.desc: ""
+ br_indochina.1.a: "佬越柬三族应该自己决定联合还是分手。"
+ br_indochina.1.b: "应当让印度支那的社会主义者们联合起来。"
+ br_indochina.1.c: "我们不应当拱手让人。"
+ br_indochina.1.d: "我们应当学习英国人的先进经验。"
+ br_indochina.2.title: "联合还是分离？"
+ br_indochina.2.desc: ""
+ br_indochina.2.a: "老挝、高棉，都是我们的！" #将会操纵公投
+ br_indochina.2.b: "我们不是帝国主义的继承人。" #我们不能那么做！
+ br_indochina.3.title: "法国支持越南人执掌印度支那联邦"
+ br_indochina.3.desc: ""
+ br_indochina.3.a: "真美啊，大印度支那。" #will play as viet, great indochina
+ br_indochina.3.b: "这群法国人根本不知道越南人对我们佬人做了什么。" #will play as laos
+ br_indochina.3.c: "高棉民族决不会妥协！" #will play as kingdom of cambodia
+ br_indochina.4.title: "公投遭到操纵"
+ br_indochina.4.desc: ""
+ br_indochina.4.a: "大印度支那联邦才是归宿。" #will play as viet, great indochina
+ br_indochina.4.b: "佬的同胞们，这就是越南人的丑恶嘴脸。" #will play as laos
+ br_indochina.4.c: "高棉人不会放弃独立自由之路！" #will play as kingdom of cambodia
+
+ br_vietnam.1.title: ""
+ br_vietnam.1.desc: ""
+ br_vietnam.1.a: ""
+
+ br_laos.1.title: "佬族的命运"
+ br_laos.1.desc: ""
+ br_laos.1.a: ""
+
+ br_cambodia.1.title: ""
+ br_cambodia.1.desc: ""
+ br_cambodia.1.a: ""

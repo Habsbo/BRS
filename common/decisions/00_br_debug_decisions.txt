@@ -244,4 +244,41 @@ br_debug_decisions = {
 			base = 0
 		}
 	}
+
+	debug_CAM_citywalk = {
+
+		icon = generic_research
+
+		available = {
+			always = yes
+		}
+
+		visible = {
+			is_debug = yes
+		}
+
+		fire_only_once = no
+		cost = 0
+
+		complete_effect = {
+			set_cosmetic_tag = CAM_democratic
+			set_politics = { ruling_party = vanwardism }
+			set_popularities = {
+				#
+				soc_anarchism = 20
+				vanwardism = 30
+				#
+				sci_socialism = 10
+				con_socialism = 10
+				dem_socialism = 10
+				#
+				dem_liberalism = 10
+				dem_conservatism = 10
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
 }

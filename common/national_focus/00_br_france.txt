@@ -66,7 +66,7 @@
 		y = 2
 		relative_position_id = FRA_publicizing_front_populaire
 
-		cost = 8
+		cost = 5
 		
 		available = {}
 				
@@ -78,7 +78,9 @@
 		
 		complete_tooltip = {}
 		
-		completion_reward = {}
+		completion_reward = {
+			add_stability = 0.10
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -268,7 +270,13 @@
 		
 		complete_tooltip = {}
 		
-		completion_reward = {}
+		completion_reward = {
+			set_rule = {
+				can_create_factions = yes
+				can_send_volunteers = yes
+			}
+			create_faction = FRA_internationale
+		}
 		
 		ai_will_do = { factor = 1 }
 	}

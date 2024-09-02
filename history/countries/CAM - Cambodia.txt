@@ -103,13 +103,23 @@ set_politics = {
 	elections_allowed = yes
 }
 
-
 set_popularities = {
-	con_socialism = 5 #保守社会主义
-	dem_socialism = 10 #社会民主主义
-	dem_conservatism = 70 #保守民主主义
-	authoritarian = 10 #威权主义
-	fascism = 5 #民族主义/束棒
+	#
+	soc_anarchism = 0
+	vanwardism = 0
+	#
+	sci_socialism = 10
+	con_socialism = 5
+	dem_socialism = 20
+	#
+	dem_liberalism = 10
+	dem_conservatism = 30
+	#
+	authoritarian = 25
+	#
+	fascism = 0
+	nationalism = 0
+	supernationalism = 0
 }
 
 create_country_leader = {
@@ -148,3 +158,32 @@ create_country_leader = {
 
 #couldnt find anything historical on fascism
 
+
+1931.1.1 = {
+		
+	set_politics = {
+		ruling_party = dem_conservatism
+		last_election = "1933.2.16"
+		election_frequency = 36
+		elections_allowed = yes
+	}
+
+	set_popularities = {
+		#
+		soc_anarchism = 0
+		vanwardism = 0
+		#
+		sci_socialism = 10
+		con_socialism = 5
+		dem_socialism = 20
+		#
+		dem_liberalism = 10
+		dem_conservatism = 30
+		#
+		authoritarian = 25
+		#
+		fascism = 0
+		nationalism = 0
+		supernationalism = 0
+	}
+}

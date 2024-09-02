@@ -221,3 +221,6 @@
 #
  br_is_chinese_country_tt: "是中华国家"
  br_is_deutsch_country_tt: "是德意志国家"
+
+#
+ debug_CAM_citywalk: "你疑似有点太城市化了"

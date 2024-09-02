@@ -1153,7 +1153,10 @@ add_ideas = {
 }
 #国家关系 - gov relationship
 give_guarantee = CZE
+
+1887.10.31 = {
+	set_autonomy = { target = FRC autonomous_state = autonomy_br_self_governance }
+}
 set_autonomy = { target = ALG autonomous_state = autonomy_br_self_governance }
 set_autonomy = { target = TUN autonomous_state = autonomy_br_self_governance }
-set_autonomy = { target = VEN autonomous_state = autonomy_br_self_governance }
 set_autonomy = { target = MOR autonomous_state = autonomy_br_protectorate }

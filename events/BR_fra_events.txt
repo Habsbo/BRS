@@ -39,3 +39,242 @@ country_event = { #
 	#	ai_chance = { factor = 0 }
 	#}
 }
+
+### french indochina ###
+add_namespace = br_indochina
+add_namespace = br_vietnam
+add_namespace = br_laos
+add_namespace = br_cambodia
+
+country_event = { #
+	id = br_indochina.1
+	title = br_indochina.1.title
+	desc = br_indochina.1.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		#
+		end_puppet = FRC
+	}
+
+#popular front
+	option = {
+		name = br_indochina.1.a #
+
+		FRC = {
+			country_event = br_indochina.2
+		}
+
+		ai_chance = { factor = 0 }
+	}
+
+	option = {
+		name = br_indochina.1.b #
+
+		FRC = {
+			country_event = br_indochina.3
+		}
+	
+		ai_chance = { factor = 0 }
+	}
+
+#rassemblement national
+	option = {
+		name = br_indochina.1.c #
+
+		ai_chance = { factor = 0 }
+	}
+
+	option = {
+		name = br_indochina.1.d #
+	
+		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = { #
+	id = br_indochina.2
+	title = br_indochina.2.title
+	desc = br_indochina.2.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		#
+		hidden_effect = {
+			set_cosmetic_tag = VIN_vietnam_conghoa
+		}
+	}
+
+	option = {
+		name = br_indochina.2.a #
+
+		country_event = { id = br_indochina.4 }
+
+		ai_chance = { factor = 0 }
+	}
+
+	option = {
+		name = br_indochina.2.b #
+	
+		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = { #
+	id = br_indochina.3
+	title = br_indochina.3.title
+	desc = br_indochina.3.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		#
+	}
+
+	option = {
+		name = br_indochina.3.a #
+
+		ai_chance = { factor = 0 }
+	}
+
+	option = {
+		name = br_indochina.3.b #
+	
+		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = { #
+	id = br_indochina.4
+	title = br_indochina.4.title
+	desc = br_indochina.4.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			#
+			LAO = { set_cosmetic_tag = LAO_Louangphrabang }
+			CAM = { set_cosmetic_tag = CAM_kingdom }
+			#
+			670 = { transfer_state_to = LAO }
+			741 = { transfer_state_to = CAM }
+		}
+	}
+
+	option = {
+		name = br_indochina.4.a #
+
+		
+
+		ai_chance = { factor = 0 }
+	}
+
+	option = {
+		name = br_indochina.4.b #
+
+		LAO = {
+			change_tag_from = root #play as laos
+		}
+	
+		ai_chance = { factor = 0 }
+	}
+
+	option = {
+		name = br_indochina.4.c #
+
+		CAM = {
+			change_tag_from = root #play as khmer
+		}
+	
+		ai_chance = { factor = 0 }
+	}
+}
+#
+country_event = { #
+	id = br_vietnam.1
+	title = br_vietnam.1.title
+	desc = br_vietnam.1.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		#
+	}
+
+	option = {
+		name = br_vietnam.1.a #
+
+		ai_chance = { factor = 0 }
+	}
+
+	option = {
+		name = br_vietnam.1.b #
+	
+		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = { #
+	id = br_laos.1
+	title = br_laos.1.title
+	desc = br_laos.1.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		#
+	}
+
+	option = {
+		name = br_laos.1.a #
+
+		ai_chance = { factor = 0 }
+	}
+
+	option = {
+		name = br_laos.1.b #
+	
+		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = { #
+	id = br_cambodia.1
+	title = br_cambodia.1.title
+	desc = br_cambodia.1.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		#
+	}
+
+	option = {
+		name = br_cambodia.1.a #
+
+		ai_chance = { factor = 0 }
+	}
+
+	option = {
+		name = br_cambodia.1.b #
+	
+		ai_chance = { factor = 0 }
+	}
+}

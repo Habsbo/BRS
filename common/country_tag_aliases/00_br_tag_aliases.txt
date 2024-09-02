@@ -259,3 +259,12 @@ VLM = {
 	original_tag = BEL
 	has_country_flag = BEL_Vlaams_flag
 }
+
+#
+FRC = {
+	original_tag = VIN
+	OR = {
+		has_cosmetic_tag = VIN_french_indochina
+		is_subject_of = FRA
+	}
+}
