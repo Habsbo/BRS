@@ -195,8 +195,8 @@ set_politics = {
 
 set_popularities = {
 	sci_socialism = 3 #科学社会主义
-	demo_socialism = 20 #社会民主主义
-	demo_conservatism = 20 #保守民主主义
+	dem_socialism = 20 #社会民主主义
+	dem_conservatism = 20 #保守民主主义
 	authoritarian = 54 #威权主义
 	fascism = 3 #民族主义/束棒
 }

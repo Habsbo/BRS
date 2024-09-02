@@ -106,9 +106,9 @@ land_force_alt_dynamic_modifier = { #
 
 	enable = {
 		OR = {
-			has_government = demo_socialism
-			has_government = demo_liberalism
-			has_government = demo_conservatism
+			has_government = dem_socialism
+			has_government = dem_liberalism
+			has_government = dem_conservatism
 			has_government = authoritarian
 			has_government = fascism
 			has_government = nationalism
@@ -178,9 +178,9 @@ officer_cap_dynamic_modifier = {
 
 	enable = {
 		OR = {
-			has_government = demo_socialism
-			has_government = demo_liberalism
-			has_government = demo_conservatism
+			has_government = dem_socialism
+			has_government = dem_liberalism
+			has_government = dem_conservatism
 			has_government = authoritarian
 			has_government = fascism
 			has_government = nationalism
@@ -209,7 +209,7 @@ red_navy_dynamic_modifier = {
 			has_government = vanwardism
 			has_government = sci_socialism
 			has_government = con_socialism
-			has_government = demo_socialism
+			has_government = dem_socialism
 		}
 	}
 	
@@ -219,8 +219,8 @@ navy_alt_dynamic_modifier = {
 
 	enable = {
 		OR = {
-			has_government = demo_liberalism
-			has_government = demo_conservatism
+			has_government = dem_liberalism
+			has_government = dem_conservatism
 			has_government = authoritarian
 			has_government = fascism
 			has_government = nationalism
@@ -239,7 +239,7 @@ red_airforce_dynamic_modifier = {
 			has_government = vanwardism
 			has_government = sci_socialism
 			has_government = con_socialism
-			has_government = demo_socialism
+			has_government = dem_socialism
 		}
 	}
 	
@@ -249,8 +249,8 @@ airforce_alt_dynamic_modifier = {
 
 	enable = {
 		OR = {
-			has_government = demo_liberalism
-			has_government = demo_conservatism
+			has_government = dem_liberalism
+			has_government = dem_conservatism
 			has_government = authoritarian
 			has_government = fascism
 			has_government = nationalism
@@ -318,7 +318,7 @@ women_movement_dynamic_modifier = {
 	vanwardism_drift = women_movement_vanwardism_drift
 	sci_socialism_drift = women_movement_sci_socialism_drift
 	con_socialism_drift = women_movement_con_socialism_drift
-	demo_socialism_drift = women_movement_demo_socialism_drift
+	dem_socialism_drift = women_movement_dem_socialism_drift
 	#
 	industrial_capacity_factory = women_movement_industrial_capacity_factory
 	equipment_conversion_speed = women_movement_equipment_conversion_speed

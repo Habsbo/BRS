@@ -40,8 +40,8 @@
 			#
 			add_political_power = 50
 			#
-			add_popularity = { ideology = demo_socialism popularity = 0.08 }
-			add_popularity = { ideology = demo_liberalism popularity = 0.08 }
+			add_popularity = { ideology = dem_socialism popularity = 0.08 }
+			add_popularity = { ideology = dem_liberalism popularity = 0.08 }
 		}
 	}
 	focus = {

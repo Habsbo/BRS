@@ -758,7 +758,7 @@ ideas = {
 
 			available = {
 				OR = {
-					has_government = demo_socialism
+					has_government = dem_socialism
 					br_ideology_capitalism_ruling = yes
 					br_ideology_authoritarian_ruling = yes
 					br_ideology_fascism_ruling = yes
@@ -804,7 +804,7 @@ ideas = {
 				br_ideology_radical_communism_nio = yes
 				OR = {
 					br_ideology_socialism_nio = yes
-					has_government = demo_socialism
+					has_government = dem_socialism
 				}
 				NOT = { has_country_flag = br_can_not_change_laws_flag }
 			}

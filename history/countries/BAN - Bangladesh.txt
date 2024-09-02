@@ -32,7 +32,7 @@ recruit_character = BAN_acr
 set_convoys = 5
 
 set_politics = {
-	ruling_party = demo_conservatism
+	ruling_party = dem_conservatism
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = yes
@@ -40,9 +40,9 @@ set_politics = {
 
 set_popularities = {
 	sci_socialism = 15 #科学社会主义
-	demo_socialism = 10 #社会民主主义
-	demo_liberalism = 10 #社会自由主义
-	demo_conservatism = 65 #保守民主主义
+	dem_socialism = 10 #社会民主主义
+	dem_liberalism = 10 #社会自由主义
+	dem_conservatism = 65 #保守民主主义
 }
 
 #create_country_leader = {

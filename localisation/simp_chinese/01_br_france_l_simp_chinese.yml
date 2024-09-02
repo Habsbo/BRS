@@ -11,7 +11,7 @@
  edouard_daladier: "爱德华·达拉第" 
  FRA_edouard_daladier: "$edouard_daladier$"
  VL_name_edouard_daladier: "$edouard_daladier$"
- VL_trait_edouard_daladier: "§Y$prrrs_leader$§!\n - 政治点数: §G+15%§!\n - §Y$demo_socialism_drift$§!: §G+0.03§!\n§Y$stout_defender$§!\n - AI修正：防御重视程度: §Y+50%§!\n"
+ VL_trait_edouard_daladier: "§Y$prrrs_leader$§!\n - 政治点数: §G+15%§!\n - §Y$dem_socialism_drift$§!: §G+0.03§!\n§Y$stout_defender$§!\n - AI修正：防御重视程度: §Y+50%§!\n"
  VL_state_edouard_daladier: "§Y$edouard_daladier$§!\n$VL_trait_edouard_daladier$"
  VL_Dip_state_edouard_daladier: "§Y$edouard_daladier$§!\n$GetDipStatus$\n$VL_trait_edouard_daladier$"
  VL_desc_state_edouard_daladier: "§g §!"

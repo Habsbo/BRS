@@ -491,18 +491,18 @@ spriteTypes = {
 	}
 	
 	spriteType = {
-		name = "GFX_ideology_demo_socialism_group"
-		texturefile = "gfx/interface/ideologies/demo_socialism_group.png"
+		name = "GFX_ideology_dem_socialism_group"
+		texturefile = "gfx/interface/ideologies/dem_socialism_group.png"
 	}
 
 	spriteType = {
-		name = "GFX_ideology_demo_liberalism_group"
-		texturefile = "gfx/interface/ideologies/demo_liberalism_group.png"
+		name = "GFX_ideology_dem_liberalism_group"
+		texturefile = "gfx/interface/ideologies/dem_liberalism_group.png"
 	}
 	
 	spriteType = {
-		name = "GFX_ideology_demo_conservatism_group"
-		texturefile = "gfx/interface/ideologies/demo_conservatism_group.png"
+		name = "GFX_ideology_dem_conservatism_group"
+		texturefile = "gfx/interface/ideologies/dem_conservatism_group.png"
 	}
 
 	spriteType = {

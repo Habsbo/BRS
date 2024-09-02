@@ -11,15 +11,15 @@
  con_socialism: "合作社会主义"
  con_socialism_noun: "合作社会主义"
  con_socialism_desc: "民主专政政体"
- demo_socialism: "社会民主主义"
- demo_socialism_noun: "社会民主主义"
- demo_socialism_desc: "社会民主政体"
- demo_liberalism: "社会自由主义"
- demo_liberalism_noun: "社会自由主义"
- demo_liberalism_desc: "私有制民主政体"
- demo_conservatism: "保守民主主义"
- demo_conservatism_noun: "保守民主主义"
- demo_conservatism_desc: "寡头政体"
+ dem_socialism: "社会民主主义"
+ dem_socialism_noun: "社会民主主义"
+ dem_socialism_desc: "社会民主政体"
+ dem_liberalism: "社会自由主义"
+ dem_liberalism_noun: "社会自由主义"
+ dem_liberalism_desc: "私有制民主政体"
+ dem_conservatism: "保守民主主义"
+ dem_conservatism_noun: "保守民主主义"
+ dem_conservatism_desc: "寡头政体"
  authoritarian: "威权主义"
  authoritarian_noun: "威权主义"
  authoritarian_desc: "专制政体"
@@ -41,12 +41,12 @@
  sci_socialism_acceptance: "§Y$sci_socialism$§!接受度"
  con_socialism_drift: "§Y$con_socialism$§!意识形态增长"
  con_socialism_acceptance: "§Y$con_socialism$§!接受度"
- demo_socialism_drift: "§Y$demo_socialism$§!意识形态增长"
- demo_socialism_acceptance: "§Y$demo_socialism$§!接受度"
- demo_liberalism_drift: "§Y$demo_liberalism$§!意识形态增长"
- demo_liberalism_acceptance: "§Y$demo_liberalism$§!接受度"
- demo_conservatism_drift: "§Y$demo_conservatism$§!意识形态增长"
- demo_conservatism_acceptance: "§Y$demo_conservatism$§!接受度"
+ dem_socialism_drift: "§Y$dem_socialism$§!意识形态增长"
+ dem_socialism_acceptance: "§Y$dem_socialism$§!接受度"
+ dem_liberalism_drift: "§Y$dem_liberalism$§!意识形态增长"
+ dem_liberalism_acceptance: "§Y$dem_liberalism$§!接受度"
+ dem_conservatism_drift: "§Y$dem_conservatism$§!意识形态增长"
+ dem_conservatism_acceptance: "§Y$dem_conservatism$§!接受度"
  authoritarian_drift: "§Y$authoritarian$§!意识形态增长"
  authoritarian_acceptance: "§Y$authoritarian$§!接受度"
  fascism_drift: "§Y$fascism$§!意识形态增长"
@@ -60,9 +60,9 @@
  CAT_vanwardism_party: "工团党"
  CAT_sci_socialism_party: "西班牙共产党"
  CAT_con_socialism_party: "西班牙共产党"
- CAT_demo_socialism_party: "共和左翼(ERC)"
- CAT_demo_liberalism_party: ""
- CAT_demo_conservatism_party: ""
+ CAT_dem_socialism_party: "共和左翼(ERC)"
+ CAT_dem_liberalism_party: ""
+ CAT_dem_conservatism_party: ""
  CAT_authoritarian_party: ""
  CAT_fascism_party: ""
  CAT_nationalism_party: ""
@@ -72,9 +72,9 @@
  SPR_vanwardism_party: "工团党"
  SPR_sci_socialism_party: "人民阵线：西班牙共产党"
  SPR_con_socialism_party: "人民阵线：西班牙共产党"
- SPR_demo_socialism_party: "人民阵线：共和左翼(ERC)"
- SPR_demo_liberalism_party: ""
- SPR_demo_conservatism_party: "西班牙国民联盟"
+ SPR_dem_socialism_party: "人民阵线：共和左翼(ERC)"
+ SPR_dem_liberalism_party: ""
+ SPR_dem_conservatism_party: "西班牙国民联盟"
  SPR_authoritarian_party: "波旁王朝" #卡洛斯派
  SPR_fascism_party: "西班牙长枪党"
  SPR_nationalism_party: "西班牙长枪党右翼"
@@ -84,9 +84,9 @@
  POL_vanwardism_party: "波兰和立陶宛社会民主党(SDKP)与犹太工人联盟(GJLB)" #而波兰工人共产党（KPRP）失败了
  POL_sci_socialism_party: "波兰工人党"
  POL_con_socialism_party: "波兰农民党"
- POL_demo_socialism_party: "波兰社会党(PPS)左翼"
- POL_demo_liberalism_party: "波兰国家民主党"
- POL_demo_conservatism_party: "萨纳齐亚主义左派"
+ POL_dem_socialism_party: "波兰社会党(PPS)左翼"
+ POL_dem_liberalism_party: "波兰国家民主党"
+ POL_dem_conservatism_party: "萨纳齐亚主义左派"
  POL_authoritarian_party: "萨纳齐亚主义右派" #帕克斯协会
  POL_fascism_party: "波兰长枪党"
  POL_nationalism_party: "波兰纳粹党"
@@ -96,9 +96,9 @@
  GRE_vanwardism_party: "希腊工人联盟"
  GRE_sci_socialism_party: "希腊共产党(KKE)"
  GRE_con_socialism_party: "希腊共产党(KKE)"
- GRE_demo_socialism_party: "民主激进左翼联盟"
- GRE_demo_liberalism_party: "自由党"
- GRE_demo_conservatism_party: "保皇民主党"
+ GRE_dem_socialism_party: "民主激进左翼联盟"
+ GRE_dem_liberalism_party: "自由党"
+ GRE_dem_conservatism_party: "保皇民主党"
  GRE_authoritarian_party: "保皇专制派"
  GRE_fascism_party: "自由思想党"
  GRE_nationalism_party: "人民东正教阵线"
@@ -108,9 +108,9 @@
  UKR_vanwardism_party: "乌克兰革命工团派"
  UKR_sci_socialism_party: "乌克兰人民苏维埃"
  UKR_con_socialism_party: "乌克兰布尔什维克支部"
- UKR_demo_socialism_party: "乌克兰社会主义民主派"
- UKR_demo_liberalism_party: "乌克兰中央拉达"
- UKR_demo_conservatism_party: "乌克兰中央拉达"
+ UKR_dem_socialism_party: "乌克兰社会主义民主派"
+ UKR_dem_liberalism_party: "乌克兰中央拉达"
+ UKR_dem_conservatism_party: "乌克兰中央拉达"
  UKR_authoritarian_party: "乌克兰中央拉达"
  UKR_fascism_party: "乌克兰长枪党"
  UKR_nationalism_party: "乌克兰国家社会工人党"
@@ -120,9 +120,9 @@
  FRA_vanwardism_party: "人民阵线：工人国际法国支部(SFIO)"
  FRA_sci_socialism_party: "人民阵线：法兰西共产党(SFIC/PCF)"
  FRA_con_socialism_party: "人民阵线：社会主义共和联盟(USR)与激进社会主义党-卡米尔·佩莱坦派(PRS-CP)" #Union Socialist républicaine, Parti radical-socialiste Camille Pelletan
- FRA_demo_socialism_party: "人民阵线：共和、激进与激进－社会主义党(PRRRS)与前线党(FP)" #Parti républicain, radical et radical-socialiste, Frontist Party
- FRA_demo_liberalism_party: "人民阵线：民主共和联盟、激进独立党与大众民主党(AD/ARD-RI-PDP)与独立左派(GI)" #Alliance républicaine démocratique, Radicaux independents, Parti démocrate populaire, Gauche indépendante
- FRA_demo_conservatism_party: "共和联合会(FR)与经济、社会和农民行动独立党(IAESP)" #Fédération républicaine, Indépendants d'action économique, sociale et paysanne
+ FRA_dem_socialism_party: "人民阵线：共和、激进与激进－社会主义党(PRRRS)与前线党(FP)" #Parti républicain, radical et radical-socialiste, Frontist Party
+ FRA_dem_liberalism_party: "人民阵线：民主共和联盟、激进独立党与大众民主党(AD/ARD-RI-PDP)与独立左派(GI)" #Alliance républicaine démocratique, Radicaux independents, Parti démocrate populaire, Gauche indépendante
+ FRA_dem_conservatism_party: "共和联合会(FR)与经济、社会和农民行动独立党(IAESP)" #Fédération républicaine, Indépendants d'action économique, sociale et paysanne
  FRA_authoritarian_party: "独立党" #Indépendants/Indépendants républicains
  FRA_fascism_party: "国民阵线(RN)" #Rassemblement national
  FRA_nationalism_party: "国民阵线(RN)"
@@ -134,9 +134,9 @@
  BEL_vanwardism_party: "比利时共产主义工团派"
  BEL_sci_socialism_party: "比利时共产党(KPB/PCB)" #Kommunistische Partij van België/Parti Communiste de Belgique
  BEL_con_socialism_party: "比利时工人党(BWP/POB)" #
- BEL_demo_socialism_party: "比利时工人党(BWP/POB)" #Belgische Werkliedenpartij/Parti ouvrier belge
- BEL_demo_liberalism_party: "比利时自由党(LP/PL)" #Liberale Partij/Parti libéral
- BEL_demo_conservatism_party: "比利时天主教党(KP/PC)" #Katholieke Partij/Parti catholique
+ BEL_dem_socialism_party: "比利时工人党(BWP/POB)" #Belgische Werkliedenpartij/Parti ouvrier belge
+ BEL_dem_liberalism_party: "比利时自由党(LP/PL)" #Liberale Partij/Parti libéral
+ BEL_dem_conservatism_party: "比利时天主教党(KP/PC)" #Katholieke Partij/Parti catholique
  BEL_authoritarian_party: "比利时君主派" #中立派/老兵(Veterans)/农民(Farmers)
  BEL_fascism_party: "比利时雷克斯党" #The Frontpartij (Front Party) ,vlaams
  BEL_nationalism_party: "比利时雷克斯党"
@@ -146,9 +146,9 @@
  LUX_vanwardism_party: "卢森堡共产主义工团派"
  LUX_sci_socialism_party: "卢森堡共产党(KPL)"
  LUX_con_socialism_party: "卢森堡左翼党(DL)" 
- LUX_demo_socialism_party: "卢森堡社会民主党(LSAP)" #卢森堡社会工人党(POSL)
- LUX_demo_liberalism_party: "卢森堡独立国家党" #
- LUX_demo_conservatism_party: "卢森堡民主党(DP)" #基督教社会人民党(CSV)
+ LUX_dem_socialism_party: "卢森堡社会民主党(LSAP)" #卢森堡社会工人党(POSL)
+ LUX_dem_liberalism_party: "卢森堡独立国家党" #
+ LUX_dem_conservatism_party: "卢森堡民主党(DP)" #基督教社会人民党(CSV)
  LUX_authoritarian_party: "卢森堡君主派"
  LUX_fascism_party: "卢森堡法西斯国家党" 
  LUX_nationalism_party: "国家社会工人党"

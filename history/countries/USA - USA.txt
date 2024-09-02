@@ -168,7 +168,7 @@ give_guarantee = URG
 set_convoys = 700
 
 set_politics = {
-	ruling_party = demo_liberalism
+	ruling_party = dem_liberalism
 	last_election = "1932.11.8"
 	election_frequency = 48
 	elections_allowed = yes
@@ -181,10 +181,10 @@ set_popularities = {
 	#
 	sci_socialism = 10
 	con_socialism = 10
-	demo_socialism = 10
+	dem_socialism = 10
 	#
-	demo_liberalism = 30
-	demo_conservatism = 30
+	dem_liberalism = 30
+	dem_conservatism= 30
 	#
 	authoritarian = 0
 	#

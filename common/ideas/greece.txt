@@ -728,8 +728,8 @@ ideas = {
 				stability_factor = -0.05
 				political_power_gain = 0.05
 				authoritarian_acceptance = 50
-				demo_conservatism_acceptance = 50
-				demo_conservatism_drift = 0.02
+				dem_conservatismacceptance = 50
+				dem_conservatismdrift = 0.02
 				authoritarian_drift = 0.01
 			}
 		}

@@ -20,7 +20,7 @@ country_event = { #
 		add_stability = 0.01
 		#
 		add_popularity = { ideology = con_socialism popularity = 0.02 }
-		add_popularity = { ideology = demo_socialism popularity = 0.02 }
+		add_popularity = { ideology = dem_socialism popularity = 0.02 }
 		add_popularity = { ideology = authoritarian popularity = 0.02 }
 		add_popularity = { ideology = fascism popularity = 0.02 }
 		#

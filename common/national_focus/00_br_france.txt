@@ -44,7 +44,7 @@
 			add_stability = -0.05
 			add_popularity = { ideology = sci_socialism popularity = 0.02 }
 			add_popularity = { ideology = con_socialism popularity = 0.03 }
-			add_popularity = { ideology = demo_socialism popularity = 0.05 }
+			add_popularity = { ideology = dem_socialism popularity = 0.05 }
 			#
 			if = {
 				limit = {

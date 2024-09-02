@@ -45,7 +45,7 @@ recruit_character = PRC_he_yuandang
 #save_global_event_target_as = WTT_communist_china
 
 set_politics = {
-	ruling_party = demo_conservatism
+	ruling_party = dem_conservatism
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = yes
@@ -57,10 +57,10 @@ set_popularities = {
 	#
 	sci_socialism = 15
 	con_socialism = 15
-	demo_socialism = 5
+	dem_socialism = 5
 	#
-	demo_liberalism = 20
-	demo_conservatism = 25
+	dem_liberalism = 20
+	dem_conservatism = 25
 	#
 	authoritarian = 20
 	#

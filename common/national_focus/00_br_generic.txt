@@ -2102,7 +2102,7 @@ focus_tree = {
 		available = {
 			OR = {
 				con_socialism > 0.3
-				demo_socialism > 0.3
+				dem_socialism > 0.3
 			}
 		}
 		
@@ -2119,7 +2119,7 @@ focus_tree = {
 			add_political_power = 200
 			add_popularity = { ideology = sci_socialism popularity = 0.05 }
 			add_popularity = { ideology = con_socialism popularity = 0.05 }
-			add_popularity = { ideology = demo_socialism popularity = 0.10 }
+			add_popularity = { ideology = dem_socialism popularity = 0.10 }
 			#
 			set_rule = {
 				can_boost_own_ideology = no

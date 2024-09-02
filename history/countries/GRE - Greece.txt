@@ -110,7 +110,7 @@ GER = { add_opinion_modifier = { target = HEL modifier = GRE_strong_trading_ties
 set_convoys = 10
 
 set_politics = {
-	ruling_party = demo_conservatism
+	ruling_party = dem_conservatism
 	last_election = "1935.6.9"
 	election_frequency = 7
 	elections_allowed = yes # none after offset 1
@@ -121,9 +121,9 @@ set_popularities = {
 	vanwardism = 0 #革命社会主义
 	sci_socialism = 10 #科学社会主义
 	con_socialism = 5 #保守社会主义
-	demo_socialism = 10 #社会民主主义
-	demo_liberalism = 20 #社会自由主义
-	demo_conservatism = 40 #保守民主主义
+	dem_socialism = 10 #社会民主主义
+	dem_liberalism= 20 #社会自由主义
+	dem_conservatism 40 #保守民主主义
 	authoritarian = 0 #威权主义
 	fascism = 10 #民族主义/束棒
 	nationalism = 0 #国家社会主义
@@ -396,7 +396,7 @@ set_country_flag = br_HEL_hellenic_kingdom_flag
 create_dynamic_country = { # HER - Hellas republic
 	original_tag = GRE
 	set_country_flag = br_HEL_hellenic_republic_flag
-	set_politics = { ruling_party = demo_liberalism }
+	set_politics = { ruling_party = dem_liberalism}
 	set_cosmetic_tag = HEL_republic
 	set_research_slots = 3
 	reserve_dynamic_country = yes

@@ -220,7 +220,7 @@ characters={
 				br_ideology_fascism_nio = yes
 			}
 			traits = { democractic_coordinator }
-			modifier = { demo_conservatism_drift = 0.05 }
+			modifier = { dem_conservatism_drift = 0.05 }
 
 			cost = 0
 			can_be_fired = no

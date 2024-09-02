@@ -106,8 +106,8 @@ set_politics = {
 set_popularities = {
 	vanwardism = 5 #革命社会主义
 	sci_socialism = 25 #科学社会主义
-	demo_liberalism = 10 #社会自由主义
-	demo_conservatism = 10 #保守民主主义
+	dem_liberalism = 10 #社会自由主义
+	dem_conservatism = 10 #保守民主主义
 	authoritarian = 50 #威权主义
 }
 

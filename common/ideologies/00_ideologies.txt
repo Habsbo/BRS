@@ -191,7 +191,7 @@ ideologies = {
 
 	}
 	#社会民主主义
-	demo_socialism = {
+	dem_socialism = {
 
 		types = {
 			socialism = {
@@ -251,7 +251,7 @@ ideologies = {
 		ai_ideology_wanted_units_factor = 1.0 # multiplies threat impact on number of desired units by this value, defaults to 1.0. If at war, the larger of this value and NDefines::NAI::WANTED_UNITS_WAR_THREAT_FACTOR will be used instead
 	}
 	#社会自由主义
-	demo_liberalism = {
+	dem_liberalism = {
 
 		types = {
 			liberalism = {
@@ -309,7 +309,7 @@ ideologies = {
 		ai_ideology_wanted_units_factor = 1.0 # multiplies threat impact on number of desired units by this value, defaults to 1.0. If at war, the larger of this value and NDefines::NAI::WANTED_UNITS_WAR_THREAT_FACTOR will be used instead
 	}
 	#保守民主主义
-	demo_conservatism = {
+	dem_conservatism = {
 
 		types = {
 			conservatism = {

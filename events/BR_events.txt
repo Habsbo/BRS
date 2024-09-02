@@ -103,7 +103,7 @@ country_event = { #
 		hidden_effect = {
 			set_temp_variable = { var = deny_ideology_var value = party_popularity@sci_socialism }
 			add_to_temp_variable = { var = deny_ideology_var value = party_popularity@con_socialism }
-			add_to_temp_variable = { var = deny_ideology_var value = party_popularity@demo_socialism }
+			add_to_temp_variable = { var = deny_ideology_var value = party_popularity@dem_socialism }
 			multiply_temp_variable = { var = deny_ideology_var value = -0.33 }
 		}
 		#
@@ -130,7 +130,7 @@ country_event = { #
 		hidden_effect = {
 			set_temp_variable = { ban_ideology_var_ideology.2 = party_popularity@sci_socialism }
 			set_temp_variable = { ban_ideology_var_ideology.3 = party_popularity@con_socialism }
-			set_temp_variable = { ban_ideology_var_ideology.1 = party_popularity@demo_socialism }
+			set_temp_variable = { ban_ideology_var_ideology.1 = party_popularity@dem_socialism }
 			multiply_temp_variable = { ban_ideology_var_ideology.1 = -1 }
 			multiply_temp_variable = { ban_ideology_var_ideology.2 = -1 }
 			multiply_temp_variable = { ban_ideology_var_ideology.3 = -1 }
@@ -138,7 +138,7 @@ country_event = { #
 		#
 		add_popularity = { ideology = sci_socialism popularity = ban_ideology_var_ideology.1 }
 		add_popularity = { ideology = con_socialism popularity = ban_ideology_var_ideology.2 }
-		add_popularity = { ideology = demo_socialism popularity = ban_ideology_var_ideology.3 }
+		add_popularity = { ideology = dem_socialism popularity = ban_ideology_var_ideology.3 }
 		#
 		hidden_effect = {
 			set_temp_variable = { ban_ideology_var = ban_ideology_var_ideology.1 }
@@ -180,8 +180,8 @@ country_event = { #
 		name = br_political_actions.5.a #
 
 		hidden_effect = {
-			set_temp_variable = { deny_ideology_var = party_popularity@demo_liberalism }
-			add_to_temp_variable = { deny_ideology_var = party_popularity@demo_conservatism }
+			set_temp_variable = { deny_ideology_var = party_popularity@dem_liberalism }
+			add_to_temp_variable = { deny_ideology_var = party_popularity@dem_conservatism }
 			multiply_temp_variable = { deny_ideology_var = -0.33 }
 		}
 		add_stability = deny_ideology_var
@@ -205,17 +205,17 @@ country_event = { #
 		name = br_political_actions.6.a #
 		#
 		hidden_effect = {
-			set_temp_variable = { ban_ideology_var_ideology.1 = party_popularity@demo_liberalism }
-			set_temp_variable = { ban_ideology_var_ideology.2 = party_popularity@demo_conservatism }
+			set_temp_variable = { ban_ideology_var_ideology.1 = party_popularity@dem_liberalism }
+			set_temp_variable = { ban_ideology_var_ideology.2 = party_popularity@dem_conservatism }
 			multiply_temp_variable = { ban_ideology_var_ideology.1 = -1 }
 			multiply_temp_variable = { ban_ideology_var_ideology.2 = -1 }
 		}
-		add_popularity = { ideology = demo_liberalism popularity = ban_ideology_var_ideology.1 }
-		add_popularity = { ideology = demo_conservatism popularity = ban_ideology_var_ideology.2 }
+		add_popularity = { ideology = dem_liberalism popularity = ban_ideology_var_ideology.1 }
+		add_popularity = { ideology = dem_conservatism popularity = ban_ideology_var_ideology.2 }
 		#
 		hidden_effect = {
-			set_temp_variable = { ban_ideology_var_ideology.1 = party_popularity@demo_liberalism }
-			add_to_temp_variable = { ban_ideology_var_ideology.2 = party_popularity@demo_conservatism }
+			set_temp_variable = { ban_ideology_var_ideology.1 = party_popularity@dem_liberalism }
+			add_to_temp_variable = { ban_ideology_var_ideology.2 = party_popularity@dem_conservatism }
 			multiply_temp_variable = { ban_ideology_var = 0.33 }
 		}
 		add_stability = ban_ideology_var
@@ -589,7 +589,7 @@ country_event = { #
 		add_war_support = 0.05
 		add_stability = -0.10
 		add_popularity = { ideology = con_socialism popularity = 0.05 }
-		add_popularity = { ideology = demo_socialism popularity = 0.05 }
+		add_popularity = { ideology = dem_socialism popularity = 0.05 }
 
 		br_will_add_popularity_of_our_left_parties = yes
 		br_will_add_popularity_of_our_rulling_party = yes
@@ -604,7 +604,7 @@ country_event = { #
 		add_war_support = 0.05
 		add_stability = -0.05
 		add_popularity = { ideology = con_socialism popularity = 0.01 }
-		add_popularity = { ideology = demo_socialism popularity = 0.01 }
+		add_popularity = { ideology = dem_socialism popularity = 0.01 }
 
 		br_will_add_popularity_of_our_left_parties = yes
 		br_will_add_popularity_of_our_rulling_party = yes
@@ -619,7 +619,7 @@ country_event = { #
 		add_war_support = -0.05
 		add_stability = 0.10
 		add_popularity = { ideology = con_socialism popularity = -0.02 }
-		add_popularity = { ideology = demo_socialism popularity = -0.02 }
+		add_popularity = { ideology = dem_socialism popularity = -0.02 }
 
 		br_will_add_popularity_of_our_right_parties = yes
 

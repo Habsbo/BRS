@@ -105,7 +105,7 @@ br_debug_decisions = {
 			NOT = { has_global_flag = debug_ideo_hidden_global_flag }
 		}
 		complete_effect = {
-			set_politics = { ruling_party = demo_socialism }
+			set_politics = { ruling_party = dem_socialism }
 		}
 	}
 	debug_ideo.6 = {
@@ -114,7 +114,7 @@ br_debug_decisions = {
 			NOT = { has_global_flag = debug_ideo_hidden_global_flag }
 		}
 		complete_effect = {
-			set_politics = { ruling_party = demo_liberalism }
+			set_politics = { ruling_party = dem_liberalism }
 		}
 	}
 	debug_ideo.7 = {
@@ -123,7 +123,7 @@ br_debug_decisions = {
 			NOT = { has_global_flag = debug_ideo_hidden_global_flag }
 		}
 		complete_effect = {
-			set_politics = { ruling_party = demo_conservatism }
+			set_politics = { ruling_party = dem_conservatism }
 		}
 	}
 	debug_ideo.8 = {

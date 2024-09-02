@@ -844,10 +844,10 @@ set_popularities = {
 	#
 	sci_socialism = 10
 	con_socialism = 10
-	demo_socialism = 0
+	dem_socialism = 0
 	#
-	demo_liberalism = 0
-	demo_conservatism = 5
+	dem_liberalism = 0
+	dem_conservatism = 5
 	#
 	authoritarian = 5
 	#

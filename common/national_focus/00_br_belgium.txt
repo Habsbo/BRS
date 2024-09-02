@@ -943,7 +943,7 @@ focus_tree = {
 			add_war_support = 0.05
 			add_stability = 0.05
 			#
-			add_popularity = { ideology = demo_conservatism popularity = 0.05 }
+			add_popularity = { ideology = dem_conservatism popularity = 0.05 }
 			add_popularity = { ideology = authoritarian popularity = 0.05 }
 		}
 		
@@ -980,8 +980,8 @@ focus_tree = {
 			add_political_power = 150
 			add_war_support = -0.05
 			add_stability = 0.10
-			add_popularity = { ideology = demo_liberalism popularity = 0.05 }
-			add_popularity = { ideology = demo_conservatism popularity = 0.05 }
+			add_popularity = { ideology = dem_liberalism popularity = 0.05 }
+			add_popularity = { ideology = dem_conservatism popularity = 0.05 }
 		}
 		
 		ai_will_do = { factor = 1 }
@@ -1017,8 +1017,8 @@ focus_tree = {
 			add_political_power = 50
 			add_war_support = 0.05
 			add_stability = 0.05
-			add_popularity = { ideology = demo_socialism popularity = 0.05 }
-			add_popularity = { ideology = demo_liberalism popularity = 0.05 }
+			add_popularity = { ideology = dem_socialism popularity = 0.05 }
+			add_popularity = { ideology = dem_liberalism popularity = 0.05 }
 		}
 		
 		ai_will_do = { factor = 1 }

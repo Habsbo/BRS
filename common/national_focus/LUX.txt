@@ -1624,8 +1624,8 @@ focus_tree = {
 			add_popularity = { ideology = vanwardism popularity = 0.02 }
 			add_popularity = { ideology = sci_socialism popularity = 0.02 }
 			add_popularity = { ideology = con_socialism popularity = 0.02 }
-			add_popularity = { ideology = demo_socialism popularity = 0.02 }
-			add_popularity = { ideology = demo_liberalism popularity = 0.03 }
+			add_popularity = { ideology = dem_socialism popularity = 0.02 }
+			add_popularity = { ideology = dem_liberalism popularity = 0.03 }
 			hidden_effect = {
 				country_event = br_lux_hog.1
 				br_game_rule_hide_focus_reload = yes
@@ -1693,7 +1693,7 @@ focus_tree = {
 			add_popularity = { ideology = vanwardism popularity = 0.03 }
 			add_popularity = { ideology = sci_socialism popularity = 0.05 }
 			add_popularity = { ideology = con_socialism popularity = 0.05 }
-			add_popularity = { ideology = demo_socialism popularity = 0.05 }
+			add_popularity = { ideology = dem_socialism popularity = 0.05 }
 			#
 			hidden_effect = {
 				br_game_rule_hide_focus_reload = yes
@@ -1743,7 +1743,7 @@ focus_tree = {
 			add_popularity = { ideology = vanwardism popularity = 0.03 }
 			add_popularity = { ideology = sci_socialism popularity = 0.05 }
 			add_popularity = { ideology = con_socialism popularity = 0.05 }
-			add_popularity = { ideology = demo_socialism popularity = 0.05 }
+			add_popularity = { ideology = dem_socialism popularity = 0.05 }
 			#
 			add_dynamic_modifier = { modifier = labour_union_dynamic_modifier }
 			add_to_variable = { labour_union_stability_factor = 0.10 tooltip = stability_factor_tt }
@@ -2529,7 +2529,7 @@ focus_tree = {
 			else = {
 				add_to_variable = { women_movement_sci_socialism_drift = 0.01 tooltip = sci_socialism_drift_tt }
 				add_to_variable = { women_movement_con_socialism_drift = 0.01 tooltip = con_socialism_drift_tt }
-				add_to_variable = { women_movement_demo_socialism_drift = 0.05 tooltip = demo_socialism_drift_tt }
+				add_to_variable = { women_movement_dem_socialism_drift = 0.05 tooltip = dem_socialism_drift_tt }
 				add_to_variable = { women_movement_ = 0.20 tooltip = conscription_factor_tt }
 			}
 		}
@@ -2616,7 +2616,7 @@ focus_tree = {
 			else = {
 				add_to_variable = { women_movement_sci_socialism_drift = 0.01 tooltip = sci_socialism_drift_tt }
 				add_to_variable = { women_movement_con_socialism_drift = 0.01 tooltip = con_socialism_drift_tt }
-				add_to_variable = { women_movement_demo_socialism_drift = 0.05 tooltip = demo_socialism_drift_tt }
+				add_to_variable = { women_movement_dem_socialism_drift = 0.05 tooltip = dem_socialism_drift_tt }
 				add_to_variable = { women_movement_ = 0.20 tooltip = conscription_factor_tt }
 			}
 			#
@@ -2877,8 +2877,8 @@ focus_tree = {
 		completion_reward = {
 			#
 			add_popularity = { ideology = con_socialism popularity = 0.02 }
-			add_popularity = { ideology = demo_socialism popularity = 0.02 }
-			add_popularity = { ideology = demo_liberalism popularity = 0.03 }
+			add_popularity = { ideology = dem_socialism popularity = 0.02 }
+			add_popularity = { ideology = dem_liberalism popularity = 0.03 }
 			#
 			hidden_effect = {
 				br_game_rule_hide_focus_reload = yes
@@ -2997,8 +2997,8 @@ focus_tree = {
 		
 		completion_reward = {
 			add_stability = 0.05
-			add_popularity = { ideology = demo_liberalism popularity = 0.02 }
-			add_popularity = { ideology = demo_conservatism popularity = 0.02 }
+			add_popularity = { ideology = dem_liberalism popularity = 0.02 }
+			add_popularity = { ideology = dem_conservatism popularity = 0.02 }
 			add_popularity = { ideology = authoritarian popularity = 0.02 }
 			hidden_effect = {
 				br_game_rule_hide_focus_reload = yes
@@ -3055,8 +3055,8 @@ focus_tree = {
 		
 		completion_reward = {
 			add_stability = 0.05
-			add_popularity = { ideology = demo_liberalism popularity = 0.03 }
-			add_popularity = { ideology = demo_conservatism popularity = 0.03 }
+			add_popularity = { ideology = dem_liberalism popularity = 0.03 }
+			add_popularity = { ideology = dem_conservatism popularity = 0.03 }
 			add_ideas = LUX_consolidate_charter_idea
 			#
 			custom_effect_tooltip = available_political_advisor
@@ -3102,9 +3102,9 @@ focus_tree = {
 			add_stability = 0.05
 			add_popularity = { ideology = vanwardism popularity = 0.02 }
 			add_popularity = { ideology = con_socialism popularity = 0.02 }
-			add_popularity = { ideology = demo_socialism popularity = 0.02 }
-			add_popularity = { ideology = demo_liberalism popularity = 0.03 }
-			add_popularity = { ideology = demo_conservatism popularity = 0.03 }
+			add_popularity = { ideology = dem_socialism popularity = 0.02 }
+			add_popularity = { ideology = dem_liberalism popularity = 0.03 }
+			add_popularity = { ideology = dem_conservatism popularity = 0.03 }
 		}
 		
 		ai_will_do = { factor = 1 }
@@ -3826,7 +3826,7 @@ focus_tree = {
 		
 		completion_reward = {
 			add_war_support = 0.05
-			add_popularity = { ideology = demo_conservatism popularity = 0.03 }
+			add_popularity = { ideology = dem_conservatism popularity = 0.03 }
 			add_popularity = { ideology = authoritarian popularity = 0.03 }
 			#
 			custom_effect_tooltip = available_political_advisor
@@ -3872,7 +3872,7 @@ focus_tree = {
 			#
 			add_popularity = { ideology = sci_socialism popularity = -0.05 }
 			add_popularity = { ideology = con_socialism popularity = -0.05 }
-			add_popularity = { ideology = demo_socialism popularity = -0.05 }
+			add_popularity = { ideology = dem_socialism popularity = -0.05 }
 			add_popularity = { ideology = authoritarian popularity = 0.10 }
 			add_popularity = { ideology = fascism popularity = 0.10 }
 		

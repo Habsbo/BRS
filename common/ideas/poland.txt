@@ -136,7 +136,7 @@ ideas = {
 				vanwardism_drift = 0.01
 				sci_socialism_drift = 0.01
 				con_socialism_drift = 0.01
-				demo_socialism_drift = 0.01
+				dem_socialism_drift = 0.01
 				authoritarian_drift = 0.01
 				soc_anarchism_drift = 0.01
 				fascism_drift = 0.01
@@ -165,7 +165,7 @@ ideas = {
 				vanwardism_drift = 0.01
 				sci_socialism_drift = 0.01
 				con_socialism_drift = 0.01
-				demo_socialism_drift = 0.01
+				dem_socialism_drift = 0.01
 			}
 		}
 		

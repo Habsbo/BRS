@@ -36,15 +36,15 @@ set_war_support = 0.1
 set_convoys = 10
 
 set_politics = {
-	ruling_party = demo_liberalism
+	ruling_party = dem_liberalism
 	last_election = "1932.2.14"
 	election_frequency = 48
 	elections_allowed = yes
 }
 
 set_popularities = {
-	demo_socialism = 5 #社会民主主义
-	demo_liberalism = 90 #社会自由主义
+	dem_socialism = 5 #社会民主主义
+	dem_liberalism = 90 #社会自由主义
 	fascism = 5 #民族主义/束棒
 }
 

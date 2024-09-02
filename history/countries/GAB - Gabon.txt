@@ -29,7 +29,7 @@ recruit_character = GAB_ncs
 recruit_character = GAB_acr
 
 set_politics = {
-	ruling_party = demo_socialism
+	ruling_party = dem_socialism
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = yes
@@ -38,6 +38,6 @@ set_politics = {
 set_popularities = {
 	sci_socialism = 10 #科学社会主义
 	con_socialism = 20 #保守社会主义
-	demo_socialism = 22 #社会民主主义
+	dem_socialism = 22 #社会民主主义
 	authoritarian = 48 #威权主义
 }

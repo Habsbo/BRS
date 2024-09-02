@@ -41,13 +41,13 @@ if = {
 }
 
 set_politics = {
-	ruling_party = demo_conservatism
+	ruling_party = dem_conservatism
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = no
 }
 set_popularities = {
-	demo_liberalism = 25 #社会自由主义
-	demo_conservatism = 45 #保守民主主义
+	dem_liberalism = 25 #社会自由主义
+	dem_conservatism = 45 #保守民主主义
 	authoritarian = 30 #威权主义
 }

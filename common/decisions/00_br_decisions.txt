@@ -537,7 +537,7 @@ br_political_actions = {
 		modifier = {
 			sci_socialism_drift = -0.05
 			con_socialism_drift = -0.05
-			demo_socialism = -0.05
+			dem_socialism = -0.05
 		}
 
 		complete_effect = {
@@ -567,7 +567,7 @@ br_political_actions = {
 		modifier = {
 			sci_socialism_drift = -0.01
 			con_socialism_drift = -0.01
-			demo_socialism = -0.01
+			dem_socialism = -0.01
 		}
 
 		complete_effect = {
@@ -597,8 +597,8 @@ br_political_actions = {
 		cost = 50
 
 		modifier = {
-			demo_liberalism_drift = -0.05
-			demo_conservatism_drift = -0.05
+			dem_liberalism_drift = -0.05
+			dem_conservatism_drift = -0.05
 		}
 
 		complete_effect = {
@@ -626,8 +626,8 @@ br_political_actions = {
 		cost = 100
 
 		modifier = {
-			demo_liberalism_drift = -0.01
-			demo_conservatism_drift = -0.01
+			dem_liberalism_drift = -0.01
+			dem_conservatism_drift = -0.01
 		}
 
 		complete_effect = {

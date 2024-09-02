@@ -138,7 +138,7 @@ country_event = {
 	option = {
 		name = BR_poland_events.1001.d
 		set_politics = {
-			ruling_party = demo_liberalism
+			ruling_party = dem_liberalism
 			election_frequency = 48
 			elections_allowed = yes
 		}

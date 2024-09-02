@@ -96,10 +96,30 @@ if = {
 	}
 }
 
+set_politics = {
+	ruling_party = authoritarian
+	last_election = "1931.1.1"
+	election_frequency = 36
+	elections_allowed = no
+}
+
 set_popularities = {
-	democratic = 25
-	communism = 35
-	neutrality = 40
+	#
+	soc_anarchism = 0
+	vanwardism = 0
+	#
+	sci_socialism = 0
+	con_socialism = 5
+	dem_socialism = 5
+	#
+	dem_liberalism = 10
+	dem_conservatism = 10
+	#
+	authoritarian = 70
+	#
+	fascism = 0
+	nationalism = 0
+	supernationalism = 0
 }
 
 create_country_leader = {

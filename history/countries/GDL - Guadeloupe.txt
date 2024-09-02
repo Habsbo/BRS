@@ -10,16 +10,16 @@ set_technology = {
 set_convoys = 5
 
 set_politics = {
-	ruling_party = demo_liberalism
+	ruling_party = dem_liberalism
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = yes
 }
 
 set_popularities = {
-	demo_socialism = 30 #社会民主主义
-	demo_liberalism = 60 #社会自由主义
-	demo_conservatism = 10 #保守民主主义
+	dem_socialism = 30 #社会民主主义
+	dem_liberalism = 60 #社会自由主义
+	dem_conservatism = 10 #保守民主主义
 }
 #create_country_leader = {
 #	

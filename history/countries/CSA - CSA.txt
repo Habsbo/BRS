@@ -97,14 +97,14 @@ set_convoys = 100
 
 
 set_politics = {
-	ruling_party = demo_conservatism
+	ruling_party = dem_conservatism
 	last_election = "1932.11.8"
 	election_frequency = 48
 	elections_allowed = yes
 }
 
 set_popularities = {
-	demo_conservatism = 50 #保守民主主义
+	dem_conservatism = 50 #保守民主主义
 	authoritarian = 40 #威权主义
 	fascism = 10 #民族主义/束棒
 }

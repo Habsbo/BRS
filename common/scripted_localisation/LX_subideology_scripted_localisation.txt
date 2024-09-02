@@ -58,7 +58,7 @@ defined_text = {
 		}
 		localization_key = cooperativism
     }
-	### demo_socialism ###
+	### dem_socialism ###
 	text = {
 		trigger = {
 			has_country_leader_ideology = socialism
@@ -77,7 +77,7 @@ defined_text = {
 		}
 		localization_key = centrism
     }
-	### demo_liberalism ###
+	### dem_liberalism ###
 	text = {
 		trigger = {
 			has_country_leader_ideology = liberalism
@@ -90,7 +90,7 @@ defined_text = {
 		}
 		localization_key = moderatism
     }
-	### demo_conservatism ###
+	### dem_conservatism ###
 	text = {
 		trigger = {
 			has_country_leader_ideology = conservatism

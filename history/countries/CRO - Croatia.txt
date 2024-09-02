@@ -41,16 +41,16 @@ if = {
 set_convoys = 5
 
 set_politics = {
-	ruling_party = demo_liberalism
+	ruling_party = dem_liberalism
 	last_election = "1935.6.9"
 	election_frequency = 12
 	elections_allowed = no # none after offset 1
 }
 
 set_popularities = {
-	demo_socialism = 12 #社会民主主义
-	demo_liberalism = 38 #社会自由主义
-	demo_conservatism = 20 #保守民主主义
+	dem_socialism= 12 #社会民主主义
+	dem_liberalism = 38 #社会自由主义
+	dem_conservatism = 20 #保守民主主义
 	fascism = 30 #民族主义/束棒
 }
 

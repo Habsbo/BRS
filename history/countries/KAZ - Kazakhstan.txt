@@ -85,7 +85,7 @@ if = {
 }
 
 set_politics = {
-	ruling_party = demo_socialism
+	ruling_party = dem_socialism
 	last_election = "1931.1.1"
 	election_frequency = 48
 	elections_allowed = no
@@ -94,7 +94,7 @@ set_politics = {
 set_popularities = {
 	sci_socialism = 20 #科学社会主义
 	con_socialism = 5 #保守社会主义
-	demo_socialism = 45 #社会民主主义
+	dem_socialism = 45 #社会民主主义
 	authoritarian = 30 #威权主义
 }
 

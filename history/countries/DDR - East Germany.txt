@@ -119,7 +119,7 @@ set_popularities = {
 	vanwardism = 15 #革命社会主义
 	sci_socialism = 55 #科学社会主义
 	con_socialism = 10 #保守社会主义
-	demo_socialism = 20 #社会民主主义
+	dem_socialism = 20 #社会民主主义
 }
 
 add_ideas = {

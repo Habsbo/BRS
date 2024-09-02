@@ -394,7 +394,7 @@ if = {
 	}
 	
 	set_politics = {
-		ruling_party = demo_liberalism
+		ruling_party = dem_liberalism
 		last_election = "1935.10.22"
 		election_frequency = 48
 		elections_allowed = yes
@@ -402,9 +402,9 @@ if = {
 
 	set_popularities = {
 		sci_socialism = 5 #科学社会主义
-		demo_socialism = 24 #社会民主主义
-		demo_liberalism = 36 #社会自由主义
-		demo_conservatism = 28 #保守民主主义
+		dem_socialism = 24 #社会民主主义
+		dem_liberalism= 36 #社会自由主义
+		dem_conservatism = 28 #保守民主主义
 		authoritarian = 2 #威权主义
 		fascism = 5 #民族主义/束棒
 	}
@@ -416,7 +416,7 @@ if = {
 		NOT = { has_dlc = "Arms Against Tyranny" }
 	}
 	set_politics = {
-		ruling_party = demo_liberalism
+		ruling_party = dem_liberalism
 		last_election = "1935.10.22"
 		election_frequency = 48
 		elections_allowed = yes
@@ -424,9 +424,9 @@ if = {
 
 	set_popularities = {
 		sci_socialism = 5 #科学社会主义
-		demo_socialism = 24 #社会民主主义
-		demo_liberalism = 36 #社会自由主义
-		demo_conservatism = 28 #保守民主主义
+		dem_socialism = 24 #社会民主主义
+		dem_liberalism= 36 #社会自由主义
+		dem_conservatism = 28 #保守民主主义
 		authoritarian = 2 #威权主义
 		fascism = 5 #民族主义/束棒
 	}

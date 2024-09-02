@@ -320,10 +320,10 @@ ideas = {
 			modifier = {
 				sci_socialism_drift = 0.08
 				con_socialism_drift = 0.08
-				demo_socialism_drift = 0.02
+				dem_socialism_drift = 0.02
 				sci_socialism_acceptance = 85
 				con_socialism_acceptance = 85
-				demo_socialism_acceptance = 85
+				dem_socialism_acceptance = 85
 			}
 		}
 		democratic_influence_1 = {
@@ -338,10 +338,10 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				demo_socialism_drift = 0.08
-				demo_liberalism_drift = 0.02
-				demo_socialism_acceptance = 85
-				demo_liberalism_acceptance = 85
+				dem_socialism_drift = 0.08
+				dem_liberalism_drift = 0.02
+				dem_socialism_acceptance = 85
+				dem_liberalism_acceptance = 85
 			}
 		}
 		democratic_influence_2 = {
@@ -356,10 +356,10 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				demo_liberalism_drift = 0.08
-				demo_conservatism_drift = 0.08
-				demo_liberalism_acceptance = 85
-				demo_conservatism_acceptance = 85
+				dem_liberalism_drift = 0.08
+				dem_conservatismrift = 0.08
+				dem_liberalism_acceptance = 85
+				dem_conservatismcceptance = 85
 			}
 		}
 		fascist_influence_1 = {

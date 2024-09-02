@@ -57,7 +57,7 @@ bookmarks = {
 
 		"HUN"={
 			history = "FRA_GATHERING_STORM_DESC"
-			ideology = demo_conservatism
+			ideology = dem_conservatism
 			#available = { has_dlc = "La Resistance" } 
 			ideas = {
 				#
@@ -69,7 +69,7 @@ bookmarks = {
 
 		"POL"={
 			history = "FRA_GATHERING_STORM_DESC"
-			ideology = demo_conservatism
+			ideology = dem_conservatism
 			#available = { has_dlc = "La Resistance" } 
 			ideas = {
 				#
@@ -88,7 +88,7 @@ bookmarks = {
 		"NAV"={
 			minor = yes
 			history = "br_spanish_civil_war_DESC"
-			ideology = demo_socialism
+			ideology = dem_socialism
 			ideas = {
 				#
 			}
@@ -100,7 +100,7 @@ bookmarks = {
 		"ALG"={
 			minor = yes
 			history = "br_spanish_civil_war_DESC"
-			ideology = demo_socialism
+			ideology = dem_socialism
 			ideas = {
 				#
 			}
@@ -136,7 +136,7 @@ bookmarks = {
 		"GRE"={
 			minor = yes
 			history = "br_spanish_civil_war_DESC"
-			ideology = demo_conservatism
+			ideology = dem_conservatism
 			ideas = {
 				#
 			}
@@ -148,7 +148,7 @@ bookmarks = {
 		"TUR"={
 			minor = yes
 			history = "br_spanish_civil_war_DESC"
-			ideology = demo_conservatism
+			ideology = dem_conservatism
 			ideas = {
 				#
 			}
@@ -160,7 +160,7 @@ bookmarks = {
 		"ARM"={
 			minor = yes
 			history = "br_spanish_civil_war_DESC"
-			ideology = demo_conservatism
+			ideology = dem_conservatism
 			ideas = {
 				#
 			}

@@ -71,8 +71,8 @@ focus_tree = {
 			add_popularity = { ideology = vanwardism popularity = 0.01 }
 			add_popularity = { ideology = sci_socialism popularity = 0.01 }
 			add_popularity = { ideology = con_socialism popularity = 0.01 }
-			add_popularity = { ideology = demo_socialism popularity = 0.01 }
-			add_popularity = { ideology = demo_liberalism popularity = 0.01 }
+			add_popularity = { ideology = dem_socialismpopularity = 0.01 }
+			add_popularity = { ideology = dem_liberalism popularity = 0.01 }
 			#
 			#country_event = { id =  }
 		}
@@ -113,8 +113,8 @@ focus_tree = {
 		complete_tooltip = {}
 		completion_reward = {
 			add_popularity = { ideology = con_socialism popularity = 0.01 }
-			add_popularity = { ideology = demo_socialism popularity = 0.01 }
-			add_popularity = { ideology = demo_liberalism popularity = 0.01 }
+			add_popularity = { ideology = dem_socialismpopularity = 0.01 }
+			add_popularity = { ideology = dem_liberalism popularity = 0.01 }
 			custom_effect_tooltip = RIF_focus_french_1_tt
 			FRA = {
 				country_event = { id = br_rif.101 }
@@ -125,7 +125,7 @@ focus_tree = {
 					add_manpower = -500
 					add_stability = -0.01
 					add_popularity = { ideology = con_socialism popularity = 0.01 }
-					add_popularity = { ideology = demo_socialism popularity = 0.01 }
+					add_popularity = { ideology = dem_socialismpopularity = 0.01 }
 				}
 				add_manpower = 500
 				add_offsite_building = { type = arms_factory level = 2 }
@@ -288,7 +288,7 @@ focus_tree = {
 					add_manpower = -500
 					add_stability = -0.01
 					add_popularity = { ideology = con_socialism popularity = 0.01 }
-					add_popularity = { ideology = demo_socialism popularity = 0.01 }
+					add_popularity = { ideology = dem_socialismpopularity = 0.01 }
 				}
 				add_manpower = 500
 				add_offsite_building = { type = arms_factory level = 2 }

@@ -212,7 +212,7 @@ add_ideas = {
 }
 
 set_politics = {
-	ruling_party = demo_conservatism
+	ruling_party = dem_conservatism
 	last_election = "1935.10.27"
 	election_frequency = 48
 	elections_allowed = yes
@@ -225,10 +225,10 @@ set_popularities = {
 	#
 	sci_socialism = 15
 	con_socialism = 0
-	demo_socialism = 25
+	dem_socialism = 25
 	#
-	demo_liberalism = 25
-	demo_conservatism = 35
+	dem_liberalism= 25
+	dem_conservatism = 35
 	#
 	authoritarian = 0
 	#

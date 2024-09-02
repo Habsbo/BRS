@@ -20,7 +20,7 @@
 			OR = {
 				has_government = sci_socialism
 				has_government = con_socialism
-				has_government = demo_socialism
+				has_government = dem_socialism
 			}
 		}
 	}
@@ -37,9 +37,9 @@
 		custom_trigger_tooltip = {
 			tooltip = br_ideology_capitalism_ruling_with_ds_tt
 			OR = {
-				has_government = demo_socialism
-				has_government = demo_liberalism
-				has_government = demo_conservatism
+				has_government = dem_socialism
+				has_government = dem_liberalism
+				has_government = dem_conservatism
 			}
 		}
 	}
@@ -47,8 +47,8 @@
 		custom_trigger_tooltip = {
 			tooltip = br_ideology_capitalism_ruling_tt
 			OR = {
-				has_government = demo_liberalism
-				has_government = demo_conservatism
+				has_government = dem_liberalism
+				has_government = dem_conservatism
 			}
 		}
 	}
@@ -91,7 +91,7 @@
 			NOT = {
 				has_government = sci_socialism
 				has_government = con_socialism
-				has_government = demo_socialism
+				has_government = dem_socialism
 			}
 		}
 	}
@@ -108,8 +108,8 @@
 		custom_trigger_tooltip = {
 			tooltip = br_ideology_capitalism_nio_tt
 			NOT = {
-				has_government = demo_liberalism
-				has_government = demo_conservatism
+				has_government = dem_liberalism
+				has_government = dem_conservatism
 			}
 		}
 	}
@@ -117,9 +117,9 @@
 		custom_trigger_tooltip = {
 			tooltip = br_ideology_capitalism_nio_with_ds_tt
 			NOT = {
-				has_government = demo_socialism
-				has_government = demo_liberalism
-				has_government = demo_conservatism
+				has_government = dem_socialism
+				has_government = dem_liberalism
+				has_government = dem_conservatism
 			}
 		}
 	}

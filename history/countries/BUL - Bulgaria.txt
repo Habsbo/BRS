@@ -313,8 +313,8 @@ set_politics = { #VANILLA
 set_popularities = {
 	sci_socialism = 10
 	#
-	demo_liberalism = 10
-	demo_conservatism = 10
+	dem_liberalism = 10
+	dem_conservatism = 10
 	#
 	authoritarian = 40
 	#

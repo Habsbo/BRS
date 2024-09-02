@@ -129,7 +129,7 @@ AR1 = {
 		has_government = vanwardism
 		has_government = sci_socialism
 		has_government = con_socialism
-		has_government = demo_socialism
+		has_government = dem_socialism
 	}
 }
 
@@ -145,7 +145,7 @@ AR2 = {
 		has_government = vanwardism
 		has_government = sci_socialism
 		has_government = con_socialism
-		has_government = demo_socialism
+		has_government = dem_socialism
 	}
 }
 
@@ -160,9 +160,9 @@ RHE = { #
 		base = 0
 		modifier = {
 			OR= {
-				has_government = demo_socialism
-				has_government = demo_liberalism
-				has_government = demo_conservatism
+				has_government = dem_socialism
+				has_government = dem_liberalism
+				has_government = dem_conservatism
 			}
 			add = 10
 		}
@@ -185,7 +185,7 @@ KPD = { #DDR
 				has_government = vanwardism
 				has_government = sci_socialism
 				has_government = con_socialism
-				has_government = demo_socialism
+				has_government = dem_socialism
 			}
 			add = 15
 		}
@@ -223,9 +223,9 @@ DBR = { #
 		}
 		modifier = {
 			OR= {
-				has_government = demo_socialism
-				has_government = demo_liberalism
-				has_government = demo_conservatism
+				has_government = dem_socialism
+				has_government = dem_liberalism
+				has_government = dem_conservatism
 			}
 			add = 15
 		}
@@ -245,7 +245,7 @@ EUS = {
 		has_government = vanwardism
 		has_government = sci_socialism
 		has_government = con_socialism
-		has_government = demo_socialism
+		has_government = dem_socialism
 	}
 }
 
