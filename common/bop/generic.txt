@@ -1,0 +1,30 @@
+generic_balance = {
+	initial_value = -1.0
+	left_side = default_left_side
+	right_side = default_right_side
+	decision_category = generic_power_balance_decision_category
+	range = {
+		id = mid_range
+		min = -0.10
+		max = 0.10
+	}
+	side = {
+		id = default_left_side
+		icon = GFX_bop_extra_generic_astesia_side
+		range = {
+			id = left_side_range
+			min = -1.0
+			max = -0.1
+		}
+	}
+	side = {
+		id = default_right_side
+		icon = GFX_bop_extra_generic_astesia_side
+		range = {
+			id = right_side_range
+			min = 0.1
+			max = 1.0
+		}
+	}
+}
+

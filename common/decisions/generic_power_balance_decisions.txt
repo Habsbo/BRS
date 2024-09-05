@@ -1,0 +1,51 @@
+generic_power_balance_decision_category = {
+
+	generic_power_balance_decision_1 = {
+		icon = generic_research
+		complete_effect = {
+			add_political_power = 1
+		}
+	}
+
+	generic_power_balance_decision_2 = {
+		icon = generic_research
+		complete_effect = {
+			add_political_power = 2
+		}
+	}
+
+	generic_power_balance_decision_3 = {
+		icon = generic_research
+		complete_effect = {
+			add_political_power = 3
+		}
+	}
+
+	generic_power_balance_decision_4 = {
+		icon = generic_research
+		complete_effect = {
+			add_political_power = 4
+		}
+	}
+
+	generic_power_balance_decision_5 = {
+		icon = generic_research
+		complete_effect = {
+			add_political_power = 5
+		}
+	}
+
+	generic_power_balance_decision_6 = {
+		icon = generic_research
+		complete_effect = {
+			add_political_power = 6
+		}
+	}
+
+	generic_power_balance_decision_7 = {
+		icon = generic_research
+		complete_effect = {
+			add_political_power = 7
+		}
+	}
+}

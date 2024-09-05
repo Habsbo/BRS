@@ -1,0 +1,182 @@
+guiTypes = {
+
+	containerWindowType = {
+		name = "powerbalanceextraviewMain"
+		position = { x = 0 y = 0 }
+		size = { width = 1280 height = 720 }
+		
+		#iconType = {
+		#	name = "split_tab_content"
+		#	position = { x = 0 y = 33 }
+		#	spriteType ="GFX_bop_extra_split_tab_content"
+		#}
+		
+		containerWindowType = {
+			name = "Tab"
+			position = { x = 0 y = 0 }
+			size = { width = 1280 height = 720 }
+		
+			buttonType = {
+				name = "tab_1"
+				position = { x = 35 y = 10 }
+				quadTextureSprite = "GFX_bop_extra_main_tab"
+				buttonFont = "hoi_36header"
+				buttonText = "tab1"
+				Orientation = centre
+			}
+		
+			buttonType = {
+				name = "tab_2"
+				position = { x = 285 y = 10 }
+				quadTextureSprite = "GFX_bop_extra_main_tab"
+				buttonFont = "hoi_36header"
+				buttonText = "tab2"
+				Orientation = centre
+			}
+		
+			buttonType = {
+				name = "tab_3"
+				position = { x = 535 y = 10 }
+				quadTextureSprite = "GFX_bop_extra_main_tab"
+				buttonFont = "hoi_36header"
+				buttonText = "tab3"
+				Orientation = centre
+			}
+		}
+	}
+	
+	containerWindowType = {
+		name = "powerbalanceextraviewTab1"
+		position = { x = 0 y = 50 }
+		size = { width = 1280 height = 670 }
+		
+		background = {
+			name = "Tab1_background"
+			#quadTextureSprite = "GFX_tiled_plain_bg"
+		}
+		
+		containerWindowType = {
+			name = "leaderstatus"
+			position = { x = 10 y = 10 }
+			size = { width = 630 height = 270 }
+		
+			iconType = {
+				name = "leaderpicture"
+				position = { x = 10 y = 30 }
+				spriteType = "GFX_bop_extra_leader_0"
+			}
+		
+			instantTextboxType = {
+				name = "leadername"
+				position = { x = 180 y = 40 }
+				font = "hoi_20b"
+				text = "Nagasaki Soyo"
+				maxWidth = 300
+				maxHeight = 20
+			}
+		}
+		
+		containerWindowType = {
+			name = "deputystatus"
+			position = { x = -640 y = 10 }
+			size = { width = 630 height = 270 }
+			Orientation = upper_right
+		
+			iconType = {
+				name = "deputypicture"
+				position = { x = 464 y = 30 }
+				spriteType = "GFX_bop_extra_deputy_0"
+			}
+		
+			instantTextboxType = {
+				name = "deputyname"
+				position = { x = 154 y = 40 }
+				font = "hoi_20b"
+				text = "Togawa Sakiko"
+				maxWidth = 300
+				maxHeight = 20
+				format = right
+			}
+		}
+		
+		containerWindowType = {
+			name = "successorstatus"
+			position = { x = 190 y = 120 }
+			size = { width = 210 height = 135 }
+		
+			iconType = {
+				name = "successorpicture"
+				position = { x = 0 y = 25 }
+				spriteType = "GFX_bop_extra_successor_0_0"
+				scale = 0.5
+			}
+		}
+		
+		containerWindowType = {
+			name = "sidepicture"
+			position = { x = 14 y = 283 }
+			size = { width = 171 height = 374 }
+		
+			iconType = {
+				name = "boppicture"
+				position = { x = 0 y = 0 }
+			}
+		}
+
+		containerWindowType = {
+			name = "bopdesc"
+			position = { x = 200 y = 444 }
+			size = { width = 540 height = 210 }
+			
+			background = {
+				name = "Background"
+			}
+			
+			instantTextboxType = {
+				name = "desc"
+				position = { x = 0 y = 0 }
+				font = "hoi_16mbs"
+				maxWidth = 510
+				maxHeight = 300
+				text = "bopextradesc_check"
+				scrollbarType = standardtext_slider
+			}
+		}
+		
+		iconType = {
+			name = "cover_desc"
+			position = { x = 185 y = 444 }
+			spriteType ="GFX_bop_extra_cover_desc"
+			pdx_tooltip = cover_desc_tt
+		}
+		
+		iconType = {
+			name = "cover_decision"
+			position = { x = 744 y = 283 }
+			spriteType ="GFX_bop_extra_cover_decision"
+			pdx_tooltip = cover_decision_tt
+		}
+	}
+	
+	containerWindowType = {
+		name = "powerbalanceextraviewTab2"
+		position = { x = 0 y = 50 }
+		size = { width = 1280 height = 670 }
+		
+		background = {
+			name = "Tab2_background"
+			quadTextureSprite = "GFX_tiled_plain_bg"
+		}
+	}
+	
+	containerWindowType = {
+		name = "powerbalanceextraviewTab3"
+		position = { x = 0 y = 50 }
+		size = { width = 1280 height = 670 }
+		
+		background = {
+			name = "Tab3_background"
+			quadTextureSprite = "GFX_tiled_plain_bg"
+		}
+	}
+}

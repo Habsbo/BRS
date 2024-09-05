@@ -1,0 +1,5 @@
+has_no_sp_bop = {
+	has_power_balance = {
+		id = generic_balance
+	}
+}

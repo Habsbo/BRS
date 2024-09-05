@@ -1,0 +1,14 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			every_country = {
+				limit = { has_any_power_balance = no }
+				set_power_balance = {
+					id = generic_balance
+					left_side = default_left_side
+					right_side = default_right_side
+				}
+			}
+		}
+	}
+}

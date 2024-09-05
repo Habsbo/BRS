@@ -1,0 +1,94 @@
+scripted_gui = {
+	powerbalanceextraviewmain_ui = {
+		context_type = player_context
+		parent_window_name = powerbalanceview
+		window_name = "powerbalanceextraviewMain"
+		
+		visible = { always = yes }
+		
+		properties = {
+			tab_1 = { frame = bop_extra_tab_1_var }
+			tab_2 = { frame = bop_extra_tab_2_var }
+			tab_3 = { frame = bop_extra_tab_3_var }
+		}
+		
+		effects = {
+			tab_1_click = {
+				set_variable = { bop_extra_tab_1_var = 1 }
+				set_variable = { bop_extra_tab_2_var = 2 }
+				set_variable = { bop_extra_tab_3_var = 2 }
+			}
+			tab_2_click = {
+				set_variable = { bop_extra_tab_1_var = 2 }
+				set_variable = { bop_extra_tab_2_var = 1 }
+				set_variable = { bop_extra_tab_3_var = 2 }
+			}
+			tab_3_click = {
+				set_variable = { bop_extra_tab_1_var = 2 }
+				set_variable = { bop_extra_tab_2_var = 2 }
+				set_variable = { bop_extra_tab_3_var = 1 }
+			}
+		}
+		
+		triggers = {
+			tab_3_visible = {
+				OR = {
+					is_debug = yes
+					has_country_flag = king_exists_flag
+				}
+			}
+		}
+	}
+	
+	powerbalanceextraviewTab1_ui = {
+		context_type = player_context
+		parent_window_name = powerbalanceview
+		window_name = "powerbalanceextraviewTab1"
+		
+		visible = { always = yes }
+		
+		properties = {
+			boppicture = {
+				image = [GetBOPGFX]
+			}
+			leaderpicture = {
+				image = [GetLeaderGFX]
+			}
+			deputypicture = {
+				image = [GetDeputyGFX]
+			}
+			successorpicture = {
+				image = [GetSuccessorGFX]
+			}
+		}
+		
+		triggers = {
+			cover_desc_visible = { has_no_sp_bop = yes }
+			cover_decision_visible = { has_no_sp_bop = yes }
+		}
+	}
+	
+	powerbalanceextraviewTab2_ui = {
+		context_type = player_context
+		parent_window_name = powerbalanceview
+		window_name = "powerbalanceextraviewTab2"
+		
+		visible = {
+			check_variable = { bop_extra_tab_1_var = 2 }
+			check_variable = { bop_extra_tab_2_var = 1 }
+			check_variable = { bop_extra_tab_3_var = 2 }
+		}
+	}
+	
+	powerbalanceextraviewTab3_ui = {
+		context_type = player_context
+		parent_window_name = powerbalanceview
+		window_name = "powerbalanceextraviewTab2"
+		
+		visible = {
+			check_variable = { bop_extra_tab_1_var = 2 }
+			check_variable = { bop_extra_tab_2_var = 2 }
+			check_variable = { bop_extra_tab_3_var = 1 }
+		}
+	}
+}

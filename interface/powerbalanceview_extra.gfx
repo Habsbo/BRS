@@ -1,0 +1,66 @@
+spriteTypes = {
+
+	#####GUI module#####
+
+	spriteType = {
+		name = "GFX_bop_extra_generic_astesia_side"
+		textureFile = "gfx/interface/bop_extra/icon/bop_generic_astesia_side.dds"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_bop_extra_marble_tiled_bg_edges"
+		size= { x=192 y=192 }
+		textureFile = "gfx//interface//tiles//marble_tiled_bg_edges.dds"
+		borderSize = { x=64 y=64 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+	spriteType = {
+		name = "GFX_bop_extra_bop_bg"
+		textureFile = "gfx/interface/bop_extra/bop_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_bop_extra_main_tab"
+		textureFile = "gfx/interface/bop_extra/main_tab.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_bop_extra_split_tab_content"
+		textureFile = "gfx/interface/bop_extra/split_tab_content.dds"
+	}
+	
+	####################
+
+	spriteType = {
+		name = "GFX_bop_extra_pic_generic"
+		textureFile = "gfx/interface/bop_extra/pic/generic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_bop_extra_cover_desc"
+		textureFile = "gfx/interface/bop_extra/cover/desc.dds"
+	}
+
+	spriteType = {
+		name = "GFX_bop_extra_cover_decision"
+		textureFile = "gfx/interface/bop_extra/cover/decision.dds"
+	}
+
+	spriteType = {
+		name = "GFX_bop_extra_leader_generic"
+		textureFile = "gfx/interface/bop_extra/cover/Portrait_Japan_Nagasaki_Soyo.dds"
+	}
+
+	spriteType = {
+		name = "GFX_bop_extra_deputy_generic"
+		textureFile = "gfx/interface/bop_extra/cover/Portrait_Japan_Togawa_Sakiko.dds"
+	}
+
+	spriteType = {
+		name = "GFX_bop_extra_successor_generic"
+		textureFile = "gfx/interface/bop_extra/cover/Portrait_Japan_Wakaba_Mutsumi.dds"
+	}
+}

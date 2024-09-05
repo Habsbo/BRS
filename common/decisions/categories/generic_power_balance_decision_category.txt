@@ -1,0 +1,3 @@
+generic_power_balance_decision_category = {
+	allowed = { always = yes }
+}

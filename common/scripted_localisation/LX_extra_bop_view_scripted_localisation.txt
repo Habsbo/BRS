@@ -1,0 +1,44 @@
+#
+defined_text = {
+	name = GetBOPGFX
+	text = {
+		trigger = {
+			has_no_sp_bop = yes
+		}
+		localization_key = GFX_bop_extra_pic_generic
+	}
+	text = { localization_key = GFX_bop_extra_pic_[?country_var]_[?bop_side_picture_array^0] }
+}
+
+defined_text = {
+	name = GetLeaderGFX
+	text = {
+		trigger = {
+			has_no_sp_bop = yes
+		}
+		localization_key = GFX_bop_extra_leader_generic
+	}
+	text = { localization_key = GFX_bop_extra_leader_[?country_var]_[?bop_country_leader_array^0] }
+}
+
+defined_text = {
+	name = GetDeputyGFX
+	text = {
+		trigger = {
+			has_no_sp_bop = yes
+		}
+		localization_key = GFX_bop_extra_deputy_generic
+	}
+	text = { localization_key = GFX_bop_extra_leader_[?country_var]_[?bop_country_deputy_array^0] }
+}
+
+defined_text = {
+	name = GetSuccessorGFX
+	text = {
+		trigger = {
+			has_no_sp_bop = yes
+		}
+		localization_key = GFX_bop_extra_successor_generic
+	}
+	text = { localization_key = GFX_bop_extra_leader_[?country_var]_[?bop_country_successor_array^0] }
+}
