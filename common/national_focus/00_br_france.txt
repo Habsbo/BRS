@@ -36,7 +36,34 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 		
-		complete_tooltip = {}
+		complete_tooltip = {
+			#
+			add_political_power = 200
+			add_stability = -0.05
+			add_popularity = { ideology = sci_socialism popularity = 0.02 }
+			add_popularity = { ideology = con_socialism popularity = 0.03 }
+			add_popularity = { ideology = dem_socialism popularity = 0.05 }
+			#
+			FRA_leon_blum = {
+				add_to_variable = {
+					br_public_feeling_var = 10 tooltip = br_public_feeling_var_tt
+				}
+			}
+			FRA_pierre_laval = {
+				add_to_variable = {
+					br_public_feeling_var = 70 tooltip = br_public_feeling_var_tt
+				}
+			}
+			#
+			if = {
+				limit = {
+					has_country_leader = {
+						character = FRA_leon_blum
+						ruling_only = yes
+					}
+				}
+			}
+		}
 		
 		completion_reward = {
 			#
@@ -45,6 +72,17 @@
 			add_popularity = { ideology = sci_socialism popularity = 0.02 }
 			add_popularity = { ideology = con_socialism popularity = 0.03 }
 			add_popularity = { ideology = dem_socialism popularity = 0.05 }
+			#
+			FRA_leon_blum = {
+				add_to_variable = {
+					br_public_feeling_var = 10 tooltip = br_public_feeling_var_tt
+				}
+			}
+			FRA_pierre_laval = {
+				add_to_variable = {
+					br_public_feeling_var = 70 tooltip = br_public_feeling_var_tt
+				}
+			}
 			#
 			if = {
 				limit = {
@@ -59,11 +97,53 @@
 		ai_will_do = { factor = 1 }
 	}
 	focus = {
+		id = FRA_amnesty
+		icon = GFX_focus_FRA_sign_matignon_agreements
+		prerequisite = { focus = FRA_publicizing_front_populaire }
+		x = -4
+		y = 2
+		relative_position_id = FRA_publicizing_front_populaire
+
+		cost = 5
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+			custom_effect_tooltip = FRA_amnesty_tt
+			add_political_power = 100
+			add_stability = 0.05
+			add_popularity = { ideology = sci_socialism popularity = 0.01 }
+			add_popularity = { ideology = con_socialism popularity = 0.01 }
+			add_popularity = { ideology = dem_socialism popularity = 0.01 }
+			add_popularity = { ideology = dem_liberalism popularity = 0.01 }
+			add_popularity = { ideology = dem_conservatism popularity = 0.01 }
+		}
+		
+		completion_reward = {
+			custom_effect_tooltip = FRA_amnesty_tt
+			add_political_power = 100
+			add_stability = 0.05
+			add_popularity = { ideology = sci_socialism popularity = 0.01 }
+			add_popularity = { ideology = con_socialism popularity = 0.01 }
+			add_popularity = { ideology = dem_socialism popularity = 0.01 }
+			add_popularity = { ideology = dem_liberalism popularity = 0.01 }
+			add_popularity = { ideology = dem_conservatism popularity = 0.01 }
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
 		id = FRA_sign_matignon_agreements
-		icon = GFX_focus_generic_treaty
+		icon = GFX_focus_hol_the_foundations_of_defense
 		prerequisite = { focus = FRA_publicizing_front_populaire }
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = FRA_publicizing_front_populaire
 
 		cost = 5
@@ -91,10 +171,10 @@
 	#labour union
 	focus = {
 		id = FRA_general_strike
-		icon = GFX_focus_generic_workers_strike_1
+		icon = GFX_focus_generic_strike
 		prerequisite = { focus = FRA_sign_matignon_agreements }
 		#mutually_exclusive = { focus =  }
-		x = 2
+		x = 0
 		y = 1
 		relative_position_id = FRA_sign_matignon_agreements
 
@@ -114,12 +194,39 @@
 		
 		ai_will_do = { factor = 1 }
 	}
+	#
 	focus = {
-		id = FRA_strengthen_cgt
-		icon = GFX_
+		id = FRA_s1
+		icon = GFX_focus_generic_workers_strike_2
+		prerequisite = { focus = FRA_amnesty }
 		prerequisite = { focus = FRA_general_strike }
 		#mutually_exclusive = { focus =  }
-		x = 0
+		x = -2
+		y = 1
+		relative_position_id = FRA_general_strike
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = FRA_strengthen_cgt
+		icon = GFX_focus_generic_workers_strike_2
+		prerequisite = { focus = FRA_general_strike }
+		#mutually_exclusive = { focus =  }
+		x = 4
 		y = 1
 		relative_position_id = FRA_general_strike
 
@@ -248,7 +355,7 @@
 		prerequisite = { focus = FRA_publicizing_front_populaire }
 		#mutually_exclusive = { focus =  }
 		x = 8
-		y = 2
+		y = 1
 		relative_position_id = FRA_publicizing_front_populaire
 
 		cost = 8
@@ -722,11 +829,10 @@
 	focus = {
 		id = FRA_affairs_about_french_africa
 		icon = GFX_
-		#prerequisite = {
-		#	focus = FRA_march_over_to_palais_du_luxembourg
-		#	focus = FRA_restore_justice
-		#	focus = FRA_prohibit_rassemblement_national
-		#}
+		prerequisite = {
+			focus = FRA_french_nationalism
+			focus = FRA_amnesty
+		}
 		#mutually_exclusive = { focus = FRA_internationale }
 		x = 0
 		y = 1
@@ -761,7 +867,30 @@
 
 		cost = 8
 		
-		available = {}
+		available = {
+			OR = {
+				has_country_leader = {
+					character = FRA_leon_blum
+					ruling_only = yes
+				}
+				custom_trigger_tooltip = {
+					tooltip = has_idea_leon_blum_hog_tt
+					has_idea = leon_blum_hog
+				}
+				AND = {
+					custom_trigger_tooltip = {
+						tooltip = has_idea_leon_blum_tt
+						has_idea = leon_blum
+					}
+					FRA_leon_blum = {
+						check_variable = { br_public_feeling_var > 60 tooltip = br_public_feeling_var_tt_more }
+					}
+				}
+			}
+			FRA_leon_blum = {
+				check_variable = { br_public_feeling_var > 20 tooltip = br_public_feeling_var_tt_more }
+			}
+		}
 				
 		bypass = {}
 		
@@ -1090,6 +1219,31 @@
 		relative_position_id = FRA_rassemblement_national_rising
 
 		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = FRA_french_nationalism
+		icon = GFX_
+		prerequisite = { focus = FRA_rassemblement_national_rising }
+		#mutually_exclusive = { focus =  }
+		x = 4
+		y = 2
+		relative_position_id = FRA_rassemblement_national_rising
+
+		cost = 5
 		
 		available = {}
 				

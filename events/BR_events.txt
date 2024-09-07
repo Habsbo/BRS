@@ -1,7 +1,6 @@
 add_namespace = br_political_actions
 add_namespace = br_event
 
-
 ###镇压无政府主义
 country_event = { #
 	id = br_political_actions.1
@@ -657,5 +656,125 @@ country_event = { #
 
 			ai_chance = { factor = 5 }
 		}
-
 	}
+
+### how to play
+add_namespace = br_mod_introducing
+
+country_event = { #
+	id = br_mod_introducing.1
+	title = br_mod_introducing.1.title
+	desc = br_mod_introducing.1.desc
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = br_mod_introducing.1.a
+		country_event = br_mod_introducing.2
+	}
+
+	option = {
+		name = br_mod_introducing.1.b
+	}
+
+}
+
+country_event = { #
+	id = br_mod_introducing.2
+	title = br_mod_introducing.2.title
+	desc = br_mod_introducing.2.desc
+
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	option = {
+		name = br_mod_introducing.2.a
+		country_event = br_mod_introducing.1
+	}
+
+	option = {
+		name = br_mod_introducing.2.b
+		country_event = br_mod_introducing.3
+	}
+
+	option = {
+		name = br_mod_introducing.2.c
+	}
+
+}
+
+country_event = { #
+	id = br_mod_introducing.3
+	title = br_mod_introducing.3.title
+	desc = br_mod_introducing.3.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = br_mod_introducing.3.a
+		country_event = br_mod_introducing.2
+	}
+
+	option = {
+		name = br_mod_introducing.3.b
+		country_event = br_mod_introducing.4
+	}
+
+	option = {
+		name = br_mod_introducing.3.c
+	}
+
+}
+
+country_event = { #
+	id = br_mod_introducing.4
+	title = br_mod_introducing.4.title
+	desc = br_mod_introducing.4.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = br_mod_introducing.4.a
+		country_event = br_mod_introducing.3
+	}
+
+	option = {
+		name = br_mod_introducing.4.b
+		country_event = br_mod_introducing.5
+	}
+
+	option = {
+		name = br_mod_introducing.4.c
+	}
+
+}
+
+country_event = { #
+	id = br_mod_introducing.5
+	title = br_mod_introducing.5.title
+	desc = br_mod_introducing.5.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = br_mod_introducing.5.a
+		country_event = br_mod_introducing.4
+	}
+
+	option = {
+		name = br_mod_introducing.5.b
+		#country_event = br_mod_introducing.6
+	}
+
+	option = {
+		name = br_mod_introducing.5.c
+	}
+
+}

@@ -227,3 +227,38 @@
 
 #
  debug_CAM_citywalk: "你疑似有点太城市化了"
+
+#
+ br_public_feeling: "人气"
+ br_public_feeling_var_tt: "§Y$br_public_feeling$§! $RIGHT|+=0..2$"
+ br_public_feeling_var_tt_more: "§Y$br_public_feeling$§! > §Y$RIGHT|0..2$§!"
+ br_public_feeling_var_tt_no_less: "§Y$br_public_feeling$§! ≥ §Y$RIGHT|0..2$§!"
+ br_public_feeling_var_tt_less: "§Y$br_public_feeling$§! < §Y$RIGHT|0..2$§!"
+ br_public_feeling_var_tt_no_more: "§Y$br_public_feeling$§! ≤ §Y$RIGHT|0..2$§!"
+
+#how to play
+ br_mod_introducing.1.title: "特殊机制介绍"
+ br_mod_introducing.1.desc: ""
+ br_mod_introducing.1.a: "下一页"
+ br_mod_introducing.1.b: "关闭"
+
+ br_mod_introducing.2.title: "特殊机制介绍：人气与选举1"
+ br_mod_introducing.2.desc: "角色的$br_public_feeling$是一种至关重要的政治资源。一个角色的人气最少可以为-100.00，而最高可以为+100.00。\n当一名角色拥有着较高的人气，那么投票者们在不违反自己的政治立场的前提下会更倾向于选择其所在的政党（仅限于其在党内作为核心成员时）\n当一名拥有较高人气的角色支持或反对政府时，任用他们可能会在政府当中获得更好或更坏的影响。\n拥有较高人气的领袖或顾问决心反对你的政府时，他们或许会尝试参与已经存在的政变，并为这场政变带来更多的力量。\n将领的人气往往不会或很难带来政治上的影响（这当然不包括已经成为政治人物的将领），但是拥有更高人气的将领有时会更容易获得一些特质，或在战争时期有机会获得一些属性的加成。"
+ br_mod_introducing.2.a: "上一页"
+ br_mod_introducing.2.b: "下一页"
+ br_mod_introducing.2.c: "关闭"
+ br_mod_introducing.3.title: "特殊机制介绍：人气与选举2"
+ br_mod_introducing.3.desc: ""
+ br_mod_introducing.3.a: "上一页"
+ br_mod_introducing.3.b: "下一页"
+ br_mod_introducing.3.c: "关闭"
+ br_mod_introducing.4.title: "特殊机制介绍：人气与选举2+1"
+ br_mod_introducing.4.desc: ""
+ br_mod_introducing.4.a: "上一页"
+ br_mod_introducing.4.b: "下一页"
+ br_mod_introducing.4.c: "关闭"
+ br_mod_introducing.5.title: "特殊机制介绍：文化与信仰"
+ br_mod_introducing.5.desc: ""
+ br_mod_introducing.5.a: "上一页"
+ br_mod_introducing.5.b: "下一页"
+ br_mod_introducing.5.c: "关闭"

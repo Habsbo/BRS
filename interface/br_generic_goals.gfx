@@ -75,4 +75,19 @@ spriteTypes = {
 		name = "GFX_focus_generic_workers_strike_2"
 		texturefile = "gfx/interface/goals/generic/generic_workers_strike_2.png"			
 	}
+	
+	SpriteType = {
+		name = "GFX_focus_generic_strike"
+		texturefile = "gfx/interface/goals/generic/generic_strike.png"			
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_generic_techno_communism"
+		texturefile = "gfx/interface/goals/generic/generic_techno_communism.png"			
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_FRA_sign_matignon_agreements"
+		texturefile = "gfx/interface/goals/FRA/FRA_sign_matignon_agreements.png"			
+	}
 }
