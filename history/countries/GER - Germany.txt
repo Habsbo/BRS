@@ -883,3 +883,6 @@ create_dynamic_country = {
 	set_research_slots = 4
 	reserve_dynamic_country = yes
 }
+
+#
+set_variable = { br_culture_deutsch = 1 } #

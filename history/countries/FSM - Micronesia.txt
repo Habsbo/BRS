@@ -18,6 +18,6 @@ set_politics = {
 
 set_popularities = {
 	dem_socialism= 30 #社会民主主义
-	dem_liberalism= 60 #社会自由主义
+	dem_liberalism = 60 #社会自由主义
 	dem_conservatism = 10 #保守民主主义
 }

@@ -17,6 +17,9 @@ on_actions = {
 				set_country_flag = br_cl_status_flavour_flag
 				set_variable = { custom_cl_var = 1 }
 			}
+			SLO = {
+				set_variable = { state_rank = 4 }
+			}
 			PER = {
 				set_country_flag = br_cl_status_flavour_flag
 			}
@@ -54,6 +57,7 @@ on_actions = {
 				set_variable = { nic_conversion_cost_civ_to_mil_factor = 0.00 }
 				set_variable = { nic_conversion_cost_mil_to_civ_factor = 0.00 }
 				set_variable = { nic_industrial_capacity_factory = 0.00 }
+				set_variable = { nim_production_speed_industrial_complex_factor = 0.00 }
 				set_variable = { nim_production_speed_arms_factory_factor = 0.00 }
 				set_variable = { nim_production_speed_dockyard_factor = 0.00 }
 				set_variable = { nim_production_factory_start_efficiency_factor = 0.00 }

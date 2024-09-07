@@ -104,6 +104,27 @@
 #U.S.
  alfred_mossman_landon: "阿尔弗雷德·莫兹曼·兰登"
  USA_alfred_mossman_landon: "$alfred_mossman_landon$"
+
+#slovak
+ jozef_tiso: "约瑟夫·蒂索"
+ andrej_hlinka: "安德烈·赫林卡"
+ jaroslav_kratochvil: "雅罗斯拉夫·克拉托契维利" #I'm not sure how to pronounce his name, If you know...
+ vojtech_daubner: "沃伊泰特·图纳" #
+ jozef_hora: "约瑟夫·霍拉"
+ frano_kral: "弗兰佐·克拉尔"
+ cyril_kuchta: "西里尔·库恰塔"
+ jindrich_honzl: "金德里希·洪兹"
+
+ rudolf_viest: "鲁道夫·魏斯特"
+
+ jozef_snejdarek: "约瑟夫·施耐德杰达雷克"
+ gejza_fritz: "吉扎·弗里茨"
+ frantisek_sadek: "弗兰提斯科·萨德科"
+ stefan_tiso: "斯特凡·蒂索"
+ karol_sidor: "卡罗尔·西多尔"
+ jozef_turanec: "约瑟夫·图拉内茨"
+ janko_jesensky: "杨·耶森斯基"
+ ferdinand_catlos: "费迪南德·加特罗什"
 #surname(chinese han/man and some nations) - 姓
  s_li: "李"
  s_wang: "王"
@@ -194,3 +215,12 @@
  VL_state_teto: "§Y$YUG_teto$§!\n$VL_trait_teto$"
  VL_Dip_state_teto: "§Y$YUG_teto$§!\n$GetDipStatus$\n$VL_trait_teto$"
  VL_desc_teto: "§g§!"
+
+#
+ VL_name_andrej_hlinka: "$andrej_hlinka$"
+ VL_trait_andrej_hlinka: ""
+ VL_state_andrej_hlinka: "§Y$andrej_hlinka$§!\n$VL_trait_andrej_hlinka$"
+ VL_Dip_state_andrej_hlinka: "§Y$andrej_hlinka$§!\n$GetDipStatus$\n$VL_trait_andrej_hlinka$"
+ VL_desc_andrej_hlinka: "§g§!"
+
+ archduke_maximilian_von_habsburg: "马克西米利安·冯·哈布斯堡"

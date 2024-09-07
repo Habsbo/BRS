@@ -51,13 +51,21 @@ if = {
 	}
 }
 
+recruit_character = AUS_archduke_maximilian_von_habsburg
+#
+recruit_character = SLO_andrej_hlinka
 recruit_character = SLO_jozef_tiso
+#
 recruit_character = SLO_jaroslav_kratochvil
 recruit_character = SLO_vojtech_daubner
 recruit_character = SLO_jozef_hora
 recruit_character = SLO_frano_kral
+#
 recruit_character = SLO_jozef_snejdarek
-recruit_character = SLO_fritz_gejza
+
+#
+recruit_character = SLO_gejza_fritz
+
 recruit_character = SLO_frantisek_sadek
 recruit_character = SLO_stefan_tiso
 recruit_character = SLO_cyril_kuchta
@@ -98,3 +106,27 @@ set_popularities = {
 }
 
 set_cosmetic_tag = Nitra_duchy
+
+set_country_flag = br_dynamic_modifier_not_generic_flag
+set_country_flag = br_dynamic_modifier_not_generic_var_flag
+
+#dynamic modifier - ic
+add_dynamic_modifier = { modifier = national_industry_civilian_dynamic_modifier }
+add_dynamic_modifier = { modifier = national_industry_military_dynamic_modifier }
+#dynamic modifier - ic
+set_variable = { nic_consumer_goods_expected_value = 0.20 }
+set_variable = { nic_production_speed_buildings_factor = -0.20 }
+set_variable = { nic_conversion_cost_civ_to_mil_factor = 0.00 }
+set_variable = { nic_conversion_cost_mil_to_civ_factor = 0.00 }
+set_variable = { nic_industrial_capacity_factory = -0.10 }
+set_variable = { nim_production_speed_industrial_complex_factor = -0.10 }
+set_variable = { nim_production_speed_arms_factory_factor = -0.10 }
+set_variable = { nim_production_speed_dockyard_factor = 0.00 }
+set_variable = { nim_production_factory_start_efficiency_factor = -0.05 }
+set_variable = { nim_production_factory_max_efficiency_factor = -0.05 }
+set_variable = { nim_production_factory_efficiency_gain_factor = -0.05 }
+set_variable = { nim_production_lack_of_resource_penalty_factor = 0.05 }
+set_variable = { nim_conversion_cost_civ_to_mil_factor = 0.00 }
+set_variable = { nim_conversion_cost_mil_to_civ_factor = 0.00 }
+set_variable = { nim_max_fuel_factor = 0.00 }
+set_variable = { nim_fuel_gain_factor = 0.00 }

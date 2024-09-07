@@ -47,7 +47,7 @@ set_popularities = {
 	sci_socialism = 5
 	dem_socialism = 30
 	#
-	dem_liberalism= 29
+	dem_liberalism = 29
 	dem_conservatism = 20
 	#
 	fascism = 16

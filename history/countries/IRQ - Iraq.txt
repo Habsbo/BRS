@@ -70,7 +70,7 @@ set_popularities = {
 	con_socialism = 0
 	dem_socialism = 0
 	#
-	dem_liberalism= 0
+	dem_liberalism = 0
 	dem_conservatism = 20
 	#
 	authoritarian = 60

@@ -89,3 +89,4 @@ create_faction = the_House_of_Habsburg
 add_to_faction = HUN
 add_to_faction = SLO
 #
+set_variable = { br_culture_deutsch = 1 } #

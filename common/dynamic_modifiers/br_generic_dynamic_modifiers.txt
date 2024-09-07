@@ -267,6 +267,7 @@ national_industry_civilian_dynamic_modifier = {
 	
 	consumer_goods_expected_value = nic_consumer_goods_expected_value
 	production_speed_buildings_factor = nic_production_speed_buildings_factor
+	production_speed_industrial_complex_factor = nim_production_speed_industrial_complex_factor
 	#
 	conversion_cost_civ_to_mil_factor = nic_conversion_cost_civ_to_mil_factor
 	conversion_cost_mil_to_civ_factor = nic_conversion_cost_mil_to_civ_factor

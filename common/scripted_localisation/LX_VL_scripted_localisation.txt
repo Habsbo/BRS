@@ -38,6 +38,16 @@ defined_text = {
 		localization_key = [ITA_VL_picture]
 	}
 	text = {
+		trigger = {
+			OR = {
+				original_tag = CZE
+				original_tag = SLO
+			}
+			NOT = { br_special_chars_holding_gov = yes }
+		}
+		localization_key = [CZE_VL_picture]
+	}
+	text = {
 		trigger = { br_special_chars_holding_gov = yes }
 		localization_key = [SP_Chars_VL_picture]
 	}
@@ -80,6 +90,16 @@ defined_text = {
 			NOT = { br_special_chars_holding_gov = yes }
 		}
 		localization_key = [ITA_VL_name]
+	}
+	text = {
+		trigger = {
+			OR = {
+				original_tag = CZE
+				original_tag = SLO
+			}
+			NOT = { br_special_chars_holding_gov = yes }
+		}
+		localization_key = [CZE_VL_name]
 	}
 	text = {
 		trigger = { br_special_chars_holding_gov = yes }
@@ -127,6 +147,16 @@ defined_text = {
 		localization_key = [ITA_VL_state]
 	}
 	text = {
+		trigger = {
+			OR = {
+				original_tag = CZE
+				original_tag = SLO
+			}
+			NOT = { br_special_chars_holding_gov = yes }
+		}
+		localization_key = [CZE_VL_state]
+	}
+	text = {
 		trigger = { br_special_chars_holding_gov = yes }
 		localization_key = [SP_Chars_VL_state]
 	}
@@ -169,6 +199,16 @@ defined_text = {
 			NOT = { br_special_chars_holding_gov = yes }
 		}
 		localization_key = [ITA_VL_Dip_state]
+	}
+	text = {
+		trigger = {
+			OR = {
+				original_tag = CZE
+				original_tag = SLO
+			}
+			NOT = { br_special_chars_holding_gov = yes }
+		}
+		localization_key = [CZE_VL_Dip_state]
 	}
 	text = {
 		trigger = { br_special_chars_holding_gov = yes }
@@ -214,6 +254,16 @@ defined_text = {
 			NOT = { br_special_chars_holding_gov = yes }
 		}
 		localization_key = [ITA_VL_desc]
+	}
+	text = {
+		trigger = {
+			OR = {
+				original_tag = CZE
+				original_tag = SLO
+			}
+			NOT = { br_special_chars_holding_gov = yes }
+		}
+		localization_key = [CZE_VL_desc]
 	}
 	text = {
 		trigger = { br_special_chars_holding_gov = yes }

@@ -473,6 +473,12 @@
  Maravian_kingdom_ADJ: "大摩拉维亚王国"
  Nitra_duchy: "尼特拉公国"
  Nitra_duchy_DEF: "尼特拉公国"
+ SLO_republika: "斯洛伐克共和国"
+ SLO_republika_DEF: "斯洛伐克共和国"
+ SLO_protectorate: "斯洛伐克保护国"
+ SLO_protectorate_DEF: "斯洛伐克保护国"
+ SLO_hlinka_party: "赫林卡斯洛伐克"
+ SLO_hlinka_party_DEF: "赫林卡斯洛伐克"
 
 #伊朗
  PER_pahlavi_dynasty: "巴列维王朝"

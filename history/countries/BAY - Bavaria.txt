@@ -148,3 +148,6 @@ add_ideas = {
 #}
 
 
+
+#
+set_variable = { br_culture_deutsch = 1 } #

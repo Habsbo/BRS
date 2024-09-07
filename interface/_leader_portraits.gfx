@@ -8481,4 +8481,25 @@ spriteTypes = {
 		name = "GFX_portrait_SPR_alfonso_xiii"
 		texturefile = "gfx/leaders/SPR_Reino_de_Espanna/portrait_spr_alfonso_xiii.dds"
 	}
+
+#
+	spriteType = {
+		name = "GFX_portrait_SLO_hlinka"
+		texturefile = "gfx/leaders/SLO/Portrait_SLO_hlinka.png"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_SLO_hlinka_small"
+		texturefile = "gfx/interface/ideas/SLO/Portrait_SLO_hlinka_small.png"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_AUS_archduke_maximilian_von_habsburg"
+		texturefile = "gfx/leaders/SLO/Portrait_AUS_archduke_maximilian_von_habsburg.tga"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_AUS_archduke_maximilian_von_habsburg_small"
+		texturefile = "gfx/interface/ideas/SLO/Portrait_AUS_archduke_maximilian_von_habsburg_small.tga"
+	}
 }
