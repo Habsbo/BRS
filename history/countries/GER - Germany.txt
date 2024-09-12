@@ -839,6 +839,7 @@ add_to_faction = POL
 #add_to_faction = HOL
 
 set_autonomy = { target = LIT autonomy_state = autonomy_br_self_governance }
+set_autonomy = { target = COG autonomy_state = autonomy_colony }
 #rhe
 create_dynamic_country = {
 	original_tag = GER

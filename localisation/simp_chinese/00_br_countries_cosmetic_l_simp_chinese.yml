@@ -562,6 +562,12 @@
  ESA_DEF: "美利坚帝国"
  FSA: "美利坚国家联盟"
  FSA_DEF: "美利坚国家联盟"
+#撒哈拉以南非洲
+ COG_DEU_trusteeship: "德属刚果托管领"
+ COG_DEU_trusteeship_DEF: "德属刚果托管领"
+
+ SAF_afrikaners: "阿非利卡联邦"
+ SAF_afrikaners_DEF: "阿非利卡联邦"
 #
  INS_HOL_democratic: "荷属东印度"
  INS_HOL_democratic_DEF: "荷属东印度"

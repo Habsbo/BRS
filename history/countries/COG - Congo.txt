@@ -10,7 +10,6 @@ set_technology = {
 
 set_convoys = 5
 
-# A colony of Italy in 1939.  However, if independent it would have the same as its 1936 politics
 set_politics = {
 	ruling_party = authoritarian
 	last_election = "1936.1.1"
@@ -23,6 +22,7 @@ set_popularities = {
 	dem_conservatism = 10 #保守民主主义
 	authoritarian = 80 #威权主义
 }
+
 create_country_leader = {
 	
 	name = "François Tolenga"
@@ -54,3 +54,5 @@ create_country_leader = {
 		
 	}
 }
+
+set_cosmetic_tag = COG_DEU_trusteeship
