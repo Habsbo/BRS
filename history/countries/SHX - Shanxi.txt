@@ -51,3 +51,5 @@ set_popularities = {
 	dem_conservatism = 45 #保守民主主义
 	authoritarian = 30 #威权主义
 }
+
+set_cosmetic_tag = SHX_ROC_Xibeijun

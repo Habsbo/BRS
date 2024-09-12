@@ -56,6 +56,7 @@ characters={
 			can_be_fired = no
 		}
 	}
+
 	FRA_pierre_laval={ #Democratic Leader 皮埃尔·赖伐尔
 		name=FRA_pierre_laval
 		portraits={
@@ -68,6 +69,97 @@ characters={
 			traits={ stout_defender }
 			expire="1965.1.1.1"
 			id=-1
+		}
+	}
+###
+	FRA_marceau_pivert = { #马索尔·皮维尔特 
+		name=marceau_pivert
+		portraits={
+			civilian={
+				#large="GFX_portrait_fra_pierre_laval"
+				#small = GFX_
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = marceau_pivert
+			allowed  = { original_tag = FRA }
+			available  = {
+				not  = {
+					has_country_leader  = { character  = FRA_philippe_petain ruling_only  = yes }
+				}
+				if  = {
+					limit  = { has_dlc = "Man the Guns" }
+					not  = { has_autonomy_state  = autonomy_supervised_state }
+				}
+			}
+			traits  = {}
+			do_effect  = {}
+			on_add  = {}
+			ai_will_do  = {
+				factor  = 0.000
+			}
+		}
+		advisor={
+			slot = head_of_gov
+			idea_token = marceau_pivert_hog
+			allowed  = { original_tag  = FRA }
+			available  = {
+				if  = {
+					limit  = { has_dlc = "Man the Guns" }
+					not  = { has_autonomy_state  = autonomy_supervised_state }
+				}
+				br_head_of_gov_generic_trigger = yes
+			}
+			traits  = {}
+			cost = 0
+			can_be_fired = no
+		}
+	}
+###
+	FRA_camille_chautemps = { #卡米耶·肖当
+		name=camille_chautemps
+		portraits={
+			civilian={
+				large="GFX_portrait_fra_pierre_laval"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = camille_chautemps
+			allowed = {
+				original_tag = FRA
+			}
+			available = {}
+			cost = 100.000
+			traits = {}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	FRA_marcel_deat = { #马塞尔·迪特
+		name=marcel_deat
+		portraits={
+			civilian={
+				large="GFX_portrait_fra_pierre_laval"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = marcel_deat
+			allowed = {
+				original_tag = FRA
+			}
+			available = {}
+			cost = 100.000
+			traits = {}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
 		}
 	}
 

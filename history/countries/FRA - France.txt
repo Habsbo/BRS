@@ -202,6 +202,13 @@ give_guarantee = CZE
 give_guarantee = YUG
 give_guarantee = ROM
 
+
+recruit_character = FRA_camille_chautemps
+recruit_character = FRA_marcel_deat
+#托洛茨基倾向
+recruit_character = FRA_marceau_pivert
+
+#
 recruit_character = FRA_philippe_petain
 recruit_character = FRA_maurice_thorez
 recruit_character = FRA_pierre_laval

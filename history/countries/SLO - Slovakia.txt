@@ -130,3 +130,11 @@ set_variable = { nim_conversion_cost_civ_to_mil_factor = 0.00 }
 set_variable = { nim_conversion_cost_mil_to_civ_factor = 0.00 }
 set_variable = { nim_max_fuel_factor = 0.00 }
 set_variable = { nim_fuel_gain_factor = 0.00 }
+
+
+set_power_balance = {
+	id = SLO_slovak_kaisertum_usterreich_balance
+	left_side = SLO_slovak_side
+	right_side = SLO_kaisertum_usterreich_side
+	set_default = yes
+}

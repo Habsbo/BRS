@@ -44,3 +44,22 @@ br_will_add_popularity_of_our_left_parties = {
 br_will_add_popularity_of_our_right_parties = {
 	custom_effect_tooltip = br_will_add_popularity_of_our_right_parties_tt
 }
+
+br_clamp_br_public_feeling_var = {
+	#
+	clamp_variable = {
+		var = br_public_feeling_var
+		min = -100
+		max = 100
+	}
+}
+
+br_clamp_br_public_feeling_var_has_tt = {
+	#
+	custom_effect_tooltip = br_clamp_br_public_feeling_var_tt
+	clamp_variable = {
+		var = br_public_feeling_var
+		min = -100
+		max = 100
+	}
+}

@@ -18,8 +18,10 @@
  communist_influence_1_desc: "$communist_influence_desc$"
  communist_influence_2: "$communist_influence$"
  communist_influence_2_desc: "$communist_influence_desc$"
+#
  br_can_not_change_laws_flag: "§R因国家精神而无法改变法律！§!"
  br_countryleader_custom_flavour_trigger_tt: "是拥有风味化称呼的国家"
+ is_menber_of_berne_concert_tt: "是§Y伯尔尼协议§!的一员"
 #
  br_politicals_and_laws_decisions: "[root.GetName]的政治与法律境况"
 #
@@ -95,17 +97,17 @@
  max_fuel_factor_tt: " 燃油容量: $RIGHT|+=%1$"
 
  #
- soc_anarchism_drift_tt: " §Y$soc_anarchism_drift$§!: $RIGHT|+=0..2$"
- vanwardism_drift_tt: " §Y$vanwardism_drift$§!: $RIGHT|+=0..2$"
- sci_socialism_drift_tt: " §Y$sci_socialism_drift$§!: $RIGHT|+=0..2$"
- con_socialism_drift_tt: " §Y$con_socialism_drift$§!: $RIGHT|+=0..2$"
- dem_socialism_drift_tt: " §Y$dem_socialism_drift$§!: $RIGHT|+=0..2$"
- dem_liberalism_drift_tt: " §Y$dem_liberalism_drift$§!: $RIGHT|+=0..2$"
- dem_conservatism_drift_tt: " §Y$dem_conservatism_drift$§!: $RIGHT|+=0..2$"
- authoritarian_drift_tt: " §Y$authoritarian_drift$§!: $RIGHT|+=0..2$"
- fascism_drift_tt: " §Y$fascism_drift$§!: $RIGHT|+=0..2$"
- nationalism_drift_tt: " §Y$nationalism_drift$§!: $RIGHT|+=0..2$"
- supernationalism_drift_tt: " §Y$supernationalism_drift$§!: $RIGHT|+=0..2$"
+ soc_anarchism_drift_tt: " $soc_anarchism_drift$: $RIGHT|+=0..2$"
+ vanwardism_drift_tt: " $vanwardism_drift$: $RIGHT|+=0..2$"
+ sci_socialism_drift_tt: " $sci_socialism_drift$: $RIGHT|+=0..2$"
+ con_socialism_drift_tt: " $con_socialism_drift$: $RIGHT|+=0..2$"
+ dem_socialism_drift_tt: " $dem_socialism_drift$: $RIGHT|+=0..2$"
+ dem_liberalism_drift_tt: " $dem_liberalism_drift$: $RIGHT|+=0..2$"
+ dem_conservatism_drift_tt: " $dem_conservatism_drift$: $RIGHT|+=0..2$"
+ authoritarian_drift_tt: " $authoritarian_drift$: $RIGHT|+=0..2$"
+ fascism_drift_tt: " $fascism_drift$: $RIGHT|+=0..2$"
+ nationalism_drift_tt: " $nationalism_drift$: $RIGHT|+=0..2$"
+ supernationalism_drift_tt: " $supernationalism_drift$: $RIGHT|+=0..2$"
  #
  br_ideology_anarchism_ruling_tt: "§G执政党§!所属的意识形态是§Y无政府主义§!"
  br_ideology_radical_communism_ruling_tt: "§G执政党§!所属的意识形态是一种§Y激进共产主义§!"
@@ -162,6 +164,8 @@
  knight_king_hog: "骑士王"
  labour_lawyer: "劳动者的律师"
  prrrs_leader: "激进党领袖"
+ grand_duchy_of_transleithanien: "外莱塔尼亚大公"
+ SLO_bop_move_to_kaisertum_usterreich_side_weekly_tt: "  - 权力平衡倒向§Y$AUS_kaisertum_usterreich$§!一侧的每周进度：[?SLO.SLO_bop_move_weekly_var|+=..3]"
 #
  leaderone: "“领袖”"
  trait_guangxu: "“光绪”"
@@ -216,7 +220,6 @@
  br_will_add_popularity_of_our_rulling_party_tt: "将会增加§Y执政党§!的§G选举人气§!！"
  br_will_add_popularity_of_our_left_parties_tt: "将会增加§R左翼党派§!的§G选举人气§!！"
  br_will_add_popularity_of_our_right_parties_tt: "将会增加§L右翼党派§!的§G选举人气§!！"
- is_menber_of_berne_concert_tt: "是§Y伯尔尼协议§!的一员"
 #economic system
  br_economic: "经济系统（BETA）"
  br_economic_desc: "政府的财政状况:[?root.br_exchequer_var|H]\n您的政府每月可以获得[?root.br_eco_var|H]的财政收入。其中基于从用于生产生活消费品(已经被人口全部消费掉的部分)的民用工厂获取的税收为[?root.br_pop_consuming_var|H]，结算周期以当月月底用于生产的民用工厂为准，并基于人口总体的财富等级进行加权（未实装）。"
@@ -235,7 +238,11 @@
  br_public_feeling_var_tt_no_less: "§Y$br_public_feeling$§! ≥ §Y$RIGHT|0..2$§!"
  br_public_feeling_var_tt_less: "§Y$br_public_feeling$§! < §Y$RIGHT|0..2$§!"
  br_public_feeling_var_tt_no_more: "§Y$br_public_feeling$§! ≤ §Y$RIGHT|0..2$§!"
+ br_clamp_br_public_feeling_var_tt: "\n角色的§Y$br_public_feeling$§!会被确保在-100至100的范围内。"
 
+#
+ when_the_focus_selected_tt: "§Y当选中该国策，将会发生：§!"
+ when_the_focus_completed_tt: "§Y当完成该国策，将会发生：§!"
 #how to play
  br_mod_introducing.1.title: "特殊机制介绍"
  br_mod_introducing.1.desc: ""

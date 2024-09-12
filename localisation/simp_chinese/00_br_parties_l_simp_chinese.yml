@@ -153,3 +153,16 @@
  LUX_fascism_party: "卢森堡法西斯国家党" 
  LUX_nationalism_party: "国家社会工人党"
  LUX_supernationalism_party: "国家社会工人党巴伐利亚学派"
+
+#
+ SLO_soc_anarchism_party: "潘诺尼亚无政府派"
+ SLO_vanwardism_party: "捷克斯洛伐克共产党激进派"
+ SLO_sci_socialism_party: "捷克斯洛伐克共产党正统派"
+ SLO_con_socialism_party: "斯洛伐克共产党地方派"
+ SLO_dem_socialism_party: "斯洛伐克人民党平等派左翼"
+ SLO_dem_liberalism_party: "斯洛伐克人民党平等派中左翼"
+ SLO_dem_conservatism_party: "哈布斯堡-外莱塔尼亚宪政派"
+ SLO_authoritarian_party: "哈布斯堡-外莱塔尼亚专制派"
+ SLO_fascism_party: "斯洛伐克人民党保守派"
+ SLO_nationalism_party: "斯洛伐克人民党极端派"
+ SLO_supernationalism_party: "斯洛伐克人民党极端派右翼"

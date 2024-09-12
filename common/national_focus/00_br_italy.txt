@@ -16,17 +16,15 @@ focus_tree = {
 	
 ###
 	focus = {
-		id = ITA_
+		id = ITA_the_way_of_unification
 		icon = GFX_goal_generic_demand_territory
-		#prerequisite = { focus =  }
+		#prerequisite = { focus = ITA_the_way_of_unification }
 		#mutually_exclusive = { focus =  }
-		x = 10
+		x = 8
 		y = 0
-		#relative_position_id =
+		#relative_position_id = ITA_the_way_of_unification
 
 		cost = 8
-		
-		ai_will_do = { factor = 1 }
 		
 		available = {}
 		
@@ -39,21 +37,233 @@ focus_tree = {
 		complete_tooltip = {}
 		
 		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
 	}
 
-###民族的无产阶级
 	focus = {
-		id = ITA_proletariat_in_nations
+		id = ITA_revolution_by_violence
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = ITA_the_way_of_unification }
+		mutually_exclusive = { focus = ITA_struggle_for_unification }
+		x = -1
+		y = 1
+		relative_position_id = ITA_the_way_of_unification
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = ITA_struggle_for_unification
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = ITA_the_way_of_unification }
+		mutually_exclusive = { focus = ITA_revolution_by_violence }
+		x = 1
+		y = 1
+		relative_position_id = ITA_the_way_of_unification
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = ITA_15
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = ITA_revolution_by_violence }
+		#mutually_exclusive = { focus =  }
+		x = -2
+		y = 1
+		relative_position_id = ITA_revolution_by_violence
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = ITA_arouse_proletarian_workers
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = ITA_revolution_by_violence }
+		#mutually_exclusive = { focus =  }
+		x = -1
+		y = 2
+		relative_position_id = ITA_revolution_by_violence
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+###
+	focus = {
+		id = ITA_cooperate_with_petite_bourgeoisie
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = {
+			focus = ITA_revolution_by_violence
+			focus = ITA_struggle_for_unification
+		}
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 2
+		relative_position_id = ITA_the_way_of_unification
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = ITA_centre_
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = ITA_cooperate_with_petite_bourgeoisie }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = ITA_cooperate_with_petite_bourgeoisie
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = ITA_reintegrate_psi
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = ITA_struggle_for_unification }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 2
+		relative_position_id = ITA_struggle_for_unification
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = ITA_16
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = ITA_struggle_for_unification }
+		#mutually_exclusive = { focus =  }
+		x = 2
+		y = 1
+		relative_position_id = ITA_struggle_for_unification
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+###  ###
+	focus = {
+		id = ITA_1
 		icon = GFX_focus_generic_italy_first
 		#prerequisite = { focus =  }
 		#mutually_exclusive = { focus =  }
-		x = 12
+		x = 20
 		y = 0
 		#relative_position_id =
 
 		cost = 8
-		
-		ai_will_do = { factor = 1 }
 		
 		available = {}
 		
@@ -66,6 +276,61 @@ focus_tree = {
 		complete_tooltip = {}
 		
 		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+###  ###
+	focus = {
+		id = ITA_2
+		icon = GFX_goal_generic_demand_territory
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 2
+		y = 0
+		relative_position_id = ITA_1
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+#
+	focus = {
+		id = ITA_
+		icon = GFX_goal_generic_demand_territory
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 0
+		#relative_position_id =
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
 	}
 
 	focus = {
@@ -73,13 +338,11 @@ focus_tree = {
 		icon = GFX_goal_generic_demand_territory
 		#prerequisite = { focus =  }
 		#mutually_exclusive = { focus =  }
-		x = 10
+		x = 0
 		y = 0
 		#relative_position_id =
 
 		cost = 8
-		
-		ai_will_do = { factor = 1 }
 		
 		available = {}
 		
@@ -92,130 +355,7 @@ focus_tree = {
 		complete_tooltip = {}
 		
 		completion_reward = {}
-	}
-	focus = {
-		id = ITA_
-		icon = GFX_goal_generic_demand_territory
-		#prerequisite = { focus =  }
-		#mutually_exclusive = { focus =  }
-		x = 10
-		y = 0
-		#relative_position_id =
-
-		cost = 8
 		
 		ai_will_do = { factor = 1 }
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-	}
-	focus = {
-		id = ITA_
-		icon = GFX_goal_generic_demand_territory
-		#prerequisite = { focus =  }
-		#mutually_exclusive = { focus =  }
-		x = 10
-		y = 0
-		#relative_position_id =
-
-		cost = 8
-		
-		ai_will_do = { factor = 1 }
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-	}
-	focus = {
-		id = ITA_
-		icon = GFX_goal_generic_demand_territory
-		#prerequisite = { focus =  }
-		#mutually_exclusive = { focus =  }
-		x = 10
-		y = 0
-		#relative_position_id =
-
-		cost = 8
-		
-		ai_will_do = { factor = 1 }
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-	}
-	focus = {
-		id = ITA_
-		icon = GFX_goal_generic_demand_territory
-		#prerequisite = { focus =  }
-		#mutually_exclusive = { focus =  }
-		x = 10
-		y = 0
-		#relative_position_id =
-
-		cost = 8
-		
-		ai_will_do = { factor = 1 }
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-	}
-	focus = {
-		id = ITA_
-		icon = GFX_goal_generic_demand_territory
-		#prerequisite = { focus =  }
-		#mutually_exclusive = { focus =  }
-		x = 10
-		y = 0
-		#relative_position_id =
-
-		cost = 8
-		
-		ai_will_do = { factor = 1 }
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
 	}
 }

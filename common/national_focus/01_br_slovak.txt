@@ -19,14 +19,27 @@
 		id = SLO_slovak_nationalism
 		icon = GFX_goal_generic_territory_or_war
 		#prerequisite = { focus =  }
-		mutually_exclusive = { focus = SLO_translethania }
+		mutually_exclusive = { focus = SLO_condition_of_transleithanien }
 		x = 8
 		y = 0
 		#relative_position_id =
 
 		cost = 8
 		
-		available = {}
+		available = {
+			if = {
+				limit = {
+					has_power_balance = { id = SLO_slovak_kaisertum_usterreich_balance }
+				}
+				is_power_balance_side_active = {
+					id = SLO_slovak_kaisertum_usterreich_balance
+					side = SLO_slovak_side
+				}
+			}
+			else = {
+				is_puppet = no
+			}
+		}
 		
 		bypass = {}
 		
@@ -36,7 +49,22 @@
 		
 		complete_tooltip = {}
 		
-		completion_reward = {}
+		completion_reward = {
+			#
+			add_war_support = 0.05
+			#
+			add_popularity = { ideology = dem_socialism popularity = 0.02 }
+			add_popularity = { ideology = dem_liberalism popularity = 0.03 }
+			add_popularity = { ideology = dem_conservatism popularity = -0.03 }
+			add_popularity = { ideology = authoritarian popularity = -0.03 }
+			add_popularity = { ideology = fascism popularity = 0.03 }
+			add_popularity = { ideology = nationalism popularity = 0.01 }
+			#
+			add_power_balance_value = {
+				id = SLO_slovak_kaisertum_usterreich_balance
+				value = -0.05
+			}
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -178,8 +206,37 @@
 	}
 
 	focus = {
-		id = SLO_union_make_us_strong
+		id = SLO_united_as_west_slavia
 		icon = GFX_goal_generic_improve_relations
+		prerequisite = {
+			focus = SLO_united_as_czechoslovakia
+			focus = SLO_united_as_polskislovakia
+		}
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 3
+		relative_position_id = SLO_pan_western_slavism
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = SLO_union_make_us_strong
+		icon = GFX_focus_generic_workers_strike_2 #
 		prerequisite = { focus = SLO_industrial_ethnicity }
 		#mutually_exclusive = { focus =  }
 		x = -1
@@ -205,7 +262,7 @@
 
 	focus = {
 		id = SLO_landreform
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
 		prerequisite = { focus = SLO_union_make_us_strong }
 		#mutually_exclusive = { focus =  }
 		x = 0
@@ -231,7 +288,7 @@
 
 	focus = {
 		id = SLO_unify_landowner
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_focus_generic_concessions
 		prerequisite = { focus = SLO_agricultural_ethnicity }
 		#mutually_exclusive = { focus =  }
 		x = 1
@@ -257,7 +314,7 @@
 
 	focus = {
 		id = SLO_orgnaizing_landlords_group
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_focus_eng_move_to_secure_the_dominions
 		prerequisite = { focus = SLO_unify_landowner }
 		#mutually_exclusive = { focus =  }
 		x = 0
@@ -283,7 +340,7 @@
 
 	### translethania ###
 	focus = {
-		id = SLO_translethania
+		id = SLO_condition_of_transleithanien
 		icon = GFX_goal_generic_improve_relations
 		#prerequisite = { focus =  }
 		mutually_exclusive = { focus = SLO_slovak_nationalism }
@@ -293,7 +350,25 @@
 
 		cost = 8
 		
-		available = {}
+		available = {
+			if = {
+				limit = {
+					has_power_balance = { id = SLO_slovak_kaisertum_usterreich_balance }
+				}
+				NOT = {
+					is_power_balance_side_active = {
+						id = SLO_slovak_kaisertum_usterreich_balance
+						side = SLO_slovak_side
+					}
+				}
+			}
+			else = {
+				OR = {
+					is_puppet_of = AUS
+					is_in_faction_with = AUS
+				}
+			}
+		}
 		
 		bypass = {}
 		
@@ -303,9 +378,25 @@
 		
 		complete_tooltip = {}
 		
-		completion_reward = {}
+		completion_reward = {
+			#
+			add_political_power = 150
+			add_stability = -0.05
+			#
+			add_popularity = { ideology = dem_socialism popularity = -0.01 }
+			add_popularity = { ideology = dem_liberalism popularity = -0.01 }
+			add_popularity = { ideology = dem_conservatism popularity = 0.02 }
+			add_popularity = { ideology = authoritarian popularity = 0.02 }
+			add_popularity = { ideology = fascism popularity = -0.01 }
+			add_popularity = { ideology = nationalism popularity = -0.01 }
+			#
+			add_power_balance_value = {
+				id = SLO_slovak_kaisertum_usterreich_balance
+				value = 0.05
+			}
+		}
 		
-		ai_will_do = { factor = 1 }
+		ai_will_do = { factor = 10 }
 	}
 
 	focus = {
@@ -313,7 +404,7 @@
 		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = {
 			focus = SLO_slovak_nationalism
-			focus = SLO_translethania
+			focus = SLO_condition_of_transleithanien
 		}
 		mutually_exclusive = { focus = SLO_a_german_primer }
 		x = 1
@@ -334,13 +425,26 @@
 		
 		completion_reward = {
 			add_ideas = SLO_andrej_hlinka_hog
+			#
+			add_political_power = 120
+			add_stability = 0.05
+			#
+			add_popularity = { ideology = dem_socialism popularity = 0.01 }
+			add_popularity = { ideology = dem_liberalism popularity = 0.01 }
+			add_popularity = { ideology = fascism popularity = 0.01 }
+			add_popularity = { ideology = nationalism popularity = 0.01 }
+			#
+			add_power_balance_value = {
+				id = SLO_slovak_kaisertum_usterreich_balance
+				value = -0.05
+			}
 		}
 		
 		ai_will_do = { factor = 1 }
 	}
 
 	focus = {
-		id = SLO_family
+		id = SLO_traditionalist_propaganda
 		icon = GFX_focus_generic_population_growth
 		prerequisite = { focus = SLO_appoint_andrej_hlinka }
 		#mutually_exclusive = { focus =  }
@@ -392,13 +496,74 @@
 	}
 
 	focus = {
-		id = SLO_a_german_primer
-		icon = GFX_goal_generic_forceful_treaty
-		prerequisite = { focus = SLO_translethania }
-		mutually_exclusive = { focus = SLO_appoint_andrej_hlinka }
-		x = 3
+		id = SLO_antagonize_the_empire
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = SLO_traditionalist_propaganda }
+		prerequisite = { focus = SLO_hlinka_party }
+		mutually_exclusive = { focus = SLO_cooperate_with_austria }
+		x = 0
 		y = 1
-		relative_position_id = SLO_translethania
+		relative_position_id = SLO_traditionalist_propaganda
+
+		cost = 8
+		
+		available = {
+			has_completed_focus = SLO_slovak_nationalism
+		}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = SLO_cooperate_with_austria
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = SLO_traditionalist_propaganda }
+		prerequisite = { focus = SLO_hlinka_party }
+		mutually_exclusive = { focus = SLO_antagonize_the_empire }
+		x = 0
+		y = 1
+		relative_position_id = SLO_hlinka_party
+
+		cost = 8
+		
+		available = {
+			has_completed_focus = SLO_condition_of_transleithanien
+		}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = SLO_fate_on_my_own
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = {
+			focus = SLO_antagonize_the_empire
+			focus = SLO_cooperate_with_austria
+		}
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = SLO_cooperate_with_austria
 
 		cost = 8
 		
@@ -412,7 +577,51 @@
 		
 		complete_tooltip = {}
 		
-		completion_reward = {}
+		completion_reward = {
+			if = {
+				limit = { is_in_faction_with = AUS }
+				leave_faction = AUS
+			}
+			else_if = {
+				limit = { is_puppet_of = AUS }
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	#
+	focus = {
+		id = SLO_a_german_primer
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = SLO_condition_of_transleithanien }
+		mutually_exclusive = { focus = SLO_appoint_andrej_hlinka }
+		x = 3
+		y = 1
+		relative_position_id = SLO_condition_of_transleithanien
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			#
+			add_political_power = 150
+			add_stability = -0.05
+			#
+			add_power_balance_value = {
+				id = SLO_slovak_kaisertum_usterreich_balance
+				value = 0.05
+			}
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -441,13 +650,19 @@
 		
 		complete_tooltip = {}
 		
-		completion_reward = {}
+		completion_reward = {
+			#
+			add_power_balance_value = {
+				id = SLO_slovak_kaisertum_usterreich_balance
+				value = 0.10
+			}
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
 
 	focus = {
-		id = SLO_i2
+		id = SLO_warriors_of_faith
 		icon = GFX_focus_mex_restore_the_army_of_christ
 		prerequisite = { focus = SLO_intrench_catholicism }
 		#mutually_exclusive = { focus =  }
@@ -473,10 +688,10 @@
 	}
 
 	focus = {
-		id = SLO_
-		icon = GFX_goal_generic_improve_relations
+		id = SLO_clampdown_slovak_nationalism
+		icon = GFX_goal_generic_military_deal
 		prerequisite = { focus = SLO_a_german_primer }
-		#mutually_exclusive = { focus =  }
+		mutually_exclusive = { focus = SLO_limited_cooperation }
 		x = 0
 		y = 1
 		relative_position_id = SLO_a_german_primer
@@ -499,10 +714,10 @@
 	}
 
 	focus = {
-		id = SLO_
-		icon = GFX_goal_generic_improve_relations
+		id = SLO_limited_cooperation
+		icon = GFX_goal_generic_dangerous_deal
 		prerequisite = { focus = SLO_a_german_primer }
-		#mutually_exclusive = { focus =  }
+		mutually_exclusive = { focus = SLO_clampdown_slovak_nationalism }
 		x = 2
 		y = 1
 		relative_position_id = SLO_a_german_primer
@@ -523,15 +738,109 @@
 		
 		ai_will_do = { factor = 1 }
 	}
+
+	focus = {
+		id = SLO_purge_gov
+		icon = GFX_focus_generic_self_management
+		prerequisite = {
+			focus = SLO_clampdown_slovak_nationalism
+			focus = SLO_limited_cooperation
+		}
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = SLO_clampdown_slovak_nationalism
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = SLO_germanic_military
+		icon = GFX_focus_generic_little_entente
+		prerequisite = {
+			focus = SLO_clampdown_slovak_nationalism
+			focus = SLO_limited_cooperation
+		}
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = SLO_limited_cooperation
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = SLO_declaration_of_transleithanien
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = SLO_purge_gov }
+		prerequisite = { focus = SLO_germanic_military }
+		#mutually_exclusive = { focus = }
+		x = 0
+		y = 1
+		relative_position_id = SLO_purge_gov
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			set_cosmetic_tag = SLO_transleithanien
+			#
+			add_stability = 0.05
+			add_war_support = 0.05
+			add_popularity = { ideology = root popularity = 0.05 }
+			#
+			custom_effect_tooltip = SLO_declaration_of_transleithanien_tt
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+
 	###
 	focus = {
 		id = SLO_1
 		icon = GFX_goal_generic_forceful_treaty
-		prerequisite = { focus = SLO_translethania }
+		prerequisite = { focus = SLO_condition_of_transleithanien }
 		#mutually_exclusive = { focus = }
-		x = 7
+		x = 8
 		y = 1
-		relative_position_id = SLO_translethania
+		relative_position_id = SLO_condition_of_transleithanien
 
 		cost = 8
 		
@@ -606,9 +915,9 @@
 	focus = {
 		id = SLO_leave_them_alone
 		icon = GFX_goal_generic_demand_territory
-		#prerequisite = { focus =  }
+		prerequisite = { focus = SLO_fate_on_my_own }
 		mutually_exclusive = { focus = SLO_stand_unswervingly }
-		x = 8
+		x = 10
 		y = 5
 		#relative_position_id =
 
@@ -616,6 +925,10 @@
 		
 		available = {
 			NOT = { is_in_faction_with = AUS }
+			power_balance_value = {
+				id = SLO_slovak_kaisertum_usterreich_balance
+				value < -0.30
+			}
 		}
 		
 		bypass = {}
@@ -865,7 +1178,34 @@
 		
 		complete_tooltip = {}
 		
-		completion_reward = {}
+		completion_reward = {
+			custom_effect_tooltip = SLO_france_friendly_tt
+			FRA = {
+				set_temp_variable = { french_ruling_party_temp_var = party_popularity@ruling_party }
+				set_temp_variable = { french_stability_temp_var = var:stability }
+			}
+			set_temp_variable = { french_ruling_party_temp_var = FRA.french_ruling_party_temp_var }
+			set_temp_variable = { french_stability_temp_var = FRA.french_stability_temp_var }
+			if = {
+				limit = {
+					FRA = { has_stability > 0.5 }
+				}
+				multiply_temp_variable = { french_stability_temp_var = 0.25 }
+			}
+			else_if = {
+				limit = { 
+					FRA = { has_stability > 0.5 }
+				}
+				multiply_temp_variable = { french_stability_temp_var = 0.50 }
+			}
+			else = {
+				multiply_temp_variable = { french_stability_temp_var = 0.75 }
+			}
+			multiply_temp_variable = { french_ruling_party_temp_var = french_stability_temp_var }
+			multiply_temp_variable = { french_stability_temp_var = -0.25 }
+			add_stability = french_stability_temp_var
+			add_popularity = { ideology = FRA popularity = french_ruling_party_temp_var }
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -952,10 +1292,10 @@
 	}
 	
 	focus = {
-		id = SLO_sacred_cause
-		icon = GFX_goal_generic_demand_territory
+		id = SLO_marxism_faith
+		icon = GFX_focus_spr_unify_the_london_bureau
 		prerequisite = { focus = SLO_united_front }
-		mutually_exclusive = { focus = SLO_marxism_faith }
+		mutually_exclusive = { focus = SLO_sacred_cause }
 		x = -1
 		y = 1
 		relative_position_id = SLO_united_front
@@ -978,10 +1318,13 @@
 	}
 	
 	focus = {
-		id = SLO_marxism_faith
-		icon = GFX_focus_spr_unify_the_london_bureau
-		prerequisite = { focus = SLO_united_front }
-		mutually_exclusive = { focus = SLO_sacred_cause }
+		id = SLO_sacred_cause
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = {
+			focus = SLO_remedy_for_peasantry
+			focus = SLO_united_front
+		}
+		mutually_exclusive = { focus = SLO_marxism_faith }
 		x = 1
 		y = 1
 		relative_position_id = SLO_united_front
@@ -1062,7 +1405,10 @@
 	focus = {
 		id = SLO_stand_unswervingly
 		icon = GFX_goal_generic_demand_territory
-		#prerequisite = { focus =  }
+		prerequisite = {
+			focus = SLO_fate_on_my_own
+			focus = SLO_declaration_of_transleithanien
+		}
 		mutually_exclusive = { focus = SLO_leave_them_alone }
 		x = 2
 		y = 0
@@ -1075,6 +1421,10 @@
 			var:faction_leader = {
 				is_major = yes
 				has_opinion = { target = root value > 24 }
+			}
+			power_balance_value = {
+				id = SLO_slovak_kaisertum_usterreich_balance
+				value > 0.50
 			}
 		}
 		
@@ -1100,7 +1450,7 @@
 		}
 		#mutually_exclusive = { focus =  }
 		x = -1
-		y = 2
+		y = 3
 		relative_position_id = SLO_stand_unswervingly
 
 		cost = 8
@@ -1176,7 +1526,7 @@
 		prerequisite = { focus = SLO_transforming_military_factories_to_civilians }
 		#mutually_exclusive = { focus =  }
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = SLO_transforming_military_factories_to_civilians
 
 		cost = 8
@@ -1763,7 +2113,7 @@
 		icon = GFX_focus_generic_aircraft_production
 		#prerequisite = { focus =  }
 		#mutually_exclusive = { focus =  }
-		x = 20
+		x = 22
 		y = 0
 		#relative_position_id =
 
@@ -1854,7 +2204,7 @@
 			}
 		}
 		
-		ai_will_do = { factor = 1 }
+		ai_will_do = { factor = 10 }
 	}
 	
 	focus = {
@@ -1945,7 +2295,7 @@
 			}
 		}
 		
-		ai_will_do = { factor = 1 }
+		ai_will_do = { factor = 2 }
 	}
 	
 	focus = {
@@ -1971,7 +2321,7 @@
 		
 		completion_reward = {}
 		
-		ai_will_do = { factor = 1 }
+		ai_will_do = { factor = 2 }
 	}
 ### ic ###	
 	focus = {
@@ -1979,7 +2329,7 @@
 		icon = GFX_focus_generic_industry_2
 		#prerequisite = { focus =  }
 		#mutually_exclusive = { focus =  }
-		x = 24
+		x = 26
 		y = 0
 		#relative_position_id =
 
@@ -2081,7 +2431,7 @@
 			}
 		}
 		
-		ai_will_do = { factor = 1 }
+		ai_will_do = { factor = 5 }
 	}
 	
 	focus = {
@@ -2133,7 +2483,7 @@
 			}
 		}
 		
-		ai_will_do = { factor = 1 }
+		ai_will_do = { factor = 2 }
 	}
 	
 	focus = {
@@ -2232,7 +2582,7 @@
 			}
 		}
 		
-		ai_will_do = { factor = 1 }
+		ai_will_do = { factor = 2 }
 	}
 	
 	focus = {
@@ -2666,7 +3016,7 @@
 			}
 		}
 		
-		ai_will_do = { factor = 1 }
+		ai_will_do = { factor = 5 }
 	}
 
 	focus = {
@@ -2700,7 +3050,7 @@
 			}
 		}
 		
-		ai_will_do = { factor = 1 }
+		ai_will_do = { factor = 3 }
 	}
 
 	focus = {
@@ -2734,7 +3084,7 @@
 			}
 		}
 		
-		ai_will_do = { factor = 1 }
+		ai_will_do = { factor = 3 }
 	}
 
 	focus = {
@@ -3099,7 +3449,7 @@
 			}
 		}
 		
-		ai_will_do = { factor = 1 }
+		ai_will_do = { factor = 5 }
 	}
 
 	focus = {

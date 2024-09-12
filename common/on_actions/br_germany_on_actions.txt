@@ -17,6 +17,11 @@ on_actions = {
 			FRA = {
 				country_event = { id = br_fra.1 days = 1 random_days = 7 }
 			}
+			SLO = {
+				#
+				add_dynamic_modifier = { modifier = SLO_bop_dynamic_modifier }
+				set_variable = { SLO_bop_move_weekly_var = 0.01 }
+			}
 		}
 	}
 

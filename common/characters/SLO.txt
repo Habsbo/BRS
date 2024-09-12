@@ -11,6 +11,9 @@ characters={
 		country_leader={
 			ideology=conservatism
 			expire="1965.1.1"
+			traits = {
+				grand_duchy_of_transleithanien
+			}
 			id=-1
 		}
 		field_marshal = {

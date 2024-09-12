@@ -361,9 +361,17 @@ leader_traits = {
 		random = no
 		sprite = 13
 
-		political_advisor_cost_factor = 0.05
 		sci_socialism_drift = -0.05
 		con_socialism_drift = -0.05
 		dem_socialism_drift = -0.05
+	}
+
+	grand_duchy_of_transleithanien = {
+		random = no
+		sprite = 13
+		political_advisor_cost_factor = -0.05
+		conscription_factor = 1.00
+
+		custom_modifier_tooltip = SLO_bop_move_to_kaisertum_usterreich_side_weekly_tt
 	}
 }

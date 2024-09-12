@@ -283,7 +283,7 @@ if = {
 	}
 }
 
-set_cosmetic_tag = QNG
+set_cosmetic_tag = ROC_peiking_gov
 #set_country_flag = MNG_empire_ruling_flag
 
 set_autonomy = {

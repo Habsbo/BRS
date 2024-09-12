@@ -78,7 +78,7 @@
  LUX_friedrich_schreiwung: "弗里德里希·苏瓦松"
  LUX_ehrlich_swabian: "阿尔利希·士瓦本"
  LUX_jean_d_adler: "让·达-德勒"
-#
+#france
 
 #HELLAS
  GRE_regency_council: "摄政议会"
@@ -100,7 +100,7 @@
  boris_mikhailovich_eikhenbaum: "鲍里斯·米哈伊洛维奇·艾肯鲍姆"
  RUS_boris_eikhenbaum: "$boris_mikhailovich_eikhenbaum$"
 #
- otto_kaiser_von_usterreich: "奥地利凯撒§Y奥托§!"
+ otto_kaiser_von_usterreich: "奥托一世"
 #U.S.
  alfred_mossman_landon: "阿尔弗雷德·莫兹曼·兰登"
  USA_alfred_mossman_landon: "$alfred_mossman_landon$"
@@ -126,12 +126,6 @@
  janko_jesensky: "杨·耶森斯基"
  ferdinand_catlos: "费迪南德·加特罗什"
 
-#benito mussolini
- VL_name_benito_mussolini: "$ITA_benito_mussolini$"
- VL_trait_benito_mussolini: ""
- VL_state_benito_mussolini: "§Y$ITA_benito_mussolini$§!\n$VL_trait_benito_mussolini$"
- VL_Dip_state_benito_mussolini: "§Y$ITA_benito_mussolini$§!\n$GetDipStatus$\n$VL_trait_benito_mussolini$"
- VL_desc_benito_mussolini: "§g§!"
 
 #SP chars
 #Leader1

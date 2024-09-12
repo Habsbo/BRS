@@ -82,4 +82,4 @@ set_popularities = {
 }
 
 
-set_cosmetic_tag = MAN_soviet_china
+set_cosmetic_tag = FENG # MAN_soviet_china
