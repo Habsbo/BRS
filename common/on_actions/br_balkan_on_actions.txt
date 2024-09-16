@@ -1,6 +1,18 @@
 on_actions = {
 	on_startup = {
 		effect = {
+			every_state = {
+				limit = {
+					is_core_of = SEF
+				}
+				remove_core_of = SEF
+			}
+			every_state = {
+				limit = {
+					is_core_of = YHT
+				}
+				remove_core_of = YHT
+			}
 			every_country = {
 				limit = { is_major = yes }
 				set_variable = { state_rank = 0 }

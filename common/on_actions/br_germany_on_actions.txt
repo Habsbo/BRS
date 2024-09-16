@@ -1,6 +1,21 @@
 on_actions = {
 	on_startup = {
 		effect = {
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = BEL
+						is_core_of = HOL
+					}
+				}
+				set_variable = { benelux_region_var = 1 }
+			}
+			every_state = {
+				limit = {
+					is_core_of = LUX
+				}
+				set_variable = { benelux_region_var = 0.5 }
+			}
 			RHE = {
 				every_state = { limit = { is_core_of = prev } remove_core_of = prev }
 			}

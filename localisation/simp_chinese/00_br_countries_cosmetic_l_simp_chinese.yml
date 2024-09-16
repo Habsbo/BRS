@@ -28,6 +28,12 @@
  FENG_ADJ: "奉系"
  SHX_ROC_Xibeijun: "晋绥两省军事行署"
  SHX_ROC_Xibeijun_DEF: "晋绥两省军事行署"
+ CHI_southeast_lok_sheng_federation: "中华东南六省联邦"
+ CHI_southeast_lok_sheng_federation_DEF: "中华东南六省联邦"
+ CHI_southeast_lok_sheng_federation_ADJ: "东南联省"
+ CHI_yi_huo_tuan: "义和团"
+ CHI_yi_huo_tuan_DEF: "义和团"
+ CHI_yi_huo_tuan_ADJ: "义和团"
 #法国
  FRA_republic: "法兰西共和国"
  FRA_republic_DEF: "法兰西共和国"

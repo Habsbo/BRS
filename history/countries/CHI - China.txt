@@ -1,5 +1,6 @@
-﻿capital = 613 # Nanjing
+﻿capital = 609 # PeiKing
 
+### oob ###
 oob = "CHI_1936"
 if = {
 	limit = { has_dlc = "Man the Guns" }
@@ -20,6 +21,7 @@ if = {
 	}
 }
 
+### characters ###
 recruit_character = CHI_chiang_kaishek
 recruit_character = CHI_zhang_guotao
 recruit_character = CHI_wang_jingwei
@@ -58,9 +60,7 @@ recruit_character = CHI_soong_mei_ling
 recruit_character = CHI_random_prince_of_terror
 recruit_character = CHI_lin_sen
 
-set_stability = 0.2
-set_war_support = 0.5
-# Starting tech
+### Starting tech ###
 set_technology = {
 	infantry_weapons = 1
 	gw_artillery = 1
@@ -101,107 +101,34 @@ if = {
 	}
 }
 
+### ideas ###
 add_ideas = {
+	#
+	extensive_conscription
+	free_trade
+	civilian_economy
+	#
+	br_laws_proxy
+	br_laws_premier
+	br_laws_landowner
+	br_laws_mainstream
+	br_laws_religious_people
+	br_laws_loyalist
+	#
+
+	#
+	CHI_nine_power_treaty
 	german_advisors
+	CHI_communist_uprisings
+	CHI_army_corruption_1
+	CHI_ineffective_bureaucracy
+	CHI_incompetent_officers
+	CHI_hyper_inflation_1
 }
-
-600 = { #Jiangxi
-	add_dynamic_modifier = { modifier = dense_rural_infrastructure }
-}
-749 = { #Huangshan
-	add_dynamic_modifier = { modifier = dense_rural_infrastructure }
-}
-606 = { #Anhui
-	add_dynamic_modifier = { modifier = dense_rural_infrastructure }
-}
-607 = { #Henan
-	add_dynamic_modifier = { modifier = dense_rural_infrastructure }
-}
-620 = { #Hubei
-	add_dynamic_modifier = { modifier = dense_rural_infrastructure }
-}
-602 = { #Hunan
-	add_dynamic_modifier = { modifier = dense_rural_infrastructure }
-}
-750 = { #Changde
-	add_dynamic_modifier = { modifier = dense_rural_infrastructure }
-}
-744 = { #Xian
-	add_dynamic_modifier = { modifier = dense_rural_infrastructure }
-}
-605 = { #Sichuan
-	add_dynamic_modifier = { modifier = dense_rural_infrastructure }
-}
-748 = { #Zunyi
-	add_dynamic_modifier = { modifier = dense_rural_infrastructure }
-}
-603 = { #Guizhu
-	add_dynamic_modifier = { modifier = dense_rural_infrastructure }
-}
-615 = { #Shanxi
-	add_dynamic_modifier = { modifier = dense_rural_infrastructure }
-}
-622 = { #Shaanxi
-	add_dynamic_modifier = { modifier = dense_rural_infrastructure }
-}
-325 = { #Yunnan
-	add_dynamic_modifier = { modifier = dense_rural_infrastructure }
-}
-325 = { #Dali
-	add_dynamic_modifier = { modifier = dense_rural_infrastructure }
-}
-
-if = {
-	limit = {
-		NOT = {
-			has_dlc = "Waking the Tiger"
-		}
-	}
-	add_ideas = {
-		CHI_communist_uprisings
-	}
-}
-
-
-if = {
-	limit = {
-		has_dlc = "Waking the Tiger"
-	}		
-	add_ideas = {
-		CHI_nine_power_treaty
-		CHI_army_corruption_1
-		CHI_ineffective_bureaucracy
-		CHI_incompetent_officers
-		free_trade
-		CHI_hyper_inflation_1
-	}
-}
-save_global_event_target_as = WTT_current_china_leader
 
 set_convoys = 40
 
-set_politics = {
-	ruling_party = dem_conservatism
-	last_election = "1936.1.1"
-	election_frequency = 48
-	elections_allowed = yes
-}
-
-set_popularities = {
-	soc_anarchism = 5 #无政府主义
-	vanwardism = 0 #革命社会主义
-	sci_socialism = 10 #科学社会主义
-	con_socialism = 0#保守社会主义
-	dem_socialism = 20 #社会民主主义
-	dem_liberalism = 20 #社会自由主义
-	dem_conservatism = 35 #保守民主主义
-	authoritarian = 0 #威权主义
-	fascism = 10 #民族主义/束棒
-	nationalism = 0 #国家社会主义
-	supernationalism = 0 #超国家社会主义
-}
-
-add_opinion_modifier = { target = PRC modifier = hostile_status }
+#add_opinion_modifier = { target = PRC modifier = hostile_status }
 
 ### VARIANTS ###
 # 1936 Start #
@@ -283,7 +210,6 @@ if = {
 	}
 }
 
-set_cosmetic_tag = ROC_peiking_gov
 #set_country_flag = MNG_empire_ruling_flag
 
 set_autonomy = {
@@ -309,4 +235,95 @@ set_autonomy = {
 set_autonomy = {
 	target = TIB
 	autonomy_state = autonomy_br_mandate_puppet
+}
+
+### peiking gov ###
+set_cosmetic_tag = ROC_peiking_gov
+set_country_flag = CHI_peiking_gov_flag
+
+save_global_event_target_as = WTT_current_china_leader
+
+set_politics = {
+	ruling_party = dem_conservatism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_popularities = {
+	#anarchist = 0
+	#vanwardism = 0
+	#
+	#sci_socialism = 0
+	#con_socialism = 0
+	dem_socialism = 10
+	#
+	dem_liberalism = 20
+	dem_conservatism = 40
+	#
+	authoritarian = 30
+	#
+	#fascism = 0
+	#nationalism = 0
+	#supernationalism = 0
+}
+
+set_stability = 0.2
+set_war_support = 0.3
+### southeast federation ###
+create_dynamic_country = {
+	original_tag = CHI
+	set_country_flag = CHI_southeast_federation_flag
+	set_politics = { ruling_party = authoritarian }
+	set_popularities = {
+		#anarchist = 0
+		#vanwardism = 0
+		#
+		#sci_socialism = 0
+		#con_socialism = 0
+		dem_socialism = 5
+		#
+		dem_liberalism = 10
+		dem_conservatism = 20
+		#
+		authoritarian = 60
+		#
+		fascism = 5
+		#nationalism = 0
+		#supernationalism = 0
+	}
+	set_stability = 0.3
+	set_war_support = 0.5
+	set_cosmetic_tag = CHI_southeast_lok_sheng_federation
+	set_research_slots = 2
+	reserve_dynamic_country = yes
+}
+
+### yi huo tuan ###
+create_dynamic_country = {
+	original_tag = CHI
+	set_country_flag = CHI_yi_huo_tuan_flag
+	set_politics = { ruling_party = authoritarian }
+	set_popularities = {
+		#anarchist = 0
+		#vanwardism = 0
+		#
+		#sci_socialism = 0
+		con_socialism = 10
+		#dem_socialism = 0
+		#
+		dem_liberalism = 10
+		dem_conservatism = 20
+		#
+		authoritarian = 30
+		#
+		fascism = 25
+		#nationalism = 0
+		#supernationalism = 0
+	}
+	set_stability = 0.6
+	set_war_support = 0.95
+	set_cosmetic_tag = CHI_yi_huo_tuan
+	set_research_slots = 2
+	reserve_dynamic_country = yes
 }

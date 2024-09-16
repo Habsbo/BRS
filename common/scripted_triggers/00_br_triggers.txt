@@ -164,6 +164,14 @@
 			}
 		}
 	}
+
+	is_chairman_of_berne_concert = {
+		custom_trigger_tooltip = {
+			tooltip = is_menber_of_berne_concert_tt
+			has_country_flag = br_menber_of_berne_concert_flag
+		}
+	}
+
 	is_menber_of_berne_concert = {
 		custom_trigger_tooltip = {
 			tooltip = is_menber_of_berne_concert_tt

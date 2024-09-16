@@ -268,3 +268,21 @@ FRC = {
 		is_subject_of = FRA
 	}
 }
+### china ###
+CPK = {
+	original_tag = CHI
+	
+	has_country_flag = CHI_peiking_gov_flag
+}
+
+SEF = {
+	original_tag = CHI
+	
+	has_country_flag = CHI_southeast_federation_flag
+}
+
+YHT = {
+	original_tag = CHI
+	
+	has_country_flag = CHI_yi_huo_tuan_flag
+}

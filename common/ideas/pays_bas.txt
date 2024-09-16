@@ -159,7 +159,7 @@ ideas = {
 			#on_remove = {}
 
 			modifier = {
-				#
+				custom_modifier_tooltip = BEL_vlaams_fostered_tt
 			}
 		}
 		BEL_wallonia_fostered = {
@@ -176,7 +176,7 @@ ideas = {
 			#on_remove = {}
 
 			modifier = {
-				#
+				custom_modifier_tooltip = BEL_wallonia_fostered_tt
 			}
 		}
 		BEL_need_more_jobs = {

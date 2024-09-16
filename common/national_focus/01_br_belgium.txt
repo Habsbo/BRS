@@ -27,6 +27,11 @@ focus_tree = {
 		cost = 8
 		
 		available = {
+			root = {
+				exists = yes
+				has_capitulated = no
+				has_civil_war = no
+			}
 			34 = {
 				is_owned_by = root
 				is_fully_controlled_by = root
@@ -42,6 +47,9 @@ focus_tree = {
 		complete_tooltip = {}
 		
 		completion_reward = {
+			#
+			br_BEL_bop_move_to_wallonia = yes
+			#
 			34 = {
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
@@ -70,7 +78,14 @@ focus_tree = {
 
 		cost = 8
 		
-		available = {}
+		available = {
+			root = {
+				exists = yes
+				has_capitulated = no
+				has_civil_war = no
+			}
+			#
+		}
 		
 		bypass = {}
 		
@@ -82,6 +97,8 @@ focus_tree = {
 		
 		completion_reward = {
 			#activate_mission = 
+			#
+			add_power_balance_value = { id = BEL_two_nations_balance value = 0.05 }
 			#
 			custom_effect_tooltip = national_industry_civilian_dynamic_modifier_added
 			add_to_variable = { nic_consumer_goods_expected_value = -0.05 tooltip = consumer_goods_expected_value_tt }
@@ -241,7 +258,14 @@ focus_tree = {
 		
 		complete_tooltip = {}
 		
-		completion_reward = {}
+		completion_reward = {
+			#
+			add_power_balance_value = { id = BEL_two_nations_balance value = 0.05 }
+			#
+			add_popularity = { ideology = sci_socialism popularity = 0.02 }
+			add_popularity = { ideology = con_socialism popularity = 0.03 }
+			add_popularity = { ideology = dem_socialism popularity = 0.03 }
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -343,7 +367,58 @@ focus_tree = {
 		
 		complete_tooltip = {}
 		
-		completion_reward = {}
+		completion_reward = {
+			random_core_state = {
+				prioritize = { 34 1146 }
+				limit = {
+					is_owned_and_controlled_by = root
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = industrial_complex level = 1 }
+			}
+			random_core_state = {
+				prioritize = { 34 1146 1148 }
+				limit = {
+					is_owned_and_controlled_by = root
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 }
+			}
+			random_core_state = {
+				prioritize = { 34 1146 1148 }
+				limit = {
+					is_owned_and_controlled_by = root
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 }
+			}
+			every_core_state = {
+				limit = {
+					is_owned_and_controlled_by = root
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -369,7 +444,9 @@ focus_tree = {
 		
 		complete_tooltip = {}
 		
-		completion_reward = {}
+		completion_reward = {
+			add_research_slot = 1
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -386,7 +463,17 @@ focus_tree = {
 
 		cost = 8
 		
-		available = {}
+		available = {
+			root = {
+				exists = yes
+				has_capitulated = no
+				has_civil_war = no
+			}
+			6 = {
+				is_owned_by = root
+				is_fully_controlled_by = root
+			}
+		}
 		
 		bypass = {}
 		
@@ -397,6 +484,8 @@ focus_tree = {
 		complete_tooltip = {}
 		
 		completion_reward = {
+			#
+			br_BEL_bop_move_to_vlaams = yes
 			#
 			custom_effect_tooltip = national_industry_civilian_dynamic_modifier_added
 			add_to_variable = { nic_consumer_goods_expected_value = -0.05 tooltip = consumer_goods_expected_value_tt }
@@ -418,7 +507,17 @@ focus_tree = {
 
 		cost = 8
 		
-		available = {}
+		available = {
+			root = {
+				exists = yes
+				has_capitulated = no
+				has_civil_war = no
+			}
+			6 = {
+				is_owned_by = root
+				is_fully_controlled_by = root
+			}
+		}
 		
 		bypass = {}
 		
@@ -429,6 +528,9 @@ focus_tree = {
 		complete_tooltip = {}
 		
 		completion_reward = {
+			#
+			br_BEL_bop_move_to_vlaams = yes
+			#
 			6 = {
 				add_resource = { type = oil amount = 6 }
 				add_extra_state_shared_building_slots = 2
@@ -460,6 +562,8 @@ focus_tree = {
 		complete_tooltip = {}
 		
 		completion_reward = {
+			#
+			br_BEL_bop_move_to_vlaams = yes
 			#
 			custom_effect_tooltip = national_industry_civilian_dynamic_modifier_added
 			add_to_variable = { nic_consumer_goods_expected_value = -0.05 tooltip = consumer_goods_expected_value_tt }
@@ -499,6 +603,8 @@ focus_tree = {
 		
 		completion_reward = {
 			#
+			br_BEL_bop_move_to_vlaams = yes
+			#
 			custom_effect_tooltip = national_industry_civilian_dynamic_modifier_added
 			add_to_variable = { nic_consumer_goods_expected_value = -0.05 tooltip = consumer_goods_expected_value_tt }
 			add_to_variable = { nic_production_speed_buildings_factor = 0.05 tooltip = production_speed_buildings_factor_tt }
@@ -534,6 +640,9 @@ focus_tree = {
 		complete_tooltip = {}
 		
 		completion_reward = {
+			#
+			br_BEL_bop_move_to_vlaams = yes
+			#
 			add_research_slot = 1
 		}
 		
@@ -688,7 +797,11 @@ focus_tree = {
 		
 		complete_tooltip = {}
 		
-		completion_reward = {}
+		completion_reward = {
+			#
+			br_BEL_bop_move_to_vlaams = yes
+			#
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -826,7 +939,7 @@ focus_tree = {
 		x = 16
 		y = 0
 
-		cost = 8
+		cost = 0
 		
 		available = { always = no }
 		
@@ -860,7 +973,7 @@ focus_tree = {
 		y = 0
 		relative_position_id = BEL_germany_militaries_left
 
-		cost = 8
+		cost = 0
 		
 		available = { always = no }
 		
@@ -927,7 +1040,15 @@ focus_tree = {
 
 		cost = 5
 		
-		available = {}
+		available = {
+			OR = {
+				has_idea = br_laws_feudalism
+				has_idea = br_laws_monarchy
+			}
+			OR = {
+				has_country_leader = { character =  ruling_only = yes }
+			}
+		}
 		
 		bypass = {}
 		
@@ -945,6 +1066,10 @@ focus_tree = {
 			#
 			add_popularity = { ideology = dem_conservatism popularity = 0.05 }
 			add_popularity = { ideology = authoritarian popularity = 0.05 }
+			#
+			var:country_leader = {
+				add_to_variable = { br_public_feeling_var = 30 tooltip = br_public_feeling_var_tt }
+			}
 		}
 		
 		ai_will_do = { factor = 1 }
@@ -1042,7 +1167,12 @@ focus_tree = {
 
 		cost = 8
 		
-		available = {}
+		available = {
+			power_balance_value = {
+				id = BEL_two_nations_balance
+				value > 0.5
+			}
+		}
 		
 		bypass = {}
 		
@@ -1670,7 +1800,15 @@ focus_tree = {
 
 		cost = 8
 		
-		available = {}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = BEL_united_benelux_tt
+				any_state = {
+					check_variable = { benelux_region_var = 1 }
+					is_fully_controlled_by = root
+				}
+			}
+		}
 		
 		bypass = {}
 		
@@ -1680,7 +1818,15 @@ focus_tree = {
 		
 		complete_tooltip = {}
 		
-		completion_reward = {}
+		completion_reward = {
+			every_controlled_state = {
+				limit = {
+					check_variable = { benelux_region_var > 0 }
+					NOT = { is_core_of = root }
+				}
+				add_core_of = root
+			}
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -2024,7 +2170,12 @@ focus_tree = {
 
 		cost = 8
 
-		available = {}
+		available = {
+			power_balance_value = {
+				id = BEL_two_nations_balance
+				value < -0.5
+			}
+		}
 		
 		bypass = {}
 		
@@ -2146,7 +2297,13 @@ focus_tree = {
 		
 		complete_tooltip = {}
 		
-		completion_reward = {}
+		completion_reward = {
+			#
+			add_political_power = 150
+			army_experience = 50
+			#
+			add_ideas = german_advisors
+		}
 		
 		ai_will_do = { factor = 1 }
 	}

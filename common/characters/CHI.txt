@@ -1,4 +1,30 @@
 characters={
+	CHI_wu_peifu={ #吴佩孚
+		name=wu_peifu
+		portraits={
+			civilian={
+				large=GFX_portrait_CHI_chiang_kaishek
+			}
+		}
+		country_leader={
+			ideology=despotism
+			traits={}
+			expire="1965.1.1.1"
+			id=-1
+		}
+		field_marshal = {
+			skill = 4
+
+			traits = {  }
+
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+
+			legacy_id = -1
+		}
+	}
 #
 	CHI_chiang_kaishek={ #蒋介石
 		name=CHI_chiang_kaishek

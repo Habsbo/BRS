@@ -63,3 +63,44 @@ br_clamp_br_public_feeling_var_has_tt = {
 		max = 100
 	}
 }
+
+br_BEL_bop_move_to_vlaams = {
+	if = {
+		limit = {
+			OR = {
+				has_idea = BEL_vlaams_fostered
+				NOT = {
+					power_balance_value = {
+						id = BEL_two_nations_balance
+						value < -0.20
+					}
+				}
+			}
+		}
+		add_power_balance_value = { id = BEL_two_nations_balance value = -0.10 }
+
+	}
+	else = {
+		
+	}
+}
+
+br_BEL_bop_move_to_wallonia = {
+	if = {
+		limit = {
+			OR = {
+				has_idea = BEL_wallonia_fostered
+				NOT = {
+					power_balance_value = {
+						id = BEL_two_nations_balance
+						value > 0.20
+					}
+				}
+			}
+		}
+		add_power_balance_value = { id = BEL_two_nations_balance value = 0.10 }
+	}
+	else = {
+		add_power_balance_value = { id = BEL_two_nations_balance value = 0.05 }
+	}
+}

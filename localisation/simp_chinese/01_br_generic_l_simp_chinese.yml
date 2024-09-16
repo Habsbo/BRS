@@ -3,6 +3,10 @@
  OK: "好的"
  is_border_state_tt: "是§Y边境§!省份"
  can_not_change_laws_tt: "无法改变政府的法律"
+ when_the_focus_selected_tt: "§Y当选中该国策，将会发生：§!"
+ when_the_focus_completed_tt: "§Y当完成该国策，将会发生：§!"
+ br_countryleader_custom_flavour_trigger_tt: "是拥有风味化称呼的国家"
+ is_menber_of_berne_concert_tt: "是§Y伯尔尼协议§!的一员"
 #
  the_House_of_Habsburg: "哈布斯堡王朝"
  debug_var.1: "[?root.br_var|0H]"
@@ -20,8 +24,6 @@
  communist_influence_2_desc: "$communist_influence_desc$"
 #
  br_can_not_change_laws_flag: "§R因国家精神而无法改变法律！§!"
- br_countryleader_custom_flavour_trigger_tt: "是拥有风味化称呼的国家"
- is_menber_of_berne_concert_tt: "是§Y伯尔尼协议§!的一员"
 #
  br_politicals_and_laws_decisions: "[root.GetName]的政治与法律境况"
 #
@@ -241,8 +243,6 @@
  br_clamp_br_public_feeling_var_tt: "\n角色的§Y$br_public_feeling$§!会被确保在-100至100的范围内。"
 
 #
- when_the_focus_selected_tt: "§Y当选中该国策，将会发生：§!"
- when_the_focus_completed_tt: "§Y当完成该国策，将会发生：§!"
 #how to play
  br_mod_introducing.1.title: "特殊机制介绍"
  br_mod_introducing.1.desc: ""

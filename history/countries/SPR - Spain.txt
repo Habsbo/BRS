@@ -512,10 +512,19 @@ recruit_character = SPR_miguel_primo_de_rivera #
 set_cosmetic_tag = SPR_kingdom
 #法律
 add_ideas = {
+	#
+	limited_conscription
+	export_focus
+	civilian_economy
+	#
 	br_laws_monarchy
 	br_laws_premier
 	br_laws_suffrage_prohibited
 	br_laws_national_state
 	br_laws_religious_people
 	br_laws_loyalist
+	#
 }
+
+set_country_flag = br_dynamic_modifier_not_generic_flag
+set_country_flag = br_dynamic_modifier_not_generic_var_flag

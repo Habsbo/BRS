@@ -8502,4 +8502,30 @@ spriteTypes = {
 		name = "GFX_portrait_AUS_archduke_maximilian_von_habsburg_small"
 		texturefile = "gfx/interface/ideas/SLO/Portrait_AUS_archduke_maximilian_von_habsburg_small.tga"
 	}
+
+##
+	#杨靖宇
+	spriteType = {
+		name = "GFX_portrait_CPC_yang_jingyu"
+		texturefile = "gfx/leaders/China/CPC/Portrait_PRC_Yang_jingyu.dds"
+	}
+
+	#杨靖宇2
+	spriteType = {
+		name = "GFX_portrait_CPC_yang_jingyu_alt"
+		texturefile = "gfx/leaders/China/CPC/Portrait_PRC_Yang_jingyu_2.dds"
+	}
+
+	#赵尚志
+	spriteType = {
+		name = "GFX_portrait_CPC_zhao_shangzhi"
+		texturefile = "gfx/leaders/China/CPC/Portrait_PRC_Zhao_Shangzhi.dds"
+	}
+
+	#赵一曼
+	spriteType = {
+		name = "GFX_portrait_CPC_zhao_yiman"
+		texturefile = "gfx/leaders/China/CPC/Portrait_PRC_Zhao_Yiman.dds"
+	}
+
 }
