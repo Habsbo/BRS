@@ -1,6 +1,7 @@
 on_actions = {
 	on_startup = {
 		effect = {
+			BEL = { country_event = br_bel.1 }
 			every_state = {
 				limit = {
 					OR = {
@@ -16,6 +17,34 @@ on_actions = {
 				}
 				set_variable = { benelux_region_var = 0.5 }
 			}
+			#
+			every_state = {
+				limit = { is_core_of = HOL }
+				set_variable = { br_culture_dutch = 1 }
+			}
+			#
+			6 = { set_variable = { br_culture_vlaams = 1 } }
+			1145 = { set_variable = { br_culture_vlaams = 1 } }
+			1146 = { set_variable = { br_culture_vlaams = 0.5 } }
+			#
+			34 = { set_variable = { br_culture_wallonia = 1 } }
+			1147 = { set_variable = { br_culture_wallonia = 1 } }
+			1148 = { set_variable = { br_culture_wallonia = 1 } }
+			1146 = { set_variable = { br_culture_wallonia = 0.5 } }
+			every_state = {
+				limit = {
+					is_core_of = WAL
+					NOT = { check_variable = { br_culture_wallonia > 0.5 } }
+				}
+				remove_core_of = WAL
+			}
+			every_state = {
+				limit = {
+					check_variable = { br_culture_wallonia = 0.5 }
+				}
+				add_claim_by = WAL
+			}
+			#
 			RHE = {
 				every_state = { limit = { is_core_of = prev } remove_core_of = prev }
 			}

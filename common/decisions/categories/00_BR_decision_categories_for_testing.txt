@@ -4,6 +4,7 @@ br_debug_decisions = {
 		is_debug = yes
 		is_ai = no
 	}
+	priority = -1
 }
 
 br_na_war_decisions = {

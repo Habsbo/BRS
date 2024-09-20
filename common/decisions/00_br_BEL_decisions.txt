@@ -103,6 +103,7 @@ br_bel_the_treaty = {
 				tooltip_side = BEL_wallonia_right_side
 			}
 			add_popularity = { ideology = FRA popularity = 0.005 }
+			add_to_variable = { br_bel_the_treaty_fra_value = 3 tooltip = br_bel_the_treaty_fra_value_tt }
 			hidden_effect = {
 				if = {
 					limit = {  }
@@ -222,7 +223,7 @@ br_bel_the_treaty = {
 
 		priority = 10
 	}
-	br_bel_ = {
+	br_bel_the_treaty_ask_for_support_gov.fra = {
 		icon = generic_political_discourse
 
 		available = {
@@ -234,11 +235,10 @@ br_bel_the_treaty = {
 		}
 
 		fire_only_once = no
-		days_remove = 90
-		days_re_enable = 90
+		days_re_enable = 14
 		cancel_if_not_visible = yes
 
-		cost = 100
+		cost = br_bel_the_treaty_fra_support_cost
 
 		modifier = {
 			#
@@ -246,13 +246,24 @@ br_bel_the_treaty = {
 
 		complete_effect = {
 			#
+			custom_effect_tooltip = br_bel_the_treaty_ask_for_support_gov_tt
+			add_to_variable = { br_bel_the_treaty_fra_support_cost = 5 }
+			#
+			event_target:br_bel_the_treaty_FRA = { country_event = { id = br_bel_support_gov.1 days = 7 random_days = 14 } }
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_capital = yes
+				is_core_of = event_target:br_bel_the_treaty_FRA
+			}
 		}
 
 		ai_will_do = {
 			base = 0
 		}
 	}
-	br_bel_ = {
+	br_bel_the_treaty_ask_for_support_gov.ger = {
 		icon = generic_political_discourse
 
 		available = {
@@ -264,11 +275,10 @@ br_bel_the_treaty = {
 		}
 
 		fire_only_once = no
-		days_remove = 90
-		days_re_enable = 90
+		days_re_enable = 14
 		cancel_if_not_visible = yes
 
-		cost = 100
+		cost = br_bel_the_treaty_ger_support_cost
 
 		modifier = {
 			#
@@ -276,10 +286,80 @@ br_bel_the_treaty = {
 
 		complete_effect = {
 			#
+			custom_effect_tooltip = br_bel_the_treaty_ask_for_support_gov_tt
+			add_to_variable = { br_bel_the_treaty_ger_support_cost = 5 }
+			event_target:br_bel_the_treaty_GER = { country_event = { id = br_bel_support_gov.1 days = 7 random_days = 14 } }
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_capital = yes
+				is_core_of = event_target:br_bel_the_treaty_GER
+			}
 		}
 
 		ai_will_do = {
 			base = 0
+		}
+	}
+	br_bel_fate_of_bel = {
+		icon = generic_political_discourse
+
+		available = {
+			OR = {
+				AND = {
+					check_variable = {
+						br_bel_the_treaty_fra_value > var:br_bel_the_treaty_ger_value
+						tooltip = br_bel_the_treaty_fra_value_better_tt
+					}
+					check_variable = {
+						br_bel_the_treaty_fra_value > 9
+						tooltip = br_bel_the_treaty_fra_value_no_less_than_10_tt
+					}
+				}
+				AND = {
+					check_variable = {
+						br_bel_the_treaty_ger_value > var:br_bel_the_treaty_fra_value
+						tooltip = br_bel_the_treaty_ger_value_better_tt
+					}
+					check_variable = {
+						br_bel_the_treaty_ger_value > 9
+						tooltip = br_bel_the_treaty_ger_value_no_less_than_10_tt
+					}
+				}
+			}
+		}
+
+		visible = {
+			#
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		modifier = {
+			#
+		}
+
+		complete_effect = {
+			if = {
+				limit = {
+					check_variable = { br_bel_the_treaty_fra_value > var:br_bel_the_treaty_ger_value }
+				}
+				event_target:br_bel_the_treaty_GER = {
+					country_event = { id = br_bel.101 }
+				}
+			}
+			else = {
+				event_target:br_bel_the_treaty_FRA = {
+					country_event = { id = br_bel.101 }
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 100
 		}
 	}
 }

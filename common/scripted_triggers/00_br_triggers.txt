@@ -216,3 +216,32 @@
 			check_variable = { br_culture_deutsch = 1 }
 		}
 	}
+
+###
+	br_culture_is_wallonia_state = {
+		custom_trigger_tooltip = {
+			tooltip = br_culture_is_wallonia_state_tt
+			check_variable = { br_culture_wallonia = 0.5 compare = greater_than_or_equals }
+		}
+	}
+
+	br_culture_is_vlaams_state = {
+		custom_trigger_tooltip = {
+			tooltip = br_culture_is_vlaams_state_tt
+			check_variable = { br_culture_vlaams = 0.5 compare = greater_than_or_equals }
+		}
+	}
+
+	br_culture_is_dutch_state = {
+		custom_trigger_tooltip = {
+			tooltip = br_culture_is_dutch_state_tt
+			check_variable = { br_culture_dutch = 0.5 compare = greater_than_or_equals }
+		}
+	}
+
+	br_is_benelux_state = {
+		custom_trigger_tooltip = {
+			tooltip = br_is_benelux_state_tt
+			check_variable = { benelux_region_var > 0 }
+		}
+	}

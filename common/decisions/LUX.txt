@@ -873,9 +873,7 @@ br_hearts_of_lux = {
 br_electrification_of_benelux = {
 	br_electrification_of_benelux_mission.hol = {
 		icon = generic_electricity
-		activation = {
-			#
-		}
+		activation = { always = no }
 
 		available = {
 			7 = { infrastructure > 3 industrial_complex > 7 }
@@ -894,7 +892,7 @@ br_electrification_of_benelux = {
 			}
 		}
 		
-		is_good = yes
+		is_good = no
 		days_mission_timeout = 365
 		selectable_mission = no
 
@@ -920,12 +918,11 @@ br_electrification_of_benelux = {
 	}
 	br_electrification_of_benelux_mission.vlaams = {
 		icon = generic_electricity
-		activation = {
-			#
-		}
+		activation = { always = no }
 
 		available = {
 			6 = { infrastructure > 3 industrial_complex > 7 }
+			1145 = { infrastructure > 3 industrial_complex > 7 }
 		}
 
 		cancel_trigger = {
@@ -937,7 +934,7 @@ br_electrification_of_benelux = {
 			}
 		}
 		
-		is_good = yes
+		is_good = no
 		days_mission_timeout = 365
 		selectable_mission = no
 
@@ -951,7 +948,10 @@ br_electrification_of_benelux = {
 
 		highlight_states = {
 			highlight_states_trigger = {
-				state = 6
+				OR = {
+					state = 6
+					state = 1145
+				}
 			}
 		}
 
@@ -959,12 +959,12 @@ br_electrification_of_benelux = {
 	}
 	br_electrification_of_benelux_mission.wallonia = {
 		icon = generic_electricity
-		activation = {
-			#
-		}
+		activation = { always = no }
 
 		available = {
 			34 = { infrastructure > 3 industrial_complex > 7 }
+			1147 = { infrastructure > 3 industrial_complex > 7 }
+			1148 = { infrastructure > 3 industrial_complex > 7 }
 		}
 
 		cancel_trigger = {
@@ -976,7 +976,7 @@ br_electrification_of_benelux = {
 			}
 		}
 		
-		is_good = yes
+		is_good = no
 		days_mission_timeout = 365
 		selectable_mission = no
 
@@ -990,7 +990,11 @@ br_electrification_of_benelux = {
 
 		highlight_states = {
 			highlight_states_trigger = {
-				state = 34
+				OR = {
+					state = 34
+					state = 1147
+					state = 1148
+				}
 			}
 		}
 
@@ -998,9 +1002,7 @@ br_electrification_of_benelux = {
 	}
 	br_electrification_of_benelux_mission.luxembourg = {
 		icon = generic_electricity
-		activation = {
-			#
-		}
+		activation = { always = no }
 
 		available = {
 			8 = { infrastructure > 3 industrial_complex > 7 }
@@ -1015,7 +1017,7 @@ br_electrification_of_benelux = {
 			}
 		}
 		
-		is_good = yes
+		is_good = no
 		days_mission_timeout = 365
 		selectable_mission = no
 
@@ -1042,17 +1044,67 @@ br_electrification_of_benelux = {
 		}
 		target_trigger = {
 			FROM = {
-				hidden_trigger = {
-					OR = {
-						state = 6
-						state = 7
-						state = 8
-						state = 34
-						state = 35
-						state = 36
+				is_owned_by = root
+				is_fully_controlled_by = root
+				br_is_benelux_state = yes
+			}
+		}
+
+		available = {
+			OR = {
+				AND = {
+					has_completed_focus = BEL_beating_wallonia
+					FROM = { br_culture_is_wallonia_state = yes }
+				}
+				AND = {
+					has_completed_focus = BEL_revitalization_of_vlaanderen
+					FROM = {
+						OR = {
+							br_culture_is_vlaams_state = yes
+							br_culture_is_dutch_state = yes
+						}
 					}
 				}
-				is_owned_by = root
+				AND = {
+					OR = {
+						has_completed_focus = BEL_beating_wallonia
+						has_completed_focus = BEL_revitalization_of_vlaanderen
+					}
+					NOT = {
+						has_idea = BEL_spoken_conflicts
+						has_power_balance = { id = BEL_two_nations_balance }
+					}
+					FROM = { br_is_benelux_state = yes }
+				}
+			}
+		}
+
+		visible = {
+			OR = {
+				AND = {
+					has_completed_focus = BEL_beating_wallonia
+					FROM = { br_culture_is_wallonia_state = yes }
+				}
+				AND = {
+					has_completed_focus = BEL_revitalization_of_vlaanderen
+					FROM = {
+						OR = {
+							br_culture_is_vlaams_state = yes
+							br_culture_is_dutch_state = yes
+						}
+					}
+				}
+				AND = {
+					OR = {
+						has_completed_focus = BEL_beating_wallonia
+						has_completed_focus = BEL_revitalization_of_vlaanderen
+					}
+					NOT = {
+						has_idea = BEL_spoken_conflicts
+						has_power_balance = { id = BEL_two_nations_balance }
+					}
+					FROM = { br_is_benelux_state = yes }
+				}
 			}
 		}
 
@@ -1067,11 +1119,29 @@ br_electrification_of_benelux = {
 		}
 
 		state_target = yes
-		on_map_mode = decision_view_only
+		on_map_mode = map_and_decisions_view
 
 		complete_effect = {
 			FROM = {
 				add_extra_state_shared_building_slots = 1
+				if = {
+					limit = {
+						ROOT = { has_power_balance = { id = BEL_two_nations_balance } }
+						check_variable = { br_culture_wallonia > 0 }
+					}
+					ROOT = {
+						add_power_balance_value = { id = BEL_two_nations_balance value = 0.01 }
+					}
+				}
+				if = {
+					limit = {
+						ROOT = { has_power_balance = { id = BEL_two_nations_balance } }
+						check_variable = { br_culture_vlaams > 0 }
+					}
+					ROOT = {
+						add_power_balance_value = { id = BEL_two_nations_balance value = -0.01 }
+					}
+				}
 			}
 		}
 	}
@@ -1082,16 +1152,68 @@ br_electrification_of_benelux = {
 		}
 		target_trigger = {
 			FROM = {
-				OR = {
-					state = 6
-					state = 7
-					state = 8
-					state = 34
-					state = 35
-					state = 36
-				}
-				free_building_slots = { building = industrial_complex size > 0 include_locked = no }
 				is_owned_by = root
+				is_fully_controlled_by = root
+				br_is_benelux_state = yes
+				free_building_slots = { building = industrial_complex size > 0 include_locked = no }
+			}
+		}
+
+		available = {
+			OR = {
+				AND = {
+					has_completed_focus = BEL_electrification_of_wallonia
+					FROM = { br_culture_is_wallonia_state = yes }
+				}
+				AND = {
+					has_completed_focus = BEL_revitalization_of_vlaanderen
+					FROM = {
+						OR = {
+							br_culture_is_vlaams_state = yes
+							br_culture_is_dutch_state = yes
+						}
+					}
+				}
+				AND = {
+					OR = {
+						has_completed_focus = BEL_electrification_of_wallonia
+						has_completed_focus = BEL_revitalization_of_vlaanderen
+					}
+					NOT = {
+						has_idea = BEL_spoken_conflicts
+						has_power_balance = { id = BEL_two_nations_balance }
+					}
+					FROM = { br_is_benelux_state = yes }
+				}
+			}
+		}
+
+		visible = {
+			OR = {
+				AND = {
+					has_completed_focus = BEL_electrification_of_wallonia
+					FROM = { br_culture_is_wallonia_state = yes }
+				}
+				AND = {
+					has_completed_focus = BEL_revitalization_of_vlaanderen
+					FROM = {
+						OR = {
+							br_culture_is_vlaams_state = yes
+							br_culture_is_dutch_state = yes
+						}
+					}
+				}
+				AND = {
+					OR = {
+						has_completed_focus = BEL_electrification_of_wallonia
+						has_completed_focus = BEL_revitalization_of_vlaanderen
+					}
+					NOT = {
+						has_idea = BEL_spoken_conflicts
+						has_power_balance = { id = BEL_two_nations_balance }
+					}
+					FROM = { br_is_benelux_state = yes }
+				}
 			}
 		}
 
@@ -1104,11 +1226,55 @@ br_electrification_of_benelux = {
 		}
 
 		state_target = yes
-		on_map_mode = decision_view_only
+		on_map_mode = map_and_decisions_view
 
 		remove_effect = {
 			FROM = {
 				add_building_construction = { type = industrial_complex level = 1 }
+				if = {
+					limit = {
+						ROOT = { has_power_balance = { id = BEL_two_nations_balance } }
+						OR = {
+							AND = {
+								br_culture_is_wallonia_state = yes
+								NOT = { br_culture_is_vlaams_state = yes }
+							}
+							AND = {
+								br_culture_is_vlaams_state = yes
+								br_culture_is_wallonia_state = yes
+								power_balance_value = {
+									id = BEL_two_nations_balance
+									value > 0.2
+								}
+							}
+						}
+					}
+					ROOT = {
+						add_power_balance_value = { id = BEL_two_nations_balance value = 0.01 }
+					}
+				}
+				if = {
+					limit = {
+						ROOT = { has_power_balance = { id = BEL_two_nations_balance } }
+						OR = {
+							AND = {
+								br_culture_is_vlaams_state = yes
+								NOT = { br_culture_is_wallonia_state = yes }
+							}
+							AND = {
+								br_culture_is_vlaams_state = yes
+								br_culture_is_wallonia_state = yes
+								power_balance_value = {
+									id = BEL_two_nations_balance
+									value < -0.2
+								}
+							}
+						}
+					}
+					ROOT = {
+						add_power_balance_value = { id = BEL_two_nations_balance value = -0.01 }
+					}
+				}
 			}
 		}
 	}

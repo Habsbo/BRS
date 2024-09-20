@@ -17,8 +17,6 @@ country_event = { #
 	option = {
 		name = br_bel.1.a #
 
-		country_event = { id = br_bel.2 days = 0 } #
-
 		ai_chance = { factor = 5 }
 	}
 
@@ -46,16 +44,12 @@ country_event = { #
 
 	option = {
 		name = br_bel.2.a #
-
-		FRA = { country_event = { id = br_bel.3 days = 1 } }
-
+		
 		ai_chance = { factor = 5 }
 	}
 
 	option = {
 		name = br_bel.2.b #
-
-		GER = { country_event = { id = br_bel.3 days = 1 } }
 
 		ai_chance = { factor = 5 }
 	}
@@ -77,11 +71,6 @@ country_event = { #
 
 	option = {
 		name = br_bel.3.a #
-
-		if = {
-			limit = { original_tag = GER }
-			BEL = { complete_national_focus = BEL_germany_militaries_left }
-		}
 
 		ai_chance = { factor = 5 }
 	}
@@ -151,10 +140,13 @@ country_event = { #
 	}
 }
 
+###
+add_namespace = br_bel_support_gov
+###
 country_event = { #
-	id = br_bel.3
-	title = br_bel.3.title
-	desc = br_bel.3.desc
+	id = br_bel_support_gov.1
+	title = br_bel_support_gov.1.title
+	desc = br_bel_support_gov.1.desc
 	#picture = GFX_report_event_chinese_soldiers_fighting
 
 	fire_only_once = no
@@ -165,7 +157,276 @@ country_event = { #
 	}
 
 	option = {
-		name = br_bel.3.a #
+		name = br_bel_support_gov.1.a #fra special option
+		
+		FROM = {
+			effect_tooltip = {
+				add_stability = 0.05
+				br_BEL_bop_move_to_wallonia = yes
+				every_core_state = {
+					limit = {
+						is_controlled_by = root
+						OR = {
+							state = 34
+							state = 1148
+						}
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+				}
+				add_to_variable = { br_bel_the_treaty_fra_value = 3 tooltip = br_bel_the_treaty_fra_value_tt }
+			}
+			#
+			country_event = { id = br_bel_support_gov.2 }
+		}
+
+		ai_chance = { factor = 2 }
+	}
+
+	option = {
+		name = br_bel_support_gov.1.b #ger special option
+
+		FROM = {
+			effect_tooltip = {
+				add_stability = 0.05
+				br_BEL_bop_move_to_vlaams = yes
+				every_core_state = {
+					limit = {
+						is_controlled_by = root
+						OR = {
+							state = 6
+							state = 1145
+						}
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+				}
+				add_to_variable = { br_bel_the_treaty_ger_value = 3 tooltip = br_bel_the_treaty_ger_value_tt }
+			}
+			#
+			country_event = { id = br_bel_support_gov.2 }
+		}
+
+		ai_chance = { factor = 2 }
+	}
+
+	option = {
+		name = br_bel_support_gov.1.c #
+		
+		if = {
+			limit = {
+				original_tag = FRA
+			}
+			FROM = {
+				effect_tooltip = {
+					add_stability = 0.01
+					br_BEL_bop_move_to_wallonia = yes
+					add_to_variable = { br_bel_the_treaty_fra_value = 1 tooltip = br_bel_the_treaty_fra_value_tt }
+				}
+			}
+		}
+		if = {
+			limit = {
+				original_tag = GER
+			}
+			FROM = {
+				effect_tooltip = {
+					add_stability = 0.01
+					br_BEL_bop_move_to_vlaams = yes
+					add_to_variable = { br_bel_the_treaty_ger_value = 1 tooltip = br_bel_the_treaty_ger_value_tt }
+				}
+			}
+		}
+		FROM = {
+			#
+			country_event = { id = br_bel_support_gov.3 }
+		}
+
+		ai_chance = { factor = 2 }
+	}
+
+	option = {
+		name = br_bel_support_gov.1.d #
+
+		FROM = {
+			if = {
+				limit = {
+					power_balance_value = { id = BEL_two_nations_balance value > 0.2 }
+				}
+				add_stability = -0.01
+				br_BEL_bop_move_to_vlaams = yes
+			}
+			else_if = {
+				limit = {
+					power_balance_value = { id = BEL_two_nations_balance value < -0.2 }
+				}
+				add_stability = -0.01
+				br_BEL_bop_move_to_wallonia = yes
+			}
+			else = {
+				add_stability = -0.05
+				random_list = {
+					5 = { br_BEL_bop_move_to_vlaams = yes }
+					5 = { br_BEL_bop_move_to_wallonia = yes }
+				}
+			}
+			#
+			country_event = { id = br_bel_support_gov.4 }
+		}
+
+		ai_chance = {
+			base = 0
+			modifier = {
+				has_stability < 0.35
+				add = 5
+			}
+		}
+	}
+}
+
+country_event = { #
+	id = br_bel_support_gov.2
+	title = br_bel_support_gov.2.title
+	desc = br_bel_support_gov.2.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {}
+	}
+
+	option = {
+		name = br_bel_support_gov.2.a #
+
+		add_stability = 0.05
+		
+		if = {
+			limit = {
+				FROM = { original_tag = FRA }
+			}
+			br_BEL_bop_move_to_wallonia = yes
+			every_core_state = {
+				limit = {
+					is_controlled_by = root
+					OR = {
+						state = 34
+						state = 1148
+					}
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			add_to_variable = { br_bel_the_treaty_fra_value = 3 tooltip = br_bel_the_treaty_fra_value_tt }
+		}
+		else = {
+			br_BEL_bop_move_to_vlaams = yes
+			every_core_state = {
+				limit = {
+					is_controlled_by = root
+					OR = {
+						state = 6
+						state = 1145
+					}
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			add_to_variable = { br_bel_the_treaty_ger_value = 3 tooltip = br_bel_the_treaty_ger_value_tt }
+		}
+
+
+		ai_chance = { factor = 5 }
+	}
+}
+
+country_event = { #
+	id = br_bel_support_gov.3
+	title = br_bel_support_gov.3.title
+	desc = br_bel_support_gov.3.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {}
+	}
+
+	option = {
+		name = br_bel_support_gov.3.a #
+
+		add_stability = 0.01
+		if = {
+			limit = {
+				FROM = { original_tag = FRA }
+			}
+			br_BEL_bop_move_to_wallonia = yes
+			add_to_variable = { br_bel_the_treaty_fra_value = 1 tooltip = br_bel_the_treaty_fra_value_tt }
+		}
+		else = {
+			br_BEL_bop_move_to_vlaams = yes
+			add_to_variable = { br_bel_the_treaty_ger_value = 1 tooltip = br_bel_the_treaty_ger_value_tt }
+		}
+
+		ai_chance = { factor = 5 }
+	}
+}
+
+country_event = { #
+	id = br_bel_support_gov.4
+	title = br_bel_support_gov.4.title
+	desc = br_bel_support_gov.4.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {}
+	}
+
+	option = {
+		name = br_bel_support_gov.4.a #
+
+		if = {
+			limit = {
+				power_balance_value = { id = BEL_two_nations_balance value > 0.2 }
+			}
+			add_stability = -0.01
+			br_BEL_bop_move_to_vlaams = yes
+		}
+		else_if = {
+			limit = {
+				power_balance_value = { id = BEL_two_nations_balance value < -0.2 }
+			}
+			add_stability = -0.01
+			br_BEL_bop_move_to_wallonia = yes
+		}
+		else = {
+			add_stability = -0.05
+			random_list = {
+				5 = { br_BEL_bop_move_to_vlaams = yes }
+				5 = { br_BEL_bop_move_to_wallonia = yes }
+			}
+		}
 
 		ai_chance = { factor = 5 }
 	}
@@ -316,13 +577,92 @@ country_event = { #
 	option = {
 		name = br_bel.101.a #
 
-		ai_chance = { factor = 5 }
+		FROM = {
+			complete_national_focus = BEL_discrete_nations
+		}
+
+		ai_chance = { factor = 15 }
 	}
 
 	option = {
 		name = br_bel.101.b #
 
+		FROM = {
+			complete_national_focus = BEL_discrete_nations
+		}
+
 		ai_chance = { factor = 5 }
+	}
+
+	option = {
+		name = br_bel.101.c #
+
+		FROM = {
+			complete_national_focus = BEL_germany_militaries_left
+		}
+
+		ai_chance = { factor = 10 }
+	}
+}
+
+
+###
+add_namespace = br_bel_news
+###
+news_event = {
+	id = br_bel_news.1
+	title = br_bel_news.1.title
+	desc = br_bel_news.1.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name =  br_bel_news.1.a
+		ai_chance = { base = 1 }
+	}
+
+	option = {
+		name =  br_bel_news.1.b
+		ai_chance = { base = 1 }
+	}
+}
+
+news_event = {
+	id = br_bel_news.2
+	title = br_bel_news.2.title
+	desc = br_bel_news.2.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name =  br_bel_news.2.a
+		ai_chance = { base = 1 }
+	}
+
+	option = {
+		name =  br_bel_news.2.b
+		ai_chance = { base = 1 }
+	}
+}
+
+news_event = {
+	id = br_bel_news.3
+	title = br_bel_news.3.title
+	desc = br_bel_news.3.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name =  br_bel_news.3.a
+		ai_chance = { base = 1 }
+	}
+
+	option = {
+		name =  br_bel_news.3.b
+		ai_chance = { base = 1 }
 	}
 }
 ###

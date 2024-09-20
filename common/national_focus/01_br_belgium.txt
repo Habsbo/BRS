@@ -48,6 +48,8 @@ focus_tree = {
 		
 		completion_reward = {
 			#
+			unlock_decision_tooltip = br_zoning_for_benelux_electrificating
+			#
 			br_BEL_bop_move_to_wallonia = yes
 			#
 			34 = {
@@ -66,6 +68,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	###
 	focus = {
 		id = BEL_electrification_of_wallonia
@@ -96,7 +99,7 @@ focus_tree = {
 		complete_tooltip = {}
 		
 		completion_reward = {
-			#activate_mission = 
+			activate_mission = br_electrification_of_benelux_mission.wallonia
 			#
 			add_power_balance_value = { id = BEL_two_nations_balance value = 0.05 }
 			#
@@ -135,6 +138,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	focus = {
 		id = BEL_food_industry
 		icon = GFX_focus_generic_coffee
@@ -160,6 +164,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	focus = {
 		id = BEL_industrial_upgrading
 		icon = GFX_focus_generic_industry_2
@@ -185,6 +190,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	focus = {
 		id = BEL_construct_developing_country
 		icon = GFX_focus_generic_public_works
@@ -210,6 +216,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	focus = {
 		id = BEL_next_years_plan
 		icon = GFX_focus_generic_industry_3
@@ -236,6 +243,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	###
 	focus = {
 		id = BEL_wllonian_labout_movement
@@ -269,6 +277,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	#
 	focus = {
 		id = BEL_labour_union_acts
@@ -295,6 +304,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	focus = {
 		id = BEL_higher_union_rate
 		icon = GFX_goal_generic_intelligence_exchange
@@ -320,6 +330,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	#
 	focus = {
 		id = BEL_suppress_worker_revolution
@@ -346,6 +357,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	focus = {
 		id = BEL_creating_advantages_of_industry
 		icon = GFX_goal_generic_construct_civ_factory
@@ -422,6 +434,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	#
 	focus = {
 		id = BEL_standard_education
@@ -484,6 +497,7 @@ focus_tree = {
 		complete_tooltip = {}
 		
 		completion_reward = {
+			activate_mission = br_electrification_of_benelux_mission.vlaams
 			#
 			br_BEL_bop_move_to_vlaams = yes
 			#
@@ -496,6 +510,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	focus = {
 		id = BEL_interests_of_offshore_oil
 		icon = GFX_focus_generic_offshore_oil_rig
@@ -540,6 +555,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	focus = {
 		id = BEL_development_of_vlaanderen
 		icon = GFX_focus_generic_low_cost_housing
@@ -580,6 +596,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	focus = {
 		id = BEL_highway_and_agricultural_machinery
 		icon = GFX_focus_generic_road_investment
@@ -618,6 +635,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	focus = {
 		id = BEL_education_of_vlaams
 		icon = GFX_focus_generic_university_1
@@ -648,6 +666,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	focus = {
 		id = BEL_industrial_workers
 		icon = GFX_focus_generic_refit_civilian_ships
@@ -674,6 +693,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	#
 	focus = {
 		id = BEL_work_family_comity
@@ -700,6 +720,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	focus = {
 		id = BEL_christian_faith
 		icon = GFX_
@@ -725,6 +746,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	focus = {
 		id = BEL_bonds_for_public_service
 		icon = GFX_
@@ -750,6 +772,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	focus = {
 		id = BEL_united_right_front
 		icon = GFX_
@@ -775,6 +798,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	#
 	focus = {
 		id = BEL_support_vlaanderen_shipbuilding_industry
@@ -805,6 +829,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	focus = {
 		id = BEL_light_hull_project
 		icon = GFX_goal_generic_navy_anti_submarine
@@ -830,6 +855,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	focus = {
 		id = BEL_medium_hull_and_artillery
 		icon = GFX_goal_generic_navy_cruiser
@@ -855,6 +881,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	focus = {
 		id = BEL_marine_training
 		icon = GFX_focus_generic_naval_discipline
@@ -880,6 +907,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	focus = {
 		id = BEL_maritime_combat_platforms
 		icon = GFX_goal_generic_navy_carrier
@@ -905,6 +933,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	focus = {
 		id = BEL_naval_theory_reform
 		icon = GFX_goal_generic_navy_doctrines_tactics
@@ -955,16 +984,22 @@ focus_tree = {
 			add_political_power = 200
 			add_war_support = -0.10
 			add_stability = 0.10
-			custom_effect_tooltip = if_they_accept_newline_tt
+			#
+			every_owned_state = {
+				limit = { is_demilitarized_zone = yes }
+				set_demilitarized_zone = no
+			}
+			#
 			custom_effect_tooltip = swap_idea_BEL_limited_by_treaty_1_to_2_tt
 			hidden_effect = {
 				swap_ideas = { remove_idea = BEL_limited_by_treaty1 add_idea = BEL_limited_by_treaty2 }
-				#country_event = br_bel.
+				news_event = br_bel_news.2
 			}
 		}
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	focus = {
 		id = BEL_discrete_nations
 		icon = GFX_
@@ -993,6 +1028,8 @@ focus_tree = {
 			remove_ideas = BEL_spoken_conflicts
 			#
 			custom_effect_tooltip = BEL_discrete_nations_tt
+			#
+			GER = { country_event = { id = br_bel.101 } }
 			custom_effect_tooltip = if_they_accept_newline_tt
 			effect_tooltip = {
 				add_stability = 0.05
@@ -1009,20 +1046,13 @@ focus_tree = {
 			}
 			#
 			hidden_effect = {
-				create_dynamic_country = {
-					original_tag = root
-					set_country_flag = BEL_Wallonia_flag
-					set_politics = { ruling_party = authoritarian }
-					set_cosmetic_tag = Wallonia
-					set_research_slots = 3
-					reserve_dynamic_country = yes
-				}
-				#country_event = br_bel.
+				news_event = br_bel_news.1
 			}
 		}
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	focus = {
 		id = BEL_king_save_the_nation
 		icon = GFX_
@@ -1046,7 +1076,9 @@ focus_tree = {
 				has_idea = br_laws_monarchy
 			}
 			OR = {
-				has_country_leader = { character =  ruling_only = yes }
+				has_country_leader = { character = BEL_albert_i_of_belgium ruling_only = yes }
+				has_country_leader = { character = BEL_leopold_iii_of_belgium ruling_only = yes }
+				has_country_leader = { character = BEL_baudouin_of_belgium ruling_only = yes }
 			}
 		}
 		
@@ -1074,6 +1106,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	focus = {
 		id = BEL_neutralization
 		icon = GFX_focus_ARG_strengthening_the_concordancia
@@ -1111,6 +1144,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	focus = {
 		id = BEL_vive_la_republique
 		icon = GFX_
@@ -1148,6 +1182,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	#french style
 	focus = {
 		id = BEL_wallonne_keep_moving
@@ -1183,21 +1218,32 @@ focus_tree = {
 		complete_tooltip = {}
 		
 		completion_reward = {
-			
-			34 = {
-				add_extra_state_shared_building_slots = 3
+			#
+			set_power_balance = { id = BEL_two_nations_balance set_value = 1.0 }
+			#
+			every_owned_state = {
+				limit = {
+					is_owned_and_controlled_by = root
+					NOT = { br_culture_is_vlaams_state = yes }
+					br_culture_is_wallonia_state = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = industrial_complex level = 1 }
 				add_building_construction = { type = arms_factory level = 1 }
-				add_building_construction = { type = industrial_complex level = 2 }
 			}
 		}
 		
 		ai_will_do = { factor = 1 }
 	}
+
 ###
 	focus = {
 		id = BEL_france_side
 		icon = GFX_focus_chi_reach_out_to_france
-		prerequisite = { focus = BEL_wallonne_keep_moving focus = BEL_observe_as_neutral }
+		prerequisite = {
+			focus = BEL_wallonne_keep_moving
+			focus = BEL_observe_as_neutral
+		}
 		mutually_exclusive = { focus = BEL_dutch_side }
 		x = -1
 		y = 2
@@ -1223,6 +1269,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	#military - frech
 	focus = {
 		id = BEL_petite_entente
@@ -1250,6 +1297,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	focus = {
 		id = BEL_fort_line
 		icon = GFX_goal_generic_position_armies
@@ -1275,6 +1323,7 @@ focus_tree = {
 		
 		completion_reward = {}
 	}
+
 	focus = {
 		id = BEL_french_training
 		icon = GFX_goal_generic_military_sphere
@@ -1304,6 +1353,7 @@ focus_tree = {
 		
 		completion_reward = {}
 	}
+
 	focus = {
 		id = BEL_strengthen_command_chain
 		icon = GFX_goal_generic_army_doctrines
@@ -1329,6 +1379,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	focus = {
 		id = BEL_procurement_of_french_tank
 		icon = GFX_goal_generic_army_tanks
@@ -1354,6 +1405,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	focus = {
 		id = BEL_artillery_effort
 		icon = GFX_goal_generic_army_artillery2
@@ -1380,6 +1432,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	#airforce
 	focus = {
 		id = BEL_projection_of_aviators_traning
@@ -1407,6 +1460,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	focus = {
 		id = BEL_cooperation_of_aircraft
 		icon = GFX_focus_generic_cas_aircraft
@@ -1432,6 +1486,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	#
 	focus = {
 		id = BEL_women_in_our_nation
@@ -1459,6 +1514,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+	
 	focus = {
 		id = BEL_womens_warriors
 		icon = GFX_focus_SOV_womens_fascist_movement
@@ -1484,6 +1540,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	focus = {
 		id = BEL_awaking
 		icon = GFX_focus_SWE_education_reform
@@ -1509,6 +1566,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	focus = {
 		id = BEL_female_pilots
 		icon = GFX_focus_SOV_women_in_aviation
@@ -1534,6 +1592,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
 #
 	focus = {
 		id = BEL_democratic_by_hand_in_hand
@@ -1561,6 +1620,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	#
 	focus = {
 		id = BEL_united_front
@@ -1587,6 +1647,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	focus = {
 		id = BEL_communism_minister
 		icon = GFX_focus_generic_soviet_politics
@@ -1612,6 +1673,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+	
 	focus = {
 		id = BEL_last_king
 		icon = GFX_
@@ -1663,6 +1725,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	focus = {
 		id = BEL_livelihood_reform
 		icon = GFX_goal_support_democracy
@@ -1688,6 +1751,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	focus = {
 		id = BEL_next_king
 		icon = GFX_
@@ -1739,6 +1803,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	focus = {
 		id = BEL_guid_labour_union
 		icon = GFX_focus_eng_concessions_to_the_trade_unions
@@ -1764,6 +1829,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	focus = {
 		id = BEL_guarantee_peasantry_s_benefits
 		icon = GFX_
@@ -1788,7 +1854,8 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
-	#
+
+###  ###
 	focus = {
 		id = BEL_united_benelux
 		icon = GFX_
@@ -1830,57 +1897,8 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
-	focus = {
-		id = BEL_A1
-		icon = GFX_
-		prerequisite = { focus =  BEL_united_benelux }
-		#mutually_exclusive = { focus =  }
-		x = -2
-		y = 1
-		relative_position_id =  BEL_united_benelux
 
-		cost = 8
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-		
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
-		id = BEL_A2
-		icon = GFX_
-		prerequisite = { focus =  BEL_united_benelux }
-		#mutually_exclusive = { focus =  }
-		x = 2
-		y = 1
-		relative_position_id =  BEL_united_benelux
-
-		cost = 8
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-		
-		ai_will_do = { factor = 1 }
-	}
-#
+### ###
 
 	#belgium
 	focus = {
@@ -1901,7 +1919,9 @@ focus_tree = {
 
 		cost = 8
 		
-		available = {}
+		available = {
+			#
+		}
 		
 		bypass = {}
 		
@@ -1915,6 +1935,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
 ###
 	focus = {
 		id = BEL_strengthen_power_belgium
@@ -1950,6 +1971,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	#
 	focus = {
 		id = BEL_ask_for_help_from_outside
@@ -1980,6 +2002,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	focus = {
 		id = BEL_1
 		icon = GFX_
@@ -2005,6 +2028,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+	
 	focus = {
 		id = BEL_2
 		icon = GFX_
@@ -2048,7 +2072,12 @@ focus_tree = {
 		
 		available = {}
 		
-		bypass = {}
+		bypass = {
+			NOT = {
+				has_idea = br_laws_military_regulation
+				has_idea = disarmed_nation
+			}
+		}
 		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -2071,6 +2100,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+	
 	focus = {
 		id = BEL_militia_training
 		icon = GFX_focus_generic_workers
@@ -2096,6 +2126,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	focus = {
 		id = BEL_enlist_volunteers
 		icon = GFX_focus_generic_military_mission
@@ -2121,6 +2152,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	focus = {
 		id = BEL_this_is_also_war_of_women
 		icon = GFX_focus_generic_population_growth
@@ -2149,7 +2181,6 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
-
 
 ###germanic&dutch
 	focus = {
@@ -2186,19 +2217,36 @@ focus_tree = {
 		complete_tooltip = {}
 		
 		completion_reward = {
-			6 = {
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = { type = arms_factory level = 2 }
-				add_building_construction = { type = dockyard level = 1 }
+			#
+			set_power_balance = { id = BEL_two_nations_balance set_value = -1.0 }
+			##
+			every_owned_state = {
+				limit = {
+					is_owned_and_controlled_by = root
+					br_culture_is_vlaams_state = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = industrial_complex level = 1 }
+				if = {
+					limit = { is_coastal = yes }
+					add_building_construction = { type = dockyard level = 1 }
+				}
+				else = {
+					add_building_construction = { type = arms_factory level = 1 }
+				}
 			}
 		}
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	focus = {
 		id = BEL_dutch_side
 		icon = GFX_
-		prerequisite = { focus = BEL_vlaams_rising focus = BEL_observe_as_neutral }
+		prerequisite = {
+			focus = BEL_vlaams_rising
+			focus = BEL_observe_as_neutral
+		}
 		mutually_exclusive = { focus = BEL_france_side }
 		x = 1
 		y = 2
@@ -2224,6 +2272,7 @@ focus_tree = {
 		
 		completion_reward = {}
 	}
+
 	##military - germanic
 	focus = {
 		id = BEL_germanic_faction
@@ -2251,6 +2300,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	focus = {
 		id = BEL_germanic_training
 		icon = GFX_focus_generic_full_social_mobilization
@@ -2276,6 +2326,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	focus = {
 		id = BEL_germanic_officer_group
 		icon = GFX_goal_generic_cavalry
@@ -2307,6 +2358,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	focus = {
 		id = BEL_assault_warriors
 		icon = GFX_goal_generic_axis_build_infantry
@@ -2333,6 +2385,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	focus = {
 		id = BEL_blitzkrieg
 		icon = GFX_focus_generic_army_tanks2
@@ -2359,6 +2412,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	focus = {
 		id = BEL_producing_germanic_infantry_weapon
 		icon = GFX_goal_generic_construct_mil_factory
@@ -2383,6 +2437,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	focus = {
 		id = BEL_cooperation_of_panzer_design
 		icon = GFX_goal_generic_army_tanks
@@ -2407,6 +2462,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	#
 	focus = {
 		id = BEL_vlaams_benelux_nationalism
@@ -2433,6 +2489,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	focus = {
 		id = BEL_
 		icon = GFX_
@@ -2460,7 +2517,7 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 	}
 
-
+	#
 	focus = {
 		id = BEL_
 		icon = GFX_

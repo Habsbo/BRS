@@ -81,7 +81,7 @@ br_BEL_bop_move_to_vlaams = {
 
 	}
 	else = {
-		
+		add_power_balance_value = { id = BEL_two_nations_balance value = -0.05 }
 	}
 }
 

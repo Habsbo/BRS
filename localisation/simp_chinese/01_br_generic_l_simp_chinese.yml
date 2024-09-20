@@ -243,6 +243,10 @@
  br_clamp_br_public_feeling_var_tt: "\n角色的§Y$br_public_feeling$§!会被确保在-100至100的范围内。"
 
 #
+ br_culture_is_wallonia_state_tt: "瓦隆尼亚文化占主流或举足轻重"
+ br_culture_is_vlaams_state_tt: "弗拉芒文化占主流或举足轻重"
+ br_culture_is_dutch_state_tt: "荷兰文化占主流或举足轻重"
+ br_is_benelux_state_tt: "是低地地区"
 #how to play
  br_mod_introducing.1.title: "特殊机制介绍"
  br_mod_introducing.1.desc: ""

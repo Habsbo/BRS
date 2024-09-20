@@ -50,7 +50,7 @@ br_bel_the_treaty = {
 	visible_when_empty = no
 
 	custom_icon = {
-		tag = GER
+		tag = DKR
 		value = br_bel_the_treaty_ger_icon_value
 		desc = br_bel_the_treaty_ger_desc
 

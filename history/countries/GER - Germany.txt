@@ -825,6 +825,8 @@ if = {
 	}
 }
 
+save_global_event_target_as = br_bel_the_treaty_GER
+
 set_cosmetic_tag = DKR
 
 create_faction = Kaiserreich_Power

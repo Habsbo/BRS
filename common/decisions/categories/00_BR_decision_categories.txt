@@ -37,7 +37,7 @@ br_alsace = {
 		}
 	}
 
-	priority = 99
+	priority = 10
 	visible_when_empty = yes
 
 	on_map_area = {

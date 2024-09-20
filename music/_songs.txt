@@ -1,0 +1,357 @@
+
+music_station = "base_music"
+
+music = {
+	song = "maintheme"
+	chance = {
+		modifier = {
+			factor = 0.5
+		}		
+	}
+}
+
+music = {
+	song = "Rome(CivIIIAnc)"
+	chance = {
+		base = 0.5
+		modifier = {
+			factor = 0.5
+			modifier = {
+				original_tag = SYR
+				factor = 1.25
+			}
+			modifier = {
+				any_state = {
+					is_core_of = SYR
+					OR = {
+						is_owned_by = root
+						is_controlled_by = root
+					}
+				}
+				factor = 0.50
+			}
+			modifier = {
+				SYR = {
+					is_puppet_of = root
+				}
+				factor = 0.50
+			}
+		}		
+	}
+}
+
+music = {
+	song = "Al Nadda(Civ4:Warlord.Version)"
+	chance = {
+		base = 0.5
+	}
+}
+
+music = {
+	song = "I si demà no tornara"
+	chance = {
+		base = 0.5
+		modifier = {
+			OR = {
+				original_tag = SPR
+				original_tag = CAT
+			}
+			factor = 1.25
+		}
+	}
+}
+
+music = {
+	song = "Conquests Fantasy(Civ4.Version)"
+	chance = {
+		base = 0.5
+		modifier = {
+			OR = {
+				original_tag = ALB
+				tag = BYZ
+			}
+			factor = 0.5
+		}		
+	}
+}
+
+music = {
+	song = "allies"
+	chance = {
+		modifier = {
+			factor = 0.25
+		}		
+	}
+}
+
+# PEACE SONGS ##################
+music = {
+	song = "general_peace_1"
+	
+	chance = {
+		modifier = {
+			factor = 1
+
+			has_war = no
+		}		
+	}	
+}
+
+music = {
+	song = "general_peace_2"
+	
+	chance = {
+		modifier = {
+			factor = 1
+
+			has_war = no
+		}		
+	}	
+}
+
+music = {
+	song = "general_peace_3"
+	
+	chance = {
+		modifier = {
+			factor = 1
+
+			has_war = no
+		}		
+	}
+}
+
+music = {
+	song = "allies_peace_1"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+			has_war = no
+			has_government = democratic
+		}		
+	}	
+}
+
+music = {
+	song = "allies_peace_2"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+			has_war = no
+			has_government = democratic
+		}		
+	}	
+}
+
+music = {
+	song = "axis_peace_1"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+			has_war = no
+			has_government = fascism
+		}		
+	}	
+}
+
+music = {
+	song = "axis_peace_2"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+			has_war = no
+			has_government = fascism
+		}		
+	}	
+}
+
+# WAR SONGS ####################
+
+music = {
+	song = "general_war_1"
+	
+	chance = {
+		modifier = {
+			factor = 1
+
+			has_war = yes
+		}		
+	}	
+}
+
+music = {
+	song = "general_war_2"
+	
+	chance = {
+		modifier = {
+			factor = 1
+
+			has_war = yes
+		}		
+	}	
+}
+
+music = {
+	song = "axis_war_1"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+			has_war = yes
+			has_government = fascism
+		}		
+	}	
+}
+
+music = {
+	song = "axis_war_2"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+			has_war = yes
+			has_government = fascism
+		}		
+	}	
+}
+
+music = {
+	song = "axis_war_3"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+			has_war = yes
+			has_government = fascism
+		}		
+	}	
+}
+
+music = {
+	song = "axis_war_4"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+			has_war = yes
+			has_government = fascism
+		}		
+	}	
+}
+
+music = {
+	song = "allies_war_1"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+			has_war = yes
+			has_government = democratic
+		}		
+	}	
+}
+
+music = {
+	song = "allies_war_2"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+			has_war = yes
+			has_government = democratic
+		}		
+	}	
+}
+
+music = {
+	song = "comintern_peace_1"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+			has_war = no
+			has_government = communism
+		}		
+	}	
+}
+
+music = {
+	song = "comintern_peace_2"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+			has_war = no
+			has_government = communism
+		}		
+	}	
+}
+
+music = {
+	song = "comintern_peace_3"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+			has_war = no
+			has_government = communism
+		}		
+	}	
+}
+
+
+music = {
+	song = "comintern_war_1"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+			has_war = yes
+			has_government = communism
+		}		
+	}	
+}
+
+music = {
+	song = "comintern_war_2"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+			has_war = yes
+			has_government = communism
+		}		
+	}	
+}
+
+music = {
+	song = "comintern_war_3"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+			has_war = yes
+			has_government = communism
+		}		
+	}	
+}

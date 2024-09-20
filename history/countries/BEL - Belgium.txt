@@ -101,3 +101,27 @@ set_power_balance = {
 }
 
 set_variable = { generic_unemployment_var = 2.5 }
+
+#驻军
+set_variable = { br_bel_the_treaty_fra_value = 3 }
+set_variable = { br_bel_the_treaty_ger_value = 8 }
+
+#
+create_dynamic_country = {
+	original_tag = root
+	set_country_flag = BEL_Wallonia_flag
+	set_politics = { ruling_party = authoritarian }
+	set_cosmetic_tag = Wallonia
+	set_research_slots = 3
+	reserve_dynamic_country = yes
+}
+
+every_possible_country = {
+	limit = {
+		original_tag = BEL
+	}
+	add_dynamic_modifier = { modifier = BEL_need_more_jobs_dynamic_modifier }
+	set_variable = { BEL_nmj_dy_stability_factor = -0.10 }
+	set_variable = { BEL_nmj_dy_stability_weekly = 0.05 }
+	set_variable = { BEL_nmj_dy_industrial_capacity_factory = 0.05 }
+}
