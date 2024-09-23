@@ -1,0 +1,14 @@
+DEBUG_event_target_to_character_test = {
+	POL = {
+		random_character = {
+			limit = {
+				is_character_slot = head_of_gov
+				is_hired_as_advisor = yes
+			}
+			save_event_target_as = Vice_Leader
+		}
+		remove_ideas = event_target:Vice_Leader
+		POL_Rosa_Luxemburg = { save_event_target_as = Vice_Leader }
+		add_ideas = event_target:Vice_Leader
+	}
+}
