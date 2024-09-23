@@ -1,5 +1,5 @@
 characters={
-#kings
+### kings ###
 	BEL_albert_i_of_belgium = { #阿尔贝一世
 		name=BEL_albert_i_of_belgium
 		portraits={
@@ -15,7 +15,7 @@ characters={
 			id=-1
 		}
 		country_leader={
-			ideology=enlightened_monarchy
+			ideology=conservatism
 			expire="1965.1.1.1"
 			traits = { knight_king }
 			id=-1
@@ -62,18 +62,87 @@ characters={
 			}
 		}
 	}
-#
+###
+	BEL_henri_jaspar={ #亨利·贾斯帕
+		name=BEL_henri_jaspar
+		portraits={
+			army={
+				large = GFX_portrait_BEL_henri_jaspar
+				small = GFX_portrait_BEL_henri_jaspar_small
+			}
+		}
+		advisor={
+			slot = head_of_gov
+			idea_token = BEL_henri_jaspar_hog
+			allowed = { original_tag = BEL }
+			available = {
+				br_ideology_fascism_nio = yes
+				br_head_of_gov_generic_trigger = yes
+			}
+			traits = {  }
+			cost = 0
+			can_be_fired = no
+			ai_will_do = { factor = 1.000 }
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = BEL_henri_jaspar
+			allowed  = { original_tag  = BEL }
+			traits  = {  }
+		}
+	}
+	BEL_jules_renkin={ #朱尔斯·伦金
+		name=BEL_jules_renkin
+		portraits={
+			army={
+				large = GFX_portrait_BEL_jules_renkin
+				small = GFX_portrait_BEL_jules_renkin_small
+			}
+		}
+		advisor={
+			slot = head_of_gov
+			idea_token = BEL_jules_renkin_hog
+			allowed = { original_tag = BEL }
+			available = {
+				br_ideology_fascism_nio = yes
+				br_head_of_gov_generic_trigger = yes
+			}
+			traits = {  }
+			cost = 0
+			can_be_fired = no
+			ai_will_do = { factor = 1.000 }
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = BEL_jules_renkin
+			allowed  = { original_tag  = BEL }
+			traits  = {  }
+		}
+	}
+	BEL_paul_henri_spaak={ #保罗-亨利·斯巴克
+		name=BEL_paul_henri_spaak
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_europe_1"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = BEL_paul_henri_spaak
+			allowed  = {
+				original_tag  = BEL
+			}
+			traits  = { captain_of_industry }
+		}
+	}
+	#
 	BEL_hubert_pierlot={ #于贝尔·皮埃洛
 		name=BEL_hubert_pierlot
 		portraits={
 			civilian={
-				large=GFX_portrait_BEL_hubert_pierlot
+				large = GFX_portrait_BEL_hubert_pierlot
+				small = GFX_portrait_BEL_hubert_pierlot_small
 			}
-		}
-		country_leader={
-			ideology=conservatism
-			expire="1965.1.1.1"
-			id=-1
 		}
 		advisor={
 			slot = head_of_gov
@@ -89,17 +158,12 @@ characters={
 			ai_will_do = { factor = 1.000 }
 		}
 	}
-	BEL_paul_van_zeeland={ #保罗·范-泽兰 - 
+	BEL_paul_van_zeeland={ #保罗·范-泽兰
 		name=BEL_paul_van_zeeland
 		portraits={
 			civilian={
 				large=GFX_portrait_BEL_hubert_pierlot
 			}
-		}
-		country_leader={
-			ideology=conservatism
-			expire="1965.1.1.1"
-			id=-1
 		}
 		advisor={
 			slot = head_of_gov
@@ -116,14 +180,14 @@ characters={
 		}
 		advisor={
 			slot = political_advisor
-			idea_token = BEL_joseph_jacquemotte
+			idea_token = BEL_paul_van_zeeland
 			allowed = { original_tag = BEL }
 			available = { br_ideology_fascism_nio = yes }
-			traits = {  }
-			cost = 100
+			traits  = { silent_workhorse }
 			ai_will_do = { factor = 1.000 }
 		}
 	}
+	#Rex
 	BEL_leon_degrelle={ #莱昂·约瑟夫·马里·伊尼亚斯·德格雷勒
 		name=BEL_leon_degrelle
 		portraits={
@@ -131,6 +195,11 @@ characters={
 				large=GFX_portrait_BEL_leon_degrelle
 				small=GFX_portrait_BEL_leon_degrelle_small
 			}
+		}
+		country_leader={
+			ideology=rexism
+			expire="1965.1.1.1"
+			id=-1
 		}
 		advisor={
 			slot = army_chief
@@ -140,13 +209,66 @@ characters={
 			cost = 100
 			ai_will_do = { factor = 1.000 }
 		}
-		country_leader={
-			ideology=rexism
-			expire="1965.1.1.1"
-			id=-1
+	}
+	#wallonia
+	BEL_georges_emile_leonard_theunis={ #乔治·埃米尔·莱昂纳德·特尼斯
+		name=BEL_george_theunis
+		portraits={
+			army = {
+				large=GFX_portrait_BEL_georges_emile_leonard_theunis
+				small=GFX_portrait_BEL_georges_emile_leonard_theunis_small
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = BEL_georges_emile_leonard_theunis
+			allowed = { original_tag = BEL }
+			traits = {  }
+			cost = 100
+			ai_will_do = { factor = 1.000 }
+		}
+	}
+	BEL_paul_emile_janson={ #保罗-埃米尔·詹森
+		name=BEL_paul_emile_janson
+		portraits={
+			army = {
+				large=GFX_portrait_BEL_paul_emile_janson
+				small=GFX_portrait_BEL_paul_emile_janson_small
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = BEL_paul_emile_janson
+			allowed = { original_tag = BEL }
+			traits = {  }
+			cost = 100
+			ai_will_do = { factor = 1.000 }
 		}
 	}
 ### communists historial
+	BEL_henri_de_man = {
+		name=BEL_henri_de_man
+		portraits={
+			army = {
+				large=GFX_portrait_BEL_henri_de_man
+				small=GFX_portrait_BEL_henri_de_man_small
+			}
+		}
+		country_leader={
+			ideology=leninism
+			expire="1965.1.1.1"
+			id=-1
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = BEL_henri_de_man
+			allowed = { original_tag = BEL }
+			available = { br_ideology_fascism_nio = yes }
+			traits = {  }
+			cost = 100
+			ai_will_do = { factor = 1.000 }
+		}
+	}
 	BEL_julien_lahaut = { #朱利安·拉奥
 		name=BEL_julien_lahaut
 		portraits={
@@ -573,24 +695,6 @@ characters={
 			ai_will_do = { factor = 1.000 }
 		}
 	}
-	BEL_paul-henri_spaak={ #保罗-亨利·斯巴克
-		name=BEL_paul-henri_spaak
-		portraits={
-			army={
-				small="GFX_idea_generic_political_advisor_europe_1"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = BEL_paul-henri_spaak
-			allowed  = {
-				original_tag  = BEL
-			}
-			traits  = {
-				captain_of_industry 
-			}
-		}
-	}
 	BEL_gaston_eyskens={ #加斯顿·伊斯更斯
 		name=BEL_gaston_eyskens
 		portraits={
@@ -606,24 +710,6 @@ characters={
 			}
 			traits  = {
 				armaments_organizer 
-			}
-		}
-	}
-	BEL_paul_van_zeeland={ #保罗·范泽兰
-		name=BEL_paul_van_zeeland
-		portraits={
-			army={
-				small="GFX_idea_generic_political_advisor_europe_2"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = BEL_paul_van_zeeland
-			allowed  = {
-				original_tag  = BEL
-			}
-			traits  = {
-				silent_workhorse 
 			}
 		}
 	}

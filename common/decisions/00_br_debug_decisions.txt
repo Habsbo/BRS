@@ -1,5 +1,23 @@
 br_debug_decisions = {
 
+	debug.2 = {
+		icon = generic_research
+		fire_only_once = no
+		cost = 0
+
+		complete_effect = {
+			CAT_benito_pabon = {
+				save_event_target_as = event_target:elected_character
+				ROOT = {
+					country_event = br_election.1
+				}
+			}
+			#
+		}
+
+		ai_will_do = { base = 0 }
+	}
+
 	br_debug_decisions_for_test_state_names.1 = {
 
 		icon = generic_research

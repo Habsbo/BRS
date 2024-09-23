@@ -31,6 +31,7 @@ on_actions = {
 			1147 = { set_variable = { br_culture_wallonia = 1 } }
 			1148 = { set_variable = { br_culture_wallonia = 1 } }
 			1146 = { set_variable = { br_culture_wallonia = 0.5 } }
+			#WALLONIA CORE
 			every_state = {
 				limit = {
 					is_core_of = WAL
@@ -43,6 +44,20 @@ on_actions = {
 					check_variable = { br_culture_wallonia = 0.5 }
 				}
 				add_claim_by = WAL
+			}
+			#VLAAMS CORE
+			every_state = {
+				limit = {
+					is_core_of = VLM
+					NOT = { check_variable = { br_culture_vlaams > 0.5 } }
+				}
+				remove_core_of = VLM
+			}
+			every_state = {
+				limit = {
+					check_variable = { br_culture_vlaams = 0.5 }
+				}
+				add_claim_by = VLM
 			}
 			#
 			RHE = {

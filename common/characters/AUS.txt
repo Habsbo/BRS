@@ -8,7 +8,13 @@ characters={
 			}
 		}
 		country_leader={
-			ideology=constitutional_monarchy #despotism
+			ideology= conservatism #despotism
+			traits={ the_emperor }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		country_leader={
+			ideology= despotism
 			traits={ the_emperor }
 			expire="1965.1.1.1"
 			id=-1

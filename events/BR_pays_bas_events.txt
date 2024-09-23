@@ -605,6 +605,92 @@ country_event = { #
 	}
 }
 
+###
+add_namespace = br_bel_gov_election
+###
+country_event = { #
+	id = br_bel_gov_election.1
+	title = br_bel_gov_election.1.title
+	desc = br_bel_gov_election.1.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			#
+		}
+	}
+
+	option = {
+		name = br_bel_gov_election.1.a #
+		
+
+		ai_chance = { base = 1 }
+	}
+
+	option = {
+		name = br_bel_gov_election.1.b #
+
+		ai_chance = { base = 1 }
+	}
+
+	option = {
+		name = br_bel_gov_election.1.c #
+
+		ai_chance = { base = 1 }
+	}
+
+	option = {
+		name = br_bel_gov_election.1.d #
+
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+country_event = { #
+	id = br_bel_gov_election.2
+	title = br_bel_gov_election.2.title
+	desc = br_bel_gov_election.2.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {}
+	}
+
+	option = {
+		name = br_bel_gov_election.2.a #fra special option
+		
+
+		ai_chance = { factor = 2 }
+	}
+
+	option = {
+		name = br_bel_gov_election.2.b #ger special option
+
+		ai_chance = { factor = 2 }
+	}
+
+	option = {
+		name = br_bel_gov_election.2.c #
+
+		ai_chance = { factor = 2 }
+	}
+
+	option = {
+		name = br_bel_gov_election.2.d #
+
+		ai_chance = {
+			base = 0
+		}
+	}
+}
 
 ###
 add_namespace = br_bel_news
@@ -691,7 +777,7 @@ country_event = { #egg
 					character = LUX_marie_adelaide_of_luxembourg
 					country_leader = {
 						expire = "1989.1.1"
-						ideology = enlightened_monarchy
+						ideology = conservatism 
 						traits = {  }
 					}
 					promote_leader = yes
@@ -706,7 +792,7 @@ country_event = { #egg
 					character = LUX_marie_adelaide_of_luxembourg
 					country_leader = {
 						expire = "1989.1.1"
-						ideology = enlightened_monarchy
+						ideology = conservatism 
 						traits = {  }
 					}
 					promote_leader = yes
@@ -721,7 +807,7 @@ country_event = { #egg
 					character = LUX_marie_adelaide_of_luxembourg
 					country_leader = {
 						expire = "1989.1.1"
-						ideology = enlightened_monarchy
+						ideology = conservatism 
 						traits = {  }
 					}
 					promote_leader = yes

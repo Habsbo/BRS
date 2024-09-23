@@ -2,78 +2,80 @@
 
 #
 br_bel_bop = {
-	br_bel_bop_mission.vlaams = {
-		icon = generic_political_address
+	#
+	br_bel_bop_appoint_a_wallonia_prime = {
+		icon = generic_political_discourse
 
-		activation = {
-			#always = no
-		}
-
-		available = { always = no }
-
-		cancel_trigger = {
-			NOT = { has_idea = BEL_vlaams_fostered }
-		}
-
-		is_good = no
-		days_mission_timeout = 7
-		selectable_mission = no
-
-		complete_effect = {}
-
-		timeout_effect = {
-			add_power_balance_value = {
-				id = BEL_two_nations_balance
-				value = -0.01
-				tooltip_side = BEL_vlaams_left_side
+		available = {
+			OR = {
+				has_idea = br_laws_feudalism
+				has_idea = br_laws_monarchy
 			}
-			add_popularity = { ideology = DKR popularity = 0.005 }
-			hidden_effect = {
-				if = {
-					limit = { has_idea = BEL_vlaams_fostered }
-					activate_mission = br_bel_bop_mission.vlaams
-				}
-			}
+			has_idea = br_laws_electoral_politician
 		}
 
-		priority = 10
+		visible = {
+			#
+		}
+
+		fire_only_once = no
+		days_remove = 28
+		days_re_enable = 181
+
+		cost = 0
+
+		modifier = {
+			power_balance_weekly = 0.001
+			stability_weekly = -0.001
+		}
+
+		complete_effect = {
+			#
+		}
+
+		ai_will_do = {
+			base = 100
+		}
 	}
-	br_bel_bop_mission.wallonia = {
-		icon = generic_political_address
 
-		activation = {
-			#always = no
-		}
+	br_bel_bop_appoint_a_vlaams_prime = {
+		icon = generic_political_discourse
 
-		available = { always = no }
-
-		cancel_trigger = {
-			NOT = { has_idea = BEL_wallonia_fostered }
-		}
-
-		is_good = no
-		days_mission_timeout = 7
-		selectable_mission = no
-
-		complete_effect = {}
-
-		timeout_effect = {
-			add_power_balance_value = {
-				id = BEL_two_nations_balance
-				value = 0.01
-				tooltip_side = BEL_wallonia_right_side
+		available = {
+			OR = {
+				has_idea = br_laws_feudalism
+				has_idea = br_laws_monarchy
 			}
-			add_popularity = { ideology = FRA popularity = 0.005 }
-			hidden_effect = {
-				if = {
-					limit = { has_idea = BEL_wallonia_fostered }
-					activate_mission = br_bel_bop_mission.wallonia
-				}
+			has_idea = br_laws_electoral_politician
+			NOT = {
+				#has
 			}
 		}
 
-		priority = 10
+		visible = {
+			#
+		}
+
+		fire_only_once = no
+		days_remove = 28
+		days_re_enable = 181
+
+		cost = 0
+
+		modifier = {
+			power_balance_weekly = -0.001
+			stability_weekly = -0.001
+		}
+
+		complete_effect = {
+			#
+		}
+
+		ai_will_do = {
+			base = 100
+		}
 	}
+
 }
 
 br_bel_the_treaty = {

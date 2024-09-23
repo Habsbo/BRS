@@ -260,6 +260,12 @@ VLM = {
 	has_country_flag = BEL_Vlaams_flag
 }
 
+ATP = {
+	original_tag = BEL
+	has_country_flag = BEL_Antwerpen_flag
+}
+
+
 #
 FRC = {
 	original_tag = VIN

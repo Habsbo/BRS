@@ -484,15 +484,6 @@ country_event = { #
 			traits = {
 			}
 		}
-		create_country_leader = {
-			name = GRE_george_ii
-			desc = "POLITICS_GRE_george_ii_DESC"
-			picture = GFX_leader_marshal_unknown
-			expire = "1965.1.1"
-			ideology = constitutional_monarchy
-			traits = {
-			}
-		}
 
 		ai_chance = { factor = 2 }
 	}

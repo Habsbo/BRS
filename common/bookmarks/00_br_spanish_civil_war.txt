@@ -19,9 +19,9 @@ bookmarks = {
 			}
 		}
 
-		"SPR"={
-			history = "FRA_GATHERING_STORM_DESC"
-			ideology = authoritarian
+		"GER"={
+			history = "GER_GATHERING_STORM_DESC"
+			ideology = soc_anarchism
 			#available = { has_dlc = "La Resistance" } 
 			ideas = {
 				#
@@ -31,8 +31,8 @@ bookmarks = {
 			}
 		}
 		
-		"POR"={
-			history = "FRA_GATHERING_STORM_DESC"
+		"ENG"={
+			history = "ENG_DESC"
 			ideology = authoritarian
 			#available = { has_dlc = "La Resistance" } 
 			ideas = {
@@ -43,9 +43,9 @@ bookmarks = {
 			}
 		}
 
-		"CAT"={
+		"SPR"={
 			history = "FRA_GATHERING_STORM_DESC"
-			ideology = soc_anarchism
+			ideology = authoritarian
 			#available = { has_dlc = "La Resistance" } 
 			ideas = {
 				#
@@ -84,8 +84,22 @@ bookmarks = {
 		}
 
 
-		# minors from DLC ####
-		"NAV"={
+### minors ###
+		"BEL"={
+			minor = yes
+			history = "br_spanish_civil_war_DESC"
+			ideology = dem_socialism
+			ideas = {
+				BEL_limited_by_treaty1
+				BEL_spoken_conflicts
+				BEL_need_more_jobs
+			}
+			focuses = {
+				#
+			}
+		}
+
+		"CAT"={
 			minor = yes
 			history = "br_spanish_civil_war_DESC"
 			ideology = dem_socialism
@@ -97,65 +111,6 @@ bookmarks = {
 			}
 		}
 
-		"ALG"={
-			minor = yes
-			history = "br_spanish_civil_war_DESC"
-			ideology = dem_socialism
-			ideas = {
-				#
-			}
-			focuses = {
-				#
-			}
-		}
-
-		"MOR"={
-			minor = yes
-			history = "br_spanish_civil_war_DESC"
-			ideology = authoritarian
-			ideas = {
-				#
-			}
-			focuses = {
-				#
-			}
-		}
-
-		"TUN"={
-			minor = yes
-			history = "br_spanish_civil_war_DESC"
-			ideology = authoritarian
-			ideas = {
-				#
-			}
-			focuses = {
-				#
-			}
-		}
-
-		"GRE"={
-			minor = yes
-			history = "br_spanish_civil_war_DESC"
-			ideology = dem_conservatism
-			ideas = {
-				#
-			}
-			focuses = {
-				#
-			}
-		}
-
-		"TUR"={
-			minor = yes
-			history = "br_spanish_civil_war_DESC"
-			ideology = dem_conservatism
-			ideas = {
-				#
-			}
-			focuses = {
-				#
-			}
-		}
 
 		effect = {
 			randomize_weather = 22345 # <- Obligatory in every bookmark !

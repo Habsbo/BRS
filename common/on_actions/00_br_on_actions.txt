@@ -1,0 +1,133 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			#dynamic country - remove their core if no need
+			every_state = {
+				limit = {
+					is_core_of = SEF
+				}
+				remove_core_of = SEF
+			}
+			every_state = {
+				limit = {
+					is_core_of = YHT
+				}
+				remove_core_of = YHT
+			}
+			#state rank
+			every_country = {
+				limit = { is_major = yes }
+				set_variable = { state_rank = 0 }
+			}
+			every_possible_country = {
+				limit = { is_major = no }
+				set_variable = { state_rank = 2 }
+			}
+			SLO = {
+				set_variable = { state_rank = 4 }
+			}
+			#country leader status flavour
+			GER = {
+				set_country_flag = br_cl_status_flavour_flag
+				set_variable = { custom_cl_var = 0 }
+			}
+			AUS = {
+				set_country_flag = br_cl_status_flavour_flag
+				set_variable = { custom_cl_var = 1 }
+			}
+			PER = {
+				set_country_flag = br_cl_status_flavour_flag
+			}
+			TUR = {
+				set_country_flag = br_cl_status_flavour_flag
+			}
+			RUS = {
+				set_country_flag = br_cl_status_flavour_flag
+			}
+			#generic country dynamic modifiers
+			every_country = {
+				limit = { NOT = { has_country_flag = br_dynamic_modifier_not_generic_flag } }
+				#dynamic modifier - ic
+				add_dynamic_modifier = { modifier = national_industry_civilian_dynamic_modifier }
+				add_dynamic_modifier = { modifier = national_industry_military_dynamic_modifier }
+				#dynamic modifier - army
+				add_dynamic_modifier = { modifier = black_force_dynamic_modifier }
+				add_dynamic_modifier = { modifier = red_army_dynamic_modifier }
+				add_dynamic_modifier = { modifier = land_force_alt_dynamic_modifier }
+				#dynamic modifier - military officier
+				add_dynamic_modifier = { modifier = committee_combat_dynamic_modifier }
+				add_dynamic_modifier = { modifier = political_commissar_dynamic_modifier }
+				add_dynamic_modifier = { modifier = officer_cap_dynamic_modifier }
+				#dynamic modifier - navy
+				add_dynamic_modifier = { modifier = red_navy_dynamic_modifier }
+				add_dynamic_modifier = { modifier = navy_alt_dynamic_modifier }
+				#dynamic modifier - airforce
+				add_dynamic_modifier = { modifier = red_airforce_dynamic_modifier }
+				add_dynamic_modifier = { modifier = airforce_alt_dynamic_modifier }
+			}
+			every_country = {
+				limit = { NOT = { has_country_flag = br_dynamic_modifier_not_generic_var_flag } }
+				#dynamic modifier - ic
+				set_variable = { nic_consumer_goods_expected_value = 0.00 }
+				set_variable = { nic_production_speed_buildings_factor = 0.00 }
+				set_variable = { nic_conversion_cost_civ_to_mil_factor = 0.00 }
+				set_variable = { nic_conversion_cost_mil_to_civ_factor = 0.00 }
+				set_variable = { nic_industrial_capacity_factory = 0.00 }
+				set_variable = { nim_production_speed_industrial_complex_factor = 0.00 }
+				set_variable = { nim_production_speed_arms_factory_factor = 0.00 }
+				set_variable = { nim_production_speed_dockyard_factor = 0.00 }
+				set_variable = { nim_production_factory_start_efficiency_factor = 0.00 }
+				set_variable = { nim_production_factory_max_efficiency_factor = 0.00 }
+				set_variable = { nim_production_factory_efficiency_gain_factor = 0.00 }
+				set_variable = { nim_production_lack_of_resource_penalty_factor = 0.00 }
+				set_variable = { nim_conversion_cost_civ_to_mil_factor = 0.00 }
+				set_variable = { nim_conversion_cost_mil_to_civ_factor = 0.00 }
+				set_variable = { nim_max_fuel_factor = 0.00 }
+				set_variable = { nim_fuel_gain_factor = 0.00 }
+				#dynamic modifier - army
+				set_variable = { troops_political_power_gain = 0.00 }
+				set_variable = { troops_army_attack_factor = 0.00 }
+				set_variable = { troops_army_defence_factor = 0.00 }
+				set_variable = { troops_army_speed_factor = 0.00 }
+				set_variable = { troops_army_org_factor = 0.00 }
+				set_variable = { troops_conscription_factor = 0.00 }
+				#dynamic modifier - military officier
+				set_variable = { officer_cap_political_power_factor = 0.00 }
+				set_variable = { officer_cap_army_advisor_cost_factor = 0.00 }
+				set_variable = { officer_cap_planning_speed = 0.00 }
+				set_variable = { officer_cap_experience_gain_army_factor = 0.00 }
+				set_variable = { officer_cap_command_abilities_cost_factor = 0.00 }
+				set_variable = { officer_cap_land_doctrine_cost_factor = 0.00 }
+				#dynamic modifier - navy
+				
+				#dynamic modifier - airforce
+				
+			}
+		}
+	}
+	on_startup = {
+		effect = {
+			every_possible_country = {
+				set_variable = { br_exchequer_var = 0 }
+				set_variable = { br_eco_var = var:num_of_civilian_factories }
+				set_variable = { br_free_ic_var = var:num_of_civilian_factories_available_for_projects }
+				multiply_variable = { br_free_ic_var = -1 }
+				add_to_variable = { br_eco_var = br_free_ic_var }
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			every_country = {
+				limit = {
+					exists = yes
+				}
+				set_variable = { br_eco_var = var:num_of_civilian_factories }
+				set_variable = { br_free_ic_var = var:num_of_civilian_factories_available_for_projects }
+				multiply_variable = { br_free_ic_var = -1 }
+				add_to_variable = { br_eco_var = br_free_ic_var }
+				add_to_variable = { br_exchequer_var = br_eco_var }
+			}
+		}
+	}
+}

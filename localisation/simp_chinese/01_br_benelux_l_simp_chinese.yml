@@ -1,4 +1,10 @@
 ﻿l_simp_chinese:
+#
+ BEL_henri_jaspar: "亨利·贾斯帕"
+ BEL_jules_renkin: "朱尔斯·伦金"
+ BEL_george_theunis: "乔治·特尼斯"
+ BEL_paul_henri_spaak: "保罗·亨利·斯巴克"
+ BEL_henri_de_man: "亨利·德·曼"
 #ideas
  BEL_limited_by_treaty1: "受到条约的限制"
  BEL_limited_by_treaty_desc: ""
@@ -29,6 +35,7 @@
  GetUnemployment.6: "§R萧条时代§!"
  BEL_need_more_jobs_tt: "适业青年的失业率状况约为：§Y[?root.generic_unemployment_var|0..3]%§!\n\n带来的影响：\n 稳定度：[?root.BEL_nmj_dy_stability_factor|+=%H]%\n 每周稳定度增长：[?root.BEL_nmj_dy_stability_weekly|+=%H]%\n 工厂产出：[?root.BEL_nmj_dy_industrial_capacity_factory|+=%H]%"
  BEL_need_more_jobs_dynamic_modifier: "失业率"
+#
  LUX_crisis_awareness_idea: "危机意识"
  LUX_crisis_awareness_idea_desc: ""
  LUX_consolidate_charter_idea: "[LUX.Getadjective]国家宪法"
@@ -360,6 +367,10 @@
 #
  LUX_appoint_communists_as_minister_tt: "如果左翼政党在未来胜选，他们也会有机会成为§Y政府首脑§!。"
 #
+ br_bel_bop_appoint_a_wallonia_prime: "擢用一名瓦隆尼亚大区出身的首相"
+ br_bel_bop_appoint_a_wallonia_prime_desc: "将启用动议在非议会选举期间内变更首相。这种行为会损坏陛下在民众间声誉，使用地越频繁越是如此。当然，我们也可以宣扬这是外国对我国政治的横加干涉，这能获得一部分民众的同情和爱国激情，但一不小心也会被这股力量所反噬。"
+ br_bel_bop_appoint_a_vlaams_prime: "擢用一名弗拉芒大区出身的首相"
+ br_bel_bop_appoint_a_vlaams_prime_desc: "将启用动议在非议会选举期间内变更首相。这种行为会损坏陛下在民众间声誉，使用地越频繁越是如此。当然，我们也可以宣扬这是外国对我国政治的横加干涉，这能获得一部分民众的同情和爱国激情，但一不小心也会被这股力量所反噬。"
  br_bel_the_treaty: "第一次世界大战的和平条约"
  br_bel_the_treaty_desc: "第一次世界大战的和平条约"
  br_bel_the_treaty_ger_icon_value: "§Y[?BEL.br_bel_the_treaty_ger_value|0H]§!"
@@ -471,6 +482,12 @@
  br_bel_news.2.a: "不会有战争了？"
  br_bel_news.2.b: "他们难道是问了德国人，中立能不能带来和平？"
 
+ br_bel_gov_election.1.title: "[Root.GetName]议会选举结果"
+ br_bel_gov_election.1.desc: ""
+ br_bel_gov_election.1.a: "由[event_target:elected_character.GetName]的党组织组阁吧"
+ br_bel_gov_election.1.b: "由[event_target:elected_character.GetName]牵头，和共同参选的党派联盟联席组阁。"
+ br_bel_gov_election.1.c: "由[event_target:elected_character.GetName]牵头，党派联盟和反对党派联盟一起联席组阁。"
+ br_bel_gov_election.1.d: "想了想，这次的结果恐怕并不能让民众满意。"
 #
  br_lux.1.title: "一场离奇的发布会"
  br_lux.1.desc: "一名修女宣称自己得到上帝的启示，卢森堡的当今大公有一位母系先祖同时流淌着卢森堡家族、加洛林家族和哈布斯堡家族的血液，她应当指引她的后代恢复被法国人非法废除的神圣帝国，直到加洛林与卢森堡的疆域重新归于帝国的统治之下。"

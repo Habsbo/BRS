@@ -2,305 +2,305 @@ add_namespace = br_political_actions
 add_namespace = br_event
 
 ###镇压无政府主义
-country_event = { #
-	id = br_political_actions.1
-	title = br_political_actions.1.title
-	desc = br_political_actions.1.desc
-	#picture = GFX_report_event_chinese_soldiers_fighting
+	country_event = { #
+		id = br_political_actions.1
+		title = br_political_actions.1.title
+		desc = br_political_actions.1.desc
+		#picture = GFX_report_event_chinese_soldiers_fighting
 
-	fire_only_once = yes
-	is_triggered_only = yes
+		fire_only_once = yes
+		is_triggered_only = yes
 
-	immediate = {
-		hidden_effect = {
-			if = {
-				limit = { NOT = { has_country_flag = br_political_action_be_hostility_to_anarchism_flag } }
-				set_country_flag = br_political_action_be_hostility_to_anarchism_flag
+		immediate = {
+			hidden_effect = {
+				if = {
+					limit = { NOT = { has_country_flag = br_political_action_be_hostility_to_anarchism_flag } }
+					set_country_flag = br_political_action_be_hostility_to_anarchism_flag
+				}
 			}
 		}
-	}
 
-	option = {
-		name = br_political_actions.1.a #
+		option = {
+			name = br_political_actions.1.a #
 
-		hidden_effect = {
-			set_temp_variable = { deny_ideology_var = party_popularity@soc_anarchism }
-			add_to_temp_variable = { deny_ideology_var = party_popularity@vanwardism }
-			multiply_temp_variable = { var = deny_ideology_var value = -0.33 }
+			hidden_effect = {
+				set_temp_variable = { deny_ideology_var = party_popularity@soc_anarchism }
+				add_to_temp_variable = { deny_ideology_var = party_popularity@vanwardism }
+				multiply_temp_variable = { var = deny_ideology_var value = -0.33 }
+			}
+			#
+			add_stability = deny_ideology_var
+
+			ai_chance = { factor = 5 }
 		}
-		#
-		add_stability = deny_ideology_var
 
-		ai_chance = { factor = 5 }
 	}
+	country_event = { #
+		id = br_political_actions.2
+		title = br_political_actions.2.title
+		desc = br_political_actions.2.desc
+		#picture = GFX_report_event_chinese_soldiers_fighting
 
-}
-country_event = { #
-	id = br_political_actions.2
-	title = br_political_actions.2.title
-	desc = br_political_actions.2.desc
-	#picture = GFX_report_event_chinese_soldiers_fighting
+		fire_only_once = yes
+		is_triggered_only = yes
 
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	immediate = {
-		hidden_effect = {
-			set_country_flag = br_political_action_ban_anarchism_flag
+		immediate = {
+			hidden_effect = {
+				set_country_flag = br_political_action_ban_anarchism_flag
+			}
 		}
+
+		option = {
+			name = br_political_actions.2.a #
+
+			hidden_effect = {
+				set_temp_variable = { ban_ideology_var_ideology.1 = party_popularity@soc_anarchism }
+				set_temp_variable = { ban_ideology_var_ideology.2 = party_popularity@vanwardism }
+				multiply_temp_variable = { ban_ideology_var_ideology.1 = -1 }
+				multiply_temp_variable = { ban_ideology_var_ideology.2 = -1 }
+			}
+			add_popularity = { ideology = soc_anarchism popularity = ban_ideology_var_ideology.1 }
+			add_popularity = { ideology = vanwardism popularity = ban_ideology_var_ideology.2 }
+			#
+			hidden_effect = {
+				set_temp_variable = { ban_ideology_var = ban_ideology_var_ideology.1 }
+				add_to_temp_variable = { ban_ideology_var = ban_ideology_var_ideology.2 }
+				multiply_temp_variable = { var = ban_ideology_var value = 0.33 }
+			}
+			#
+			add_stability = ban_ideology_var
+			#
+
+			ai_chance = { factor = 5 }
+		}
+
 	}
-
-	option = {
-		name = br_political_actions.2.a #
-
-		hidden_effect = {
-			set_temp_variable = { ban_ideology_var_ideology.1 = party_popularity@soc_anarchism }
-			set_temp_variable = { ban_ideology_var_ideology.2 = party_popularity@vanwardism }
-			multiply_temp_variable = { ban_ideology_var_ideology.1 = -1 }
-			multiply_temp_variable = { ban_ideology_var_ideology.2 = -1 }
-		}
-		add_popularity = { ideology = soc_anarchism popularity = ban_ideology_var_ideology.1 }
-		add_popularity = { ideology = vanwardism popularity = ban_ideology_var_ideology.2 }
-		#
-		hidden_effect = {
-			set_temp_variable = { ban_ideology_var = ban_ideology_var_ideology.1 }
-			add_to_temp_variable = { ban_ideology_var = ban_ideology_var_ideology.2 }
-			multiply_temp_variable = { var = ban_ideology_var value = 0.33 }
-		}
-		#
-		add_stability = ban_ideology_var
-		#
-
-		ai_chance = { factor = 5 }
-	}
-
-}
 ###镇压社会主义
-country_event = { #
-	id = br_political_actions.3
-	title = br_political_actions.3.title
-	desc = br_political_actions.3.desc
-	#picture = GFX_report_event_chinese_soldiers_fighting
+	country_event = { #
+		id = br_political_actions.3
+		title = br_political_actions.3.title
+		desc = br_political_actions.3.desc
+		#picture = GFX_report_event_chinese_soldiers_fighting
 
-	fire_only_once = yes
-	is_triggered_only = yes
+		fire_only_once = yes
+		is_triggered_only = yes
 
-	immediate = {
-		hidden_effect = {
-			if = {
-				limit = {
-					NOT = { has_country_flag = br_political_action_be_hostility_to_socialism_flag }
+		immediate = {
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = br_political_action_be_hostility_to_socialism_flag }
+					}
+					set_country_flag = br_political_action_be_hostility_to_socialism_flag
 				}
-				set_country_flag = br_political_action_be_hostility_to_socialism_flag
 			}
 		}
-	}
 
-	option = {
-		name = br_political_actions.3.a #
+		option = {
+			name = br_political_actions.3.a #
 
-		hidden_effect = {
-			set_temp_variable = { var = deny_ideology_var value = party_popularity@sci_socialism }
-			add_to_temp_variable = { var = deny_ideology_var value = party_popularity@con_socialism }
-			add_to_temp_variable = { var = deny_ideology_var value = party_popularity@dem_socialism }
-			multiply_temp_variable = { var = deny_ideology_var value = -0.33 }
+			hidden_effect = {
+				set_temp_variable = { var = deny_ideology_var value = party_popularity@sci_socialism }
+				add_to_temp_variable = { var = deny_ideology_var value = party_popularity@con_socialism }
+				add_to_temp_variable = { var = deny_ideology_var value = party_popularity@dem_socialism }
+				multiply_temp_variable = { var = deny_ideology_var value = -0.33 }
+			}
+			#
+			add_stability = deny_ideology_var
+
+			ai_chance = { factor = 5 }
 		}
-		#
-		add_stability = deny_ideology_var
 
-		ai_chance = { factor = 5 }
 	}
+	country_event = { #
+		id = br_political_actions.4
+		title = br_political_actions.4.title
+		desc = br_political_actions.4.desc
+		#picture = GFX_report_event_chinese_soldiers_fighting
 
-}
-country_event = { #
-	id = br_political_actions.4
-	title = br_political_actions.4.title
-	desc = br_political_actions.4.desc
-	#picture = GFX_report_event_chinese_soldiers_fighting
+		fire_only_once = yes
+		is_triggered_only = yes
 
-	fire_only_once = yes
-	is_triggered_only = yes
+		immediate = {  }
 
-	immediate = {  }
+		option = {
+			name = br_political_actions.4.a #
+			#
+			hidden_effect = {
+				set_temp_variable = { ban_ideology_var_ideology.2 = party_popularity@sci_socialism }
+				set_temp_variable = { ban_ideology_var_ideology.3 = party_popularity@con_socialism }
+				set_temp_variable = { ban_ideology_var_ideology.1 = party_popularity@dem_socialism }
+				multiply_temp_variable = { ban_ideology_var_ideology.1 = -1 }
+				multiply_temp_variable = { ban_ideology_var_ideology.2 = -1 }
+				multiply_temp_variable = { ban_ideology_var_ideology.3 = -1 }
+			}
+			#
+			add_popularity = { ideology = sci_socialism popularity = ban_ideology_var_ideology.1 }
+			add_popularity = { ideology = con_socialism popularity = ban_ideology_var_ideology.2 }
+			add_popularity = { ideology = dem_socialism popularity = ban_ideology_var_ideology.3 }
+			#
+			hidden_effect = {
+				set_temp_variable = { ban_ideology_var = ban_ideology_var_ideology.1 }
+				add_to_temp_variable = { ban_ideology_var = ban_ideology_var_ideology.2 }
+				add_to_temp_variable = { ban_ideology_var = ban_ideology_var_ideology.3 }
+				multiply_temp_variable = { ban_ideology_var = 0.33 }
+			}
+			#
+			add_stability = ban_ideology_var
+			#
+			set_country_flag = br_political_action_ban_socialism_flag
 
-	option = {
-		name = br_political_actions.4.a #
-		#
-		hidden_effect = {
-			set_temp_variable = { ban_ideology_var_ideology.2 = party_popularity@sci_socialism }
-			set_temp_variable = { ban_ideology_var_ideology.3 = party_popularity@con_socialism }
-			set_temp_variable = { ban_ideology_var_ideology.1 = party_popularity@dem_socialism }
-			multiply_temp_variable = { ban_ideology_var_ideology.1 = -1 }
-			multiply_temp_variable = { ban_ideology_var_ideology.2 = -1 }
-			multiply_temp_variable = { ban_ideology_var_ideology.3 = -1 }
+			ai_chance = { factor = 5 }
 		}
-		#
-		add_popularity = { ideology = sci_socialism popularity = ban_ideology_var_ideology.1 }
-		add_popularity = { ideology = con_socialism popularity = ban_ideology_var_ideology.2 }
-		add_popularity = { ideology = dem_socialism popularity = ban_ideology_var_ideology.3 }
-		#
-		hidden_effect = {
-			set_temp_variable = { ban_ideology_var = ban_ideology_var_ideology.1 }
-			add_to_temp_variable = { ban_ideology_var = ban_ideology_var_ideology.2 }
-			add_to_temp_variable = { ban_ideology_var = ban_ideology_var_ideology.3 }
-			multiply_temp_variable = { ban_ideology_var = 0.33 }
-		}
-		#
-		add_stability = ban_ideology_var
-		#
-		set_country_flag = br_political_action_ban_socialism_flag
 
-		ai_chance = { factor = 5 }
 	}
-
-}
 ###镇压民主
-country_event = { #
-	id = br_political_actions.5
-	title = br_political_actions.5.title
-	desc = br_political_actions.5.desc
-	#picture = GFX_report_event_chinese_soldiers_fighting
+	country_event = { #
+		id = br_political_actions.5
+		title = br_political_actions.5.title
+		desc = br_political_actions.5.desc
+		#picture = GFX_report_event_chinese_soldiers_fighting
 
-	fire_only_once = yes
-	is_triggered_only = yes
+		fire_only_once = yes
+		is_triggered_only = yes
 
-	immediate = {
-		hidden_effect = {
-			if = {
-				limit = {
-					NOT = { has_country_flag = br_political_action_be_hostility_to_democratic_flag }
+		immediate = {
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = br_political_action_be_hostility_to_democratic_flag }
+					}
+					set_country_flag = br_political_action_be_hostility_to_democratic_flag
 				}
-				set_country_flag = br_political_action_be_hostility_to_democratic_flag
 			}
 		}
-	}
 
-	option = {
-		name = br_political_actions.5.a #
+		option = {
+			name = br_political_actions.5.a #
 
-		hidden_effect = {
-			set_temp_variable = { deny_ideology_var = party_popularity@dem_liberalism }
-			add_to_temp_variable = { deny_ideology_var = party_popularity@dem_conservatism }
-			multiply_temp_variable = { deny_ideology_var = -0.33 }
+			hidden_effect = {
+				set_temp_variable = { deny_ideology_var = party_popularity@dem_liberalism }
+				add_to_temp_variable = { deny_ideology_var = party_popularity@dem_conservatism }
+				multiply_temp_variable = { deny_ideology_var = -0.33 }
+			}
+			add_stability = deny_ideology_var
+
+			ai_chance = { factor = 5 }
 		}
-		add_stability = deny_ideology_var
 
-		ai_chance = { factor = 5 }
 	}
+	country_event = { #
+		id = br_political_actions.6
+		title = br_political_actions.6.title
+		desc = br_political_actions.6.desc
+		#picture = GFX_report_event_chinese_soldiers_fighting
 
-}
-country_event = { #
-	id = br_political_actions.6
-	title = br_political_actions.6.title
-	desc = br_political_actions.6.desc
-	#picture = GFX_report_event_chinese_soldiers_fighting
+		fire_only_once = yes
+		is_triggered_only = yes
 
-	fire_only_once = yes
-	is_triggered_only = yes
+		immediate = {  }
 
-	immediate = {  }
-
-	option = {
-		name = br_political_actions.6.a #
-		#
-		hidden_effect = {
-			set_temp_variable = { ban_ideology_var_ideology.1 = party_popularity@dem_liberalism }
-			set_temp_variable = { ban_ideology_var_ideology.2 = party_popularity@dem_conservatism }
-			multiply_temp_variable = { ban_ideology_var_ideology.1 = -1 }
-			multiply_temp_variable = { ban_ideology_var_ideology.2 = -1 }
+		option = {
+			name = br_political_actions.6.a #
+			#
+			hidden_effect = {
+				set_temp_variable = { ban_ideology_var_ideology.1 = party_popularity@dem_liberalism }
+				set_temp_variable = { ban_ideology_var_ideology.2 = party_popularity@dem_conservatism }
+				multiply_temp_variable = { ban_ideology_var_ideology.1 = -1 }
+				multiply_temp_variable = { ban_ideology_var_ideology.2 = -1 }
+			}
+			add_popularity = { ideology = dem_liberalism popularity = ban_ideology_var_ideology.1 }
+			add_popularity = { ideology = dem_conservatism popularity = ban_ideology_var_ideology.2 }
+			#
+			hidden_effect = {
+				set_temp_variable = { ban_ideology_var_ideology.1 = party_popularity@dem_liberalism }
+				add_to_temp_variable = { ban_ideology_var_ideology.2 = party_popularity@dem_conservatism }
+				multiply_temp_variable = { ban_ideology_var = 0.33 }
+			}
+			add_stability = ban_ideology_var
+			#
+			set_country_flag = br_political_action_ban_democratic_flag
+			#
+			ai_chance = { factor = 5 }
 		}
-		add_popularity = { ideology = dem_liberalism popularity = ban_ideology_var_ideology.1 }
-		add_popularity = { ideology = dem_conservatism popularity = ban_ideology_var_ideology.2 }
-		#
-		hidden_effect = {
-			set_temp_variable = { ban_ideology_var_ideology.1 = party_popularity@dem_liberalism }
-			add_to_temp_variable = { ban_ideology_var_ideology.2 = party_popularity@dem_conservatism }
-			multiply_temp_variable = { ban_ideology_var = 0.33 }
-		}
-		add_stability = ban_ideology_var
-		#
-		set_country_flag = br_political_action_ban_democratic_flag
-		#
-		ai_chance = { factor = 5 }
+
 	}
-
-}
 ###镇压法西斯
-country_event = { #
-	id = br_political_actions.7
-	title = br_political_actions.7.title
-	desc = br_political_actions.7.desc
-	#picture = GFX_report_event_chinese_soldiers_fighting
+	country_event = { #
+		id = br_political_actions.7
+		title = br_political_actions.7.title
+		desc = br_political_actions.7.desc
+		#picture = GFX_report_event_chinese_soldiers_fighting
 
-	fire_only_once = yes
-	is_triggered_only = yes
+		fire_only_once = yes
+		is_triggered_only = yes
 
-	immediate = {
-		hidden_effect = {
-			if = {
-				limit = {
-					NOT = { has_country_flag = br_political_action_be_hostility_to_fascism_flag }
+		immediate = {
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = br_political_action_be_hostility_to_fascism_flag }
+					}
+					set_country_flag = br_political_action_be_hostility_to_fascism_flag
 				}
-				set_country_flag = br_political_action_be_hostility_to_fascism_flag
 			}
 		}
-	}
 
-	option = {
-		name = br_political_actions.7.a #
+		option = {
+			name = br_political_actions.7.a #
 
-		hidden_effect = {
-			set_temp_variable = { deny_ideology_var = party_popularity@fascism }
-			add_to_temp_variable = { deny_ideology_var = party_popularity@nationalism }
-			add_to_temp_variable = { deny_ideology_var = party_popularity@supernationalism }
-			multiply_temp_variable = { deny_ideology_var = -0.33 }
+			hidden_effect = {
+				set_temp_variable = { deny_ideology_var = party_popularity@fascism }
+				add_to_temp_variable = { deny_ideology_var = party_popularity@nationalism }
+				add_to_temp_variable = { deny_ideology_var = party_popularity@supernationalism }
+				multiply_temp_variable = { deny_ideology_var = -0.33 }
+			}
+			add_stability = deny_ideology_var
+
+			ai_chance = { factor = 5 }
 		}
-		add_stability = deny_ideology_var
 
-		ai_chance = { factor = 5 }
 	}
+	country_event = { #
+		id = br_political_actions.8
+		title = br_political_actions.8.title
+		desc = br_political_actions.8.desc
+		#picture = GFX_report_event_chinese_soldiers_fighting
 
-}
-country_event = { #
-	id = br_political_actions.8
-	title = br_political_actions.8.title
-	desc = br_political_actions.8.desc
-	#picture = GFX_report_event_chinese_soldiers_fighting
+		fire_only_once = yes
+		is_triggered_only = yes
 
-	fire_only_once = yes
-	is_triggered_only = yes
+		immediate = {  }
 
-	immediate = {  }
+		option = {
+			name = br_political_actions.8.a #
 
-	option = {
-		name = br_political_actions.8.a #
-
-		hidden_effect = {
-			set_temp_variable = { ban_ideology_var_ideology.1 = party_popularity@fascism }
-			set_temp_variable = { ban_ideology_var_ideology.2 = party_popularity@nationalism }
-			set_temp_variable = { ban_ideology_var_ideology.3 = party_popularity@supernationalism }
-			multiply_temp_variable = { ban_ideology_var_ideology.1 = -1 }
-			multiply_temp_variable = { ban_ideology_var_ideology.2 = -1 }
-			multiply_temp_variable = { ban_ideology_var_ideology.3 = -1 }
+			hidden_effect = {
+				set_temp_variable = { ban_ideology_var_ideology.1 = party_popularity@fascism }
+				set_temp_variable = { ban_ideology_var_ideology.2 = party_popularity@nationalism }
+				set_temp_variable = { ban_ideology_var_ideology.3 = party_popularity@supernationalism }
+				multiply_temp_variable = { ban_ideology_var_ideology.1 = -1 }
+				multiply_temp_variable = { ban_ideology_var_ideology.2 = -1 }
+				multiply_temp_variable = { ban_ideology_var_ideology.3 = -1 }
+			}
+			add_popularity = { ideology = fascism popularity = ban_ideology_var_ideology.1 }
+			add_popularity = { ideology = nationalism popularity = ban_ideology_var_ideology.2 }
+			add_popularity = { ideology = supernationalism popularity = ban_ideology_var_ideology.3 }
+			#
+			hidden_effect = {
+				set_temp_variable = { ban_ideology_var = ban_ideology_var_ideology.1 }
+				add_to_temp_variable = { ban_ideology_var = ban_ideology_var_ideology.2 }
+				add_to_temp_variable = { ban_ideology_var = ban_ideology_var_ideology.3 }
+				multiply_temp_variable = { ban_ideology_var = 0.33 }
+			}
+			add_stability = ban_ideology_var
+			#
+			set_country_flag = br_political_action_ban_fascism_flag
+			#
+			ai_chance = { factor = 5 }
 		}
-		add_popularity = { ideology = fascism popularity = ban_ideology_var_ideology.1 }
-		add_popularity = { ideology = nationalism popularity = ban_ideology_var_ideology.2 }
-		add_popularity = { ideology = supernationalism popularity = ban_ideology_var_ideology.3 }
-		#
-		hidden_effect = {
-			set_temp_variable = { ban_ideology_var = ban_ideology_var_ideology.1 }
-			add_to_temp_variable = { ban_ideology_var = ban_ideology_var_ideology.2 }
-			add_to_temp_variable = { ban_ideology_var = ban_ideology_var_ideology.3 }
-			multiply_temp_variable = { ban_ideology_var = 0.33 }
-		}
-		add_stability = ban_ideology_var
-		#
-		set_country_flag = br_political_action_ban_fascism_flag
-		#
-		ai_chance = { factor = 5 }
+
 	}
-
-}
 
 ###
 add_namespace = br_laws
@@ -465,45 +465,45 @@ country_event = { #change government
 
 }
 #
-add_namespace = br_cb_barcelona
-country_event = { #change government
-	id = br_cb_barcelona.1
-	title = br_cb_barcelona.1.title
-	desc = br_cb_barcelona.1.desc
-	#picture = GFX_report_event_chinese_soldiers_fighting
+	add_namespace = br_cb_barcelona
+	country_event = { #change government
+		id = br_cb_barcelona.1
+		title = br_cb_barcelona.1.title
+		desc = br_cb_barcelona.1.desc
+		#picture = GFX_report_event_chinese_soldiers_fighting
 
-	fire_only_once = no
-	is_triggered_only = yes
+		fire_only_once = no
+		is_triggered_only = yes
 
-	immediate = {
-		hidden_effect = {
-			FROM = {
-				create_wargoal = {
-					target = root
-					type = take_state_focus
-					generator = { 165 }
+		immediate = {
+			hidden_effect = {
+				FROM = {
+					create_wargoal = {
+						target = root
+						type = take_state_focus
+						generator = { 165 }
+					}
 				}
 			}
 		}
-	}
 
-	option = {
-		name =  br_cb_barcelona.1.a #
+		option = {
+			name =  br_cb_barcelona.1.a #
 
-		effect_tooltip = {
-			FROM = {
-				create_wargoal = {
-					target = root
-					type = take_state_focus
-					generator = { 165 }
+			effect_tooltip = {
+				FROM = {
+					create_wargoal = {
+						target = root
+						type = take_state_focus
+						generator = { 165 }
+					}
 				}
 			}
+			
+			ai_chance = { factor = 5 }
 		}
-		
-		ai_chance = { factor = 5 }
-	}
 
-}
+	}
 
 #
 add_namespace = br_communism
@@ -775,6 +775,86 @@ country_event = { #
 
 	option = {
 		name = br_mod_introducing.5.c
+	}
+
+}
+
+
+###
+add_namespace = br_election
+###
+country_event = { #
+	id = br_election.1
+	title = br_election.1.title
+	desc = br_election.1.desc
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = br_election.1.a
+		#
+		add_ideas = event_target:elected_character
+		#
+		country_event = br_election.2
+	}
+	
+	option = {
+		name = br_election.1.b
+		#
+	}
+	
+	option = {
+		name = br_election.1.c
+		#
+	}
+	
+	option = {
+		name = br_election.1.d
+		#
+	}
+}
+
+country_event = { #
+	id = br_election.2
+	title = br_election.2.title
+	desc = br_election.2.desc
+
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	option = {
+		name = br_election.2.a
+	}
+
+	option = {
+		name = br_election.2.b
+	}
+
+	option = {
+		name = br_election.2.c
+	}
+
+}
+
+country_event = { #
+	id = br_election.3
+	title = br_election.3.title
+	desc = br_election.3.desc
+
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	option = {
+		name = br_election.3.a
+	}
+
+	option = {
+		name = br_election.3.b
+	}
+
+	option = {
+		name = br_election.3.c
 	}
 
 }

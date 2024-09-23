@@ -13,18 +13,24 @@ defined_text = {
 		}
 		localization_key = anarchist_liberalism
     }
-	### vanwardism ###
 	text = {
 		trigger = {
 			has_country_leader_ideology = anarchist_communism
 		}
 		localization_key = anarchist_communism
     }
+	### vanwardism ###
 	text = {
 		trigger = {
 			has_country_leader_ideology = syndicalism
 		}
 		localization_key = syndicalism
+    }
+	text = {
+		trigger = {
+			has_country_leader_ideology = forwardism
+		}
+		localization_key = forwardism
     }
 	### sci_socialism ###
 	text = {
@@ -58,6 +64,12 @@ defined_text = {
 		}
 		localization_key = cooperativism
     }
+	text = {
+		trigger = {
+			has_country_leader_ideology = maoism
+		}
+		localization_key = maoism
+    }
 	### dem_socialism ###
 	text = {
 		trigger = {
@@ -70,12 +82,6 @@ defined_text = {
 			has_country_leader_ideology = luxemburgism
 		}
 		localization_key = luxemburgism
-    }
-	text = {
-		trigger = {
-			has_country_leader_ideology = centrism
-		}
-		localization_key = centrism
     }
 	### dem_liberalism ###
 	text = {
@@ -90,6 +96,12 @@ defined_text = {
 		}
 		localization_key = moderatism
     }
+	text = {
+		trigger = {
+			has_country_leader_ideology = centrism
+		}
+		localization_key = centrism
+    }
 	### dem_conservatism ###
 	text = {
 		trigger = {
@@ -103,19 +115,7 @@ defined_text = {
 		}
 		localization_key = oligarchism
     }
-	text = {
-		trigger = {
-			has_country_leader_ideology = constitutional_monarchy
-		}
-		localization_key = constitutional_monarchy
-    }
 	### authoritarian ###
-	text = {
-		trigger = {
-			has_country_leader_ideology = enlightened_monarchy
-		}
-		localization_key = enlightened_monarchy
-    }
 	text = {
 		trigger = {
 			has_country_leader_ideology = falangism

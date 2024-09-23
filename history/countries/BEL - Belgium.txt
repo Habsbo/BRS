@@ -21,9 +21,12 @@ recruit_character = BEL_albert_i_of_belgium
 recruit_character = BEL_leopold_iii_of_belgium
 recruit_character = BEL_baudouin_of_belgium
 #prime
+recruit_character = BEL_henri_jaspar
+recruit_character = BEL_jules_renkin
 recruit_character = BEL_paul_van_zeeland
 
 #communists
+recruit_character = BEL_henri_de_man #
 recruit_character = BEL_julien_lahaut
 recruit_character = BEL_joseph_jacquemotte
 recruit_character = BEL_war_van_overstraeten
@@ -47,22 +50,22 @@ recruit_character = BEL_leon_degrelle
 recruit_character = BEL_fritz_lob
 recruit_character = BEL_jules_iserentant
 recruit_character = BEL_victor_van_strydonck_de_burkel
-recruit_character = BEL_paul-henri_spaak
+recruit_character = BEL_paul_henri_spaak
 recruit_character = BEL_gaston_eyskens
 
 set_politics = {
-	ruling_party = dem_liberalism
+	ruling_party = dem_conservatism
 	last_election = "1932.11.27"
 	election_frequency = 48
 	elections_allowed = yes
 }
 
 set_popularities = {
-	sci_socialism = 20 #科学社会主义
-	dem_socialism = 20 #社会民主主义
-	dem_liberalism = 30 #社会自由主义
-	dem_conservatism = 20 #保守民主主义
-	authoritarian = 10 #威权主义
+	sci_socialism = 10 #科学社会主义
+	dem_socialism = 10 #社会民主主义
+	dem_liberalism = 20 #社会自由主义
+	dem_conservatism = 40 #保守民主主义
+	authoritarian = 20 #威权主义
 }
 
 set_convoys = 80
@@ -82,7 +85,7 @@ add_ideas = {
 	br_laws_religious_people
 	br_laws_bourgeoisie
 	#head of gov
-
+	BEL_henri_jaspar_hog
 	#national spirits
 	BEL_limited_by_treaty1
 	BEL_betrayed_by_former_allies
@@ -112,6 +115,15 @@ create_dynamic_country = {
 	set_country_flag = BEL_Wallonia_flag
 	set_politics = { ruling_party = authoritarian }
 	set_cosmetic_tag = Wallonia
+	set_research_slots = 3
+	reserve_dynamic_country = yes
+}
+
+create_dynamic_country = {
+	original_tag = root
+	set_country_flag = BEL_Vlaams_flag
+	set_politics = { ruling_party = authoritarian }
+	set_cosmetic_tag = Vlaams
 	set_research_slots = 3
 	reserve_dynamic_country = yes
 }

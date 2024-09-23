@@ -14,6 +14,10 @@ ideas = {
 				#has_manpower_for_recruit_change_to = { value = 0.005 group = mobilization_laws }
 			}
 
+			allowed_to_remove = {
+				NOT = { has_country_flag = br_can_not_change_laws_flag }
+			}
+
 			modifier = {
 				conscription = 0.01
 			}
@@ -52,6 +56,10 @@ ideas = {
 				}
 				NOT = { has_idea = undisturbed_isolation }
 				NOT = { has_idea = isolation }
+			}
+
+			allowed_to_remove = {
+				NOT = { has_country_flag = br_can_not_change_laws_flag }
 			}
 
 			ai_will_do = {
@@ -160,6 +168,10 @@ ideas = {
 					}
 					NOT = { has_country_flag = DEN_cannot_increase_conscription_law }
 				}
+			}
+
+			allowed_to_remove = {
+				NOT = { has_country_flag = br_can_not_change_laws_flag }
 			}
 
 			modifier = {
@@ -323,6 +335,11 @@ ideas = {
 				}
 				
 			}
+
+			allowed_to_remove = {
+				NOT = { has_country_flag = br_can_not_change_laws_flag }
+			}
+
 			ai_will_do = {
    				factor = 1
 
@@ -390,7 +407,6 @@ ideas = {
 		}
 
 		service_by_requirement = {
-
 
 			available = {
 				#has_manpower_for_recruit_change_to =  { value = 0.1 group = mobilization_laws }
@@ -498,6 +514,10 @@ ideas = {
 				}
 			}
 
+			allowed_to_remove = {
+				NOT = { has_country_flag = br_can_not_change_laws_flag }
+			}
+
 			ai_will_do = {
    				factor = 1
 				modifier = {
@@ -562,7 +582,6 @@ ideas = {
 		}
 
 		all_adults_serve = {
-
 
 			available = {
 				#has_manpower_for_recruit_change_to =  { value = 0.2 group = mobilization_laws }
@@ -661,6 +680,10 @@ ideas = {
 					}
 					NOT = { has_country_flag = DEN_cannot_increase_conscription_law }
 				}
+			}
+
+			allowed_to_remove = {
+				NOT = { has_country_flag = br_can_not_change_laws_flag }
 			}
 
 			ai_will_do = {
@@ -830,6 +853,10 @@ ideas = {
 				}
 			}
 
+			allowed_to_remove = {
+				NOT = { has_country_flag = br_can_not_change_laws_flag }
+			}
+			
 			ai_will_do = {
    				factor = 1
 				modifier = {

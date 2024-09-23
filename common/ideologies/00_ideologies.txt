@@ -8,6 +8,8 @@ ideologies = {
 			}
 			anarchist_liberalism = {
 			}
+			anarchist_communism = {
+			}
 		}
 
 		dynamic_faction_names = {
@@ -43,8 +45,6 @@ ideologies = {
 	vanwardism = {
 
 		types = {
-			anarchist_communism = {
-			}
 			syndicalism = {
 			}
 			forwardism = {
@@ -149,6 +149,10 @@ ideologies = {
 			}
 			cooperativism = {
 			}
+			maoism = {
+			}
+			spartakusbund = {
+			}
 		}
 
 		dynamic_faction_names = {
@@ -197,8 +201,6 @@ ideologies = {
 			socialism = {
 			}
 			luxemburgism = {
-			}
-			centrism = {
 			}
 		}
 
@@ -258,6 +260,8 @@ ideologies = {
 			}
 			moderatism = {
 			}
+			centrism = {
+			}
 		}
 
 		dynamic_faction_names = {
@@ -316,9 +320,6 @@ ideologies = {
 			}
 			oligarchism  = {
 			}
-			constitutional_monarchy = {
-				can_be_randomly_selected = no #不会被随机
-			}
 		}
 
 		dynamic_faction_names = {
@@ -373,13 +374,9 @@ ideologies = {
 	authoritarian = {
 
 		types = {
-			enlightened_monarchy = {
-			}
 			falangism = {
 			}
 			despotism = {
-			}
-			rexism = {
 			}
 		}
 
@@ -430,6 +427,8 @@ ideologies = {
 			fascism_ideology = {
 			}
 			nibonism = {
+			}
+			rexism = {
 			}
 		}
 

@@ -90,7 +90,7 @@ characters={
 		}
 		country_leader={
 			expire = "1965.1.1"
-			ideology = constitutional_monarchy
+			ideology = conservatism
 			traits = {
 				wilhelmina
 				disdain_for_politicians_1

@@ -152,6 +152,10 @@ ideas = {
 
 			allowed = { always = no }
 
+			available = {
+				has_power_balance = { id = BEL_two_nations_balance }
+			}
+
 			allowed_civil_war = { always = yes }
 
 			#on_add = {}
@@ -159,7 +163,7 @@ ideas = {
 			#on_remove = {}
 
 			modifier = {
-				custom_modifier_tooltip = BEL_vlaams_fostered_tt
+				power_balance_weekly = -0.01
 			}
 		}
 		BEL_wallonia_fostered = {
@@ -168,6 +172,10 @@ ideas = {
 			removal_cost = -1
 
 			allowed = { always = no }
+			
+			available = {
+				has_power_balance = { id = BEL_two_nations_balance }
+			}
 
 			allowed_civil_war = { always = yes }
 
@@ -176,7 +184,7 @@ ideas = {
 			#on_remove = {}
 
 			modifier = {
-				custom_modifier_tooltip = BEL_wallonia_fostered_tt
+				power_balance_weekly = 0.01
 			}
 		}
 		BEL_need_more_jobs = {

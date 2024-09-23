@@ -219,8 +219,7 @@ defined_text = {
 		text = { localization_key = VL_desc }
 	}
 
-#
-
+#Benelux
 #Československo
 defined_text = {
     name = CZE_VL_picture

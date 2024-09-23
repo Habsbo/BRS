@@ -112,6 +112,10 @@ ideas = {
 				fuel_gain_factor = -0.4
 			}
 
+			allowed_to_remove = {
+				NOT = { has_country_flag = br_can_not_change_laws_flag }
+			}
+
 			default = yes
 
 			cancel_if_invalid = no
@@ -158,6 +162,11 @@ ideas = {
 					}
 				}
 			}
+
+			allowed_to_remove = {
+				NOT = { has_country_flag = br_can_not_change_laws_flag }
+			}
+
 			on_add = {
 				if = {
 					limit = {
@@ -251,6 +260,10 @@ ideas = {
 				}
 			}
 
+			allowed_to_remove = {
+				NOT = { has_country_flag = br_can_not_change_laws_flag }
+			}
+
 			cost = 150
 			removal_cost = -1
 
@@ -286,7 +299,6 @@ ideas = {
 
 		war_economy = { #战时经济
 
-
 			available = {
 				OR = {
 					has_war_support > 0.5
@@ -301,6 +313,10 @@ ideas = {
 						}
 					}
 				}
+			}
+
+			allowed_to_remove = {
+				NOT = { has_country_flag = br_can_not_change_laws_flag }
 			}
 
 			cost = 150
@@ -360,7 +376,6 @@ ideas = {
 
 		tot_economic_mobilisation = { #全面战争
 
-
 			available = {
 				has_war = yes
 				has_war_support > 0.8
@@ -371,6 +386,11 @@ ideas = {
 					}
 				}
 			}
+
+			allowed_to_remove = {
+				NOT = { has_country_flag = br_can_not_change_laws_flag }
+			}
+
 			on_add = {
 				if = {
 					limit = {
@@ -453,6 +473,7 @@ ideas = {
 			allowed = {
 				always = no
 			}
+
 			allowed_to_remove = {
 				OR = {
 					surrender_progress > 0.75
@@ -511,10 +532,14 @@ ideas = {
 
 		uncontrolled_exports = {
 
-
 			allowed = {
 				always = no
 			}
+
+			allowed_to_remove = {
+				NOT = { has_country_flag = br_can_not_change_laws_flag }
+			}
+
 			removal_cost = -1
 			picture = isolation
 
@@ -580,6 +605,10 @@ ideas = {
 
 			available = {}
 
+			allowed_to_remove = {
+				NOT = { has_country_flag = br_can_not_change_laws_flag }
+			}
+
 			cost = 150
 			removal_cost = -1
 
@@ -635,6 +664,9 @@ ideas = {
 
 			available = {}
 
+			allowed_to_remove = {
+				NOT = { has_country_flag = br_can_not_change_laws_flag }
+			}
 
 			cost = 150
 			removal_cost = -1
@@ -702,6 +734,10 @@ ideas = {
 				}
 			}
 
+			allowed_to_remove = {
+				NOT = { has_country_flag = br_can_not_change_laws_flag }
+			}
+
 			cost = 150
 			removal_cost = -1
 
@@ -756,13 +792,16 @@ ideas = {
 
 		closed_economy = {
 
-
 			available = {
 				has_war = yes
 				OR = {
 					has_idea = war_economy
 					has_idea = tot_economic_mobilisation
 				}
+			}
+
+			allowed_to_remove = {
+				NOT = { has_country_flag = br_can_not_change_laws_flag }
 			}
 
 			rule = {
