@@ -2,7 +2,7 @@
 spriteTypes = {
 	spriteType = {
 		name = GFX_portrait_bel_albert_i_of_belgium_idea
-		texturefile = "gfx/leaders/Benelux/Portrait_bel_albert_i_of_belgium_idea.tga"
+		texturefile = "gfx/leaders/Benelux/Portrait_bel_albert_i_of_belgium_idea.dds"
 	}
 
 	spriteType = {

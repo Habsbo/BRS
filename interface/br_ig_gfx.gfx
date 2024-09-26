@@ -1,0 +1,128 @@
+spriteTypes = {
+
+### armed forces ###
+	spriteType = {
+		name = "GFX_ig_armed_forces"
+		texturefile = "gfx/interface/ig_icons/armed_forces.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ig_armed_forces_small"
+		texturefile = "gfx/interface/ig_icons/armed_forces_30.dds"
+	}
+
+### devout ###
+	spriteType = {
+		name = "GFX_ig_devout"
+		texturefile = "gfx/interface/ig_icons/devout.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ig_devout_small"
+		texturefile = "gfx/interface/ig_icons/devout_30.dds"
+	}
+
+### industrialists ###
+	spriteType = {
+		name = "GFX_ig_industrialists"
+		texturefile = "gfx/interface/ig_icons/industrialists.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ig_industrialists_small"
+		texturefile = "gfx/interface/ig_icons/industrialists_30.dds"
+	}
+
+### landowners ###
+	spriteType = {
+		name = "GFX_ig_landowners"
+		texturefile = "gfx/interface/ig_icons/landowners.png"
+	}
+
+	spriteType = {
+		name = "GFX_ig_landowners_small"
+		texturefile = "gfx/interface/ig_icons/landowners_30.dds"
+	}
+
+### intelligensia ###
+	spriteType = {
+		name = "GFX_ig_intelligensia"
+		texturefile = "gfx/interface/ig_icons/intelligensia.png"
+	}
+
+	spriteType = {
+		name = "GFX_ig_intelligensia_small"
+		texturefile = "gfx/interface/ig_icons/intelligensia_30.dds"
+	}
+
+### petty bourgeoisie ###
+	spriteType = {
+		name = "GFX_ig_petty_bourgeoisie"
+		texturefile = "gfx/interface/ig_icons/petty_bourgeoisie.png"
+	}
+
+	spriteType = {
+		name = "GFX_ig_petty_bourgeoisie_small"
+		texturefile = "gfx/interface/ig_icons/petty_bourgeoisie_30.dds"
+	}
+
+### rural folk ###
+	spriteType = {
+		name = "GFX_ig_rural_folk"
+		texturefile = "gfx/interface/ig_icons/rural_folk.png"
+	}
+
+	spriteType = {
+		name = "GFX_ig_rural_folk_small"
+		texturefile = "gfx/interface/ig_icons/rural_folk_30.dds"
+	}
+
+### trade unions ###
+	spriteType = {
+		name = "GFX_ig_trade_unions"
+		texturefile = "gfx/interface/ig_icons/trade_unions.png"
+	}
+
+	#spriteType = {
+	#	name = "GFX_ig_trade_unions_small"
+	#	texturefile = "gfx/interface/ig_icons/trade_unions_30.dds"
+	#}ig_support_noyet_frame
+### workers ###
+	spriteType = {
+		name = "GFX_ig_workers"
+		texturefile = "gfx/interface/ig_icons/workers.png"
+	}
+
+	spriteType = {
+		name = "GFX_ig_workers_small"
+		texturefile = "gfx/interface/ig_icons/workers_30.dds"
+	}
+### politically unaligned ###
+	spriteType = {
+		name = "GFX_ig_politically_unaligned"
+		texturefile = "gfx/interface/ig_icons/politically_unaligned.png"
+	}
+
+	spriteType = {
+		name = "GFX_ig_politically_unaligned_small"
+		texturefile = "gfx/interface/ig_icons/politically_unaligned_30.dds"
+	}
+
+#
+	spriteType = {
+		name = "GFX_influential_ig_frame"
+		texturefile = "gfx/interface/ig_icons/influential_ig_frame.png"
+	}
+
+	spriteType = {
+		name = "GFX_ig_round_button_wood_1"
+		texturefile = "gfx/interface/ig_icons/round_button_small_wood.png"
+	}
+
+###
+	spriteType = {
+		name = "GFX_ig_support_noyet_frame"
+		texturefile = "gfx/interface/ig_icons/ig_support_noyet_frame.png"
+		noOfFrames = 2
+	}
+}

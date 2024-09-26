@@ -172,3 +172,11 @@ defined_text = { #
 	}
 	text = { localization_key = GetFriendscript_defult }
 }
+
+
+defined_text = { # Country
+	name = GetCharacterid
+	text = {
+		localization_key = GethellenicCountryconfidence_ruins
+	}
+}

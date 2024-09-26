@@ -794,9 +794,13 @@ country_event = { #
 	option = {
 		name = br_election.1.a
 		#
-		add_ideas = event_target:elected_character
-		#
-		country_event = br_election.2
+		
+		meta_effect = {
+			text = {
+				add_ideas = [elected_charater]_hog
+			}
+			elected_charater = "[?elected_character.GetTokenKey]"
+		}
 	}
 	
 	option = {

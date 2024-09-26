@@ -104,7 +104,7 @@ save_global_event_target_as = Aragon
 #法律
 add_ideas = {
 	#
-	CAT_benito_pabon_hog
+	#CAT_benito_pabon_hog
 	#
 }
 #
