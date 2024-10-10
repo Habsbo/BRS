@@ -21,4 +21,16 @@ spriteTypes = {
 		name = "GFX_Portrait_Leader_ioannes_oikos_small"
 		texturefile = "gfx/leaders/sp/Leader/Portrait_Leader_ioannes_oikos_small.png"
 	}
+
+#	
+	spriteType = {
+		name = "GFX_portrait_kasane_teto"
+		texturefile = "gfx/leaders/Yugo_Slavia/Portrait_kasane_teto.png"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_kasane_teto_small"
+		texturefile = "gfx/interface/ideas/Yugo_Slavia/Portrait_kasane_teto_small.png"
+	}
+	
 }

@@ -48,6 +48,17 @@ defined_text = {
 		localization_key = [CZE_VL_picture]
 	}
 	text = {
+		trigger = {
+			OR = {
+				original_tag = HOL
+				original_tag = BEL
+				original_tag = LUX
+			}
+			NOT = { br_special_chars_holding_gov = yes }
+		}
+		localization_key = [Benelux_VL_picture]
+	}
+	text = {
 		trigger = { br_special_chars_holding_gov = yes }
 		localization_key = [SP_Chars_VL_picture]
 	}
@@ -100,6 +111,17 @@ defined_text = {
 			NOT = { br_special_chars_holding_gov = yes }
 		}
 		localization_key = [CZE_VL_name]
+	}
+	text = {
+		trigger = {
+			OR = {
+				original_tag = HOL
+				original_tag = BEL
+				original_tag = LUX
+			}
+			NOT = { br_special_chars_holding_gov = yes }
+		}
+		localization_key = [Benelux_VL_name]
 	}
 	text = {
 		trigger = { br_special_chars_holding_gov = yes }
@@ -157,6 +179,17 @@ defined_text = {
 		localization_key = [CZE_VL_state]
 	}
 	text = {
+		trigger = {
+			OR = {
+				original_tag = HOL
+				original_tag = BEL
+				original_tag = LUX
+			}
+			NOT = { br_special_chars_holding_gov = yes }
+		}
+		localization_key = [Benelux_VL_state]
+	}
+	text = {
 		trigger = { br_special_chars_holding_gov = yes }
 		localization_key = [SP_Chars_VL_state]
 	}
@@ -209,6 +242,17 @@ defined_text = {
 			NOT = { br_special_chars_holding_gov = yes }
 		}
 		localization_key = [CZE_VL_Dip_state]
+	}
+	text = {
+		trigger = {
+			OR = {
+				original_tag = HOL
+				original_tag = BEL
+				original_tag = LUX
+			}
+			NOT = { br_special_chars_holding_gov = yes }
+		}
+		localization_key = [Benelux_VL_Dip_state]
 	}
 	text = {
 		trigger = { br_special_chars_holding_gov = yes }
@@ -264,6 +308,17 @@ defined_text = {
 			NOT = { br_special_chars_holding_gov = yes }
 		}
 		localization_key = [CZE_VL_desc]
+	}
+	text = {
+		trigger = {
+			OR = {
+				original_tag = HOL
+				original_tag = BEL
+				original_tag = LUX
+			}
+			NOT = { br_special_chars_holding_gov = yes }
+		}
+		localization_key = [Benelux_VL_desc]
 	}
 	text = {
 		trigger = { br_special_chars_holding_gov = yes }
@@ -642,6 +697,15 @@ defined_text = {
 			}
 		}
 		localization_key = CL_Prime_Minister
+	}
+	#总统制下的责任内阁制
+	text = {
+		trigger = {
+			FROM = {
+				has_idea = br_laws_military_regulation
+			}
+		}
+		localization_key = CL_Marshal
 	}
 	text = { localization_key = VL_normal_status }
 }

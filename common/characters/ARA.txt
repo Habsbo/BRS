@@ -4,13 +4,8 @@ characters = {
 		name=CAT_joaquin_ascaso_budria
 		portraits={
 			civilian={
-				large="GFX_portrait_Joaquin_Ascaso"
-				small="GFX_idea_generic_political_advisor_europe_3"
-			}
-
-			army={
-				large="GFX_portrait_Joaquin_Ascaso"
-				small="GFX_idea_generic_political_advisor_europe_3"
+				large="GFX_portrait_ARA_joaquin_ascaso"
+				small="GFX_portrait_ARA_joaquin_ascaso_small"
 			}
 		}
 		country_leader={
@@ -32,9 +27,9 @@ characters = {
 	CAT_benito_pabon = { #总书记 贝尼托·帕彭
 		name=CAT_benito_pabon
 		portraits={
-			army={
-				large="GFX_portrait_Benito_Pabon"
-				small="GFX_idea_SPA_mauricio_de_sivatte"
+			civilian={
+				large="GFX_portrait_ARA_benito_pabon"
+				small="GFX_portrait_ARA_benito_pabon_small"
 			}
 		}
 		country_leader={

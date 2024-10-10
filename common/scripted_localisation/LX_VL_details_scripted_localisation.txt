@@ -220,6 +220,46 @@ defined_text = {
 	}
 
 #Benelux
+defined_text = {
+    name = Benelux_VL_picture
+	text = {
+		trigger = { has_idea = BEL_alexander_von_falkenhausen_hog }
+		localization_key = GFX_portrait_GER_alexander_von_falkenhausen
+    }
+	text = { localization_key = GFX_leader_unknown }
+}
+defined_text = {
+    name = Benelux_VL_name
+	text = {
+		trigger = { has_idea = BEL_alexander_von_falkenhausen_hog }
+		localization_key = VL_name_GER_alexander_von_falkenhausen
+    }
+	text = { localization_key = VL_name }
+}
+defined_text = {
+    name = Benelux_VL_state
+	text = {
+		trigger = { has_idea = BEL_alexander_von_falkenhausen_hog }
+		localization_key = VL_state_BEL_alexander_von_falkenhausen
+    }
+	text = { localization_key = VL_state }
+}
+defined_text = {
+    name = Benelux_VL_Dip_state
+	text = {
+		trigger = { has_idea = BEL_alexander_von_falkenhausen_hog }
+		localization_key = VL_Dip_state_BEL_alexander_von_falkenhausen
+    }
+	text = { localization_key = VL_Dip_state }
+}
+defined_text = {
+    name = Benelux_VL_desc
+	text = {
+		trigger = { has_idea = BEL_alexander_von_falkenhausen_hog }
+		localization_key = VL_desc_BEL_alexander_von_falkenhausen
+    }
+	text = { localization_key = VL_desc }
+}
 #Československo
 defined_text = {
     name = CZE_VL_picture

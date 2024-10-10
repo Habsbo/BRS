@@ -3189,57 +3189,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/idea_europe_generic_land_2.dds"
 	}
 
-#bel
-	spriteType = {
-		name = GFX_portrait_bel_albert_i_of_belgium
-		texturefile = "gfx/leaders/Benelux/Portrait_BEL_albert_i_of_belgium.tga"
-	}
-	
-	spriteType = {
-		name = GFX_portrait_BEL_hubert_pierlot
-		texturefile = "gfx/leaders/BEL/Portrait_Belgium_Hubert_Pierlot.dds"
-	}
-
-	spriteType = {
-		name = GFX_portrait_BEL_joseph_jacquemotte
-		texturefile = "gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
-	}
-
-	spriteType = {
-		name = GFX_portrait_BEL_leon_degrelle
-		texturefile = "gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
-	}
-
-	spriteType = {
-		name = GFX_portrait_BEL_leon_degrelle_small
-		texturefile = "gfx/interface/ideas/idea_europe_generic_land_1.dds"
-	}
-
-	spriteType = {
-		name = GFX_portrait_BEL_mcl_keyaerts
-		texturefile = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
-	}
-
-	spriteType = {
-		name = GFX_portrait_BEL_mcl_keyaerts_small
-		texturefile = "gfx/interface/ideas/idea_europe_generic_land_2.dds"
-	}
-
-	spriteType = {
-		name = GFX_portrait_BEL_georges_timmermans
-		texturefile = "gfx/leaders/Europe/Portrait_Europe_Generic_navy_3.dds"
-	}
-
-	spriteType = {
-		name = GFX_portrait_BEL_georges_timmermans_small
-		texturefile = "gfx/interface/ideas/idea_europe_generic_navy_3.dds"
-	}
-
-	spriteType = {
-		name = GFX_portrait_BEL_gilles_wyvekens
-		texturefile = "gfx/leaders/Europe/portrait_europe_generic_6.dds"
-	}
-
 #LUX
 	spriteType = {
 		name = GFX_portrait_luxembourg_marie_adelaide
@@ -8465,17 +8414,7 @@ spriteTypes = {
 		name = "GFX_portrait_MNT_blazo_dukanovic"
 		texturefile = "gfx/leaders/ITA/portrait_MNT_blazo_dukanovic.dds"
 	}
-#
-	spriteType = {
-		name = "GFX_portrait_kasane_teto"
-		texturefile = "gfx/leaders/Yugo_Slavia/Portrait_kasane_teto.png"
-	}
 
-	spriteType = {
-		name = "GFX_portrait_kasane_teto_small"
-		texturefile = "gfx/interface/ideas/Yugo_Slavia/Portrait_kasane_teto_small.png"
-	}
-	
 #
 	spriteType = {
 		name = "GFX_portrait_SPR_alfonso_xiii"

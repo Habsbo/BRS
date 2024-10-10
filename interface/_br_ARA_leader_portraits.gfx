@@ -1,0 +1,22 @@
+spriteTypes = {
+	# characters of aragon
+	spriteType = {
+		name = "GFX_portrait_ARA_joaquin_ascaso"
+		texturefile = "gfx/leaders/ARA/Portrait_SPR_Joaquin_Ascaso.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_ARA_joaquin_ascaso_small"
+		texturefile = "gfx/interface/ideas/ARA/idea_SPR_Joaquin_Ascaso.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_ARA_benito_pabon"
+		texturefile = "gfx/leaders/ARA/Portrait_SPR_Benito_Pabon_y_Suarez_de_Urbina.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_ARA_benito_pabon_small"
+		texturefile = "gfx/interface/ideas/ARA/idea_SPR_Benito_Pabon_y_Suarez_de_Urbina.dds"
+	}
+}

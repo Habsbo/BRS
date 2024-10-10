@@ -1194,3 +1194,15 @@ VIN_french_indochina = {
 	color = rgb { 65 105 225 }
 	color_ui = rgb { 65 105 225 }
 }
+
+#FRANCE
+
+FRA_kingdom = {
+	color = rgb { 65 105 225 }
+	color_ui = rgb { 65 105 225 }
+}
+
+FRA_angevin_empire = {
+	color = rgb { 0 0 225 }
+	color_ui = rgb { 0 0 225 }
+}

@@ -9,7 +9,7 @@ guiTypes = {
 		
 		background = {
 			name = "Background"		
-			quadTextureSprite ="GFX_tiled_window"
+			quadTextureSprite = "GFX_tiled_window"
 		}
 
 		#escap
@@ -48,109 +48,155 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "br_ig_icon_landowner"
-				position = { x = 0 y = -100 }
+				position = { x = 236 y = -100 }
+				size = { width = 236 height = 64 }
 				orientation = LOWER_RIGHT
 				origo = lower_right
 
 				background = {
 					name = "Background"		
+					quadTextureSprite = "GFX_ig_revolutionary_movement"
+				}
+				#GFX_influential_ig_frame
+				iconType = {
+					name = "br_ig_round_button_wood_icon"
+					position = { x = 0 y = 0 }
 					spriteType ="GFX_ig_round_button_wood_1"
+					orientation = LEFT
 				}
 
-			}
-			
-			iconType = {
-				name = "br_ig_landowner_icon"
-				position = { x = 10 y = -87 }
-				spriteType ="GFX_ig_landowners"
+				iconType = {
+					name = "br_ig_landowner_icon"
+					position = { x = 8 y = 8 }
+					spriteType ="GFX_ig_landowners"
+					orientation = LEFT
+				}
+
+				checkBoxType = {
+					name = "support_ig_button"
+					position = { x = 0 y = 0 }
+					quadTextureSprite = "GFX_influential_ig_frame"
+					clicksound = decisions_ui_button
+					pdx_tooltip = "CANCEL_SUPPORT"
+					buttonFont = "Main_14_black"
+					orientation = LEFT
+				}
+
+				#group texts 1
+				instantTextboxType = {
+					name = "br_interest_group_landowner_texts"
+					position = { x = 100 y = 0 }
+					borderSize = {x = 0 y = 0}
+					maxWidth = 120
+					maxHeight = 64
+					format = center
+					#
+					text = "BR_INEREST_GROUP_NAME_LANDOWNER"
+					font = "hoi_24header"
+					orientation = LEFT
+				}
 			}
 
-			checkBoxType = {
-				name = "support_ig_button"
-				position = { x = 0 y = -100 }
-				quadTextureSprite = "GFX_influential_ig_frame"
-				clicksound = decisions_ui_button
-				pdx_tooltip = "CANCEL_SUPPORT"
-				buttonFont = "Main_14_black"
+			containerWindowType = {
+				name = "ig_leader"
+				position = { x = 0 y = -90 }
+				orientation = LOWER_RIGHT
+				origo = lower_right
+				
+				iconType = {
+					name = "ig_leader_picture"
+					position = { x = 8 y = 14 }
+					pdx_tooltip = IGL_state_tt
+					pdx_tooltip_delayed = IGL_desc_tt
+				}
+				
+				iconType = {
+					name = "ig_leader_frame"
+					spriteType = "GFX_event_leader_frame"
+					position = { x = 0 y = 0 }		
+					alwaystransparent = yes
+				}
+				
+				instantTextboxType = {
+					name = "ig_leader_name"
+					position = { x = 188 y = 0 }
+					font = "hoi_18mbs"
+					text = "[IGL_name]"
+					pdx_tooltip = IGL_state_tt
+					pdx_tooltip_delayed = IGL_desc_tt
+					maxWidth = 155
+					maxHeight = 36
+					format = center
+					vertical_alignment = center
+				}
 			}
 
-			iconType = {
-				name = "br_ig_landowner_icon"
-				position = { x = 0 y = 0 }
-				size = { width = 82 height = 82 }
-				spriteType ="GFX_ig_landowners"
-			}
-			#group texts 1
-			instantTextboxType = {
-				name = "br_interest_group_landowner_texts"
-				position = { x = 82 y = -96 }
-				borderSize = {x = 0 y = 0}
-				maxWidth = 120
-				maxHeight = 60
-				format = center
-				#
-				text = "BR_INEREST_GROUP_NAME_LANDOWNER"
-				font = "hoi_24header"
-			}
-			#slot 1
-			buttonType = {
-				name = "br_mod_welcome_sidebar_button_1"
-				position = { x = 0 y = 0 }
-				quadTextureSprite ="GFX_idea_slot_political_advisor"
-				shortcut = "ctrl+q"
-				Orientation = "UPPER_LEFT"
-				clicksound = click_default
-				#pdx_tooltip = "CLOSE"
-				buttonFont = "Main_14_black"
+			containerWindowType = {
+				name = "ig_effect_slots"
+				position = { x = -10 y = 180 }
+				orientation = LOWER_RIGHT
+				origo = lower_right
 
-			}
-			#slot 2
-			buttonType = {
-				name = "br_mod_welcome_sidebar_button_2"
-				position = { x = 64 y = 0 }
-				quadTextureSprite ="GFX_idea_slot_political_advisor"
-				shortcut = "ctrl+q"
-				Orientation = "UPPER_LEFT"
-				clicksound = click_default
-				#pdx_tooltip = "CLOSE"
-				buttonFont = "Main_14_black"
-
-			}
-			#slot 3
-			buttonType = {
-				name = "br_mod_welcome_sidebar_button_3"
-				position = { x = 128 y = 0 }
-				quadTextureSprite ="GFX_idea_slot_political_advisor"
-				shortcut = "ctrl+q"
-				Orientation = "UPPER_LEFT"
-				clicksound = click_default
-				#pdx_tooltip = "CLOSE"
-				buttonFont = "Main_14_black"
-
-			}
-			#slot texts 1
-			instantTextboxType = {
-				name = "br_interest_group_1"
-				position = { x = 0 y = 64 }
-				borderSize = {x = 0 y = 0}
-				maxWidth = 190
-				maxHeight = 60
-				format = left
-				#
-				text = "BR_INEREST_GROUP_1"
-				font = "hoi_24header"
-			}
-			#agenda
-			instantTextboxType = {
-				name = "br_ig_agenda_landowner"
-				position = { x = 300 y = -100 }
-				borderSize = {x = 0 y = 0}
-				maxWidth = 190
-				maxHeight = 60
-				format = left
-				#
-				text = "BR_IG_AGENDA_LANDOWNER"
-				font = "hoi_24header"
+				#slot 1
+				buttonType = {
+					name = "br_mod_welcome_sidebar_button_1"
+					position = { x = 0 y = 0 }
+					quadTextureSprite ="GFX_idea_slot_political_advisor"
+					shortcut = "ctrl+q"
+					Orientation = "UPPER_LEFT"
+					clicksound = click_default
+					#pdx_tooltip = "CLOSE"
+					buttonFont = "Main_14_black"
+	
+				}
+				#slot 2
+				buttonType = {
+					name = "br_mod_welcome_sidebar_button_2"
+					position = { x = 64 y = 0 }
+					quadTextureSprite ="GFX_idea_slot_political_advisor"
+					shortcut = "ctrl+q"
+					Orientation = "UPPER_LEFT"
+					clicksound = click_default
+					#pdx_tooltip = "CLOSE"
+					buttonFont = "Main_14_black"
+	
+				}
+				#slot 3
+				buttonType = {
+					name = "br_mod_welcome_sidebar_button_3"
+					position = { x = 128 y = 0 }
+					quadTextureSprite ="GFX_idea_slot_political_advisor"
+					shortcut = "ctrl+q"
+					Orientation = "UPPER_LEFT"
+					clicksound = click_default
+					#pdx_tooltip = "CLOSE"
+					buttonFont = "Main_14_black"
+	
+				}
+				#slot texts 1
+				instantTextboxType = {
+					name = "br_interest_group_1"
+					position = { x = 10 y = 64 }
+					borderSize = {x = 0 y = 0}
+					maxWidth = 190
+					maxHeight = 60
+					format = left
+					#
+					text = "BR_INEREST_GROUP_1"
+					font = "hoi_24header"
+				}
+				#agenda
+				instantTextboxType = {
+					name = "br_ig_agenda_landowner"
+					position = { x = 200 y = 0 }
+					borderSize = {x = 0 y = 0 }
+					maxWidth = 240
+					maxHeight = 24
+					format = centre
+					#
+					text = "BR_IG_AGENDA_LANDOWNER"
+					font = "hoi_24header"
+				}
 			}
 		}
 		
@@ -161,86 +207,158 @@ guiTypes = {
 			orientation = CENTER_RIGHT
 			origo = center_right
 
+
 			containerWindowType = {
 				name = "br_ig_icon_peasantry"
-				position = { x = 0 y = -100 }
+				position = { x = 206 y = -100 }
+				size = { width = 236 height = 64 }
+				orientation = LOWER_RIGHT
+				origo = lower_right
 
 				background = {
 					name = "Background"		
+					quadTextureSprite = "GFX_ig_revolutionary_movement"
+				}
+				#GFX_influential_ig_frame
+				iconType = {
+					name = "br_ig_round_button_wood_icon"
+					position = { x = 0 y = 0 }
 					spriteType ="GFX_ig_round_button_wood_1"
+					orientation = RIGHT
+				}
+
+				iconType = {
+					name = "br_ig_peasantry_icon"
+					position = { x = 8 y = 8 }
+					spriteType ="GFX_ig_rural_folk"
+					orientation = RIGHT
+				}
+
+				checkBoxType = {
+					name = "support_ig_button"
+					position = { x = 0 y = 0 }
+					quadTextureSprite = "GFX_influential_ig_frame"
+					clicksound = decisions_ui_button
+					pdx_tooltip = "CANCEL_SUPPORT"
+					buttonFont = "Main_14_black"
+					orientation = RIGHT
+				}
+
+				#group texts 1
+				instantTextboxType = {
+					name = "br_interest_group_landowner_texts"
+					position = { x = 100 y = 0 }
+					borderSize = {x = 0 y = 0}
+					maxWidth = 120
+					maxHeight = 64
+					format = center
+					#
+					text = "BR_INEREST_GROUP_NAME_LANDOWNER"
+					font = "hoi_24header"
+					orientation = LEFT
 				}
 			}
-			#group texts 1
-			instantTextboxType = {
-				name = "br_interest_group_peasantry_texts"
-				position = { x = 82 y = -96 }
-				borderSize = {x = 0 y = 0}
-				maxWidth = 120
-				maxHeight = 60
-				format = center
-				#
-				text = "BR_INEREST_GROUP_NAME_PEASANTRY"
-				font = "hoi_24header"
-			}
-			#slot 1
-			buttonType = {
-				name = "br_mod_welcome_sidebar_button_1"
-				position = { x = 0 y = 0 }
-				quadTextureSprite ="GFX_idea_slot_political_advisor"
-				shortcut = "ctrl+q"
-				Orientation = "UPPER_LEFT"
-				clicksound = click_default
-				#pdx_tooltip = "CLOSE"
-				buttonFont = "Main_14_black"
 
+			containerWindowType = {
+				name = "ig_leader"
+				position = { x = 38 y = -90 }
+				orientation = LOWER_RIGHT
+				origo = lower_right
+				
+				iconType = {
+					name = "ig_leader_picture"
+					position = { x = 8 y = 14 }
+					pdx_tooltip = IGL_state_tt
+					pdx_tooltip_delayed = IGL_desc_tt
+				}
+				
+				iconType = {
+					name = "ig_leader_frame"
+					spriteType = "GFX_event_leader_frame"
+					position = { x = 0 y = 0 }		
+					alwaystransparent = yes
+				}
+				
+				instantTextboxType = {
+					name = "ig_leader_name"
+					position = { x = 8 y = 218 }
+					font = "hoi_18mbs"
+					text = "[IGL_name]"
+					pdx_tooltip = IGL_state_tt
+					pdx_tooltip_delayed = IGL_desc_tt
+					maxWidth = 155
+					maxHeight = 36
+					format = center
+					vertical_alignment = center
+				}
 			}
-			#slot 2
-			buttonType = {
-				name = "br_mod_welcome_sidebar_button_2"
-				position = { x = 64 y = 0 }
-				quadTextureSprite ="GFX_idea_slot_political_advisor"
-				shortcut = "ctrl+q"
-				Orientation = "UPPER_LEFT"
-				clicksound = click_default
-				#pdx_tooltip = "CLOSE"
-				buttonFont = "Main_14_black"
 
-			}
-			#slot 3
-			buttonType = {
-				name = "br_mod_welcome_sidebar_button_3"
-				position = { x = 128 y = 0 }
-				quadTextureSprite ="GFX_idea_slot_political_advisor"
-				shortcut = "ctrl+q"
-				Orientation = "UPPER_LEFT"
-				clicksound = click_default
-				#pdx_tooltip = "CLOSE"
-				buttonFont = "Main_14_black"
+			containerWindowType = {
+				name = "ig_effect_slots"
+				position = { x = -10 y = 180 }
+				orientation = LOWER_RIGHT
+				origo = lower_right
 
-			}
-			#slot texts 1
-			instantTextboxType = {
-				name = "br_interest_group_peasantry"
-				position = { x = 0 y = 64 }
-				borderSize = {x = 0 y = 0}
-				maxWidth = 190
-				maxHeight = 60
-				format = left
-				#
-				text = "BR_INEREST_GROUP_1"
-				font = "hoi_24header"
-			}
-			#agenda
-			instantTextboxType = {
-				name = "br_ig_agenda_peasantry"
-				position = { x = -300 y = -100 }
-				borderSize = {x = 0 y = 0}
-				maxWidth = 190
-				maxHeight = 60
-				format = left
-				#
-				text = "BR_IG_AGENDA_PEASANTRY"
-				font = "hoi_24header"
+				#slot 1
+				buttonType = {
+					name = "br_mod_welcome_sidebar_button_1"
+					position = { x = -15 y = 0 }
+					quadTextureSprite ="GFX_idea_slot_political_advisor"
+					shortcut = "ctrl+q"
+					Orientation = "UPPER_LEFT"
+					clicksound = click_default
+					#pdx_tooltip = "CLOSE"
+					buttonFont = "Main_14_black"
+	
+				}
+				#slot 2
+				buttonType = {
+					name = "br_mod_welcome_sidebar_button_2"
+					position = { x = 49 y = 0 }
+					quadTextureSprite ="GFX_idea_slot_political_advisor"
+					shortcut = "ctrl+q"
+					Orientation = "UPPER_LEFT"
+					clicksound = click_default
+					#pdx_tooltip = "CLOSE"
+					buttonFont = "Main_14_black"
+	
+				}
+				#slot 3
+				buttonType = {
+					name = "br_mod_welcome_sidebar_button_3"
+					position = { x = 113 y = 0 }
+					quadTextureSprite ="GFX_idea_slot_political_advisor"
+					shortcut = "ctrl+q"
+					Orientation = "UPPER_LEFT"
+					clicksound = click_default
+					#pdx_tooltip = "CLOSE"
+					buttonFont = "Main_14_black"
+	
+				}
+				#slot texts 1
+				instantTextboxType = {
+					name = "br_interest_group_1"
+					position = { x = -5 y = 64 }
+					borderSize = {x = 0 y = 0}
+					maxWidth = 190
+					maxHeight = 60
+					format = left
+					#
+					text = "BR_INEREST_GROUP_1"
+					font = "hoi_24header"
+				}
+				#agenda
+				instantTextboxType = {
+					name = "br_ig_agenda_landowner"
+					position = { x = -270 y = 0 }
+					borderSize = {x = 0 y = 0 }
+					maxWidth = 240
+					maxHeight = 24
+					format = centre
+					#
+					text = "BR_IG_AGENDA_LANDOWNER"
+					font = "hoi_24header"
+				}
 			}
 		}
 		

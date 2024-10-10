@@ -40,6 +40,36 @@ country_event = { #
 	#}
 }
 
+country_event = { #
+	id = br_fra.1001
+	title = br_fra.1001.title
+	desc = br_fra.1001.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		#
+	}
+
+	option = {
+		name = br_fra.1001.a #
+
+		add_popularity = { ideology = authoritarian popularity = 0.10 }
+
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = br_fra.1001.b #
+
+		add_popularity = { ideology = fascism popularity = 0.10 }
+
+		ai_chance = { factor = 1 }
+	}
+}
+
 ### french indochina ###
 add_namespace = br_indochina
 add_namespace = br_vietnam

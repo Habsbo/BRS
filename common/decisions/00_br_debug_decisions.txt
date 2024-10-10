@@ -144,6 +144,13 @@ br_debug_decisions = {
 		}
 	}
 #
+	debug_vl.2 = {
+		fire_only_once = no
+		complete_effect = {
+			#
+			activate_advisor = GER_alexander_von_falkenhausen_hog
+		}
+	}
 	debug_vl.1 = {
 		fire_only_once = no
 		complete_effect = {

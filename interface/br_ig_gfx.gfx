@@ -121,8 +121,11 @@ spriteTypes = {
 
 ###
 	spriteType = {
-		name = "GFX_ig_support_noyet_frame"
-		texturefile = "gfx/interface/ig_icons/ig_support_noyet_frame.png"
-		noOfFrames = 2
+		name = "GFX_ig_support_button_small_frame"
+		texturefile = "gfx/interface/ig_icons/round_button_small_frame.png"
+	}
+	spriteType = {
+		name = "GFX_ig_revolutionary_movement"
+		texturefile = "gfx/interface/ig_background/top_illu_revolutionary_movement.png"
 	}
 }

@@ -32,13 +32,6 @@
  JAP_senjuro_hayashi: "林铣十郎"
  JAP_fumimaro_konoe: "近卫文磨"
 #bel
- BEL_albert_i_of_belgium: "阿尔贝一世"
- BEL_leopold_iii_of_belgium: "利奥波德三世"
- BEL_baudouin_of_belgium: "博杜安一世"
- BEL_paul_van_zeeland: "保罗·范-泽兰"
- BEL_war_van_overstraeten: "爱德华·范-奥弗斯特滕"
- BEL_julien_lahaut: "朱利安·拉奥"
- BEL_victor_serge: "维克托·塞尔日" #anarchy
 #lux
  LUX_marie_adelaide: "玛丽·阿黛拉伊德"
  LUX_charlotte_of_luxembourg: "夏洛特"
@@ -77,6 +70,14 @@
  LUX_ehrlich_swabian: "阿尔利希·士瓦本"
  LUX_jean_d_adler: "让·达-德勒"
 #france
+
+#germany
+ GER_alexander_von_falkenhausen: "亚历山大·冯·法肯豪森"
+ VL_name_GER_alexander_von_falkenhausen: "$GER_alexander_von_falkenhausen$"
+ VL_trait_BEL_alexander_von_falkenhausen: "§Y$supervisors_committee_germany$§!\n - 政治点数: §G+5%§!\n - 稳定度: §G+10%§!\n - 意识形态抵制力度: §G+10%§!\n - $supervisors_committee_germany_tt$"
+ VL_state_BEL_alexander_von_falkenhausen: "§Y$GER_alexander_von_falkenhausen$§!\n$VL_trait_BEL_alexander_von_falkenhausen$"
+ VL_Dip_state_BEL_alexander_von_falkenhausen: "§Y$GER_alexander_von_falkenhausen$§!\n$GetDipStatus$\n$VL_trait_BEL_alexander_von_falkenhausen$"
+ VL_desc_BEL_alexander_von_falkenhausen: "§g§!"
 
 #HELLAS
  GRE_regency_council: "摄政议会"

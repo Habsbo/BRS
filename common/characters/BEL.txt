@@ -4,8 +4,8 @@ characters={
 		name=BEL_albert_i_of_belgium
 		portraits={
 			civilian={
-				large=GFX_portrait_bel_albert_i_of_belgium
-				small=GFX_portrait_bel_albert_i_of_belgium_idea
+				large = "GFX_portrait_BEL_albert_i_of_belgium"
+				small = "GFX_portrait_BEL_albert_i_of_belgium_small"
 			}
 		}
 		country_leader={
@@ -50,7 +50,8 @@ characters={
 		name=BEL_leopold_iii_of_belgium
 		portraits={
 			civilian={
-				large=GFX_portrait_BEL_hubert_pierlot
+				large = "GFX_portrait_BEL_leopold_iii_of_belgium"
+				small = "GFX_portrait_BEL_leopold_iii_of_belgium_small"
 			}
 		}
 	}
@@ -58,7 +59,27 @@ characters={
 		name=BEL_baudouin_of_belgium
 		portraits={
 			civilian={
-				large=GFX_portrait_BEL_hubert_pierlot
+				large = "GFX_portrait_BEL_leopold_iii_of_belgium"
+				small = "GFX_portrait_BEL_leopold_iii_of_belgium_small"
+			}
+		}
+	}
+	BEL_marie_jose_of_belgium = { #比利时的玛丽·何塞
+		name=BEL_marie_jose_of_belgium
+		portraits={
+			civilian={
+				large = "GFX_portrait_BEL_marie_jose_of_belgium"
+				small = "GFX_portrait_BEL_marie_jose_of_belgium_small"
+			}
+		}
+		gender = female
+	}
+	BEL_prince_charles_count_of_flanders = { #比利时的王子夏尔，弗兰德伯爵
+		name=BEL_prince_charles_count_of_flanders
+		portraits={
+			civilian={
+				large = "GFX_portrait_BEL_prince_charles_count_of_flanders"
+				small = "GFX_portrait_BEL_prince_charles_count_of_flanders_small"
 			}
 		}
 	}
@@ -66,9 +87,9 @@ characters={
 	BEL_henri_jaspar={ #亨利·贾斯帕
 		name=BEL_henri_jaspar
 		portraits={
-			army={
-				large = GFX_portrait_BEL_henri_jaspar
-				small = GFX_portrait_BEL_henri_jaspar_small
+			civilian = {
+				large = "GFX_portrait_BEL_henri_jaspar"
+				small = "GFX_portrait_BEL_henri_jaspar_small"
 			}
 		}
 		advisor={
@@ -94,9 +115,9 @@ characters={
 	BEL_jules_renkin={ #朱尔斯·伦金
 		name=BEL_jules_renkin
 		portraits={
-			army={
-				large = GFX_portrait_BEL_jules_renkin
-				small = GFX_portrait_BEL_jules_renkin_small
+			civilian = {
+				large = "GFX_portrait_BEL_jules_renkin"
+				small = "GFX_portrait_BEL_jules_renkin_small"
 			}
 		}
 		advisor={
@@ -122,8 +143,9 @@ characters={
 	BEL_paul_henri_spaak={ #保罗-亨利·斯巴克
 		name=BEL_paul_henri_spaak
 		portraits={
-			army={
-				small="GFX_idea_generic_political_advisor_europe_1"
+			civilian = {
+				large = "GFX_portrait_BEL_paul_henri_spaak"
+				small = "GFX_portrait_BEL_paul_henri_spaak_small"
 			}
 		}
 		advisor={
@@ -135,13 +157,12 @@ characters={
 			traits  = { captain_of_industry }
 		}
 	}
-	#
 	BEL_hubert_pierlot={ #于贝尔·皮埃洛
 		name=BEL_hubert_pierlot
 		portraits={
 			civilian={
-				large = GFX_portrait_BEL_hubert_pierlot
-				small = GFX_portrait_BEL_hubert_pierlot_small
+				large = "GFX_portrait_BEL_hubert_pierlot"
+				small = "GFX_portrait_BEL_hubert_pierlot_small"
 			}
 		}
 		advisor={
@@ -162,7 +183,8 @@ characters={
 		name=BEL_paul_van_zeeland
 		portraits={
 			civilian={
-				large=GFX_portrait_BEL_hubert_pierlot
+				large = "GFX_portrait_BEL_paul_van_zeeland"
+				small = "GFX_portrait_BEL_paul_van_zeeland_small"
 			}
 		}
 		advisor={
@@ -187,13 +209,73 @@ characters={
 			ai_will_do = { factor = 1.000 }
 		}
 	}
+	BEL_charles_de_broqueville={ #夏尔·德-布洛克维尔
+		name=BEL_charles_de_broqueville
+		portraits={
+			civilian={
+				large = "GFX_portrait_BEL_charles_de_broqueville"
+				small = "GFX_portrait_BEL_charles_de_broqueville_small"
+			}
+		}
+		advisor={
+			slot = head_of_gov
+			idea_token = BEL_charles_de_broqueville_hog
+			allowed = { original_tag = BEL }
+			available = {
+				br_ideology_fascism_nio = yes
+				br_head_of_gov_generic_trigger = yes
+			}
+			traits = {  }
+			cost = 0
+			can_be_fired = no
+			ai_will_do = { factor = 1.000 }
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = BEL_charles_de_broqueville
+			allowed = { original_tag = BEL }
+			available = { br_ideology_fascism_nio = yes }
+			traits  = {}
+			ai_will_do = { factor = 1.000 }
+		}
+	}
+	BEL_henri_carton_de_wiart={ #亨利·卡东·德-维亚尔特
+		name=BEL_henri_carton_de_wiart
+		portraits={
+			civilian={
+				large = "GFX_portrait_BEL_henri_carton_de_wiart"
+				small = "GFX_portrait_BEL_henri_carton_de_wiart_small"
+			}
+		}
+		advisor={
+			slot = head_of_gov
+			idea_token = BEL_henri_carton_de_wiart_hog
+			allowed = { original_tag = BEL }
+			available = {
+				br_ideology_fascism_nio = yes
+				br_head_of_gov_generic_trigger = yes
+			}
+			traits = {  }
+			cost = 0
+			can_be_fired = no
+			ai_will_do = { factor = 1.000 }
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = BEL_henri_carton_de_wiart
+			allowed = { original_tag = BEL }
+			available = { br_ideology_fascism_nio = yes }
+			traits  = {}
+			ai_will_do = { factor = 1.000 }
+		}
+	}
 	#Rex
 	BEL_leon_degrelle={ #莱昂·约瑟夫·马里·伊尼亚斯·德格雷勒
 		name=BEL_leon_degrelle
 		portraits={
 			army = {
-				large=GFX_portrait_BEL_leon_degrelle
-				small=GFX_portrait_BEL_leon_degrelle_small
+				large = "GFX_portrait_BEL_leon_degrelle"
+				small = "GFX_portrait_BEL_leon_degrelle_small"
 			}
 		}
 		country_leader={
@@ -209,14 +291,23 @@ characters={
 			cost = 100
 			ai_will_do = { factor = 1.000 }
 		}
+		corps_commander={
+			traits={ brilliant_strategist }
+			skill=2
+			attack_skill=2
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
 	}
 	#wallonia
 	BEL_georges_emile_leonard_theunis={ #乔治·埃米尔·莱昂纳德·特尼斯
 		name=BEL_george_theunis
 		portraits={
-			army = {
-				large=GFX_portrait_BEL_georges_emile_leonard_theunis
-				small=GFX_portrait_BEL_georges_emile_leonard_theunis_small
+			civilian = {
+				large = "GFX_portrait_BEL_georges_emile_leonard_theunis"
+				small = "GFX_portrait_BEL_georges_emile_leonard_theunis_small"
 			}
 		}
 		advisor={
@@ -231,9 +322,26 @@ characters={
 	BEL_paul_emile_janson={ #保罗-埃米尔·詹森
 		name=BEL_paul_emile_janson
 		portraits={
-			army = {
-				large=GFX_portrait_BEL_paul_emile_janson
-				small=GFX_portrait_BEL_paul_emile_janson_small
+			civilian = {
+				large = "GFX_portrait_BEL_paul_emile_janson"
+				small = "GFX_portrait_BEL_paul_emile_janson_small"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = BEL_paul_emile_janson
+			allowed = { original_tag = BEL }
+			traits = {  }
+			cost = 100
+			ai_will_do = { factor = 1.000 }
+		}
+	}
+	BEL_joseph_pholien={ #约瑟夫·弗里安
+		name=BEL_joseph_pholien
+		portraits={
+			civilian = {
+				large = "GFX_portrait_BEL_joseph_pholien"
+				small = "GFX_portrait_BEL_joseph_pholien_small"
 			}
 		}
 		advisor={
@@ -246,12 +354,12 @@ characters={
 		}
 	}
 ### communists historial
-	BEL_henri_de_man = {
+	BEL_henri_de_man = { #亨利·德-曼
 		name=BEL_henri_de_man
 		portraits={
-			army = {
-				large=GFX_portrait_BEL_henri_de_man
-				small=GFX_portrait_BEL_henri_de_man_small
+			civilian = {
+				large = "GFX_portrait_BEL_henri_de_man"
+				small = "GFX_portrait_BEL_henri_de_man_small"
 			}
 		}
 		country_leader={
@@ -273,8 +381,8 @@ characters={
 		name=BEL_julien_lahaut
 		portraits={
 			army = {
-				large=GFX_portrait_BEL_leon_degrelle
-				small=GFX_portrait_BEL_leon_degrelle_small
+				large = "GFX_portrait_BEL_julien_lahaut"
+				small = "GFX_portrait_BEL_julien_lahaut_small"
 			}
 		}
 		country_leader={
@@ -295,9 +403,9 @@ characters={
 	BEL_joseph_jacquemotte={ #约瑟夫·雅各莫特
 		name=BEL_joseph_jacquemotte
 		portraits={
-			army = {
-				large=GFX_portrait_BEL_joseph_jacquemotte
-				small=GFX_portrait_BEL_leon_degrelle_small
+			civilian = {
+				large = "GFX_portrait_BEL_joseph_jacquemotte"
+				small = "GFX_portrait_BEL_joseph_jacquemotte_small"
 			}
 		}
 		country_leader={
@@ -331,9 +439,9 @@ characters={
 	BEL_war_van_overstraeten={ #爱德华·范-奥弗斯特滕
 		name=BEL_war_van_overstraeten
 		portraits={
-			army = {
-				large=GFX_portrait_BEL_leon_degrelle
-				small=GFX_portrait_BEL_leon_degrelle_small
+			civilian = {
+				large = "GFX_portrait_BEL_war_van_overstraeten"
+				small = "GFX_portrait_BEL_war_van_overstraeten_small"
 			}
 		}
 		advisor={
@@ -358,6 +466,36 @@ characters={
 			}
 			traits = { vanwardist_revolutionary }
 			cost = 100
+			ai_will_do = { factor = 1.000 }
+		}
+	}
+	BEL_camille_huysmans={ #卡米耶·胡斯曼
+		name=BEL_camille_huysmans
+		portraits={
+			civilian={
+				large = "GFX_portrait_BEL_camille_huysmans"
+				small = "GFX_portrait_BEL_camille_huysmans_small"
+			}
+		}
+		advisor={
+			slot = head_of_gov
+			idea_token = BEL_camille_huysmans_hog
+			allowed = { original_tag = BEL }
+			available = {
+				br_ideology_fascism_nio = yes
+				br_head_of_gov_generic_trigger = yes
+			}
+			traits = {  }
+			cost = 0
+			can_be_fired = no
+			ai_will_do = { factor = 1.000 }
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = BEL_camille_huysmans
+			allowed = { original_tag = BEL }
+			available = { br_ideology_fascism_nio = yes }
+			traits  = {}
 			ai_will_do = { factor = 1.000 }
 		}
 	}
@@ -555,16 +693,16 @@ characters={
 			slot = high_command
 			idea_token = BEL_oscar_michiels
 			ledger = army
-				allowed = {
-					original_tag = BEL
-				}
-				traits = {
-					army_logistics_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
+			allowed = {
+				original_tag = BEL
+			}
+			traits = {
+				army_logistics_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
 		}
 	}
 	BEL_charles_bastin={ #查尔斯·巴斯廷
@@ -714,8 +852,7 @@ characters={
 		}
 	}
 ### definitely unhistorial characters
-	
-	BEL_paul_maes={ #保罗·梅斯
+		BEL_paul_maes={ #保罗·梅斯
 		name=BEL_paul_maes
 		portraits={
 			army={

@@ -20,19 +20,28 @@ set_technology = {
 recruit_character = BEL_albert_i_of_belgium
 recruit_character = BEL_leopold_iii_of_belgium
 recruit_character = BEL_baudouin_of_belgium
+ITA = { recruit_character = BEL_marie_jose_of_belgium }
+recruit_character = BEL_prince_charles_count_of_flanders
 #prime
 recruit_character = BEL_henri_jaspar
 recruit_character = BEL_jules_renkin
 recruit_character = BEL_paul_van_zeeland
-
+recruit_character = BEL_paul_henri_spaak
+recruit_character = BEL_charles_de_broqueville
+recruit_character = BEL_georges_emile_leonard_theunis
+recruit_character = BEL_paul_emile_jansoN
+recruit_character = BEL_joseph_pholien
+recruit_character = BEL_hubert_pierlot
+recruit_character = BEL_henri_carton_de_wiart
+#party rex
+recruit_character = BEL_leon_degrelle
 #communists
 recruit_character = BEL_henri_de_man #
 recruit_character = BEL_julien_lahaut
 recruit_character = BEL_joseph_jacquemotte
 recruit_character = BEL_war_van_overstraeten
-
+recruit_character = BEL_camille_huysmans
 #
-recruit_character = BEL_hubert_pierlot
 recruit_character = BEL_mcl_keyaerts
 recruit_character = BEL_georges_timmermans
 recruit_character = BEL_gilles_wyvekens
@@ -46,12 +55,14 @@ recruit_character = BEL_oscar_michiels
 recruit_character = BEL_charles_bastin
 recruit_character = BEL_yvan_gerard
 recruit_character = BEL_rene_lagrou
-recruit_character = BEL_leon_degrelle
 recruit_character = BEL_fritz_lob
 recruit_character = BEL_jules_iserentant
 recruit_character = BEL_victor_van_strydonck_de_burkel
 recruit_character = BEL_paul_henri_spaak
 recruit_character = BEL_gaston_eyskens
+
+#
+recruit_character = GER_alexander_von_falkenhausen
 
 set_politics = {
 	ruling_party = dem_conservatism
@@ -84,8 +95,6 @@ add_ideas = {
 	br_laws_mainstream
 	br_laws_religious_people
 	br_laws_bourgeoisie
-	#head of gov
-	BEL_henri_jaspar_hog
 	#national spirits
 	BEL_limited_by_treaty1
 	BEL_betrayed_by_former_allies
@@ -93,7 +102,9 @@ add_ideas = {
 	BEL_vlaams_fostered
 	BEL_need_more_jobs
 }
+#
 
+#
 set_cosmetic_tag = BEL_kingdom
 
 set_power_balance = {
@@ -106,8 +117,12 @@ set_power_balance = {
 set_variable = { generic_unemployment_var = 2.5 }
 
 #驻军
-set_variable = { br_bel_the_treaty_fra_value = 3 }
-set_variable = { br_bel_the_treaty_ger_value = 8 }
+set_variable = { br_bel_the_treaty_fra_troops_value = 5 }
+set_variable = { br_bel_the_treaty_ger_troops_value = 8 }
+set_variable = { br_bel_the_treaty_eng_troops_value = 0 }
+set_variable = { br_bel_the_treaty_fra_value = 8 }
+set_variable = { br_bel_the_treaty_ger_value = 16 }
+set_variable = { br_bel_the_treaty_eng_value = 3 }
 
 #
 create_dynamic_country = {
@@ -137,3 +152,7 @@ every_possible_country = {
 	set_variable = { BEL_nmj_dy_stability_weekly = 0.05 }
 	set_variable = { BEL_nmj_dy_industrial_capacity_factory = 0.05 }
 }
+
+ENG = { save_global_event_target_as = ENG_the_treaty }
+FRA = { save_global_event_target_as = FRA_the_treaty }
+GER = { save_global_event_target_as = GER_the_treaty }

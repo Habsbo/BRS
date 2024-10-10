@@ -20,7 +20,7 @@
 		icon = GFX_goal_generic_national_unity
 		#prerequisite = { focus =  }
 		#mutually_exclusive = { focus =  }
-		x = 62
+		x = 70
 		y = 0
 		#relative_position_id =
 
@@ -1171,7 +1171,7 @@
 		id = FRA_anti_fascist_coalition
 		icon = GFX_focus_generic_anti_fascism
 		prerequisite = { focus = FRA_the_road_to_war }
-		mutually_exclusive = { focus = FRA_une_flamme_sacree }
+		mutually_exclusive = { focus = FRA_ume_flamme_sacree }
 		x = -1
 		y = 1
 		relative_position_id = FRA_the_road_to_war
@@ -1221,7 +1221,7 @@
 
 	###
 	focus = {
-		id = FRA_une_flamme_sacree
+		id = FRA_ume_flamme_sacree
 		icon = GFX_goal_generic_attack_allies
 		prerequisite = { focus = FRA_the_road_to_war }
 		mutually_exclusive = { focus = FRA_anti_fascist_coalition }
@@ -2486,7 +2486,7 @@
 		id = FRA_rassemblement_national_rising
 		icon = GFX_focus_generic_strike_at_democracy2
 		mutually_exclusive = { focus = FRA_publicizing_front_populaire }
-		x = 42
+		x = 50
 		y = 0
 
 		cost = 8
@@ -2503,7 +2503,14 @@
 		
 		complete_tooltip = {}
 		
-		completion_reward = {}
+		completion_reward = {
+			add_political_power = 200
+			add_stability = -0.10
+			add_popularity = { ideology = dem_conservatism popularity = 0.05 }
+			add_popularity = { ideology = authoritarian popularity = 0.05 }
+			add_popularity = { ideology = fascism popularity = 0.03 }
+			add_popularity = { ideology = nationalism popularity = 0.01 }
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -2598,6 +2605,39 @@
 		y = 1
 		relative_position_id = FRA_rassemblement_national_rising
 
+		cost = 5
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			add_political_power = 200
+			#
+			add_popularity = { ideology = dem_conservatism popularity = 0.02 }
+			add_popularity = { ideology = authoritarian popularity = 0.02 }
+			add_popularity = { ideology = fascism popularity = 0.02 }
+			add_popularity = { ideology = nationalism popularity = 0.02 }
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = FRA_13
+		icon = GFX_
+		prerequisite = { focus = FRA_canvass_for_more_campaign_funds }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = FRA_canvass_for_more_campaign_funds
+
 		cost = 8
 		
 		available = {}
@@ -2615,6 +2655,693 @@
 		ai_will_do = { factor = 1 }
 	}
 
+### ###
+	focus = {
+		id = FRA_impel_the_leagues_to_liege
+		icon = GFX_focus_generic_strike_at_democracy1
+		prerequisite = { focus = FRA_canvass_for_more_campaign_funds }
+		#mutually_exclusive = { focus =  }
+		x = -10
+		y = 2
+		relative_position_id = FRA_canvass_for_more_campaign_funds
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			#
+			add_popularity = { ideology = authoritarian popularity = 0.05 }
+			add_popularity = { ideology = fascism popularity = 0.03 }
+			add_popularity = { ideology = nationalism popularity = 0.02 }
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = FRA_rupture
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		prerequisite = { focus = FRA_impel_the_leagues_to_liege }
+		mutually_exclusive = { focus = FRA_encouragement_of_france }
+		x = -1
+		y = 1
+		relative_position_id = FRA_impel_the_leagues_to_liege
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = FRA_encouragement_of_france
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = FRA_impel_the_leagues_to_liege }
+		mutually_exclusive = { focus = FRA_rupture }
+		x = 1
+		y = 1
+		relative_position_id = FRA_impel_the_leagues_to_liege
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			add_stability = 0.10
+			add_popularity = { ideology = sci_socialism popularity = -0.05 }
+			add_popularity = { ideology = con_socialism popularity = -0.05 }
+			add_popularity = { ideology = dem_socialism popularity = -0.05 }
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = FRA_31
+		icon = GFX_
+		prerequisite = {
+			focus = FRA_rupture
+			focus = FRA_encouragement_of_france
+		}
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = FRA_rupture
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = FRA_32
+		icon = GFX_
+		prerequisite = {
+			focus = FRA_rupture
+			focus = FRA_encouragement_of_france
+		}
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = FRA_encouragement_of_france
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+#Napoleon
+	focus = {
+		id = FRA_president_but_fighter
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = FRA_encouragement_of_france }
+		#mutually_exclusive = { focus =  }
+		x = 3
+		y = 3
+		relative_position_id = FRA_encouragement_of_france
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	#
+	focus = {
+		id = FRA_valois_comeback
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = FRA_president_but_fighter }
+		mutually_exclusive = { focus = FRA_bonaparte_comeback }
+		x = -3
+		y = 1
+		relative_position_id = FRA_president_but_fighter
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = FRA_demolish_britain
+		icon = GFX_
+		prerequisite = { focus = FRA_valois_comeback }
+		#mutually_exclusive = { focus =  }
+		x = -2
+		y = 1
+		relative_position_id = FRA_valois_comeback
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			effect_tooltip = {
+				create_wargoal = { target = ENG type = annex_everything }
+			}
+			hidden_effect = {
+				every_other_country = {
+					limit = {
+						original_tag = ENG
+						exists = yes
+					}
+					ROOT = {
+						create_wargoal = { target = PREV type = annex_everything }
+					}
+				}
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = FRA_order_iberia
+		icon = GFX_
+		prerequisite = { focus = FRA_demolish_britain }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = FRA_demolish_britain
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			effect_tooltip = {
+				create_wargoal = { target = SPR type = annex_everything }
+				create_wargoal = { target = POR type = annex_everything }
+			}
+			hidden_effect = {
+				every_other_country = {
+					limit = {
+						OR = {
+							original_tag = SPR
+							original_tag = POR
+						}
+						exists = yes
+					}
+					ROOT = {
+						create_wargoal = { target = PREV type = annex_everything }
+					}
+				}
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = FRA_bloody_for_bloods
+		icon = GFX_
+		prerequisite = { focus = FRA_valois_comeback }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = FRA_valois_comeback
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			effect_tooltip = {
+				create_wargoal = { target = GER type = annex_everything }
+			}
+			hidden_effect = {
+				every_other_country = {
+					limit = {
+						original_tag = GER
+						exists = yes
+					}
+					ROOT = {
+						create_wargoal = { target = PREV type = annex_everything }
+					}
+				}
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = FRA_natural_boundaries
+		icon = GFX_
+		prerequisite = { focus = FRA_bloody_for_bloods }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = FRA_bloody_for_bloods
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	#
+	focus = {
+		id = FRA_bonaparte_comeback
+		icon = GFX_focus_focus_fra_third_empire
+		prerequisite = { focus = FRA_president_but_fighter }
+		mutually_exclusive = { focus = FRA_valois_comeback }
+		x = 3
+		y = 1
+		relative_position_id = FRA_president_but_fighter
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			#
+			#
+			set_party_name = {
+				ideology = authoritarian
+				long_name = FRA_bonepartist_party_long
+				name = FRA_bonepartist_party
+			}
+			set_politics = { ruling_party = authoritarian }
+			hidden_effect = {
+				news_event = { id = lar_news.8 days = 3 random_days = 5 }
+			}
+			set_cosmetic_tag = FRA_THIRD_EMPIRE
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = FRA_retribution_for_sedan
+		icon = GFX_focus_attack_germany
+		prerequisite = { focus = FRA_bonaparte_comeback }
+		x = 0
+		y = 1
+		relative_position_id = FRA_bonaparte_comeback
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			custom_effect_tooltip = FRA_retribution_for_sedan_tt
+			hidden_effect = {
+				every_other_country = {
+					limit = {
+						original_tag = GER
+						exists = yes
+					}
+					ROOT = {
+						create_wargoal = { target = PREV type = annex_everything }
+					}
+				}
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = FRA_return_to_borodino
+		icon = GFX_
+		prerequisite = { focus = FRA_retribution_for_sedan }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = FRA_retribution_for_sedan
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			custom_effect_tooltip = FRA_return_to_borodino_tt
+			hidden_effect = {
+				every_other_country = {
+					limit = {
+						OR = {
+							original_tag = RUS
+							original_tag = SOV
+						}
+						exists = yes
+					}
+					ROOT = {
+						create_wargoal = { target = PREV type = annex_everything }
+					}
+				}
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = FRA_je_suis_la_deluge
+		icon = GFX_focus_fra_le_deluge
+		prerequisite = { focus = FRA_return_to_borodino }
+		x = 0
+		y = 1
+		relative_position_id = FRA_return_to_borodino
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			add_ideas = { FRA_la_deluge }
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = FRA_avenge_waterloo 
+		icon = GFX_focus_attack_britain
+		prerequisite = { focus = FRA_bonaparte_comeback }
+		x = 2
+		y = 1
+		relative_position_id = FRA_bonaparte_comeback
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			custom_effect_tooltip = FRA_avenge_waterloo_tt
+			every_state = {
+				limit = { br_culture_is_wallonia_state = yes }
+				add_claim_by = root
+			}
+			hidden_effect = {
+				every_other_country = {
+					limit = {
+						original_tag = ENG
+						exists = yes
+					}
+					ROOT = {
+						create_wargoal = { target = PREV type = puppet_wargoal_focus }
+					}
+				}
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	#
+	focus = {
+		id = FRA_enforce_ideology
+		icon = GFX_
+		prerequisite = {
+			focus = FRA_valois_comeback
+			focus = FRA_bonaparte_comeback
+		}
+		mutually_exclusive = { focus = FRA_fort_anticommunism }
+		x = -2
+		y = 1
+		relative_position_id = FRA_bonaparte_comeback
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			set_rule = {
+				can_create_factions = yes
+				can_force_government = yes
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = FRA_european_empire
+		icon = GFX_
+		prerequisite = { focus = FRA_enforce_ideology }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = FRA_enforce_ideology
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			custom_effect_tooltip = FRA_european_empire_tt
+			hidden_effect = {
+				every_other_country = {
+					limit = {
+						var:capital = { is_on_continent = europe }
+						exists = yes
+					}
+					ROOT = {
+						create_wargoal = { target = PREV type = annex_everything }
+					}
+				}
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	#
+	focus = {
+		id = FRA_fort_anticommunism
+		icon = GFX_focus_ger_bulwark_against_bolshevism
+		prerequisite = {
+			focus = FRA_valois_comeback
+			focus = FRA_bonaparte_comeback
+		}
+		mutually_exclusive = { focus = FRA_enforce_ideology }
+		x = 2
+		y = 1
+		relative_position_id = FRA_valois_comeback
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			create_faction = "FRA_fort_anticommunism"
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = FRA_imperialism_unified
+		icon = GFX_
+		prerequisite = {
+			focus = FRA_fort_anticommunism
+			focus = FRA_enforce_ideology
+		}
+		mutually_exclusive = { focus = FRA_bonaparte_dynasty_of_europa }
+		x = 0
+		y = 1
+		relative_position_id = FRA_fort_anticommunism
+
+		cost = 8
+		
+		available = {}
+				
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			every_possible_country = {
+				limit = {
+					has_government = authoritarian
+					is_in_faction = no
+					var:capital = { is_on_continent = europe }
+				}
+				ROOT = { add_to_faction = PREV }
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+###
 	focus = {
 		id = FRA_french_nationalism
 		icon = GFX_
@@ -2636,7 +3363,11 @@
 		
 		complete_tooltip = {}
 		
-		completion_reward = {}
+		completion_reward = {
+			#
+			add_popularity = { ideology = fascism popularity = 0.05 }
+			add_popularity = { ideology = nationalism popularity = 0.05 }
+		}
 		
 		ai_will_do = { factor = 1 }
 	}

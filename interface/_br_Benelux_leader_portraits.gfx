@@ -1,0 +1,254 @@
+spriteTypes = {
+# characters of netherlands
+
+# characters of belgium
+
+	#阿尔贝一世
+	spriteType = {
+		name = "GFX_portrait_BEL_albert_i_of_belgium"
+		texturefile = "gfx/leaders/Benelux/Portrait_BEL_Albert_I.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_BEL_albert_i_of_belgium_small"
+		texturefile = "gfx/interface/ideas/Benelux/Portrait_bel_albert_i_of_belgium_idea.dds"
+	}
+
+	#利奥波德三世
+	spriteType = {
+		name = "GFX_portrait_BEL_leopold_iii_of_belgium"
+		texturefile = "gfx/leaders/Benelux/Portrait_BEL_Leopold_III.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_BEL_leopold_iii_of_belgium_small"
+		texturefile = "gfx/interface/ideas/Benelux/idea_BEL_Leopold_III.dds"
+	}
+
+	#玛丽·何塞·比利时
+	spriteType = {
+		name = "GFX_portrait_BEL_marie_jose_of_belgium"
+		texturefile = "gfx/leaders/Benelux/Portrait_BEL_Marie_Jose.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_BEL_marie_jose_of_belgium_small"
+		texturefile = "gfx/interface/ideas/Benelux/idea_BEL_Marie_Jose.dds"
+	}
+
+	#弗兰德伯爵 王子夏尔
+	spriteType = {
+		name = "GFX_portrait_BEL_prince_charles_count_of_flanders"
+		texturefile = "gfx/leaders/Benelux/Portrait_BEL_Prince_Charles_Count_of_Flanders.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_BEL_prince_charles_count_of_flanders_small"
+		texturefile = "gfx/interface/ideas/Benelux/idea_BEL_Prince_Charles_Count_of_Flanders.dds"
+	}
+
+	#保罗·范-泽兰
+	spriteType = {
+		name = "GFX_portrait_BEL_paul_van_zeeland"
+		texturefile = "gfx/leaders/Benelux/Portrait_BEL_Paul_van_Zeeland.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_BEL_paul_van_zeeland_small"
+		texturefile = "gfx/interface/ideas/Benelux/idea_BEL_Paul_van_Zeeland.dds"
+	}
+
+	#亨利·贾斯帕
+	spriteType = {
+		name = "GFX_portrait_BEL_henri_jaspar"
+		texturefile = "gfx/leaders/Benelux/Portrait_BEL_Henri_Jaspar.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_BEL_henri_jaspar_small"
+		texturefile = "gfx/interface/ideas/Benelux/idea_BEL_Henri_Jaspar.dds"
+	}
+
+	#朱尔斯·伦金
+	spriteType = {
+		name = "GFX_portrait_BEL_jules_renkin"
+		texturefile = "gfx/leaders/Benelux/Portrait_BEL_Jules_Renkin.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_BEL_jules_renkin_small"
+		texturefile = "gfx/interface/ideas/Benelux/idea_BEL_Jules_Renkin.dds"
+	}
+	
+	#保罗-亨利·斯巴克
+	spriteType = {
+		name = "GFX_portrait_BEL_paul_henri_spaak"
+		texturefile = "gfx/leaders/Benelux/Portrait_BEL_Paul-Henri_Spaak.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_BEL_paul_henri_spaak_small"
+		texturefile = "gfx/interface/ideas/Benelux/idea_BEL_Paul-Henri_Spaak.dds"
+	}
+
+	#于贝尔·皮埃罗
+	spriteType = {
+		name = "GFX_portrait_BEL_hubert_pierlot"
+		texturefile = "gfx/leaders/Benelux/Portrait_BEL_Hubert_Pierlot.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_BEL_hubert_pierlot_small"
+		texturefile = "gfx/interface/ideas/Benelux/idea_BEL_Hubert_Pierlot.dds"
+	}
+
+	#乔治·埃米尔·莱昂纳德·特尼斯
+	spriteType = {
+		name = "GFX_portrait_BEL_georges_emile_leonard_theunis"
+		texturefile = "gfx/leaders/Benelux/Portrait_BEL_Georges_Theunis.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_BEL_georges_emile_leonard_theunis_small"
+		texturefile = "gfx/interface/ideas/Benelux/idea_BEL_Georges_Theunis.dds"
+	}
+
+	#约瑟夫·弗里安
+	spriteType = {
+		name = "GFX_portrait_BEL_joseph_pholien"
+		texturefile = "gfx/leaders/Benelux/Portrait_BEL_Joseph_Pholien.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_BEL_joseph_pholien_small"
+		texturefile = "gfx/interface/ideas/Benelux/idea_BEL_Joseph_Pholien.dds"
+	}
+
+	#夏尔·德-布洛克维尔
+	spriteType = {
+		name = "GFX_portrait_BEL_charles_de_broqueville"
+		texturefile = "gfx/leaders/Benelux/Portrait_BEL_Charles_de_Broqueville.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_BEL_charles_de_broqueville_small"
+		texturefile = "gfx/interface/ideas/Benelux/idea_BEL_Charles_de_Broqueville.dds"
+	}
+	
+	#卡米耶·胡斯曼
+	spriteType = {
+		name = "GFX_portrait_BEL_camille_huysmans"
+		texturefile = "gfx/leaders/Benelux/Portrait_BEL_Camille_Huysmans.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_BEL_camille_huysmans_small"
+		texturefile = "gfx/interface/ideas/Benelux/idea_BEL_Camille_Huysmans.dds"
+	}
+
+	#亨利·卡东·德-维亚尔
+	spriteType = {
+		name = "GFX_portrait_BEL_henri_carton_de_wiart"
+		texturefile = "gfx/leaders/Benelux/Portrait_BEL_Henri_Carton_de_Wiart.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_BEL_henri_carton_de_wiart_small"
+		texturefile = "gfx/interface/ideas/Benelux/idea_BEL_Henri_Carton_de_Wiart.dds"
+	}
+
+	#保罗-埃米尔·詹森
+	spriteType = {
+		name = "GFX_portrait_BEL_paul_emile_janson"
+		texturefile = "gfx/leaders/Benelux/Portrait_BEL_Paul-Emile_Janson.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_BEL_paul_emile_janson_small"
+		texturefile = "gfx/interface/ideas/Benelux/idea_BEL_Paul-Emile_Janson.dds"
+	}
+
+	#亨利·德-曼
+	spriteType = {
+		name = "GFX_portrait_BEL_henri_de_man"
+		texturefile = "gfx/leaders/Benelux/Portrait_BEL_Henri_de_Man.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_BEL_henri_de_man_small"
+		texturefile = "gfx/interface/ideas/Benelux/idea_BEL_Henri_de_Man.dds"
+	}
+	
+	#朱利安·拉奥
+	spriteType = {
+		name = "GFX_portrait_BEL_julien_lahaut"
+		texturefile = "gfx/leaders/Benelux/Portrait_BEL_Julien_Lahaut.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_BEL_julien_lahaut_small"
+		texturefile = "gfx/interface/ideas/Benelux/idea_BEL_Julien_Lahaut.dds"
+	}
+	
+	#约瑟夫·雅各莫特
+	spriteType = {
+		name = "GFX_portrait_BEL_joseph_jacquemotte"
+		texturefile = "gfx/leaders/Benelux/Portrait_BEL_Joseph_Jacquemotte.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_BEL_joseph_jacquemotte_small"
+		texturefile = "gfx/interface/ideas/Benelux/idea_BEL_Joseph_Jacquemotte.dds"
+	}
+
+	#瓦尔·范-奥弗斯特拉腾
+	spriteType = {
+		name = "GFX_portrait_BEL_war_van_overstraeten"
+		texturefile = "gfx/leaders/Benelux/Portrait_BEL_War_van_Overstraeten.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_BEL_war_van_overstraeten_small"
+		texturefile = "gfx/interface/ideas/Benelux/idea_BEL_War_van_Overstraeten.dds"
+	}
+		
+	#莱昂·德雷格尔
+	spriteType = {
+		name = GFX_portrait_BEL_leon_degrelle
+		texturefile = "gfx/leaders/Benelux/Portrait_Portrait_BEL_Leon_Degrelle.dds"
+	}
+
+	spriteType = {
+		name = GFX_portrait_BEL_leon_degrelle_small
+		texturefile = "gfx/interface/ideas/Benelux/idea_Portrait_BEL_Leon_Degrelle.dds"
+	}
+#bel
+
+
+	spriteType = {
+		name = GFX_portrait_BEL_mcl_keyaerts
+		texturefile = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+	}
+
+	spriteType = {
+		name = GFX_portrait_BEL_mcl_keyaerts_small
+		texturefile = "gfx/interface/ideas/idea_europe_generic_land_2.dds"
+	}
+
+	spriteType = {
+		name = GFX_portrait_BEL_georges_timmermans
+		texturefile = "gfx/leaders/Europe/Portrait_Europe_Generic_navy_3.dds"
+	}
+
+	spriteType = {
+		name = GFX_portrait_BEL_georges_timmermans_small
+		texturefile = "gfx/interface/ideas/idea_europe_generic_navy_3.dds"
+	}
+
+	spriteType = {
+		name = GFX_portrait_BEL_gilles_wyvekens
+		texturefile = "gfx/leaders/Europe/portrait_europe_generic_6.dds"
+	}
+
+# characters of luxembourg
+}

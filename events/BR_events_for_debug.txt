@@ -152,9 +152,7 @@ country_event = { #
 	option = {
 		name = br_debug.1.a #
 
-		event_target:Aragon = {
-			add_stability = 0.05
-		}
+		set_cosmetic_tag = FRA_THIRD_EMPIRE
 
 		ai_chance = { factor = 0 }
 	}
@@ -171,16 +169,71 @@ country_event = { #
 	is_triggered_only = yes
 
 	immediate = {
-		#
+		add_threat = 50
 	}
 
 	option = {
 		name = br_debug.2.a #
 
-		set_politics = {
-			ruling_party = root
-			elections_allowed = no
+		52 = {
+			transfer_state_to = BAY
+			add_core_of = BAY
 		}
+		53 = {
+			transfer_state_to = BAY
+			add_core_of = BAY
+		}
+		54 = {
+			transfer_state_to = BAY
+			add_core_of = BAY
+		}
+		1126 = {
+			transfer_state_to = BAY
+			add_core_of = BAY
+		}
+		1127 = {
+			transfer_state_to = BAY
+			add_core_of = BAY
+		}
+
+		55 = {
+			transfer_state_to = RHE
+			add_core_of = RHE
+		}
+		56 = {
+			transfer_state_to = RHE
+			add_core_of = RHE
+		}
+		57 = {
+			transfer_state_to = RHE
+			add_core_of = RHE
+		}
+		1128 = {
+			transfer_state_to = RHE
+			add_core_of = RHE
+		}
+		1133 = {
+			transfer_state_to = RHE
+			add_core_of = RHE
+		}
+		1124 = {
+			add_core_of = AUS
+		}
+		every_owned_state = {
+			limit = {
+				is_core_of = POR
+			}
+			add_core_of = SPR
+		}
+		set_autonomy = {
+			target = BAY
+			autonomy_state = autonomy_puppet
+		}
+		set_autonomy = {
+			target = RHE
+			autonomy_state = autonomy_puppet
+		}
+
 
 		ai_chance = { factor = 0 }
 	}

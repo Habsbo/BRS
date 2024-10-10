@@ -37,7 +37,14 @@ br_bel_the_treaty = {
 	icon = GFX_decision_category_generic_prospect_for_resources
 	picture = GFX_decision_cat_picture_concessions_to_the_trade_unions
 
-	allowed = { original_tag = BEL }
+	allowed = {
+		OR = {
+			original_tag = BEL
+			tag = event_target:GER_the_treaty
+			tag = event_target:FRA_the_treaty
+			tag = event_target:ENG_the_treaty
+		}
+	}
 	visible = {
 		OR = {
 			has_idea = BEL_limited_by_treaty1
@@ -66,6 +73,16 @@ br_bel_the_treaty = {
 
 		visible = {
 			NOT = { has_global_flag = br_bel_the_treaty_fra_withdraw }
+		}
+	}
+
+	custom_icon = {
+		tag = ENG
+		value = br_bel_the_treaty_eng_icon_value
+		desc = br_bel_the_treaty_eng_desc
+
+		visible = {
+			NOT = { has_global_flag = br_bel_the_treaty_eng_withdraw }
 		}
 	}
 }

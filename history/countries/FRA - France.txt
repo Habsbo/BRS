@@ -208,6 +208,10 @@ recruit_character = FRA_marcel_deat
 #托洛茨基倾向
 recruit_character = FRA_marceau_pivert
 
+#拿破仑六世
+recruit_character = FRA_napoleon_vi
+#瓦卢瓦
+
 #
 recruit_character = FRA_philippe_petain
 recruit_character = FRA_maurice_thorez

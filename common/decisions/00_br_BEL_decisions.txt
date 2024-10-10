@@ -79,7 +79,7 @@ br_bel_bop = {
 }
 
 br_bel_the_treaty = {
-	br_bel_the_treaty_reinforce.fra = {
+	br_bel_the_treaty_reinforce_mission.fra = {
 		icon = generic_protection
 
 		activation = {
@@ -105,6 +105,7 @@ br_bel_the_treaty = {
 				tooltip_side = BEL_wallonia_right_side
 			}
 			add_popularity = { ideology = FRA popularity = 0.005 }
+			add_to_variable = { br_bel_the_treaty_fra_troops_value = 3 }
 			add_to_variable = { br_bel_the_treaty_fra_value = 3 tooltip = br_bel_the_treaty_fra_value_tt }
 			hidden_effect = {
 				if = {
@@ -116,7 +117,7 @@ br_bel_the_treaty = {
 
 		priority = 10
 	}
-	br_bel_the_treaty_reinforce.ger = {
+	br_bel_the_treaty_reinforce_mission.ger = {
 		icon = generic_protection
 
 		activation = {
@@ -142,6 +143,82 @@ br_bel_the_treaty = {
 				tooltip_side = BEL_vlaams_left_side
 			}
 			add_popularity = { ideology = DKR popularity = 0.005 }
+			add_to_variable = { br_bel_the_treaty_ger_troops_value = 3 }
+			add_to_variable = { br_bel_the_treaty_ger_value = 3 tooltip = br_bel_the_treaty_ger_value_tt }
+			hidden_effect = {
+				if = {
+					limit = {  }
+					activate_mission = br_bel_the_treaty_reinforce.ger
+				}
+			}
+		}
+
+		priority = 10
+	}
+	br_bel_the_treaty_reinforce.fra = {
+		icon = generic_protection
+
+		activation = { always = no }
+
+		available = { always = no }
+
+		cancel_trigger = {
+			#NOT = { has_idea = }
+		}
+
+		is_good = yes
+		days_mission_timeout = 14
+		selectable_mission = yes
+
+		complete_effect = {}
+
+		timeout_effect = {
+			add_power_balance_value = {
+				id = BEL_two_nations_balance
+				value = 0.01
+				tooltip_side = BEL_wallonia_right_side
+			}
+			add_popularity = { ideology = FRA popularity = 0.005 }
+			add_to_variable = { br_bel_the_treaty_fra_troops_value = 3 }
+			add_to_variable = { br_bel_the_treaty_fra_value = 3 tooltip = br_bel_the_treaty_fra_value_tt }
+			hidden_effect = {
+				if = {
+					limit = {  }
+					activate_mission = br_bel_the_treaty_reinforce.fra
+				}
+			}
+		}
+
+		priority = 10
+	}
+	br_bel_the_treaty_reinforce.ger = {
+		icon = generic_protection
+
+		activation = {
+			#always = no
+		}
+
+		available = {  }
+
+		cancel_trigger = {
+			#NOT = { has_idea = }
+		}
+
+		is_good = yes
+		days_mission_timeout = 14
+		selectable_mission = yes
+
+		complete_effect = {}
+
+		timeout_effect = {
+			add_power_balance_value = {
+				id = BEL_two_nations_balance
+				value = -0.01
+				tooltip_side = BEL_vlaams_left_side
+			}
+			add_popularity = { ideology = DKR popularity = 0.005 }
+			add_to_variable = { br_bel_the_treaty_ger_troops_value = 3 }
+			add_to_variable = { br_bel_the_treaty_ger_value = 3 tooltip = br_bel_the_treaty_ger_value_tt }
 			hidden_effect = {
 				if = {
 					limit = {  }
@@ -310,23 +387,30 @@ br_bel_the_treaty = {
 		available = {
 			OR = {
 				AND = {
-					check_variable = {
-						br_bel_the_treaty_fra_value > var:br_bel_the_treaty_ger_value
+					check_variable = { br_bel_the_treaty_fra_value > 29 tooltip = br_bel_the_treaty_fra_value_no_less_than_10_tt }
+					custom_trigger_tooltip = {
 						tooltip = br_bel_the_treaty_fra_value_better_tt
-					}
-					check_variable = {
-						br_bel_the_treaty_fra_value > 9
-						tooltip = br_bel_the_treaty_fra_value_no_less_than_10_tt
+						check_variable = { br_bel_the_treaty_fra_troops_value > 2 }
+						check_variable = { br_bel_the_treaty_fra_value > var:br_bel_the_treaty_ger_value }
+						check_variable = { br_bel_the_treaty_fra_value > var:br_bel_the_treaty_eng_value }
 					}
 				}
 				AND = {
-					check_variable = {
-						br_bel_the_treaty_ger_value > var:br_bel_the_treaty_fra_value
+					check_variable = { br_bel_the_treaty_ger_value > 29 tooltip = br_bel_the_treaty_ger_value_no_less_than_10_tt }
+					custom_trigger_tooltip = {
 						tooltip = br_bel_the_treaty_ger_value_better_tt
+						check_variable = { br_bel_the_treaty_ger_troops_value > 2 }
+						check_variable = { br_bel_the_treaty_ger_value > var:br_bel_the_treaty_fra_value }
+						check_variable = { br_bel_the_treaty_ger_value > var:br_bel_the_treaty_eng_value }
 					}
-					check_variable = {
-						br_bel_the_treaty_ger_value > 9
-						tooltip = br_bel_the_treaty_ger_value_no_less_than_10_tt
+				}
+				AND = {
+					check_variable = { br_bel_the_treaty_eng_value > 29 tooltip = br_bel_the_treaty_eng_value_no_less_than_10_tt }
+					custom_trigger_tooltip = {
+						tooltip = br_bel_the_treaty_eng_value_better_tt
+						check_variable = { br_bel_the_treaty_eng_troops_value > 2 }
+						check_variable = { br_bel_the_treaty_eng_value > var:br_bel_the_treaty_fra_value }
+						check_variable = { br_bel_the_treaty_eng_value > var:br_bel_the_treaty_ger_value }
 					}
 				}
 			}

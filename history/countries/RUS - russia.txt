@@ -176,7 +176,7 @@ set_popularities = {
 
 #create_faction = Comintern
 
-set_cosmetic_tag = russian_empire #RUS_republic
+set_cosmetic_tag = RUS_Tsar_Empire #RUS_republic
 
 #set_autonomy = {
 #	target = BSK

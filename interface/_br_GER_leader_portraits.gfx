@@ -1,0 +1,14 @@
+spriteTypes = {
+# characters of germany
+
+	#法肯豪森
+	spriteType = {
+		name = "GFX_portrait_GER_alexander_von_falkenhausen"
+		texturefile = "gfx/leaders/GER/Portrait_GER_Alexander_Von_Falkenhausen_2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_GER_alexander_von_falkenhausen_small"
+		texturefile = "gfx/interface/ideas/GER/idea_GER_Alexander_Von_Falkenhausen_2.dds"
+	}
+}
