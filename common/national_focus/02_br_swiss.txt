@@ -1,0 +1,488 @@
+﻿focus_tree = {
+	id = br_swiss_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 20
+			tag = SWI
+		}
+	}
+	
+	default = no
+
+	continuous_focus_position = { x = 50 y = 1500 }
+
+### economic policy ##
+	focus = {
+		id = SWI_official_language
+		icon = GFX_focus_generic_treaty
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 12
+		y = 0
+		#relative_position_id =
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = SWI_defense_fund
+		icon = GFX_focus_SWI_issue_war_bonds
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 2
+		y = 0
+		relative_position_id = SWI_official_language
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = SWI_3
+		icon = GFX_goal_generic_demand_territory
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 2
+		y = 0
+		relative_position_id = SWI_defense_fund
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+	focus = {
+		id = SWI_4
+		icon = GFX_goal_generic_demand_territory
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 2
+		y = 0
+		relative_position_id = SWI_3
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+	focus = {
+		id = SWI_5
+		icon = GFX_goal_generic_demand_territory
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 2
+		y = 0
+		relative_position_id = SWI_4
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+	focus = {
+		id = SWI_6
+		icon = GFX_goal_generic_demand_territory
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 2
+		y = 0
+		relative_position_id = SWI_5
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+	#
+	focus = {
+		id = SWI_11
+		icon = GFX_focus_SWI_swiss_guiding_principles
+		prerequisite = {
+			focus = SWI_official_language
+			focus = SWI_defense_fund
+			focus = SWI_3
+			focus = SWI_4
+			focus = SWI_5
+			focus = SWI_6
+		}
+		#mutually_exclusive = { focus =  }
+		x = 5
+		y = 2
+		relative_position_id = SWI_official_language
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+	### ENPOWER THE PRESIDENT URGENTLY ###
+	focus = {
+		id = SWI_enpower_the_president_urgently
+		icon = GFX_focus_SWI_dissolve_the_federal_council
+		#prerequisite = {}
+		mutually_exclusive = { focus = SWI_12 }
+		x = -4
+		y = -1
+		relative_position_id = SWI_11
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+	#
+	focus = {
+		id = SWI_choose_the_fate
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = SWI_enpower_the_president_urgently }
+		#mutually_exclusive = { focus =  }
+		x = -10
+		y = 1
+		relative_position_id = SWI_enpower_the_president_urgently
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+	focus = {
+		id = SWI_cave_to_france
+		icon = GFX_focus_chi_reach_out_to_france
+		prerequisite = { focus = SWI_choose_the_fate }
+		#mutually_exclusive = { focus =  }
+		x = -2
+		y = 1
+		relative_position_id = SWI_choose_the_fate
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+	focus = {
+		id = SWI_cave_to_germany
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = SWI_choose_the_fate }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = SWI_choose_the_fate
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+	focus = {
+		id = SWI_keep_neutrality_proudly
+		icon = GFX_focus_SWI_neutrality_on_the_move
+		prerequisite = { focus = SWI_choose_the_fate }
+		#mutually_exclusive = { focus =  }
+		x = 2
+		y = 1
+		relative_position_id = SWI_choose_the_fate
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+
+	#
+	focus = {
+		id = SWI_reassert_spiritual_defense
+		icon = GFX_goal_support_democracy
+		prerequisite = {
+			focus = SWI_enpower_the_president_urgently
+			focus = SWI_11
+		}
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 2
+		relative_position_id = SWI_enpower_the_president_urgently
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+		
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY  } 
+	}
+	focus = {
+		id = SWI_fortify_border_between_swiss_and_italy
+		icon = GFX_focus_SWI_fortify_border_with_italy
+		prerequisite = { focus = SWI_reassert_spiritual_defense }
+		#mutually_exclusive = { focus =  }
+		x = -3
+		y = 1
+		relative_position_id = SWI_reassert_spiritual_defense
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+	focus = {
+		id = SWI_fortify_border_between_swiss_and_germany
+		icon = GFX_focus_SWI_fortify_border_with_germany
+		prerequisite = { focus = SWI_reassert_spiritual_defense }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = SWI_reassert_spiritual_defense
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+	focus = {
+		id = SWI_fortify_border_between_swiss_and_france
+		icon = GFX_focus_SWI_fortify_border_with_france
+		prerequisite = { focus = SWI_reassert_spiritual_defense }
+		#mutually_exclusive = { focus =  }
+		x = 3
+		y = 1
+		relative_position_id = SWI_reassert_spiritual_defense
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+
+
+	###  ###
+	focus = {
+		id = SWI_12
+		icon = GFX_focus_SWI_abandon_neutrality
+		#prerequisite = {}
+		mutually_exclusive = { focus = SWI_enpower_the_president_urgently }
+		x = 4
+		y = -1
+		relative_position_id = SWI_11
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+###
+	focus = {
+		id = SWI_1111
+		icon = GFX_goal_generic_demand_territory
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 0
+		#relative_position_id =
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+}

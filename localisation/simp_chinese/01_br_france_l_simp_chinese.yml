@@ -44,11 +44,12 @@
  VL_state_marceau_pivert: "§Y$marceau_pivert$§!\n$VL_trait_marceau_pivert$"
  VL_Dip_state_marceau_pivert: "§Y$marceau_pivert$§!\n$GetDipStatus$\n$VL_trait_marceau_pivert$"
  VL_desc_state_marceau_pivert: "§g§!"
+
+ FRA_napoleon_vi: "拿破仑六世"
 #
  has_hog_from_communism_party_tt: "拥有一名来自§R[root.GetAdjective]的共产主义政党§!的§Y政府首脑§!"
  has_hog_from_socialism_party_tt: "拥有一名来自§B[root.GetAdjective]的社会主义或左翼民主主义党派§!的§Y政府首脑§!"
  has_hog_from_republicanism_party_tt: "拥有一名来自§B[root.GetAdjective]的民主共和主义党派§!的§Y政府首脑§!"
-
 #
  FRA_vanwardism_party_pcf_name_long: "人民阵线：法国共产党工团与先锋派(PCF)"
  FRA_vanwardism_party_pcf_name_short: "法国共产党工团与先锋派(PCF)"

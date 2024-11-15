@@ -1,12 +1,19 @@
-version="0.0001.01"
+version="0.00.01"
 tags={
 	"Alternative History"
+	"Fixes"
+	"Events"
+	"Balance"
+	"Gameplay"
+	"Historical"
+	"National Focuses"
+	"Technologies"
+	"Ideologies"
+	"Translation"
 }
-
 replace_path="common/ai_strategy"
 replace_path="common/bookmarks"
 replace_path="common/decisions"
 replace_path="events"
-
-name="Bandiera Rossa"
-supported_version="1.13.5"
+name="BRS"
+supported_version="1.15.0"

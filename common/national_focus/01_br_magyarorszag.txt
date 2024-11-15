@@ -1,0 +1,151 @@
+﻿focus_tree = {
+	id = br_magyarorszag_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = HUN
+		}
+	}
+	
+	default = no
+
+	continuous_focus_position = { x = 50 y = 1500 }
+
+### economic policy ##
+	focus = {
+		id = HUN_laissez_faire
+		icon = GFX_goal_generic_demand_territory
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 6
+		y = 0
+		#relative_position_id =
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+	focus = {
+		id = HUN_interfere_economy
+		icon = GFX_goal_generic_demand_territory
+		#prerequisite = { focus =  }
+		mutually_exclusive = { focus = HUN_laissez_faire }
+		x = 2
+		y = 0
+		relative_position_id = HUN_laissez_faire
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+
+	focus = {
+		id = HUN_reintegrate_the_railroads
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = {
+			focus = HUN_laissez_faire
+			focus = HUN_interfere_economy
+		}
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 1
+		relative_position_id = HUN_laissez_faire
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+	focus = {
+		id = HUN_4
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = {
+			focus = HUN_laissez_faire
+			focus = HUN_interfere_economy
+		}
+		#mutually_exclusive = { focus =  }
+		x = 5
+		y = 2
+		relative_position_id = HUN_laissez_faire
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+###
+	focus = {
+		id = HUN_2
+		icon = GFX_goal_generic_demand_territory
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 0
+		#relative_position_id =
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+}
