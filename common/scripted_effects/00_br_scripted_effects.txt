@@ -36,34 +36,196 @@ GRE_civilwar_dc_var_add = {
 	}
 }
 
+######################################
+### SCRIPTS OF PUBLIC FEELINGS VAR ###
+######################################
 
+### add_popularity of parties by one side ### 左翼或右翼的某一侧政党得到支持
 br_will_add_popularity_of_our_left_parties = {
 	custom_effect_tooltip = br_will_add_popularity_of_our_left_parties_tt
 }
-
 br_will_add_popularity_of_our_right_parties = {
 	custom_effect_tooltip = br_will_add_popularity_of_our_right_parties_tt
 }
 
+### public feeling clamped ### 社会人气取区间
 br_clamp_br_public_feeling_var = {
-	#
 	clamp_variable = {
 		var = br_public_feeling_var
 		min = -100
 		max = 100
 	}
 }
-
-br_clamp_br_public_feeling_var_has_tt = {
-	#
-	custom_effect_tooltip = br_clamp_br_public_feeling_var_tt
-	clamp_variable = {
-		var = br_public_feeling_var
-		min = -100
-		max = 100
-	}
+### public feeling increased ### 社会人气增加
+br_public_feeling_var_increased_1 = {
+	add_to_variable = { br_public_feeling_var = 1 tooltip = br_public_feeling_var_tt }
+	br_clamp_br_public_feeling_var = yes
+}
+br_public_feeling_var_increased_3 = {
+	add_to_variable = { br_public_feeling_var = 3 tooltip = br_public_feeling_var_tt }
+	br_clamp_br_public_feeling_var = yes
+}
+br_public_feeling_var_increased_5 = {
+	add_to_variable = { br_public_feeling_var = 5 tooltip = br_public_feeling_var_tt }
+	br_clamp_br_public_feeling_var = yes
+}
+br_public_feeling_var_increased_10 = {
+	add_to_variable = { br_public_feeling_var = 10 tooltip = br_public_feeling_var_tt }
+	br_clamp_br_public_feeling_var = yes
+}
+br_public_feeling_var_increased_15 = {
+	add_to_variable = { br_public_feeling_var = 15 tooltip = br_public_feeling_var_tt }
+	br_clamp_br_public_feeling_var = yes
+}
+br_public_feeling_var_increased_20 = {
+	add_to_variable = { br_public_feeling_var = 20 tooltip = br_public_feeling_var_tt }
+	br_clamp_br_public_feeling_var = yes
+}
+br_public_feeling_var_increased_30 = {
+	add_to_variable = { br_public_feeling_var = 30 tooltip = br_public_feeling_var_tt }
+	br_clamp_br_public_feeling_var = yes
+}
+br_public_feeling_var_increasedd_50 = {
+	add_to_variable = { br_public_feeling_var = 50 tooltip = br_public_feeling_var_tt }
+	br_clamp_br_public_feeling_var = yes
+}
+br_public_feeling_var_increased_60 = {
+	add_to_variable = { br_public_feeling_var = 60 tooltip = br_public_feeling_var_tt }
+	br_clamp_br_public_feeling_var = yes
+}
+br_public_feeling_var_increased_75 = {
+	add_to_variable = { br_public_feeling_var = 75 tooltip = br_public_feeling_var_tt }
+	br_clamp_br_public_feeling_var = yes
+}
+br_public_feeling_var_increased_100 = {
+	add_to_variable = { br_public_feeling_var = 100 tooltip = br_public_feeling_var_tt }
+	br_clamp_br_public_feeling_var = yes
+}
+### public feeling decreased ### 社会人气减少
+br_public_feeling_var_decreased_1 = {
+	add_to_variable = { br_public_feeling_var = -1 tooltip = br_public_feeling_var_tt }
+	br_clamp_br_public_feeling_var = yes
+}
+br_public_feeling_var_decreased_3 = {
+	add_to_variable = { br_public_feeling_var = -3 tooltip = br_public_feeling_var_tt }
+	br_clamp_br_public_feeling_var = yes
+}
+br_public_feeling_var_decreased_5 = {
+	add_to_variable = { br_public_feeling_var = -5 tooltip = br_public_feeling_var_tt }
+	br_clamp_br_public_feeling_var = yes
+}
+br_public_feeling_var_decreased_10 = {
+	add_to_variable = { br_public_feeling_var = -10 tooltip = br_public_feeling_var_tt }
+	br_clamp_br_public_feeling_var = yes
+}
+br_public_feeling_var_decreased_15 = {
+	add_to_variable = { br_public_feeling_var = -15 tooltip = br_public_feeling_var_tt }
+	br_clamp_br_public_feeling_var = yes
+}
+br_public_feeling_var_decreased_20 = {
+	add_to_variable = { br_public_feeling_var = -20 tooltip = br_public_feeling_var_tt }
+	br_clamp_br_public_feeling_var = yes
+}
+br_public_feeling_var_decreased_30 = {
+	add_to_variable = { br_public_feeling_var = -30 tooltip = br_public_feeling_var_tt }
+	br_clamp_br_public_feeling_var = yes
+}
+br_public_feeling_var_decreased_50 = {
+	add_to_variable = { br_public_feeling_var = -50 tooltip = br_public_feeling_var_tt }
+	br_clamp_br_public_feeling_var = yes
+}
+br_public_feeling_var_decreased_60 = {
+	add_to_variable = { br_public_feeling_var = -60 tooltip = br_public_feeling_var_tt }
+	br_clamp_br_public_feeling_var = yes
+}
+br_public_feeling_var_decreased_75 = {
+	add_to_variable = { br_public_feeling_var = -75 tooltip = br_public_feeling_var_tt }
+	br_clamp_br_public_feeling_var = yes
+}
+br_public_feeling_var_decreased_100 = {
+	add_to_variable = { br_public_feeling_var = -100 tooltip = br_public_feeling_var_tt }
+	br_clamp_br_public_feeling_var = yes
 }
 
+### public feeling multiplied ### 社会人气倍乘
+br_public_feeling_var_multiplied_1.5 = {
+	multiply_variable = { br_public_feeling_var = 1.5 tooltip = br_public_feeling_var_multiplied_tt }
+	br_clamp_br_public_feeling_var = yes
+}
+br_public_feeling_var_multiplied_2 = {
+	multiply_variable = { br_public_feeling_var = 2.0 tooltip = br_public_feeling_var_multiplied_tt }
+	br_clamp_br_public_feeling_var = yes
+}
+br_public_feeling_var_multiplied_3 = {
+	multiply_variable = { br_public_feeling_var = 3.0 tooltip = br_public_feeling_var_multiplied_tt }
+	br_clamp_br_public_feeling_var = yes
+}
+### public feeling divided ### 社会人气倍除
+br_public_feeling_var_divided_2 = {
+	divide_variable = { br_public_feeling_var = 2 tooltip = br_public_feeling_var_divide_tt } #the var multiplied 0.5
+}
+br_public_feeling_var_divided_4 = {
+	divide_variable = { br_public_feeling_var = 4 tooltip = br_public_feeling_var_divide_tt } #the var multiplied 0.25
+}
+br_public_feeling_var_divided_tri_ikosto = {
+	multiply_variable = { br_public_feeling_var = 3.0 tooltip = br_public_feeling_var_multiplied_tt }
+	divide_variable = { br_public_feeling_var = 20 tooltip = br_public_feeling_var_divide_tt }
+	#the var multiplied 0.15 (3/20)
+}
+br_public_feeling_var_divided_8 = {
+	divide_variable = { br_public_feeling_var = 8 tooltip = br_public_feeling_var_divide_tt } #the var multiplied 0.125
+}
+
+### public feeling absolute value and opposite value ### 社会人气取绝对值或相反数
+br_public_feeling_var_absoluted = {
+	#if var no more than 0, make it be positive number
+	if = {
+		limit = { check_variable = { br_public_feeling_var < 0 } }
+		multiply_variable = { br_public_feeling_var = -1 }
+	}
+}
+br_public_feeling_var_opposited = {
+	#if var no more than 0, multiplied -1 to make it be positive number
+	#else multiplied -1 to make it be negative number
+	multiply_variable = { br_public_feeling_var = -1 }
+}
+
+### public feeling setted ### 强制人气所处位置
+br_public_feeling_var_setted_minus_1000 = {
+	set_variable = { br_public_feeling_var = -1000 } #you can't be politiciens potentiels any more now, my friend.
+}
+br_public_feeling_var_setted_minus_100 = {
+	set_variable = { br_public_feeling_var = -100 } #you bastard, what you've done!
+}
+br_public_feeling_var_setted_minus_75 = {
+	set_variable = { br_public_feeling_var = -75 }
+}
+br_public_feeling_var_setted_minus_50 = {
+	set_variable = { br_public_feeling_var = -50 }
+}
+br_public_feeling_var_setted_minus_25 = {
+	set_variable = { br_public_feeling_var = -25 }
+}
+br_public_feeling_var_setted_0 = {
+	set_variable = { br_public_feeling_var = 0 }
+}
+br_public_feeling_var_setted_25 = {
+	set_variable = { br_public_feeling_var = 25 }
+}
+br_public_feeling_var_setted_50 = {
+	set_variable = { br_public_feeling_var = 50 }
+}
+br_public_feeling_var_setted_75 = {
+	set_variable = { br_public_feeling_var = 75 }
+}
+br_public_feeling_var_setted_100 = {
+	set_variable = { br_public_feeling_var = 100 } #I'm the king of world!
+}
+br_public_feeling_var_setted_1000 = {
+	set_variable = { br_public_feeling_var = 1000 } #I am the lord your god. You shall have no other gods before me.
+}
+
+### Bel ###
 br_BEL_bop_move_to_vlaams = {
 	if = {
 		limit = {
@@ -84,7 +246,6 @@ br_BEL_bop_move_to_vlaams = {
 		add_power_balance_value = { id = BEL_two_nations_balance value = -0.05 }
 	}
 }
-
 br_BEL_bop_move_to_wallonia = {
 	if = {
 		limit = {

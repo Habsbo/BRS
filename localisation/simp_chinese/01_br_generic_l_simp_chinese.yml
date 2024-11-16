@@ -232,15 +232,14 @@
 
 #
  debug_CAM_citywalk: "你疑似有点太城市化了"
-
 #
  br_public_feeling: "人气"
  br_public_feeling_var_tt: "§Y$br_public_feeling$§! $RIGHT|+=0..2$"
+ br_public_feeling_var_multiplied_tt: "§Y$br_public_feeling$§! $RIGHT|+=0..2$"
  br_public_feeling_var_tt_more: "§Y$br_public_feeling$§! > §Y$RIGHT|0..2$§!"
  br_public_feeling_var_tt_no_less: "§Y$br_public_feeling$§! ≥ §Y$RIGHT|0..2$§!"
  br_public_feeling_var_tt_less: "§Y$br_public_feeling$§! < §Y$RIGHT|0..2$§!"
  br_public_feeling_var_tt_no_more: "§Y$br_public_feeling$§! ≤ §Y$RIGHT|0..2$§!"
- br_clamp_br_public_feeling_var_tt: "\n角色的§Y$br_public_feeling$§!会被确保在-100至100的范围内。"
 
 #
  br_culture_is_wallonia_state_tt: "瓦隆尼亚文化占主流或举足轻重"

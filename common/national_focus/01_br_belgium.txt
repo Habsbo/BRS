@@ -20,7 +20,7 @@ focus_tree = {
 		icon = GFX_
 		#prerequisite = { focus =  }
 		#mutually_exclusive = { focus =  }
-		x = -10
+		x = -9
 		y = 0
 		relative_position_id = BEL_germany_militaries_left
 
@@ -467,10 +467,10 @@ focus_tree = {
 ###ic - vlaanderen
 	focus = {
 		id = BEL_revitalization_of_vlaanderen
-		icon = GFX_
+		icon = GFX_focus_BEL_flanders_ascendant
 		#prerequisite = { focus =  }
 		#mutually_exclusive = { focus =  }
-		x = 10
+		x = 9
 		y = 0
 		relative_position_id = BEL_discrete_nations
 
@@ -698,11 +698,14 @@ focus_tree = {
 	focus = {
 		id = BEL_work_family_comity
 		icon = GFX_
-		prerequisite = { focus = BEL_industrial_workers }
+		prerequisite = {
+			focus = BEL_dutch_side
+			focus = BEL_industrial_workers
+		}
 		#mutually_exclusive = { focus =  }
-		x = -3
+		x = 3
 		y = 1
-		relative_position_id = BEL_industrial_workers
+		relative_position_id = BEL_dutch_side
 
 		cost = 8
 		
@@ -723,7 +726,7 @@ focus_tree = {
 
 	focus = {
 		id = BEL_christian_faith
-		icon = GFX_
+		icon = GFX_focus_BEL_la_dame_blanche
 		prerequisite = { focus = BEL_work_family_comity }
 		#mutually_exclusive = { focus =  }
 		x = -1
@@ -775,7 +778,7 @@ focus_tree = {
 
 	focus = {
 		id = BEL_united_right_front
-		icon = GFX_
+		icon = GFX_focus_BEL_christian_corporatism
 		prerequisite = { focus = BEL_christian_faith }
 		prerequisite = { focus = BEL_bonds_for_public_service }
 		x = 0
@@ -963,7 +966,7 @@ focus_tree = {
 ### political
 	focus = {
 		id = BEL_germany_militaries_left
-		icon = GFX_
+		icon = GFX_focus_BEL_the_flemish_question
 		mutually_exclusive = { focus = BEL_discrete_nations }
 		x = 16
 		y = 0
@@ -1002,7 +1005,7 @@ focus_tree = {
 
 	focus = {
 		id = BEL_discrete_nations
-		icon = GFX_
+		icon = GFX_focus_BEL_broken_neutrality
 		mutually_exclusive = { focus = BEL_germany_militaries_left }
 		x = 2
 		y = 0
@@ -1055,7 +1058,7 @@ focus_tree = {
 
 	focus = {
 		id = BEL_king_save_the_nation
-		icon = GFX_
+		icon = GFX_focus_BEL_independent_neutral_and_loyal
 		prerequisite = {
 			focus = BEL_germany_militaries_left
 			focus = BEL_discrete_nations
@@ -1100,7 +1103,7 @@ focus_tree = {
 			add_popularity = { ideology = authoritarian popularity = 0.05 }
 			#
 			var:country_leader = {
-				add_to_variable = { br_public_feeling_var = 30 tooltip = br_public_feeling_var_tt }
+				br_public_feeling_var_increased_30 = yes
 			}
 		}
 		
@@ -1109,7 +1112,7 @@ focus_tree = {
 
 	focus = {
 		id = BEL_neutralization
-		icon = GFX_focus_ARG_strengthening_the_concordancia
+		icon = GFX_focus_BEL_expression_of_belgian_unity
 		prerequisite = {
 			focus = BEL_germany_militaries_left
 			focus = BEL_discrete_nations
@@ -1147,7 +1150,7 @@ focus_tree = {
 
 	focus = {
 		id = BEL_vive_la_republique
-		icon = GFX_
+		icon = GFX_focus_BEL_belgian_renaissance
 		prerequisite = {
 			focus = BEL_germany_militaries_left
 			focus = BEL_discrete_nations
@@ -1491,8 +1494,10 @@ focus_tree = {
 	focus = {
 		id = BEL_women_in_our_nation
 		icon = GFX_focus_generic_women_in_military
-		prerequisite = { focus = BEL_standard_education }
-		prerequisite = { focus = BEL_france_side }
+		prerequisite = {
+			focus = BEL_standard_education
+			focus = BEL_france_side
+		}
 		#mutually_exclusive = { focus =  }
 		x = -3
 		y = 1
@@ -1597,12 +1602,14 @@ focus_tree = {
 	focus = {
 		id = BEL_democratic_by_hand_in_hand
 		icon = GFX_focus_generic_treaty
-		prerequisite = { focus = BEL_standard_education }
-		prerequisite = { focus = BEL_france_side }
+		prerequisite = {
+			focus = BEL_standard_education
+			focus = BEL_france_side
+		}
 		#mutually_exclusive = { focus =  }
-		x = -6
+		x = 0
 		y = 6
-		relative_position_id = BEL_france_side
+		relative_position_id = BEL_standard_education
 
 		cost = 8
 		
@@ -1858,7 +1865,7 @@ focus_tree = {
 ###  ###
 	focus = {
 		id = BEL_united_benelux
-		icon = GFX_
+		icon = GFX_focus_BEL_benelux_union
 		prerequisite = { focus = BEL_democratic_by_hand_in_hand focus = BEL_vlaams_benelux_nationalism }
 		#mutually_exclusive = { focus =  }
 		x = 9
@@ -1903,7 +1910,7 @@ focus_tree = {
 	#belgium
 	focus = {
 		id = BEL_observe_as_neutral
-		icon = GFX_goal_generic_neutrality_focus
+		icon = GFX_focus_BEL_national_redoubt_at_antwerp
 		prerequisite = {
 			focus = BEL_neutralization
 			focus = BEL_king_save_the_nation
@@ -1939,7 +1946,7 @@ focus_tree = {
 ###
 	focus = {
 		id = BEL_strengthen_power_belgium
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_focus_BEL_eben_emael_fortress
 		prerequisite = { focus = BEL_observe_as_neutral }
 		#mutually_exclusive = { focus =  }
 		x = 0
@@ -2467,11 +2474,14 @@ focus_tree = {
 	focus = {
 		id = BEL_vlaams_benelux_nationalism
 		icon = GFX_goal_tripartite_pact
-		prerequisite = { focus = BEL_dutch_side }
+		prerequisite = {
+			focus = BEL_dutch_side
+			focus = BEL_industrial_workers
+		}
 		#mutually_exclusive = { focus =  }
-		x = 6
+		x = 0
 		y = 6
-		relative_position_id = BEL_dutch_side
+		relative_position_id = BEL_industrial_workers
 
 		cost = 8
 		

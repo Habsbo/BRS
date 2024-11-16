@@ -83,7 +83,6 @@
  communism_calling_vanwardism_3_desc: ""
 
 # focus
-
  LUX_economic_effort: "重视经济"
  LUX_economic_effort_desc: ""
  LUX_industrial_upgrading_of_steel: "大炼钢铁"
@@ -633,7 +632,7 @@
  BEL_discrete_nations_desc: ""
  BEL_vive_la_republique: "自由[ROOT.GetAdjective]人的共和国万岁！"
  BEL_vive_la_republique_desc: ""
- BEL_neutralization: "中立化"
+ BEL_neutralization: "不偏不倚"
  BEL_neutralization_desc: ""
  BEL_king_save_the_nation: "国王将拯救国家"
  BEL_king_save_the_nation_desc: ""

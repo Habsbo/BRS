@@ -56,8 +56,7 @@ focus_tree = {
 						}
 					}
 					var:country_leader = {
-						add_to_variable = { br_public_feeling_var = 20 tooltip = br_public_feeling_var_tt }
-						br_clamp_br_public_feeling_var = yes
+						br_public_feeling_var_increased_20 = yes
 					}
 				}
 			}
@@ -71,8 +70,7 @@ focus_tree = {
 				}
 				#
 				FRA_leon_blum = {
-					add_to_variable = { br_public_feeling_var = 10 tooltip = br_public_feeling_var_tt }
-					br_clamp_br_public_feeling_var = yes
+					br_public_feeling_var_increased_10 = yes
 				}
 			}
 			if = {
@@ -84,8 +82,7 @@ focus_tree = {
 					}
 				}
 				FRA_pierre_laval = {
-					add_to_variable = { br_public_feeling_var = 10 tooltip = br_public_feeling_var_tt }
-					br_clamp_br_public_feeling_var = yes
+					br_public_feeling_var_increased_10 = yes
 				}
 			}
 		}
@@ -110,8 +107,7 @@ focus_tree = {
 						}
 					}
 					var:country_leader = {
-						add_to_variable = { br_public_feeling_var = 20 tooltip = br_public_feeling_var_tt }
-						br_clamp_br_public_feeling_var = yes
+						br_public_feeling_var_increased_20 = yes
 					}
 				}
 			}
@@ -125,8 +121,7 @@ focus_tree = {
 				}
 				#
 				FRA_leon_blum = {
-					add_to_variable = { br_public_feeling_var = 10 tooltip = br_public_feeling_var_tt }
-					br_clamp_br_public_feeling_var = yes
+					br_public_feeling_var_increased_10 = yes
 				}
 			}
 			if = {
@@ -138,8 +133,7 @@ focus_tree = {
 					}
 				}
 				FRA_pierre_laval = {
-					add_to_variable = { br_public_feeling_var = 10 tooltip = br_public_feeling_var_tt }
-					br_clamp_br_public_feeling_var = yes
+					br_public_feeling_var_increased_10 = yes
 				}
 			}
 		}
@@ -176,8 +170,7 @@ focus_tree = {
 			add_popularity = { ideology = dem_conservatism popularity = 0.01 }
 			#
 			var:country_leader = {
-				add_to_variable = { br_public_feeling_var = 10 tooltip = br_public_feeling_var_tt }
-				br_clamp_br_public_feeling_var = yes
+				br_public_feeling_var_increased_10 = yes
 			}
 		}
 		
@@ -192,8 +185,7 @@ focus_tree = {
 			add_popularity = { ideology = dem_conservatism popularity = 0.01 }
 			#
 			var:country_leader = {
-				add_to_variable = { br_public_feeling_var = 10 tooltip = br_public_feeling_var_tt }
-				br_clamp_br_public_feeling_var = yes
+				br_public_feeling_var_increased_10 = yes
 			}
 		}
 		
@@ -309,8 +301,7 @@ focus_tree = {
 		completion_reward = {
 			#
 			var:country_leader = {
-				add_to_variable = { br_public_feeling_var = 10 tooltip = br_public_feeling_var_tt }
-				br_clamp_br_public_feeling_var = yes
+				br_public_feeling_var_increased_10 = yes
 			}
 		}
 		
@@ -396,8 +387,7 @@ focus_tree = {
 			#
 			#
 			var:country_leader = {
-				add_to_variable = { br_public_feeling_var = 5 tooltip = br_public_feeling_var_tt }
-				br_clamp_br_public_feeling_var = yes
+				br_public_feeling_var_increased_5 = yes
 			}
 		}
 		
@@ -3442,8 +3432,9 @@ focus_tree = {
 		select_effect = {
 			#
 			add_stability = -0.05
+			#
 			var:country_leader = {
-				add_to_variable = { br_public_feeling_var = -10 tooltip = br_public_feeling_var_tt }
+				br_public_feeling_var_decreased_10 = yes
 			}
 		}
 
@@ -3459,7 +3450,7 @@ focus_tree = {
 			effect_tooltip = {
 				add_stability = -0.05
 				var:country_leader = {
-					add_to_variable = { br_public_feeling_var = -10 tooltip = br_public_feeling_var_tt }
+					br_public_feeling_var_decreased_10 = yes
 				}
 			}
 			#
