@@ -88,58 +88,6 @@ country_event = { #
 	}
 }
 
-country_event = { #
-	id = br_bel.4
-	title = br_bel.4.title
-	desc = br_bel.4.desc
-	#picture = GFX_report_event_chinese_soldiers_fighting
-
-	fire_only_once = no
-	is_triggered_only = yes
-
-	immediate = {
-		hidden_effect = {}
-	}
-
-	option = {
-		name = br_bel.4.a #
-
-		ai_chance = { factor = 5 }
-	}
-
-	option = {
-		name = br_bel.4.b #
-
-		ai_chance = { factor = 5 }
-	}
-}
-
-country_event = { #
-	id = br_bel.4
-	title = br_bel.4.title
-	desc = br_bel.4.desc
-	#picture = GFX_report_event_chinese_soldiers_fighting
-
-	fire_only_once = no
-	is_triggered_only = yes
-
-	immediate = {
-		hidden_effect = {}
-	}
-
-	option = {
-		name = br_bel.5.a #
-
-		ai_chance = { factor = 5 }
-	}
-
-	option = {
-		name = br_bel.5.b #
-
-		ai_chance = { factor = 5 }
-	}
-}
-
 ###
 add_namespace = br_bel_support_gov
 ###

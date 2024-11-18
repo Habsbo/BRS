@@ -1,22 +1,4 @@
 ﻿l_simp_chinese:
- BR_INEREST_GROUP_TITLE: "[Root.GetName]的利益集团"
- BR_INEREST_GROUP_1: "你说的对，但是原神是一款···后面的我忘了"
- BR_INEREST_GROUP_2: "1"
- BR_INEREST_GROUP_NAME_LANDOWNER: "地主\n影响力：50%\n忠诚：50%"
-
- BR_IG_AGENDA_LANDOWNER: "正在索求的阶级议程\n"
- BR_INEREST_GROUP_NAME_PEASANTRY: "农民\n影响力：50%\n忠诚：50%"
- BR_IG_AGENDA_PEASANTRY: "正在索求的阶级议程\n"
- SUPPORT: "支持这个利益集团，它的力量将会随着时间增加，并对政府释放善意并展示忠诚。"
- CANCEL_SUPPORT: "撤销对这个利益集团的支持，这可能会引起他们的不满。"
- BR_INEREST_GROUP_NAME_WORKERS: "工人"
- BR_INEREST_GROUP_NAME_LABOUR_UNION: "工会"
- BR_INEREST_GROUP_NAME_ENTERPRISER: "资本家" #enterpriser
- BR_INEREST_GROUP_NAME_INTELLIGENTSIA: "知识分子" #intelligentsia
- BR_INEREST_GROUP_NAME_PETTY_BOURGEOIS: "小市民" #petty bourgeois
- BR_INEREST_GROUP_NAME_FAITH_POWER: "宗教团体"
- BR_INEREST_GROUP_NAME_ARMED_FORCES: "军队"
-
  SWI_enpower_the_president_urgently: "紧急授予主席权力"
  SWI_enpower_the_president_urgently_desc: "紧急授予主席权力"
  SWI_choose_the_fate: "抉择命运"
