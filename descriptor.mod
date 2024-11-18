@@ -14,6 +14,7 @@ tags={
 replace_path="common/ai_strategy"
 replace_path="common/bookmarks"
 replace_path="common/decisions"
+replace_path="common/national_focus"
 replace_path="events"
 name="BRS"
 supported_version="1.15.0"
