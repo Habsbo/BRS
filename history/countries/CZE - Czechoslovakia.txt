@@ -47,6 +47,10 @@ set_technology = {
 	fuel_silos = 1
 	basic_train = 1
 }
+
+#
+
+recruit_character = CZE_tomas_garrigue_masaryk
 recruit_character = CZE_karl_albrecht
 recruit_character = CZE_edvard_benesh
 recruit_character = CZE_jaroslav_krejchi
@@ -100,16 +104,24 @@ if = {
 set_research_slots = 3
 
 set_politics = {
-	ruling_party = dem_socialism
-	last_election = "1935.5.19"
+	ruling_party = dem_liberalism
+	last_election = "1927.5.19"
 	election_frequency = 60
 	elections_allowed = yes
 }
 
 set_popularities = {
-	dem_socialism= 60 #社会民主主义
-	dem_liberalism = 20 #社会自由主义
-	dem_conservatism = 20 #保守民主主义
+	sci_socialism = 2
+	con_socialism = 5
+	dem_socialism = 18
+	#
+	dem_liberalism = 30
+	dem_conservatism = 20
+	#
+	authoritarian = 0
+	#
+	fascism = 5
+	nationalism = 5
 }
 
 if = {

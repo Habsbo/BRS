@@ -1,0 +1,14 @@
+add_namespace = br_deutsche
+###
+country_event = { #
+	id = br_deutsche.1
+	title = br_deutsche.1.title
+	desc = br_deutsche.1.desc
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = br_deutsche.1.a
+	}
+}

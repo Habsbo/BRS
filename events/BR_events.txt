@@ -862,3 +862,19 @@ country_event = { #
 	}
 
 }
+
+
+add_namespace = br_ceska
+
+country_event = { #
+	id = br_ceska.1
+	title = br_ceska.1.title
+	desc = br_ceska.1.desc
+
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	option = {
+		name = br_ceska.1.a
+	}
+}

@@ -236,10 +236,10 @@
  br_public_feeling: "人气"
  br_public_feeling_var_tt: "§Y$br_public_feeling$§! $RIGHT|+=0..2$"
  br_public_feeling_var_multiplied_tt: "§Y$br_public_feeling$§! $RIGHT|+=0..2$"
- br_public_feeling_var_tt_more: "§Y$br_public_feeling$§! > §Y$RIGHT|0..2$§!"
- br_public_feeling_var_tt_no_less: "§Y$br_public_feeling$§! ≥ §Y$RIGHT|0..2$§!"
- br_public_feeling_var_tt_less: "§Y$br_public_feeling$§! < §Y$RIGHT|0..2$§!"
- br_public_feeling_var_tt_no_more: "§Y$br_public_feeling$§! ≤ §Y$RIGHT|0..2$§!"
+ br_public_feeling_var_tt_over: "该角色或政党的§Y$br_public_feeling$§! > §Y$RIGHT|0..2$§!"
+ br_public_feeling_var_tt_no_less: "该角色或政党的§Y$br_public_feeling$§! ≥ §Y$RIGHT|0..2$§!"
+ br_public_feeling_var_tt_under: "该角色或政党的§Y$br_public_feeling$§! < §Y$RIGHT|0..2$§!"
+ br_public_feeling_var_tt_no_more: "该角色或政党的§Y$br_public_feeling$§! ≤ §Y$RIGHT|0..2$§!"
 
 #
  br_culture_is_wallonia_state_tt: "瓦隆尼亚文化占主流或举足轻重"

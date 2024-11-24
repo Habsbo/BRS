@@ -245,3 +245,42 @@
 			check_variable = { benelux_region_var > 0 }
 		}
 	}
+
+###
+br_is_public_feeling_over_0 = {
+	check_variable = { br_public_feeling_var > 0 tooltip = br_public_feeling_var_tt_over }
+}
+br_is_public_feeling_over_10 = {
+	check_variable = { br_public_feeling_var > 10 tooltip = br_public_feeling_var_tt_over }
+}
+br_is_public_feeling_over_25 = {
+	check_variable = { br_public_feeling_var > 25 tooltip = br_public_feeling_var_tt_over }
+}
+br_is_public_feeling_over_50 = {
+	check_variable = { br_public_feeling_var > 50 tooltip = br_public_feeling_var_tt_over }
+}
+br_is_public_feeling_over_75 = {
+	check_variable = { br_public_feeling_var > 75 tooltip = br_public_feeling_var_tt_over }
+}
+br_is_public_feeling_equal_100 = {
+	check_variable = { br_public_feeling_var = 100 tooltip = br_public_feeling_var_tt_no_less }
+}
+###
+br_is_public_feeling_under_minus_0 = {
+	check_variable = { br_public_feeling_var < 0 tooltip = br_public_feeling_var_tt_under }
+}
+br_is_public_feeling_under_minus_10 = {
+	check_variable = { br_public_feeling_var < -10 tooltip = br_public_feeling_var_tt_under }
+}
+br_is_public_feeling_under_minus_25 = {
+	check_variable = { br_public_feeling_var < -25 tooltip = br_public_feeling_var_tt_under }
+}
+br_is_public_feeling_under_minus_50 = {
+	check_variable = { br_public_feeling_var < -50 tooltip = br_public_feeling_var_tt_under }
+}
+br_is_public_feeling_under_minus_75 = {
+	check_variable = { br_public_feeling_var < -75 tooltip = br_public_feeling_var_tt_under }
+}
+br_is_public_feeling_equal_minus_100 = {
+	check_variable = { br_public_feeling_var = -100 tooltip = br_public_feeling_var_tt_no_more }
+}
