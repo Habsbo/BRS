@@ -113,15 +113,15 @@ set_politics = {
 set_popularities = {
 	sci_socialism = 2
 	con_socialism = 5
-	dem_socialism = 18
+	dem_socialism = 13
 	#
-	dem_liberalism = 30
-	dem_conservatism = 20
+	dem_liberalism = 35
+	dem_conservatism = 25
 	#
-	authoritarian = 0
+	authoritarian = 14
 	#
-	fascism = 5
-	nationalism = 5
+	fascism = 3
+	nationalism = 3
 }
 
 if = {

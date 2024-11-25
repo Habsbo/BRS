@@ -14,8 +14,7 @@
 
 	continuous_focus_position = { x = 50 y = 1300 }
 
-	shared_focus = BALKAN_UNION_integration_of_nations
-	shared_focus = BALKAN_UNION_federalization
+	shared_focus = BALKAN_UNION_balkan_states_union
 
 #	focus = {
 #		id = CZE_
@@ -2870,29 +2869,6 @@
 		mutually_exclusive = { focus = CZE_potential_easten_ally }
 		x = -1
 		y = 1
-		relative_position_id = CZE_reorganizing_foreign_office
-		
-		cost = 8
-		
-		available = {}
-		bypass = {}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {}
-		completion_reward = {}
-		
-		ai_will_do = { factor = 1 }
-	}
-	### balkan states union ###
-	focus = {
-		id = CZE_balkan_states_union
-		icon = GFX_focus_generic_balkan_diplomacy
-		prerequisite = { focus = CZE_reorganizing_foreign_office }
-		x = 0
-		y = 2
 		relative_position_id = CZE_reorganizing_foreign_office
 		
 		cost = 8

@@ -5,7 +5,7 @@
 		factor = 0
 		
 		modifier = {
-			add = 20
+			add = 0
 			tag = SWI
 		}
 	}
@@ -20,7 +20,578 @@
 		icon = GFX_focus_generic_treaty
 		#prerequisite = { focus =  }
 		#mutually_exclusive = { focus =  }
-		x = 12
+		x = 16
+		y = 0
+		#relative_position_id =
+
+		cost = 5
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {
+			country_event = { id = br_swiss_official_language.1 }
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = SWI_defense_fund
+		icon = GFX_focus_SWI_issue_war_bonds
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 2
+		y = 0
+		relative_position_id = SWI_official_language
+
+		cost = 5
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = SWI_reorganize_military
+		icon = GFX_focus_SWI_continuous_support_active_militias
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 2
+		y = 0
+		relative_position_id = SWI_defense_fund
+
+		cost = 5
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {
+			add_command_power = 50
+			army_experience = 15
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = SWI_airforce_reform
+		icon = GFX_goal_generic_air_fighter2
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 2
+		y = 0
+		relative_position_id = SWI_reorganize_military
+
+		cost = 5
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {
+			air_experience = 25
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = SWI_political_purge
+		icon = GFX_goal_continuous_suppression
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 2
+		y = 0
+		relative_position_id = SWI_airforce_reform
+
+		cost = 5
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {
+			effect_tooltip = { add_stability = -0.10 }
+			country_event = { id = br_swiss_purge.1 }
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = SWI_trade_policy
+		icon = GFX_goal_generic_trade
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 2
+		y = 0
+		relative_position_id = SWI_political_purge
+
+		cost = 5
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	#
+	focus = {
+		id = SWI_federation
+		icon = GFX_focus_SWI_swiss_guiding_principles
+		prerequisite = {
+			focus = SWI_official_language
+			focus = SWI_defense_fund
+			focus = SWI_reorganize_military
+			focus = SWI_airforce_reform
+			focus = SWI_political_purge
+			focus = SWI_trade_policy
+		}
+		#mutually_exclusive = { focus =  }
+		x = 5
+		y = 2
+		relative_position_id = SWI_official_language
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+######################################
+### ENPOWER THE PRESIDENT URGENTLY ###
+######################################
+	focus = {
+		id = SWI_enpower_the_president_urgently
+		icon = GFX_focus_SWI_dissolve_the_federal_council
+		prerequisite = {
+			focus = SWI_official_language
+			focus = SWI_defense_fund
+			focus = SWI_reorganize_military
+			focus = SWI_airforce_reform
+			focus = SWI_political_purge
+			focus = SWI_trade_policy
+		}
+		mutually_exclusive = { focus = SWI_12 }
+		x = 1
+		y = 1
+		relative_position_id = SWI_official_language
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	###
+	focus = {
+		id = SWI_choose_the_fate
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = SWI_enpower_the_president_urgently }
+		#mutually_exclusive = { focus =  }
+		x = -10
+		y = 1
+		relative_position_id = SWI_enpower_the_president_urgently
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	###
+	focus = {
+		id = SWI_cave_to_france
+		icon = GFX_focus_chi_reach_out_to_france
+		prerequisite = { focus = SWI_choose_the_fate }
+		#mutually_exclusive = { focus =  }
+		x = -6
+		y = 1
+		relative_position_id = SWI_choose_the_fate
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = SWI_introduce_french_production_line
+		icon = GFX_focus_CHL_domestic_production_of_the_willys_mb
+		prerequisite = { focus = SWI_cave_to_france }
+		#mutually_exclusive = { focus =  }
+		x = -1
+		y = 2
+		relative_position_id = SWI_cave_to_france
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = SWI_research_cooperation
+		icon = GFX_focus_research2
+		prerequisite = { focus = SWI_introduce_french_production_line }
+		x = 0
+		y = 1
+		relative_position_id = SWI_introduce_french_production_line
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = SWI_attend_the_conference
+		icon = GFX_focus_generic_communist
+		prerequisite = { focus = SWI_cave_to_france }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = SWI_cave_to_france
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = SWI_support_anti_fascism_war
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		prerequisite = { focus = SWI_cave_to_france }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 2
+		relative_position_id = SWI_cave_to_france
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = SWI_volunteers_legion
+		icon = GFX_focus_generic_military_academy
+		prerequisite = { focus = SWI_support_anti_fascism_war }
+		x = 0
+		y = 1
+		relative_position_id = SWI_support_anti_fascism_war
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	###
+	focus = {
+		id = SWI_cave_to_austria
+		icon = GFX_focus_generic_befriend_austria
+		prerequisite = { focus = SWI_choose_the_fate }
+		#mutually_exclusive = { focus =  }
+		x = -3
+		y = 1
+		relative_position_id = SWI_choose_the_fate
+
+		cost = 8
+
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = SWI_loyal_to_kaiser
+		icon = GFX_focus_AUS_legitimistische_studentenverbindung
+		prerequisite = { focus = SWI_cave_to_austria }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = SWI_cave_to_austria
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = SWI_mios_of_imperium
+		icon = GFX_focus_generic_military_industry
+		prerequisite = { focus = SWI_loyal_to_kaiser }
+		x = 0
+		y = 2
+		relative_position_id = SWI_loyal_to_kaiser
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = SWI_swiss_legion
+		icon = GFX_focus_SWI_aktion_nationaler_widerstand
+		prerequisite = { focus = SWI_loyal_to_kaiser }
+		x = 1
+		y = 1
+		relative_position_id = SWI_loyal_to_kaiser
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	focus = {
+		id = SWI_deutsch_federation
+		icon = GFX_focus_ger_revive_kaiserreich
+		prerequisite = {
+			focus = SWI_cave_to_austria
+			focus = SWI_cave_to_germany
+		}
+		#mutually_exclusive = { focus =  }
+		x = 2
+		y = 1
+		relative_position_id = SWI_cave_to_austria
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	###
+	focus = {
+		id = SWI_cave_to_germany
+		icon = GFX_focus_GER_customs_union
+		prerequisite = { focus = SWI_choose_the_fate }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = SWI_choose_the_fate
+
+		cost = 8
+
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = SWI_the_high_castle_in_the_alpine
+		icon = GFX_focus_SWI_the_national_redoubt
+		prerequisite = { focus = SWI_cave_to_germany }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 2
+		relative_position_id = SWI_cave_to_germany
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = SWI_1111
+		icon = GFX_goal_generic_demand_territory
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 0
 		y = 0
 		#relative_position_id =
 
@@ -40,277 +611,41 @@
 		
 		ai_will_do = { factor = 1 }
 	}
-	focus = {
-		id = SWI_defense_fund
-		icon = GFX_focus_SWI_issue_war_bonds
-		#prerequisite = { focus =  }
-		#mutually_exclusive = { focus =  }
-		x = 2
-		y = 0
-		relative_position_id = SWI_official_language
-
-		cost = 8
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-		
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
-		id = SWI_3
-		icon = GFX_goal_generic_demand_territory
-		#prerequisite = { focus =  }
-		#mutually_exclusive = { focus =  }
-		x = 2
-		y = 0
-		relative_position_id = SWI_defense_fund
-		cost = 8
-		
-		ai_will_do = { factor = 1 }
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-	}
-	focus = {
-		id = SWI_4
-		icon = GFX_goal_generic_demand_territory
-		#prerequisite = { focus =  }
-		#mutually_exclusive = { focus =  }
-		x = 2
-		y = 0
-		relative_position_id = SWI_3
-
-		cost = 8
-		
-		ai_will_do = { factor = 1 }
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-	}
-	focus = {
-		id = SWI_5
-		icon = GFX_goal_generic_demand_territory
-		#prerequisite = { focus =  }
-		#mutually_exclusive = { focus =  }
-		x = 2
-		y = 0
-		relative_position_id = SWI_4
-
-		cost = 8
-		
-		ai_will_do = { factor = 1 }
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-	}
-	focus = {
-		id = SWI_6
-		icon = GFX_goal_generic_demand_territory
-		#prerequisite = { focus =  }
-		#mutually_exclusive = { focus =  }
-		x = 2
-		y = 0
-		relative_position_id = SWI_5
-
-		cost = 8
-		
-		ai_will_do = { factor = 1 }
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-	}
-	#
-	focus = {
-		id = SWI_11
-		icon = GFX_focus_SWI_swiss_guiding_principles
-		prerequisite = {
-			focus = SWI_official_language
-			focus = SWI_defense_fund
-			focus = SWI_3
-			focus = SWI_4
-			focus = SWI_5
-			focus = SWI_6
-		}
-		#mutually_exclusive = { focus =  }
-		x = 5
-		y = 2
-		relative_position_id = SWI_official_language
-
-		cost = 8
-		
-		ai_will_do = { factor = 1 }
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-	}
-	### ENPOWER THE PRESIDENT URGENTLY ###
-	focus = {
-		id = SWI_enpower_the_president_urgently
-		icon = GFX_focus_SWI_dissolve_the_federal_council
-		#prerequisite = {}
-		mutually_exclusive = { focus = SWI_12 }
-		x = -4
-		y = -1
-		relative_position_id = SWI_11
-
-		cost = 8
-		
-		ai_will_do = { factor = 1 }
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-	}
-	#
-	focus = {
-		id = SWI_choose_the_fate
-		icon = GFX_goal_generic_forceful_treaty
-		prerequisite = { focus = SWI_enpower_the_president_urgently }
-		#mutually_exclusive = { focus =  }
-		x = -10
-		y = 1
-		relative_position_id = SWI_enpower_the_president_urgently
-
-		cost = 8
-		
-		ai_will_do = { factor = 1 }
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-	}
-	focus = {
-		id = SWI_cave_to_france
-		icon = GFX_focus_chi_reach_out_to_france
-		prerequisite = { focus = SWI_choose_the_fate }
-		#mutually_exclusive = { focus =  }
-		x = -2
-		y = 1
-		relative_position_id = SWI_choose_the_fate
-
-		cost = 8
-		
-		ai_will_do = { factor = 1 }
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-	}
-	focus = {
-		id = SWI_cave_to_germany
-		icon = GFX_goal_generic_demand_territory
-		prerequisite = { focus = SWI_choose_the_fate }
-		#mutually_exclusive = { focus =  }
-		x = 0
-		y = 1
-		relative_position_id = SWI_choose_the_fate
-
-		cost = 8
-		
-		ai_will_do = { factor = 1 }
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-	}
+	###
 	focus = {
 		id = SWI_keep_neutrality_proudly
 		icon = GFX_focus_SWI_neutrality_on_the_move
 		prerequisite = { focus = SWI_choose_the_fate }
 		#mutually_exclusive = { focus =  }
-		x = 2
+		x = 3
 		y = 1
 		relative_position_id = SWI_choose_the_fate
 
 		cost = 8
 		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
 		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = SWI_gotthard_union
+		icon = GFX_focus_SWI_gotthard_league
+		prerequisite = { focus = SWI_keep_neutrality_proudly }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = SWI_keep_neutrality_proudly
+
+		cost = 8
 		
 		available = {}
 		
@@ -323,6 +658,8 @@
 		complete_tooltip = {}
 		
 		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
 	}
 
 	#
@@ -349,7 +686,6 @@
 		available_if_capitulated = no
 		
 		complete_tooltip = {}
-		
 		completion_reward = {}
 		
 		ai_will_do = { factor = 1 }
@@ -361,13 +697,11 @@
 		icon = GFX_focus_SWI_fortify_border_with_italy
 		prerequisite = { focus = SWI_reassert_spiritual_defense }
 		#mutually_exclusive = { focus =  }
-		x = -3
+		x = -2
 		y = 1
 		relative_position_id = SWI_reassert_spiritual_defense
 
 		cost = 8
-		
-		ai_will_do = { factor = 1 }
 		
 		available = {}
 		
@@ -378,8 +712,9 @@
 		available_if_capitulated = no
 		
 		complete_tooltip = {}
-		
 		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
 	}
 	focus = {
 		id = SWI_fortify_border_between_swiss_and_germany
@@ -411,13 +746,40 @@
 		icon = GFX_focus_SWI_fortify_border_with_france
 		prerequisite = { focus = SWI_reassert_spiritual_defense }
 		#mutually_exclusive = { focus =  }
-		x = 3
+		x = 2
 		y = 1
 		relative_position_id = SWI_reassert_spiritual_defense
 
 		cost = 8
 		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
 		ai_will_do = { factor = 1 }
+	}
+	### ###
+	focus = {
+		id = SWI_purge_extreme_right_wing
+		icon = GFX_focus_generic_communism_anti_fascism
+		prerequisite = {
+			focus = SWI_fortify_border_between_swiss_and_italy
+			focus = SWI_fortify_border_between_swiss_and_germany
+			focus = SWI_fortify_border_between_swiss_and_france
+		}
+		mutually_exclusive = { focus =  SWI_purge_radical_left_wing }
+		x = 1
+		y = 1
+		relative_position_id = SWI_fortify_border_between_swiss_and_italy
+
+		cost = 8
 		
 		available = {}
 		
@@ -430,22 +792,58 @@
 		complete_tooltip = {}
 		
 		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
 	}
+	### ###
+	focus = {
+		id = SWI_purge_radical_left_wing
+		icon = GFX_focus_GER_end_european_communism
+		prerequisite = {
+			focus = SWI_fortify_border_between_swiss_and_italy
+			focus = SWI_fortify_border_between_swiss_and_germany
+			focus = SWI_fortify_border_between_swiss_and_france
+		}
+		mutually_exclusive = { focus = SWI_purge_extreme_right_wing }
+		x = 1
+		y = 1
+		relative_position_id = SWI_fortify_border_between_swiss_and_germany
 
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
 
 	###  ###
 	focus = {
 		id = SWI_12
 		icon = GFX_focus_SWI_abandon_neutrality
-		#prerequisite = {}
+		prerequisite = {
+			focus = SWI_official_language
+			focus = SWI_defense_fund
+			focus = SWI_reorganize_military
+			focus = SWI_airforce_reform
+			focus = SWI_political_purge
+			focus = SWI_trade_policy
+		}
 		mutually_exclusive = { focus = SWI_enpower_the_president_urgently }
-		x = 4
-		y = -1
-		relative_position_id = SWI_11
+		x = 8
+		y = 0
+		relative_position_id = SWI_enpower_the_president_urgently
 
 		cost = 8
-		
-		ai_will_do = { factor = 1 }
 		
 		available = {}
 		
@@ -456,8 +854,9 @@
 		available_if_capitulated = no
 		
 		complete_tooltip = {}
-		
 		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
 	}
 ###
 	focus = {
@@ -471,7 +870,56 @@
 
 		cost = 8
 		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
 		ai_will_do = { factor = 1 }
+	}
+################
+### military ###
+################
+	focus = {
+		id = SWI_national_defense
+		icon = GFX_focus_generic_infiltration
+		x = 36
+		y = 0
+		#relative_position_id =
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	### firearms ###
+	focus = {
+		id = SWI_gebirgskanone
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = SWI_national_defense }
+		#mutually_exclusive = { focus =  }
+		x = -5
+		y = 1
+		relative_position_id = SWI_national_defense
+
+		cost = 8
 		
 		available = {}
 		
@@ -484,5 +932,502 @@
 		complete_tooltip = {}
 		
 		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = SWI_motorization_of_artillery
+		icon = GFX_focus_generic_anti_tank_guns
+		prerequisite = { focus = SWI_gebirgskanone }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = SWI_gebirgskanone
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = SWI_armored_combat
+		icon = GFX_focus_generic_heavy_tank
+		prerequisite = { focus = SWI_motorization_of_artillery }
+		x = 0
+		y = 1
+		relative_position_id = SWI_motorization_of_artillery
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	###
+	focus = {
+		id = SWI_espionage_agency
+		icon = GFX_focus_generic_secret_service_agency
+		prerequisite = { focus = SWI_national_defense }
+		#mutually_exclusive = { focus =  }
+		x = -3
+		y = 1
+		relative_position_id = SWI_national_defense
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	###
+	focus = {
+		id = SWI_training_militia
+		icon = GFX_focus_SWI_patriotic_shooting_clubs
+		prerequisite = { focus = SWI_national_defense }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = SWI_national_defense
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = SWI_professionalizing_militias
+		icon = GFX_focus_generic_military_mission
+		prerequisite = { focus = SWI_training_militia }
+		mutually_exclusive = { focus = SWI_foreign_legion }
+		x = -1
+		y = 1
+		relative_position_id = SWI_training_militia
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = SWI_foreign_legion 
+		icon = GFX_focus_generic_strike_at_democracy1
+		prerequisite = { focus = SWI_training_militia }
+		mutually_exclusive = { focus = SWI_professionalizing_militias }
+		x = 1
+		y = 1
+		relative_position_id = SWI_training_militia
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = SWI_strengthen_force_projection
+		icon = GFX_focus_SWI_helvetic_junta
+		prerequisite = {
+			focus = SWI_professionalizing_militias
+			focus = SWI_foreign_legion
+		}
+		x = 0
+		y = 2
+		relative_position_id = SWI_training_militia
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	###
+	focus = {
+		id = SWI_1111
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = SWI_strengthen_force_projection }
+		#mutually_exclusive = { focus =  }
+		x = -1
+		y = 1
+		relative_position_id = SWI_strengthen_force_projection
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	###
+	focus = {
+		id = SWI_1112
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = SWI_strengthen_force_projection }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 1
+		relative_position_id = SWI_strengthen_force_projection
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	###
+	focus = {
+		id = SWI_1111
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = SWI_strengthen_force_projection }
+		#mutually_exclusive = { focus =  }
+		x = 3
+		y = 1
+		relative_position_id = SWI_strengthen_force_projection
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	###
+	focus = {
+		id = SWI_1112
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = SWI_strengthen_force_projection }
+		#mutually_exclusive = { focus =  }
+		x = 5
+		y = 1
+		relative_position_id = SWI_strengthen_force_projection
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+################
+### AIRFORCE ###
+################
+	focus = {
+		id = SWI_air
+		icon = GFX_goal_generic_build_airforce
+		prerequisite = { focus = SWI_national_defense }
+		#mutually_exclusive = { focus =  }
+		x = 8
+		y = 1
+		relative_position_id = SWI_national_defense
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+##########
+### IC ###
+##########
+	focus = {
+		id = SWI_economic_recovery
+		icon = GFX_focus_generic_economic_recovery
+		#prerequisite = { focus = }
+		#mutually_exclusive = { focus =  }
+		x = 16
+		y = 0
+		relative_position_id = SWI_national_defense
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	### resource mining ###
+	focus = {
+		id = SWI_resource_mining
+		icon = GFX_focus_generic_coal_mining
+		prerequisite = { focus = SWI_economic_recovery }
+		x = -3
+		y = 1
+		relative_position_id = SWI_economic_recovery
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = SWI_alpine_montangesellschaft_cooperation
+		icon = GFX_focus_generic_steel
+		prerequisite = { focus = SWI_resource_mining }
+		x = 0
+		y = 1
+		relative_position_id = SWI_resource_mining
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = SWI_
+		icon = GFX_focus_generic_modernize_industry
+		prerequisite = { focus = SWI_alpine_montangesellschaft_cooperation }
+		x = 0
+		y = 1
+		relative_position_id = SWI_alpine_montangesellschaft_cooperation
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	###
+	focus = {
+		id = SWI_1111
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SWI_economic_recovery }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 1
+		relative_position_id = SWI_economic_recovery
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	### save banking ###
+	focus = {
+		id = SWI_save_banking
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		prerequisite = { focus = SWI_economic_recovery }
+		#mutually_exclusive = { focus =  }
+		x = 3
+		y = 1
+		relative_position_id = SWI_economic_recovery
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = SWI_1111
+		icon = GFX_goal_generic_demand_territory
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 0
+		#relative_position_id =
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
 	}
 }

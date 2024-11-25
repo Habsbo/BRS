@@ -54,15 +54,6 @@
  CZE_invite_ukraine: "邀请乌克兰国家加盟"
  CZE_invite_ukraine_desc: ""
 
- CZE_balkan_states_union: "巴尔干国家联盟"
- CZE_balkan_states_union_desc: ""
- CZE_resolve_hostility: "化解民族仇恨"
- CZE_resolve_hostility_desc: ""
- CZE_decide_rthography: "讨论正字法"
- CZE_decide_rthography_desc: ""
- CZE_od_slavs_la_latine_from_the_danube_to_south_balkan: "从斯拉夫人到拉丁人，从多瑙河到南巴尔干"
- CZE_od_slavs_la_latine_from_the_danube_to_south_balkan_desc: ""
-
  CZE_antifascists: "反对法西斯"
  CZE_antifascists_desc: ""
  CZE_anticapitalism: "反对资本主义"
@@ -187,7 +178,8 @@
  CZE_cooperate_with_russian_empire: "结交俄罗斯帝国"
  CZE_cooperate_with_russian_empire_desc: ""
 
-
+ BALKAN_UNION_balkan_states_union: "倡议巴尔干国家同盟"
+ BALKAN_UNION_balkan_states_union_desc: ""
  BALKAN_UNION_integration_of_nations: "推进巴尔干一体化"
  BALKAN_UNION_integration_of_nationsdesc: ""
  BALKAN_UNION_federalization: "推进联邦化"
@@ -196,8 +188,6 @@
  BALKAN_UNION_lingua_franca_desc: ""
  BALKAN_UNION_economic_synergy_department: "经济协同部门"
  BALKAN_UNION_economic_synergy_department_desc: ""
- : ""
- _desc: ""
  : ""
  _desc: ""
  : ""

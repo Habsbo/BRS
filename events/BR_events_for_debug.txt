@@ -240,3 +240,224 @@ country_event = { #
 
 
 }
+
+
+add_namespace = br_swiss_official_language
+
+country_event = { #
+	id = br_swiss_official_language.1
+	title = br_swiss_official_language.1.title
+	desc = br_swiss_official_language.1.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {}
+	}
+
+	option = {
+		name = br_swiss_official_language.1.a #
+
+		
+
+		ai_chance = { factor = 10 }
+	}
+
+	option = {
+		name = br_swiss_official_language.1.b #
+
+		
+
+		ai_chance = { factor = 10 }
+	}
+
+	option = {
+		name = br_swiss_official_language.1.c #
+
+		
+
+		ai_chance = { factor = 10 }
+	}
+
+	option = {
+		name = br_swiss_official_language.1.d #
+		country_event = { id = br_swiss_official_language.2 }
+		ai_chance = {
+			base = 20
+			modifier = {
+				factor = 100
+				NOT = { has_political_power < 50 }
+			}
+		}
+	}
+
+}
+country_event = { #
+	id = br_swiss_official_language.2
+	title = br_swiss_official_language.2.title
+	desc = br_swiss_official_language.2.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {}
+	}
+
+	option = {
+		name = br_swiss_official_language.2.a #
+
+		add_political_power = -50		
+
+		ai_chance = { factor = 10 }
+	}
+
+	option = {
+		name = br_swiss_official_language.2.b #
+
+		add_political_power = -50
+
+		ai_chance = { factor = 10 }
+	}
+
+	option = {
+		name = br_swiss_official_language.2.c #
+
+		add_political_power = -50
+
+		ai_chance = { factor = 10 }
+	}
+
+	option = {
+		name = br_swiss_official_language.2.d #
+
+		add_political_power = -150
+
+		ai_chance = { factor = 10 }
+	}
+
+}
+
+add_namespace = br_swiss_purge
+
+country_event = { #
+	id = br_swiss_purge.1
+	title = br_swiss_purge.1.title
+	desc = br_swiss_purge.1.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = { add_stability = -0.10 }
+	}
+
+	option = {
+		name = br_swiss_purge.1.a #清洗工团分子
+
+		if = {
+			limit = { soc_anarchism > 0.10 }
+			add_popularity = { ideology = con_socialism popularity = -0.05 }
+		}
+		if = {
+			limit = { vanwardism > 0.10 }
+			add_popularity = { ideology = vanwardism popularity = -0.05 }
+		}
+
+		set_country_flag = radical_communism_purged_flag
+		
+		ai_chance = { factor = 10 }
+	}
+
+	option = {
+		name = br_swiss_purge.1.b #清洗共产主义者
+
+		if = {
+			limit = { vanwardism > 0.10 }
+			add_popularity = { ideology = vanwardism popularity = -0.05 }
+		}
+		if = {
+			limit = { sci_socialism > 0.10 }
+			add_popularity = { ideology = sci_socialism popularity = -0.05 }
+		}
+		if = {
+			limit = { con_socialism > 0.10 }
+			add_popularity = { ideology = con_socialism popularity = -0.05 }
+		}
+		
+		set_country_flag = communism_purged_flag
+
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 100
+				br_ideology_capitalism_ruling_with_ds = yes
+			}
+			modifier = {
+				factor = 100
+				br_ideology_fascism_ruling = yes
+			}
+			modifier = {
+				factor = 0
+				br_ideology_capitalism_ruling_with_ds = yes
+			}
+		}
+	}
+
+	option = {
+		name = br_swiss_purge.1.c #清洗民主分子
+
+		if = {
+			limit = { dem_socialism > 0.10 }
+			add_popularity = { ideology = dem_socialism popularity = -0.05 }
+		}
+		if = {
+			limit = { dem_liberalism > 0.10 }
+			add_popularity = { ideology = dem_liberalism popularity = -0.05 }
+		}
+		if = {
+			limit = { dem_conservatism > 0.10 }
+			add_popularity = { ideology = dem_conservatism popularity = -0.05 }
+		}
+
+		set_country_flag = democratic_purged_flag
+		
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 10
+				br_ideology_capitalism_nio_with_ds = yes
+			}
+			modifier = {
+				factor = 0
+				br_ideology_capitalism_ruling_with_ds = yes
+			}
+		}
+	}
+
+	option = {
+		name = br_swiss_purge.1.d #清洗右翼极端派
+
+		if = {
+			limit = { fascism > 0.10 }
+			add_popularity = { ideology = fascism popularity = -0.05 }
+		}
+		if = {
+			limit = { nationalism > 0.10 }
+			add_popularity = { ideology = nationalism popularity = -0.05 }
+		}
+		if = {
+			limit = { supernationalism > 0.10 }
+			add_popularity = { ideology = supernationalism popularity = -0.05 }
+		}
+
+		set_country_flag = fascism_purged_flag
+
+		
+		ai_chance = { factor = 5 }
+	}
+}
