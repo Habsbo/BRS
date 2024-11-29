@@ -1,0 +1,21 @@
+br_CZE_political_violence = {
+	icon = spr_the_seeds_of_revolution
+
+	allowed = { original_tag = CZE }
+
+	visible = { has_idea = CZE_political_violence }
+	
+	visible_when_empty = yes
+	priority = 10
+}
+
+br_CZE_communists_leadership = {
+	icon = generic_communism
+
+	allowed = { original_tag = CZE }
+
+	visible = { has_idea = CZE_political_violence }
+	
+	visible_when_empty = yes
+	priority = 9
+}

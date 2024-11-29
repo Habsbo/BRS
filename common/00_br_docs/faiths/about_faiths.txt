@@ -1,0 +1,54 @@
+#亚伯拉罕宗教组 2···
+###犹太教 20··
+###基督教 21··
+###伊斯兰教 22··
+#佛教组 3···
+###大乘部 31··
+###上座部 32··
+#印度宗教组 4···
+###印度教 41··
+###
+### 
+#
+#东方宗教组9···
+###儒教91··
+###日本宗教92··
+###
+######
+
+### 2100 - 2199
+#
+#faith_catholic - 天主教 - 2110
+#faith_orthodox - 东正教 - 2120
+#faith_protestantism - 基督教（新教） - 2130
+#faith_lutheranism - 路德宗 - 2131
+#faith_calvinism - 加尔文宗 - 2132
+#faith_anglicanism - 圣公宗 - 2133
+#
+### 2200 - 2299
+#
+#faith_sunni - 逊尼派 - 2210
+#faith_shiite - 什叶派 - 2220
+#faith_ibadi - 伊巴德派 - 2230
+#
+### 3100 - 3999
+#
+#faith_mahayana - 大乘佛教 - 3110
+#faith_theravada - 上座部 - 3210
+#
+### 9200 - 9299
+#
+#faith_shinto - 神道教 - 9210
+#faith_okinawashinto - 冲绳神道教 - 9220
+###
+#
+#faith_paganism - 原始信仰 - 1
+#
+###
+#
+#faith_atheism - 无神论 - 0
+#
+###
+#
+#faith_yahadut - 犹太教 - 2000
+#

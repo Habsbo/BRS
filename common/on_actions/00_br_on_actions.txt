@@ -4,9 +4,7 @@ on_actions = {
 			#
 			BEL = {
 				if = {
-					limit = {
-						date < 1933.01.01
-					}
+					limit = { date < 1933.01.01 }
 					activate_advisor = BEL_alexander_von_falkenhausen_hog
 				}
 			}
@@ -59,6 +57,14 @@ on_actions = {
 				#dynamic modifier - ic
 				add_dynamic_modifier = { modifier = national_industry_civilian_dynamic_modifier }
 				add_dynamic_modifier = { modifier = national_industry_military_dynamic_modifier }
+			}
+			every_country = {
+				limit = {
+					NOT = {
+						has_country_flag = br_dynamic_modifier_not_generic_flag
+						has_country_flag = br_dynamic_modifier_not_generic_for_battle_flag
+					}
+				}
 				#dynamic modifier - army
 				add_dynamic_modifier = { modifier = black_force_dynamic_modifier }
 				add_dynamic_modifier = { modifier = red_army_dynamic_modifier }

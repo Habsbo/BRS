@@ -69,6 +69,60 @@ characters = {
 			traits = { duke_of_teschen_king_of_bohemia }
 		}
 	}
+### communists ###
+	#阿洛伊斯·穆纳 Alois Můňa
+	CZE_alois_muna = {
+		name=alois_muna
+		portraits={
+			civilian={
+				large=GFX_portrait_CZE_alois_muna
+				small=GFX_portrait_CZE_alois_muna_small
+			}
+		}
+	}
+	#瓦茨拉夫·什图尔克 Václav Šturc
+	CZE_vaclav_sturc = {
+		name=vaclav_sturc
+		portraits={
+			civilian={
+				large=GFX_portrait_CZE_vaclav_sturc
+				small=GFX_portrait_CZE_vaclav_sturc_small
+			}
+		}
+		
+		country_leader={
+			ideology=leninism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	#博胡米尔·什麦拉尔 - Bohumír Šmeral - has created KSC
+	CZE_bohumir_smeral = {
+		name=bohumir_smeral
+		portraits={
+			civilian={
+				large=GFX_portrait_CZE_bohumir_smeral
+				small=GFX_portrait_CZE_bohumir_smeral_small
+			}
+		}
+		
+		country_leader={
+			ideology=marxism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	#鲁道夫·斯兰斯基 - Rudolf Slánský
+	CZE_rudolf_slansky = {
+		name=rudolf_slansky
+		
+		portraits={
+			civilian={
+				large=GFX_portrait_CZE_rudolf_slansky
+				small=GFX_portrait_CZE_rudolf_slansky_small
+			}
+		}
+	}
 	#克拉门特·哥特瓦尔德
 	CZE_klement_gottwald={
 		name=CZE_klement_gottwald
@@ -101,6 +155,136 @@ characters = {
 			id=-1
 		}
 	}
+	#卢德维克·斯沃博达
+	CZE_ludvik_svoboda={
+		name=CZE_ludvik_svoboda
+		portraits={
+			civilian = {
+				large = GFX_portrait_CZE_ludvik_svoboda
+				small = GFX_portrait_CZE_ludvik_svoboda_small
+			}
+			army={
+				large = GFX_portrait_CZE_ludvik_svoboda
+				small="GFX_idea_CZE_ludvik_svoboda"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = CZE_ludvik_svoboda
+			allowed = { original_tag = CZE }
+			traits = { army_chief_morale_3 }
+			cost = 200
+			ai_will_do = { factor = 1.000 }
+		}
+		field_marshal = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 1
+
+			traits = { politically_connected war_hero }
+			visible = {
+				OR = {
+					br_ideology_socialism_ruling = yes
+					br_ideology_capitalism_ruling = yes
+				}
+			}
+
+			legacy_id = -1
+		}
+	}
+	#安东宁·诺沃提尼 - Antonín Novotný
+	CZE_antonin_novotny = {
+		name = antonin_novotny
+		portraits={
+			civilian = {
+				large = GFX_portrait_CZE_antonin_novotny
+				small = GFX_portrait_CZE_antonin_novotny_small
+			}
+		}
+	}
+	#古斯塔夫·胡萨克 - Gustáv Husák, slovak
+	CZE_gustav_husak={
+		name=CZE_gustav_husak
+		portraits={
+			army={
+				small="GFX_idea_CZE_gustav_husak"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = CZE_gustav_husak
+			allowed  = {
+				original_tag  = CZE
+			}
+			available  = {
+				if  = {
+					limit  = {
+						has_dlc = "Death or Dishonor"
+					}
+					has_completed_focus  = CZE_go_left 
+				}
+				if  = {
+					limit  = {
+						has_dlc = "Man the Guns"
+					}
+					not  = {
+						has_autonomy_state  = autonomy_supervised_state
+					}
+				}
+			}
+			traits  = {
+				communist_revolutionary 
+			}
+			ai_will_do  = {
+				base = 0
+				modifier = {
+					add = 20
+					OR = {
+						has_country_flag = CZE_AI_RANDOM_COMMUNIST
+						has_game_rule = {
+							rule = CZE_ai_behavior
+							option = COMMUNIST
+						}
+					}
+				}
+			}
+		}
+	}
+### Křesťanská a demokratická unie - Československá strana lidová ### 基督教民主联盟与捷克人民党
+	#杨·斯拉梅克 - Jan Šrámek
+	CZE_jan_sramek = {
+		name = jan_sramek
+		portraits={
+			civilian = {
+				large = GFX_portrait_CZE_jan_sramek
+				small = GFX_portrait_CZE_jan_sramek_small
+			}
+		}
+		country_leader = {
+			ideology = conservatism
+			expire="1965.1.1.1"
+			id=-1
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = CZE_jan_sramek
+			allowed = { original_tag = CZE }
+			available = {
+				OR = {
+					has_completed_focus = CZE_democratic_principles
+					has_country_flag = br_CZE_anti_katolickou_modernou_flag
+				}
+				NOT = { has_completed_focus = CZE_peasanty_war }
+			}
+			visible = { br_ideology_socialism_nio_no_ds = yes }
+			traits = {  }
+			cost = 100
+			ai_will_do = { factor = 1.000 }
+		}
+	}
+### ##
 	#
 	CZE_vojtyech_luzha={
 		name=CZE_vojtyech_luzha
@@ -304,29 +488,6 @@ characters = {
 				factor = 1.000
 			}
 		}
-	}
-
-	CZE_ludvik_svoboda={
-		name=CZE_ludvik_svoboda
-		portraits={
-			army={
-				small="GFX_idea_CZE_ludvik_svoboda"
-			}
-		}
-		advisor={
-			slot = army_chief
-			idea_token = CZE_ludvik_svoboda
-			allowed = {
-				original_tag = CZE
-			}
-			traits = {
-				army_chief_morale_3
-			}
-			cost = 200
-			ai_will_do = {
-				factor = 1.000
-			}
-		}		
 	}
 
 
@@ -604,54 +765,6 @@ characters = {
 			}
 		}
 	}
-
-	CZE_gustav_husak={
-		name=CZE_gustav_husak
-		portraits={
-			army={
-				small="GFX_idea_CZE_gustav_husak"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = CZE_gustav_husak
-			allowed  = {
-				original_tag  = CZE
-			}
-			available  = {
-				if  = {
-					limit  = {
-						has_dlc = "Death or Dishonor"
-					}
-					has_completed_focus  = CZE_go_left 
-				}
-				if  = {
-					limit  = {
-						has_dlc = "Man the Guns"
-					}
-					not  = {
-						has_autonomy_state  = autonomy_supervised_state
-					}
-				}
-			}
-			traits  = {
-				communist_revolutionary 
-			}
-			ai_will_do  = {
-				base = 0
-				modifier = {
-					add = 20
-					OR = {
-						has_country_flag = CZE_AI_RANDOM_COMMUNIST
-						has_game_rule = {
-							rule = CZE_ai_behavior
-							option = COMMUNIST
-						}
-					}
-				}
-			}
-		}
-	}
 	
 	CZE_konrad_henlein={
 		name=CZE_konrad_henlein
@@ -700,6 +813,140 @@ characters = {
 			}
 		}		
 	}
+#
+	#Antonín Leopold Dvořák
+	CZE_antonin_leopold_dvorak = {
+		name = antonin_leopold_dvorak
+		portraits = {
+			civilian={
+				large = GFX_portrait_CZE_antonin_leopold_dvorak
+				small = GFX_portrait_CZE_antonin_leopold_dvorak_small
+			}
+		}
+	}
+#
+	#Tomáš Baťa - 托马斯·拔佳
+	CZE_tomas_bata = {
+		name = tomas_bata
+		portraits={
+			civilian={
+				large = GFX_portrait_CZE_tomas_bata
+				small = GFX_portrait_CZE_tomas_bata_small
+			}
+		}
+		
+	}
+	CZE_jan_antonin_bata = {
+		name = jan_antonin_bata
+		portraits={
+			civilian={
+				large = GFX_portrait_CZE_jan_antonin_bata
+				small = GFX_portrait_CZE_jan_antonin_bata_small
+			}
+		}
+	}
+	CZE_tomas_jan_bata = {
+		name = tomas_jan_bata
+		portraits={
+			civilian={
+				large = GFX_portrait_CZE_tomas_jan_bata
+				small = GFX_portrait_CZE_tomas_jan_bata_small
+			}
+		}
+	}
+	
+	#Václav Klement - 瓦茨拉夫·克莱门特
+	CZE_vaclav_klement = {
+		name = vaclav_klement
+		portraits = {
+			civilian={
+				large = GFX_portrait_CZE_vaclav_klement
+				small = GFX_portrait_CZE_vaclav_klement_small
+			}
+		}
+	}
 
 	# Illusive Gentleman auto-generated
+
+ ######   ######  #### ######## ##    ## ######## ####  ######  ########  ######  
+##    ## ##    ##  ##  ##       ###   ##    ##     ##  ##    ##    ##    ##    ## 
+##       ##        ##  ##       ####  ##    ##     ##  ##          ##    ##       
+ ######  ##        ##  ######   ## ## ##    ##     ##   ######     ##     ######  
+      ## ##        ##  ##       ##  ####    ##     ##        ##    ##          ## 
+##    ## ##    ##  ##  ##       ##   ###    ##     ##  ##    ##    ##    ##    ## 
+ ######   ######  #### ######## ##    ##    ##    ####  ######     ##     ######  
+### scientists ###
+	#雅罗斯拉夫·海洛夫斯基 - Jaroslav Heyrovský
+	CZE_jaroslav_heyrovsky = {
+		name = jaroslav_heyrovsky
+		portraits={
+			civilian={
+				large = GFX_portrait_CZE_jaroslav_heyrovsky
+				small = GFX_portrait_CZE_jaroslav_heyrovsky_small
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = CZE_jaroslav_heyrovsky
+			allowed  = { original_tag  = CZE }
+			available  = {
+				
+			}
+			traits  = { }
+			ai_will_do  = { base = 1.000 }
+		}
+		scientist = {
+			traits = { scientist_trait_genius }
+			skills = { specialization_chemistry = 2 }
+			visible = { always = yes }
+		}
+	}
+	#Otto Wichterle
+	CZE_otto_wichterle = {
+		name = otto_wichterle
+		portraits={
+			civilian={
+				large = GFX_portrait_CZE_otto_wichterle
+				small = GFX_portrait_CZE_otto_wichterle_small
+			}
+		}
+		scientist = {
+			traits = { scientist_trait_fast_learner }
+			skills = { specialization_chemistry = 1 }
+			visible = { always = yes }
+		}
+	}
+	#Ludvík Očenášek
+	CZE_ludvik_ocenasek = {
+		name = ludvik_ocenasek
+		portraits={
+			civilian={
+				large = GFX_portrait_CZE_ludvik_ocenasek
+				small = GFX_portrait_CZE_ludvik_ocenasek_small
+			}
+		}
+		scientist = {
+			traits = { scientist_trait_fast_learner }
+			skills = {
+				specialization_air = 2
+				#specialization_naval = 1
+			}
+			visible = { always = yes }
+		}
+	}
+	#František Janeček
+	CZE_frantisek_janecek = {
+		name = frantisek_janecek
+		portraits = {
+			civilian={
+				large = GFX_portrait_CZE_frantisek_janecek
+				small = GFX_portrait_CZE_frantisek_janecek_small
+			}
+		}
+		scientist = {
+			traits = {}
+			skills = { specialization_land = 1 }
+			visible = { always = yes }
+		}
+	}
 }

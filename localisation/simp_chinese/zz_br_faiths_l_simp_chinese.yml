@@ -1,0 +1,33 @@
+﻿l_simp_chinese:
+ debug_faith: "主要信仰：[FROM.GetFaith]"
+ Country_major_faith_is: "国家的主要信仰：[ROOT.GetFaith]"
+ Country_minor_faith_is: "国家的次要信仰：[ROOT.GetFaith]"
+
+ Getfaith_default: "未知信仰"
+ GetfaithChar_default: "$Getfaith_default$"
+ GetfaithState_default: "$Getfaith_default$"
+ 
+ State_faith: "[FROM.GetFaith]"
+ Character_faith: "[ROOT.GetFaith]"
+#
+ faith_catholic: "天主教"
+ faith_orthodox: "东正教"
+ faith_protestantism: "基督教（新教）"
+ faith_anglicanism: "圣公宗"
+ faith_lutheranism: "路德宗"
+ faith_calvinism: "加尔文宗"
+#
+ faith_sunni: "逊尼派"
+ faith_shiite: "什叶派"
+ faith_ibadi: "伊巴德派"
+#
+ faith_mahayana: "大乘佛教"
+ faith_theravada: "上座部"
+#
+ faith_shinto: "神道教"
+#
+ faith_paganism: "原始信仰"
+#
+ faith_atheism: "无神论"
+#
+ faith_yahadut: "犹太教"

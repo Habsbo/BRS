@@ -771,7 +771,7 @@ focus_tree = {
 				exists = yes
 				has_capitulated = no
 			}
-			num_of_civilian_factories_available_for_projects > 1
+			NOT = { num_of_civilian_factories_available_for_projects < 2 }
 		}
 		bypass = {
 			all_core_state = {
@@ -1157,7 +1157,7 @@ focus_tree = {
 				has_capitulated = no
 				is_puppet = no
 			}
-			num_of_civilian_factories_available_for_projects > 1
+			NOT = { num_of_civilian_factories_available_for_projects < 2 }
 		}
 		bypass = {
 			all_core_state = {
@@ -1488,7 +1488,7 @@ focus_tree = {
 				exists = yes
 				has_capitulated = no
 			}
-			num_of_civilian_factories_available_for_projects > 1
+			NOT = { num_of_civilian_factories_available_for_projects < 2 }
 		}
 		bypass = {}
 		cancel = {

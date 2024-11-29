@@ -1,0 +1,89 @@
+# Allows you to create your own dynamic keys
+# to be called in localization.
+# defined_text -> this is it, we're defining the text
+# text -> a discrete entry that can be picked to display in loc.
+# trigger -> determines if a text entry will be picked or not.
+# (The triggers need to be valid for the scope the key is called in
+# (eg Root or From.From).)
+# localization_key -> points to the localization key
+# that'll be used if trigger passes
+
+defined_text = { #By Percentage
+	name = Getfaith
+### 
+	text = {
+		check_variable = { faith_catholic > 50 }
+		localization_key = faith_catholic
+	}
+	text = {
+		check_variable = { faith_orthodox > 50 }
+		localization_key = faith_orthodox
+	}
+	text = {
+		check_variable = { faith_protestantism > 50 }
+		localization_key = faith_protestantism
+	}
+	text = {
+		check_variable = { faith_lutheranism > 50 }
+		localization_key = faith_lutheranism
+	}
+	text = {
+		check_variable = { faith_calvinism > 50 }
+		localization_key = faith_calvinism
+	}
+	text = {
+		check_variable = { faith_anglicanism > 50 }
+		localization_key = faith_anglicanism
+	}
+###
+	text = {
+		check_variable = { faith_sunni > 50 }
+		localization_key = faith_sunni
+	}
+	text = {
+		check_variable = { faith_shiite > 50 }
+		localization_key = faith_shiite
+	}
+	text = {
+		check_variable = { faith_ibadi > 50 }
+		localization_key = faith_ibadi
+	}
+###
+	text = {
+		check_variable = { faith_mahayana > 50 }
+		localization_key = faith_mahayana
+	}
+	text = {
+		check_variable = { faith_theravada > 50 }
+		localization_key = faith_theravada
+	}
+###
+	text = {
+		check_variable = { faith_shinto > 50 }
+		localization_key = faith_shinto
+	}
+	text = {
+		check_variable = { faith_okinawashinto > 50 }
+		localization_key = faith_okinawashinto
+	}
+###
+	text = {
+		check_variable = { faith_paganism > 50 }
+		localization_key = faith_paganism
+	}
+###
+	text = {
+		check_variable = { faith_atheism > 50 }
+		localization_key = faith_atheism
+	}
+###
+	text = {
+		check_variable = { faith_yahadut > 50 }
+		localization_key = faith_yahadut
+	}
+	#text = {
+	#	check_variable = {  > 50 }
+	#	localization_key = 
+	#}
+	text = { localization_key = Getfaith_default }
+}

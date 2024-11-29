@@ -1,0 +1,47 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			#Majors
+			ENG = {
+				set_variable = { faith_anglicanism = 100 }
+			}
+			FRA = {
+				set_variable = { faith_catholic = 100 }
+			}
+			GER = {
+				set_variable = { faith_lutheranism = 70 }
+				set_variable = { faith_catholic = 30 }
+			}
+			AUS = {
+				set_variable = { faith_catholic = 100 }
+			}
+			RUS = {
+				set_variable = { faith_orthodox = 100 }
+			}
+			#Minors
+			ITA = {
+				set_variable = { faith_catholic = 50 }
+				set_variable = { faith_atheism = 50 }
+			}
+			CHI = {
+				set_variable = { faith_mahayana = 100 }
+			}
+			JAP = {
+				set_variable = { faith_shinto = 75 }
+				set_variable = { faith_mahayana = 15 }
+			}
+			#
+			TUR = {
+				#set_variable = { major_faith = faith_shiite }
+				every_core_state = {
+					set_variable = { faith_shiite = 100 }
+				}
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			#
+		}
+	}
+}

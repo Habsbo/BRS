@@ -50,11 +50,20 @@ set_technology = {
 
 #
 
-recruit_character = CZE_tomas_garrigue_masaryk
-recruit_character = CZE_karl_albrecht
-recruit_character = CZE_edvard_benesh
-recruit_character = CZE_jaroslav_krejchi
+recruit_character = CZE_alois_muna
+recruit_character = CZE_vaclav_sturc
+recruit_character = CZE_bohumir_smeral
+recruit_character = CZE_rudolf_slansky
 recruit_character = CZE_klement_gottwald
+recruit_character = CZE_gustav_husak
+#
+recruit_character = CZE_tomas_garrigue_masaryk
+recruit_character = CZE_edvard_benesh
+
+recruit_character = CZE_jan_sramek
+
+recruit_character = CZE_karl_albrecht
+recruit_character = CZE_jaroslav_krejchi
 recruit_character = CZE_vojtyech_luzha
 recruit_character = CZE_josef_shnejdarek
 recruit_character = CZE_richard_tesarzhik
@@ -77,8 +86,18 @@ recruit_character = CZE_ferdinand_catlos
 recruit_character = CZE_jozef_tiso
 recruit_character = CZE_vojtech_tuka
 recruit_character = CZE_konrad_henlein
-recruit_character = CZE_gustav_husak
-
+### ARTISTS ###
+recruit_character = CZE_antonin_leopold_dvorak
+#
+recruit_character = CZE_tomas_bata
+recruit_character = CZE_jan_antonin_bata
+recruit_character = CZE_tomas_jan_bata
+recruit_character = CZE_vaclav_klement
+### SCIENTISTS ###
+recruit_character = CZE_jaroslav_heyrovsky
+recruit_character = CZE_otto_wichterle
+recruit_character = CZE_ludvik_ocenasek
+recruit_character = CZE_frantisek_janecek
 
 if = {
 	limit = {
@@ -124,17 +143,17 @@ set_popularities = {
 	nationalism = 3
 }
 
-if = {
-	limit = {
-		has_dlc = "Death or Dishonor"
-	}
-	add_ideas = {
-		CZE_skoda_works
-		CZE_divided_nation
+add_ideas = {
+	CZE_skoda_works
+	#CZE_divided_nation
+	CZE_nationalism_of_ceskoslovensko
+	CZE_legacy_of_milan_stefanik
+	CZE_labour_movement
 }
-	give_guarantee = YUG
-	give_guarantee = ROM
-}
+
+set_country_flag = br_dynamic_modifier_not_generic_for_battle_flag
+#give_guarantee = SER
+#give_guarantee = ROM
 
 if = {
 	limit = {
@@ -226,15 +245,6 @@ if = {
 		}
 	}
 
-}
-
-if = {
-	limit = {
-		NOT = { has_dlc = "Death or Dishonor" }
-	}
-	add_ideas = {
-		CZE_fortification_focus
-	}
 }
 
 set_cosmetic_tag = CZE_republic

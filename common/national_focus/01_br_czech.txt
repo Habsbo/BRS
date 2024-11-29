@@ -16,6 +16,101 @@
 
 	shared_focus = BALKAN_UNION_balkan_states_union
 
+### main political line ###
+	shortcut = {
+		name = CZE_disregard_the_constitution_shortcut
+		target = CZE_disregard_the_constitution
+		scroll_wheel_factor = 0.725
+		trigger = {
+			NOT = {
+				has_completed_focus = CZE_anti_czech_gov
+				has_completed_focus = CZE_defenders_front
+				has_completed_focus = CZE_masaryko_dedictvi
+			}
+		}
+	}
+	shortcut = {
+		name = CZE_masaryko_dedictvi_shortcut
+		target = CZE_masaryko_dedictvi
+		scroll_wheel_factor = 0.725
+		trigger = {
+			NOT = {
+				has_completed_focus = CZE_anti_czech_gov
+				has_completed_focus = CZE_defenders_front
+				has_completed_focus = CZE_disregard_the_constitution
+			}
+		}
+	}
+	shortcut = {
+		name = CZE_defenders_front_shortcut
+		target = CZE_defenders_front
+		scroll_wheel_factor = 0.725
+		trigger = {
+			NOT = {
+				has_completed_focus = CZE_anti_czech_gov
+				has_completed_focus = CZE_masaryko_dedictvi
+				has_completed_focus = CZE_disregard_the_constitution
+			}
+		}
+	}
+	shortcut = {
+		name = CZE_anti_czech_gov_shortcut
+		target = CZE_anti_czech_gov
+		scroll_wheel_factor = 0.725
+		trigger = {
+			NOT = {
+				has_completed_focus = CZE_defenders_front
+				has_completed_focus = CZE_masaryko_dedictvi
+				has_completed_focus = CZE_disregard_the_constitution
+			}
+		}
+	}
+### petite entente ###
+	shortcut = {
+		name = CZE_initiative_of_petite_entente_shortcut
+		target = CZE_initiative_of_petite_entente
+		scroll_wheel_factor = 0.725
+		trigger = {
+			OR = {
+				has_completed_focus = CZE_cooperate_with_itlay
+				has_completed_focus = CZE_cooperate_with_france
+			}
+		}
+	}
+	shortcut = {
+		name = CZE_petite_entente_by_ourself_shortcut
+		target = CZE_petite_entente_by_ourself
+		scroll_wheel_factor = 0.725
+		trigger = {
+			OR = {
+				has_completed_focus = CZE_cooperate_with_itlay
+				has_completed_focus = CZE_cooperate_with_france
+			}
+		}
+	}
+### reorganizing foreign office ###
+	shortcut = {
+		name = CZE_reorganizing_foreign_office_shortcut
+		target = CZE_reorganizing_foreign_office
+		scroll_wheel_factor = 0.725
+		trigger = {
+			NOT = { has_completed_focus = CZE_disregard_the_constitution }
+		}
+	}
+### IC line ###
+	shortcut = {
+		name = CZE_industrial_legacy_shortcut
+		target = CZE_industrial_legacy
+		scroll_wheel_factor = 0.725
+		#trigger = {}
+	}
+	shortcut = {
+		name = CZE_military_research_institute_shortcut
+		target = CZE_military_research_institute
+		scroll_wheel_factor = 0.725
+		#trigger = {}
+	}
+	
 #	focus = {
 #		id = CZE_
 #		icon = GFX_
@@ -52,6 +147,107 @@
 #		}
 #	}
 
+#######################################
+##### MILITARY RESEARCH INSTITUTE #####	
+#######################################
+	focus = {
+		id = CZE_military_research_institute
+		icon = GFX_focus_CZE_military_research_institute
+		x = 5
+		y = 0
+
+		cost = 5
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			army_experience = 50
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = CZE_military_reform
+		icon = GFX_focus_generic_advanced_military_studies
+		prerequisite = { focus = CZE_military_research_institute }
+		#mutually_exclusive = { focus =  }
+		x = -3
+		y = 1
+		relative_position_id = CZE_military_research_institute
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = CZE_
+		icon = GFX_
+		prerequisite = { focus = CZE_military_reform }
+		#mutually_exclusive = { focus =  }
+		x = -1
+		y = 1
+
+		relative_position_id = CZE_military_reform
+		cost = 8
+		
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = CZE_
+		icon = GFX_
+		prerequisite = { focus = CZE_military_reform }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 1
+
+		relative_position_id = CZE_military_reform
+		cost = 8
+		
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
 ############################
 ##### Fortification focuses#
 ############################
@@ -59,7 +255,7 @@
 		id = CZE_fortification_studies
 		icon = GFX_goal_generic_construct_military
 		prerequisite = { focus = CZE_military_research_institute }
-		x = 4
+		x = 3
 		y = 1
 		relative_position_id = CZE_military_research_institute
 
@@ -85,12 +281,103 @@
 
 		ai_will_do = { factor = 10 }
 	}
+	### ###
+	focus = {
+		id = CZE_internal_redoubts
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = CZE_fortification_studies }
+		x = -1
+		y = 1
+		relative_position_id = CZE_fortification_studies
 
+		cost = 8
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+			CZE = { controls_state = 9 }
+			CZE = { controls_state = 70 }
+			CZE = { controls_state = 75 }
+			CZE = { controls_state = 664 }
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			army_experience = 20
+		}
+	}
+	focus = {
+		id = CZE_fallback_line
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = CZE_fortification_studies }
+		x = 1
+		y = 1
+		relative_position_id = CZE_fortification_studies
+
+		cost = 8
+
+		available = {
+			CZE = { controls_state = 9 }
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			army_experience = 20
+		}
+
+		ai_will_do = {
+			factor = 60
+			modifier = {
+				factor = 0.5
+				is_in_faction_with = GER
+			}
+		}
+	}
+	focus = {
+		id = CZE_
+		icon = GFX_
+		prerequisite = { focus = CZE_internal_redoubts focus = CZE_fallback_line }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 1
+		relative_position_id = CZE_internal_redoubts
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	### ###
 	focus = {
 		id = CZE_sudeten_1
 		icon = GFX_goal_generic_construct_military
 		prerequisite = { focus = CZE_fortification_studies  focus = CZE_strengthen_sudeten  }
-		x = 3
+		x = 4
 		y = 1
 		relative_position_id = CZE_fortification_studies
 
@@ -239,7 +526,6 @@
 			}	
 		}
 	}
-
 	focus = {
 		id = CZE_sudeten_2
 		icon = GFX_goal_generic_construct_military
@@ -381,7 +667,6 @@
 			}	
 		}
 	}
-
 	focus = {
 		id = CZE_sudeten_3
 		icon = GFX_goal_generic_construct_military
@@ -535,7 +820,6 @@
 			}	
 		}
 	}
-
 	focus = {
 		id = CZE_hungarian_line
 		icon = GFX_goal_generic_construct_military
@@ -592,7 +876,6 @@
 			}
 		}
 	}
-
 	focus = {
 		id = CZE_polish_line
 		icon = GFX_goal_generic_construct_military
@@ -638,97 +921,6 @@
 				add_building_construction = { type = bunker province = 11554 level = 2 instant_build = yes }
 			}
 		}
-	}
-
-	focus = {
-		id = CZE_internal_redoubts
-		icon = GFX_goal_generic_fortify_city
-		prerequisite = { focus = CZE_fortification_studies }
-		x = -2
-		y = 1
-		relative_position_id = CZE_fortification_studies
-
-		cost = 8
-
-		ai_will_do = {
-			factor = 60
-		}
-
-		available = {
-			CZE = { controls_state = 9 }
-			CZE = { controls_state = 70 }
-			CZE = { controls_state = 75 }
-			CZE = { controls_state = 664 }
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			army_experience = 20
-		}
-	}
-	focus = {
-		id = CZE_fallback_line
-		icon = GFX_goal_generic_fortify_city
-		prerequisite = { focus = CZE_fortification_studies }
-		x = 0
-		y = 1
-		relative_position_id = CZE_fortification_studies
-
-		cost = 8
-
-		available = {
-			CZE = { controls_state = 9 }
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			army_experience = 20
-		}
-
-		ai_will_do = {
-			factor = 60
-			modifier = {
-				factor = 0.5
-				is_in_faction_with = GER
-			}
-		}
-	}
-	focus = {
-		id = CZE_
-		icon = GFX_
-		prerequisite = { focus = CZE_internal_redoubts focus = CZE_fallback_line }
-		#mutually_exclusive = { focus =  }
-		x = 1
-		y = 1
-		relative_position_id = CZE_internal_redoubts
-		
-		cost = 8
-		
-		available = {}
-		bypass = {}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {}
-		completion_reward = {}
-		
-		ai_will_do = { factor = 1 }
 	}
 ###################################
 ######## INDUSTRIAL LEGACY ########
@@ -1005,7 +1197,7 @@
 	###
 	focus = {
 		id = CZE_strengthen_moravia
-		icon = GFX_goal_generic_production
+		icon = GFX_focus_generic_military_industry
 		prerequisite = { focus = CZE_industrial_legacy }
 		x = 4
 		y = 1
@@ -1431,6 +1623,24 @@
 		y = 0
 		relative_position_id = CZE_anti_czech_gov
 		
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					OR = {
+						has_completed_focus = CZE_anti_czech_gov
+						has_completed_focus = CZE_masaryko_dedictvi
+						has_completed_focus = CZE_disregard_the_constitution
+					}
+				}
+			}
+		}
+		
 		cost = 8
 		
 		available = {}
@@ -1454,8 +1664,38 @@
 	}
 	### ###
 	focus = {
-		id = CZE_tomas_masaryk_lead
-		icon = GFX_
+		id = CZE_patriot_united
+		icon = GFX_focus_generic_befriend_czechoslovakia
+		prerequisite = {
+			focus = CZE_defenders_front
+			focus = CZE_masaryko_dedictvi
+		}
+		#mutually_exclusive = { focus = CZE }
+		x = 0
+		y = 1
+		relative_position_id = CZE_masaryko_dedictvi
+
+		cost = 8
+		
+		available = {
+			NOT = {
+
+			}
+		}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = CZE_democratic_principles
+		icon = GFX_focus_TUR_ratify_the_six_arrows
 		prerequisite = {
 			focus = CZE_defenders_front
 			focus = CZE_masaryko_dedictvi
@@ -1483,17 +1723,50 @@
 		
 		ai_will_do = { factor = 1 }
 	}
+	
+	### ###
+	focus = {
+		id = CZE_tomas_masaryk_lead
+		icon = GFX_
+		prerequisite = {
+			focus = CZE_democratic_principles
+			focus = CZE_patriot_united
+		}
+		#mutually_exclusive = { focus = CZE }
+		x = 0
+		y = 1
+		relative_position_id = CZE_democratic_principles
+
+		cost = 8
+		
+		available = {
+			CZE_tomas_garrigue_masaryk = {
+				is_country_leader = yes
+			}
+			NOT = { has_completed_focus = CZE_masaryko_dedictvi }
+		}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
 	### ###
 	focus = {
 		id = CZE_ludvik_svoboda_lead
 		icon = GFX_
 		prerequisite = {
-			focus = CZE_defenders_front
-			focus = CZE_masaryko_dedictvi
+			focus = CZE_democratic_principles
+			focus = CZE_patriot_united
 		}
 		#mutually_exclusive = { focus = CZE }
 		x = 4
-		y = 1
+		y = 2
 		relative_position_id = CZE_defenders_front
 
 		cost = 8
@@ -1525,6 +1798,24 @@
 		y = 0
 		relative_position_id = CZE_defenders_front
 		
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					OR = {
+						has_completed_focus = CZE_anti_czech_gov
+						has_completed_focus = CZE_defenders_front
+						has_completed_focus = CZE_disregard_the_constitution
+					}
+				}
+			}
+		}
+		
 		cost = 8
 		
 		available = {}
@@ -1539,6 +1830,7 @@
 		complete_tooltip = {}
 		completion_reward = {
 			country_event = { id = br_ceska.1 }
+			custom_effect_tooltip = CZE_masaryko_dedictvi_tt
 		}
 		
 		ai_will_do = { factor = 1 }
@@ -1549,11 +1841,11 @@
 		id = CZE_edvard_benesh_lead
 		icon = GFX_
 		prerequisite = {
-			focus = CZE_defenders_front
-			focus = CZE_masaryko_dedictvi
+			focus = CZE_democratic_principles
+			focus = CZE_patriot_united
 		}
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = CZE_masaryko_dedictvi
 
 		cost = 8
@@ -1606,10 +1898,30 @@
 		x = 34
 		y = 0
 		#relative_position_id = 
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					OR = {
+						has_completed_focus = CZE_defenders_front
+						has_completed_focus = CZE_masaryko_dedictvi
+						has_completed_focus = CZE_disregard_the_constitution
+					}
+				}
+			}
+		}
 		
 		cost = 8
 		
-		available = {}
+		available = {
+			has_idea = CZE_labour_movement
+		}
 		bypass = {}
 
 		cancel_if_invalid = yes
@@ -1626,6 +1938,7 @@
 			add_popularity = { ideology = sci_socialism popularity = 0.03 }
 			add_popularity = { ideology = con_socialism popularity = 0.01 }
 			add_popularity = { ideology = dem_socialism popularity = -0.05 }
+			add_ideas = CZE_political_violence
 		}
 		
 		ai_will_do = { factor = 1 }
@@ -1649,19 +1962,51 @@
 
 		complete_tooltip = {}
 		completion_reward = {
+			add_political_power = 150
+			if = {
+				limit = { br_ideology_socialism_nio = yes }
+				add_stability = -0.05
+			}
 			add_popularity = { ideology = sci_socialism popularity = 0.05 }
 		}
 		
 		ai_will_do = { factor = 1 }
 	}
 	focus = {
-		id = CZE_
-		icon = GFX_
+		id = CZE_labours_movement_by_violence
+		icon = GFX_focus_generic_strike
 		prerequisite = { focus = CZE_anti_czech_gov }
 		x = 1
 		y = 1
 		relative_position_id = CZE_anti_czech_gov
 		
+		cost = 5
+		
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {}
+		completion_reward = {
+			add_war_support = 0.10
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = CZE_
+		icon = GFX_
+		prerequisite = { focus = CZE_convinced_marxism }
+		prerequisite = { focus = CZE_labours_movement_by_violence }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 1
+		relative_position_id = CZE_convinced_marxism
+		
 		cost = 8
 		
 		available = {}
@@ -1681,6 +2026,29 @@
 		id = CZE_
 		icon = GFX_
 		#prerequisite = { focus = }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 0
+		#relative_position_id =
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = CZE_
+		icon = GFX_
+		#prerequisite = { focus =  }
 		#mutually_exclusive = { focus =  }
 		x = 0
 		y = 0
@@ -1723,9 +2091,9 @@
 		
 		ai_will_do = { factor = 1 }
 	}
-##########################
-###
-##########################
+##################################
+### disregard the constitution ###
+##################################
 	focus = {
 		id = CZE_disregard_the_constitution
 		icon = GFX_focus_AUS_disregard_the_treaties
@@ -1737,6 +2105,24 @@
 		x = 16
 		y = 0
 		relative_position_id = CZE_masaryko_dedictvi
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					OR = {
+						has_completed_focus = CZE_anti_czech_gov
+						has_completed_focus = CZE_defenders_front
+						has_completed_focus = CZE_masaryko_dedictvi
+					}
+				}
+			}
+		}
 		
 		cost = 8
 		
@@ -1750,7 +2136,11 @@
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 
 		complete_tooltip = {}
-		completion_reward = {}
+		completion_reward = {
+			add_stability = -0.10
+			add_popularity = { ideology = dem_liberalism popularity = -0.05 }
+			add_popularity = { ideology = dem_conservatism popularity = -0.05 }
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -1830,15 +2220,15 @@
 		
 		ai_will_do = { factor = 1 }
 	}
-	#
+
 	focus = {
-		id = CZE_polska_king
-		icon = GFX_focus_POL_end_the_regency
-		prerequisite = { focus = CZE_restorative_monarchy }
-		mutually_exclusive = { focus = CZE_germanic_king }
-		x = 1
+		id = CZE_hohenzollern_king
+		icon = GFX_
+		prerequisite = { focus = CZE_germanic_king }
+		mutually_exclusive = { focus = CZE_habsburgerking }
+		x = -2
 		y = 1
-		relative_position_id = CZE_restorative_monarchy
+		relative_position_id = CZE_germanic_king
 		
 		cost = 8
 		
@@ -1854,15 +2244,111 @@
 		
 		ai_will_do = { factor = 1 }
 	}
-	#普热米斯尔
+
 	focus = {
-		id = CZE_posterityies_of_premyslovci
+		id = CZE_habsburgerking
+		icon = GFX_
+		prerequisite = { focus = CZE_germanic_king }
+		mutually_exclusive = { focus = CZE_hohenzollern_king }
+		x = 0
+		y = 1
+		relative_position_id = CZE_germanic_king
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = CZE_proclaim_bohmen_reich
+		icon = GFX_
+		prerequisite = {
+			focus = CZE_hohenzollern_king
+			focus = CZE_habsburgerking
+		}
+		x = 1
+		y = 1
+		relative_position_id = CZE_hohenzollern_king
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = CZE_
 		icon = GFX_
 		#prerequisite = { focus = }
 		#mutually_exclusive = { focus =  }
-		x = -3
-		y = 2
-		#relative_position_id = 
+		x = 0
+		y = 0
+		#relative_position_id =
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = CZE_
+		icon = GFX_
+		#prerequisite = { focus = }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 0
+		#relative_position_id =
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	#
+	focus = {
+		id = CZE_polska_king
+		icon = GFX_focus_POL_end_the_regency
+		prerequisite = { focus = CZE_restorative_monarchy }
+		mutually_exclusive = { focus = CZE_germanic_king }
+		x = 1
+		y = 1
+		relative_position_id = CZE_restorative_monarchy
 		
 		cost = 8
 		
@@ -1973,145 +2459,6 @@
 		ai_will_do = { factor = 1 }
 	}
 
-	focus = {
-		id = CZE_
-		icon = GFX_
-		#prerequisite = { focus = }
-		#mutually_exclusive = { focus =  }
-		x = 0
-		y = 0
-		#relative_position_id =
-		
-		cost = 8
-		
-		available = {}
-		bypass = {}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {}
-		completion_reward = {}
-		
-		ai_will_do = { factor = 1 }
-	}
-
-	focus = {
-		id = CZE_
-		icon = GFX_
-		#prerequisite = { focus = }
-		#mutually_exclusive = { focus =  }
-		x = 0
-		y = 0
-		#relative_position_id =
-		
-		cost = 8
-		
-		available = {}
-		bypass = {}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {}
-		completion_reward = {}
-		
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
-		id = CZE_
-		icon = GFX_
-		#prerequisite = { focus = }
-		#mutually_exclusive = { focus =  }
-		x = 0
-		y = 0
-		#relative_position_id =
-		
-		cost = 8
-		
-		available = {}
-		bypass = {}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {}
-		completion_reward = {}
-		
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
-		id = CZE_
-		icon = GFX_
-		#prerequisite = { focus = }
-		#mutually_exclusive = { focus =  }
-		x = 0
-		y = 0
-		#relative_position_id =
-		
-		cost = 8
-		
-		available = {}
-		bypass = {}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {}
-		completion_reward = {}
-		
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
-		id = CZE_
-		icon = GFX_
-		#prerequisite = { focus = }
-		#mutually_exclusive = { focus =  }
-		x = 0
-		y = 0
-		#relative_position_id =
-		
-		cost = 8
-		
-		available = {}
-		bypass = {}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {}
-		completion_reward = {}
-		
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
-		id = CZE_
-		icon = GFX_
-		#prerequisite = { focus = }
-		#mutually_exclusive = { focus =  }
-		x = 0
-		y = 0
-		#relative_position_id =
-		
-		cost = 8
-		
-		available = {}
-		bypass = {}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {}
-		completion_reward = {}
-		
-		ai_will_do = { factor = 1 }
-	}
 ###############################################
 ### relation with france and petite entente ###
 ###############################################
@@ -2124,6 +2471,98 @@
 		x = 4
 		y = 1
 		relative_position_id = CZE_anti_czech_gov
+		
+		cost = 5
+		
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = CZE_italy_czecho_mutual_assistance_treaty
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = CZE_cooperate_with_itlay }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = CZE_cooperate_with_itlay
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = CZE_italy_ceska_non_aggression_pact
+		icon = GFX_goal_tripartite_pact
+		prerequisite = { focus = CZE_italy_czecho_mutual_assistance_treaty }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = CZE_italy_czecho_mutual_assistance_treaty
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = CZE_
+		icon = GFX_
+		prerequisite = { focus = CZE_italy_ceska_non_aggression_pact }
+		#mutually_exclusive = { focus =  }
+		x = -1
+		y = 1
+		relative_position_id = CZE_italy_ceska_non_aggression_pact
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = CZE_
+		icon = GFX_
+		prerequisite = { focus = CZE_italy_ceska_non_aggression_pact }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 1
+		relative_position_id = CZE_italy_ceska_non_aggression_pact
 		
 		cost = 8
 		
@@ -2153,7 +2592,7 @@
 		y = 1
 		relative_position_id = CZE_anti_czech_gov
 		
-		cost = 8
+		cost = 5
 		
 		available = {}
 		bypass = {}
@@ -2177,6 +2616,31 @@
 		relative_position_id = CZE_cooperate_with_france
 		
 		cost = 8
+		
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = CZE_end_suppress_of_socialists
+		icon = GFX_focus_generic_communist
+		prerequisite = {
+			focus = CZE_cooperate_with_itlay
+			focus = CZE_cooperate_with_france
+		}
+		x = 5
+		y = 1
+		relative_position_id = CZE_cooperate_with_france
+		
+		cost = 5
 		
 		available = {}
 		bypass = {}
@@ -2401,7 +2865,7 @@
 		prerequisite = {
 			focus = CZE_cooperate_with_itlay
 			focus = CZE_cooperate_with_france
-			focus = CZE_edvard_benesh_lead
+			focus = CZE_democratic_principles
 		}
 		mutually_exclusive = { focus = CZE_initiative_of_petite_entente }
 		x = 2
@@ -2811,7 +3275,10 @@
 	focus = {
 		id = CZE_reorganizing_foreign_office
 		icon = GFX_goal_generic_intelligence_exchange
-		prerequisite = { focus = CZE_france_czecho_mutual_assistance_treaty }
+		prerequisite = {
+			focus = CZE_italy_czecho_mutual_assistance_treaty
+			focus = CZE_france_czecho_mutual_assistance_treaty
+		}
 		prerequisite = {
 			focus = CZE_initiative_of_petite_entente
 			focus = CZE_petite_entente_by_ourself
@@ -2884,38 +3351,6 @@
 		completion_reward = {}
 		
 		ai_will_do = { factor = 1 }
-	}
-#######################################
-##### MILITARY RESEARCH INSTITUTE #####	
-#######################################
-
-	focus = {
-		id = CZE_military_research_institute
-		icon = GFX_focus_CZE_military_research_institute
-		x = 6
-		y = 0
-
-		cost = 5
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			army_experience = 50
-		}
-
-		ai_will_do = {
-			factor = 10
-		}
 	}
 
 
@@ -3571,84 +4006,7 @@
 		}
 	}
 ###
-	focus = {
-		id = CZE_1
-		icon = GFX_
-		prerequisite = { focus =  CZE_military_research_institute }
-		#mutually_exclusive = { focus =  }
-		x = -5
-		y = 1
-		relative_position_id =  CZE_military_research_institute
-		
-		cost = 8
-		
-		available = {}
-		bypass = {}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {}
-		completion_reward = {}
-		
-		ai_will_do = { factor = 10 }
-	}
 
 	#
-	
-	### ###
-	focus = {
-		id = CZE_klement_gottwald_lead
-		icon = GFX_
-		#prerequisite = { focus = CZE_defenders_front }
-		#mutually_exclusive = { focus = CZE_edvard_benesh_lead }
-		x = 1
-		y = 1
-		#relative_position_id = CZE_defenders_front
-		
-		offset = {
-			x = -2
-			y = 0
-			trigger = { has_completed_focus = CZE_klement_gottwald_lead }
-		}
 
-		cost = 8
-		
-		available = {}
-		bypass = {}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {}
-		completion_reward = {}
-		
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
-		id = CZE_k1
-		icon = GFX_
-		prerequisite = { focus = CZE_klement_gottwald_lead }
-		x = -2
-		y = 1
-		relative_position_id = CZE_klement_gottwald_lead
-
-		allow_branch = { has_completed_focus = CZE_klement_gottwald_lead }
-		
-		cost = 8
-		
-		available = {}
-		bypass = {}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {}
-		completion_reward = {}
-		
-		ai_will_do = { factor = 1 }
-	}
 }

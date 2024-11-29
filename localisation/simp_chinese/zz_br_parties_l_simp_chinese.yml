@@ -224,10 +224,22 @@
  SLO_vanwardism_party: "捷克斯洛伐克共产党激进派"
  SLO_sci_socialism_party: "捷克斯洛伐克共产党正统派"
  SLO_con_socialism_party: "斯洛伐克共产党地方派"
- SLO_dem_socialism_party: "斯洛伐克人民党平等派左翼"
- SLO_dem_liberalism_party: "斯洛伐克人民党平等派中左翼"
+ SLO_dem_socialism_party: "斯洛伐克民主左翼党"
+ SLO_dem_liberalism_party: "斯洛伐克人民党"
  SLO_dem_conservatism_party: "哈布斯堡-外莱塔尼亚宪政派"
  SLO_authoritarian_party: "哈布斯堡-外莱塔尼亚专制派"
  SLO_fascism_party: "斯洛伐克人民党保守派"
  SLO_nationalism_party: "斯洛伐克人民党极端派"
  SLO_supernationalism_party: "斯洛伐克人民党极端派右翼"
+#
+ CZE_soc_anarchism_party: "捷克与摩拉维亚无政府派"
+ CZE_vanwardism_party: "捷克与摩拉维亚共产党"
+ CZE_sci_socialism_party: "捷克与摩拉维亚共产党"
+ CZE_con_socialism_party: "捷克社会民主工党"
+ CZE_dem_socialism_party: "捷克民族社会党" #Česká strana národně sociální
+ CZE_dem_liberalism_party: "捷克现实党" #
+ CZE_dem_conservatism_party: "基督教民主联盟与捷克人民党" #Křesťanská a demokratická unie - Československá strana lidová
+ CZE_authoritarian_party: "捷克、摩拉维亚和西里西亚保皇党" #保皇党
+ CZE_fascism_party: "全国法西斯联盟"
+ CZE_nationalism_party: "全国法西斯联盟"
+ CZE_supernationalism_party: "斯拉夫民族秩序派"

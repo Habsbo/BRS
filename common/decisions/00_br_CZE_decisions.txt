@@ -1,0 +1,120 @@
+br_CZE_political_violence = {
+	
+	br_CZE_publicize_communism = {
+		icon = generic_political_discourse
+
+		available = {
+			#
+		}
+
+		visible = {
+			#
+		}
+
+		fire_only_once = no
+		days_remove = 60
+
+		cost = 10
+
+		modifier = {
+			sci_socialism_drift = 0.10
+		}
+
+		complete_effect = {
+			#
+		}
+
+		ai_will_do = {
+			base = 100
+		}
+	}
+	br_CZE_publicize_1 = {
+		icon = generic_political_discourse
+
+		available = {
+			#
+		}
+
+		visible = {
+			#
+		}
+
+		fire_only_once = no
+		days_remove = 60
+
+		cost = 10
+
+		modifier = {
+			sci_socialism_drift = 0.10
+		}
+
+		complete_effect = {
+			#
+		}
+
+		ai_will_do = {
+			base = 100
+		}
+	}
+
+	#
+	br_CZE_cesko_accords_de_matignon = {
+		icon = eng_trade_unions_support
+
+		available = {
+            has_completed_focus = CZE_end_suppress_of_socialists
+		}
+
+		visible = {
+			#
+		}
+
+		fire_only_once = yes
+
+		cost = 50
+
+		complete_effect = {
+			add_stability = 0.10
+		}
+
+		ai_will_do = {
+			base = 100
+		}
+	}
+	br_CZE_cesko_accords_de_matignon.tear_up = {
+		icon = eng_trade_unions_support
+		
+		available = {
+			#has_idea = 
+		}
+
+		visible = {
+			#
+		}
+
+		fire_only_once = yes
+
+		cost = 50
+
+		complete_effect = {
+			add_stability = -0.10
+		}
+
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 100
+				NOT = { has_stability < 0.5 }
+				br_ideology_capitalism_ruling = yes
+			}
+			modifier = {
+				factor = 0
+				has_stability < 0.35
+			}
+		}
+	}
+}
+
+br_CZE_communists_leadership = {
+	#
+}
