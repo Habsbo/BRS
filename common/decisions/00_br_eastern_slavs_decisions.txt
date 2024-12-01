@@ -181,6 +181,7 @@ br_baltics = {
 				exists = yes
 				has_capitulated = no
 				is_subject = no
+				is_in_faction_with = ROOT
 				#
 				NOT = { has_war_with = root }
 				#
