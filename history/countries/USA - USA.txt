@@ -4,6 +4,9 @@ oob = "USA_1936"
 
 starting_train_buffer = 5
 
+set_convoys = 700
+
+
 if = {
 	limit = { has_dlc = "Man the Guns" }
 		set_naval_oob = "USA_1936_naval_mtg"
@@ -164,8 +167,21 @@ give_guarantee = CHL
 give_guarantee = PAR
 give_guarantee = ARG
 give_guarantee = URG
+set_country_flag = br_dynamic_modifier_not_generic_var_flag
+set_country_flag = br_dynamic_modifier_not_generic_flag
 
-set_convoys = 700
+add_ideas = {
+	br_laws_free
+	br_laws_bourgeoisle
+	br_laws_apartheid
+	br_laws_electoral_politician
+	br_laws_proxy
+}
+
+set_variable = { VL_status_var = 6 }
+recruit_character = USA_Herbert_Clark_Hoover
+recruit_character = USA_Charles_Curtis
+activate_advisor = USA_Charles_Curtis
 
 set_politics = {
 	ruling_party = dem_conservatism
@@ -192,7 +208,10 @@ set_popularities = {
 }
 
 add_ideas = {
-	home_of_the_free
+	USA_dream_of_states
+	USA_the_trust
+	USA_the_heritage_of_pioneer_culture_and_film_art
+	USA_great_monroe_doctrine
 }
 
 
@@ -201,11 +220,6 @@ set_autonomy = {
 	target = PHI
 	autonomous_state =  autonomy_puppet
 }
-
-set_variable = { VL_status_var = 6 }
-recruit_character = USA_Herbert_Clark_Hoover
-recruit_character = USA_Charles_Curtis
-activate_advisor = USA_Charles_Curtis
 
 
 if = {
