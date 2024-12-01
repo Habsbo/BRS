@@ -1,0 +1,37 @@
+br_is_rus_tag = {
+	custom_trigger_tooltip = {
+		tooltip = br_is_russian_tag_tt
+		OR = {
+			original_tag = RUS
+			original_tag = SOV
+			original_tag = UKR
+			original_tag = BLR
+			has_country_flag = br_claim_be_russian_county_flag
+		}
+	}
+}
+
+br_is_russian_tag = {
+	custom_trigger_tooltip = {
+		tooltip = br_is_russian_tag_tt
+		OR = {
+			original_tag = RUS
+			original_tag = SOV
+			has_country_flag = br_claim_be_russian_county_flag
+		}
+	}
+}
+
+br_is_polska_tag = {
+	custom_trigger_tooltip = {
+		tooltip = br_is_polska_tag_tt
+		OR = {
+			original_tag = POL
+			original_tag = UKR
+			#
+			original_tag = SIL
+			#
+			has_country_flag = br_claim_be_polska_county_flag
+		}
+	}
+}

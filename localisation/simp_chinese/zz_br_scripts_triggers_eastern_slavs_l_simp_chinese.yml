@@ -1,0 +1,28 @@
+﻿l_simp_chinese:
+ br_is_rus_tag_tt: "是§Y罗斯§!与§Y俄罗斯§!的国家"
+ br_is_russian_tag_tt: "是§Y俄罗斯§!国家"
+ br_is_polska_tag_tt: "是历史的§Y波兰§!国家"
+
+ br_baltic.1001.title: "[FROM.GetName]邀请我们加入[FROM.GetFactionName]"
+ br_baltic.1001.desc: ""
+ br_baltic.1001.a: "为友谊干杯！"
+ br_baltic.1001.b: "不行。"
+ br_baltic.1002.title: "[FROM.GetName]同意与我们发表加入[FROM.GetFactionName]的联合公报"
+ br_baltic.1002.desc: ""
+ br_baltic.1002.a: "为友谊干杯！"
+ br_baltic.1003.title: "[FROM.GetName]委婉地表达了意见"
+ br_baltic.1003.desc: ""
+ br_baltic.1003.a: "真是可惜。"
+
+ br_baltic.1004.title: "[FROM.GetName]就要求我们加入[FROM.GetFactionName]施压"
+ br_baltic.1004.desc: ""
+ br_baltic.1004.a: "对抗[FROM.GetName]是不明智的。"
+ br_baltic.1004.b: "我们绝不出卖我们的主权！"
+ br_baltic.1005.title: "[FROM.GetName]屈服了"
+ br_baltic.1005.desc: ""
+ br_baltic.1005.a: "战略上的又进一步。"
+ br_baltic.1006.title: "[FROM.GetName]严词拒绝了"
+ br_baltic.1006.desc: ""
+ br_baltic.1006.a: "还真是义正词严。"
+ 
+ Baltics_Midzymorze: "海间联邦"

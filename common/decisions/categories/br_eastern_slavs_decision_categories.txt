@@ -1,0 +1,24 @@
+
+# baltics
+br_baltics = {
+	icon = SOV_propaganda
+	picture = GFX_decision_cat_generic_baltic_federation
+
+	allowed = {}
+	visible = {
+		OR = {
+			original_tag = LIT
+			original_tag = LAT
+			original_tag = EST
+			original_tag = BLR
+			#
+			original_tag = POL
+			original_tag = RUS
+			original_tag = SOV
+			original_tag = UKR
+		}
+	}
+
+	priority = 0
+	visible_when_empty = no
+}

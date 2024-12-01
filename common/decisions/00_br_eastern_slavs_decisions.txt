@@ -1,0 +1,336 @@
+### the Baltics ###
+br_baltics = {
+
+	br_proclaim_baltics_federation = {
+		icon = generic_nationalism
+
+		available = {
+			exists = yes
+			has_capitulated = no
+			is_subject = no
+			has_war_support > 0.3
+			custom_trigger_tooltip = {
+				tooltip = br_proclaim_baltics_federation_trigger_tt
+				LIT = {
+					OR = {
+						all_core_state = { is_fully_controlled_by = ROOT }
+						AND = {
+							is_subject_of = ROOT
+							all_core_state = { is_fully_controlled_by = THIS }
+						}
+					}
+				}
+				LAT = {
+					OR = {
+						all_core_state = { is_fully_controlled_by = ROOT }
+						AND = {
+							is_subject_of = ROOT
+							all_core_state = { is_fully_controlled_by = THIS }
+						}
+					}
+				}
+				EST = {
+					OR = {
+						all_core_state = { is_fully_controlled_by = ROOT }
+						AND = {
+							is_subject_of = ROOT
+							all_core_state = { is_fully_controlled_by = THIS }
+						}
+					}
+				}
+			}
+		}
+
+		visible = {
+			OR = {
+				original_tag = LIT
+				original_tag = LAT
+				original_tag = EST
+				original_tag = BLR
+			}
+		}
+
+		fire_only_once = no
+
+		cost = 0
+
+		complete_effect = {
+			custom_effect_tooltip = br_proclaim_baltics_federation_tt
+			if = {
+				limit = { original_tag = BLR }
+				set_cosmetic_tag = BLR_baltic_federation
+			}
+			else = {
+				set_cosmetic_tag = Baltics_federation_core
+			}
+			create_faction = Baltics_Midzymorze
+			hidden_effect = {
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = LIT
+							is_core_of = EST
+							is_core_of = LAT
+						}
+					}
+					add_core_of = ROOT
+				}
+				set_global_flag = br_global_has_proclaimed_baltics_federation_flag
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = { 
+				OR = {
+					is_core_of = LIT
+					is_core_of = EST
+					is_core_of = LAT
+				}
+			}
+		}
+
+		ai_will_do = { base = 100 }
+	}
+	br_proclaim_baltics_federation.invitation = {
+		icon = generic_nationalism
+
+		target_root_trigger = {
+			OR = {
+				original_tag = LIT
+				original_tag = LAT
+				original_tag = EST
+				original_tag = BLR
+			}
+		}
+		target_trigger = {
+			FROM = {
+				is_subject = no
+				is_in_faction = no
+				NOT = { has_war_with = root }
+				OR = {
+					#suomi
+					original_tag = FIN
+					original_tag = SMI
+					original_tag = KAR
+					#polska - Беларусія
+					original_tag = POL
+					original_tag = BLR
+					#
+					original_tag = UKR
+					original_tag = SOV
+					#
+					original_tag = CRI
+					original_tag = KSH
+					original_tag = SIL
+					original_tag = DNZ
+				}
+			}
+		}
+
+		available = {
+			is_faction_leader = yes
+			is_subject = no
+			FROM = {
+				custom_trigger_tooltip = {
+					tooltip = br_baltics_federation_invitation_possible_tt
+					
+				}
+			}
+			custom_trigger_tooltip = { tooltip = br_baltics_federation_invitation_possible_targets_tt }
+		}
+
+		visible = {
+			#has_global_flag = br_global_has_proclaimed_baltics_federation_flag
+		}
+
+		fire_only_once = no
+		on_map_mode = decision_view_only
+
+		cost = 0
+
+		complete_effect = {
+			FROM = { country_event = br_baltic.1001 }
+			custom_effect_tooltip = if_they_accept_newline_tt
+			custom_effect_tooltip = br_proclaim_baltics_federation.invitation_tt
+			hidden_effect = {
+				#
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = { 
+				#
+			}
+		}
+
+		ai_will_do = { base = 100 }
+	}
+	br_proclaim_baltics_federation.force = {
+		icon = generic_nationalism
+
+		target_root_trigger = {
+			OR = {
+				original_tag = LIT
+				original_tag = LAT
+				original_tag = EST
+				original_tag = BLR
+			}
+		}
+		target_trigger = {
+			FROM = {
+				exists = yes
+				has_capitulated = no
+				is_subject = no
+				#
+				NOT = { has_war_with = root }
+				#
+				OR = {
+					#suomi
+					original_tag = FIN
+					original_tag = SMI
+					original_tag = KAR
+					#polska - Беларусія
+					original_tag = POL
+					original_tag = BLR
+					#
+					original_tag = UKR
+					original_tag = SOV
+					#
+					original_tag = CRI
+					original_tag = KSH
+					original_tag = SIL
+					original_tag = DNZ
+				}
+			}
+		}
+
+		available = {
+			is_faction_leader = yes
+			is_subject = no
+			FROM = {
+				custom_trigger_tooltip = {
+					tooltip = br_baltics_federation_invitation_possible_tt
+					#与FROM为敌则不满足
+					NOT = { has_war_with = root }
+					#FROM已经在一个不喜欢我们的阵营中则不满足
+					OR = {
+						is_in_faction = no
+						#阵营领袖对我们好感度大于0且没有开战
+						AND = {
+							is_in_faction = yes
+							var:faction_leader = {
+								NOT = { has_war_with = root }
+								has_opinion = { target = ROOT value > 0	}
+							}
+						}
+					}
+					#FROM是厌恶制造紧张度的意识形态且我们制造过至少5的紧张度则不满足
+					#OR = {
+						#FROM不介意
+					#
+						#FROM介意
+					#}
+					#FROM不喜欢加入我们同盟的国家或相反
+					
+				}
+			}
+			custom_trigger_tooltip = { tooltip = br_baltics_federation_invitation_possible_targets_tt }
+		}
+
+		visible = {
+			#has_global_flag = br_global_has_proclaimed_baltics_federation_flag
+		}
+
+		fire_only_once = no
+		on_map_mode = decision_view_only
+
+		cost = 0
+
+		complete_effect = {
+			FROM = { country_event = br_baltic.1004 }
+			custom_effect_tooltip = if_they_accept_newline_tt
+			custom_effect_tooltip = br_proclaim_baltics_federation.invitation_tt
+			hidden_effect = {
+				#
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = { 
+				#
+			}
+		}
+
+		ai_will_do = { base = 100 }
+	}
+
+	br_proclaim_BLR_UKR = {
+		icon = generic_nationalism
+
+		available = {
+			exists = yes
+			has_capitulated = no
+			is_subject = no
+			custom_trigger_tooltip = {
+				tooltip = br_proclaim_BLR_UKR_tt
+				BLR = {
+					OR = {
+						all_core_state = { is_fully_controlled_by = ROOT }
+						AND = {
+							is_subject_of = ROOT
+							all_core_state = { is_fully_controlled_by = THIS }
+						}
+					}
+				}
+				UKR = {
+					OR = {
+						all_core_state = { is_fully_controlled_by = ROOT }
+						AND = {
+							is_subject_of = ROOT
+							all_core_state = { is_fully_controlled_by = THIS }
+						}
+					}
+				}
+			}
+		}
+
+		visible = {
+			OR = {
+				original_tag = BLR
+				original_tag = UKR
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		complete_effect = {
+			custom_effect_tooltip = br_proclaim_BLR_UKR_tt
+			set_cosmetic_tag = BLR_UKR
+			hidden_effect = {
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = BLR
+							is_core_of = UKR
+						}
+					}
+					add_core_of = ROOT
+				}
+				set_global_flag = br_proclaim_BLR_UKR_flag
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = { 
+				OR = {
+					is_core_of = BLR
+					is_core_of = UKR
+				}
+			}
+		}
+
+		ai_will_do = { base = 100 }
+	}
+}

@@ -460,6 +460,10 @@
  Baltic_deutschland_reich: "波罗的德意志国"
  Baltic_deutschland_reich_DEF: "波罗的德意志国"
  Baltic_deutschland_reich_ADJ: "波罗的德意志"
+ Baltics_federation_core: "波罗的国家联邦"
+ Baltics_federation_core_DEF: "波罗的国家联邦"
+ Baltics_federation_core_ADJ: "波罗的国家"
+ 
 #北欧 Norse
  
 #多瑙河
@@ -577,6 +581,15 @@
 
  SAF_afrikaners: "阿非利卡联邦"
  SAF_afrikaners_DEF: "阿非利卡联邦"
+ SAF_afrikaners_ADJ: "阿非利卡"
+ SAF_unie_van_suid_afrika: "南非联邦"
+ SAF_unie_van_suid_afrika_DEF: "南非联邦"
+ SAF_unie_van_suid_afrika_ADJ: "南非"
+ SAF_RSA: "南非共和国"
+ SAF_RSA_DEF: "南非共和国"
+ SAF_RSA_ADJ: "南非"
+#东非
+ 
 #
  INS_HOL_democratic: "荷属东印度"
  INS_HOL_democratic_DEF: "荷属东印度"
