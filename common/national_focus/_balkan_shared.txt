@@ -1,0 +1,176 @@
+﻿### balkan states union ###
+joint_focus = {
+	id = BALKAN_UNION_balkan_states_union
+	icon = GFX_focus_generic_balkan_diplomacy
+	prerequisite = { focus = CZE_reorganizing_foreign_office }
+	x = 0
+	y = 2
+	relative_position_id = CZE_reorganizing_foreign_office
+
+	cost = 8
+
+	joint_trigger = {
+		#is_in_faction_with = DKR
+		OR = {
+
+		}
+	}
+	available = {}
+	bypass = {}
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+	
+	#完成国策的所有国家
+	completion_reward = {}
+	#发起人
+	completion_reward_joint_originator = {}
+	#其他成员
+	completion_reward_joint_member = {}
+
+	ai_will_do = { factor = 1 }
+}
+shared_focus = {
+	id = BALKAN_UNION_integration_of_nations
+	icon = GFX_focus_generic_improve_the_administration
+	prerequisite = { focus = BALKAN_UNION_balkan_states_union }
+	#mutually_exclusive = { focus =  }
+	x = -1
+	y = 1
+	relative_position_id = BALKAN_UNION_balkan_states_union
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+shared_focus = {
+	id = BALKAN_UNION_federalization
+	icon = GFX_focus_generic_blue_flags
+	prerequisite = { focus = BALKAN_UNION_balkan_states_union }
+	x = 1
+	y = 1
+	relative_position_id = BALKAN_UNION_balkan_states_union
+
+	cost = 8
+
+	available = {}
+	bypass = {}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+	
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+joint_focus = {
+	id = BALKAN_UNION_lingua_franca
+	icon = GFX_focus_generic_treaty
+	prerequisite = { focus = BALKAN_UNION_integration_of_nations }
+	#mutually_exclusive = { focus =  }
+	x = -1
+	y = 2
+	relative_position_id = BALKAN_UNION_integration_of_nations
+
+	cost = 8
+
+	joint_trigger = {
+		#is_in_faction_with = DKR
+		OR = {
+
+		}
+	}
+	available = {}
+	bypass = {}
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+	
+	#完成国策的所有国家
+	completion_reward = {}
+	#发起人
+	completion_reward_joint_originator = {}
+	#其他成员
+	completion_reward_joint_member = {}
+
+	ai_will_do = { factor = 1 }
+}
+joint_focus = {
+	id = BALKAN_UNION_economic_synergy_department
+	icon = GFX_focus_generic_treaty
+	prerequisite = {
+		focus = BALKAN_UNION_integration_of_nations
+		focus = BALKAN_UNION_federalization
+	}
+	#mutually_exclusive = { focus =  }
+	x = 1
+	y = 1
+	relative_position_id = BALKAN_UNION_integration_of_nations
+
+	cost = 8
+
+	joint_trigger = {
+		#is_in_faction_with = DKR
+		OR = {
+
+		}
+	}
+	available = {}
+	bypass = {}
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+	
+	#完成国策的所有国家
+	completion_reward = {}
+	#发起人
+	completion_reward_joint_originator = {}
+	#其他成员
+	completion_reward_joint_member = {}
+
+	ai_will_do = { factor = 1 }
+}
+joint_focus = {
+	id = BALKAN_UNION_
+	icon = GFX_focus_generic_treaty
+	prerequisite = { focus = BALKAN_UNION_economic_synergy_department }
+	#mutually_exclusive = { focus =  }
+	x = 0
+	y = 1
+	relative_position_id = BALKAN_UNION_economic_synergy_department
+
+	cost = 8
+
+	joint_trigger = {
+		#is_in_faction_with = DKR
+		OR = {
+
+		}
+	}
+	available = {}
+	bypass = {}
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+	
+	#完成国策的所有国家
+	completion_reward = {}
+	#发起人
+	completion_reward_joint_originator = {}
+	#其他成员
+	completion_reward_joint_member = {}
+
+	ai_will_do = { factor = 1 }
+}

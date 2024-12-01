@@ -414,4 +414,5 @@ set_cosmetic_tag = POL_kingdom
 #
 add_ideas = {
 	#
+	POL_counterfeit_and_chaotic_currency
 }

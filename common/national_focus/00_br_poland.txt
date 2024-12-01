@@ -1,4 +1,4 @@
-### made by LingXia ###
+﻿### made by LingXia ###
 ### search_filters = {FOCUS_FILTER_POLITICAL}
 ### search_filters = {FOCUS_FILTER_HISTORICAL}
 ### search_filters = {FOCUS_FILTER_RESEARCH}
@@ -27,11 +27,26 @@ focus_tree = {
 	}
 	default = no
 
-	continuous_focus_position = { x = 100 y = 3250 }
+	continuous_focus_position = { x = 1200 y = 50 }
 
 	initial_show_position = {
 		x = 10
 		y = 0
+	}
+
+###
+	shortcut = {
+		name = POL_polska_przemyslu_rewitalizacja_project #_shortcut
+		target = POL_polska_przemyslu_rewitalizacja_project
+		scroll_wheel_factor = 0.725
+		#trigger = {}
+	}
+###
+	shortcut = {
+		name = POL_dark_future #_shortcut
+		target = POL_dark_future
+		scroll_wheel_factor = 0.725
+		#trigger = {}
 	}
 
 	focus = {
@@ -39,7 +54,7 @@ focus_tree = {
 		icon = GFX_focus_generic_military_dictatorship
 		#prerequisite = { focus = ENG_twenty_passed }
 		#relative_position_id = ENG_twenty_passed
-		x = 12
+		x = 32
 		y = 0
 		cost = 0
 		available = {
@@ -102,7 +117,7 @@ focus_tree = {
 		icon = GFX_focus_generic_military_dictatorship
 		prerequisite = { focus = POL_open_meeting }
 		relative_position_id = POL_open_meeting
-		x = -2
+		x = 0
 		y = 1
 		cost = 0
 		available = {
@@ -144,7 +159,7 @@ focus_tree = {
 		icon = GFX_focus_generic_military_dictatorship
 		prerequisite = { focus = POL_future_of_kingdom }
 		relative_position_id = POL_future_of_kingdom
-		x = 2
+		x = 0
 		y = 1
 		cost = 0
 		available = {
@@ -165,7 +180,7 @@ focus_tree = {
 		icon = GFX_focus_generic_military_dictatorship
 		prerequisite = { focus = POL_capital_bans }
 		relative_position_id = POL_capital_bans
-		x = 2
+		x = 0
 		y = 1
 		cost = 5
 		available = {
@@ -434,5 +449,1113 @@ focus_tree = {
 		completion_reward = {
 			
 		}
+	}
+### ECONOMIC ###
+
+	focus = {
+		id = POL_polska_przemyslu_rewitalizacja_project
+		icon = GFX_goal_generic_construct_civilian
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 5
+		y = 0
+		#relative_position_id =
+
+		cost = 5
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}		
+		completion_reward = {
+			add_stability = 0.05
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = POL_reforma_monetarna
+		icon = GFX_focus_generic_currency_reforms
+		prerequisite = { focus = POL_polska_przemyslu_rewitalizacja_project }
+		#mutually_exclusive = { focus =  }
+		x = 3
+		y = 1
+		relative_position_id = POL_polska_przemyslu_rewitalizacja_project
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+	focus = {
+		id = POL_nowy_zloty
+		icon = GFX_focus_generic_monetary_union
+		prerequisite = { focus = POL_reforma_monetarna }
+		#mutually_exclusive = { focus =  }
+		x = -1
+		y = 1
+		relative_position_id = POL_reforma_monetarna
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+	focus = {
+		id = POL_zniesienie_stara_waluta
+		icon = GFX_focus_ARG_anti_corruption_policies
+		prerequisite = { focus = POL_reforma_monetarna }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 1
+		relative_position_id = POL_reforma_monetarna
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+	focus = {
+		id = POL_przeorganizuj_bank
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = {
+			focus = POL_nowy_zloty
+			focus = POL_zniesienie_stara_waluta
+		}
+		x = 0
+		y = 2
+		relative_position_id = POL_reforma_monetarna
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+	focus = {
+		id = POL_recykling_stara_waluta
+		icon = GFX_focus_generic_self_management
+		prerequisite = { focus = POL_przeorganizuj_bank }
+		x = 1
+		y = 1
+		relative_position_id = POL_przeorganizuj_bank
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_plan_rozwoju
+		icon = GFX_focus_generic_modernize_industry
+		prerequisite = { focus = POL_przeorganizuj_bank }
+		x = -1
+		y = 2
+		relative_position_id = POL_przeorganizuj_bank
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	### ###
+	focus = {
+		id = POL_restrukturyzacja_dlugu
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = POL_polska_przemyslu_rewitalizacja_project }
+		#mutually_exclusive = { focus =  }
+		x = -3
+		y = 1
+		relative_position_id = POL_polska_przemyslu_rewitalizacja_project
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_konfiskacja_niemiecki_aktywow
+		icon = GFX_focus_generic_annex_country
+		prerequisite = { focus = POL_restrukturyzacja_dlugu }
+		x = -1
+		y = 1
+		relative_position_id = POL_restrukturyzacja_dlugu
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_strive_for_credit_loans
+		icon = GFX_focus_mex_privatisation
+		prerequisite = { focus = POL_restrukturyzacja_dlugu }
+		x = 1
+		y = 1
+		relative_position_id = POL_restrukturyzacja_dlugu
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_przeorganizowac_system_kolejowy
+		icon = GFX_focus_POL_warsaw_main_station
+		prerequisite = { focus = POL_strive_for_credit_loans }
+		x = 0
+		y = 1
+		relative_position_id = POL_strive_for_credit_loans
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_polegac_polska_moc
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = POL_przeorganizowac_system_kolejowy }
+		mutually_exclusive = { focus = POL_invite_inwestor_zagraniczny }
+		x = -1
+		y = 1
+		relative_position_id = POL_przeorganizowac_system_kolejowy
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_invite_inwestor_zagraniczny
+		icon = GFX_focus_generic_industrialists
+		prerequisite = { focus = POL_przeorganizowac_system_kolejowy }
+		mutually_exclusive = { focus = POL_polegac_polska_moc }
+		x = 1
+		y = 1
+		relative_position_id = POL_przeorganizowac_system_kolejowy
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	#
+	focus = {
+		id = POL_expand_warszawska_strefa_przemyslowa
+		icon = GFX_focus_generic_industry_1
+		prerequisite = { focus = POL_plan_rozwoju }
+		x = -3
+		y = 1
+		relative_position_id = POL_plan_rozwoju
+
+		cost = 8
+
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_invest_wielkopolska
+		icon = GFX_focus_generic_industry_1
+		prerequisite = { focus = POL_expand_warszawska_strefa_przemyslowa }
+		x = 0
+		y = 1
+		relative_position_id = POL_expand_warszawska_strefa_przemyslowa
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_skala_przemyslowa
+		icon = GFX_focus_generic_industry_2
+		prerequisite = {
+			focus = POL_polegac_polska_moc
+			focus = POL_invite_inwestor_zagraniczny
+		}
+		prerequisite = { focus = POL_invest_wielkopolska }
+		x = 0
+		y = 5
+		relative_position_id = POL_przeorganizowac_system_kolejowy
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_inzynieria_krajowa
+		icon = GFX_focus_generic_mass_production
+		prerequisite = { focus = POL_skala_przemyslowa }
+		x = 0
+		y = 1
+		relative_position_id = POL_skala_przemyslowa
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_plan_stalowy
+		icon = GFX_focus_generic_steel
+		prerequisite = { focus = POL_skala_przemyslowa }
+		x = -1
+		y = 2
+		relative_position_id = POL_skala_przemyslowa
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	###
+	focus = {
+		id = POL_ksztalcenie_obowiazkowe
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = POL_plan_rozwoju }
+		x = 0
+		y = 2
+		relative_position_id = POL_plan_rozwoju
+
+		cost = 8
+
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_eliminacja_analfabetyzmu
+		icon = GFX_focus_generic_printing_press
+		prerequisite = { focus = POL_ksztalcenie_obowiazkowe }
+		x = -1
+		y = 1
+		relative_position_id = POL_ksztalcenie_obowiazkowe
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_vocational_school
+		icon = GFX_focus_generic_military_academy
+		prerequisite = { focus = POL_ksztalcenie_obowiazkowe }
+		x = 1
+		y = 1
+		relative_position_id = POL_ksztalcenie_obowiazkowe
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_lublin_warszawska_uniwersytet
+		icon = GFX_focus_POL_nationalist_education
+		prerequisite = {
+			focus = POL_vocational_school
+			focus = POL_eliminacja_analfabetyzmu
+		}
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 2
+		relative_position_id = POL_ksztalcenie_obowiazkowe
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	###
+	focus = {
+		id = POL_reforma_gruntow
+		icon = GFX_focus_generic_farmland
+		prerequisite = { focus = POL_plan_rozwoju }
+		x = 3
+		y = 1
+		relative_position_id = POL_plan_rozwoju
+
+		cost = 8
+
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = POL_zatrudnienie_rolnikow
+		icon = GFX_focus_generic_public_works
+		prerequisite = { focus = POL_reforma_gruntow }
+		mutually_exclusive = { focus = POL_invest_wiejskie }
+		x = 0
+		y = 1
+		relative_position_id = POL_reforma_gruntow
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_expand_krakow
+		icon = GFX_focus_generic_industry_1
+		prerequisite = { focus = POL_zatrudnienie_rolnikow }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = POL_zatrudnienie_rolnikow
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_poludniu_miasto_przemyslowe
+		icon = GFX_focus_generic_industry_2
+		prerequisite = { focus = POL_expand_krakow }
+		x = 0
+		y = 1
+		relative_position_id = POL_expand_krakow
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = POL_giant_leap_forward_of_industrialization
+		icon = GFX_focus_generic_industry_3
+		prerequisite = { focus = POL_invest_wielkopolska }
+		prerequisite = { focus = POL_poludniu_miasto_przemyslowe }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 3
+		relative_position_id = POL_invest_wielkopolska
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_gornicze
+		icon = GFX_focus_generic_mining_industry
+		prerequisite = { focus = POL_plan_stalowy }
+		prerequisite = { focus = POL_giant_leap_forward_of_industrialization }
+		x = 0
+		y = 1
+		relative_position_id = POL_plan_stalowy
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_polska_przyszlosc
+		icon = GFX_focus_POL_expand_polish_intelligence
+		prerequisite = { focus = POL_giant_leap_forward_of_industrialization }
+		x = 0
+		y = 1
+		relative_position_id = POL_giant_leap_forward_of_industrialization
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_polska_modernizacja
+		icon = GFX_focus_generic_central_planning
+		prerequisite = { focus = POL_gornicze }
+		prerequisite = { focus = POL_polska_przyszlosc }
+		x = 0
+		y = 1
+		relative_position_id = POL_polska_przyszlosc
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = POL_invest_wiejskie
+		icon = GFX_focus_generic_agricultural_subsidies
+		prerequisite = { focus = POL_reforma_gruntow }
+		mutually_exclusive = { focus = POL_zatrudnienie_rolnikow }
+		x = 2
+		y = 1
+		relative_position_id = POL_reforma_gruntow
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	focus = {
+		id = POL_spoldzielnia_peasantry
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = POL_invest_wiejskie }
+		x = 0
+		y = 1
+		relative_position_id = POL_invest_wiejskie
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_transform_lodz
+		icon = GFX_focus_POL_plan_west
+		prerequisite = { focus = POL_spoldzielnia_peasantry }
+		x = 0
+		y = 1
+		relative_position_id = POL_spoldzielnia_peasantry
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_transform_mazowieckie
+		icon = GFX_focus_POL_expand_polish_intelligence
+		prerequisite = { focus = POL_spoldzielnia_peasantry }
+		x = 2
+		y = 1
+		relative_position_id = POL_spoldzielnia_peasantry
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_transform_galicja
+		icon = GFX_focus_POL_ban_nazi_party
+		prerequisite = { focus = POL_spoldzielnia_peasantry }
+		x = 4
+		y = 1
+		relative_position_id = POL_spoldzielnia_peasantry
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_zjednoczyc_patriotyzm_polak
+		icon = GFX_focus_generic_population_growth
+		prerequisite = { focus = POL_transform_lodz }
+		prerequisite = { focus = POL_transform_mazowieckie }
+		prerequisite = { focus = POL_transform_galicja }
+		x = 0
+		y = 1
+		relative_position_id = POL_transform_lodz
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_wiejskie_elektryfikacja
+		icon = GFX_focus_generic_energy
+		prerequisite = { focus = POL_zjednoczyc_patriotyzm_polak }
+		x = 0
+		y = 1
+		relative_position_id = POL_zjednoczyc_patriotyzm_polak
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_low_cost_housing
+		icon = GFX_focus_generic_low_cost_housing
+		prerequisite = { focus = POL_zjednoczyc_patriotyzm_polak }
+		x = 2
+		y = 1
+		relative_position_id = POL_zjednoczyc_patriotyzm_polak
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_pride_life
+		icon = GFX_focus_generic_price_controls
+		prerequisite = { focus = POL_zjednoczyc_patriotyzm_polak }
+		x = 4
+		y = 1
+		relative_position_id = POL_zjednoczyc_patriotyzm_polak
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	focus = {
+		id = POL_subsidies_for_peasantry
+		icon = GFX_focus_generic_welfare
+		prerequisite = { focus = POL_invest_wiejskie }
+		x = 6
+		y = 1
+		relative_position_id = POL_invest_wiejskie
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_supply_wiejskie
+		icon = GFX_focus_generic_reinforcing_the_supply_network
+		prerequisite = { focus = POL_subsidies_for_peasantry }
+		x = 0
+		y = 1
+		relative_position_id = POL_subsidies_for_peasantry
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_polska_academy_of_agricultural_sciences
+		icon = GFX_focus_generic_university_1
+		prerequisite = { focus = POL_supply_wiejskie }
+		x = 0
+		y = 1
+		relative_position_id = POL_supply_wiejskie
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_breeding_science
+		icon = GFX_focus_generic_farmland
+		prerequisite = { focus = POL_polska_academy_of_agricultural_sciences }
+		x = 0
+		y = 1
+		relative_position_id = POL_polska_academy_of_agricultural_sciences
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = POL_tractor_company_project
+		icon = GFX_focus_NZL_bob_semple_tank
+		prerequisite = { focus = POL_invest_wiejskie }
+		x = 8
+		y = 1
+		relative_position_id = POL_invest_wiejskie
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_wartime_for_bronic_polski
+		icon = GFX_focus_generic_tank_assembly
+		prerequisite = { focus = POL_tractor_company_project }
+		x = 0
+		y = 1
+		relative_position_id = POL_tractor_company_project
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = POL_agricultural_industrialization_of_polski
+		icon = GFX_focus_generic_military_industry
+		prerequisite = { focus = POL_wiejskie_elektryfikacja }
+		prerequisite = { focus = POL_low_cost_housing }
+		prerequisite = { focus = POL_pride_life }
+		x = 0
+		y = 1
+		relative_position_id = POL_wiejskie_elektryfikacja
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
 	}
 }

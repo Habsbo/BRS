@@ -752,7 +752,7 @@ focus_tree = {
 
 	focus = {
 		id = BEL_bonds_for_public_service
-		icon = GFX_
+		icon = GFX_focus_generic_currency_reforms
 		prerequisite = { focus = BEL_work_family_comity }
 		#mutually_exclusive = { focus =  }
 		x = 1
@@ -2319,7 +2319,12 @@ focus_tree = {
 
 		cost = 8
 		
-		available = {}
+		available = {
+			any_country_with_original_tag = {
+				original_tag_to_check = GER
+				is_in_faction_with = ROOT
+			}
+		}
 		
 		bypass = {}
 		
@@ -2345,7 +2350,12 @@ focus_tree = {
 
 		cost = 8
 		
-		available = {}
+		available = {
+			any_country_with_original_tag = {
+				original_tag_to_check = GER
+				is_in_faction_with = ROOT
+			}
+		}
 		
 		bypass = {}
 		

@@ -1,6 +1,28 @@
 ﻿add_namespace = BR_poland_events
 
 country_event = {
+	id = BR_poland_events.1
+	title = BR_poland_events.1.title
+	desc = BR_poland_events.1.desc
+	picture = GFX_report_event_lithuanian_ultimatum
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	immediate = {
+		hidden_effect = {
+			#
+		}
+	}
+
+	option = {
+		name = BR_poland_events.1.a
+		
+		complete_national_focus = POL_dark_future
+	}
+}
+country_event = {
 	id = BR_poland_events.1001
 	title = BR_poland_events.1001.t
 	desc = BR_poland_events.1001.desc

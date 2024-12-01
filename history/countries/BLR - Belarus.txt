@@ -116,9 +116,7 @@ set_popularities = {
 
 set_cosmetic_tag = BLR_kingdom_deutsch
 
-LAT = {
-	set_cosmetic_tag = Baltic_deutschland_reich
-}
+LAT = { set_cosmetic_tag = Baltic_federation }
 
 create_country_leader = {
     name = "Vasil Zacharka"

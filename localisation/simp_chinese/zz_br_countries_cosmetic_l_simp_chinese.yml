@@ -454,9 +454,12 @@
  Livonian_Order: "利沃尼亚骑士团"
  Livonian_Order_DEF: "利沃尼亚骑士团"
  Livonian_Order_ADJ: "利沃尼亚"
+ Baltic_federation: "波罗的联邦"
+ Baltic_federation_DEF: "波罗的联邦"
+ Baltic_federation_ADJ: "波罗的"
  Baltic_deutschland_reich: "波罗的德意志国"
  Baltic_deutschland_reich_DEF: "波罗的德意志国"
- Baltic_deutschland_reich_ADJ: "波罗的德意志国"
+ Baltic_deutschland_reich_ADJ: "波罗的德意志"
 #北欧 Norse
  
 #多瑙河
@@ -1768,9 +1771,9 @@
 
 
 #
- : ""
- _DEF: ""
- _ADJ: ""
+ KEN_KLFA: "肯尼亚国土自由军" #茅茅运动
+ KEN_KLFA_DEF: "肯尼亚国土自由军"
+ KEN_KLFA_ADJ: "肯尼亚"
  : ""
  _DEF: ""
  _ADJ: ""
