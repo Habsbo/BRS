@@ -1,0 +1,14 @@
+﻿l_simp_chinese:
+ USA: "美利坚合众国"
+ USA_DEF: "美利坚合众国"
+ USA_ADJ: "美国"
+
+ Herbert_Clark_Hoover: "赫伯特·克拉克·胡佛"
+ Charles_Curtis: "查尔斯·柯蒂斯"
+ 
+ vice_president: "副总统"
+ 
+ VL_name_USA_Charles_Curtis: "$Charles_Curtis$"
+ VL_state_USA_Charles_Curtis: "§Y$Charles_Curtis$§!"
+ VL_Dip_state_USA_Charles_Curtis: "§Y$Charles_Curtis$§!\n$GetDipStatus$\n"
+ VL_desc_USA_Charles_Curtis: "§g§!"

@@ -1,0 +1,19 @@
+spriteTypes = {
+	###### characters of states
+	spriteType = {
+		name = "GFX_Portrait_USA_Herbert_Clark_Hoover"
+		texturefile = "gfx/leaders/USA/Portrait_USA_Herbert_Clark_Hoover.png"
+	}
+
+	spriteType = {
+		name = "GFX_Portrait_USA_Charles_Curtis"
+		texturefile = "gfx/leaders/USA/Portrait_USA_Charles_Curtis.png"
+	}
+	
+	######
+	
+	spriteType = {
+		name = "GFX_idea_advisor_USA_Charles_Curtis"
+		texturefile = "gfx/interface/ideas/USA/idea_advisor_USA_Charles_Curtis.dds"
+	}
+}
