@@ -3,6 +3,13 @@ defined_text = {
 	name = VL_picture
 	text = {
 		trigger = {
+			original_tag = USA
+			NOT = { br_special_chars_holding_gov = yes }
+		}
+		localization_key = [USA_VL_picture]
+	}
+	text = {
+		trigger = {
 			original_tag = POL
 			NOT = { br_special_chars_holding_gov = yes }
 		}
@@ -69,6 +76,13 @@ defined_text = {
 	name = VL_name
 	text = {
 		trigger = {
+			original_tag = USA
+			NOT = { br_special_chars_holding_gov = yes }
+		}
+		localization_key = [USA_VL_name]
+	}
+	text = {
+		trigger = {
 			original_tag = POL
 			NOT = { br_special_chars_holding_gov = yes }
 		}
@@ -132,6 +146,13 @@ defined_text = {
 
 defined_text = {
 	name = VL_state
+	text = {
+		trigger = {
+			original_tag = USA
+			NOT = { br_special_chars_holding_gov = yes }
+		}
+		localization_key = [USA_VL_state]
+	}
 	text = {
 		trigger = {
 			original_tag = POL
@@ -200,6 +221,13 @@ defined_text = {
 	name = VL_Dip_state
 	text = {
 		trigger = {
+			original_tag = USA
+			NOT = { br_special_chars_holding_gov = yes }
+		}
+		localization_key = [USA_VL_Dip_state]
+	}
+	text = {
+		trigger = {
 			original_tag = POL
 			NOT = { br_special_chars_holding_gov = yes }
 		}
@@ -263,6 +291,13 @@ defined_text = {
 
 defined_text = {
 	name = VL_desc
+	text = {
+		trigger = {
+			original_tag = USA
+			NOT = { br_special_chars_holding_gov = yes }
+		}
+		localization_key = [USA_VL_desc]
+	}
 	text = {
 		trigger = {
 			original_tag = POL

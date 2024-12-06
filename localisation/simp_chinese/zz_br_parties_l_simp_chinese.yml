@@ -147,6 +147,18 @@
  SPR_fascism_party: "西班牙长枪党"
  SPR_nationalism_party: "西班牙长枪党右翼"
  SPR_supernationalism_party: ""
+ 
+ USA_soc_anarchism_party: "世界产业工人联盟"
+ USA_vanwardism_party: "美国共产党"
+ USA_sci_socialism_party: "劳工联合会"
+ USA_con_socialism_party: "社会党"
+ USA_dem_socialism_party: "进步党"
+ USA_dem_liberalism_party: "民主党"
+ USA_dem_conservatism_party: "共和党"
+ USA_authoritarian_party: "没想好-2"
+ USA_fascism_party: "没想好-3"
+ USA_nationalism_party: "没想好-4"
+ USA_supernationalism_party: "没想好-5"
 
  POL_soc_anarchism_party: "波兰农民无政府联盟"
  POL_vanwardism_party: "波兰和立陶宛社会民主党(SDKP)与犹太工人联盟(GJLB)" #而波兰工人共产党（KPRP）失败了

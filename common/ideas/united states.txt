@@ -1,0 +1,73 @@
+### made by LingXia ###
+ideas = {
+	
+	country = {
+		USA_dream_of_states = {
+			picture = YUG_federal_defense_council
+
+			allowed = { original_tag = USA }
+
+			allowed_civil_war = { always = no }
+
+			removal_cost = -1
+
+			modifier = {
+				monthly_population = 0.15
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				drift_defence_factor = 0.25
+				consumer_goods_factor = 0.15
+				dem_liberalism_drift = 0.02
+				dem_conservatism_drift = 0.02
+			}
+		}
+		
+		USA_the_trust = {
+			picture = HUN_revaluing_the_pengo
+
+			allowed = { original_tag = USA }
+
+			allowed_civil_war = { always = no }
+
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.05
+				production_speed_buildings_factor = 0.1
+				consumer_goods_factor = 0.10
+				production_factory_start_efficiency_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+		
+		USA_the_heritage_of_pioneer_culture_and_film_art = {
+			picture = CHL_legacy_of_caupolican
+
+			allowed = { original_tag = USA }
+
+			allowed_civil_war = { always = no }
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				stability_factor = 0.05
+			}
+		}
+		
+		USA_great_monroe_doctrine = {
+			picture = ARG_monroe_doctrine_idea
+
+			allowed = { original_tag = USA }
+
+			allowed_civil_war = { always = no }
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.50
+			}
+		}
+	}
+}
