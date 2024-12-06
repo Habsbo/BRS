@@ -282,24 +282,19 @@ ideas = {
 		POL_poor_ethnic_policies = {
 			picture = hol_de_vaarplicht
 
-			allowed = {
-				original_tag = POL
-			}
+			allowed = { original_tag = POL }
 
-			allowed_civil_war = {
-				always = no
-			}
+			allowed_civil_war = { always = no }
 
-			available = {
-				always = no
-			}
+			#available = { has_government = communism }
 
 			removal_cost = -1
 
 			modifier = {
-				stability_factor = -0.20
+				stability_factor = -0.10
 				war_support_factor = -0.10
-				compliance_growth = -0.05
+				non_core_manpower = -0.03
+				compliance_growth = -0.10
 				resistance_growth = 0.10
 			}
 		}

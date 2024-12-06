@@ -89,6 +89,8 @@ br_baltics = {
 			}
 		}
 
+		priority = 10
+
 		ai_will_do = { base = 100 }
 	}
 	br_proclaim_baltics_federation.invitation = {
@@ -331,6 +333,8 @@ br_baltics = {
 				}
 			}
 		}
+
+		priority = 10
 
 		ai_will_do = { base = 100 }
 	}

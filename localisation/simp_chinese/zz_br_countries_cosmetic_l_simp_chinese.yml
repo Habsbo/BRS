@@ -138,9 +138,9 @@
  ITA_italian_kingdom: "意大利王国"
  ITA_italian_kingdom_DEF: "意大利王国"
 #伊比利亚
- EUSKADI: "巴斯克"
- EUSKADI_DEF: "巴斯克"
- EUSKADI_ADJ: "巴斯克"
+ Euskal_Herria: "巴斯克国" #Euskal Herria
+ Euskal_Herria_DEF: "巴斯克国" #Euskal Herrian ?
+ Euskal_Herria_ADJ: "巴斯克" #euskaldun
 
  CRE_ARAGON: "阿拉贡地区防御委员会"
  CRE_ARAGON_DEF: "阿拉贡地区防御委员会"
@@ -973,6 +973,10 @@
  HOL_benelux_unified_democratic: "比荷卢联邦"
  HOL_benelux_unified_democratic_DEF: "比荷卢联邦"
  HOL_benelux_unified_democratic_ADJ: "比荷卢"
+#
+ SPR_north_military: "西班牙北方军团"
+ SPR_north_military_DEF: "西班牙北方军团"
+
  SPA_directory_fascism: "西班牙督政府"
  SPA_directory_fascism_DEF: "西班牙督政府"
  SPA_directory_fascism_ADJ: "西班牙"
@@ -1048,6 +1052,7 @@
  SPR_POR_anarchism_neutrality: "葡萄牙无政府主义公社"
  SPR_POR_anarchism_neutrality_def: "葡萄牙无政府主义公社"
  SPR_POR_anarchism_neutrality_adj: "葡萄牙无政府派"
+#
  FRA_THIRD_EMPIRE_neutrality: "法兰西帝国"
  FRA_THIRD_EMPIRE_neutrality_def: "法兰西帝国"
  FRA_THIRD_EMPIRE_neutrality_adj: "法国"

@@ -1,0 +1,19 @@
+characters = {
+### ADU ###
+	ADU_hisham_ibn_abd_alrahman_banu_umayya = { #并非历史
+		name=hisham_ibn_abd_alrahman_banu_umayya_banu_umayya
+		portraits={
+			civilian={
+				large="GFX_portrait_hisham_ibn_abd_alrahman_banu_umayya"
+				small="GFX_portrait_hisham_ibn_abd_alrahman_banu_umayya_small"
+			}
+		}
+		country_leader={
+			ideology=islamism
+			expire="1965.1.1.1"
+			traits = { trait_mahdi }
+			id=-1
+		}
+	}
+	
+}

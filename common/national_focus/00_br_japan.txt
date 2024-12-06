@@ -1,12 +1,12 @@
 ﻿focus_tree = {
-	id = br_algeria_focus
+	id = br_united_states_focus
 	
 	country = {
 		factor = 0
 		
 		modifier = {
-			add = 0
-			tag = ALG
+			add = 10
+			tag = JAP
 		}
 	}
 	
@@ -15,18 +15,16 @@
 	continuous_focus_position = { x = 50 y = 1500 }
 	
 	focus = {
-		id = ALG_
-		icon = GFX_goal_generic_demand_territory
+		id = JAP_
+		icon = GFX_
 		#prerequisite = { focus =  }
 		#mutually_exclusive = { focus =  }
-		x = 10
+		x = 0
 		y = 0
 		#relative_position_id =
 
 		cost = 8
-		
-		ai_will_do = { factor = 1 }
-		
+
 		available = {}
 		
 		bypass = {}
@@ -36,7 +34,8 @@
 		available_if_capitulated = no
 		
 		complete_tooltip = {}
-		
 		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
 	}
 }

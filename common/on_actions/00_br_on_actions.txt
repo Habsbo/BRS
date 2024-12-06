@@ -126,6 +126,10 @@ on_actions = {
 				multiply_variable = { br_free_ic_var = -1 }
 				add_to_variable = { br_eco_var = br_free_ic_var }
 			}
+
+			###
+			794 = { remove_core_of = BAR }
+			166 = { remove_claim_by = BAR }
 		}
 	}
 	on_monthly = {

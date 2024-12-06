@@ -1,0 +1,47 @@
+﻿focus_tree = {
+	id = br_algeria_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = TUN
+		}
+	}
+	
+	default = no
+
+	continuous_focus_position = { x = 0 y = 10 }
+	
+	focus = {
+		id = TUN_
+		icon = GFX_goal_generic_demand_territory
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 50
+		y = 0
+		#relative_position_id =
+
+		cost = 8
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+
+	shared_focus = North_Africa_anti_france
+	shared_focus = North_Africa_turn_to_suzerain
+	shared_focus = North_Africa_desert_industries
+	shared_focus = North_Africa_armed_forces
+}

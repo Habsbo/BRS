@@ -97,6 +97,9 @@
 #
  supernationalism_type: "超国家社会主义"
  supernationalism_type_desc: "我发誓我不知道这是什么意识形态。"
+#
+ islamism: "伊斯兰主义"
+ islamism_desc: "伊斯兰主义，又被叫做伊斯兰教法主义，主张在以伊斯兰教作为最大共性的世界里团结进行社会改革和塑造凝聚力的意识形态，领袖们以掌管教法的伊玛目、阿訇、教主或者哈里发为核心，通过支持领袖的军事组织们组织政府。尽管这一类型的意识形态的具体主张倾向并不总是相同，可能会受到相邻国家的意识形态发生或社会主义化或民主主义化的倾向，但是他们尝试在各自传统社会博取进步的同时避免社会的撕裂起到了重要作用。"
 
  soc_anarchism_drift: "§Y$soc_anarchism$§!意识形态增长"
  soc_anarchism_acceptance: "§Y$soc_anarchism$§!接受度"

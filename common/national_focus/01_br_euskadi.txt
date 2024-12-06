@@ -5,7 +5,7 @@
 		factor = 0
 		
 		modifier = {
-			add = 0
+			add = 10
 			tag = NAV
 		}
 	}
@@ -14,18 +14,17 @@
 
 	continuous_focus_position = { x = 50 y = 1500 }
 
+### 潘普洛纳 ###
 	focus = {
-		id = EUS_1
-		icon = GFX_goal_generic_demand_territory
+		id = EUS_monarchy_revitalized
+		icon = GFX_focus_GER_monarchy_compromise
 		#prerequisite = { focus =  }
 		#mutually_exclusive = { focus =  }
-		x = 10
+		x = 16
 		y = 0
 		#relative_position_id =
 
 		cost = 8
-		
-		ai_will_do = { factor = 1 }
 		
 		available = {}
 		
@@ -36,9 +35,686 @@
 		available_if_capitulated = no
 		
 		complete_tooltip = {}
-		
 		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
 	}
+	focus = {
+		id = EUS_attack_west_aragon
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = {
+			focus = EUS_seize_spanish_basque
+			focus = EUS_modernism
+			focus = EUS_inquisition
+		}
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 3
+		relative_position_id = EUS_monarchy_revitalized
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = EUS_purge_anarchists
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = EUS_attack_west_aragon }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = EUS_attack_west_aragon
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = EUS_ancient_beliefs
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = EUS_monarchy_revitalized }
+		#mutually_exclusive = { focus =  }
+		x = -3
+		y = 1
+		relative_position_id = EUS_monarchy_revitalized
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = EUS_basque_pagan
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = EUS_ancient_beliefs }
+		#mutually_exclusive = { focus =  }
+		x = -1
+		y = 1
+		relative_position_id = EUS_ancient_beliefs
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = EUS_seize_spanish_basque
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = EUS_ancient_beliefs }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 1
+		relative_position_id = EUS_ancient_beliefs
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = EUS_pamplona_kingdom
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = EUS_basque_pagan }
+		prerequisite = { focus = EUS_seize_spanish_basque }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 2
+		relative_position_id = EUS_ancient_beliefs
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = EUS_true_european_owner
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = EUS_pamplona_kingdom }
+		#mutually_exclusive = { focus =  }
+		x = -1
+		y = 1
+		relative_position_id = EUS_pamplona_kingdom
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = EUS_restoration_of_old_basque
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = EUS_pamplona_kingdom }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 1
+		relative_position_id = EUS_pamplona_kingdom
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {
+			165 = { add_claim_by = root }
+			166 = { add_claim_by = root }
+			794 = { add_claim_by = root }
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+
+	focus = {
+		id = EUS_christian_king
+		icon = GFX_focus_generic_catholic_dominion
+		prerequisite = { focus = EUS_monarchy_revitalized }
+		#mutually_exclusive = { focus =  }
+		x = 3
+		y = 1
+		relative_position_id = EUS_monarchy_revitalized
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = EUS_modernism
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = EUS_christian_king }
+		mutually_exclusive = { focus = EUS_inquisition }
+		x = -1
+		y = 1
+		relative_position_id = EUS_christian_king
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = EUS_inquisition
+		icon = GFX_focus_mex_restore_the_army_of_christ
+		prerequisite = { focus = EUS_christian_king }
+		mutually_exclusive = { focus = EUS_modernism }
+		x = 1
+		y = 1
+		relative_position_id = EUS_christian_king
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = EUS_king_of_spain
+		icon = GFX_focus_spr_maintain_the_republic
+		prerequisite = {
+			focus = EUS_modernism
+			focus = EUS_inquisition
+		}
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 2
+		relative_position_id = EUS_christian_king
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = EUS_claim_crown_of_france
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = EUS_king_of_spain }
+		#mutually_exclusive = { focus =  }
+		x = -1
+		y = 1
+		relative_position_id = EUS_king_of_spain
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = EUS_reintegrate_vascony
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = {
+			focus = EUS_restoration_of_old_basque
+			focus = EUS_claim_crown_of_france
+		}
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 5
+		relative_position_id = EUS_monarchy_revitalized
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = EUS_suppress_the_turmoil
+		icon = GFX_focus_spr_crush_the_revolution
+		prerequisite = { focus = EUS_king_of_spain }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 1
+		relative_position_id = EUS_king_of_spain
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+### ###
+	focus = {
+		id = EUS_collude_bando_nacional
+		icon = GFX_focus_intervention_spain_nationalists
+		prerequisite = {
+			focus = EUS_monarchy_revitalized
+			focus = EUS_errepublikanismoa
+		}
+		#mutually_exclusive = { focus =  }
+		x = 6
+		y = 1
+		relative_position_id = EUS_monarchy_revitalized
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = EUS_control_north
+		icon = GFX_focus_ARG_invite_spanish_nationalists
+		prerequisite = { focus = EUS_collude_bando_nacional }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 2
+		relative_position_id = EUS_collude_bando_nacional
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = { #邀请弗朗哥
+		id = EUS_paquito
+		icon = GFX_focus_spa_caudillo_of_spain
+		prerequisite = { focus = EUS_collude_bando_nacional }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 1
+		relative_position_id = EUS_collude_bando_nacional
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+### 共和主义 ###
+	focus = {
+		id = EUS_errepublikanismoa
+		icon = GFX_focus_ARG_defense_and_democracy
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 10
+		y = 0
+		relative_position_id = EUS_monarchy_revitalized
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = EUS_2
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = EUS_errepublikanismoa }
+		#mutually_exclusive = { focus =  }
+		x = -1
+		y = 1
+		relative_position_id = EUS_errepublikanismoa
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = EUS_2
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = EUS_errepublikanismoa }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 1
+		relative_position_id = EUS_errepublikanismoa
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+### 阿拉贡-巴斯克联盟 ###
+	focus = {
+		id = EUS_cnt_fai
+		icon = GFX_focus_ARG_no_gods_no_masters
+		x = 18
+		y = 0
+		relative_position_id = EUS_monarchy_revitalized
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = EUS_class_war
+		icon = GFX_focus_spr_class_war
+		prerequisite = { focus = EUS_cnt_fai }
+		#mutually_exclusive = { focus =  }
+		x = -3
+		y = 1
+		relative_position_id = EUS_cnt_fai
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = EUS_2
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = EUS_cnt_fai }
+		#mutually_exclusive = { focus =  }
+		x = -1
+		y = 1
+		relative_position_id = EUS_cnt_fai
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = EUS_2
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = EUS_cnt_fai }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 1
+		relative_position_id = EUS_cnt_fai
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = EUS_2
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = EUS_cnt_fai }
+		#mutually_exclusive = { focus =  }
+		x = 3
+		y = 1
+		relative_position_id = EUS_cnt_fai
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	### ###
+	focus = {
+		id = EUS_anti_fascism
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = {
+			focus = EUS_errepublikanismoa
+			focus = EUS_cnt_fai
+		}
+		#mutually_exclusive = { focus =  }
+		x = 3
+		y = 1
+		relative_position_id = EUS_errepublikanismoa
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
 	focus = {
 		id = EUS_2
 		icon = GFX_goal_generic_demand_territory
@@ -50,8 +726,6 @@
 
 		cost = 8
 		
-		ai_will_do = { factor = 1 }
-		
 		available = {}
 		
 		bypass = {}
@@ -61,8 +735,8 @@
 		available_if_capitulated = no
 		
 		complete_tooltip = {}
-		
 		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
 	}
-	
 }

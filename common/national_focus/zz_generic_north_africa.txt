@@ -1,0 +1,1619 @@
+﻿### 反殖民
+shared_focus = {
+	id = North_Africa_anti_france
+	icon = GFX_focus_attack_france
+	mutually_exclusive = { focus = North_Africa_turn_to_suzerain }
+	x = 10
+	y = 0
+	#relative_position_id = 
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+#
+shared_focus = {
+	id = North_Africa_liberty_equality_and_fraternity
+	icon = GFX_focus_ARG_defense_and_democracy
+	prerequisite = { focus = North_Africa_anti_france }
+	#mutually_exclusive = { focus =  }
+	x = 0
+	y = 1
+	relative_position_id = North_Africa_anti_france
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+#
+shared_focus = {
+	id = North_Africa_liberal_manifesto_of_maghreb
+	icon = GFX_goal_generic_forceful_treaty
+	prerequisite = { focus = North_Africa_liberty_equality_and_fraternity }
+	#mutually_exclusive = { focus =  }
+	x = -2
+	y = 1
+	relative_position_id = North_Africa_liberty_equality_and_fraternity
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+#
+shared_focus = {
+	id = North_Africa_amazighism
+	icon = GFX_goal_generic_national_unity
+	prerequisite = { focus = North_Africa_liberty_equality_and_fraternity }
+	#mutually_exclusive = { focus =  }
+	x = 0
+	y = 1
+	relative_position_id = North_Africa_liberty_equality_and_fraternity
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+#
+shared_focus = {
+	id = North_Africa_unconfidence_but_bloody
+	icon = GFX_goal_generic_war_with_comintern
+	prerequisite = { focus = North_Africa_liberal_manifesto_of_maghreb }
+	prerequisite = { focus = North_Africa_amazighism }
+	prerequisite = {
+		focus = North_Africa_preparing_for_liberation_war
+		focus = North_Africa_leader_group
+	}
+	#mutually_exclusive = { focus =  }
+	x = 0
+	y = 1
+	relative_position_id = North_Africa_amazighism
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+#
+shared_focus = {
+	id = North_Africa_seize_heavy_industry
+	icon = GFX_goal_generic_construct_mil_factory
+	prerequisite = { focus = North_Africa_unconfidence_but_bloody }
+	#mutually_exclusive = { focus =  }
+	x = -4
+	y = 1
+	relative_position_id = North_Africa_unconfidence_but_bloody
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+#
+shared_focus = {
+	id = North_Africa_transform_to_power
+	icon = GFX_focus_generic_military_industry
+	prerequisite = { focus = North_Africa_seize_heavy_industry }
+	#mutually_exclusive = { focus =  }
+	x = 0
+	y = 1
+	relative_position_id = North_Africa_seize_heavy_industry
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+#
+shared_focus = {
+	id = North_Africa_sabotage_maneuver_of_enemies
+	icon = GFX_goal_generic_army_motorized
+	prerequisite = { focus = North_Africa_unconfidence_but_bloody }
+	#mutually_exclusive = { focus =  }
+	x = -2
+	y = 1
+	relative_position_id = North_Africa_unconfidence_but_bloody
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+#
+shared_focus = {
+	id = North_Africa_intercept
+	icon = GFX_focus_prc_infiltration
+	prerequisite = { focus = North_Africa_sabotage_maneuver_of_enemies }
+	#mutually_exclusive = { focus =  }
+	x = 0
+	y = 1
+	relative_position_id = North_Africa_sabotage_maneuver_of_enemies
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+
+###
+shared_focus = {
+	id = North_Africa_foreign_affairs
+	icon = GFX_goal_generic_intelligence_exchange
+	prerequisite = { focus = North_Africa_unconfidence_but_bloody }
+	#mutually_exclusive = { focus =  }
+	x = -7
+	y = 1
+	relative_position_id = North_Africa_unconfidence_but_bloody
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+#
+shared_focus = {
+	id = North_Africa_ask_for_vulture
+	icon = GFX_focus_intervention_spain_nationalists
+	prerequisite = { focus = North_Africa_foreign_affairs }
+	mutually_exclusive = { focus = North_Africa_ask_for_spain_republic }
+	x = -3
+	y = 1
+	relative_position_id = North_Africa_foreign_affairs
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+#
+shared_focus = {
+	id = North_Africa_ask_for_spain_republic
+	icon = GFX_focus_intervention_spain_republic
+	prerequisite = { focus = North_Africa_foreign_affairs }
+	mutually_exclusive = { focus = North_Africa_ask_for_vulture }
+	x = -1
+	y = 1
+	relative_position_id = North_Africa_foreign_affairs
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+#
+shared_focus = {
+	id = North_Africa_invite_italian_revolutionary
+	icon = GFX_focus_ETH_invite_italian_settlers
+	prerequisite = { focus = North_Africa_foreign_affairs }
+	#mutually_exclusive = { focus =  }
+	x = 1
+	y = 1
+	relative_position_id = North_Africa_foreign_affairs
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+
+
+### 接受命运
+shared_focus = {
+	id = North_Africa_turn_to_suzerain
+	icon = GFX_focus_chi_reach_out_to_france
+	mutually_exclusive = { focus = North_Africa_anti_france }
+	x = 6
+	y = 0
+	relative_position_id = North_Africa_anti_france
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+#
+shared_focus = {
+	id = North_Africa_deepen_cooperation
+	icon = GFX_goal_generic_intelligence_exchange
+	prerequisite = { focus = North_Africa_turn_to_suzerain }
+	#mutually_exclusive = { focus =  }
+	x = 0
+	y = 1
+	relative_position_id = North_Africa_turn_to_suzerain
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+#
+shared_focus = {
+	id = North_Africa_security_war
+	icon = GFX_focus_SWI_embrace_rote_drei
+	prerequisite = { focus = North_Africa_deepen_cooperation }
+	#mutually_exclusive = { focus =  }
+	x = 0
+	y = 1
+	relative_position_id = North_Africa_deepen_cooperation
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+#
+shared_focus = {
+	id = North_Africa_self_gov
+	icon = GFX_focus_generic_military_academy
+	prerequisite = { focus = North_Africa_security_war }
+	prerequisite = {
+		focus = North_Africa_preparing_for_liberation_war
+		focus = North_Africa_leader_group
+	}
+	#mutually_exclusive = { focus =  }
+	x = 0
+	y = 1
+	relative_position_id = North_Africa_security_war
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+###
+shared_focus = {
+	id = North_Africa_fund_immigrants_from_suzerain
+	icon = GFX_goal_generic_major_alliance
+	prerequisite = { focus = North_Africa_deepen_cooperation }
+	#mutually_exclusive = { focus =  }
+	x = 2
+	y = 1
+	relative_position_id = North_Africa_deepen_cooperation
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+#
+shared_focus = {
+	id = North_Africa_naturalized_states
+	icon = GFX_focus_generic_improve_the_administration
+	prerequisite = { focus = North_Africa_fund_immigrants_from_suzerain }
+	#mutually_exclusive = { focus =  }
+	x = 0
+	y = 1
+	relative_position_id = North_Africa_fund_immigrants_from_suzerain
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+#
+shared_focus = {
+	id = North_Africa_mining_concession
+	icon = GFX_focus_generic_mining_industry
+	prerequisite = { focus = North_Africa_deepen_cooperation }
+	#mutually_exclusive = { focus =  }
+	x = 4
+	y = 1
+	relative_position_id = North_Africa_deepen_cooperation
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+#
+shared_focus = {
+	id = North_Africa_demand_investment
+	icon = GFX_focus_generic_monetary_union
+	prerequisite = { focus = North_Africa_mining_concession }
+	#mutually_exclusive = { focus =  }
+	x = 0
+	y = 1
+	relative_position_id = North_Africa_mining_concession
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+#
+shared_focus = {
+	id = North_Africa_dark_factories
+	icon = GFX_goal_generic_production
+	prerequisite = { focus = North_Africa_demand_investment }
+	#mutually_exclusive = { focus =  }
+	x = -2
+	y = 1
+	relative_position_id = North_Africa_demand_investment
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+#
+shared_focus = {
+	id = North_Africa_railroad
+	icon = GFX_focus_generic_railroad
+	prerequisite = { focus = North_Africa_demand_investment }
+	#mutually_exclusive = { focus =  }
+	x = 0
+	y = 1
+	relative_position_id = North_Africa_demand_investment
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+#
+shared_focus = {
+	id = North_Africa_urbanization
+	icon = GFX_focus_generic_energy
+	prerequisite = { focus = North_Africa_demand_investment }
+	#mutually_exclusive = { focus =  }
+	x = 2
+	y = 1
+	relative_position_id = North_Africa_demand_investment
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+
+###
+shared_focus = {
+	id = North_Africa_placate_peshmerga
+	icon = GFX_focus_generic_communist
+	prerequisite = {
+		focus = North_Africa_anti_france
+		focus = North_Africa_turn_to_suzerain
+	}
+	mutually_exclusive = { focus = North_Africa_shatter_adversaries }
+	x = 2
+	y = 1
+	relative_position_id = North_Africa_anti_france
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+#
+shared_focus = {
+	id = North_Africa_preparing_for_liberation_war
+	icon = GFX_focus_generic_little_entente
+	prerequisite = { focus = North_Africa_placate_peshmerga }
+	#mutually_exclusive = { focus =  }
+	x = 0
+	y = 1
+	relative_position_id = North_Africa_placate_peshmerga
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+###
+shared_focus = {
+	id = North_Africa_shatter_adversaries
+	icon = GFX_goal_anti_comintern_pact
+	prerequisite = {
+		focus = North_Africa_anti_france
+		focus = North_Africa_turn_to_suzerain
+	}
+	mutually_exclusive = { focus = North_Africa_placate_peshmerga }
+	x = 2
+	y = 0
+	relative_position_id = North_Africa_placate_peshmerga
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+#
+shared_focus = {
+	id = North_Africa_leader_group
+	icon = GFX_goal_generic_improve_relations
+	prerequisite = { focus = North_Africa_shatter_adversaries }
+	#mutually_exclusive = { focus =  }
+	x = 0
+	y = 1
+	relative_position_id = North_Africa_shatter_adversaries
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+
+###
+shared_focus = {
+	id = North_Africa_desert_industries
+	icon = GFX_goal_generic_construct_civilian
+	#prerequisite = { focus = }
+	#mutually_exclusive = { focus =  }
+	x = 26
+	y = 0
+	#relative_position_id = 
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+		custom_effect_tooltip = North_Africa_desert_industries_tt
+	}
+	completion_reward = {		
+		custom_effect_tooltip = North_Africa_desert_industries_tt
+		hidden_effect = {
+			if = {
+				limit = {
+					var:capital = {
+						is_core_of = root
+						is_in_home_area = yes
+						free_building_slots = {
+							building = industrial_complex
+							size > 2
+							include_locked = yes
+						}
+					}
+				}
+				var:capital = {
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = { type = industrial_complex level = 2 }
+				}
+			}
+			else = {
+				random_controlled_state = {
+					limit = {
+						is_core_of = root
+						is_in_home_area = yes
+						free_building_slots = {
+							building = industrial_complex
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = { type = industrial_complex level = 2 }
+				}
+			}
+		}
+	}
+
+	ai_will_do = { factor = 1 }
+}
+#
+shared_focus = {
+	id = North_Africa_expanding_manufacturing_1
+	icon = GFX_goal_generic_production
+	prerequisite = { focus = North_Africa_desert_industries }
+	#mutually_exclusive = { focus =  }
+	x = -2
+	y = 1
+	relative_position_id = North_Africa_desert_industries
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {}
+	completion_reward = {
+		add_tech_bonus = {
+			name = North_Africa_expanding_manufacturing_1
+			bonus = 0.5
+			uses = 1
+			category = industry
+		}
+		random_owned_controlled_state = {
+			limit = {
+				is_core_of = root
+				is_in_home_area = yes
+				free_building_slots = {
+					building = industrial_complex
+					size > 0
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = industrial_complex level = 1 }
+		}
+	}
+
+	ai_will_do = { factor = 1 }
+}
+#
+shared_focus = {
+	id = North_Africa_expanding_manufacturing_2
+	icon = GFX_goal_generic_production
+	prerequisite = { focus = North_Africa_expanding_manufacturing_1 }
+	#mutually_exclusive = { focus =  }
+	x = 0
+	y = 1
+	relative_position_id = North_Africa_expanding_manufacturing_1
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {}
+	completion_reward = {
+		add_tech_bonus = {
+			name = North_Africa_expanding_manufacturing_2
+			bonus = 0.5
+			uses = 1
+			category = industry
+		}
+		random_owned_controlled_state = {
+			limit = {
+				is_core_of = root
+				is_in_home_area = yes
+				free_building_slots = {
+					building = industrial_complex
+					size > 0
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = industrial_complex level = 1 }
+		}
+	}
+
+	ai_will_do = { factor = 1 }
+}
+#
+shared_focus = {
+	id = North_Africa_expanding_manufacturing_3
+	icon = GFX_goal_generic_production
+	prerequisite = { focus = North_Africa_expanding_manufacturing_2 }
+	#mutually_exclusive = { focus =  }
+	x = 0
+	y = 1
+	relative_position_id = North_Africa_expanding_manufacturing_2
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {}
+	completion_reward = {
+		add_tech_bonus = {
+			name = North_Africa_expanding_manufacturing_3
+			bonus = 1.0
+			ahead_reduction = 1.0
+			uses = 1
+			category = industry
+		}
+		random_owned_controlled_state = {
+			limit = {
+				is_core_of = root
+				is_in_home_area = yes
+				free_building_slots = {
+					building = industrial_complex
+					size > 0
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = industrial_complex level = 1 }
+		}
+	}
+
+	ai_will_do = { factor = 1 }
+}
+
+#
+shared_focus = {
+	id = North_Africa_expanding_agriculture
+	icon = GFX_goal_generic_consumer_goods
+	prerequisite = { focus = North_Africa_desert_industries }
+	#mutually_exclusive = { focus =  }
+	x = 0
+	y = 1
+	relative_position_id = North_Africa_desert_industries
+
+	cost = 5
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {}
+	completion_reward = {
+		random_owned_controlled_state = {
+			limit = {
+				is_core_of = root
+				is_in_home_area = yes
+				free_building_slots = {
+					building = industrial_complex
+					size > 0
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = industrial_complex level = 1 }
+		}
+	}
+
+	ai_will_do = { factor = 1 }
+}
+#
+shared_focus = {
+	id = North_Africa_invest_chemical_industry
+	icon = GFX_goal_generic_construct_civ_factory
+	prerequisite = { focus = North_Africa_expanding_agriculture }
+	#mutually_exclusive = { focus =  }
+	x = 0
+	y = 1
+	relative_position_id = North_Africa_expanding_agriculture
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {}
+	completion_reward = {
+		add_cic = 3000
+		random_owned_controlled_state = {
+			limit = {
+				is_core_of = root
+				is_in_home_area = yes
+				free_building_slots = {
+					building = industrial_complex
+					size > 0
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = { type = industrial_complex level = 2 }
+		}
+	}
+
+	ai_will_do = { factor = 1 }
+}
+#
+shared_focus = {
+	id = North_Africa_food_processing
+	icon = GFX_focus_generic_price_controls
+	prerequisite = { focus = North_Africa_invest_chemical_industry }
+	#mutually_exclusive = { focus =  }
+	x = 0
+	y = 1
+	relative_position_id = North_Africa_invest_chemical_industry
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {
+		#
+		random_owned_controlled_state = {
+			limit = {
+				is_core_of = root
+				is_in_home_area = yes
+				free_building_slots = {
+					building = industrial_complex
+					size > 0
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = { type = industrial_complex level = 2 }
+		}
+	}
+
+	ai_will_do = { factor = 1 }
+}
+
+#
+shared_focus = {
+	id = North_Africa_heavy_industry
+	icon = GFX_goal_generic_construct_mil_factory
+	prerequisite = { focus = North_Africa_desert_industries }
+	prerequisite = { focus = North_Africa_armed_forces }
+	#mutually_exclusive = { focus =  }
+	x = 2
+	y = 1
+	relative_position_id = North_Africa_desert_industries
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {}
+	completion_reward = {
+		random_owned_controlled_state = {
+			limit = {
+				is_core_of = root
+				is_in_home_area = yes
+				free_building_slots = {
+					building = industrial_complex
+					size > 1
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = { type = industrial_complex level = 2 }
+		}
+		random_owned_controlled_state = {
+			limit = {
+				is_core_of = root
+				is_in_home_area = yes
+				free_building_slots = {
+					building = arms_factory
+					size > 0
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = arms_factory level = 1 }
+		}
+	}
+
+	ai_will_do = { factor = 1 }
+}
+#
+shared_focus = {
+	id = North_Africa_military_industry
+	icon = GFX_focus_generic_military_industry
+	prerequisite = { focus = North_Africa_heavy_industry }
+	#mutually_exclusive = { focus =  }
+	x = 0
+	y = 1
+	relative_position_id = North_Africa_heavy_industry
+
+	cost = 8
+	
+	available = {
+		NOT = { num_of_civilian_factories_available_for_projects < 1 }
+	}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {}
+	completion_reward = {
+		random_owned_controlled_state = {
+			limit = {
+				is_core_of = root
+				is_in_home_area = yes
+				free_building_slots = {
+					building = arms_factory
+					size > 1
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = { type = arms_factory level = 2 }
+		}
+	}
+
+	ai_will_do = { factor = 1 }
+}
+#
+shared_focus = {
+	id = North_Africa_heavy_armor
+	icon = GFX_focus_generic_mass_production
+	prerequisite = { focus = North_Africa_military_industry }
+	#mutually_exclusive = { focus =  }
+	x = 0
+	y = 1
+	relative_position_id = North_Africa_military_industry
+
+	cost = 8
+	
+	available = {
+		NOT = { num_of_civilian_factories_available_for_projects < 1 }
+	}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {
+		random_owned_controlled_state = {
+			limit = {
+				is_core_of = root
+				is_in_home_area = yes
+				free_building_slots = {
+					building = arms_factory
+					size > 1
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = { type = arms_factory level = 2 }
+		}
+	}
+
+	ai_will_do = { factor = 1 }
+}
+
+###
+shared_focus = {
+	id = North_Africa_
+	icon = GFX_goal_generic_construct_civilian
+	#prerequisite = { focus = }
+	#mutually_exclusive = { focus =  }
+	x = 1
+	y = 0
+	#relative_position_id = 
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+
+
+
+###
+shared_focus = {
+	id = North_Africa_armed_forces
+	icon = GFX_focus_generic_little_entente
+	#prerequisite = { focus = North_Africa_ }
+	#mutually_exclusive = { focus =  }
+	x = 7
+	y = 0
+	relative_position_id = North_Africa_desert_industries
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {
+		army_experience = 50
+	}
+
+	ai_will_do = { factor = 1 }
+}
+###
+shared_focus = {
+	id = North_Africa_aggressive
+	icon = GFX_goal_generic_territory_or_war
+	prerequisite = { focus = North_Africa_armed_forces }
+	mutually_exclusive = { focus = North_Africa_defensive }
+	x = -1
+	y = 1
+	relative_position_id = North_Africa_armed_forces
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+#
+shared_focus = {
+	id = North_Africa_army_motorized
+	icon = GFX_goal_generic_army_motorized
+	prerequisite = { focus = North_Africa_aggressive }
+	#mutually_exclusive = { focus =  }
+	x = -2
+	y = 1
+	relative_position_id = North_Africa_aggressive
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+shared_focus = {
+	id = North_Africa_camel_corps
+	icon = GFX_focus_generic_camel_corps
+	prerequisite = { focus = North_Africa_army_motorized }
+	#mutually_exclusive = { focus =  }
+	x = 0
+	y = 1
+	relative_position_id = North_Africa_army_motorized
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+shared_focus = {
+	id = North_Africa_tank_rnd
+	icon = GFX_focus_generic_tank_assembly
+	prerequisite = { focus = North_Africa_heavy_armor }
+	prerequisite = { focus = North_Africa_camel_corps }
+	prerequisite = { focus = North_Africa_ammo_production }
+	#mutually_exclusive = { focus =  }
+	x = 0
+	y = 1
+	relative_position_id = North_Africa_camel_corps
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+
+shared_focus = {
+	id = North_Africa_barrage
+	icon = GFX_goal_generic_army_artillery
+	prerequisite = { focus = North_Africa_aggressive }
+	#mutually_exclusive = { focus =  }
+	x = 0
+	y = 1
+	relative_position_id = North_Africa_aggressive
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+shared_focus = {
+	id = North_Africa_ammo_production
+	icon = GFX_focus_CONGO_copper_cartridges
+	prerequisite = { focus = North_Africa_barrage }
+	#mutually_exclusive = { focus =  }
+	x = 0
+	y = 1
+	relative_position_id = North_Africa_barrage
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+###
+shared_focus = {
+	id = North_Africa_defensive
+	icon = GFX_goal_generic_defence
+	prerequisite = { focus = North_Africa_armed_forces }
+	mutually_exclusive = { focus = North_Africa_aggressive }
+	x = 1
+	y = 1
+	relative_position_id = North_Africa_armed_forces
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+#
+shared_focus = {
+	id = North_Africa_forts_line
+	icon = GFX_goal_generic_fortify_city
+	prerequisite = { focus = North_Africa_defensive }
+	#mutually_exclusive = { focus =  }
+	x = 0
+	y = 1
+	relative_position_id = North_Africa_defensive 
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+shared_focus = {
+	id = North_Africa_tank_forts
+	icon = GFX_focus_generic_heavy_tank
+	prerequisite = { focus = North_Africa_forts_line }
+	#mutually_exclusive = { focus =  }
+	x = 0
+	y = 1
+	relative_position_id = North_Africa_forts_line
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+#
+shared_focus = {
+	id = North_Africa_grand_battle_plan
+	icon = GFX_goal_generic_position_armies
+	prerequisite = { focus = North_Africa_defensive }
+	#mutually_exclusive = { focus =  }
+	x = 2
+	y = 1
+	relative_position_id = North_Africa_defensive 
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+shared_focus = {
+	id = North_Africa_systematize_army
+	icon = GFX_focus_generic_advanced_military_studies
+	prerequisite = { focus = North_Africa_grand_battle_plan }
+	#mutually_exclusive = { focus =  }
+	x = 0
+	y = 1
+	relative_position_id = North_Africa_grand_battle_plan
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+shared_focus = {
+	id = North_Africa_special_force
+	icon = GFX_focus_SMB_atacama_training
+	prerequisite = { focus = North_Africa_systematize_army }
+	#mutually_exclusive = { focus =  }
+	x = 0
+	y = 1
+	relative_position_id = North_Africa_systematize_army
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+
+###
+shared_focus = {
+	id = North_Africa_airforce_effort
+	icon = GFX_focus_generic_copy_plane_designs
+	prerequisite = { focus = North_Africa_armed_forces }
+	#mutually_exclusive = { focus =  }
+	x = 6
+	y = 1
+	relative_position_id = North_Africa_armed_forces
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+shared_focus = {
+	id = North_Africa_electrification
+	icon = GFX_focus_generic_radio_communication
+	prerequisite = { focus = North_Africa_airforce_effort }
+	#mutually_exclusive = { focus =  }
+	x = -1
+	y = 2
+	relative_position_id = North_Africa_airforce_effort
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+shared_focus = {
+	id = North_Africa_infowar
+	icon = GFX_goal_generic_radar
+	prerequisite = { focus = North_Africa_systematize_army }
+	prerequisite = { focus = North_Africa_electrification }
+	#mutually_exclusive = { focus =  }
+	x = 0
+	y = 1
+	relative_position_id = North_Africa_electrification
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+
+shared_focus = {
+	id = North_Africa_air_research_boost
+	icon = GFX_focus_generic_air_research_boost
+	prerequisite = { focus = North_Africa_airforce_effort }
+	#mutually_exclusive = { focus =  }
+	x = 0
+	y = 1
+	relative_position_id = North_Africa_airforce_effort
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+shared_focus = {
+	id = North_Africa_foreign_aircraft
+	icon = GFX_focus_generic_air_partners
+	prerequisite = { focus = North_Africa_airforce_effort }
+	#mutually_exclusive = { focus =  }
+	x = 1
+	y = 3
+	relative_position_id = North_Africa_airforce_effort
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+
+shared_focus = {
+	id = North_Africa_
+	icon = GFX_goal_generic_construct_civilian
+	#prerequisite = { focus = }
+	#mutually_exclusive = { focus =  }
+	x = 0
+	y = 1
+	#relative_position_id = 
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+
+
+

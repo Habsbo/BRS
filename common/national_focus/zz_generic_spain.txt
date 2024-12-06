@@ -1,0 +1,24 @@
+﻿
+shared_focus = {
+	id = SPR_shared_indu
+	icon = GFX_goal_generic_construct_civilian
+	#prerequisite = { focus = North_Africa_armed_forces }
+	#mutually_exclusive = { focus =  }
+	x = 2
+	y = 1
+	relative_position_id = North_Africa_armed_forces
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}

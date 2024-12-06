@@ -1,0 +1,18 @@
+scripted_gui = {
+	br_interest_group_gui = {
+		context_type = player_context
+		#parent_window_token = politics_tab
+		window_name = "br_interest_group"
+		
+		visible = {
+			has_country_flag = br_interest_group_gui_visible_flag
+		}
+
+		effects = {
+			br_interest_group_close_button_click = {
+				clr_country_flag = br_interest_group_gui_visible_flag
+			}
+		}
+	}
+
+}

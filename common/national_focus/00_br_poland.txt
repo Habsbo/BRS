@@ -48,7 +48,7 @@ focus_tree = {
 		scroll_wheel_factor = 0.725
 		#trigger = {}
 	}
-
+###
 	focus = {
 		id = POL_dark_future
 		icon = GFX_focus_generic_military_dictatorship
@@ -1558,4 +1558,5 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+###
 }

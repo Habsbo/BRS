@@ -1619,4 +1619,7 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
+	shared_focus = North_Africa_anti_france
+	shared_focus = North_Africa_turn_to_suzerain
 }

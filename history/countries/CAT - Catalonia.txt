@@ -104,8 +104,36 @@ save_global_event_target_as = Aragon
 #法律
 add_ideas = {
 	#
-	#CAT_benito_pabon_hog
+	CAT_benito_pabon_hog
 	#
 }
 #
 set_variable = { VL_status_var = 12 } #政府领袖是 总书记 - the head of gov is general secretary!
+
+### catalonian barcelona ###
+create_dynamic_country = {
+	original_tag = CAT
+	set_country_flag = CAT_barcelona_flag
+	set_politics = { ruling_party = dem_liberalism }
+	set_popularities = {
+		anarchist = 5
+		vanwardism = 10
+		#
+		sci_socialism = 15
+		con_socialism = 0
+		dem_socialism = 10
+		#
+		dem_liberalism = 20
+		dem_conservatism = 10
+		#
+		authoritarian = 10
+		#
+		fascism = 10
+		nationalism = 10
+	}
+	set_stability = 0.50
+	set_war_support = 0.50
+	set_cosmetic_tag = CAT
+	set_research_slots = 3
+	reserve_dynamic_country = yes
+}

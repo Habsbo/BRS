@@ -108,7 +108,7 @@ BYZ = {
 		modifier = { add = 10 }
 	}
 }
-#
+#Catalonia/Aragon 加泰罗尼亚/阿拉贡
 ARA = {
 	OR = {
 		original_tag = SPR
@@ -147,6 +147,11 @@ AR2 = {
 		has_government = con_socialism
 		has_government = dem_socialism
 	}
+}
+
+BAR = { #barcelona
+	original_tag = CAT
+	has_country_flag = CAT_barcelona_flag
 }
 
 #germany

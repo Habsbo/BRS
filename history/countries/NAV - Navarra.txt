@@ -63,7 +63,7 @@ create_country_leader = {
 }
 
 #国名&地区名
-set_cosmetic_tag = EUSKADI
+set_cosmetic_tag = Euskal_Herria
 #法律
 add_ideas = {
 	br_laws_parliamentarism
