@@ -374,4 +374,181 @@ leader_traits = {
 
 		custom_modifier_tooltip = SLO_bop_move_to_kaisertum_usterreich_side_weekly_tt
 	}
+
+###
+	generic_statesman_1 = {
+		random = no
+		sprite = 13
+
+		political_power_factor = -0.05
+		stability_factor = -0.05
+
+		ai_will_do = { factor = 0 }
+	}
+	generic_statesman_2 = {
+		random = no
+		sprite = 13
+		
+		ai_will_do = { factor = 0 }
+	}
+	generic_statesman_3 = {
+		random = no
+		sprite = 13
+
+		political_power_factor = 0.05
+		stability_factor = 0.05
+
+		ai_will_do = { factor = 0 }
+	}
+	generic_statesman_4 = {
+		random = no
+		sprite = 13
+		
+		political_power_factor = 0.10
+		stability_factor = 0.10
+
+		ai_will_do = { factor = 0 }
+	}
+	generic_statesman_5 = {
+		random = no
+		sprite = 13
+
+		political_power_factor = 0.15
+		stability_factor = 0.15
+
+		ai_will_do = { factor = 0 }
+	}
+
+###
+	generic_military_strategy_1 = {
+		random = no
+		sprite = 13
+
+		ai_will_do = { factor = 0 }
+	}
+	generic_military_strategy_2 = {
+		random = no
+		sprite = 13
+
+		ai_will_do = { factor = 0 }
+	}
+	generic_military_strategy_3 = {
+		random = no
+		sprite = 13
+
+		ai_will_do = { factor = 0 }
+	}
+	generic_military_strategy_4 = {
+		random = no
+		sprite = 13
+
+		ai_will_do = { factor = 0 }
+	}
+	generic_military_strategy_5 = {
+		random = no
+		sprite = 13
+
+		ai_will_do = { factor = 0 }
+	}
+###
+	generic_charismatic_1 = {
+		random = no
+		sprite = 13
+
+		ai_will_do = { factor = 0 }
+	}
+	generic_charismatic_2 = {
+		random = no
+		sprite = 13
+
+		ai_will_do = { factor = 0 }
+	}
+	generic_charismatic_3 = {
+		random = no
+		sprite = 13
+
+		ai_will_do = { factor = 0 }
+	}
+	generic_charismatic_4 = {
+		random = no
+		sprite = 13
+
+		ai_will_do = { factor = 0 }
+	}
+	generic_charismatic_5 = {
+		random = no
+		sprite = 13
+
+		ai_will_do = { factor = 0 }
+	}
+###
+	generic_genius_1 = {
+		random = no
+		sprite = 13
+
+		ai_will_do = { factor = 0 }
+	}
+	generic_genius_2 = {
+		random = no
+		sprite = 13
+
+		ai_will_do = { factor = 0 }
+	}
+	generic_genius_3 = {
+		random = no
+		sprite = 13
+
+		ai_will_do = { factor = 0 }
+	}
+	generic_genius_4 = {
+		random = no
+		sprite = 13
+
+		ai_will_do = { factor = 0 }
+	}
+	generic_genius_5 = {
+		random = no
+		sprite = 13
+
+		ai_will_do = { factor = 0 }
+	}
+### 威望
+	generic_prestige_1 = {
+		random = no
+		sprite = 13
+
+		stability_factor = -0.05
+
+		ai_will_do = { factor = 0 }
+	}
+	generic_prestige_2 = {
+		random = no
+		sprite = 13
+
+		ai_will_do = { factor = 0 }
+	}
+	generic_prestige_3 = {
+		random = no
+		sprite = 13
+
+		stability_factor = 0.05
+
+		ai_will_do = { factor = 0 }
+	}
+	generic_prestige_4 = {
+		random = no
+		sprite = 13
+
+		stability_factor = 0.10
+
+		ai_will_do = { factor = 0 }
+	}
+	generic_prestige_5 = {
+		random = no
+		sprite = 13
+		
+		stability_factor = 0.15
+
+		ai_will_do = { factor = 0 }
+	}
 }

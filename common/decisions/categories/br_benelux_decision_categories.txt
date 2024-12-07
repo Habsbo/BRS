@@ -17,6 +17,16 @@ br_electrification_of_benelux = {
 }
 
 #bel
+br_bel_the_king = {
+	icon = GFX_decision_category_generic_prospect_for_resources
+	picture = GFX_portrait_BEL_albert_i_of_belgium
+
+	visible = { original_tag = BEL }
+
+	priority = 1
+	visible_when_empty = yes
+}
+
 br_bel_bop = {
 	icon = GFX_decision_category_generic_prospect_for_resources
 	#picture = GFX_decision_cat_picture_government_in_exile

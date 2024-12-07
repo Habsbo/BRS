@@ -1,6 +1,18 @@
 ideas = {
 
 	hidden_ideas = {
+		BEL_king_traits_hidden = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			available = { always = yes }
+
+			on_add = {}
+			on_remove = {}
+			
+			removal_cost = -1
+			
+			traits = {  }
+		}
 
 		civilian_factories_for_projects_idea_hidden = {
 			allowed = { always = no }
