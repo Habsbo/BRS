@@ -1,0 +1,24 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			#
+			ROM = {
+				every_owned_state = {
+					limit = {
+						is_controlled_by = ROM
+						is_core_of = TRA
+					}
+					force_enable_resistance = ROM
+					start_resistance = TRA
+					set_compliance = 50
+					set_resistance = 10
+				}
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			#
+		}
+	}
+}

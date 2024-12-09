@@ -1,0 +1,138 @@
+br_alsace = {
+	br_alsace_revolt_mission = {
+		
+		icon = generic_research
+
+		activation = {
+			28 = {
+				has_resistance > 0.20
+			}
+		}
+
+		available = {
+			always = no
+		}
+
+		visible = {
+			28 = {
+				is_owned_by = ROOT
+				is_fully_controlled_by = ROOT
+			}
+		}
+
+		cancel_trigger = {
+			#
+		}
+
+		is_good = no
+		days_mission_timeout = 365
+		selectable_mission = no
+		cancel_if_not_visible = yes
+
+		complete_effect = {
+			#
+		}
+
+		timeout_effect = {
+			#
+		}
+	}
+	#给予自治权
+	br_alsace_granting_autonomy = {
+		icon = generic_political_discourse
+
+		available = {
+			28 = {
+				is_owned_by = ROOT
+				is_fully_controlled_by = ROOT
+			}
+		}
+
+		visible = {
+			28 = {
+				is_owned_by = ROOT
+				is_fully_controlled_by = ROOT
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		complete_effect = {
+			28 = { add_compliance = 20 }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	#兵役优待
+	br_alsace_exempt_military_service = {
+		icon = generic_political_discourse
+
+		available = {
+			NOT = {
+				has_idea = disarmed_nation
+				has_idea = volunteer_only
+			}
+			28 = {
+				is_owned_by = ROOT
+				is_fully_controlled_by = ROOT
+			}
+		}
+
+		visible = {
+			28 = {
+				is_owned_by = ROOT
+				is_fully_controlled_by = ROOT
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		complete_effect = {
+			#
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+	#
+	br_alsace_revolte = {
+		icon = generic_political_discourse
+
+		available = {
+			NOT = {
+				has_idea = disarmed_nation
+				has_idea = volunteer_only
+			}
+			28 = {
+				is_owned_by = ROOT
+				is_fully_controlled_by = ROOT
+			}
+		}
+
+		visible = {
+			28 = {
+				is_owned_by = ROOT
+				is_fully_controlled_by = ROOT
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		complete_effect = {
+			#
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+}

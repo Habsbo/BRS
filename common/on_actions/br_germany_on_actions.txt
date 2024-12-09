@@ -1,6 +1,14 @@
 on_actions = {
 	on_startup = {
 		effect = {
+			#
+			28 = {
+				force_enable_resistance = GER
+				start_resistance = FRA
+				set_compliance = 50
+				set_resistance = 10
+			}
+			#
 			BEL = { country_event = br_bel.1 }
 			every_state = {
 				limit = {

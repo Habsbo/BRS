@@ -1,0 +1,291 @@
+add_namespace = br_spain_event
+add_namespace = br_portugual_event
+add_namespace = br_spain_civilwar_event
+
+country_event = { #
+	id = br_spain_event.1
+	title = br_spain_event.1.title
+	desc = br_spain_event.1.desc
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = br_spain_event.1.a #
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+
+#
+###
+add_namespace = br_ser
+###
+
+country_event = { #
+	id = br_ser.1
+	title = br_ser.1.title
+	desc = br_ser.1.desc
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			#
+		}
+	}
+
+	option = {
+		name = br_ser.1.a #
+
+		FROM = {
+			create_wargoal = {
+				target = ROOT
+				type = take_claimed_state
+				generator = { 106 }
+			}
+		}
+
+		ai_chance = { factor = 7 }
+	}
+}
+
+country_event = { #
+	id = br_ser.2
+	title = br_ser.2.title
+	desc = br_ser.2.desc
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			#
+		}
+	}
+
+	option = {
+		name = br_ser.2.a #
+
+		
+
+		ai_chance = { factor = 7 }
+	}
+}
+
+
+add_namespace = br_baltic
+
+country_event = { #
+	id = br_baltic.1001
+	title = br_baltic.1001.title
+	desc = br_baltic.1001.desc
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = br_baltic.1001.a #
+
+		FROM = {
+			add_to_faction = ROOT
+			hidden_effect = { country_event = br_baltic.1002 }
+		}
+
+		ai_chance = {
+			base = 20
+		}
+	}
+	
+	option = {
+		name = br_baltic.1001.b #
+		
+		FROM = {
+			effect_tooltip = {
+				create_wargoal = {
+					target = ROOT
+					type = puppet_wargoal_focus
+				}
+			}
+			hidden_effect = { country_event = br_baltic.1003 }
+		}
+
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+country_event = { #
+	id = br_baltic.1002
+	title = br_baltic.1002.title
+	desc = br_baltic.1002.desc
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = br_baltic.1002.a #
+
+		add_political_power = 50
+		add_stability = 0.05
+		effect_tooltip = {
+			FROM = {
+				add_to_faction = ROOT
+			}
+		}
+
+		ai_chance = {
+			base = 20
+		}
+	}
+}
+country_event = { #
+	id = br_baltic.1003
+	title = br_baltic.1003.title
+	desc = br_baltic.1003.desc
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = br_baltic.1003.a #
+
+		add_war_support = 0.05
+		
+		create_wargoal = {
+			target = FROM
+			type = puppet_wargoal_focus
+		}
+
+		ai_chance = {
+			base = 20
+		}
+	}
+}
+
+country_event = { #
+	id = br_baltic.1004
+	title = br_baltic.1004.title
+	desc = br_baltic.1004.desc
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = br_baltic.1004.a #
+
+		FROM = {
+			set_autonomy = {
+				target = ROOT
+				autonomy_state = autonomy_satellite
+			}
+			hidden_effect = { country_event = br_baltic.1005 }
+		}
+
+		ai_chance = {
+			base = 20
+		}
+	}
+	
+	option = {
+		name = br_baltic.1001.b #
+		
+		FROM = {
+			effect_tooltip = {
+				create_wargoal = {
+					target = ROOT
+					type = puppet_wargoal_focus
+				}
+			}
+			hidden_effect = { country_event = br_baltic.1006 }
+		}
+
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+country_event = { #
+	id = br_baltic.1005
+	title = br_baltic.1005.title
+	desc = br_baltic.1005.desc
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = br_baltic.1005.a #
+
+		add_political_power = 50
+		add_stability = 0.05
+		effect_tooltip = {
+			set_autonomy = {
+				target = FROM
+				autonomy_state = autonomy_satellite
+			}
+		}
+
+		ai_chance = { base = 1 }
+	}
+}
+country_event = { #
+	id = br_baltic.1006
+	title = br_baltic.1006.title
+	desc = br_baltic.1006.desc
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = br_baltic.1006.a #
+
+		add_war_support = 0.05
+		#
+		create_wargoal = {
+			target = from
+			type = puppet_wargoal_focus
+		}
+
+		ai_chance = { base = 1 }
+	}
+}
+
+
+add_namespace = br_romania
+
+country_event = { #
+	id = br_romania.1
+	title = br_romania.1.title
+	desc = br_romania.1.desc
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = br_romania.1.a #
+
+		every_core_state = {
+			remove_building = {
+				type = industrial_complex
+				level = 10
+			}
+		}
+
+		ai_chance = { base = 1 }
+	}
+}

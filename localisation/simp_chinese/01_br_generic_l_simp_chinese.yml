@@ -288,3 +288,6 @@
  br_election.4.title: ""
  br_election.4.desc: ""
  br_election.4.a: ""
+
+ br_economic_investment: "在[FROM.GetName]投资"
+ br_economic_investing_flag: "正在为一个地区的投资而进行规划"
