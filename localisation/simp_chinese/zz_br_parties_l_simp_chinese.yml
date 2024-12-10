@@ -258,3 +258,15 @@
  CZE_fascism_party: "全国法西斯联盟"
  CZE_nationalism_party: "全国法西斯联盟"
  CZE_supernationalism_party: "斯拉夫民族秩序派"
+#
+ ROM_soc_anarchism_party: "罗马尼亚左翼无政府派"
+ ROM_vanwardism_party: "罗马尼亚左翼工团派"
+ ROM_sci_socialism_party: "罗马尼亚工人党"
+ ROM_con_socialism_party: "罗马尼亚工人党"
+ ROM_dem_socialism_party: "罗马尼亚社会民主工党"
+ ROM_dem_liberalism_party: "罗马尼亚国家自由党" #
+ ROM_dem_conservatism_party: "国家农民－基督教民主党"
+ ROM_authoritarian_party: "霍亨索伦王朝"
+ ROM_fascism_party: "基督教徒与全国防卫同盟(LANC)"
+ ROM_nationalism_party: "铁卫团"
+ ROM_supernationalism_party: "铁卫团"

@@ -26,7 +26,45 @@ br_debug_decisions = {
 		cost = 0
 
 		complete_effect = {
-			set_country_flag = br_interest_group_gui_visible_flag
+			JAP_anon_chihaya = {
+				add_country_leader_role = {
+					country_leader = {
+						ideology = conservatism
+						traits = {  }
+						expore = "1965.1.1.1"
+						id = -1
+					}
+					promote_leader = yes
+				}
+			}
+			set_politics = {
+				ruling_party = dem_conservatism
+			}
+			#
+		}
+
+		ai_will_do = { base = 0 }
+	}
+	debug.sakiko = {
+		icon = generic_research
+		fire_only_once = no
+		cost = 0
+
+		complete_effect = {
+			JAP_togawa_sakiko = {
+				add_country_leader_role = {
+					country_leader = {
+						ideology = conservatism
+						traits = {  }
+						expore = "1965.1.1.1"
+						id = -1
+					}
+					promote_leader = yes
+				}
+			}
+			set_politics = {
+				ruling_party = dem_conservatism
+			}
 			#
 		}
 

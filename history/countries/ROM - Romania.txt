@@ -42,6 +42,10 @@ set_research_slots = 3
 set_stability = 0.6
 set_war_support = 0.6
 
+recruit_character = ROM_carol_ii_of_romania
+recruit_character = ROM_magda_lupescu
+
+#recruit_character = 
 recruit_character = ROM_gheorghe_tatarescu
 recruit_character = ROM_constantin_ion_parhon
 recruit_character = ROM_armand_calinescu

@@ -1,5 +1,31 @@
 ﻿l_simp_chinese:
-#events
+#U.K.(england)
+
+#U.K.(scotland)
+
+#Éirinn(ireland)
+
+#germany reich
+ DEUTSCH_kaiserreich_power: "巩固帝国"
+ DEUTSCH_kaiserreich_power_desc: ""
+ DEUTSCH_intelligence_sharing: "情报共享"
+ DEUTSCH_intelligence_sharing_desc: ""
+
+ DKR_four_years_plan: "四年计划"
+ DKR_four_years_plan_desc: ""
+ DKR_dismantle_belgium: "拆分比利时"
+ DKR_dismantle_belgium_desc: ""
+ DKR_left_belgium: "撤离比利时"
+ DKR_left_belgium_desc: ""
+ DKR_integrate_alsace: "整合阿尔萨斯-洛林"
+ DKR_integrate_alsace_desc: ""
+#osterreich
+
+#belgique/belgien
+
+#reino de España
+
+#srbija
  SER_war_for_macedonia: "南斯拉夫民族统一战争"
  SER_war_for_macedonia_desc: ""
  
@@ -50,12 +76,6 @@
  SER_national_reserve_desc: ""
  SER_serbian_officer_cap: "塞尔维亚军官团"
  SER_serbian_officer_cap_desc: ""
- 
-
- br_ser.1.title: "塞尔维亚王国要求就履行条约而归还马其顿地区"
- br_ser.1.desc: ""
- br_ser.1.a: "就让战争就此到来吧，我们绝不交出我们民族的土地。"
- br_ser.1.b: "就让战争就此到来吧，我们绝不交出我们民族的土地。"
 
  SER_suppress_imro: "镇压马其顿内部革命组织"
  SER_suppress_imro_desc: ""
@@ -79,3 +99,71 @@
  SER_unification_of_the_balkans_desc: ""
  SER_the_balkans_be_one_country_with_one_pan_nation: "泛巴尔干民族的统一"
  SER_the_balkans_be_one_country_with_one_pan_nation_desc: ""
+
+
+ : ""
+ _desc: ""
+ : ""
+ _desc: ""
+ : ""
+ _desc: ""
+ : ""
+ _desc: ""
+ : ""
+ _desc: ""
+ : ""
+ _desc: ""
+ : ""
+ _desc: ""
+ : ""
+ _desc: ""
+ : ""
+ _desc: ""
+ : ""
+ _desc: ""
+ : ""
+ _desc: ""
+ : ""
+ _desc: ""
+ : ""
+ _desc: ""
+ : ""
+ _desc: ""
+ : ""
+ _desc: ""
+ : ""
+ _desc: ""
+ : ""
+ _desc: ""
+ : ""
+ _desc: ""
+ : ""
+ _desc: ""
+ : ""
+ _desc: ""
+ : ""
+ _desc: ""
+ : ""
+ _desc: ""
+ : ""
+ _desc: ""
+ : ""
+ _desc: ""
+ : ""
+ _desc: ""
+ : ""
+ _desc: ""
+ : ""
+ _desc: ""
+ : ""
+ _desc: ""
+ : ""
+ _desc: ""
+ : ""
+ _desc: ""
+ : ""
+ _desc: ""
+ : ""
+ _desc: ""
+ : ""
+ _desc: ""

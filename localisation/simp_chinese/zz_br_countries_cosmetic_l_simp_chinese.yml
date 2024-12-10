@@ -48,6 +48,10 @@
  FRA_angevin_empire_DEF: "安茹帝国"
  FRA_angevin_empire_ADJ: "法国"
 
+ FRA_UK: "法兰西-不列颠联盟"
+ FRA_UK_DEF: "法兰西-不列颠联盟"
+
+
 #大不列颠区域 Great British Islands Region
  ENG_republic: "英格兰共和国"
  ENG_republic_DEF: "英格兰共和国"
@@ -145,6 +149,9 @@
  CRE_ARAGON: "阿拉贡地区防御委员会"
  CRE_ARAGON_DEF: "阿拉贡地区防御委员会"
  ARAGON: "阿拉贡"
+ ARAGON_DEF: "阿拉贡"
+ ARAGON_ADJ: "阿拉贡"
+ 
  SPR_kingdom: "西班牙王国"
  SPR_kingdom_DEF: "西班牙王国"
  POR_repbulic: "葡萄牙共和国"
@@ -660,9 +667,6 @@
  FRA_GER_fascism_autonomy_reichsprotectorate_DEF: "维希法国"
  FRA_GER_fascism_autonomy_puppet: "维希法国"
  FRA_GER_fascism_autonomy_puppet_DEF: "维希法国"
-
- FRA_UK: "法兰西-不列颠联盟"
- FRA_UK_DEF: "法兰西-不列颠联盟"
 
  LBA_ITA_fascism_autonomy_dominion: "利比亚王国"
  LBA_ITA_fascism_autonomy_colony: "利比亚"

@@ -23,14 +23,6 @@
  CAT_daniel_cardona: "丹尼尔·卡多那"
  CAT_francesc_cambo: "弗朗西斯科·坎博"
 #
-#jap
- JAP_osachi_hamaguchi: "滨口雄幸"
- JAP_tsuyoshi_inukai: "犬养毅"
- JAP_makoto_saito: "斋藤实"
- JAP_keisuke_okada: "冈田启介"
- JAP_koki_hirota: "广田弘毅"
- JAP_senjuro_hayashi: "林铣十郎"
- JAP_fumimaro_konoe: "近卫文磨"
 #bel
 #lux
  LUX_marie_adelaide: "玛丽·阿黛拉伊德"
@@ -124,8 +116,12 @@
  jozef_turanec: "约瑟夫·图拉内茨"
  janko_jesensky: "杨·耶森斯基"
  ferdinand_catlos: "费迪南德·加特罗什"
+#
+ carol_ii: "卡罗尔二世"
+ magda_lupescu: "玛格达·卢佩斯库"
 
-
+ princess_elena_of_romania_ml: "罗马尼亚的艾琳娜王后"
+#
 #SP chars
 #Leader1
  Leader_ioannes_oikos: "伊奥尼斯·阿伊科斯"

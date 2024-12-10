@@ -1,0 +1,15 @@
+﻿l_simp_chinese:
+#U.K.
+ Allies: "同盟国"
+#germany reich
+ Kaiserreich_Power: "帝国同盟"
+ Central_Power: "中央国家同盟"
+
+#osterreich
+
+#belgique/belgien
+
+#reino de España
+ Iberia_allies: "伊比利亚同盟"
+#srbija
+ SER_belgrade_treaty_faction: "贝尔格莱德条约"

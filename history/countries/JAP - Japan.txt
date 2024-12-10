@@ -1,7 +1,5 @@
 ﻿capital = 282
 
-
-
 set_stability = 0.2 #baseline, THE EMPEROR PROTECTS
 set_war_support = 0.8
 
@@ -30,8 +28,6 @@ if = {
 	}
 	add_ideas = MTG_naval_treaty_adherent
 }
-
-
 
 set_technology = {
 	infantry_weapons = 1
@@ -262,7 +258,17 @@ recruit_character = JAP_kingoro_hashimoto
 recruit_character = JAP_sanzo_nosaka
 recruit_character = JAP_hiroshi_oshima
 recruit_character = JAP_kijuro_shidehara
-
+### mygo egg characters ###
+recruit_character = JAP_takamatsu_tomori
+recruit_character = JAP_nagasaki_soyo
+recruit_character = JAP_shiina_taki
+recruit_character = JAP_kaname_rana
+### ave mujica egg characters ###
+recruit_character = JAP_togawa_sakiko
+recruit_character = JAP_misumi_uika
+recruit_character = JAP_yahata_umiri
+recruit_character = JAP_yutenji_nyamu
+recruit_character = JAP_wakaba_mutsumi
 
 if = {
 	limit = {
@@ -1002,3 +1008,4 @@ set_autonomy = {
 	target = KOR
 	autonomy_state = autonomy_dominion
 }
+

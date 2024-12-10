@@ -174,3 +174,372 @@ joint_focus = {
 
 	ai_will_do = { factor = 1 }
 }
+
+### transylvania ###
+shared_focus = {
+	id = TRA_question_of_transylvania
+	icon = GFX_focus_generic_blue_flags
+	#prerequisite = { focus = }
+	x = 100
+	y = 0
+	#relative_position_id = 
+
+	offset = {
+		x = -65
+		y = 0
+		trigger = { has_focus_tree = romanian_focus }
+	}
+
+	cost = 8
+
+	available = {}
+	bypass = {}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+	
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+shared_focus = {
+	id = TRA_advocacy_in_berne
+	icon = GFX_focus_YUG_autonomous_transylvania
+	prerequisite = { focus = TRA_question_of_transylvania }
+	#mutually_exclusive = { focus =  }
+	x = 0
+	y = 1
+	relative_position_id = TRA_question_of_transylvania
+
+	cost = 8
+
+	available = {}
+	bypass = {
+		any_other_country = { has_completed_focus = TRA_advocacy_in_berne }
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+	
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+shared_focus = {
+	id = TRA_popularize_romanian_nationalism
+	icon = GFX_focus_invite_romania
+	prerequisite = { focus = ROM_greater_romania }
+	prerequisite = { focus = TRA_question_of_transylvania }
+	#mutually_exclusive = { focus =  }
+	x = -4
+	y = 1
+	relative_position_id = TRA_question_of_transylvania
+
+	allow_branch = { original_tag = ROM }
+
+	cost = 8
+
+	available = {}
+	bypass = {
+		any_core_state = {
+			is_core_of = TRA
+			has_resistance = no
+		}
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+	
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+shared_focus = {
+	id = TRA_manipulate_the_committee
+	icon = GFX_focus_ARG_keep_it_in_the_party
+	prerequisite = { focus = TRA_popularize_romanian_nationalism }
+	#mutually_exclusive = { focus =  }
+	x = -1
+	y = 1
+	relative_position_id = TRA_popularize_romanian_nationalism
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+shared_focus = {
+	id = TRA_force_education
+	icon = GFX_goal_generic_forceful_treaty
+	prerequisite = { focus = TRA_popularize_romanian_nationalism }
+	#mutually_exclusive = { focus =  }
+	x = 1
+	y = 1
+	relative_position_id = TRA_popularize_romanian_nationalism
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+shared_focus = {
+	id = TRA_reintegrate_transylvania
+	icon = GFX_focus_generic_self_management
+	prerequisite = { focus = TRA_manipulate_the_committee }
+	prerequisite = { focus = TRA_force_education }
+	#mutually_exclusive = { focus =  }
+	x = 1
+	y = 1
+	relative_position_id = TRA_manipulate_the_committee
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+shared_focus = {
+	id = TRA_construct_infrastructure
+	icon = GFX_goal_generic_construct_infrastructure
+	prerequisite = { focus = TRA_reintegrate_transylvania }
+	#mutually_exclusive = { focus =  }
+	x = 0
+	y = 1
+	relative_position_id = TRA_reintegrate_transylvania
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+shared_focus = {
+	id = TRA_heavy_industry
+	icon = GFX_goal_generic_construct_civ_factory
+	prerequisite = { focus = TRA_construct_infrastructure }
+	#mutually_exclusive = { focus =  }
+	x = -2
+	y = 1
+	relative_position_id = TRA_construct_infrastructure
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+shared_focus = {
+	id = TRA_resita
+	icon = GFX_focus_generic_steel
+	prerequisite = { focus = TRA_heavy_industry }
+	#mutually_exclusive = { focus =  }
+	x = -1
+	y = 1
+	relative_position_id = TRA_heavy_industry
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+shared_focus = {
+	id = TRA_siderurgica_hunedoara
+	icon = GFX_goal_generic_production
+	prerequisite = { focus = TRA_heavy_industry }
+	#mutually_exclusive = { focus =  }
+	x = 1
+	y = 1
+	relative_position_id = TRA_heavy_industry
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	complete_tooltip = {
+		random_state = {
+			limit = {
+				has_state_flag = ROM_hunedoara_steel_works_IC
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+			add_resource = {
+				type = steel
+				amount = 8
+			}
+		}
+	}
+	completion_reward = {
+		random_owned_controlled_state = {
+			prioritize = { 84 }
+			limit = {
+				ROOT = { has_full_control_of_state = PREV } 
+				free_building_slots = {
+					building = industrial_complex
+					size > 1
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+			set_state_flag = ROM_hunedoara_steel_works_IC
+			add_resource = {
+				type = steel
+				amount = 12
+			}
+		}
+	}
+
+	ai_will_do = { factor = 1 }
+}
+shared_focus = {
+	id = TRA_1
+	icon = GFX_goal_generic_construct_civ_factory
+	prerequisite = { focus = TRA_resita }
+	prerequisite = { focus = TRA_siderurgica_hunedoara }
+	#mutually_exclusive = { focus =  }
+	x = 1
+	y = 1
+	relative_position_id = TRA_resita
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+
+shared_focus = {
+	id = TRA_12
+	icon = GFX_goal_generic_construct_civ_factory
+	prerequisite = { focus = TRA_construct_infrastructure }
+	#mutually_exclusive = { focus =  }
+	x = 2
+	y = 1
+	relative_position_id = TRA_construct_infrastructure
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+
+joint_focus = {
+	id = TRA_1
+	icon = GFX_focus_generic_treaty
+	#prerequisite = { focus = TRA_question_of_transylvania }
+	#mutually_exclusive = { focus =  }
+	x = 2
+	y = 1
+	#relative_position_id = TRA_question_of_transylvania
+
+	cost = 8
+
+	joint_trigger = {
+		#is_in_faction_with = DKR
+		OR = {
+
+		}
+	}
+	available = {}
+	bypass = {}
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+	
+	#完成国策的所有国家
+	completion_reward = {}
+	#发起人
+	completion_reward_joint_originator = {}
+	#其他成员
+	completion_reward_joint_member = {}
+
+	ai_will_do = { factor = 1 }
+}

@@ -3,6 +3,7 @@ basic(base):
     cesko
     romania
 the Storm Approaching(TSA):
+    U.K.(england, scotland, ireland)
     germany reich
     osterreich
     belgique/belgien
@@ -20,7 +21,10 @@ Liberté Égalité Fraternité(LEF):
     Polski
     Україна(Ukraine)
     Suomi
-
+八纮一宇/hakou ichiu (HKI)
+    Japan
+    Korea
+    Fengxi
 
 #faith
 

@@ -1,4 +1,5 @@
-characters={
+﻿characters={
+###  ###
 	Leader_ioannes = {
 		name = Leader_ioannes_oikos
 		portraits = {
@@ -143,5 +144,119 @@ characters={
 			cost = 75
 			traits = {}
 		}
+	}
+### it's my go! ###
+	JAP_chihaya_anon = { #anon
+		name = chihaya_anon
+		portraits = {
+			civilian = {
+				large = GFX_portrait_JAP_chihaya_anon
+				small = GFX_portrait_JAP_chihaya_anon_small
+			}
+		}
+		gender = female
+	}
+	JAP_takamatsu_tomori  = { #tomorin
+		name = takamatsu_tomori
+		portraits = {
+			civilian = {
+				large = GFX_portrait_JAP_takamatsu_tomori
+				small = GFX_portrait_JAP_takamatsu_tomori_small
+			}
+		}
+		gender = female
+	}
+	JAP_nagasaki_soyo = { #soyorin
+		name = nagasaki_soyo
+		portraits = {
+			civilian = {
+				large = GFX_portrait_JAP_nagasaki_soyo
+				small = GFX_portrait_JAP_nagasaki_soyo_small
+			}
+		}
+		gender = female
+	}
+	JAP_shiina_taki = { #rikki
+		name = shiina_taki
+		portraits = {
+			civilian = {
+				large = GFX_portrait_JAP_shiina_taki
+				small = GFX_portrait_JAP_shiina_taki_small
+			}
+		}
+		gender = female
+	}
+	JAP_kaname_rana = { #neko
+		name = kaname_rana
+		portraits = {
+			civilian = {
+				large = GFX_portrait_JAP_kaname_rana
+				small = GFX_portrait_JAP_kaname_rana_small
+			}
+		}
+		gender = female
+	}
+### ave mujika ### waiting still
+	JAP_togawa_sakiko = { #togawa sakiko
+		name = togawa_sakiko
+		portraits = {
+			civilian = {
+				large = GFX_portrait_JAP_togawa_sakiko
+				small = GFX_portrait_JAP_togawa_sakiko_small
+			}
+		}
+		gender = female
+	}
+	JAP_misumi_uika = { #misumi _uika
+		name = misumi_uika
+		portraits = {
+			civilian = {
+				large = GFX_portrait_JAP_misumi_uika
+				small = GFX_portrait_JAP_misumi_uika_small
+			}
+		}
+		gender = female
+	}
+	JAP_yahata_umiri = { #yahata umiri
+		name = yahata_umiri
+		portraits = {
+			civilian = {
+				large = GFX_portrait_JAP_yahata_umiri
+				small = GFX_portrait_JAP_yahata_umiri_small
+			}
+		}
+		gender = female
+	}
+	JAP_yutenji_nyamu = {
+		name = yutenji_nyamu
+		portraits = {
+			civilian = {
+				large = GFX_portrait_JAP_yutenji_nyamu
+				small = GFX_portrait_JAP_yutenji_nyamu_small
+			}
+		}
+		gender = female
+	}
+	JAP_wakaba_mutsumi = {
+		name = wakaba_mutsumi
+		portraits = {
+			civilian = {
+				large = GFX_portrait_JAP_wakaba_mutsumi
+				small = GFX_portrait_JAP_wakaba_mutsumi_small
+			}
+		}
+		gender = female
+	}
+
+### sultan sakiko ###
+	TUR_togawa_sakiko = { #togawa sakiko
+		name = togawa_sakiko
+		portraits = {
+			civilian = {
+				large = GFX_portrait_JAP_togawa_sakiko
+				small = GFX_portrait_JAP_togawa_sakiko_small
+			}
+		}
+		gender = female
 	}
 }

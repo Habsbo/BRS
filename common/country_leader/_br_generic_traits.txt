@@ -375,6 +375,25 @@ leader_traits = {
 		custom_modifier_tooltip = SLO_bop_move_to_kaisertum_usterreich_side_weekly_tt
 	}
 
+	arahitogami = {
+		random = no
+		sprite = 13
+
+		political_power_factor = 0.15
+		war_support_factor = 0.30
+		stability_factor = 0.30
+		army_attack_factor = 0.05
+		army_defence_factor = 0.05
+		army_org_factor = 0.05
+	}
+
+	princess_elena_of_romania_ml = {
+		random = no
+		sprite = 13
+		
+	}
+
+
 ###
 	generic_statesman_1 = {
 		random = no
