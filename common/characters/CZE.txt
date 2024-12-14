@@ -362,7 +362,7 @@ characters = {
 		}
 	}
 
-	CZE_tomas_garrigue_masaryk = { #Tomáš Garrigue Masaryk
+	CZE_tomas_garrigue_masaryk = { #Tomáš Garrigue Masaryk - 托马斯·马萨里克
 		name=tomas_garrigue_masaryk
 		portraits={
 			civilian = {

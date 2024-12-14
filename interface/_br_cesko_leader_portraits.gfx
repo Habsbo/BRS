@@ -1,0 +1,14 @@
+spriteTypes = {
+# characters of cesko
+
+	###
+	spriteType = {
+		name = "GFX_portrait_CZE_tomas_garrigue_masaryk"
+		texturefile = "gfx/leaders/CZE/portrait_CZE_tomas_garrigue_masaryk.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_CZE_tomas_garrigue_masaryk_small"
+		texturefile = "gfx/interface/ideas/GER/portrait_CZE_tomas_garrigue_masaryk_small.dds"
+	}
+}

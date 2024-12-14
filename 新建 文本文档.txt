@@ -1,8 +1,8 @@
 主题：
-basic(base):
+· basic(base):
     cesko
     romania
-the Storm Approaching(TSA):
+· the Storm Approaching (TSA):
     U.K.(england, scotland, ireland)
     germany reich
     osterreich
@@ -10,21 +10,46 @@ the Storm Approaching(TSA):
     reino de España
     srbija
 
-Liberté Égalité Fraternité(LEF):
+· Liberté Égalité Fraternité (LEF):
     république française
     U.S.A.
     North Africa
 
-Во имя царя/In the name of Tsar(VIC)
+· oice of Proletariat (VOP): 
+    italy countries
+    république française (radicals)
+    benelux
+
+· Во имя царя/In the name of Tsar (VIC)
     Россия(Russia)
     Soviet & Анархізм в Україні(Soviet & Anarchism Ukraine)
     Polski
     Україна(Ukraine)
     Suomi
-八纮一宇/hakou ichiu (HKI)
+    Ottoman (Türkiye)
+
+· 八纮一宇/hakou ichiu (HKI)
     Japan
     Korea
     Fengxi
+
+· The Art of War (AOW):
+    China(BeiYang/Dai Qing Gurlun)
+    mongolian regimes
+    Chasui(Shanxi,Jinxi junfa)
+    Huibu(Majiajun, Hui rebels)
+    XinJiang
+    China Repulic(GXC)
+
+· 红星照耀中国/red star over china (RSC):
+    PRC(CPC)
+    KMT
+    Tibet
+    British Raj
+    Burma
+    Indo China
+· 
+
 
 #faith
 

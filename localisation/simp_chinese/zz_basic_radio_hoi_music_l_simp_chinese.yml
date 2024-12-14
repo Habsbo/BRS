@@ -1,0 +1,160 @@
+﻿l_simp_chinese:
+### basic - 基础包 ###
+ #SHOULD NOT BE TRANSLATED FROM ENGLISH
+ #HOI4 Soundtrack
+ maintheme: "Main Theme - Allies（同盟国主题曲）"
+ axis_war_1: "Axis Theme（轴心国主题曲）"
+ allies_peace_1: "Morning of D-day（D日清晨）"
+ general_war_1: "Bring Forth the Tanks（坦克进军）"
+ axis_peace_1: "Krakow（克拉科夫）"
+ general_war_2: "The Attack（攻势）"
+ comintern_war_1: "The Might of the Soviet Union（苏联之力）"
+ comintern_war_2: "Comintern Theme（共产国际主题曲）"
+ axis_war_4: "Days of Thunder（雷霆岁月）"
+ general_peace_1: "Hearts of Men（匹夫之心）"
+ allies_war_2: "The Royal Airforce（皇家空军）"
+ axis_war_2: "Heavy Water（重水）"
+ comintern_war_3: "The Great Patriotic War（伟大的卫国战争）"
+ general_peace_3: "A Song For the Children of WW2（献给二战孩童之歌）"
+ comintern_peace_2: "The Red Army（红军）"
+ allies_war_1: "We Are Soldiers（我们是战士）"
+ comintern_peace_1: "Mother Russia（俄罗斯母亲）"
+ axis_peace_2: "Luftwaffe March - Reprise（德国空军进行曲-重奏）"
+ axis_war_3: "Operation Barbarossa（巴巴罗萨行动）"
+ allies_peace_2: "End of the Tour（旅程的终点）"
+ comintern_peace_3: "Russian Victory（俄罗斯的胜利）"
+ general_peace_2: "The War Ends（战争的终末）"
+ #HOI2 Soundtrack
+ achtungpanzer: "Achtung Panzer!（注意坦克！）"
+ astateofgrace: "A State of Grace（恩典之地）"
+ happymarch: "Happy March（快乐行军）"
+ heartsofiron2overturemenu: "Hearts of Iron 2 Overture/Menu（钢铁雄心2序曲/菜单）"
+ hoilero: "Hoilero（赫利尔）"
+ japanoverture: "Japan Overture（日本序曲）"
+ kriegsgewitter: "Kriegsgewitter（战争风暴）"
+ leavingshore: "Leaving Shore（离开海岸）"
+ lullabyofwar: "Lullaby of War（战争摇篮曲）"
+ marchtothefront: "March to the Front（向前线进军）"
+ montgomerysmarch: "Montgomery's March（蒙哥马利进行曲）"
+ rafheroesofthesky: "R.A.F - Heroes of the Sky（皇家空军-空战英豪）"
+ stalingradadagioindminor: "Stalingrad - Adagio in D-minor（斯大林格勒-D小调柔板）"
+ the101stairborne: "The 101st Airborne（第101空降师）"
+ war: "War（战争）"
+ variationsontherussianthem: "Variations on the Russian Theme（俄罗斯主题变奏曲）"
+ #HOI3 Soundtrack
+ alliesfaction: "Allies Faction（同盟阵营）"
+ alotofseactions: "Sea Action（海上行动）"
+ axis1march: "Axis March（轴心国进行曲）"
+ bigairforce: "Big Airforce（大空军）"
+ bigfleet: "Big Fleet（大舰队）"
+ bombingthem: "Bombing Them（轰袭贼众）"
+ epicbattle: "Epic Battle（史诗之战）"
+ hoi3maintheme: "Main Theme（主题曲）"
+ hymnfortheoneslostatsea: "Hymn for the Ones Lost at Sea（逝于海中勇士之圣歌）"
+ landactions: "Land Actions（陆上行动）"
+ lettersfromhome: "Letters from Home（家书）"
+ lotsofbattles: "Lots of Battles（历战）"
+ offensive: "Offensive（进攻）"
+ sovietsuite_finale: "Soviet Suite - Finale（苏联组曲-终曲）"
+ sovietsuite_part2: "Soviet Suite - Part 2（苏联组曲-第二乐章）"
+ threatenedwhileatpeace: "Threatened（威慑）"
+ unitednations: "United Nations（联合国）"
+ unitylow: "Unity Low（人心溃散）"
+ wearefree: "We Are Free（我等终自由）"
+ #NEW MUSIC NAMES HERE BELOW
+### TFV - 共赴胜利 ###
+ heroesofelalamein: "Heroes of El Alamein（阿拉曼英豪）"
+ londoninflames: "London In Flames（伦敦业火）"
+ operationcompas: "Operation Compass（罗盘行动）"
+### DOD - 玉碎瓦全 ###
+ aggression: "Aggression（侵略主义）"
+ escalation: "Escalation（危机升级）"
+ retribution: "Retribution（恩怨报偿）"
+### MTG - 炮手就位 ###
+ #SHOULD NOT BE TRANSLATED FROM ENGLISH
+ claustrophobic_march: "A Change in Course（调整航线）"
+ communist_america: "Shatter the Empires（粉碎帝国）"
+ confederate_flags: "Confederate Flags（邦联战旗）"
+ democratic_movements: "Arsenal of Democracy（民主兵工厂）"
+### WTT - 唤醒勇虎 ###
+ battleofwuhan: "Battle of Wuhan（武汉会战）"
+ empireofthesun: "Empire of the Sun（旭日帝国）"
+ warofresistance: "War of Resistance（抗日战争）"
+### MTG - 炮手就位 ###
+ #SHOULD NOT BE TRANSLATED FROM ENGLISH
+ claustrophobic_march: "A Change in Course（调整航线）"
+ communist_america: "Shatter the Empires（粉碎帝国）"
+ confederate_flags: "Confederate Flags（邦联战旗）"
+ democratic_movements: "Arsenal of Democracy（民主兵工厂）"
+### LAR - 抵抗运动（预购） ###
+ #SHOULD NOT BE TRANSLATED FROM ENGLISH
+ march_of_the_eagles: "March of the Eagles（雄鹰进军）"
+### LAR - 抵抗运动 ###
+ #SHOULD NOT BE TRANSLATED FROM ENGLISH
+ liberty_equality_fraternity: "Liberty, Equality, Fraternity（自由、平等、博爱）"
+ imperterrita: "Imperterrita（无畏无惧）"
+ cloak_and_dagger: "Cloak and Dagger（斗篷与匕首）"
+ a_storm_coming: "A Storm Coming（风暴将至）"
+### bftb - 博斯普鲁斯之战 ###
+ #SHOULD NOT BE TRANSLATED FROM ENGLISH
+ the_end_of_the_war: "The End of the War（终战之时）"
+ the_final_frontier: "The Final Frontier（绝境战线）"
+ the_black_sea: "The Black Sea（黑海）"
+### NSB - 决不后退（预购） ###
+ katyusha: "Katyusha（喀秋莎）"
+### NSB - 决不后退 ###
+ #SHOULD NOT BE TRANSLATED FROM ENGLISH
+ army_of_the_braves: "Army of the Braves（勇者之军）"
+ bravery_of_the_minority: "Bravery of the Minority（少数者的勇行）"
+ march_of_the_defenders: "March of the Defenders（莫斯科保卫者之歌）"
+ sacred_war: "Sacred War（神圣的战争）"
+### BBA - 唯有浴血（预购） ###
+ bella_ciao: "Bella Ciao（啊，朋友再见）"
+### BBA - 唯有浴血 ###
+ #SHOULD NOT BE TRANSLATED FROM ENGLISH
+ ethiopian_highlands: "Ethiopian Highlands（埃塞俄比亚高原）"
+ safer_grounds: "Safer Grounds（更安全的地区）"
+ threat_from_red_sea: "Threat From Red Sea（红海威胁重重）"
+ wildlife_surroundings: "Wildlife Surroundings（野兽伴身）"
+ cittadina_irresistibile: "Cittadina Irresistibile（迷人小城）"
+ fino_a_combattere: "Fino A Combattere（直到战斗）"
+ la_marcia_dei_soldati: "La Marcia Dei Soldati（士兵进行曲）"
+ lotta_di_vecchi_amici: "Lotta Di Vecchi Amici（旧友新敌）"
+ dem_vaterland: "Dem Vaterland（祖国）"
+ der_preis_fur_die_freiheit: "Der Preis Fur Die Freiheit（自由的代价）"
+ die_parade: "Die Parade（游行）"
+ tag_der_heimkehr: "Tag Der Heimkehr（还乡之日）"
+### AAT - 以力御暴（预购） ###
+ sakkijarven_polkka: "Säkkijärven Polkka（塞基耶尔维波尔卡）"
+### AAT - 以力御暴 ###
+ a_scandinavian_summer_suite: "A Scandinavian Summer Suite（北欧小屋的夏日风光）"
+ attention_swedish_tattoo: "Attention Swedish Tattoo（注意！瑞典刺青）"
+ danish_song_of_liberation: "Danish Song of Liberation（丹麦解放之歌）"
+ heroes_of_rjukan_extended: "Heroes of Rjukan - Extended（留坎英雄 - 加长版）"
+ north_star_solidarity: "North Star Solidarity（团结的北极星）"
+ norwegian_resistance: "Norwegian Resistance（挪威起义军）"
+ rising_tension: "Rising Tension（剑拔弩张）"
+ swedish_solicitude: "Swedish Solicitude（瑞典式关怀）"
+ the_winter_war: "The Winter War（冬季战争）"
+### TOA - 忠诚试炼 ###
+ argentina_civilian: "El Tango Argentino（阿根廷探戈）"
+ argentina_militaristic: "Path to the Sun of May（通往五月太阳之路）"
+ brazil_civilian: "Samba of the South（南方桑巴）"
+ brazil_militaristic: "Blood of your heroes（汝辈英模之血）"
+ chile_civilian: "Patagonian Dreams（巴塔哥尼亚之梦）"
+ chile_militaristic: "Victoria en las costas del Pacífico（太平洋岸之捷）"
+ carnavaldobrasil: "Carnaval Do Brasil（巴西狂欢节）"
+### GOT - 诸神黄昏（预购） ###
+ ride_of_the_valkyries: "女武神的骑行"
+### GOT - 诸神黄昏 ###
+ apocalyptic_weapons: "Twilight Of The Gods（诸神的黄昏）"
+ austria_peace: "A Waltz For The Glorious Days（致辉煌岁月的华尔兹）"
+ austria_war: "Pompous Parades（华丽游行）"
+ belgium_peace: "Belgian Memories（比利时的回忆）"
+ belgium_war: "Hearts Of Barbed Wire（铁网雄心）"
+ commando_raid: "Commando Raid（特战突袭）"
+ germany_freedom: "Befreiung（解放）"
+ germany_war: "Nebelsturm（雾中风暴）"
+ great_empire_rises_again: "Wiederkehr（帝国再兴）"
+ hungary_peace: "Sunrise Over Budapest（日出布达佩斯）"
+ hungary_war: "Sweet Vengeance（甜蜜复仇）"

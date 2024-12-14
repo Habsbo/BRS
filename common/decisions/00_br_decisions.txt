@@ -774,6 +774,7 @@ br_economic = {
 				is_owned_by = ROOT
 			}
 		}
+		visible = { has_country_flag = br_economic_investing_flag }
 		available = { has_country_flag = br_economic_investing_flag }
 
 		cost = 50

@@ -64,50 +64,7 @@ KMT = {
 CNR = {
 	has_country_flag = China_Republic_flag
 }
-#
-HEL = {
-	original_tag = GRE
-	tag = GRE
-}
-HER = {
-	original_tag = GRE
-	has_country_flag = br_HEL_hellenic_republic_flag
-}
-HEK = {
-	original_tag = GRE
-	country_score = {
-		base = 0
-		modifier = {
-			has_idea = br_laws_monarchy
-			add = 5
-		}
-		modifier = {
-			has_country_flag = br_HEL_hellenic_kingdom_flag
-			add = 10
-		}
-	}
-}
-HED = {
-	original_tag = GRE
-	country_score = {
-		base = 0
-		modifier = {
-			has_idea = br_laws_proletariat
-			add = 5
-		}
-		modifier = {
-			has_country_flag = br_HEL_hellenic_democratic_republic_flag
-			add = 10
-		}
-	}
-}
-BYZ = {
-	original_tag = GRE
-	country_score = {
-		base = 1
-		modifier = { add = 10 }
-	}
-}
+
 #Catalonia/Aragon 加泰罗尼亚/阿拉贡
 ARA = {
 	OR = {

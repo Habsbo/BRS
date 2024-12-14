@@ -1,0 +1,119 @@
+add_namespace = br_romania
+
+country_event = { #
+	id = br_romania.1
+	title = br_romania.1.title
+	desc = br_romania.1.desc
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = br_romania.1.a #
+
+
+
+		ai_chance = { base = 1 }
+	}
+}
+
+###
+add_namespace = br_transilvania
+###
+country_event = { #
+	id = br_transilvania.1
+	title = br_transilvania.1.title
+	desc = br_transilvania.1.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			#
+		}
+	}
+
+	option = {
+		name = br_transilvania.1.a #
+
+		hidden_effect = {}
+
+		#trigger = { is_chairman_of_berne_concert = yes }
+
+		ai_chance = { factor = 5 }
+	}
+
+	option = {
+		name = br_transilvania.1.b #
+
+		hidden_effect = {}
+
+		#trigger = { NOT = { is_chairman_of_berne_concert = yes } }
+
+		ai_chance = { factor = 5 }
+	}
+
+	option = {
+		name = br_transilvania.1.c #
+
+		hidden_effect = {}
+
+		trigger = { NOT = { is_chairman_of_berne_concert = yes } }
+		
+		ai_chance = { factor = 5 }
+	}
+
+}
+
+add_namespace = br_generate_character
+###
+country_event = { #
+	id = br_generate_character.1
+	title = br_generate_character.1.title
+	desc = br_generate_character.1.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			#
+		}
+	}
+
+	option = {
+		name = br_generate_character.1.a #
+
+		hidden_effect = {}
+
+		generate_character = {
+			token_base = br_generated_character
+			name = br_generated_character
+			portraits = {
+				army = {
+					large="GFX_portrait_chi_alexander_von_falkenhausen"
+					small="GFX_idea_CHI_alexander_von_falkenhausen" 
+				}
+			}
+			advisor = {
+				slot = head_of_gov
+				available = {  }
+				visible = {  }
+				traits = {  }
+				cost = 50
+				ai_will_do = {
+					factor = 2
+				}
+			}
+		}
+
+		ai_chance = { factor = 5 }
+	}
+
+}
+
+

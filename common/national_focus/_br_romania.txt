@@ -13,7 +13,7 @@ focus_tree = {
 	
 	default = no
 
-	continuous_focus_position = { x = 50 y = 1500 }
+	continuous_focus_position = { x = 2800 y = 10 }
 
 #	focus = {
 #		id = ROM_
@@ -299,8 +299,12 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 	
-		complete_tooltip = {}
-		completion_reward = {}
+		complete_tooltip = {
+			unlock_decision_category_tooltip = br_romania_ic_categories
+		}
+		completion_reward = {
+			unlock_decision_category_tooltip = br_romania_ic_categories
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -2589,7 +2593,7 @@ focus_tree = {
 		icon = GFX_focus_generic_improve_the_administration
 		#prerequisite = { focus = }
 		#mutually_exclusive = { focus =  }
-		x = 18
+		x = 16
 		y = 0
 		#relative_position_id = 
 
@@ -2743,7 +2747,7 @@ focus_tree = {
 		#prerequisite = { focus = }
 		#mutually_exclusive = { focus =  }
 		x = 25
-		y = 0
+		y = 2
 		#relative_position_id = 
 
 		cost = 5

@@ -1,0 +1,33 @@
+br_romania_ic_categories = {
+	icon = generic_industry
+
+	allowed = { original_tag = ROM }
+
+	#visible = {}
+	
+	on_map_area = {
+		name = br_romania_ic_categories_on_map_area
+		zoom = 200
+		target_array = ROM.core_states
+		target_trigger = {
+			FROM = {
+				is_controlled_by = root
+				is_in_home_area = yes
+			}
+		}
+	}
+
+	visible_when_empty = yes
+	priority = 10
+}
+
+br_romania_agrarian_reform = {
+	icon = usa_intervention_mandate
+
+	allowed = { original_tag = ROM }
+
+	#visible = {}
+	
+	visible_when_empty = yes
+	priority = 9
+}

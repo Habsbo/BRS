@@ -24,6 +24,25 @@
 #belgique/belgien
 
 #reino de España
+ SPR_gran_espanna: "大西班牙"
+ SPR_gran_espanna_desc: ""
+ SPR_lose_rif_war: "镇压里夫抵抗的失败"
+ SPR_lose_rif_war_desc: ""
+ SPR_win_rif_war: "镇压里夫抵抗的胜利"
+ SPR_win_rif_war_desc: ""
+ SPR_continue_the_war: "继续战争"
+ SPR_continue_the_war_desc: ""
+ SPR_reorganized_north_african_legion: "重组北非军团"
+ SPR_reorganized_north_african_legion_desc: ""
+ SPR_promote_franco: "擢升弗朗哥"
+ SPR_promote_franco_desc: ""
+
+ SPR_anti_the_war_and_anticolonialism: "反战与反殖民思潮"
+ SPR_anti_the_war_and_anticolonialism_desc: ""
+ SPR_rex_was_vermin: "暴君窃国"
+ SPR_rex_was_vermin_desc: ""
+ SPR_calling_of_democratic_republic: "对民主共和国的呼唤"
+ SPR_calling_of_democratic_republic_desc: ""
 
 #srbija
  SER_war_for_macedonia: "南斯拉夫民族统一战争"
