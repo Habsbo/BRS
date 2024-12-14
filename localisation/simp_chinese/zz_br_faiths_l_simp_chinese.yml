@@ -35,3 +35,6 @@
  trait_mahdi: "马赫迪"
 #
  culture_france: "法兰西"
+
+ faith_status_tt: "§H[FROM.GetFaith]§!\n§g[FROM.GetName]§!的§Y主流§!信仰"
+ faith_desc_tt: "[FROM.GetFaith]"

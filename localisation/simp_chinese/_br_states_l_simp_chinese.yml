@@ -1,5 +1,5 @@
 ﻿l_simp_chinese:
  state_culture_major: "文化：[FROM.GetStateCulture]"
- state_faith_major: "信仰：[FROM.GetStateFaith]"
+ state_faith_major: "信仰：[FROM.GetFaith]"
  GetStateCulture_default: "未知"
- GetStateFaith_default: "未知"
+ GetFaith_default: "未知"

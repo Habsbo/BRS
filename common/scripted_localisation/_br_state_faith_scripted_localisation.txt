@@ -1,5 +1,5 @@
 defined_text = { # Country
-	name = GetStateFaith
+	name = GetFaith
 	text = {
 		trigger = {
 			FROM = {
@@ -12,7 +12,7 @@ defined_text = { # Country
 		localization_key = faith_catholic
 	}
 	text = {
-		localization_key = GetStateFaith_default
+		localization_key = GetFaith_default
 	}
 }
 

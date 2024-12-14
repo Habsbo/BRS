@@ -29,7 +29,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "state_culture"
 			position = { x = 0 y= 0 }
-			font = "hoi_20b"
+			font = "hoi_24header"
 			maxWidth = 200
 			maxHeight = 15
 			fixedsize = yes
@@ -40,17 +40,17 @@ guiTypes = {
 			name = "state_faith_status"
 			#spriteType = GFX_faith_catholic #[Faith_picture]
 			position = { x = 200  y = 0 } 
-			#pdx_tooltip = VL_state_tt
-			#pdx_tooltip_delayed = VL_desc_tt
+			pdx_tooltip = faith_status_tt
+			pdx_tooltip_delayed = faith_desc_tt
 		}
 		instantTextboxType = {
 			name = "state_faith"
 			position = { x = 300 y= 0 }
-			font = "hoi_20b"
+			font = "hoi_24header"
 			maxWidth = 200
 			maxHeight = 15
 			fixedsize = yes
-			text = "[GetStateFaith]"
+			text = "[GetFaith]"
 		}
 	}
 	
