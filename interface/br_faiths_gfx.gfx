@@ -1,0 +1,83 @@
+spriteTypes = {
+
+###  ###
+	spriteType = {
+		name = "GFX_faith_catholic"
+		texturefile = "gfx/interface/faith/faith_icons/catholic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_faith_orthodox"
+		texturefile = "gfx/interface/faith/faith_icons/orthodox.dds"
+	}
+
+	spriteType = {
+		name = "GFX_faith_protestantism"
+		texturefile = "gfx/interface/faith/faith_icons/protestantism.dds"
+	}
+
+	spriteType = {
+		name = "GFX_faith_armenian"
+		texturefile = "gfx/interface/faith/faith_icons/armenian.dds"
+	}
+
+	spriteType = {
+		name = "GFX_faith_judaism"
+		texturefile = "gfx/interface/faith/faith_icons/judaism.dds"
+	}
+
+	spriteType = {
+		name = "GFX_faith_protestantism"
+		texturefile = "gfx/interface/faith/faith_icons/protestantism.dds"
+	}
+
+	spriteType = {
+		name = "GFX_faith_sunni"
+		texturefile = "gfx/interface/faith/faith_icons/sunni.dds"
+	}
+
+	spriteType = {
+		name = "GFX_faith_shia"
+		texturefile = "gfx/interface/faith/faith_icons/shia.dds"
+	}
+
+	spriteType = {
+		name = "GFX_faith_nadjat"
+		texturefile = "gfx/interface/faith/faith_icons/nadjat.dds"
+	}
+
+	spriteType = {
+		name = "GFX_faith_islam_druze"
+		texturefile = "gfx/interface/faith/faith_icons/islam_druze.dds"
+	}
+
+	spriteType = {
+		name = "GFX_faith_zoroastrian"
+		texturefile = "gfx/interface/faith/faith_icons/zoroastrian.dds"
+	}
+
+	spriteType = {
+		name = "GFX_faith_hinduism"
+		texturefile = "gfx/interface/faith/faith_icons/hinduism.dds"
+	}
+
+	spriteType = {
+		name = "GFX_faith_mahayana"
+		texturefile = "gfx/interface/faith/faith_icons/mahayana.dds"
+	}
+
+	spriteType = {
+		name = "GFX_faith_taoism"
+		texturefile = "gfx/interface/faith/faith_icons/taoism.dds"
+	}
+
+	spriteType = {
+		name = "GFX_faith_tengri"
+		texturefile = "gfx/interface/faith/faith_icons/tengri.dds"
+	}
+
+	spriteType = {
+		name = "GFX_faith_coptic"
+		texturefile = "gfx/interface/faith/faith_icons/coptic.dds"
+	}
+}

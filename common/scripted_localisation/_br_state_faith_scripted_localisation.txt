@@ -1,0 +1,35 @@
+defined_text = { # Country
+	name = GetStateFaith
+	text = {
+		trigger = {
+			FROM = {
+				check_variable = {
+					faith_catholic = 50
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		localization_key = faith_catholic
+	}
+	text = {
+		localization_key = GetStateFaith_default
+	}
+}
+
+defined_text = { # Country
+	name = faith_picture
+	text = {
+		trigger = {
+			FROM = {
+				check_variable = {
+					faith_catholic = 50
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		localization_key = GFX_faith_catholic
+	}
+	text = {
+		localization_key = GFX_faith_catholic
+	}
+}

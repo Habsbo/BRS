@@ -87,3 +87,21 @@ scripted_gui = {
 		visible = { always = yes }
 	}
 }
+
+
+
+scripted_gui = {
+	state_info_text = {
+		window_name = "state_info_text"
+		context_type = selected_state_context
+		parent_window_token = selected_state_view
+		
+		visible = { always = yes }
+		
+		properties = {
+			state_faith_status = {
+				image = "[faith_picture]"
+			}
+		}
+	}
+}

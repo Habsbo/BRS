@@ -1,0 +1,17 @@
+defined_text = { # Country
+	name = GetStateCulture
+	text = {
+		trigger = {
+			FROM = {
+				check_variable = {
+					culture_france = 50
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		localization_key = culture_france
+	}
+	text = {
+		localization_key = GetStateCulture_default
+	}
+}

@@ -130,6 +130,13 @@ on_actions = {
 			###
 			794 = { remove_core_of = BAR }
 			166 = { remove_claim_by = BAR }
+			###
+			FRA = {
+				every_core_state = {
+					set_variable = { culture_france = 100 }
+					set_variable = { faith_catholic = 100 }
+				}
+			}
 		}
 	}
 	on_monthly = {

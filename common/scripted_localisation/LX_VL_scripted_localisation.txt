@@ -639,6 +639,23 @@ defined_text = {
 		}
 		localization_key = CL_Tsar
 	}
+	#Japan
+	text = {
+		trigger = {
+			FROM = {
+				check_variable = { state_rank < 1 }
+				original_tag = JAP
+				var:country_leader = { has_character_flag = br_is_mikado_character_flag }
+				has_country_flag = br_cl_status_flavour_flag
+				OR = {
+					has_idea = br_laws_feudalism
+					has_idea = br_laws_monarchy
+					has_idea = br_laws_cleric
+				}
+			}
+		}
+		localization_key = CL_mikado
+	}
 	text = { localization_key = PL_country_leader }
 }
 

@@ -1008,4 +1008,6 @@ set_autonomy = {
 	target = KOR
 	autonomy_state = autonomy_dominion
 }
-
+#
+set_country_flag = br_cl_status_flavour_flag
+JAP_emperor_hirohito = { set_character_flag = br_is_mikado_character_flag }
