@@ -1,0 +1,72 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			#瓦隆
+			34 = {
+				set_variable = { culture_wallonia = 100 }
+				set_variable = { faith_catholic = 100 }
+			}
+			980 = {
+				set_variable = { culture_wallonia = 100 }
+				set_variable = { faith_catholic = 100 }
+			}
+			#布列塔尼
+			14 = { set_variable = { culture_breton = 100 } }
+			#faiths - 法国
+			FRA = {
+				every_core_state = { set_variable = { faith_catholic = 100 } }
+			}
+			#faiths - 
+
+			#芬兰
+			FIN = {
+				every_core_state = {
+					set_variable = { culture_suomi = 100 }
+					set_variable = { faith_lutheranism = 67 }
+					set_variable = { faith_catholic = 33 }
+				}
+			}
+			#英国
+			ENG = {
+				every_core_state = {
+					limit = {
+						NOT = {
+							is_core_of = IRE
+							is_core_of = SCO
+							is_core_of = WLS
+							state = 123
+						}
+					}
+					set_variable = { culture_english = 100 }
+					set_variable = { faith_anglicanism = 100 }
+				}
+				every_core_state = {
+					limit = {
+						is_core_of = SCO
+					}
+					set_variable = { culture_scottish = 100 }
+					set_variable = { faith_calvinism = 100 }
+				}
+				every_core_state = {
+					limit = {
+						is_core_of = WLS
+					}
+					set_variable = { culture_english = 40 }
+					set_variable = { culture_walsh = 60 }
+					set_variable = { faith_anglicanism = 100 }
+				}
+				123 = {
+					set_variable = { culture_english = 60 }
+					set_variable = { culture_cornish = 40 }
+					set_variable = { faith_anglicanism = 100 }
+				}
+			}
+			IRE = {
+				every_core_state = {
+					set_variable = { culture_eriean = 100 }
+					set_variable = { faith_catholic = 100 }
+				}
+			}
+		}
+	}
+}

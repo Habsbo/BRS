@@ -75,13 +75,14 @@
  ENG_great_britain_empire_mosley: "大不列颠帝国"
  ENG_great_britain_empire_mosley_DEF: "大不列颠帝国"
 
-
  IRE_republic: "爱尔兰共和国"
  IRE_republic_DEF: "爱尔兰共和国"
  IRE_republic_ADJ: "爱尔兰"
  IRE_kingdom: "爱尔兰王国"
  IRE_kingdom_DEF: "爱尔兰王国"
  IRE_kingdom_ADJ: "爱尔兰"
+ IRE_kingdom_ENG_subject: "英属爱尔兰"
+ IRE_kingdom_ENG_subject_DEF: "英属爱尔兰"
  IRE_eirinn: "艾尔"
  IRE_eirinn_DEF: "艾尔"
  IRE_eirinn_ADJ: "艾尔"

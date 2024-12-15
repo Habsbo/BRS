@@ -8,77 +8,176 @@
 # localization_key -> points to the localization key
 # that'll be used if trigger passes
 
-defined_text = { #By Percentage
-	name = Getfaith
-### 
+defined_text = {
+	name = GetFaith
+### 基督教 ###
 	text = {
-		check_variable = { faith_catholic > 50 }
+		trigger = {
+			FROM = {
+				check_variable = { faith_catholic > 50 }
+			}
+		}
 		localization_key = faith_catholic
 	}
 	text = {
-		check_variable = { faith_orthodox > 50 }
+		trigger = {
+			FROM = {
+				check_variable = { faith_orthodox > 50 }
+			}
+		}
 		localization_key = faith_orthodox
 	}
 	text = {
-		check_variable = { faith_protestantism > 50 }
+		trigger = {
+			FROM = {
+				check_variable = { faith_protestantism > 50 }
+			}
+		}
 		localization_key = faith_protestantism
 	}
 	text = {
-		check_variable = { faith_lutheranism > 50 }
+		trigger = {
+			FROM = {
+				check_variable = { faith_lutheranism > 50 }
+			}
+		}
 		localization_key = faith_lutheranism
 	}
 	text = {
-		check_variable = { faith_calvinism > 50 }
+		trigger = {
+			FROM = {
+				check_variable = { faith_calvinism > 50 }
+			}
+		}
 		localization_key = faith_calvinism
 	}
 	text = {
-		check_variable = { faith_anglicanism > 50 }
+		trigger = {
+			FROM = {
+				check_variable = { faith_anglicanism > 50 }
+			}
+		}
 		localization_key = faith_anglicanism
 	}
-###
+### 伊斯兰教 ###
 	text = {
-		check_variable = { faith_sunni > 50 }
+		trigger = {
+			FROM = {
+				check_variable = { faith_sunni > 50 }
+			}
+		}
 		localization_key = faith_sunni
 	}
 	text = {
-		check_variable = { faith_shiite > 50 }
+		trigger = {
+			FROM = {
+				check_variable = { faith_shiite > 50 }
+			}
+		}
 		localization_key = faith_shiite
 	}
 	text = {
-		check_variable = { faith_ibadi > 50 }
+		trigger = {
+			FROM = {
+				check_variable = { faith_ibadi > 50 }
+			}
+		}
 		localization_key = faith_ibadi
 	}
-###
 	text = {
-		check_variable = { faith_mahayana > 50 }
+		trigger = {
+			FROM = {
+				check_variable = { faith_druze > 50 }
+			}
+		}
+		localization_key = faith_druze
+	}
+### 佛教 ###
+	text = {
+		trigger = {
+			FROM = {
+				check_variable = { faith_mahayana > 50 }
+			}
+		}
 		localization_key = faith_mahayana
 	}
 	text = {
-		check_variable = { faith_theravada > 50 }
+		trigger = {
+			FROM = {
+				check_variable = { faith_theravada > 50 }
+			}
+		}
 		localization_key = faith_theravada
 	}
-###
+### 道教 ###
 	text = {
-		check_variable = { faith_shinto > 50 }
+		trigger = {
+			FROM = {
+				check_variable = { faith_taoism > 50 }
+			}
+		}
+		localization_key = faith_taoism
+	}
+### 祆教 ###
+	text = {
+		trigger = {
+			FROM = {
+				check_variable = { faith_zoroastrian > 50 }
+			}
+		}
+		localization_key = faith_zoroastrian
+	}
+### 印度教 ###
+	text = {
+		trigger = {
+			FROM = {
+				check_variable = { faith_hinduism > 50 }
+			}
+		}
+		localization_key = faith_hinduism
+	}
+### 神道教 ###
+	text = {
+		trigger = {
+			FROM = {
+				check_variable = { faith_shinto > 50 }
+			}
+		}
 		localization_key = faith_shinto
 	}
 	text = {
-		check_variable = { faith_okinawashinto > 50 }
+		trigger = {
+			FROM = {
+				check_variable = { faith_okinawashinto > 50 }
+			}
+		}
 		localization_key = faith_okinawashinto
 	}
-###
+### 原始宗教 ###
 	text = {
-		check_variable = { faith_paganism > 50 }
+		trigger = {
+			FROM = {
+				check_variable = { faith_paganism > 50 }
+			}
+		}
 		localization_key = faith_paganism
 	}
-###
+### 无神论 ###
 	text = {
-		check_variable = { faith_atheism > 50 }
+		trigger = {
+			FROM = {
+				check_variable = { faith_atheism > 50 }
+			}
+		}
 		localization_key = faith_atheism
 	}
-###
+### 犹太教 ###
 	text = {
-		check_variable = { faith_yahadut > 50 }
+		trigger = {
+			FROM = {
+				check_variable = { faith_yahadut > 50 }
+			}
+		}
 		localization_key = faith_yahadut
 	}
 	#text = {
@@ -86,4 +185,184 @@ defined_text = { #By Percentage
 	#	localization_key = 
 	#}
 	text = { localization_key = Getfaith_default }
+}
+
+defined_text = { # Country
+	name = faith_picture
+### 基督教 ###
+	text = {
+		trigger = {
+			FROM = {
+				check_variable = { faith_catholic > 50 }
+			}
+		}
+		localization_key = GFX_faith_catholic
+	}
+	text = {
+		trigger = {
+			FROM = {
+				check_variable = { faith_orthodox > 50 }
+			}
+		}
+		localization_key = GFX_faith_orthodox
+	}
+	text = {
+		trigger = {
+			FROM = {
+				check_variable = { faith_protestantism > 50 }
+			}
+		}
+		localization_key = GFX_faith_protestantism
+	}
+	text = {
+		trigger = {
+			FROM = {
+				check_variable = { faith_lutheranism > 50 }
+			}
+		}
+		localization_key = GFX_faith_protestantism
+	}
+	text = {
+		trigger = {
+			FROM = {
+				check_variable = { faith_calvinism > 50 }
+			}
+		}
+		localization_key = GFX_faith_protestantism
+	}
+	text = {
+		trigger = {
+			FROM = {
+				check_variable = { faith_anglicanism > 50 }
+			}
+		}
+		localization_key = GFX_faith_protestantism
+	}
+### 伊斯兰教 ###
+	text = {
+		trigger = {
+			FROM = {
+				check_variable = { faith_sunni > 50 }
+			}
+		}
+		localization_key = GFX_faith_sunni
+	}
+	text = {
+		trigger = {
+			FROM = {
+				check_variable = { faith_shiite > 50 }
+			}
+		}
+		localization_key = GFX_faith_shia
+	}
+	text = {
+		trigger = {
+			FROM = {
+				check_variable = { faith_ibadi > 50 }
+			}
+		}
+		localization_key = GFX_faith_nadjat
+	}
+	text = {
+		trigger = {
+			FROM = {
+				check_variable = { faith_druze > 50 }
+			}
+		}
+		localization_key = GFX_faith_islam_druze
+	}
+### 佛教 ###
+	text = {
+		trigger = {
+			FROM = {
+				check_variable = { faith_mahayana > 50 }
+			}
+		}
+		localization_key = GFX_faith_mahayana
+	}
+	text = {
+		trigger = {
+			FROM = {
+				check_variable = { faith_theravada > 50 }
+			}
+		}
+		localization_key = GFX_faith_mahayana
+	}
+### 道教 ###
+	text = {
+		trigger = {
+			FROM = {
+				check_variable = { faith_taoism > 50 }
+			}
+		}
+		localization_key = GFX_faith_taoism
+	}
+### 祆教 ###
+	text = {
+		trigger = {
+			FROM = {
+				check_variable = { faith_zoroastrian > 50 }
+			}
+		}
+		localization_key = GFX_faith_zoroastrian
+	}
+### 印度教 ###
+	text = {
+		trigger = {
+			FROM = {
+				check_variable = { faith_hinduism > 50 }
+			}
+		}
+		localization_key = GFX_faith_hinduism
+	}
+### 神道教 ###
+	text = {
+		trigger = {
+			FROM = {
+				check_variable = { faith_shinto > 50 }
+			}
+		}
+		localization_key = GFX_faith_tengri
+	}
+	text = {
+		trigger = {
+			FROM = {
+				check_variable = { faith_okinawashinto > 50 }
+			}
+		}
+		localization_key = GFX_faith_tengri
+	}
+### 原始宗教 ###
+	text = {
+		trigger = {
+			FROM = {
+				check_variable = { faith_paganism > 50 }
+			}
+		}
+		localization_key = GFX_faith_tengri
+	}
+### 无神论 ###
+	text = {
+		trigger = {
+			FROM = {
+				check_variable = { faith_atheism > 50 }
+			}
+		}
+		localization_key = GFX_faith_atheism
+	}
+### 犹太教 ###
+	text = {
+		trigger = {
+			FROM = {
+				check_variable = { faith_yahadut > 50 }
+			}
+		}
+		localization_key = GFX_faith_judaism
+	}
+	#text = {
+	#	check_variable = {  > 50 }
+	#	localization_key = 
+	#}
+###  ###
+	text = { localization_key = GFX_faith_default }
 }

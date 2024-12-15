@@ -4,22 +4,22 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_portrait_Astesia"
-		texturefile = "gfx/leaders/sp/LX/Astesia.dds"
+		texturefile = "gfx/leaders/special characters/LX/Astesia.dds"
 	}
 
 	spriteType = {
 		name = "GFX_portrait_Astesia_small"
-		texturefile = "gfx/leaders/sp/LX/idea_advisor_Astesia.dds"
+		texturefile = "gfx/leaders/special characters/LX/idea_advisor_Astesia.dds"
 	}
 
 	spriteType = {
 		name = "GFX_Portrait_Leader_ioannes_oikos"
-		texturefile = "gfx/leaders/sp/Leader/Portrait_Leader_ioannes_oikos.png"
+		texturefile = "gfx/leaders/special characters/Leader/Portrait_Leader_ioannes_oikos.png"
 	}
 
 	spriteType = {
 		name = "GFX_Portrait_Leader_ioannes_oikos_small"
-		texturefile = "gfx/leaders/sp/Leader/Portrait_Leader_ioannes_oikos_small.png"
+		texturefile = "gfx/leaders/special characters/Leader/Portrait_Leader_ioannes_oikos_small.png"
 	}
 
 #	
@@ -37,99 +37,99 @@ spriteTypes = {
 	### saint ano ###
 	spriteType = {
 		name = "GFX_portrait_JAP_chihaya_anon"
-		texturefile = "gfx/leaders/sp/mygo/portrait_JAP_chihaya_anon.png"
+		texturefile = "gfx/leaders/special characters/mygo/portrait_JAP_chihaya_anon.png"
 	}
 
 	spriteType = {
 		name = "GFX_portrait_JAP_chihaya_anon_small"
-		texturefile = "gfx/leaders/sp/mygo/portrait_JAP_chihaya_anon_small.png"
+		texturefile = "gfx/leaders/special characters/mygo/portrait_JAP_chihaya_anon_small.png"
 	}
 
 	### tomorin ###
 	spriteType = {
 		name = "GFX_portrait_JAP_takamatsu_tomori"
-		texturefile = "gfx/leaders/sp/mygo/portrait_JAP_takamatsu_tomori.png"
+		texturefile = "gfx/leaders/special characters/mygo/portrait_JAP_takamatsu_tomori.png"
 	}
 
 	spriteType = {
 		name = "GFX_portrait_JAP_takamatsu_tomori_small"
-		texturefile = "gfx/leaders/sp/mygo/portrait_JAP_takamatsu_tomori_small.png"
+		texturefile = "gfx/leaders/special characters/mygo/portrait_JAP_takamatsu_tomori_small.png"
 	}
 
 	### soyorin ###
 	spriteType = {
 		name = "GFX_portrait_JAP_nagasaki_soyo"
-		texturefile = "gfx/leaders/sp/mygo/portrait_JAP_nagasaki_soyo.png"
+		texturefile = "gfx/leaders/special characters/mygo/portrait_JAP_nagasaki_soyo.png"
 	}
 
 	spriteType = {
 		name = "GFX_portrait_JAP_nagasaki_soyo_small"
-		texturefile = "gfx/leaders/sp/mygo/portrait_JAP_nagasaki_soyo_small.png"
+		texturefile = "gfx/leaders/special characters/mygo/portrait_JAP_nagasaki_soyo_small.png"
 	}
 
 	### rikki ###
 	spriteType = {
 		name = "GFX_portrait_JAP_shiina_taki"
-		texturefile = "gfx/leaders/sp/mygo/portrait_JAP_shiina_taki.png"
+		texturefile = "gfx/leaders/special characters/mygo/portrait_JAP_shiina_taki.png"
 	}
 
 	spriteType = {
 		name = "GFX_portrait_JAP_shiina_taki_small"
-		texturefile = "gfx/leaders/sp/mygo/portrait_JAP_shiina_taki_small.png"
+		texturefile = "gfx/leaders/special characters/mygo/portrait_JAP_shiina_taki_small.png"
 	}
 	
 	### neko ###
 	spriteType = {
 		name = "GFX_portrait_JAP_kaname_rana"
-		texturefile = "gfx/leaders/sp/mygo/portrait_JAP_kaname_rana.png"
+		texturefile = "gfx/leaders/special characters/mygo/portrait_JAP_kaname_rana.png"
 	}
 
 	spriteType = {
 		name = "GFX_portrait_JAP_kaname_rana_small"
-		texturefile = "gfx/leaders/sp/mygo/portrait_JAP_kaname_rana_small.png"
+		texturefile = "gfx/leaders/special characters/mygo/portrait_JAP_kaname_rana_small.png"
 	}
 	
 ### ave mujica ###
 	### sakiko ###
 	spriteType = {
 		name = "GFX_portrait_JAP_togawa_sakiko"
-		texturefile = "gfx/leaders/sp/ave mujica/portrait_JAP_togawa_sakiko.png"
+		texturefile = "gfx/leaders/special characters/ave mujica/portrait_JAP_togawa_sakiko.png"
 	}
 
 	spriteType = {
 		name = "GFX_portrait_JAP_togawa_sakiko_small"
-		texturefile = "gfx/leaders/sp/ave mujica/portrait_JAP_togawa_sakiko_small.png"
+		texturefile = "gfx/leaders/special characters/ave mujica/portrait_JAP_togawa_sakiko_small.png"
 	}
 
 	### oblivionis ###
 	spriteType = {
 		name = "GFX_portrait_JAP_oblivionis"
-		texturefile = "gfx/leaders/sp/ave mujica/portrait_JAP_oblivionis.png"
+		texturefile = "gfx/leaders/special characters/ave mujica/portrait_JAP_oblivionis.png"
 	}
 
 	spriteType = {
 		name = "GFX_portrait_JAP_oblivionis_small"
-		texturefile = "gfx/leaders/sp/ave mujica/portrait_JAP_oblivionis_small.png"
+		texturefile = "gfx/leaders/special characters/ave mujica/portrait_JAP_oblivionis_small.png"
 	}
 	### sakiko ###
 	spriteType = {
 		name = "GFX_portrait_JAP_togawa_sakiko"
-		texturefile = "gfx/leaders/sp/ave mujica/portrait_JAP_togawa_sakiko.png"
+		texturefile = "gfx/leaders/special characters/ave mujica/portrait_JAP_togawa_sakiko.png"
 	}
 
 	spriteType = {
 		name = "GFX_portrait_JAP_togawa_sakiko_small"
-		texturefile = "gfx/leaders/sp/ave mujica/portrait_JAP_togawa_sakiko_small.png"
+		texturefile = "gfx/leaders/special characters/ave mujica/portrait_JAP_togawa_sakiko_small.png"
 	}
 
 	### oblivionis ###
 	spriteType = {
 		name = "GFX_portrait_JAP_oblivionis"
-		texturefile = "gfx/leaders/sp/ave mujica/portrait_JAP_oblivionis.png"
+		texturefile = "gfx/leaders/special characters/ave mujica/portrait_JAP_oblivionis.png"
 	}
 
 	spriteType = {
 		name = "GFX_portrait_JAP_oblivionis_small"
-		texturefile = "gfx/leaders/sp/ave mujica/portrait_JAP_oblivionis_small.png"
+		texturefile = "gfx/leaders/special characters/ave mujica/portrait_JAP_oblivionis_small.png"
 	}
 }

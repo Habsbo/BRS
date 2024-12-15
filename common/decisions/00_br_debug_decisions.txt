@@ -70,6 +70,32 @@ br_debug_decisions = {
 
 		ai_will_do = { base = 0 }
 	}
+	debug.anon = {
+		icon = generic_research
+		fire_only_once = no
+		cost = 0
+
+		complete_effect = {
+			JAP_chihaya_anon = {
+				add_country_leader_role = {
+					country_leader = {
+						ideology = conservatism
+						traits = {  }
+						expore = "1965.1.1.1"
+						id = -1
+					}
+					promote_leader = yes
+				}
+				
+			}
+			set_politics = {
+				ruling_party = dem_conservatism
+			}
+			#
+		}
+
+		ai_will_do = { base = 0 }
+	}
 
 	br_debug_decisions_for_test_state_names.1 = {
 

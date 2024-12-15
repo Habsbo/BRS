@@ -341,7 +341,7 @@ recruit_character = ENG_stewart_menzies
 recruit_character = ENG_maxwell_aitken
 recruit_character = ENG_thomas_moore
 
-recruit_character = JAP_anon_chihaya
+recruit_character = JAP_chihaya_anon
 
 if = {
 	limit = {

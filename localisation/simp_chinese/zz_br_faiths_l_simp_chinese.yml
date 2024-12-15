@@ -22,9 +22,16 @@
  faith_ibadi: "伊巴德派"
 #
  faith_mahayana: "大乘佛教"
- faith_theravada: "上座部"
+ faith_theravada: "上座部佛教"
+#
+ faith_taoism: "道教"
+#
+ faith_zoroastrian: "祆教"
+#
+ faith_hinduism: "印度教"
 #
  faith_shinto: "神道教"
+ faith_okinawashinto: "琉球神道教"
 #
  faith_paganism: "原始信仰"
 #
@@ -33,8 +40,91 @@
  faith_yahadut: "犹太教"
 #
  trait_mahdi: "马赫迪"
-#
+### culture - 文化 ###
+#法兰西组
  culture_france: "法兰西"
+ culture_aquitaine: "阿基坦"
+ culture_provence: "普罗旺斯"
+ culture_wallonia: "瓦隆"
+#布立吞组
+ culture_breton: "布列塔尼"
+ culture_cornish: "康沃尔"
+#德意志组
+ culture_dutch: "尼德兰"
+ culture_vlaam: "弗拉芒"
+ culture_deutsche: "德意志"
+ culture_hhochdeutsch: "高地德意志" #南德意志
+#英格兰组
+ culture_english: "英格兰"
+ culture_walsh: "威尔士"
+#高地不列颠组
+ culture_scottish: "苏格兰"
+ culture_eriean: "爱尔兰"
+#北日耳曼组
+ culture_norwegian: "挪威"
+ culture_danish: "丹麦"
+ culture_swedish: "瑞典"
+ culture_icelandic: "冰岛"
+#波兰组
+ culture_polska: "波兰"
+#捷克组
+ culture_ceska: "捷克"
+ culture_slovensko: "斯洛伐克"
+#南斯拉夫组
+ culture_jugoslavija: "南斯拉夫"
+ culture_hrvatska: "克罗地亚"
+ culture_srbija: "塞尔维亚"
+#罗斯组
+ culture_russian: "俄罗斯"
+ culture_ukrainian: "乌克兰"
+ culture_belorussian: "白罗斯"
+#芬兰组
+ culture_suomi: "索米"
+#匈牙利组
+ culture_magyar: "马扎尔"
+#汉藏组
+ culture_han: "汉"
+ culture_bai: "白"
+ culture_manchu: "满"
+ culture_hui: "回"
+ culture_bod: "藏"
+ culture_ngari: "阿里"
+ culture_ladakh: "拉达克"
+ culture_khampa: "康巴"
+#东胡组
+ culture_mongolian: "蒙古"
+#维族
+ culture_uygur: "维吾尔"
+#朝鲜
+ culture_joseon: "朝鲜"
+#日本组
+ culture_yamato: "日本"
+ culture_okinawa: "冲绳"
+#亚述组
+ culture_syria: "叙利亚"
+#伊朗组
+ 
+#突厥组
 
+#希腊组
+ culture_hellenic: "希腊"
+ culture_pontus: "本都"
+ culture_achaia: "亚该亚"
+ culture_magna_graecia: "大希腊" #失落的文化
+#亚美尼亚组
+ culture_hayastan: "亚美尼亚"
+#土耳其组
+ culture_turkiye: "土耳其"
+#越南组
+ culture_vietnamese: "越南"
+#
+ culture_laos: "佬"
+#
+ culture_zhuang: "壮"
+ culture_thai: "泰"
+ 
+#犹太组
+ 
+#
  faith_status_tt: "§H[FROM.GetFaith]§!\n§g[FROM.GetName]§!的§Y主流§!信仰"
  faith_desc_tt: "[FROM.GetFaith]"

@@ -2,14 +2,61 @@ defined_text = { # Country
 	name = GetStateCulture
 	text = {
 		trigger = {
-			FROM = {
-				check_variable = {
-					culture_france = 50
-					compare = greater_than_or_equals
-				}
-			}
+			FROM = { check_variable = { culture_france > 50 } }
 		}
 		localization_key = culture_france
+	}
+	text = {
+		trigger = {
+			FROM = { check_variable = { culture_wallonia > 50 } }
+		}
+		localization_key = culture_wallonia
+	}
+###
+	text = {
+		trigger = {
+			FROM = { check_variable = { culture_breton > 50 } }
+		}
+		localization_key = culture_breton
+	}
+	text = {
+		trigger = {
+			FROM = { check_variable = { culture_cornish > 50 } }
+		}
+		localization_key = culture_cornish
+	}
+###
+	text = {
+		trigger = {
+			FROM = { check_variable = { culture_english > 50 } }
+		}
+		localization_key = culture_english
+	}
+	text = {
+		trigger = {
+			FROM = { check_variable = { culture_walsh > 50 } }
+		}
+		localization_key = culture_walsh
+	}
+###
+	text = {
+		trigger = {
+			FROM = { check_variable = { culture_scottish > 50 } }
+		}
+		localization_key = culture_scottish
+	}
+	text = {
+		trigger = {
+			FROM = { check_variable = { culture_eriean > 50 } }
+		}
+		localization_key = culture_eriean
+	}
+###
+	text = {
+		trigger = {
+			FROM = { check_variable = { culture_suomi > 50 } }
+		}
+		localization_key = culture_suomi
 	}
 	text = {
 		localization_key = GetStateCulture_default

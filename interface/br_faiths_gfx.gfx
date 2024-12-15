@@ -80,4 +80,9 @@ spriteTypes = {
 		name = "GFX_faith_coptic"
 		texturefile = "gfx/interface/faith/faith_icons/coptic.dds"
 	}
+
+	spriteType = {
+		name = "GFX_faith_default"
+		texturefile = "gfx/interface/faith/faith_icons/faith_default.png"
+	}
 }

@@ -23,34 +23,61 @@ guiTypes = {
 	
 	containerWindowType = {
 		name = "state_info_text"
-		position = { x = 500 y = 0 }
-		size = { width=780 height=496 }
+		position = { x = 462 y = 3 }
+		size = { width=500 height=655 }
+		
+		background = {
+			name = "Background"		
+			quadTextureSprite ="GFX_tiled_window"
+		}
 
 		instantTextboxType = {
-			name = "state_culture"
-			position = { x = 0 y= 0 }
+			name = "state_culture_info"
+			position = { x = 20 y= 20 }
 			font = "hoi_24header"
 			maxWidth = 200
 			maxHeight = 15
+			format = centre
+			text = "state_culture_major"
 			fixedsize = yes
+		}
+		instantTextboxType = {
+			name = "state_culture"
+			position = { x = 20 y= 70 }
+			font = "hoi_20b"
+			maxWidth = 200
+			maxHeight = 15
+			format = centre
 			text = "[GetStateCulture]"
+			fixedsize = yes
 		}
 
 		iconType = { 
 			name = "state_faith_status"
 			#spriteType = GFX_faith_catholic #[Faith_picture]
-			position = { x = 200  y = 0 } 
+			position = { x = 200  y = 20 } 
 			pdx_tooltip = faith_status_tt
 			pdx_tooltip_delayed = faith_desc_tt
 		}
 		instantTextboxType = {
-			name = "state_faith"
-			position = { x = 300 y= 0 }
+			name = "state_faith_info"
+			position = { x = 280 y= 20 }
 			font = "hoi_24header"
 			maxWidth = 200
-			maxHeight = 15
+			maxHeight = 30
+			format = centre
+			text = "state_faith_major"
 			fixedsize = yes
+		}
+		instantTextboxType = {
+			name = "state_faith"
+			position = { x = 280 y= 70 }
+			font = "hoi_20b"
+			maxWidth = 200
+			maxHeight = 30
+			format = centre
 			text = "[GetFaith]"
+			fixedsize = yes
 		}
 	}
 	

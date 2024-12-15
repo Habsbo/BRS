@@ -14,15 +14,418 @@
 
 	continuous_focus_position = { x = 50 y = 1500 }
 
+	shortcut = {
+		name = _shortcut
+		target = ENG_rehabilitate_the_economy
+		scroll_wheel_factor = 0.725
+		trigger = { always = yes }
+	}
 ###
+	focus = {
+		id = ENG_colonial_economy
+		icon = GFX_goal_generic_construct_mil_factory
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = -3
+		y = 0
+		relative_position_id = ENG_rehabilitate_the_economy
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = ENG_11
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = ENG_colonial_economy }
+		#mutually_exclusive = { focus =  }
+		x = -2
+		y = 1
+		relative_position_id = ENG_colonial_economy
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
 	focus = {
 		id = ENG_
 		icon = GFX_goal_generic_demand_territory
 		#prerequisite = { focus =  }
 		#mutually_exclusive = { focus =  }
 		x = 0
+		y = 8
+		#relative_position_id = ENG_
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = ENG_saf_gold
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		prerequisite = { focus = ENG_colonial_economy }
+		prerequisite = { focus = ENG_currency_devaluate }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 2
+		relative_position_id = ENG_colonial_economy
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+###
+	focus = {
+		id = ENG_rehabilitate_the_economy
+		icon = GFX_focus_generic_treaty
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 7
 		y = 0
 		#relative_position_id =
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = ENG_currency_devaluate
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = ENG_rehabilitate_the_economy }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = ENG_rehabilitate_the_economy
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = ENG_a1
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = ENG_currency_devaluate }
+		#mutually_exclusive = { focus =  }
+		x = -1
+		y = 1
+		relative_position_id = ENG_currency_devaluate
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = ENG_adjusting_trade_policies
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = ENG_currency_devaluate }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 1
+		relative_position_id = ENG_currency_devaluate
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = ENG_civil_service_system
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = ENG_rehabilitate_the_economy }
+		#mutually_exclusive = { focus =  }
+		x = 3
+		y = 2
+		relative_position_id = ENG_rehabilitate_the_economy
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = ENG_css
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = ENG_civil_service_system }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = ENG_civil_service_system
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+### ###
+	focus = {
+		id = ENG_advance_shadow_scheme
+		icon = GFX_goal_generic_construct_mil_factory
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 8
+		y = 0
+		relative_position_id = ENG_rehabilitate_the_economy
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = ENG_invest_vehicles_industries
+		icon = GFX_goal_generic_production
+		prerequisite = {
+			focus = ENG_rehabilitate_the_economy
+			focus = ENG_advance_shadow_scheme
+		}
+		#mutually_exclusive = { focus =  }
+		x = -2
+		y = 1
+		relative_position_id = ENG_advance_shadow_scheme
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = ENG_invest_austin_motor_company_limited
+		icon = GFX_focus_CHL_domestic_production_of_the_willys_mb
+		prerequisite = { focus = ENG_invest_vehicles_industries }
+		#mutually_exclusive = { focus =  }
+		x = -1
+		y = 1
+		relative_position_id = ENG_invest_vehicles_industries
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = ENG_invest_morris_motors_limited
+		icon = GFX_focus_CHL_domestic_production_of_the_willys_mb
+		prerequisite = { focus = ENG_invest_vehicles_industries }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 1
+		relative_position_id = ENG_invest_vehicles_industries
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = ENG_v1
+		icon = GFX_focus_generic_industrialists
+		prerequisite = { focus = ENG_invest_austin_motor_company_limited }
+		prerequisite = { focus = ENG_invest_morris_motors_limited }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 2
+		relative_position_id = ENG_invest_vehicles_industries
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = ENG_12
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = ENG_advance_shadow_scheme }
+		#mutually_exclusive = { focus =  }
+		x = 2
+		y = 1
+		relative_position_id = ENG_advance_shadow_scheme
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+### ###
+	focus = {
+		id = ENG_2221
+		icon = GFX_goal_generic_demand_territory
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 30
+		y = 0
+		#relative_position_id = 
 
 		cost = 8
 		
