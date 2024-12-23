@@ -172,7 +172,7 @@ set_country_flag = br_dynamic_modifier_not_generic_flag
 
 add_ideas = {
 	br_laws_free
-	br_laws_bourgeoisle
+	br_laws_bourgeoisie
 	br_laws_apartheid
 	br_laws_electoral_politician
 	br_laws_proxy
