@@ -1,57 +1,61 @@
-主题：
-· basic(base):
-    cesko
-    romania
-· the Storm Approaching (TSA):
-    U.K.(england, scotland, ireland)
-    germany reich
-    osterreich
-    belgique/belgien
-    reino de España
-    srbija
-
-· Liberté Égalité Fraternité (LEF):
-    république française
-    U.S.A.
-    North Africa
-
-· oice of Proletariat (VOP): 
-    italy countries
-    république française (radicals)
-    benelux
-
-· Во имя царя/In the name of Tsar (VIC)
-    Россия(Russia)
-    Soviet & Анархізм в Україні(Soviet & Anarchism Ukraine)
-    Polski
-    Україна(Ukraine)
-    Suomi
-    Ottoman (Türkiye)
-
-· 八纮一宇/hakou ichiu (HKI)
-    Japan
-    Korea
-    Fengxi
-
-· The Art of War (AOW):
-    China(BeiYang/Dai Qing Gurlun)
-    mongolian regimes
-    Chasui(Shanxi,Jinxi junfa)
-    Huibu(Majiajun, Hui rebels)
-    XinJiang
-    China Repulic(GXC)
-
-· 红星照耀中国/red star over china (RSC):
-    PRC(CPC)
-    KMT
-    Tibet
-    British Raj
-    Burma
-    Indo China
-· 
-
+#CULTURE
+br_culture_france
+#
+br_culture_deutsch
+br_culture_vlaams
+br_culture_english
+#
+br_culture_irish
+br_culture_scottish
+br_culture_welsh
+br_culture_breton
+#
+br_culture_chinese
+#
+br_culture_
+br_culture_
+br_culture_
+br_culture_
+br_culture_
+br_culture_
+br_culture_
+br_culture_
+br_culture_
+br_culture_
+br_culture_
+br_culture_
+br_culture_
+br_culture_
+br_culture_
 
 #faith
+###
+#catholic - 基督教
+br_faith_catholic #基督
+br_faith_orthodox #东正
+br_faith_protestantism #新教
+br_faith_coptic #科普特
+br_faith_aac  #Armenian Apostolic Church
+br_faith_nestorianism #景教
+#zoroastrianism - 琐罗亚斯德教
+br_faith_zoroastrianism
+#islam - 伊斯兰
+br_faith_sunni
+br_faith_shiite
+br_faith_kharijites
+#taoism - 道教
+br_faith_taoism #道教
+#buddhism - 佛教
+br_faith_mahayana #大乘
+br_faith_hinayana #小乘
+br_faith_theravada #金刚乘
+#
+br_faith_hinduism #印度教
+br_faith_sikhism #锡克教
+#
+br_faith_paganism #其他宗教
+#
+br_faith_atheism #无神论
 
 #catholic - 基督教
 #catholic.eastern_rite - 东仪派
