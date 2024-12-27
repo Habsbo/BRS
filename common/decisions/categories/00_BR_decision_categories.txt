@@ -107,3 +107,11 @@ br_economic = {
 	priority = 99
 	visible_when_empty = yes
 }
+
+br_revolution = {
+	icon = NOR_fascist_deploy_prep
+
+	visible = { always = yes }
+
+	priority = 1
+}

@@ -1913,11 +1913,6 @@ focus_tree = {
 			exists = yes
 			has_capitulated = no
 			is_puppet = no
-			OR = {
-				vanwardism > 0.20
-				sci_socialism > 0.20
-				con_socialism > 0.20
-			}
 		}
 		
 		bypass = {}
@@ -1926,8 +1921,39 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		
-		complete_tooltip = {}
-		completion_reward = {}
+		complete_tooltip = {
+			country_event = br_generic_focus.1
+		}
+		completion_reward = {
+			country_event = br_generic_focus.1
+			add_war_support = 0.05
+			effect_tooltip = {
+				add_stability = -0.10
+				if = {
+					limit = {
+						OR = {
+							br_ideology_socialism_nio = yes
+							br_ideology_fascism_nio = yes
+						}
+					}
+					add_popularity = { ideology = root popularity = -0.05 }
+				}
+				else = { add_popularity = { ideology = root popularity = 0.05 } }
+			}
+			custom_effect_tooltip = probability_tt
+			effect_tooltip = {
+				add_popularity = { ideology = sci_socialism popularity = 0.05 }
+			}
+			custom_effect_tooltip = probability_alt_tt
+			effect_tooltip = {
+				add_popularity = { ideology = sci_socialism popularity = 0.02 }
+				add_popularity = { ideology = con_socialism popularity = 0.03 }
+			}
+			custom_effect_tooltip = probability_alt_tt
+			effect_tooltip = {
+				add_popularity = { ideology = fascism popularity = 0.05 }
+			}
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -1950,8 +1976,30 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		
-		complete_tooltip = {}
-		completion_reward = {}
+		complete_tooltip = {
+			add_dynamic_modifier = { modifier = youth_league_dynamic_modifier }
+		}
+		completion_reward = {
+			add_dynamic_modifier = { modifier = youth_league_dynamic_modifier } 
+			set_variable = { youth_league_political_power_factor = 0.05 tooltip = political_power_factor_tt }
+			if = {
+				limit = {
+					OR = {
+						has_country_flag = br_focus_road_to_revolution_communism_flag
+						has_country_flag = br_focus_road_to_revolution_anti_imperialism_flag
+					}
+				}
+				set_variable = { youth_league_sci_socialism_drift = 0.05 tooltip = sci_socialism_drift_tt }
+			}
+			if = {
+				limit = { has_country_flag = br_focus_road_to_revolution_anti_imperialism_flag }
+				set_variable = { youth_league_con_socialism_drift = 0.05 tooltip = con_socialism_drift_tt }
+			}
+			if = {
+				limit = { has_country_flag = br_focus_road_to_revolution_fascism_flag }
+				set_variable = { youth_league_fascism_drift = 0.05 tooltip = fascism_drift_tt }
+			}
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -1975,7 +2023,48 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		complete_tooltip = {}
-		completion_reward = {}
+		completion_reward = {
+			add_political_power = 50
+			if = {
+				limit = {
+					OR = {
+						has_country_flag = br_focus_road_to_revolution_communism_flag
+						has_country_flag = br_focus_road_to_revolution_anti_imperialism_flag
+					}
+				}
+				add_popularity = { ideology = sci_socialism popularity = 0.10 }
+				#
+				set_temp_variable = { urge_alter_stab_var = party_popularity@sci_socialism }
+				add_to_temp_variable = { urge_alter_stab_var = party_popularity@vanwardism }
+				add_to_temp_variable = { urge_alter_stab_var = party_popularity@con_socialism }
+				add_war_support = urge_alter_stab_var
+				multiply_temp_variable = { urge_alter_stab_var = -0.5 }
+				add_stability = urge_alter_stab_var
+			}
+			if = {
+				limit = { has_country_flag = br_focus_road_to_revolution_anti_imperialism_flag }
+				add_popularity = { ideology = con_socialism popularity = 0.10 }
+				add_popularity = { ideology = sci_socialism popularity = 0.10 }
+				#
+				set_temp_variable = { urge_alter_stab_var = party_popularity@sci_socialism }
+				add_to_temp_variable = { urge_alter_stab_var = party_popularity@vanwardism }
+				add_to_temp_variable = { urge_alter_stab_var = party_popularity@con_socialism }
+				add_war_support = urge_alter_stab_var
+				multiply_temp_variable = { urge_alter_stab_var = -0.5 }
+				add_stability = urge_alter_stab_var
+			}
+			if = {
+				limit = { has_country_flag = br_focus_road_to_revolution_fascism_flag }
+				add_popularity = { ideology = fascism popularity = 0.10 }
+				#
+				set_temp_variable = { urge_alter_stab_var = party_popularity@fascism }
+				add_to_temp_variable = { urge_alter_stab_var = party_popularity@nationalism }
+				add_to_temp_variable = { urge_alter_stab_var = party_popularity@supernationalism }
+				add_war_support = urge_alter_stab_var
+				multiply_temp_variable = { urge_alter_stab_var = -0.5 }
+				add_stability = urge_alter_stab_var
+			}
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -2210,7 +2299,11 @@ focus_tree = {
 
 		cost = 8
 		
-		available = {}
+		available = {
+			exists = yes
+			has_capitulated = no
+			is_puppet = no
+		}
 		
 		bypass = {}
 		

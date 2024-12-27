@@ -888,16 +888,63 @@ country_event = { #
 
 	fire_only_once = no
 	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			add_stability = -0.10
+			if = {
+				limit = {
+					OR = {
+						br_ideology_socialism_nio = yes
+						br_ideology_fascism_nio = yes
+					}
+				}
+				add_popularity = { ideology = root popularity = -0.05 }
+			}
+			else = { add_popularity = { ideology = root popularity = 0.05 } }
+		}
+	}
 	
 	option = {
 		name = br_generic_focus.1.a
+
+		add_popularity = { ideology = sci_socialism popularity = 0.05 }
+		set_country_flag = br_focus_road_to_revolution_communism_flag
 	}
 
 	option = {
 		name = br_generic_focus.1.b
+
+		add_popularity = { ideology = sci_socialism popularity = 0.02 }
+		add_popularity = { ideology = con_socialism popularity = 0.03 }
+		set_country_flag = br_focus_road_to_revolution_anti_imperialism_flag
 	}
 	
 	option = {
 		name = br_generic_focus.1.c
+
+		add_popularity = { ideology = fascism popularity = 0.05 }
+		set_country_flag = br_focus_road_to_revolution_fascism_flag
+	}
+}
+
+country_event = { #
+	id = br_generic_focus.2
+	title = br_generic_focus.2.title
+	desc = br_generic_focus.2.desc
+
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	option = {
+		name = br_generic_focus.2.a
+	}
+
+	option = {
+		name = br_generic_focus.2.b
+	}
+	
+	option = {
+		name = br_generic_focus.2.c
 	}
 }

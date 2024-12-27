@@ -114,3 +114,24 @@
  br_proclaim_baltics_federation.force: "恐吓[FROM.GetFlag]§Y[FROM.GetName]§!臣服"
 
  br_proclaim_BLR_UKR: "宣告§Y$BLR_UKR$§!成立"
+
+ br_revolution: "革命将至"
+ br_revolution.sci_socialism_drift: "传播科学社会主义理论"
+ br_revolution.con_socialism_drift: "共产主义与反帝主义联合起来"
+ br_revolution.fascism_drift: "法西斯主义走向光明"
+ br_revolution.organize_strike: "组织罢工"
+ br_revolution.patriotism: "呼吁重视民族危机"
+ br_revolution.organize_shirts: "组织党冲锋队"
+ br_revolution.speech_socialism: "社会主义演讲"
+ br_revolution.speech_fascism: "法西斯主义演讲"
+ br_revolution.anti_communism: "挑动反共产主义情绪"
+ br_revolution.anti_fascism: "批判法西斯主义"
+ br_revolution.civilwar_communism: "打碎枷锁"
+ br_revolution.civilwar_fascism: "大变革"
+
+ br_revolution.ask_for_dialogue: "要求对话"
+
+ br_revolution.election: "要求公投"
+
+ generic_communism_revolution: "共产主义革命"
+ generic_anti_communism_revolution: "反共产主义革命"

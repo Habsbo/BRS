@@ -140,6 +140,8 @@
 		}
 	}
 ###
+
+###
 	br_countryleader_custom_flavour_trigger = {
 		custom_trigger_tooltip = {
 			tooltip = br_countryleader_custom_flavour_trigger_tt

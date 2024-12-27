@@ -208,6 +208,39 @@ ideas = {
 
 # Special ones that can be applied on other countries through focus system.
 	country = {
+		generic_communism_revolution = {
+			picture = spr_anti_fascist_crusade
+
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via event
+			}
+
+			modifier = {
+				stability_weekly = 0.01
+				#
+				sci_socialism_drift = 0.10
+			}
+		}
+
+		generic_anti_communism_revolution = {
+			picture = anti_soviet_pact
+			
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via event
+			}
+
+			modifier = {
+				stability_weekly = 0.01
+				#
+				vanwardism_drift = -0.01
+				sci_socialism_drift = -0.01
+				con_socialism_drift = -0.01
+			}
+		}
 		
 		TO_chose_neutrality = {
 

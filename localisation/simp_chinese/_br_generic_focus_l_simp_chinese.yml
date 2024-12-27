@@ -72,5 +72,19 @@
  focus_control_militaries_desc: ""
  focus_steady_power: "稳固政权"
  focus_steady_power_desc: ""
-
+#
+ probability_tt: "§Y可能的结果：§!"
+ probability_alt_tt: "§Y可能的另一种结果：§!"
+#
+ youth_league_dynamic_modifier: "青年团"
 #events 
+ br_generic_focus.1.title: "革命的呼声"
+ br_generic_focus.1.desc: ""
+ br_generic_focus.1.a: "这是一场无产阶级的斗争！"
+ br_generic_focus.1.b: "帝国主义是我们身上最沉重的枷锁！"
+ br_generic_focus.1.c: "国家、民族、社会！"
+
+ br_generic_focus.2.title: ""
+ br_generic_focus.2.desc: ""
+ br_generic_focus.2.a: ""
+ br_generic_focus.2.b: ""
