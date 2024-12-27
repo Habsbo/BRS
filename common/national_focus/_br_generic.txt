@@ -1863,16 +1863,21 @@ focus_tree = {
 			}
 		}
 	}
-###	
+###
 	focus = {
-		id = political_effort
-		icon = GFX_goal_generic_demand_territory
-		x = 24
+		id = focus_political_effort
+		icon = GFX_focus_generic_improve_the_administration
+		x = 20
 		y = 0
+		#relative_position_id = 
 
-		cost = 5
+		cost = 8
 		
-		available = {}
+		available = {
+			exists = yes
+			has_capitulated = no
+			is_puppet = no
+		}
 		
 		bypass = {}
 		
@@ -1880,67 +1885,38 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		
-		complete_tooltip = {}
-		
+		complete_tooltip = {
+			add_political_power = 150
+			add_stability = 0.05
+		}
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 150
 			add_stability = 0.05
 		}
 		
 		ai_will_do = { factor = 1 }
 	}
-	#
-	focus = {
-		id = communism_rising
-		icon = GFX_goal_generic_forceful_treaty
-		prerequisite = { focus = political_effort }
-		mutually_exclusive = {
-			focus = reconciliation_of_gov
-			focus = nation_first
-		}
-		x = -5
-		y = 1
-		relative_position_id = political_effort
 
-		cost = 8
-		
-		available = {
-			br_ideology_fascism_nio = yes
-		}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {
-			add_political_power = 120
-			add_timed_idea = { idea = communist_influence_2 days = 181 }
-			add_popularity = { ideology = vanwardism popularity = 0.05 }
-			add_popularity = { ideology = sci_socialism popularity = 0.05 }
-			add_popularity = { ideology = con_socialism popularity = 0.05 }
-		}
-		
-		ai_will_do = { factor = 1 }
-	}
+	### ###
 	focus = {
-		id = fight_for_human
-		icon = GFX_
-		prerequisite = { focus = communism_rising }
-		mutually_exclusive = { focus = unite_petite_bourgeoisie }
+		id = focus_road_to_revolution
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = { focus = focus_political_effort }
+		mutually_exclusive = { focus = focus_safeguard_democratic }
 		x = -1
 		y = 1
-		relative_position_id = communism_rising
+		relative_position_id = focus_political_effort
 
 		cost = 8
 		
 		available = {
+			exists = yes
+			has_capitulated = no
+			is_puppet = no
 			OR = {
-				vanwardism > 0.3
-				sci_socialism > 0.3
+				vanwardism > 0.20
+				sci_socialism > 0.20
+				con_socialism > 0.20
 			}
 		}
 		
@@ -1951,27 +1927,18 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		complete_tooltip = {}
-		
-		completion_reward = {
-			add_war_support = 0.10
-			add_popularity = { ideology = vanwardism popularity = 0.10 }
-			add_popularity = { ideology = sci_socialism popularity = 0.10 }
-			set_rule = {
-				can_create_factions = yes
-				can_force_government = yes
-			}
-		}
+		completion_reward = {}
 		
 		ai_will_do = { factor = 1 }
 	}
 	focus = {
-		id = awaken_women
-		icon = GFX_
-		prerequisite = { focus = fight_for_human }
-		#mutually_exclusive = { focus = }
+		id = focus_youth_league
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = focus_road_to_revolution }
+		#mutually_exclusive = { focus =  }
 		x = -2
 		y = 1
-		relative_position_id = fight_for_human
+		relative_position_id = focus_road_to_revolution
 
 		cost = 8
 		
@@ -1984,66 +1951,18 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		complete_tooltip = {}
-		
 		completion_reward = {}
 		
 		ai_will_do = { factor = 1 }
 	}
 	focus = {
-		id = communism_party_of_root
-		icon = GFX_
-		prerequisite = { focus = fight_for_human focus = unite_petite_bourgeoisie }
-		#mutually_exclusive = { focus = }
+		id = focus_urge_alter
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = focus_road_to_revolution }
+		#mutually_exclusive = { focus =  }
 		x = 0
 		y = 1
-		relative_position_id = fight_for_human
-
-		cost = 8
-		
-		available = {
-			OR = {#
-				sci_socialism > 0.45
-				con_socialism > 0.45
-			}
-		}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {
-			#
-			if = {
-				limit = {
-					sci_socialism > var:party_popularity@con_socialism
-				}
-				set_politics = {
-					ruling_party = sci_socialism
-					elections_allowed = no
-				}
-			}
-			else = {
-				set_politics = {
-					ruling_party = con_socialism
-					elections_allowed = no
-				}
-			}
-		}
-		
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
-		id = nations_are_international
-		icon = GFX_
-		prerequisite = { focus = communism_party_of_root }
-		#mutually_exclusive = { focus = }
-		x = 0
-		y = 1
-		relative_position_id = communism_party_of_root
+		relative_position_id = focus_road_to_revolution
 
 		cost = 8
 		
@@ -2056,19 +1975,43 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		complete_tooltip = {}
+		completion_reward = {}
 		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = focus_class_war
+		icon = GFX_focus_spr_class_war
+		prerequisite = { focus = focus_youth_league }
+		prerequisite = { focus = focus_urge_alter }
+		mutually_exclusive = { focus = focus_national_war }
+		x = 0
+		y = 1
+		relative_position_id = focus_youth_league
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
 		completion_reward = {}
 		
 		ai_will_do = { factor = 1 }
 	}
 	focus = {
-		id = literacy_class_for_proletariat
-		icon = GFX_
-		prerequisite = { focus = awaken_women }
-		#mutually_exclusive = { focus = }
-		x = 0
-		y = 1
-		relative_position_id = awaken_women
+		id = focus_internationalism
+		icon = GFX_focus_ARG_defense_and_democracy
+		prerequisite = { focus = focus_class_war }
+		x = -1
+		y = 2
+		relative_position_id = focus_class_war
 
 		cost = 8
 		
@@ -2081,30 +2024,108 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		complete_tooltip = {}
+		completion_reward = {}
 		
-		completion_reward = {
-			add_research_slot = 1
-		}
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = focus_national_war
+		icon = GFX_focus_ARG_fascist_researchers
+		prerequisite = { focus = focus_youth_league }
+		prerequisite = { focus = focus_urge_alter }
+		mutually_exclusive = { focus = focus_class_war }
+		x = 0
+		y = 1
+		relative_position_id = focus_urge_alter
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
 		
 		ai_will_do = { factor = 1 }
 	}
 	focus = {
-		id = unite_petite_bourgeoisie
-		icon = GFX_
-		prerequisite = { focus = communism_rising }
-		mutually_exclusive = { focus = fight_for_human }
+		id = focus_organize_unions
+		icon = GFX_focus_AUS_union_of_danubian_socialist_republics
+		prerequisite = {
+			focus = focus_class_war
+			focus = focus_national_war
+		}
+		mutually_exclusive = { focus = focus_guide_labour_union }
+		x = 0
+		y = 1
+		relative_position_id = focus_class_war
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = focus_guide_labour_union
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		prerequisite = {
+			focus = focus_class_war
+			focus = focus_national_war
+			focus = focus_communism_threat
+		}
+		mutually_exclusive = {
+			focus = focus_organize_unions
+			focus =  focus_control_labour_union
+		}
+		x = 0
+		y = 1
+		relative_position_id = focus_national_war
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = focus_structural_reform
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = {
+			focus = focus_organize_unions
+			focus = focus_guide_labour_union
+		}
 		x = 1
 		y = 1
-		relative_position_id = communism_rising
+		relative_position_id = focus_organize_unions
 
 		cost = 8
 		
-		available = {
-			OR = {
-				con_socialism > 0.3
-				dem_socialism > 0.3
-			}
-		}
+		available = {}
 		
 		bypass = {}
 		
@@ -2113,66 +2134,26 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		complete_tooltip = {}
-		
-		completion_reward = {
-			#
-			add_political_power = 200
-			add_popularity = { ideology = sci_socialism popularity = 0.05 }
-			add_popularity = { ideology = con_socialism popularity = 0.05 }
-			add_popularity = { ideology = dem_socialism popularity = 0.10 }
-			#
-			set_rule = {
-				can_boost_own_ideology = no
-				can_force_government = no
-			}
-		}
-		
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
-		id = unite_labour_union
-		icon = GFX_
-		prerequisite = { focus = unite_petite_bourgeoisie focus = unite_petite_bourgeoisie }
-		#mutually_exclusive = { focus = }
-		x = 0
-		y = 1
-		relative_position_id = unite_petite_bourgeoisie
-
-		cost = 8
-		
-		available = {
-			OR = {
-				vanwardism > 0.45
-				sci_socialism > 0.45
-			}
-		}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
 		completion_reward = {}
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	focus = {
-		id = resist_imperialism
-		icon = GFX_
-		prerequisite = { focus = unite_labour_union }
-		#mutually_exclusive = { focus = }
-		x = 0
-		y = 1
-		relative_position_id = unite_labour_union
+		id = focus_patriotism
+		icon = GFX_focus_generic_the_giant_wakes
+		prerequisite = {
+			focus = focus_national_war
+			focus = focus_communism_threat
+			focus = focus_fascism_threat
+		}
+		x = 1
+		y = 2
+		relative_position_id = focus_national_war
 
 		cost = 8
 		
-		available = {
-			has_idea_with_trait = anti_imperialism_revolutionary
-		}
+		available = {}
 		
 		bypass = {}
 		
@@ -2181,47 +2162,25 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		complete_tooltip = {}
-		
 		completion_reward = {}
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	focus = {
-		id = unified_to_be_majority
-		icon = GFX_
-		prerequisite = { focus = unite_petite_bourgeoisie focus = steer_as_stability }
+		id = focus_voice_of_poeples
+		icon = GFX_focus_generic_democratic_europe
+		prerequisite = {
+			focus = focus_internationalism
+			focus = focus_patriotism
+		}
 		mutually_exclusive = {
-			focus = loyalists_power
-			focus = isolationism_honorably
+			focus = focus_the_liberalism_order
+			focus = focus_steady_power
 		}
-		x = 2
-		y = 1
-		relative_position_id = unite_petite_bourgeoisie
-
-		cost = 8
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-		
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
-		id = parliamentary_struggle
-		icon = GFX_
-		prerequisite = { focus = unified_to_be_majority }
-		#mutually_exclusive = { focus = }
 		x = 0
 		y = 1
-		relative_position_id = unified_to_be_majority
+		relative_position_id = focus_structural_reform
 
 		cost = 8
 		
@@ -2234,54 +2193,69 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		complete_tooltip = {}
-		
 		completion_reward = {}
 		
 		ai_will_do = { factor = 1 }
 	}
-	#
+
+	### ###
 	focus = {
-		id = reconciliation_of_gov
+		id = focus_safeguard_democratic
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = focus_political_effort }
+		mutually_exclusive = { focus = focus_road_to_revolution }
+		x = 1
+		y = 1
+		relative_position_id = focus_political_effort
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = focus_spirit_of_liberalism
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = focus_safeguard_democratic }
+		mutually_exclusive = { focus = focus_constitutionalism }
+		x = 0
+		y = 1
+		relative_position_id = focus_safeguard_democratic
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = focus_constitutionalism
 		icon = GFX_focus_ARG_strengthening_the_concordancia
-		prerequisite = { focus = political_effort }
-		mutually_exclusive = {
-			focus = communism_rising
-			focus = nation_first
-		}
-		x = 0
+		prerequisite = { focus = focus_safeguard_democratic }
+		mutually_exclusive = { focus = focus_spirit_of_liberalism }
+		x = 2
 		y = 1
-		relative_position_id = political_effort
-
-		cost = 8
-		
-		available = {
-			br_ideology_radical_communism_nio = yes
-			br_ideology_fascism_nio = yes
-		}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {
-			add_political_power = 120
-			add_popularity = { ideology = root popularity = 0.10 }
-		}
-		
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
-		id = steer_as_stability
-		icon = GFX_
-		prerequisite = { focus = reconciliation_of_gov }
-		#mutually_exclusive = { focus = }
-		x = 0
-		y = 1
-		relative_position_id = reconciliation_of_gov
+		relative_position_id = focus_safeguard_democratic
 
 		cost = 8
 		
@@ -2294,25 +2268,23 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		complete_tooltip = {}
-		
-		completion_reward = {
-			add_stability = 0.10
-			add_popularity = { ideology = root popularity = 0.10 }
-		}
+		completion_reward = {}
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	focus = {
-		id = loyalists_power
-		icon = GFX_
-		prerequisite = { focus = steer_as_stability }
-		mutually_exclusive = {
-			focus = unified_to_be_majority
-			focus = isolationism_honorably
+		id = focus_communism_threat
+		icon = GFX_goal_anti_comintern_pact
+		prerequisite = {
+			focus = focus_spirit_of_liberalism
+			focus = focus_constitutionalism
+			focus = focus_force_the_pace
 		}
+		#mutually_exclusive = { focus =  }
 		x = 0
 		y = 1
-		relative_position_id = steer_as_stability
+		relative_position_id = focus_spirit_of_liberalism
 
 		cost = 8
 		
@@ -2325,19 +2297,22 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		complete_tooltip = {}
-		
 		completion_reward = {}
 		
 		ai_will_do = { factor = 1 }
 	}
 	focus = {
-		id = enlightened_democratic_under_monarch_ruling
-		icon = GFX_
-		prerequisite = { focus = loyalists_power focus = isolationism_honorably }
-		#mutually_exclusive = { focus = }
+		id = focus_fascism_threat
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		prerequisite = {
+			focus = focus_spirit_of_liberalism
+			focus = focus_constitutionalism
+			focus = focus_force_the_pace
+		}
+		#mutually_exclusive = { focus =  }
 		x = 0
 		y = 1
-		relative_position_id = loyalists_power
+		relative_position_id = focus_constitutionalism
 
 		cost = 8
 		
@@ -2350,24 +2325,127 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		complete_tooltip = {}
-		
-		completion_reward = {
-			add_research_slot = 1
-		}
+		completion_reward = {}
 		
 		ai_will_do = { factor = 1 }
 	}
 	focus = {
-		id = isolationism_honorably
-		icon = GFX_
-		prerequisite = { focus = steer_as_stability focus = third_power }
+		id = focus_control_labour_union
+		icon = GFX_focus_generic_communist
+		prerequisite = {
+			focus = focus_national_war
+			focus = focus_communism_threat
+		}
 		mutually_exclusive = {
-			focus = unified_to_be_majority
-			focus = loyalists_power
+			focus = focus_guide_labour_union
+			focus = focus_support_allies
+		}
+		x = 0
+		y = 1
+		relative_position_id = focus_communism_threat
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = focus_support_allies
+		icon = GFX_focus_GER_customs_union
+		prerequisite = { focus = focus_fascism_threat }
+		mutually_exclusive = { focus = focus_control_labour_union }
+		x = 0
+		y = 1
+		relative_position_id = focus_fascism_threat
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = focus_dirigisme_limited
+		icon = GFX_focus_generic_central_planning
+		prerequisite = {
+			focus = focus_control_labour_union
+			focus = focus_support_allies
+		}
+		x = 1
+		y = 1
+		relative_position_id = focus_control_labour_union
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = focus_calling_of_human_rights
+		icon = GFX_focus_generic_social_democracy
+		prerequisite = { focus = focus_fascism_threat }
+		x = 1
+		y = 2
+		relative_position_id = focus_fascism_threat
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = focus_the_liberalism_order
+		icon = GFX_focus_generic_strike_at_democracy2
+		prerequisite = {
+			focus = focus_patriotism
+			focus = focus_calling_of_human_rights
+		}
+		mutually_exclusive = {
+			focus = focus_voice_of_poeples
+			focus = focus_steady_power
 		}
 		x = 2
 		y = 1
-		relative_position_id = steer_as_stability
+		relative_position_id = focus_patriotism
 
 		cost = 8
 		
@@ -2380,54 +2458,27 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		complete_tooltip = {}
-		
 		completion_reward = {}
 		
 		ai_will_do = { factor = 1 }
 	}
+	### ###
 	focus = {
-		id = the_way_of_inner_sage
-		icon = GFX_
-		prerequisite = { focus = loyalists_power focus = isolationism_honorably }
-		#mutually_exclusive = { focus = }
-		x = 0
-		y = 1
-		relative_position_id = isolationism_honorably
-
-		cost = 8
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {}
-		
-		ai_will_do = { factor = 1 }
-	}
-	#
-	focus = {
-		id = nation_first
-		icon = GFX_focus_generic_fascist_propaganda
-		prerequisite = { focus = political_effort }
-		mutually_exclusive = {
-			focus = communism_rising
-			focus = reconciliation_of_gov
-		}
-		x = 5
-		y = 1
-		relative_position_id = political_effort
+		id = focus_force_the_pace
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = focus_political_effort }
+		#mutually_exclusive = { focus =  }
+		x = 6
+		y = 2
+		relative_position_id = focus_political_effort
 
 		cost = 8
 		
 		available = {
-			br_ideology_radical_communism_nio = yes
-			br_ideology_socialism_nio_no_ds = yes
+			NOT = {
+				has_completed_focus = focus_road_to_revolution
+				has_completed_focus = focus_safeguard_democratic
+			}
 		}
 		
 		bypass = {}
@@ -2437,80 +2488,18 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		complete_tooltip = {}
-		
-		completion_reward = {
-			add_political_power = 120
-			add_war_support = 0.05
-			add_popularity = { ideology = fascism popularity = 0.05 }
-		}
-		
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
-		id = third_power
-		icon = GFX_
-		prerequisite = { focus = nation_first }
-		mutually_exclusive = { focus = black_shirt }
-		x = -1
-		y = 1
-		relative_position_id = nation_first
-
-		cost = 8
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
 		completion_reward = {}
 		
 		ai_will_do = { factor = 1 }
 	}
 	focus = {
-		id = black_shirt
-		icon = GFX_
-		prerequisite = { focus = nation_first }
-		mutually_exclusive = { focus = third_power }
-		x = 1
-		y = 1
-		relative_position_id = nation_first
-
-		cost = 8
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
-		completion_reward = {
-			add_political_power = 50
-			add_war_support = 0.10
-			add_stability = -0.10
-			army_experience = 50
-			add_popularity = { ideology = fascism popularity = 0.05 }
-			add_popularity = { ideology = nationalism popularity = 0.05 }
-		}
-		
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
-		id = fascism
-		icon = GFX_
-		prerequisite = { focus = black_shirt }
-		mutually_exclusive = { focus = nationalism }
+		id = focus_traditional_values
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = focus_force_the_pace }
+		#mutually_exclusive = { focus =  }
 		x = -1
 		y = 1
-		relative_position_id = black_shirt
+		relative_position_id = focus_force_the_pace
 
 		cost = 8
 		
@@ -2523,46 +2512,18 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		complete_tooltip = {}
-		
-		completion_reward = {
-			add_timed_idea = { idea = fascist_influence_1 days = 181 }
-		}
-		
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
-		id = teenagers_by_warm_bloody
-		icon = GFX_
-		prerequisite = { focus = third_power focus = fascism }
-		#mutually_exclusive = { focus = }
-		x = -1
-		y = 1
-		relative_position_id = fascism
-
-		cost = 8
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		
 		completion_reward = {}
 		
 		ai_will_do = { factor = 1 }
 	}
 	focus = {
-		id = nationalism
-		icon = GFX_
-		prerequisite = { focus = black_shirt }
-		mutually_exclusive = { focus = fascism }
+		id = focus_authority
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = focus_force_the_pace }
+		#mutually_exclusive = { focus =  }
 		x = 1
 		y = 1
-		relative_position_id = black_shirt
+		relative_position_id = focus_force_the_pace
 
 		cost = 8
 		
@@ -2575,21 +2536,20 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		complete_tooltip = {}
-		
-		completion_reward = {
-			add_timed_idea = { idea = fascist_influence_2 days = 181 }
-		}
+		completion_reward = {}
 		
 		ai_will_do = { factor = 1 }
 	}
+
 	focus = {
-		id = pride_our_nation
-		icon = GFX_
-		prerequisite = { focus = fascism focus = nationalism }
-		#mutually_exclusive = { focus = }
+		id = focus_monarch
+		icon = GFX_focus_GER_monarchy_compromise
+		prerequisite = { focus = focus_traditional_values }
+		prerequisite = { focus = focus_authority }
+		mutually_exclusive = { focus = focus_dictator }
 		x = 1
 		y = 1
-		relative_position_id = fascism
+		relative_position_id = focus_traditional_values
 
 		cost = 8
 		
@@ -2602,19 +2562,17 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		complete_tooltip = {}
-		
 		completion_reward = {}
 		
 		ai_will_do = { factor = 1 }
 	}
 	focus = {
-		id = lebensraum
-		icon = GFX_
-		prerequisite = { focus = nationalism }
-		#mutually_exclusive = { focus = }
-		x = 1
+		id = focus_strengthen_legitimacy
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		prerequisite = { focus = focus_monarch }
+		x = 0
 		y = 1
-		relative_position_id = nationalism
+		relative_position_id = focus_monarch
 
 		cost = 8
 		
@@ -2627,7 +2585,85 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		complete_tooltip = {}
+		completion_reward = {}
 		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = focus_dictator
+		icon = GFX_focus_rom_royal_dictatorship
+		prerequisite = { focus = focus_authority }
+		mutually_exclusive = { focus = focus_monarch }
+		x = 3
+		y = 1
+		relative_position_id = focus_traditional_values
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = focus_control_militaries
+		icon = GFX_focus_SOV_penal_battalions
+		prerequisite = { focus = focus_dictator }
+		x = 0
+		y = 1
+		relative_position_id = focus_dictator
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = focus_steady_power
+		icon = GFX_focus_BRA_end_the_state_of_emergency
+		prerequisite = {
+			focus = focus_strengthen_legitimacy
+			focus = focus_control_militaries
+		}
+		mutually_exclusive = {
+			focus = focus_voice_of_poeples
+			focus = focus_the_liberalism_order
+		}
+		x = 0
+		y = 1
+		relative_position_id = focus_strengthen_legitimacy
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
 		completion_reward = {}
 		
 		ai_will_do = { factor = 1 }

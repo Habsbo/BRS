@@ -1,0 +1,76 @@
+﻿l_simp_chinese:
+ focus_political_effort: "政治道路"
+ focus_political_effort_desc: ""
+
+ focus_road_to_revolution: "革命之路"
+ focus_road_to_revolution_desc: ""
+ focus_youth_league: "青年团体"
+ focus_youth_league_desc: ""
+ focus_urge_alter: "敦促变革"
+ focus_urge_alter_desc: ""
+
+ focus_class_war: "阶级斗争"
+ focus_class_war_desc: ""
+ focus_internationalism: "国际主义"
+ focus_internationalism_desc: ""
+
+ focus_national_war: "民族斗争"
+ focus_national_war_desc: ""
+
+ focus_organize_unions: "组织联盟"
+ focus_organize_unions_desc: ""
+ focus_guide_labour_union: "指导工会"
+ focus_guide_labour_union_desc: ""
+ focus_structural_reform: "行政改革"
+ focus_structural_reform_desc: ""
+ focus_voice_of_poeples: "人民之声"
+ focus_voice_of_poeples_desc: ""
+
+ focus_safeguard_democratic: "捍卫民主"
+ focus_safeguard_democratic_desc: ""
+
+ focus_patriotism: "爱国主义"
+ focus_patriotism_desc: ""
+
+
+ focus_spirit_of_liberalism: "自由主义之精神"
+ focus_spirit_of_liberalism_desc: ""
+
+ focus_constitutionalism: "宪政主义"
+ focus_constitutionalism_desc: ""
+
+ focus_communism_threat: "共产主义的威胁"
+ focus_communism_threat_desc: ""
+ focus_fascism_threat: "法西斯主义的威胁"
+ focus_fascism_threat_desc: ""
+
+ focus_force_the_pace: "控制局势"
+ focus_force_the_pace_desc: ""
+
+ focus_control_labour_union: "支配工会"
+ focus_control_labour_union_desc: ""
+ focus_support_allies: "协助盟友"
+ focus_support_allies_desc: ""
+ focus_dirigisme_limited: "有限统制"
+ focus_dirigisme_limited_desc: ""
+ focus_calling_of_human_rights: "人权号令"
+ focus_calling_of_human_rights_desc: ""
+ focus_the_liberalism_order: "自由秩序"
+ focus_the_liberalism_order_desc: ""
+
+ focus_traditional_values: "传统价值"
+ focus_traditional_values_desc: ""
+ focus_authority: "权威"
+ focus_authority_desc: ""
+ focus_monarch: "君主"
+ focus_monarch_desc: ""
+ focus_dictator: "独裁者"
+ focus_dictator_desc: ""
+ focus_strengthen_legitimacy: "强化合法性"
+ focus_strengthen_legitimacydesc: ""
+ focus_control_militaries: "控制军队"
+ focus_control_militaries_desc: ""
+ focus_steady_power: "稳固政权"
+ focus_steady_power_desc: ""
+
+#events 

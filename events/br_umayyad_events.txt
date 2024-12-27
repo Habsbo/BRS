@@ -1,0 +1,128 @@
+### eggs ###
+add_namespace = br_umayyad
+
+country_event = { #
+	id = br_umayyad.1
+	title = br_umayyad.1.title
+	desc = br_umayyad.1.desc
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			news_event = { id = br_umayyad_news.1 }
+			173 = {
+				transfer_state_to = ADU
+				remove_claim_by = ADU
+				add_core_of = ADU
+			}
+		}
+	}
+
+	option = {
+		name = br_umayyad.1.a #
+
+		ADU = {
+			change_tag_from = root
+		}
+
+		ai_chance = { base = 0 }
+	}
+
+	option = {
+		name = br_umayyad.1.b #
+
+		ai_chance = { base = 1 }
+	}
+}
+
+country_event = { #
+	id = br_umayyad.2
+	title = br_umayyad.2.title
+	desc = br_umayyad.2.desc
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			news_event = { id = br_umayyad_news.2 }
+		}
+	}
+
+	option = {
+		name = br_umayyad.2.a #
+
+		ai_chance = { base = 10 }
+	}
+
+	option = {
+		name = br_umayyad.2.b #
+
+		ai_chance = { base = 0 }
+	}
+}
+### ###
+add_namespace = br_umayyad_news
+
+#穆阿维叶归来
+news_event = {
+	id = br_umayyad_news.1
+	title = br_umayyad_news.1.title
+	desc = br_umayyad_news.1.desc
+	picture = GFX_news_event_generic_sign_treaty3
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = br_umayyad_news.1.a
+
+	}
+}
+
+news_event = {
+	id = br_umayyad_news.2
+	title = br_umayyad_news.2.title
+	desc = br_umayyad_news.2.desc
+	picture = GFX_news_event_generic_sign_treaty3
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = br_umayyad_news.2.a
+
+	}
+}
+
+news_event = {
+	id = br_umayyad_news.101
+	title = br_umayyad_news.101.title
+	desc = br_umayyad_news.101.desc
+	picture = GFX_news_event_generic_sign_treaty3
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = br_umayyad_news.101.a
+
+	}
+	
+	option = {
+		name = br_umayyad_news.101.b
+
+	}
+	
+	option = {
+		name = br_umayyad_news.101.c
+
+	}
+}

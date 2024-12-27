@@ -1,0 +1,32 @@
+characters={
+### 尤金尼奥·拉斯卡里斯 ###
+	SPR_eugenio_lascaris = {
+		name = eugenio_lascaris
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_SPR_eugenio_lascaris"
+				small = "GFX_portrait_SPR_eugenio_lascaris_small"
+			}
+		}
+	}
+### 乔治·马泰·坎塔库奇诺 ###
+	ROM_george_matei_cantacuzino = {
+		name = george_matei_cantacuzino
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_ROM_george_matei_cantacuzino"
+				small = "GFX_portrait_ROM_george_matei_cantacuzino_small"
+			}
+		}
+	}
+### 阿纳尔多·巴列奥略-奥林迪 ###
+	ITA_arnaldo_paleologo_orindi = {
+		name = paleologo_orindi
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_ITA_arnaldo_paleologo_orindi"
+				small = "GFX_portrait_ITA_arnaldo_paleologo_orindi_small"
+			}
+		}
+	}
+}

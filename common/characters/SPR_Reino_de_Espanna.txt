@@ -5,7 +5,7 @@ characters={
 		portraits = {
 			civilian = {
 				large = "GFX_portrait_SPR_alfonso_xiii"
-				#small = ""
+				#small = "GFX_portrait_SPR_alfonso_xiii_small"
 			}
 		}
 		
@@ -22,7 +22,7 @@ characters={
 		portraits = {
 			civilian = {
 				large = "GFX_portrait_SPR_miguel_primo_de_rivera"
-				#small = ""
+				#small = "GFX_portrait_SPR_miguel_primo_de_rivera_small"
 			}
 		}
 		

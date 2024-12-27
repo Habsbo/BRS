@@ -490,3 +490,359 @@ br_na_generic_decisions = {#成立摩洛哥共和国
 		}
 	}
 }
+
+br_umayyad_category = {
+	br_umayyad_declaration = {
+		icon = eng_propaganda_campaigns
+
+		available = {
+			ROOT = {
+				exists = yes
+				has_capitulated = no
+				is_subject = no
+			}
+		}
+
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = SPR
+						is_core_of = POR
+						is_core_of = MOR
+					}
+				}
+				add_claim_by = root
+			}
+		}
+
+		ai_will_do = {
+			base = 100
+		}
+	}
+	br_umayyad_missionary = {
+		icon = infiltrate_state
+
+		target_root_trigger = {
+			original_tag = ADU
+		}
+		#target_array = 
+		target_trigger = {
+			FROM = {
+				is_controlled_by = root
+				NOT = { is_core_of = ROOT }
+			}
+		}
+		visible = {
+
+		}
+		available = {
+			not = { has_country_flag = br_umayyad_missionary_flag }
+		}
+
+		cost = 50
+
+		days_remove = 28
+		days_re_enable = 28
+		state_target = yes
+		on_map_mode = map_only
+		
+		complete_effect = {
+			set_country_flag = br_umayyad_missionary_flag
+		}
+
+		remove_effect = {
+			FROM = {
+				random_list = {
+					5 = { add_resistance = -5 add_compliance = 10 }
+					30 = { add_resistance = -5 }
+					30 = { add_compliance = 10 }
+					10 = { add_resistance = 5 }
+					10 = { add_compliance = -5 }
+				}
+			}
+		}
+	}
+	br_umayyad_rebirth = {
+		icon = generic_speech
+
+		available = {
+			ROOT = {
+				exists = yes
+				has_capitulated = no
+				is_subject = no
+			}
+		}
+
+		visible = {
+			original_tag = ADU
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			news_event = { id = br_umayyad_news.101 }
+			set_cosmetic_tag = Umayyad_caliphate
+			hidden_effect = {
+				every_controlled_state = {
+					limit = {}
+					remove_claim_by = root
+					add_core_of = root
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 100
+		}
+	}
+	br_umayyad_reset_capital = {
+		icon = infiltrate_state
+		target_root_trigger = {
+			original_tag = ADU
+		}
+		#target_array = 
+		target_trigger = {
+			FROM = {
+				OR = {
+					state = 41
+					state = 789
+					state = 907 #Cairo
+					state = 554 #
+					state = 291 #
+					state = 454 #Jerusalem
+					state = 679 #Medina
+					state = 856 #Mecca
+				}
+			}
+		}
+		visible = {}
+		available = {}
+
+		cost = 50
+
+		days_re_enable = 30
+		state_target = yes
+		on_map_mode = map_only
+		
+		complete_effect = {
+			set_capital = { state = FROM }
+		}
+
+		ai_will_do = {
+			base = 100
+		}
+	}
+}
+
+br_bod_decision_category = {
+	br_bod.claim_ladakh = {
+		icon = generic_nationalism
+
+		available = {
+			ROOT = {
+				exists = yes
+				has_capitulated = no
+				is_subject = no
+			}
+		}
+
+		visible = {}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		complete_effect = {
+			787 = { add_claim_by = root }
+			441 = { add_claim_by = root }
+		}
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 787
+				state = 441
+			}
+		}
+
+		ai_will_do = {
+			base = 100
+		}
+	}
+	br_bod.claim_lho_yu = {
+		icon = generic_nationalism
+
+		available = {
+			ROOT = {
+				exists = yes
+				has_capitulated = no
+				is_subject = no
+			}
+		}
+
+		visible = {}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		complete_effect = {
+			324 = { add_claim_by = root }
+		}
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 324
+				state = 434
+			}
+		}
+
+		ai_will_do = {
+			base = 100
+		}
+	}
+	br_bod.claim_khampa = {
+		icon = generic_nationalism
+
+		available = {
+			ROOT = {
+				exists = yes
+				has_capitulated = no
+				is_subject = no
+			}
+		}
+
+		visible = {}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		complete_effect = {
+			610 = { add_claim_by = root }
+			751 = { add_claim_by = root }
+		}
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 610
+				state = 751
+			}
+		}
+
+		ai_will_do = {
+			base = 100
+		}
+	}
+	br_bod.claim_amdo = {
+		icon = generic_nationalism
+
+		available = {
+			ROOT = {
+				exists = yes
+				has_capitulated = no
+				is_subject = no
+			}
+		}
+
+		visible = {}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		complete_effect = {
+			604 = { add_claim_by = root }
+			754 = { add_claim_by = root }
+			755 = { add_claim_by = root }
+		}
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 604
+				state = 754
+				state = 755
+			}
+		}
+
+		ai_will_do = {
+			base = 100
+		}
+	}
+	br_bod.claim_nepal = {
+		icon = generic_nationalism
+
+		available = {
+			ROOT = {
+				exists = yes
+				has_capitulated = no
+				is_subject = no
+			}
+		}
+
+		visible = {}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		complete_effect = {
+			323 = { add_claim_by = root }
+		}
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 323
+			}
+		}
+
+		ai_will_do = {
+			base = 100
+		}
+	}
+	br_bod.proclaim_bod = {
+		icon = generic_nationalism
+
+		available = {
+			ROOT = {
+				exists = yes
+				has_capitulated = no
+				is_subject = no
+			}
+		}
+
+		visible = {
+			all_core_state = { is_controlled_by =root }
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		complete_effect = {
+			hidden_effect = {
+				every_state = {
+					limit = {
+						is_claimed_by = root
+						is_controlled_by =root
+					}
+					remove_claim_by = root
+					add_core_of = root
+				}
+			}
+			set_cosmetic_tag = TIB_bod
+		}
+		
+		ai_will_do = {
+			base = 100
+		}
+	}
+}

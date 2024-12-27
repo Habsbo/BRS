@@ -839,4 +839,15 @@ characters={
 			traits  = {}
 		}
 	}
+
+### ali Hussein ###
+	CHI_ali_hussein = { #吴星
+		name= ali_hussein
+		portraits={
+			civilian={
+				large="GFX_portrait_CHI_ali_hussein"
+				small="GFX_portrait_CHI_ali_hussein_small"
+			}
+		}
+	}
 }

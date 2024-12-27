@@ -1,0 +1,77 @@
+characters = {
+	#费萨尔·本·侯赛因 - Fayṣal bin Ḥusayn
+	SYR_faysal_bin_husayn = {
+		name = faysal_bin_husayn
+		portraits = {
+			civilian = {
+				large = GFX_portrait_SYR_faysal_bin_husayn
+				small = GFX_portrait_SYR_faysal_bin_husayn_small
+			}
+		}
+		country_leader={
+			ideology=despotism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	#塔伊·阿丁·哈撒尼 - Taj al-Din al-Hasani
+	SYR_taj_al_din_al_hasani = {
+		name = taj_al_din_al_hasani
+		portraits = {
+			civilian = {
+				large = GFX_portrait_SYR_taj_al_din_al_hasani
+				small = GFX_portrait_SYR_taj_al_din_al_hasani_small
+			}
+		}
+	}
+	#哈希姆·阿塔西
+	SYR_hashim_bay_khalid_al_atassi = {
+		name = hashim_bay_khalid_al_atassi
+		portraits = {
+			civilian = {
+				large = GFX_portrait_SYR_hashim_al_atassi
+				small = GFX_portrait_SYR_hashim_al_atassi_small
+			}
+		}
+	}
+
+	#Muhammad Ali Bey al-Abid
+	SYR_muhammad_ali_bey_al_abid = {
+		name = muhammad_ali_bey_al_abid
+		portraits = {
+			civilian = {
+				large = GFX_portrait_SYR_muhammad_ali_bey_al_abid
+				small = GFX_portrait_SYR_muhammad_ali_bey_al_abid_small
+			}
+		}
+	}
+
+### communists ###
+	SYR_khalid_bakdash = {
+		name = khalid_bakdash
+		portraits = {
+			civilian = {
+				large = GFX_portrait_SYR_khalid_bakdash
+				small = GFX_portrait_SYR_khalid_bakdash_small
+			}
+		}
+		country_leader={
+			ideology=leninism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	#
+	#SYR_ = {
+	#	name = 
+	#	portraits = {
+	#		civilian = {
+	#			large = GFX_portrait_SYR_
+	#			small = GFX_portrait_SYR__small
+	#		}
+	#	}
+	#}
+}
+	

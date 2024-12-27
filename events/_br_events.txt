@@ -878,3 +878,26 @@ country_event = { #
 		name = br_ceska.1.a
 	}
 }
+
+add_namespace = br_generic_focus
+
+country_event = { #
+	id = br_generic_focus.1
+	title = br_generic_focus.1.title
+	desc = br_generic_focus.1.desc
+
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	option = {
+		name = br_generic_focus.1.a
+	}
+
+	option = {
+		name = br_generic_focus.1.b
+	}
+	
+	option = {
+		name = br_generic_focus.1.c
+	}
+}

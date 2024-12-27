@@ -1,7 +1,7 @@
 characters = {
 ### ADU ###
 	ADU_hisham_ibn_abd_alrahman_banu_umayya = { #并非历史
-		name=hisham_ibn_abd_alrahman_banu_umayya_banu_umayya
+		name=hisham_ibn_abd_alrahman_banu_umayya
 		portraits={
 			civilian={
 				large="GFX_portrait_hisham_ibn_abd_alrahman_banu_umayya"

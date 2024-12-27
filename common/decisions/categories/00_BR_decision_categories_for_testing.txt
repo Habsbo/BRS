@@ -40,3 +40,11 @@ br_na_generic_decisions = {
 	}
 	priority = -1
 }
+
+br_umayyad_category = {
+	icon = generic_research
+	
+	allowed = { original_tag = ADU }
+	visible = {}
+	priority = -1
+}

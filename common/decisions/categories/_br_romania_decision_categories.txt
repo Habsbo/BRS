@@ -31,3 +31,14 @@ br_romania_agrarian_reform = {
 	visible_when_empty = yes
 	priority = 9
 }
+
+br_bod_decision_category = {
+	icon = usa_intervention_mandate
+
+	allowed = { original_tag = TIB }
+
+	#visible = {}
+	
+	visible_when_empty = yes
+	priority = -1
+}

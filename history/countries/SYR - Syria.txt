@@ -16,10 +16,10 @@ if = {
 set_convoys = 5
 
 set_politics = {
-	ruling_party = dem_conservatism
+	ruling_party = authoritarian
 	last_election = "1931.1.1"
 	election_frequency = 48
-	elections_allowed = yes
+	elections_allowed = no
 }
 
 set_popularities = {
@@ -41,42 +41,15 @@ set_popularities = {
 	supernationalism = 0
 }
 
-create_country_leader = {
-	name = "Hashim al-Atassi"
-	desc = ""
-	picture = GFX_portrait_Hashim_al_Atassi
-	ideology = liberalism
-	traits = {
-		#
-	}
-}
+#Antun Saadeh 黎巴嫩政治家，叙利亚社会民族主义党创建者
 
-create_country_leader = {
-	name = "Antun Saadeh"
-	desc = ""
-	picture = GFX_portrait_Antun_Saadeh
-	ideology = fascism_ideology
-	traits = {
-		#
-	}
-}
+#recruit_character = 
 
-create_country_leader = {
-	name = "Ghazi bin Faisal"
-	desc = ""
-	picture = GFX_portrait_Ghazi_bin_Faisal
-	ideology = despotism
-	traits = {
-		#
-	}
-}
+recruit_character = SYR_faysal_bin_husayn
 
-create_country_leader = {
-	name = "Khalid Bakdash"
-	desc = ""
-	picture = GFX_portrait_Khalid_Bakdash
-	ideology = leninism
-	traits = {
-		#
-	}
-}
+recruit_character = SYR_taj_al_din_al_hasani
+recruit_character = SYR_hashim_bay_khalid_al_atassi
+recruit_character = SYR_muhammad_ali_bey_al_abid
+
+recruit_character = SYR_khalid_bakdash
+
