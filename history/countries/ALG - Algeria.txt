@@ -50,6 +50,7 @@ set_popularities = {
 	supernationalism = 0 #超国家社会主义
 }
 
+#characters
 create_country_leader = {
 	name = "Ahmed Ben Bella"
 	desc = ""

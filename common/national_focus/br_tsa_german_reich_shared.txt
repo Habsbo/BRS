@@ -145,3 +145,430 @@ joint_focus = {
 	completion_reward_joint_member = {}
 	ai_will_do = { factor = 1 }
 }
+
+shared_focus = {
+	id = DEUTSCH_landesentwicklung
+	icon = GFX_focus_GER_the_four_year_plan
+	prerequisite = { focus = DKR_finanzreform }
+	#mutually_exclusive = { focus =  }
+	x = 12
+	y = 6
+	#relative_position_id = 
+	cost = 8
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+
+###
+shared_focus = {
+	id = DEUTSCH_invest_nordwesten
+	icon = GFX_focus_generic_industry_1
+	prerequisite = { focus = DEUTSCH_landesentwicklung }
+	x = -10
+	y = 1
+	relative_position_id = DEUTSCH_landesentwicklung
+
+	cost = 5
+
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+
+shared_focus = {
+	id = DEUTSCH_invest_weser_ems
+	icon = GFX_
+	prerequisite = { focus = DEUTSCH_invest_nordwesten }
+	x = -2
+	y = 1
+	relative_position_id = DEUTSCH_invest_nordwesten
+	cost = 8
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+shared_focus = {
+	id = DEUTSCH_invest_hannover
+	icon = GFX_
+	prerequisite = { focus = DEUTSCH_invest_nordwesten }
+	x = 0
+	y = 1
+	relative_position_id = DEUTSCH_invest_nordwesten
+
+	cost = 8
+
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+shared_focus = {
+	id = DEUTSCH_hafenwirtschaft
+	icon = GFX_focus_GER_navy
+	prerequisite = {
+		focus = DEUTSCH_invest_weser_ems
+		focus = DEUTSCH_invest_hannover
+	}
+	x = 0
+	y = 1
+	relative_position_id = DEUTSCH_invest_weser_ems
+
+	cost = 5
+
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+shared_focus = {
+	id = DEUTSCH_enfocus_import_und_export
+	icon = GFX_focus_generic_british_trade
+	prerequisite = { focus = DEUTSCH_hafenwirtschaft }
+	x = 0
+	y = 1
+	relative_position_id = DEUTSCH_hafenwirtschaft
+
+	cost = 8
+
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+shared_focus = {
+	id = DEUTSCH_west_germanic_reciprocal_agreement
+	icon = GFX_goal_generic_trade
+	prerequisite = { focus = DEUTSCH_enfocus_import_und_export }
+	x = 0
+	y = 1
+	relative_position_id = DEUTSCH_enfocus_import_und_export
+
+	cost = 5
+
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+shared_focus = {
+	id = DEUTSCH_invest_olindustrie
+	icon = GFX_goal_generic_oil_refinery
+	prerequisite = {
+		focus = DEUTSCH_invest_weser_ems
+		focus = DEUTSCH_invest_hannover
+	}
+	x = 0
+	y = 1
+	relative_position_id = DEUTSCH_invest_hannover
+
+	cost = 5
+
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+
+shared_focus = {
+	id = DEUTSCH_invest_westfalen
+	icon = GFX_
+	prerequisite = {
+		focus = DEUTSCH_invest_nordwesten
+		focus = DEUTSCH_invest_rhine
+	}
+	x = 2
+	y = 1
+	relative_position_id = DEUTSCH_invest_nordwesten
+
+	cost = 8
+
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+shared_focus = {
+	id = DEUTSCH_mineralwirtschaft
+	icon = GFX_focus_generic_mining_industry
+	prerequisite = { focus = DEUTSCH_invest_westfalen }
+	x = 0
+	y = 1
+	relative_position_id = DEUTSCH_invest_westfalen
+
+	cost = 8
+
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+
+###
+shared_focus = {
+	id = DEUTSCH_invest_rhine
+	icon = GFX_focus_generic_industry_1
+	prerequisite = { focus = DEUTSCH_landesentwicklung }
+	x = -6
+	y = 1
+	relative_position_id = DEUTSCH_landesentwicklung
+	
+	cost = 5
+
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+
+shared_focus = {
+	id = DEUTSCH_invest_chemische_industrie
+	icon = GFX_
+	prerequisite = { focus = DEUTSCH_invest_rhine }
+	x = 0
+	y = 1
+	relative_position_id = DEUTSCH_invest_rhine
+
+	cost = 8
+
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+
+shared_focus = {
+	id = DEUTSCH_invest_verbrennungsmotor
+	icon = GFX_
+	prerequisite = {
+		focus = DEUTSCH_invest_rhine
+		focus = DEUTSCH_invest_sudwesten
+	}
+	x = 2
+	y = 1
+	relative_position_id = DEUTSCH_invest_rhine
+
+	cost = 8
+
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+
+
+###
+shared_focus = {
+	id = DEUTSCH_invest_sudwesten
+	icon = GFX_focus_generic_industry_1
+	prerequisite = { focus = DEUTSCH_landesentwicklung }
+	x = -2
+	y = 1
+	relative_position_id = DEUTSCH_landesentwicklung
+	
+	cost = 5
+
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+
+shared_focus = {
+	id = DEUTSCH_invest_ruhr
+	icon = GFX_
+	prerequisite = {
+		focus = DEUTSCH_invest_rhine
+		focus = DEUTSCH_invest_sudwesten
+	}
+	x = 0
+	y = 1
+	relative_position_id = DEUTSCH_invest_sudwesten
+
+	cost = 8
+
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+
+###
+shared_focus = {
+	id = DEUTSCH_invest_sachsen
+	icon = GFX_focus_generic_industry_1
+	prerequisite = { focus = DEUTSCH_landesentwicklung }
+	x = 2
+	y = 1
+	relative_position_id = DEUTSCH_landesentwicklung
+	
+	cost = 5
+
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+
+###
+shared_focus = {
+	id = DEUTSCH_invest_ostland
+	icon = GFX_focus_generic_industry_1
+	prerequisite = { focus = DEUTSCH_landesentwicklung }
+	x = 6
+	y = 1
+	relative_position_id = DEUTSCH_landesentwicklung
+	
+	cost = 5
+
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+
+###
+shared_focus = {
+	id = DEUTSCH_invest_schlesien
+	icon = GFX_focus_generic_industry_1
+	prerequisite = { focus = DEUTSCH_landesentwicklung }
+	x = 10
+	y = 1
+	relative_position_id = DEUTSCH_landesentwicklung
+	
+	cost = 5
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}

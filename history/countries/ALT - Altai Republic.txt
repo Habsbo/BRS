@@ -86,6 +86,7 @@ if = {
 		basic_torpedo = 1
 	}
 }
+
 set_politics = {
 	ruling_party = dem_conservatism
 	last_election = "1936.1.1"

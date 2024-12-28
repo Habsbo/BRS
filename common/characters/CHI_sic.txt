@@ -1,0 +1,13 @@
+characters = {
+### sichuan ###
+	CHI_yang_sen = { #杨森
+		name=yang_sen
+		portraits={
+			civilian={
+				large="GFX_portrait_CHI_yang_sen"
+				small="GFX_portrait_CHI_yang_sen_small"
+			}
+		}
+	}
+	
+}

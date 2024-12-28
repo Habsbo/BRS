@@ -1,16 +1,3 @@
-br_politicals_and_laws_decisions = {
-	icon = SWI_absolute_neutrality
-
-	allowed = { always = yes }
-
-	visible = {
-		always = yes
-	}
-	
-	visible_when_empty = yes
-	priority = 100
-}
-
 br_political_actions = {
 	icon = generic_political_actions
 

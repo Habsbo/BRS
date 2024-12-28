@@ -1,0 +1,21 @@
+### 大萧条 ###
+add_namespace = br_great_depression
+
+country_event = { #
+	id = br_great_depression.1
+	title = br_great_depression.1.title
+	desc = br_great_depression.1.desc
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			#
+		}
+	}
+	
+	option = {
+		name = br_great_depression.1.a
+	}
+}

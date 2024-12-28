@@ -270,3 +270,16 @@
  ROM_fascism_party: "基督教徒与全国防卫同盟(LANC)"
  ROM_nationalism_party: "铁卫团"
  ROM_supernationalism_party: "铁卫团"
+
+#EGY
+ EGY_soc_anarchism_party: "埃及共产党工团派(ECPs)"
+ EGY_vanwardism_party: "埃及共产党国际派(ECPi)"
+ EGY_sci_socialism_party: "埃及共产党(ECP)"
+ EGY_con_socialism_party: "埃及共产党民族派(ECPn)"
+ EGY_dem_socialism_party: "民族进步统一分子联盟组织"
+ EGY_dem_liberalism_party: "阿拉伯社会主义联盟" #al-Ittiḥād al-Ištirākī al-ʿArabī
+ EGY_dem_conservatism_party: "阿拉伯社会主义联盟" #
+ EGY_authoritarian_party: "赫迪夫王朝"
+ EGY_fascism_party: "埃及青年党"
+ EGY_nationalism_party: "埃及国家社会主义党"
+ EGY_supernationalism_party: "古埃及多神教"

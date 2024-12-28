@@ -12,10 +12,10 @@
 	
 	default = no
 
-	continuous_focus_position = { x = 50 y = 1500 }
+	continuous_focus_position = { x = 50 y = 1800 }
 
 	#shared_focus = DEUTSCH_kaiserreich_power
-
+	shared_focus = DEUTSCH_landesentwicklung
 #DKR
 	#
 	focus = {
@@ -23,7 +23,7 @@
 		icon = GFX_focus_generic_treaty
 		#prerequisite = { focus =  }
 		#mutually_exclusive = { focus =  }
-		x = 10
+		x = 16
 		y = 0
 		#relative_position_id = 
 		
@@ -41,12 +41,13 @@
 
 		ai_will_do = { factor = 1 }
 	}
+	#
 	focus = {
-		id = DKR_1
-		icon = GFX_focus_generic_treaty
+		id = DKR_druckmaschinen
+		icon = GFX_focus_generic_printing_press
 		prerequisite = { focus = DKR_four_years_plan }
 		#mutually_exclusive = { focus =  }
-		x = -3
+		x = -4
 		y = 1
 		relative_position_id = DKR_four_years_plan
 		
@@ -65,6 +66,53 @@
 		ai_will_do = { factor = 1 }
 	}
 	focus = {
+		id = DKR_finanzreform
+		icon = GFX_focus_generic_monetary_union
+		prerequisite = { focus = DKR_druckmaschinen }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = DKR_druckmaschinen
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = DKR_1
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = DKR_finanzreform }
+		#mutually_exclusive = { focus =  }
+		x = -5
+		y = 1
+		relative_position_id = DKR_finanzreform
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+	#
+	focus = {
 		id = DKR_1
 		icon = GFX_focus_generic_treaty
 		prerequisite = { focus = DKR_four_years_plan }
@@ -72,6 +120,30 @@
 		x = 0
 		y = 1
 		relative_position_id = DKR_four_years_plan
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = DKR_1
+		icon = GFX_focus_generic_treaty
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 20
+		#relative_position_id = 
 		
 		cost = 8
 		
@@ -93,7 +165,7 @@
 		#prerequisite = { focus =  }
 		#mutually_exclusive = { focus =  }
 		x = 0
-		y = 0
+		y = 20
 		#relative_position_id = 
 		
 		cost = 8
@@ -110,35 +182,13 @@
 
 		ai_will_do = { factor = 1 }
 	}
-	focus = {
-		id = DKR_1
-		icon = GFX_focus_generic_treaty
-		#prerequisite = { focus =  }
-		#mutually_exclusive = { focus =  }
-		x = 0
-		y = 0
-		#relative_position_id = 
-		
-		cost = 8
-		
-		available = {}
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		completion_reward = {}
 
-		ai_will_do = { factor = 1 }
-	}
-###
+### BELGIUM ###
 	focus = {
 		id = DKR_dismantle_belgium
 		icon = GFX_goal_generic_political_pressure
 		mutually_exclusive = { focus = DKR_left_belgium }
-		x = 20
+		x = 0
 		y = 0
 		#relative_position_id = 
 		

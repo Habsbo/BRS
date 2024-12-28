@@ -1,0 +1,14 @@
+spriteTypes = {
+# characters of egypt
+
+	#法鲁克
+	spriteType = {
+		name = "GFX_portrait_EGY_muhammad_faruq_al_awwal"
+		texturefile = "gfx/leaders/EGY/Portrait_EGY_faud_i.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_EGY_muhammad_faruq_al_awwal_small"
+		texturefile = "gfx/interface/ideas/idea_EGY_faud_i.dds"
+	}
+}

@@ -1,0 +1,65 @@
+characters = {
+### Muhammad Fārūq - 法鲁克一世 ###
+	EGY_muhammad_faruq_al_awwal = {
+		name=faruq_i_of_egypt
+		portraits={
+			civilian={
+				large="GFX_portrait_EGY_muhammad_faruq_al_awwal"
+				small="GFX_portrait_EGY_muhammad_faruq_al_awwal_small"
+			}
+		}
+		country_leader={
+			ideology=despotism
+			expire="1965.1.1.1"
+			traits = {}
+			id=-1
+		}
+	}
+### 艾哈迈德·侯赛因 ###
+	EGY_ahmed_husayn = {
+		name=ahmed_husayn
+		portraits={
+			civilian={
+				large="GFX_portrait_EGY_ahmed_husayn"
+				small="GFX_portrait_EGY_ahmed_husayn_small"
+			}
+		}
+		country_leader={
+			ideology=fascism_ideology
+			expire="1965.1.1.1"
+			traits = {}
+			id=-1
+		}
+	}
+### 穆罕默德·纳吉布 ###
+	EGY_mohamed_naguib = { #Mohamed Bey Naguib Youssef Qutb El-Qashlan
+		name = mohamed_naguib
+		portraits={
+			civilian={
+				large="GFX_portrait_EGY_mohamed_naguib"
+				small="GFX_portrait_EGY_mohamed_naguib_small"
+			}
+		}
+	}
+### 纳赛尔 ###
+	EGY_jamal_abdu_n_nassir_husayn = {
+		name = jamal_abdu_n_nassir_husayn
+		portraits={
+			civilian={
+				large="GFX_portrait_EGY_jamal_abdu_n_nassir_husayn"
+				small="GFX_portrait_EGY_jamal_abdu_n_nassir_husayn_small"
+			}
+		}
+	}
+
+### Hosni al-Arabi ###
+	EGY_hosni_al_arabi = {
+		name = hosni_al_arabi
+		portraits={
+			civilian={
+				large="GFX_portrait_EGY_hosni_al_arabi"
+				small="GFX_portrait_EGY_hosni_al_arabi_small"
+			}
+		}
+	}
+}

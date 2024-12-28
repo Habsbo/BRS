@@ -71,6 +71,9 @@
  VL_Dip_state_BEL_alexander_von_falkenhausen: "§Y$GER_alexander_von_falkenhausen$§!\n$GetDipStatus$\n$VL_trait_BEL_alexander_von_falkenhausen$"
  VL_desc_BEL_alexander_von_falkenhausen: "§g§!"
 
+#spain
+ ramon_ormazabal_tife: "拉蒙·奥尔马萨瓦尔·蒂费" #Ramón Ormazábal Tife
+ luis_urrengoetxea_agirre: "路易斯·乌伦格迪萨·阿加伦" #not sure pronunce
 #HELLAS
  GRE_regency_council: "摄政议会"
 
@@ -88,6 +91,14 @@
  muhammad_ali_bey_al_abid: "穆罕默德·阿里·阿贝德"
 
  khalid_bakdash: "哈利德·巴格达什"
+#egypt
+ faruq_i_of_egypt: "法鲁克一世"
+ ahmed_husayn: "艾哈迈德·侯赛因"
+
+ mohamed_naguib: "穆罕默德·纳吉布"
+ jamal_abdu_n_nassir_husayn: "贾迈勒·阿卜杜-纳赛尔·侯赛因"
+
+ hosni_al_arabi: "赫兹尼·阿拉比"
 #ukraine - anarchy
  nestor_ivanovych_makhno: "内斯托尔·伊万诺维奇·马赫诺"
  agafya_halyna_andriivna_kuzmenko: "阿佳菲亚·“哈蕾娜”·安德烈耶芙娜·库兹缅科"

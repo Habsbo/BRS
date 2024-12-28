@@ -1,0 +1,34 @@
+characters = {
+### eus ###
+	EUS_ramon_ormazabal_tife = {
+		name=ramon_ormazabal_tife
+		portraits={
+			civilian={
+				large="GFX_portrait_EUS_ramon_ormazabal_tife"
+				small="GFX_portrait_EUS_ramon_ormazabal_tife_small"
+			}
+		}
+		country_leader = {
+			ideology = marxism
+			traits = {}
+			expire = "1965.1.1"
+			id = -1
+		}
+	}
+	#Luis Urrengoetxea Agirre - 路易斯·乌伦格迪萨·阿加伦
+	EUS_luis_urrengoetxea_agirre = {
+		name=luis_urrengoetxea_agirre
+		portraits={
+			civilian={
+				large="GFX_portrait_EUS_luis_urrengoetxea"
+				small="GFX_portrait_EUS_luis_urrengoetxea_small"
+			}
+		}
+		country_leader = {
+			ideology = liberalism
+			traits = {}
+			expire = "1965.1.1"
+			id = -1
+		}
+	}
+}

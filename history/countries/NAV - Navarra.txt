@@ -3,30 +3,13 @@
 #oob = ""
 
 # Starting tech 起始科技
-set_technology = {
-	infantry_weapons = 1
-	infantry_weapons1 = 1
-	tech_recon = 1
-	tech_support = 1		
-	tech_engineers = 1
-	tech_mountaineers = 1
-	gw_artillery = 1
-	interwar_antiair = 1
-}
 
-if = {
-	limit = {
-		NOT = { has_dlc = "By Blood Alone" }
-	}
-	set_technology = {
-		early_fighter = 1
-		early_bomber = 1
-		naval_bomber1 = 1
-	}
-}
+#
+set_research_slots = 3
+set_stability = 0.5
+set_war_support = 0.7
 
 set_convoys = 20
-
 
 set_politics = {
 	ruling_party = dem_socialism
@@ -36,32 +19,24 @@ set_politics = {
 }
 
 set_popularities = {
-	soc_anarchism = 0 #无政府主义
-	vanwardism = 18 #革命社会主义
-	sci_socialism = 5 #科学社会主义
-	con_socialism = 5 #保守社会主义
-	dem_socialism = 40 #社会民主主义
-	dem_liberalism = 20 #社会自由主义
-	dem_conservatism = 0 #保守民主主义
-	authoritarian = 0 #威权主义
-	fascism = 12 #民族主义/束棒
-	nationalism = 0 #国家社会主义
+	#
+	soc_anarchism = 2
+	vanwardism = 8
+	sci_socialism = 10
+	con_socialism = 5
+	#
+	dem_socialism = 30
+	dem_liberalism = 20
+	dem_conservatism = 5
+	#
+	authoritarian = 10
+	#
+	fascism = 10
+	nationalism = 0
 }
 
-create_country_leader = {
-	name = "Ramón Ormazábal Tife"
-	picture = GFX_portrait_Ramon_Ormazabal_Tife
-	expire = "1965.1.1"
-	ideology = marxism
-}
-
-create_country_leader = {
-	name = "Luis Urrengoetxea"
-	picture = GFX_portrait_Luis_Urrengoetxea
-	expire = "1965.1.1"
-	ideology = liberalism
-}
-
+recruit_character = EUS_ramon_ormazabal_tife #巴斯克共产党
+recruit_character = EUS_luis_urrengoetxea_agirre #Luis Urrengoetxea，巴斯克左翼民主人士
 #国名&地区名
 set_cosmetic_tag = Euskal_Herria
 #法律

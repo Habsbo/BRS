@@ -37,50 +37,27 @@ set_popularities = {
 	nationalism = 0 #国家社会主义
 }
 
+#国王法鲁克
+recruit_character = EGY_muhammad_faruq_al_awwal
+#
+recruit_character = EGY_ahmed_husayn
 
-create_country_leader = {
-	name = "Muhammad Naguib"
-	desc = ""
-	picture = GFX_portrait_Muhammad_Naguib
-	ideology = liberalism
-	traits = {
-		#
-	}
-}
+recruit_character = EGY_mohamed_naguib
+recruit_character = EGY_jamal_abdu_n_nassir_husayn
 
-create_country_leader = {
-	name = "Ahmed Husayn"
-	desc = ""
-	picture = GFX_portrait_Ahmed_Husayn
-	ideology = fascism_ideology
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Farouk Muhammad Ali"
-	desc = ""
-	picture = "GFX_portrait_egy_faud_i"
-	ideology = despotism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Hosni al-Arabi"
-	desc = ""
-	picture = GFX_portrait_Hosni_al_Arabi
-	ideology = leninism
-	traits = {
-		#
-	}
-}
+recruit_character = EGY_hosni_al_arabi
 
 #国名
 set_cosmetic_tag = EGY_kingdom
 #法律
 add_ideas = {
+	br_laws_monarchy
+	br_laws_dictatorship
+	br_laws_suffrage_prohibited
+	br_laws_mainstream
+	br_laws_spiritual
+	br_laws_loyalist
+	#
+
 	#
 }

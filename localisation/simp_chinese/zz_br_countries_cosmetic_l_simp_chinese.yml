@@ -272,6 +272,7 @@
  Antwerpen: "安特卫普"
  Antwerpen_DEF: "安特卫普"
  Antwerpen_ADJ: "安特卫普"
+
  LUX_grand_duchy: "卢森堡大公国"
  LUX_grand_duchy_DEF: "卢森堡大公国"
  LUX_grand_duchy_ADJ: "卢森堡"
@@ -294,9 +295,11 @@
  Lotharingia: "洛泰林吉亚王国"
  Lotharingia_DEF: "洛泰林吉亚王国"
  Lotharingia_ADJ: "洛泰林吉亚"
-#
+#奥斯曼
  OTTOMAN_empire: "奥斯曼帝国"
  OTTOMAN_empire_DEF: "奥斯曼帝国"
+ Sublime_Porte: "最高门户"
+ Sublime_Porte_DEF: "最高门户"
 #北非 North Africa
  MOR_kingdom: "摩洛哥王国"
  MOR_kingdom_DEF: "摩洛哥王国"

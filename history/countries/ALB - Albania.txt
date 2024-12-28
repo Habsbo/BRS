@@ -2,13 +2,9 @@
 
 OOB = "ALB_1936"
 
-set_technology = {
-	infantry_weapons = 1
-	tech_trucks = 1
-	tech_support = 1
-	tech_recon = 1
-}
+#start tech
 
+#characters
 recruit_character = ALB_king_zog
 recruit_character = ALB_enver_hoxha
 recruit_character = ALB_xhemal_aranitasi
@@ -33,6 +29,7 @@ recruit_character = ALB_fiqri_dine
 recruit_character = ALB_midhat_frasheri
 recruit_character = ALB_jocelyn_percy
 
+set_convoys = 5
 
 set_politics = {
 	ruling_party = authoritarian
@@ -42,13 +39,12 @@ set_politics = {
 }
 
 set_popularities = {
-	sci_socialism = 5 #科学社会主义
-	dem_socialism = 0 #社会民主主义
-	dem_liberalism = 10 #社会自由主义
-	dem_conservatism = 20 #保守民主主义
-	authoritarian = 45 #威权主义
-	fascism = 20 #民族主义/束棒
+	sci_socialism = 5
+	#
+	dem_socialism = 0
+	dem_liberalism = 10
+	dem_conservatism = 20
+	#
+	authoritarian = 45
+	fascism = 20
 }
-
-set_convoys = 5
-

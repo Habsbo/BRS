@@ -6,6 +6,8 @@ ideologies = {
 			anarchism = {
 				can_be_randomly_selected = no # won't be assigned to randomly generated country leaders
 			}
+			syndicalism = {
+			}
 			anarchist_liberalism = {
 			}
 			anarchist_communism = {
@@ -45,8 +47,6 @@ ideologies = {
 	vanwardism = {
 
 		types = {
-			syndicalism = {
-			}
 			forwardism = {
 			}
 		}

@@ -25,7 +25,6 @@
 #
  br_can_not_change_laws_flag: "§R因国家精神而无法改变法律！§!"
 #
- br_politicals_and_laws_decisions: "[root.GetName]的政治与法律境况"
 #
  black_force_dynamic_modifier: "黑军"
  red_army_dynamic_modifier: "红军"
