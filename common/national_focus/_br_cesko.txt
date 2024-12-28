@@ -1582,6 +1582,29 @@
 		ai_will_do = { factor = 1 }
 	}
 
+	focus = {
+		id = CZE_adjust_tariffs
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = CZE_currency_reforms }
+		x = 3
+		y = 2
+		relative_position_id = CZE_currency_reforms
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
 ##################################
 ######## POLITICAL DIRECTION #####
 ##################################
