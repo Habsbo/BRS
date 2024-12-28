@@ -89,13 +89,58 @@
 		ai_will_do = { factor = 1 }
 	}
 	focus = {
-		id = DKR_1
-		icon = GFX_focus_generic_treaty
+		id = DKR_erholung_der_industrie
+		icon = GFX_focus_generic_industrialists
 		prerequisite = { focus = DKR_finanzreform }
 		#mutually_exclusive = { focus =  }
 		x = -5
 		y = 1
 		relative_position_id = DKR_finanzreform
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = DKR_issue_mefo_bills
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = DKR_erholung_der_industrie }
+		x = -4
+		y = 1
+		relative_position_id = DKR_erholung_der_industrie
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = DKR_staatsschulden
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = DKR_erholung_der_industrie }
+		x = -2
+		y = 1
+		relative_position_id = DKR_erholung_der_industrie
 		
 		cost = 8
 		
@@ -159,16 +204,16 @@
 
 		ai_will_do = { factor = 1 }
 	}
+
+### BELGIUM ###
 	focus = {
-		id = DKR_1
-		icon = GFX_focus_generic_treaty
-		#prerequisite = { focus =  }
-		#mutually_exclusive = { focus =  }
-		x = 0
-		y = 20
+		id = DKR_berne_concert_about_belgium
+		icon = GFX_focus_AUS_lawmaking_leniency
+		x = 1
+		y = 0
 		#relative_position_id = 
 		
-		cost = 8
+		cost = 5
 		
 		available = {}
 		bypass = {}
@@ -182,15 +227,14 @@
 
 		ai_will_do = { factor = 1 }
 	}
-
-### BELGIUM ###
 	focus = {
 		id = DKR_dismantle_belgium
 		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = DKR_berne_concert_about_belgium }
 		mutually_exclusive = { focus = DKR_left_belgium }
-		x = 0
-		y = 0
-		#relative_position_id = 
+		x = -1
+		y = 1
+		relative_position_id = DKR_berne_concert_about_belgium
 		
 		cost = 0
 		
@@ -209,6 +253,7 @@
 	focus = {
 		id = DKR_left_belgium
 		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = DKR_berne_concert_about_belgium }
 		mutually_exclusive = { focus = DKR_dismantle_belgium }
 		x = 2
 		y = 0
@@ -229,8 +274,8 @@
 		ai_will_do = { factor = 1 }
 	}
 	focus = {
-		id = DKR_1
-		icon = GFX_focus_generic_treaty
+		id = DKR_fate_of_belgium
+		icon = GFX_focus_BEL_belgica
 		prerequisite = {
 			focus = DKR_dismantle_belgium
 			focus = DKR_left_belgium
@@ -260,7 +305,7 @@
 		icon = GFX_goal_generic_major_alliance
 		#prerequisite = { focus =  }
 		#mutually_exclusive = { focus =  }
-		x = 24
+		x = 6
 		y = 0
 		#relative_position_id = 
 		
@@ -288,6 +333,114 @@
 			add_stability = 0.05
 			28 = { cancel_resistance = yes }
 		}
+
+		ai_will_do = { factor = 1 }
+	}
+
+###
+	focus = {
+		id = DKR_kaiser_william_ii
+		icon = GFX_focus_ger_return_of_the_kaiser
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 30
+		y = 0
+		#relative_position_id = 
+		
+		cost = 0
+		
+		available = {
+			always = no
+		}
+		bypass = {
+			NOT = {
+				has_country_leader = {
+					character = GER_wilhelm_ii
+					ruling_only = yes
+				}
+			}
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = { add_stability = 0.05 }
+		completion_reward = { add_stability = 0.05 }
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = DKR_disturbance
+		icon = GFX_focus_generic_strike_at_democracy2
+		prerequisite = { focus = DKR_kaiser_william_ii }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = DKR_kaiser_william_ii
+		
+		cost = 0
+		
+		available = {
+			always = no
+		}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = DKR_d1
+		icon = GFX_focus_ger_revive_kaiserreich
+		prerequisite = { focus = DKR_disturbance }
+		#mutually_exclusive = { focus =  }
+		x = -1
+		y = 1
+		relative_position_id = DKR_disturbance
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = DKR_d2
+		icon = GFX_focus_GER_subdue_the_wehrmacht_historical
+		prerequisite = { focus = DKR_disturbance }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 1
+		relative_position_id = DKR_disturbance
+		
+		cost = 8
+		
+		available = {}
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
 
 		ai_will_do = { factor = 1 }
 	}

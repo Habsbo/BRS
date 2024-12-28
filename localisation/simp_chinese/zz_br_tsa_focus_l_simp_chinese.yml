@@ -13,10 +13,23 @@
 
  DKR_four_years_plan: "四年计划"
  DKR_four_years_plan_desc: ""
+
+ DKR_druckmaschinen: "印刷机"
+ DKR_druckmaschinen_desc: ""
+ DKR_finanzreform: "财政改革"
+ DKR_finanzreform_desc: ""
+ DKR_erholung_der_industrie: "激励工业"
+ DKR_erholung_der_industrie_desc: ""
+
+ DKR_berne_concert_about_belgium: "伯尔尼会议议程：比利时"
+ DKR_berne_concert_about_belgium_desc: ""
  DKR_dismantle_belgium: "拆分比利时"
  DKR_dismantle_belgium_desc: ""
  DKR_left_belgium: "撤离比利时"
  DKR_left_belgium_desc: ""
+ DKR_fate_of_belgium: "比利时的命运"
+ DKR_fate_of_belgium_desc: ""
+
  DKR_integrate_alsace: "整合阿尔萨斯-洛林"
  DKR_integrate_alsace_desc: ""
 
@@ -157,11 +170,6 @@
  DEUTSCH_invest_schlesien: "投资西里西亚"
  DEUTSCH_invest_schlesien_desc: ""
 
- DKR_druckmaschinen: "印刷机"
- DKR_druckmaschinen_desc: ""
- DKR_finanzreform: "财政改革"
- DKR_finanzreform_desc: ""
-
  DEUTSCH_invest_olindustrie: "投资石油工业"
  DEUTSCH_invest_olindustrie_desc: ""
  DEUTSCH_mineralwirtschaft: "矿产型经济"
@@ -169,20 +177,16 @@
 
  DEUTSCH_west_germanic_reciprocal_agreement: "西日耳曼国家互惠协议"
  DEUTSCH_west_germanic_reciprocal_agreement_desc: ""
- : ""
- _desc: ""
- : ""
- _desc: ""
- : ""
- _desc: ""
- : ""
- _desc: ""
- : ""
- _desc: ""
- : ""
- _desc: ""
- : ""
- _desc: ""
+
+ DKR_issue_mefo_bills: "发行梅福票"
+ DKR_issue_mefo_bills_desc: ""
+ DKR_staatsschulden: "发行国债"
+ DKR_staatsschulden_desc: ""
+
+ DKR_kaiser_william_ii: "凯撒威廉二世"
+ DKR_kaiser_william_ii_desc: ""
+ DKR_disturbance: "骚乱"
+ DKR_disturbance_desc: ""
  : ""
  _desc: ""
  : ""

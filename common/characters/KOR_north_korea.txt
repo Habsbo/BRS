@@ -1,0 +1,17 @@
+characters={
+	KOR_kim_il_sung = {
+		name = kim_il_sung
+		portraits={
+			civilian = {
+				large = "GFX_portrait_KOR_kim_il_sung"
+				small = "GFX_portrait_KOR_kim_il_sung_small"
+			}
+		}
+		country_leader = {
+			ideology = stalinism
+			traits={}
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+}
