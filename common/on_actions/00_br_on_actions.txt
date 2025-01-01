@@ -4,7 +4,10 @@ on_actions = {
 			#
 			BEL = {
 				if = {
-					limit = { date < 1933.01.01 }
+					limit = {
+						date < 1933.01.01
+						date > 1925.01.01
+					}
 					activate_advisor = BEL_alexander_von_falkenhausen_hog
 				}
 			}

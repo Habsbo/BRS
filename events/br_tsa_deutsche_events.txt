@@ -10,5 +10,20 @@ country_event = { #
 
 	option = {
 		name = br_deutsche.1.a
+
+		complete_national_focus = DKR_kaiser_william_ii
+	}
+}
+country_event = { #
+	id = br_deutsche.2
+	title = br_deutsche.2.title
+	desc = br_deutsche.2.desc
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = br_deutsche.2.a
+
 	}
 }

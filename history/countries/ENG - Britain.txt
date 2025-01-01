@@ -172,13 +172,6 @@ if = {
 
 set_variable = { var = eng_gateway_to_europe_influence value = 0 }
 
-add_ideas = {
-	stiff_upper_lip
-	ENG_the_war_to_end_all_wars
-	george_v
-}
-	
-
 set_convoys = 1000
 
 # DIPLOMACY
@@ -1147,7 +1140,13 @@ add_ideas = {
 	br_laws_national_state
 	br_laws_freedom_belief
 	br_laws_bourgeoisie
+	#
+	TSA_belgium_affair_council
+	stiff_upper_lip
+	ENG_the_war_to_end_all_wars
+	george_v
 }
+
 #国家关系
 
 set_autonomy = {

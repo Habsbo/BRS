@@ -153,7 +153,7 @@
 	focus = {
 		id = CZE_military_research_institute
 		icon = GFX_focus_CZE_military_research_institute
-		x = 3
+		x = 5
 		y = 0
 
 		cost = 5
@@ -2058,7 +2058,7 @@
 			focus = CZE_masaryko_dedictvi
 			focus = CZE_disregard_the_constitution
 		}
-		x = 38
+		x = 42
 		y = 0
 		#relative_position_id = 
 

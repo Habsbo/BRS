@@ -71,4 +71,20 @@ leader_traits = {
 		custom_modifier_tooltip = supervisors_committee_uk_tt
 	}
 
+###
+	tsa_belgium_affair_council_stable = {
+		random = no
+
+		political_power_gain = 0.25
+		stability_weekly_factor = 0.05
+	}
+
+	tsa_belgium_affair_council_critical = {
+		random = no
+
+		political_power_cost = 0.25
+		stability_weekly = -0.001
+	}
+
+
 }

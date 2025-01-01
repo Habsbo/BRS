@@ -932,25 +932,3 @@ country_event = { #
 		name = br_generic_focus.2.c
 	}
 }
-
-### WORLD WAR ###
-add_namespace = br_worldwar
-
-country_event = { #
-	id = br_worldwar.1
-	title = br_worldwar.1.title
-	desc = br_worldwar.1.desc
-
-	fire_only_once = no
-	is_triggered_only = yes
-
-	immediate = {
-		hidden_effect = {
-			#
-		}
-	}
-	
-	option = {
-		name = br_worldwar.1.a
-	}
-}

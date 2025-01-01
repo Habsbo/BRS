@@ -43,186 +43,276 @@ focus_tree = {
 	}
 ###
 	shortcut = {
-		name = POL_dark_future #_shortcut
-		target = POL_dark_future
+		name = POL_darkest_future #_shortcut
+		target = POL_darkest_future
 		scroll_wheel_factor = 0.725
 		#trigger = {}
 	}
 ###
 	focus = {
-		id = POL_dark_future
+		id = POL_darkest_future
 		icon = GFX_focus_generic_military_dictatorship
-		#prerequisite = { focus = ENG_twenty_passed }
-		#relative_position_id = ENG_twenty_passed
-		x = 32
+		#prerequisite = { focus = }
+		x = 36
 		y = 0
+		#relative_position_id = 
+
 		cost = 0
-		available = {
-			always = no
-		}
-		ai_will_do = {
-			base = 1
-		}
-		bypass = {}
+
+		available = { always = no }
+		bypass = { always = no }
+
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			
-		}
+		completion_reward = { add_stability = -0.01 }
+
+		ai_will_do = { base = 0	}
 	}
 
 	focus = {
 		id = POL_open_meeting
-		icon = GFX_focus_generic_military_dictatorship
-		prerequisite = { focus = POL_dark_future }
-		relative_position_id = POL_dark_future
+		icon = GFX_focus_generic_national_security
+		prerequisite = { focus = POL_darkest_future }
 		x = 0
 		y = 1
+		relative_position_id = POL_darkest_future
+
 		cost = 5
-		available = {
-			
-		}
-		ai_will_do = {
-			base = 1
-		}
+
+		available = {}
 		bypass = {}
+
 		search_filters = { FOCUS_FILTER_POLITICAL }
+
 		completion_reward = {
-			
+			country_event = { id = br_polski.2 }
 		}
+
+		ai_will_do = { base = 10 }
 	}
 
 	focus = {
 		id = POL_discuss_issues
-		icon = GFX_focus_generic_military_dictatorship
-		prerequisite = { focus = POL_dark_future }
-		relative_position_id = POL_dark_future
-		x = 2
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = { focus = POL_darkest_future }
+		x = 20
 		y = 1
+		relative_position_id = POL_darkest_future
+
 		cost = 5
-		available = {
+
+		available = {}
+		bypass = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
 			
 		}
 		ai_will_do = {
 			base = 1
 		}
-		bypass = {}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			
-		}
 	}
 
+	### ###
+	focus = {
+		id = POL_strengthen_sejm
+		icon = GFX_focus_ARG_strengthening_the_concordancia
+		prerequisite = { focus = POL_open_meeting }
+		x = -12
+		y = 1
+		relative_position_id = POL_open_meeting
+
+		cost = 0
+
+		available = { always = no }
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
 	focus = {
 		id = POL_election_in_struggle
-		icon = GFX_focus_generic_military_dictatorship
-		prerequisite = { focus = POL_open_meeting }
-		relative_position_id = POL_open_meeting
-		x = 0
+		icon = GFX_focus_generic_strike_at_democracy2
+		mutually_exclusive = { focus = POL_election_over }
+		prerequisite = { focus = POL_strengthen_sejm }
+		x = -2
 		y = 1
+		relative_position_id = POL_strengthen_sejm
+
 		cost = 0
-		available = {
-			always = no
-		}
+
+		available = { always = no }
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
 		ai_will_do = {
 			base = 1
 		}
-		bypass = {}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			
-		}
 	}
-
 	focus = {
-		id = POL_future_of_kingdom
-		icon = GFX_focus_generic_military_dictatorship
-		prerequisite = { focus = POL_election_in_struggle }
-		relative_position_id = POL_election_in_struggle
-		x = 0
+		id = POL_election_over
+		icon = GFX_focus_generic_strike_at_democracy2
+		mutually_exclusive = { focus = POL_election_in_struggle }
+		prerequisite = { focus = POL_strengthen_sejm }
+		x = 2
 		y = 1
-		cost = 5
-		available = {
-			
-		}
+		relative_position_id = POL_strengthen_sejm
+
+		cost = 0
+
+		available = { always = no }
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
 		ai_will_do = {
 			base = 1
 		}
-		bypass = {}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			
-		}
 	}
-
+### ###
+	#
 	focus = {
 		id = POL_capital_bans
-		icon = GFX_focus_generic_military_dictatorship
-		prerequisite = { focus = POL_future_of_kingdom }
-		relative_position_id = POL_future_of_kingdom
-		x = 0
+		icon = GFX_focus_TUR_ratify_the_six_arrows
+		prerequisite = { focus = POL_open_meeting }
+		x = -2
 		y = 1
+		relative_position_id = POL_open_meeting
+
 		cost = 0
-		available = {
-			always = no
-		}
-		ai_will_do = {
-			base = 1
-		}
+		
+		available = { always = no }
 		bypass = {}
+
 		search_filters = { FOCUS_FILTER_POLITICAL }
+
 		completion_reward = {
 			
 		}
+
+		ai_will_do = { base = 0 }
+	}
+	#
+	focus = {
+		id = POL_future_of_kingdom
+		icon = GFX_focus_generic_monarchy_1
+		prerequisite = { focus = POL_open_meeting }
+		x = 2
+		y = 1
+		relative_position_id = POL_open_meeting
+
+		cost = 0
+		
+		available = { always = no }
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = {
+			base = 1
+		}
 	}
 
+	#
+	focus = {
+		id = POL_sanacja_gov
+		icon = GFX_focus_POL_consolidate_sanation_government
+		prerequisite = {
+			focus = POL_capital_bans
+			focus = POL_future_of_kingdom
+		}
+		mutually_exclusive = { focus = POL_new_regent }
+		x = 0
+		y = 1
+		relative_position_id = POL_capital_bans
+
+		cost = 5
+		
+		available = {
+			
+		}
+		bypass = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	#
 	focus = {
 		id = POL_new_regent
-		icon = GFX_focus_generic_military_dictatorship
-		prerequisite = { focus = POL_capital_bans }
-		relative_position_id = POL_capital_bans
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = {
+			focus = POL_capital_bans
+			focus = POL_future_of_kingdom
+		}
+		mutually_exclusive = { focus = POL_sanacja_gov }
 		x = 0
 		y = 1
+		relative_position_id = POL_future_of_kingdom
+
 		cost = 5
+
 		available = {
+			
+		}
+		bypass = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
 			
 		}
 		ai_will_do = {
 			base = 1
 		}
-		bypass = {}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			
-		}
 	}
 
-	focus = {
-		id = POL_sanacja
-		icon = GFX_focus_generic_military_dictatorship
-		prerequisite = { focus = POL_new_regent }
-		relative_position_id = POL_new_regent
-		x = 0
-		y = 1
-		cost = 5
-		available = {
-			
-		}
-		ai_will_do = {
-			base = 1
-		}
-		bypass = {}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			
-		}
-	}
-
+	#
 	focus = {
 		id = POL_continue_grabski_reform
-		icon = GFX_focus_generic_military_dictatorship
-		prerequisite = { focus = POL_sanacja }
-		relative_position_id = POL_sanacja
-		x = -3
+		icon = GFX_focus_POL_nationalist_education
+		prerequisite = {
+			focus = POL_sanacja_gov
+			focus = POL_new_regent
+		}
+		relative_position_id = POL_sanacja_gov
+		x = -1
 		y = 1
 		cost = 5
 		available = {
@@ -237,10 +327,9 @@ focus_tree = {
 			
 		}
 	}
-
 	focus = {
 		id = POL_combat_corruption
-		icon = GFX_focus_generic_military_dictatorship
+		icon = GFX_focus_ARG_anti_corruption_policies
 		prerequisite = { focus = POL_continue_grabski_reform }
 		relative_position_id = POL_continue_grabski_reform
 		x = 0
@@ -258,10 +347,9 @@ focus_tree = {
 			
 		}
 	}
-
 	focus = {
 		id = POL_open_economy_investment
-		icon = GFX_focus_generic_military_dictatorship
+		icon = GFX_focus_generic_economic_recovery
 		prerequisite = { focus = POL_combat_corruption }
 		relative_position_id = POL_combat_corruption
 		x = 0
@@ -279,13 +367,62 @@ focus_tree = {
 			
 		}
 	}
-
+	#
 	focus = {
-		id = POL_unite_support_party
-		icon = GFX_focus_generic_military_dictatorship
-		prerequisite = { focus = POL_sanacja }
-		relative_position_id = POL_sanacja
-		x = 3
+		id = POL_land_reform
+		icon = GFX_focus_generic_farmland
+		prerequisite = {
+			focus = POL_sanacja_gov
+			focus = POL_new_regent
+		}
+		x = 2
+		y = 0
+		relative_position_id = POL_continue_grabski_reform
+
+		cost = 5
+
+		available = {
+			
+		}
+		bypass = {
+			has_completed_focus = POL_reforma_gruntow
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+	focus = {
+		id = POL_raise_acquisition_price
+		icon = GFX_focus_generic_price_controls
+		prerequisite = { focus = POL_land_reform }
+		relative_position_id = POL_land_reform
+		x = 0
+		y = 2
+		cost = 5
+		available = {
+			
+		}
+		ai_will_do = {
+			base = 1
+		}
+		bypass = {}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = POL_limited_external_immigration
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = POL_land_reform }
+		relative_position_id = POL_land_reform
+		x = 1
 		y = 1
 		cost = 5
 		available = {
@@ -300,10 +437,59 @@ focus_tree = {
 			
 		}
 	}
-
+	#
 	focus = {
-		id = POL_watch_left
-		icon = GFX_focus_generic_military_dictatorship
+		id = POL_negotiation_with_rome
+		icon = GFX_focus_generic_catholic_dominion
+		prerequisite = {
+			focus = POL_sanacja_gov
+			focus = POL_new_regent
+		}
+		x = 2
+		y = 0
+		relative_position_id = POL_raise_acquisition_price
+
+		cost = 5
+
+		available = {
+			
+		}
+		ai_will_do = {
+			base = 1
+		}
+		bypass = {}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+	#
+	focus = {
+		id = POL_unite_support_party
+		icon = GFX_focus_generic_polish_deal
+		prerequisite = {
+			focus = POL_sanacja_gov
+			focus = POL_new_regent
+		}
+		relative_position_id = POL_land_reform
+		x = 4
+		y = 0
+		cost = 5
+		available = {
+			
+		}
+		ai_will_do = {
+			base = 1
+		}
+		bypass = {}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = POL_supervise_the_left
+		icon = GFX_focus_generic_communist
 		prerequisite = { focus = POL_unite_support_party }
 		relative_position_id = POL_unite_support_party
 		x = 0
@@ -321,12 +507,11 @@ focus_tree = {
 			
 		}
 	}
-
 	focus = {
 		id = POL_tightening_review_mechanism
-		icon = GFX_focus_generic_military_dictatorship
-		prerequisite = { focus = POL_watch_left }
-		relative_position_id = POL_watch_left
+		icon = GFX_focus_generic_secret_service_agency
+		prerequisite = { focus = POL_supervise_the_left }
+		relative_position_id = POL_supervise_the_left
 		x = 0
 		y = 1
 		cost = 5
@@ -342,114 +527,721 @@ focus_tree = {
 			
 		}
 	}
-
-	focus = {
-		id = POL_land_reform_under_sanacja
-		icon = GFX_focus_generic_military_dictatorship
-		prerequisite = { focus = POL_sanacja }
-		relative_position_id = POL_sanacja
-		x = -1
-		y = 1
-		cost = 5
-		available = {
-			
-		}
-		ai_will_do = {
-			base = 1
-		}
-		bypass = {}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = POL_raise_acquisition_price
-		icon = GFX_focus_generic_military_dictatorship
-		prerequisite = { focus = POL_land_reform_under_sanacja }
-		relative_position_id = POL_land_reform_under_sanacja
-		x = 0
-		y = 2
-		cost = 5
-		available = {
-			
-		}
-		ai_will_do = {
-			base = 1
-		}
-		bypass = {}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = POL_limited_external_immigration
-		icon = GFX_focus_generic_military_dictatorship
-		prerequisite = { focus = POL_land_reform_under_sanacja }
-		relative_position_id = POL_land_reform_under_sanacja
-		x = 1
-		y = 1
-		cost = 5
-		available = {
-			
-		}
-		ai_will_do = {
-			base = 1
-		}
-		bypass = {}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = POL_negotiation_with_rome
-		icon = GFX_focus_generic_military_dictatorship
-		prerequisite = { focus = POL_sanacja }
-		relative_position_id = POL_sanacja
-		x = 1
-		y = 3
-		cost = 5
-		available = {
-			
-		}
-		ai_will_do = {
-			base = 1
-		}
-		bypass = {}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			
-		}
-	}
-
+	#
 	focus = {
 		id = POL_reborn_under_sanacja
-		icon = GFX_focus_generic_military_dictatorship
+		icon = GFX_focus_POL_expand_polish_intelligence
 		prerequisite = { focus = POL_open_economy_investment }
 		prerequisite = { focus = POL_tightening_review_mechanism }
 		prerequisite = { focus = POL_raise_acquisition_price }
 		prerequisite = { focus = POL_negotiation_with_rome }
-		relative_position_id = POL_sanacja
-		x = 0
-		y = 4
+		x = 3
+		y = 1
+		relative_position_id = POL_open_economy_investment
+
 		cost = 5
+
 		available = {
 			
-		}
-		ai_will_do = {
-			base = 1
 		}
 		bypass = {}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			
 		}
+		ai_will_do = {
+			base = 1
+		}
 	}
+
+### ###
+	focus = {
+		id = POL_2
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = POL_capital_bans }
+		#mutually_exclusive = { focus = POL_ }
+		x = -4
+		y = 2
+		relative_position_id = POL_capital_bans
+
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = POL_2
+		icon = GFX_goal_generic_demand_territory
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 0
+		#relative_position_id =
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+### ###
+	focus = {
+		id = POL_seek_successor
+		icon = GFX_focus_generic_monarchy_2
+		prerequisite = { focus = POL_future_of_kingdom }
+		#mutually_exclusive = { focus =  }
+		x = 4
+		y = 2
+		relative_position_id = POL_future_of_kingdom
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = POL_rosji_inheritor
+		icon = GFX_focus_SOV_my_brothers_keeper
+		prerequisite = { focus = POL_seek_successor }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = POL_seek_successor
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = POL_polska_inheritor
+		icon = GFX_focus_POL_end_the_regency
+		prerequisite = { focus = POL_seek_successor }
+		#mutually_exclusive = { focus =  }
+		x = 4
+		y = 1
+		relative_position_id = POL_seek_successor
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+
+	focus = {
+		id = POL_habsburg_inheritor
+		icon = GFX_focus_POL_habsburg
+		prerequisite = { focus = POL_seek_successor }
+		#mutually_exclusive = { focus =  }
+		x = 8
+		y = 1
+		relative_position_id = POL_seek_successor
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = POL_hohenzollern_inheritor
+		icon = GFX_focus_ger_revive_kaiserreich
+		prerequisite = { focus = POL_seek_successor }
+		#mutually_exclusive = { focus =  }
+		x = 12
+		y = 1
+		relative_position_id = POL_seek_successor
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = POL_united_royalists
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		#prerequisite = { focus = POL_ }
+		#mutually_exclusive = { focus =  }
+		x = 6
+		y = 2
+		relative_position_id = POL_seek_successor
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	#Ukraine
+	focus = {
+		id = POL_krol_kozacki
+		icon = GFX_focus_POL_cossack_king
+		prerequisite = { focus = POL_united_royalists }
+		x = -3
+		y = 2
+		relative_position_id = POL_united_royalists
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_krol_ukrainy
+		icon = GFX_focus_HUN_the_kingdom_of_ukraine
+		prerequisite = { focus = POL_krol_kozacki }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = POL_krol_kozacki
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_22
+		icon = GFX_focus_generic_horse_studs
+		prerequisite = { focus = POL_krol_kozacki }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 2
+		relative_position_id = POL_krol_kozacki
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	#Czeska
+	focus = {
+		id = POL_claim_bohemian_crown
+		icon = GFX_focus_generic_attack_czechoslovakia
+		prerequisite = { focus = POL_united_royalists }
+		x = 0
+		y = 1
+		relative_position_id = POL_united_royalists
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_teoria_obrony
+		icon = GFX_focus_CZE_military_research_institute
+		prerequisite = { focus = POL_claim_bohemian_crown }
+		#mutually_exclusive = { focus =  }
+		x = -1
+		y = 1
+		relative_position_id = POL_claim_bohemian_crown
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_legion_czeski
+		icon = GFX_focus_CZE_czechoslovak_legion_export
+		prerequisite = { focus = POL_claim_bohemian_crown }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 1
+		relative_position_id = POL_claim_bohemian_crown
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_integrate_skoda
+		icon = GFX_focus_generic_mass_production
+		prerequisite = { focus = POL_claim_bohemian_crown }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 2
+		relative_position_id = POL_claim_bohemian_crown
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_poprawa_produkcji
+		icon = GFX_focus_generic_license_production
+		prerequisite = { focus = POL_integrate_skoda}
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = POL_integrate_skoda
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	#Lithuania
+	focus = {
+		id = POL_claim_lithuania
+		icon = GFX_focus_LIT_restore_the_grand_duchy
+		prerequisite = { focus = POL_united_royalists }
+		x = 3
+		y = 2
+		relative_position_id = POL_united_royalists
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_legion_bialoruski
+		icon = GFX_focus_POL_belarus_army
+		prerequisite = { focus = POL_claim_lithuania }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = POL_claim_lithuania
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_wspolnota_polsko_litewska
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = POL_claim_lithuania }
+		#mutually_exclusive = { focus =  }
+		x = -1
+		y = 2
+		relative_position_id = POL_claim_lithuania
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_claim_livonia
+		icon = GFX_focus_LIT_claim_livonia
+		prerequisite = { focus = POL_claim_lithuania }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 2
+		relative_position_id = POL_claim_lithuania
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	#Romania
+	focus = {
+		id = POL_romanian_crown
+		icon = GFX_focus_rom_royal_dictatorship
+		prerequisite = { focus = POL_united_royalists }
+		x = 6
+		y = 1
+		relative_position_id = POL_united_royalists
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_claim_romania_by_force
+		icon = GFX_focus_generic_attack_romania
+		prerequisite = { focus = POL_romanian_crown }
+		mutually_exclusive = { focus = POL_instigating_abdication }
+		x = -1
+		y = 1
+		relative_position_id = POL_romanian_crown
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_instigating_abdication
+		icon = GFX_focus_invite_romania
+		prerequisite = { focus = POL_romanian_crown }
+		mutually_exclusive = { focus = POL_claim_romania_by_force }
+		x = 1
+		y = 1
+		relative_position_id = POL_romanian_crown
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_subjugate_romanian_economy
+		icon = GFX_focus_GER_subjugate_romanian_economy
+		prerequisite = {
+			focus = POL_claim_romania_by_force
+			focus = POL_instigating_abdication
+		}
+		x = 0
+		y = 2
+		relative_position_id = POL_romanian_crown
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	
+	#Hungary
+	focus = {
+		id = POL_hungary_crown
+		icon = GFX_focus_HUN_establishing_a_new_dynasty
+		prerequisite = { focus = POL_united_royalists }
+		x = -6
+		y = 1
+		relative_position_id = POL_united_royalists
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_hungary_1
+		icon = GFX_focus_HUN_hungarian_tradition
+		prerequisite = { focus = POL_hungary_crown }
+		x = -1
+		y = 1
+		relative_position_id = POL_hungary_crown
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_hungary_2
+		icon = GFX_focus_HUN_establishing_a_new_dynasty
+		prerequisite = { focus = POL_hungary_crown }
+		x = 1
+		y = 1
+		relative_position_id = POL_hungary_crown
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_hungary_2
+		icon = GFX_focus_HUN_establishing_a_new_dynasty
+		prerequisite = { focus = POL_hungary_crown }
+		x = 0
+		y = 2
+		relative_position_id = POL_hungary_crown
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
 ### ECONOMIC ###
 
 	focus = {
@@ -996,11 +1788,13 @@ focus_tree = {
 		y = 1
 		relative_position_id = POL_plan_rozwoju
 
-		cost = 8
+		cost = 5
 
 		available = {}
 		
-		bypass = {}
+		bypass = {
+			has_completed_focus = POL_land_reform
+		}
 		
 		cancel_if_invalid = yes
 		continue_if_invalid = no

@@ -20,7 +20,6 @@
 
 	shared_focus = DEUTSCH_kaiserreich_power
 
-#DKR
 	#
 	focus = {
 		id = BAL_

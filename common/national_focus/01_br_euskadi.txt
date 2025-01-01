@@ -20,7 +20,7 @@
 		icon = GFX_focus_GER_monarchy_compromise
 		#prerequisite = { focus =  }
 		#mutually_exclusive = { focus =  }
-		x = 16
+		x = 4
 		y = 0
 		#relative_position_id =
 
@@ -41,7 +41,7 @@
 	}
 	focus = {
 		id = EUS_attack_west_aragon
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_focus_generic_annex_country_2
 		prerequisite = {
 			focus = EUS_seize_spanish_basque
 			focus = EUS_modernism
@@ -344,7 +344,7 @@
 	}
 	focus = {
 		id = EUS_claim_crown_of_france
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_focus_attack_france
 		prerequisite = { focus = EUS_king_of_spain }
 		#mutually_exclusive = { focus =  }
 		x = -1
@@ -429,6 +429,30 @@
 		x = 6
 		y = 1
 		relative_position_id = EUS_monarchy_revitalized
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = { #秃鹰军团
+		id = EUS_legion_condor
+		icon = GFX_focus_chi_mission_to_germany
+		prerequisite = { focus = EUS_collude_bando_nacional }
+		#mutually_exclusive = { focus =  }
+		x = -1
+		y = 4
+		relative_position_id = EUS_collude_bando_nacional
 
 		cost = 8
 		
@@ -689,7 +713,7 @@
 	### ###
 	focus = {
 		id = EUS_anti_fascism
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_focus_generic_anti_fascist_diplomacy
 		prerequisite = {
 			focus = EUS_errepublikanismoa
 			focus = EUS_cnt_fai
@@ -720,11 +744,253 @@
 		icon = GFX_goal_generic_demand_territory
 		#prerequisite = { focus =  }
 		#mutually_exclusive = { focus =  }
-		x = 12
+		x = 0
 		y = 0
 		#relative_position_id =
 
 		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+### ic ###
+	#
+	focus = {
+		id = EUS_collective_economy
+		icon = GFX_focus_generic_workers
+		mutually_exclusive = { focus = EUS_free_market }
+		x = 32
+		y = 0
+		#relative_position_id = EUS_free_market
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = EUS_seize_means_of_production
+		icon = GFX_focus_DEN_heavy_regulations
+		prerequisite = { focus = EUS_collective_economy }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = EUS_collective_economy
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = EUS_emergency_production
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = EUS_seize_means_of_production }
+		#mutually_exclusive = { focus =  }
+		x = -2
+		y = 1
+		relative_position_id = EUS_seize_means_of_production
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = EUS_cheaper_rifle
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = EUS_emergency_production }
+		x = 0
+		y = 1
+		relative_position_id = EUS_emergency_production
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = EUS_adjust_to_union_economies
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = EUS_seize_means_of_production }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = EUS_seize_means_of_production
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = EUS_workers_brigade
+		icon = GFX_focus_GER_liberate_exploited_colonial_workers
+		prerequisite = { focus = EUS_adjust_to_union_economies }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = EUS_adjust_to_union_economies
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	#
+	focus = {
+		id = EUS_free_market
+		icon = GFX_goal_generic_positive_trade_relations
+		mutually_exclusive = { focus = EUS_collective_economy }
+		x = 4
+		y = 0
+		relative_position_id = EUS_collective_economy
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = EUS_2
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		prerequisite = { focus = EUS_free_market }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = EUS_free_market
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = EUS_2
+		icon = GFX_goal_generic_demand_territory
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 0
+		#relative_position_id =
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+
+#
+	focus = {
+		id = EUS_expanding_bilbao
+		icon = GFX_goal_generic_production2
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 0
+		#relative_position_id =
+
+		cost = 5
 		
 		available = {}
 		

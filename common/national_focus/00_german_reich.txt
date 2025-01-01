@@ -273,32 +273,6 @@
 
 		ai_will_do = { factor = 1 }
 	}
-	focus = {
-		id = DKR_fate_of_belgium
-		icon = GFX_focus_BEL_belgica
-		prerequisite = {
-			focus = DKR_dismantle_belgium
-			focus = DKR_left_belgium
-		}
-		#mutually_exclusive = { focus =  }
-		x = 1
-		y = 1
-		relative_position_id = DKR_dismantle_belgium
-		
-		cost = 8
-		
-		available = {}
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		completion_reward = {}
-
-		ai_will_do = { factor = 1 }
-	}
 ###
 	focus = {
 		id = DKR_integrate_alsace

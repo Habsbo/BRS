@@ -103,7 +103,7 @@ add_ideas = {
 	BEL_need_more_jobs
 }
 #
-
+set_country_flag = br_dynamic_modifier_not_generic_for_battle_flag
 #
 set_cosmetic_tag = BEL_kingdom
 

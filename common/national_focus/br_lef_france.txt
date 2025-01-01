@@ -898,7 +898,7 @@ focus_tree = {
 	#
 	focus = {
 		id = FRA_affairs_about_french_africa
-		icon = GFX_
+		icon = GFX_focus_generic_africa_liberation
 		prerequisite = {
 			focus = FRA_french_nationalism
 			focus = FRA_amnesty
@@ -928,7 +928,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_blum_viollette_proposal
-		icon = GFX_
+		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = FRA_affairs_about_french_africa }
 		mutually_exclusive = { focus = FRA_limited_colony_citizen_rights }
 		x = -1
@@ -976,7 +976,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_popularize_the_equal_citizenship
-		icon = GFX_
+		icon = GFX_focus_chi_reach_out_to_france
 		prerequisite = { focus = FRA_blum_viollette_proposal }
 		#mutually_exclusive = { focus =  }
 		x = -1
@@ -1001,7 +1001,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_limited_colony_citizen_rights
-		icon = GFX_
+		icon = GFX_focus_generic_citizen_power_1
 		prerequisite = { focus = FRA_affairs_about_french_africa }
 		mutually_exclusive = { focus = FRA_blum_viollette_proposal }
 		x = 1

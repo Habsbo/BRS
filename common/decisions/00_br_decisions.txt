@@ -797,6 +797,78 @@ br_economic = {
 }
 
 br_revolution = {
+	#自动内战
+	br_revolution.communism_mission = {
+		icon = SOV_the_workers_dictatorship
+
+		activation = {
+			has_stability < 0.20
+			OR = {
+				vanwardism > 0.20
+				sci_socialism > 0.20
+				con_socialism > 0.20
+			}
+		}
+		available = {
+			always = no
+		}
+		cancel_trigger = {
+			OR = {
+				has_stability > 0.5
+				br_ideology_socialism_ruling = yes
+			}
+		}
+
+		is_good = no
+		days_mission_timeout = 181
+		
+		cancel_effect = {
+			add_stability = 0.10
+		}
+		complete_effect = {
+			#
+		}
+		timeout_effect = {
+			country_event = br_civilwar.1
+		}
+		priority = 1
+	}
+	br_revolution.fascism_mission = {
+		icon = SOV_the_workers_dictatorship
+
+		activation = {
+			has_stability < 0.20
+			OR = {
+				fascism > 0.20
+				nationalism > 0.20
+				supernationalism > 0.20
+			}
+		}
+		available = {
+			always = no
+		}
+		cancel_trigger = {
+			OR = {
+				has_stability > 0.5
+				br_ideology_fascism_ruling = yes
+			}
+		}
+
+		is_good = no
+		days_mission_timeout = 181
+		
+		cancel_effect = {
+			add_war_support = 0.05
+			add_stability = 0.05
+		}
+		complete_effect = {
+			#
+		}
+		timeout_effect = {
+			country_event = br_civilwar.3
+		}
+		priority = 1
+	}
 	#
 	br_revolution.sci_socialism_drift = {
 		icon = generic_research
@@ -809,21 +881,23 @@ br_revolution = {
 		}
 
 		visible = {
-			#
+			OR = {
+				has_idea_with_trait = sci_socialist_revolutionary
+				has_idea_with_trait = anti_imperialism_revolutionary
+			}
 		}
 
-		custom_cost_trigger = { has_war_support > 0.05 }
-		custom_cost_text = decision_cost_WS_5
+		cost = 100
 
 		fire_only_once = yes
-		days_remove = 90
+		days_remove = 84
 
-		modifier = { sci_socialism_drift = 0.10 }
-
-		complete_effect = {
-			hidden_effect = { add_war_support = -0.05 }
-			add_stability = -0.05
+		modifier = {
+			sci_socialism_drift = 0.10
+			stability_weekly = -0.0050
 		}
+
+		complete_effect = {}
 
 		ai_will_do = { base = 0 }
 	}
@@ -835,21 +909,21 @@ br_revolution = {
 		}
 
 		visible = {
-			#
+			has_idea_with_trait = anti_imperialism_revolutionary
 		}
 
-		custom_cost_trigger = { has_war_support > 0.05 }
-		custom_cost_text = decision_cost_WS_5
+		cost = 100
 
 		fire_only_once = yes
-		days_remove = 90
+		days_remove = 84
 
-		modifier = { con_socialism_drift = 0.10 }
-
-		complete_effect = {
-			hidden_effect = { add_war_support = -0.05 }
-			add_stability = -0.05
+		modifier = {
+			con_socialism_drift = 0.10 
+			stability_weekly = -0.0050
 		}
+
+		complete_effect = {}
+
 
 		ai_will_do = { base = 0 }
 	}
@@ -861,64 +935,105 @@ br_revolution = {
 		}
 
 		visible = {
-			#
+			has_idea_with_trait = fascism_theorist
 		}
 
-		custom_cost_trigger = { has_war_support > 0.05 }
-		custom_cost_text = decision_cost_WS_5
+		cost = 100
 
 		fire_only_once = yes
-		days_remove = 90
-
-		modifier = { fascism_drift = 0.10 }
-
-		complete_effect = {
-			hidden_effect = { add_war_support = -0.05 }
-			add_stability = -0.05
+		days_remove = 84
+		
+		modifier = {
+			fascism_drift = 0.10
+			stability_weekly = -0.0050
 		}
+
+		complete_effect = {}
 
 		ai_will_do = { base = 0 }
 	}
 	#
-	br_revolution.organize_strike = {
+	br_revolution.organize_strike = { #罢工
 		icon = POL_organize_strike_two
+
+		target_root_trigger = {
+			#
+		}
+		target_trigger = {
+			FROM = {
+				is_core_of = root
+				is_owned_and_controlled_by = root
+			}
+		}
 
 		available = {
 			OR = {
 				has_idea_with_trait = sci_socialist_revolutionary
 				has_idea_with_trait = anti_imperialism_revolutionary
 			}
+			NOT = { has_country_flag = br_revolution_organizing_strike_flag }
 		}
 
 		visible = {
-			#
+			OR = {
+				has_idea_with_trait = sci_socialist_revolutionary
+				has_idea_with_trait = anti_imperialism_revolutionary
+			}
+			br_ideology_anarchism_nio = yes
+			br_ideology_socialism_nio = yes
 		}
 
 		custom_cost_trigger = { has_war_support > 0.05 }
 		custom_cost_text = decision_cost_WS_5
 
+		modifier = {
+			stability_weekly = -0.01
+		}
+
 		fire_only_once = no
-		days_remove = 28
+		days_remove = 35
+		state_target = yes
+		on_map_mode = map_only
 
 		complete_effect = {
-			hidden_effect = { add_war_support = -0.05 }
-			add_stability = -0.05
+			hidden_effect = {
+				add_war_support = -0.05
+				set_country_flag = br_revolution_organizing_strike_flag
+			}
 		}
 		remove_effect = {
-			add_popularity = { ideology = sci_socialism popularity = 0.05 }
+			add_popularity = { ideology = root popularity = -0.05 }
+			FROM = {
+				add_to_variable = {
+					br_revolution_communism_var = 1 
+					tooltip = br_revolution_communism_var_change_tt
+				}
+			}
+			hidden_effect = { clr_country_flag = br_revolution_organizing_strike_flag }
 		}
 
 		ai_will_do = { base = 0 }
 	}
-	br_revolution.patriotism = {
+	br_revolution.patriotism = { #爱国主义
 		icon = generic_nationalism
 
+		target_root_trigger = {
+			#
+		}
+		target_trigger = {
+			FROM = {
+				is_capital = yes
+				is_core_of = root
+				is_owned_and_controlled_by = root
+			}
+		}
+		
 		available = {
 			has_idea_with_trait = anti_imperialism_revolutionary
 		}
 
 		visible = {
-			#
+			has_idea_with_trait = anti_imperialism_revolutionary
 		}
 
 		custom_cost_trigger = { has_war_support > 0.05 }
@@ -926,6 +1041,8 @@ br_revolution = {
 
 		fire_only_once = no
 		days_remove = 28
+		state_target = yes
+		on_map_mode = map_only
 
 		complete_effect = {
 			hidden_effect = { add_war_support = -0.05 }
@@ -937,15 +1054,26 @@ br_revolution = {
 
 		ai_will_do = { base = 0 }
 	}
-	br_revolution.organize_shirts = {
+	br_revolution.organize_shirts = { #黑衫军
 		icon = generic_army_support
+
+		target_root_trigger = {
+			#
+		}
+		target_trigger = {
+			FROM = {
+				is_core_of = root
+				is_owned_and_controlled_by = root
+			}
+		}
 
 		available = {
 			has_idea_with_trait = fascism_theorist
+			NOT = { has_country_flag = br_revolution_organizing_shirts_flag }
 		}
 
 		visible = {
-			#
+			has_idea_with_trait = fascism_theorist
 		}
 
 		custom_cost_trigger = { has_war_support > 0.05 }
@@ -953,40 +1081,82 @@ br_revolution = {
 
 		fire_only_once = no
 		days_remove = 28
+		state_target = yes
+		on_map_mode = map_only
 
 		complete_effect = {
 			hidden_effect = { add_war_support = -0.05 }
 			add_stability = -0.05
+			hidden_effect = { set_country_flag = br_revolution_organizing_shirts_flag }
 		}
 		remove_effect = {
 			army_experience = 15
 			add_popularity = { ideology = fascism popularity = 0.05 }
+			FROM = {
+				add_to_variable = {
+					br_revolution_fascism_var = 1
+					tooltip = br_revolution_fascism_var_change_tt
+				}
+			}
+			hidden_effect = { clr_country_flag = br_revolution_organizing_shirts_flag }
 		}
 
 		ai_will_do = { base = 0 }
 	}
-	#
+	#演讲
 	br_revolution.speech_socialism = {
 		icon = generic_speech
+
+		target_root_trigger = {
+			#
+		}
+		target_trigger = {
+			FROM = {
+				is_core_of = root
+				is_owned_and_controlled_by = root
+			}
+		}
 
 		available = {
 			OR = {
 				has_idea_with_trait = sci_socialist_revolutionary
 				has_idea_with_trait = anti_imperialism_revolutionary
 			}
+			NOT = { has_country_flag = br_revolution_speeching_flag }
 		}
 
 		visible = {
-			#
+			OR = {
+				has_idea_with_trait = sci_socialist_revolutionary
+				has_idea_with_trait = anti_imperialism_revolutionary
+			}
 		}
 
-		cost = 50
+		cost = 25
 
 		fire_only_once = no
 		days_remove = 28
+		state_target = yes
+		on_map_mode = map_only
 
 		complete_effect = {
-			add_stability = -0.10
+			if = {
+				limit = {
+					br_ideology_anarchism_nio = yes
+					br_ideology_socialism_nio = yes
+				}
+				add_stability = -0.01
+			}
+			else_if = {
+				limit = { br_ideology_anarchism_ruling = yes }
+				add_political_power = 5
+				add_stability = 0.01
+
+			}
+			else = {
+				add_stability = 0.01
+			}
+			hidden_effect = { set_country_flag = br_revolution_speeching_flag }
 		}
 		remove_effect = {
 			if = {
@@ -996,26 +1166,28 @@ br_revolution = {
 						has_country_flag = br_focus_road_to_revolution_communism_flag
 					}
 				}
-				add_popularity = { ideology = sci_socialism popularity = 0.05 }
-				add_popularity = { ideology = con_socialism popularity = 0.02 }
-				add_popularity = { ideology = dem_socialism popularity = 0.03 }
+				add_popularity = { ideology = sci_socialism popularity = 0.02 }
+				add_popularity = { ideology = con_socialism popularity = 0.01 }
+				add_popularity = { ideology = dem_socialism popularity = 0.01 }
 			}
-			else_if = {
+			if = {
 				limit = {
 					OR = {
 						has_idea_with_trait = anti_imperialism_revolutionary
 						has_country_flag = br_focus_road_to_revolution_anti_imperialism_flag
 					}
 				}
-				add_popularity = { ideology = sci_socialism popularity = 0.02 }
-				add_popularity = { ideology = con_socialism popularity = 0.05 }
-				add_popularity = { ideology = dem_socialism popularity = 0.03 }
-			}
-			else = {
-				add_popularity = { ideology = sci_socialism popularity = 0.02 }
+				add_popularity = { ideology = sci_socialism popularity = 0.01 }
 				add_popularity = { ideology = con_socialism popularity = 0.02 }
-				add_popularity = { ideology = dem_socialism popularity = 0.02 }
+				add_popularity = { ideology = dem_socialism popularity = 0.01 }
 			}
+			FROM = {
+				add_to_variable = {
+					br_revolution_communism_var = 1 
+					tooltip = br_revolution_communism_var_change_tt
+				}
+			}
+			hidden_effect = { clr_country_flag = br_revolution_speeching_flag }
 		}
 
 		ai_will_do = { base = 0 }
@@ -1023,24 +1195,58 @@ br_revolution = {
 	br_revolution.speech_fascism = {
 		icon = generic_speech
 
+		target_root_trigger = {
+			#
+		}
+		target_trigger = {
+			FROM = {
+				is_core_of = root
+				is_owned_and_controlled_by = root
+			}
+		}
+
 		available = {
 			has_idea_with_trait = fascism_theorist
+			NOT = { has_country_flag = br_revolution_speeching_flag }
 		}
 
 		visible = {
-			#
+			has_idea_with_trait = fascism_theorist
 		}
 
-		cost = 50
+		cost = 25
 
 		fire_only_once = no
 		days_remove = 28
+		state_target = yes
+		on_map_mode = map_only
 
 		complete_effect = {
-			add_stability = -0.05
+			if = {
+				limit = { br_ideology_fascism_nio = yes }
+				add_stability = -0.01
+			}
+			else = {
+				add_political_power = 15
+				add_stability = 0.01
+			}
+			hidden_effect = { set_country_flag = br_revolution_speeching_flag }
 		}
 		remove_effect = {
-			add_popularity = { ideology = fascism popularity = 0.05 }
+			if = {
+				limit = { br_ideology_fascism_nio = yes }
+				add_popularity = { ideology = fascism popularity = 0.03 }
+			}
+			else = {
+				add_popularity = { ideology = fascism popularity = 0.01 }
+			}
+			FROM = {
+				add_to_variable = {
+					br_revolution_fascism_var = 1
+					tooltip = br_revolution_fascism_var_change_tt
+				}
+			}
+			hidden_effect = { clr_country_flag = br_revolution_speeching_flag }
 		}
 
 		ai_will_do = { base = 0 }
@@ -1057,7 +1263,10 @@ br_revolution = {
 		}
 
 		visible = {
-			#
+			OR = {
+				has_idea_with_trait = sci_socialist_revolutionary
+				has_idea_with_trait = anti_imperialism_revolutionary
+			}
 		}
 
 		cost = 100
@@ -1086,7 +1295,7 @@ br_revolution = {
 		}
 
 		visible = {
-			#
+			has_idea_with_trait = fascism_theorist
 		}
 
 		cost = 100
@@ -1119,7 +1328,10 @@ br_revolution = {
 		}
 
 		visible = {
-			#
+			OR = {
+				has_idea_with_trait = sci_socialist_revolutionary
+				has_idea_with_trait = anti_imperialism_revolutionary
+			}
 		}
 
 		fire_only_once = yes
@@ -1139,7 +1351,7 @@ br_revolution = {
 		}
 
 		visible = {
-			#
+			has_idea_with_trait = fascism_theorist
 		}
 
 		fire_only_once = yes
@@ -1164,7 +1376,11 @@ br_revolution = {
 		}
 
 		visible = {
-			#
+			OR = {
+				has_idea_with_trait = sci_socialist_revolutionary
+				has_idea_with_trait = anti_imperialism_revolutionary
+				has_idea_with_trait = fascism_theorist
+			}
 		}
 
 		fire_only_once = yes
@@ -1193,7 +1409,7 @@ br_revolution = {
 		fire_only_once = yes
 
 		complete_effect = {
-			hold_election = ROOT
+			#
 		}
 
 		ai_will_do = { base = 0 }

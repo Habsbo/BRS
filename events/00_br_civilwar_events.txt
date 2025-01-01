@@ -1,0 +1,179 @@
+###
+add_namespace = br_civilwar
+
+country_event = { #
+	id = br_civilwar.1
+	title = br_civilwar.1.title
+	desc = br_civilwar.1.desc
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			start_civil_war = {
+				ideology = sci_socialism
+				size = 0.5
+				states_filter = {
+					is_core_of = root
+					check_variable = { br_revolution_communism_var > 0 }
+					check_variable = { br_revolution_communism_var > br_revolution_fascism_var }
+				}
+				#set_country_flag = TAG_my_country_tag_alias_trigger
+				keep_all_characters = yes
+				keep_political_leader = yes
+				keep_political_party_members = yes
+			}
+		}
+	}
+	
+	option = {
+		name = br_civilwar.1.a
+		
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+country_event = { #
+	id = br_civilwar.2
+	title = br_civilwar.2.title
+	desc = br_civilwar.2.desc
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			#
+		}
+	}
+	
+	option = {
+		name = br_civilwar.2.a
+		
+
+
+		trigger = { vanwardism > 0.2 }
+
+		ai_chance = {
+			base = 10
+		}
+	}
+	
+	option = {
+		name = br_civilwar.2.b
+		
+		trigger = { sci_socialism > 0.2 }
+
+		ai_chance = {
+			base = 10
+		}
+	}
+	
+	option = {
+		name = br_civilwar.2.c
+		
+		trigger = { con_socialism > 0.2 }
+
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+
+country_event = { #
+	id = br_civilwar.3
+	title = br_civilwar.3.title
+	desc = br_civilwar.3.desc
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			start_civil_war = {
+				ideology = fascism
+				size = 0.5
+				states_filter = {
+					is_core_of = root
+					is_owned_and_controlled_by = root
+					is_capital = no
+				}
+				set_country_flag = civilwar_tag_flag
+				keep_all_characters = yes
+				keep_political_leader = yes
+				keep_political_party_members = yes
+			}
+		}
+	}
+	
+	option = {
+		name = br_civilwar.3.a
+		
+		every_core_state = {
+			limit = {
+				check_variable = { br_revolution_fascism_var > 0 }
+				check_variable = { br_revolution_fascism_var > br_revolution_communism_var }
+			}
+			random_country_with_original_tag = {
+				original_tag_to_check = ROOT
+				PREV = { transfer_state_to = prev }
+				every_owned_state = {
+					limit = {
+						is_core_of = root
+						check_variable = { br_revolution_communism_var > 0 }
+						check_variable = { br_revolution_communism_var > br_revolution_fascism_var }
+					}
+					transfer_state_to = root
+				}
+			}
+		}
+		
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+country_event = { #
+	id = br_civilwar.4
+	title = br_civilwar.4.title
+	desc = br_civilwar.4.desc
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			#
+		}
+	}
+	
+	option = {
+		name = br_civilwar.4.a
+		
+		trigger = {
+			OR = {
+				fascism > 0.2
+				NOT = { nationalism > 0.2 }
+			}
+		}
+
+		ai_chance = {
+			base = 10
+		}
+	}
+	
+	option = {
+		name = br_civilwar.4.b
+		
+		trigger = { nationalism > 0.2 }
+
+		ai_chance = {
+			base = 10
+		}
+	}
+}

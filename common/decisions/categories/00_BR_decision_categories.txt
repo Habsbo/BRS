@@ -98,7 +98,52 @@ br_economic = {
 br_revolution = {
 	icon = NOR_fascist_deploy_prep
 
-	visible = { always = yes }
+	visible = {
+		has_civil_war = no
+		OR = {
+			has_idea_with_trait = sci_socialist_revolutionary
+			has_idea_with_trait = anti_imperialism_revolutionary
+			has_idea_with_trait = fascism_theorist
+			AND = {
+				has_stability < 0.20
+				OR = {
+					vanwardism > 0.20
+					sci_socialism > 0.20
+					con_socialism > 0.20
+					fascism > 0.20
+					nationalism > 0.20
+					supernationalism > 0.20
+				}
+			}
+		}
+	}
+
+	on_map_area = {
+		name = br_revolution_communism_on_map_area
+		zoom = 300
+		target_array = ROOT.core_states
+		target_trigger = {
+			FROM = {
+				is_controlled_by = root
+				check_variable = { br_revolution_communism_var > 0 }
+				check_variable = { br_revolution_communism_var > br_revolution_fascism_var }
+			}
+		}
+	}
+
+
+	on_map_area = {
+		name = br_revolution_fascism_on_map_area
+		zoom = 300
+		target_array = ROOT.core_states
+		target_trigger = {
+			FROM = {
+				is_controlled_by = root
+				check_variable = { br_revolution_fascism_var > 0 }
+				check_variable = { br_revolution_fascism_var > br_revolution_communism_var }
+			}
+		}
+	}
 
 	priority = 1
 }

@@ -21,6 +21,12 @@
  BEL_paul_emile_janson: "保罗·埃米尔·詹森"
  BEL_henri_de_man: "亨利·德·曼"
 #ideas
+ TSA_belgium_affair_council: "比利时事务委员会"
+ TSA_belgium_affair_council_desc: ""
+ 
+ tsa_belgium_affair_council_stable: "§G稳定§!"
+ tsa_belgium_affair_council_critical: "§R危机§!"
+
  BEL_limited_by_treaty1: "受到条约的限制"
  BEL_limited_by_treaty_desc: ""
  BEL_limited_by_treaty2: "艰难挣脱条约"
@@ -30,8 +36,8 @@
  swap_idea_BEL_limited_by_treaty_1_to_3_tt: "将以§Y$BEL_limited_by_treaty3$§!取代§Y$BEL_limited_by_treaty1$§!，其效果为：\n 每周稳定度：§G+0.5%§!\n 用于生产生活消费品的期望工厂数量：§Y10%§!"
  swap_idea_BEL_limited_by_treaty_1_to_2_tt: "将以§Y$BEL_limited_by_treaty2$§!取代§Y$BEL_limited_by_treaty1$§!，其效果为：\n 无法制定修改法律：§R是§!\n 允许自主政府的人员任免：§G是§!\n 政治顾问花费：§R+25%§!\n 三军顾问花费：§R+100%§!\n 适役人口：§Y-0.50%§!\n 指挥点数和三军经验增长：§R-100.0%§!\n 用于生产生活消费品的期望工厂数量：§Y25%§!"
  remove_idea_BEL_limited_by_treaty1_tt: "将移去§Y$BEL_limited_by_treaty1$§!，其效果为：\n 无法制定修改法律：§R是§!\n 允许自主政府的人员任免：§R否§!\n 适役人口：§Y-1.00%§!\n 指挥点数和三军经验增长：§R-100.0%§!\n 用于生产生活消费品的期望工厂数量：§Y50%§!"
- BEL_betrayed_by_former_allies: "故友的背叛"
- BEL_betrayed_by_former_allies_desc: ""
+ BEL_betrayed_by_former_allies: "前盟友的弃子"
+ BEL_betrayed_by_former_allies_desc: "世界大战重创了这个国家。"
  BEL_spoken_conflicts: "语言矛盾"
  BEL_spoken_conflicts_desc: ""
  BEL_vlaams_fostered: "弗拉芒人受扶植"
@@ -50,6 +56,7 @@
  GetUnemployment.6: "§R萧条时代§!"
  BEL_need_more_jobs_tt: "适业青年的失业率状况约为：§Y[?root.generic_unemployment_var|0..3]%§!\n\n带来的影响：\n 稳定度：[?root.BEL_nmj_dy_stability_factor|+=%H]%\n 每周稳定度增长：[?root.BEL_nmj_dy_stability_weekly|+=%H]%\n 工厂产出：[?root.BEL_nmj_dy_industrial_capacity_factory|+=%H]%"
  BEL_need_more_jobs_dynamic_modifier: "失业率"
+
 #
  supervisors_committee_germany: "监管委员会成员国德国代表"
  supervisors_committee_germany_tt: "政治平衡会朝着德国希望的方向迈进"
@@ -393,19 +400,17 @@
  br_bel_bop_appoint_a_wallonia_prime_desc: "将启用动议在非议会选举期间内变更首相。这种行为会损坏陛下在民众间声誉，使用地越频繁越是如此。当然，我们也可以宣扬这是外国对我国政治的横加干涉，这能获得一部分民众的同情和爱国激情，但一不小心也会被这股力量所反噬。"
  br_bel_bop_appoint_a_vlaams_prime: "擢用一名弗拉芒大区出身的首相"
  br_bel_bop_appoint_a_vlaams_prime_desc: "将启用动议在非议会选举期间内变更首相。这种行为会损坏陛下在民众间声誉，使用地越频繁越是如此。当然，我们也可以宣扬这是外国对我国政治的横加干涉，这能获得一部分民众的同情和爱国激情，但一不小心也会被这股力量所反噬。"
- br_bel_the_treaty: "第一次世界大战的和平条约"
- br_bel_the_treaty_desc: "第一次世界大战的和平条约"
+
+ br_belgium_affair_council: "比利时事务委员会"
+ br_belgium_affair_council_desc: "测试"
+
  br_bel_the_treaty_ger_icon_value: "§Y[?BEL.br_bel_the_treaty_ger_value|0H]§!"
  br_bel_the_treaty_ger_desc: "德国在比利时的影响力共有§R[?BEL.br_bel_the_treaty_ger_value|0H]§!，其中§Y[?BEL.br_bel_the_treaty_ger_troops_value|0H]§!为驻军师数提供。"
  br_bel_the_treaty_fra_icon_value: "§Y[?BEL.br_bel_the_treaty_fra_value|0H]§!"
  br_bel_the_treaty_fra_desc: "法国在比利时的影响力共有§R[?BEL.br_bel_the_treaty_fra_value|0H]§!，其中§Y[?BEL.br_bel_the_treaty_fra_troops_value|0H]§!为驻军师数提供。"
  br_bel_the_treaty_eng_icon_value: "§Y[?BEL.br_bel_the_treaty_eng_value|0H]§!"
  br_bel_the_treaty_eng_desc: "英国在比利时的影响力共有§R[?BEL.br_bel_the_treaty_eng_value|0H]§!，其中§Y[?BEL.br_bel_the_treaty_eng_troops_value|0H]§!为驻军师数提供。"
- br_bel_the_treaty_reinforce.fra: "法国在瓦隆的驻地增兵"
- br_bel_the_treaty_reinforce.ger: "德国在安特卫普和弗兰德的驻地增兵"
- br_bel_the_treaty_reinforce.eng: "英国为在比利时的驻地增兵"
- br_bel_the_treaty_workers_protesting.wallonia: "瓦隆尼亚工人抗议"
- br_bel_the_treaty_workers_protesting.vlaams: "弗拉芒劳动者抗议"
+
  br_bel_the_treaty_fra_value_tt: "法国的驻军师数$RIGHT|+=0$，将会作为影响力添加到法国方面"
  br_bel_the_treaty_ger_value_tt: "德国的驻军师数$RIGHT|+=0$，将会作为影响力添加到德国方面"
  br_bel_the_treaty_fra_value_better_tt: "法国的影响力占绝对主导且驻军有至少§Y3§!个师"

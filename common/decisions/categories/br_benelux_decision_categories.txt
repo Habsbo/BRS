@@ -45,7 +45,6 @@ br_bel_bop = {
 }
 br_bel_the_treaty = {
 	icon = generic_political_actions
-	picture = GFX_decision_cat_picture_concessions_to_the_trade_unions
 
 	allowed = {
 		OR = {
@@ -65,36 +64,6 @@ br_bel_the_treaty = {
 
 	priority = 10
 	visible_when_empty = no
-
-	custom_icon = {
-		tag = DKR
-		value = br_bel_the_treaty_ger_icon_value
-		desc = br_bel_the_treaty_ger_desc
-
-		visible = {
-			NOT = { has_global_flag = br_bel_the_treaty_ger_withdraw }
-		}
-	}
-
-	custom_icon = {
-		tag = FRA
-		value = br_bel_the_treaty_fra_icon_value
-		desc = br_bel_the_treaty_fra_desc
-
-		visible = {
-			NOT = { has_global_flag = br_bel_the_treaty_fra_withdraw }
-		}
-	}
-
-	custom_icon = {
-		tag = ENG
-		value = br_bel_the_treaty_eng_icon_value
-		desc = br_bel_the_treaty_eng_desc
-
-		visible = {
-			NOT = { has_global_flag = br_bel_the_treaty_eng_withdraw }
-		}
-	}
 }
 #lux
 br_benelux_calling_of_communism = {
@@ -129,4 +98,49 @@ br_hearts_of_lux = {
 
 	priority = 1
 	visible_when_empty = no
+}
+
+br_belgium_affair_council = {
+	icon = generic_democracy
+	picture = GFX_decision_cat_picture_government_in_exile
+
+	visible = {
+		OR = {
+			original_tag = BEL
+			has_idea = TSA_belgium_affair_council
+		}
+	}
+
+	priority = 7
+	visible_when_empty = no
+
+	custom_icon = {
+		tag = DKR
+		value = br_bel_the_treaty_ger_icon_value
+		desc = br_bel_the_treaty_ger_desc
+
+		visible = {
+			NOT = { has_global_flag = br_bel_the_treaty_ger_withdraw }
+		}
+	}
+
+	custom_icon = {
+		tag = FRA
+		value = br_bel_the_treaty_fra_icon_value
+		desc = br_bel_the_treaty_fra_desc
+
+		visible = {
+			NOT = { has_global_flag = br_bel_the_treaty_fra_withdraw }
+		}
+	}
+
+	custom_icon = {
+		tag = ENG
+		value = br_bel_the_treaty_eng_icon_value
+		desc = br_bel_the_treaty_eng_desc
+
+		visible = {
+			NOT = { has_global_flag = br_bel_the_treaty_eng_withdraw }
+		}
+	}
 }

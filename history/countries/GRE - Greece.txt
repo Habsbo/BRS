@@ -123,7 +123,7 @@ set_popularities = {
 	con_socialism = 5 #保守社会主义
 	dem_socialism = 10 #社会民主主义
 	dem_liberalism= 20 #社会自由主义
-	dem_conservatism 40 #保守民主主义
+	dem_conservatism = 40 #保守民主主义
 	authoritarian = 0 #威权主义
 	fascism = 10 #民族主义/束棒
 	nationalism = 0 #国家社会主义

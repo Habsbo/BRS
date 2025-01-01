@@ -189,12 +189,14 @@ set_popularities = {
 }
 
 add_ideas = {
-	FRA_victors_of_wwi
-	FRA_disjointed_government
-	FRA_protected_by_the_maginot_line
 	limited_conscription
-	FRA_full_employment
+	#
+	TSA_belgium_affair_council
+
+	FRA_disjointed_government
 	FRA_political_violence
+	#FRA_protected_by_the_maginot_line
+	FRA_full_employment
 	FRA_inefficient_economy_2
 }
 
