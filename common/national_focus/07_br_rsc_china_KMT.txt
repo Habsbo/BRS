@@ -1,12 +1,12 @@
 focus_tree = {
-	id = br_man_fengxi_focus
+	id = br_rsc_china_kmt_focus
 	
 	country = {
 		factor = 0
 		
 		modifier = {
-			add = 10
-			tag = FNG
+			add = 0
+			tag = KMT
 		}
 	}
 	
@@ -15,7 +15,7 @@ focus_tree = {
 	continuous_focus_position = { x = 50 y = 1500 }
 	
 	focus = {
-		id = FNG_1
+		id = KMT_1
 		icon = GFX_goal_generic_demand_territory
 		#prerequisite = { focus =  }
 		#mutually_exclusive = { focus =  }
@@ -24,9 +24,7 @@ focus_tree = {
 		#relative_position_id =
 
 		cost = 8
-		
-		ai_will_do = { factor = 1 }
-		
+
 		available = {}
 		
 		bypass = {}
@@ -36,7 +34,8 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		complete_tooltip = {}
-		
 		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
 	}
 }

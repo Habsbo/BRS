@@ -1,5 +1,5 @@
 ﻿focus_tree = {
-	id = br_uk_eng_focus
+	id = br_tsa_uk_eng_focus
 	
 	country = {
 		factor = 0

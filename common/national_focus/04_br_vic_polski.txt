@@ -15,7 +15,7 @@
 ### search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
 
 focus_tree = {
-	id = br_polish_focus
+	id = br_vic_polska_focus
 	
 	country = {
 		factor = 0

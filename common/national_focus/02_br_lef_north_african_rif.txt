@@ -1,5 +1,5 @@
 focus_tree = {
-	id = br_rif_focus
+	id = br_lef_nf_rif_focus
 	
 	country = {
 		factor = 0

@@ -1,21 +1,20 @@
 ﻿focus_tree = {
-	id = br_tsa_eirinn_focus
+	id = br_vic_rossija_focus
 	
 	country = {
 		factor = 0
 		
 		modifier = {
-			add = 0
-			tag = IRE
+			add = 10
+			tag = RUS
 		}
 	}
-	
 	default = no
 
-	continuous_focus_position = { x = 50 y = 1500 }
-	
+	continuous_focus_position = { x = 1200 y = 50 }
+
 	focus = {
-		id = IRE_1
+		id = RUS_
 		icon = GFX_goal_generic_demand_territory
 		#prerequisite = { focus =  }
 		#mutually_exclusive = { focus =  }
@@ -24,8 +23,6 @@
 		#relative_position_id =
 
 		cost = 8
-		
-		ai_will_do = { factor = 1 }
 		
 		available = {}
 		
@@ -36,7 +33,8 @@
 		available_if_capitulated = no
 		
 		complete_tooltip = {}
-		
 		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
 	}
 }

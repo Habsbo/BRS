@@ -87,7 +87,7 @@ bookmarks = {
 ### minors ###
 		"BEL"={
 			minor = yes
-			history = "br_spanish_civil_war_DESC"
+			history = "BEL_BR_BASIC_DESC"
 			ideology = dem_socialism
 			ideas = {
 				BEL_limited_by_treaty1
@@ -101,7 +101,7 @@ bookmarks = {
 
 		"CAT"={
 			minor = yes
-			history = "br_spanish_civil_war_DESC"
+			history = "CAT_BR_BASIC_DESC"
 			ideology = dem_socialism
 			ideas = {
 				#

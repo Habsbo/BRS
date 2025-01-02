@@ -1,21 +1,21 @@
-﻿focus_tree = {
-	id = br_finland_focus
+focus_tree = {
+	id = br_rsc_indochina_cambodia_focus
 	
 	country = {
 		factor = 0
 		
 		modifier = {
-			add = 10
-			tag = CHI
+			add = 0
+			tag = CAM
 		}
 	}
 	
 	default = no
 
 	continuous_focus_position = { x = 50 y = 1500 }
-
+	
 	focus = {
-		id = FIN_
+		id = CAM_1
 		icon = GFX_goal_generic_demand_territory
 		#prerequisite = { focus =  }
 		#mutually_exclusive = { focus =  }
@@ -34,10 +34,8 @@
 		available_if_capitulated = no
 		
 		complete_tooltip = {}
-		
 		completion_reward = {}
 		
 		ai_will_do = { factor = 1 }
 	}
-	
 }
