@@ -147,3 +147,7 @@ br_revolution = {
 
 	priority = 1
 }
+
+br_debug_poland = {
+	allowed = { is_debug = yes }
+}

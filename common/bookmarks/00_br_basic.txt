@@ -102,7 +102,57 @@ bookmarks = {
 		"CAT"={
 			minor = yes
 			history = "CAT_BR_BASIC_DESC"
-			ideology = dem_socialism
+			ideology = soc_anarchism
+			ideas = {
+				#
+			}
+			focuses = {
+				#
+			}
+		}
+
+		"CZE"={
+			minor = yes
+			history = "CZE_BR_BASIC_DESC"
+			ideology = dem_liberalism
+			ideas = {
+				CZE_skoda_works
+				CZE_nationalism_of_ceskoslovensko
+				CZE_legacy_of_milan_stefanik
+			}
+			focuses = {
+				#
+			}
+		}
+
+		"YUG"={
+			minor = yes
+			history = "YUG_BR_BASIC_DESC"
+			ideology = authoritarian
+			ideas = {
+				#
+			}
+			focuses = {
+				#
+			}
+		}
+
+		"HUN"={
+			minor = yes
+			history = "HUN_BR_BASIC_DESC"
+			ideology = authoritarian
+			ideas = {
+				#
+			}
+			focuses = {
+				#
+			}
+		}
+
+		"ROM"={
+			minor = yes
+			history = "ROM_BR_BASIC_DESC"
+			ideology = authoritarian
 			ideas = {
 				#
 			}
