@@ -1,0 +1,12 @@
+characters={
+	#
+	RUS_tsar = {
+		name = tsar
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_RUS_tsar"
+				small = "GFX_Portrait_RUS_tsar_small"
+			}
+		}
+	}
+}
