@@ -32,11 +32,13 @@
 
  br_umayyad_category: "伍麦叶再起"
  br_umayyad_declaration: "宣言伍麦叶回归"
- br_umayyad_missionary: "在[FROM.GetName]宣教"
- br_umayyad_missionary_flag: "正在宣教" 
  br_umayyad_rebirth: "伍麦叶重生"
  br_umayyad_reset_capital: "迁都至[FROM.GetName]"
+ br_umayyad_al_jihad: "对[FROM.GetName]发起吉哈德"
 
+ br_umayyad_missionary: "在[FROM.GetName]宣教"
+ br_umayyad_missionary_flag: "正在宣教" 
+###
  br_bod_decision_category: "大蕃"
  br_bod.claim_ladakh: "宣称拉达克"
  br_bod.claim_lho_yu: "声索南方地区"

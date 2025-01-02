@@ -89,30 +89,6 @@ focus_tree = {
 
 		ai_will_do = { base = 10 }
 	}
-
-	focus = {
-		id = POL_discuss_issues
-		icon = GFX_goal_generic_war_with_comintern
-		prerequisite = { focus = POL_darkest_future }
-		x = 20
-		y = 1
-		relative_position_id = POL_darkest_future
-
-		cost = 5
-
-		available = {}
-		bypass = {}
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-			
-		}
-		ai_will_do = {
-			base = 1
-		}
-	}
-
 	### ###
 	focus = {
 		id = POL_strengthen_sejm
@@ -736,10 +712,10 @@ focus_tree = {
 	focus = {
 		id = POL_united_royalists
 		icon = GFX_goal_tfv_strengthen_commonwealth_ties
-		#prerequisite = { focus = POL_ }
+		prerequisite = { focus = POL_seek_successor }
 		#mutually_exclusive = { focus =  }
-		x = 6
-		y = 2
+		x = 16
+		y = 6
 		relative_position_id = POL_seek_successor
 
 		cost = 8
@@ -1242,6 +1218,214 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 	}
 	
+### ###
+	focus = {
+		id = POL_past_issues
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = { focus = POL_darkest_future }
+		x = 28
+		y = 1
+		relative_position_id = POL_darkest_future
+
+		cost = 5
+
+		available = {}
+		bypass = {}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+	focus = {
+		id = POL_united_morges_staff
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = POL_past_issues }
+		x = -1
+		y = 1
+		relative_position_id = POL_past_issues
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_1
+		icon = GFX_focus_
+		prerequisite = { focus = POL_past_issues }
+		x = 1
+		y = 1
+		relative_position_id = POL_past_issues
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_1
+		icon = GFX_focus_
+		#prerequisite = { focus = POL_past_issues }
+		x = -5
+		y = 2
+		relative_position_id = POL_past_issues
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_1
+		icon = GFX_focus_
+		#prerequisite = { focus = POL_past_issues }
+		x = -3
+		y = 2
+		relative_position_id = POL_past_issues
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_1
+		icon = GFX_focus_
+		#prerequisite = { focus = POL_past_issues }
+		x = -1
+		y = 2
+		relative_position_id = POL_past_issues
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_1
+		icon = GFX_focus_
+		#prerequisite = { focus = POL_past_issues }
+		x = 1
+		y = 2
+		relative_position_id = POL_past_issues
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_1
+		icon = GFX_focus_
+		#prerequisite = { focus = POL_past_issues }
+		x = 3
+		y = 2
+		relative_position_id = POL_past_issues
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_1
+		icon = GFX_focus_
+		#prerequisite = { focus = POL_past_issues }
+		x = 5
+		y = 2
+		relative_position_id = POL_past_issues
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
 ### ECONOMIC ###
 
 	focus = {
@@ -1266,6 +1450,7 @@ focus_tree = {
 		complete_tooltip = {}		
 		completion_reward = {
 			add_stability = 0.05
+			unlock_decision_category_tooltip = POL_polska_przemyslu_rewitalizacja_project_decisions_category
 		}
 		
 		ai_will_do = { factor = 1 }
@@ -1280,11 +1465,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = POL_polska_przemyslu_rewitalizacja_project
 
-		cost = 8
+		cost = 0
 		
-		ai_will_do = { factor = 1 }
-		
-		available = {}
+		available = { always = no }
 		
 		bypass = {}
 		
@@ -1295,6 +1478,8 @@ focus_tree = {
 		complete_tooltip = {}
 		
 		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
 	}
 	focus = {
 		id = POL_nowy_zloty
@@ -1307,8 +1492,6 @@ focus_tree = {
 
 		cost = 8
 		
-		ai_will_do = { factor = 1 }
-		
 		available = {}
 		
 		bypass = {}
@@ -1320,6 +1503,8 @@ focus_tree = {
 		complete_tooltip = {}
 		
 		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
 	}
 	focus = {
 		id = POL_zniesienie_stara_waluta
@@ -1429,9 +1614,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = POL_polska_przemyslu_rewitalizacja_project
 
-		cost = 8
+		cost = 0
 		
-		available = {}
+		available = { always = no }
 		
 		bypass = {}
 		
@@ -1440,6 +1625,7 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		complete_tooltip = {}
+		
 		completion_reward = {}
 		
 		ai_will_do = { factor = 1 }

@@ -528,49 +528,6 @@ br_umayyad_category = {
 			base = 100
 		}
 	}
-	br_umayyad_missionary = {
-		icon = infiltrate_state
-
-		target_root_trigger = {
-			original_tag = ADU
-		}
-		#target_array = 
-		target_trigger = {
-			FROM = {
-				is_controlled_by = root
-				NOT = { is_core_of = ROOT }
-			}
-		}
-		visible = {
-
-		}
-		available = {
-			not = { has_country_flag = br_umayyad_missionary_flag }
-		}
-
-		cost = 50
-
-		days_remove = 28
-		days_re_enable = 28
-		state_target = yes
-		on_map_mode = map_only
-		
-		complete_effect = {
-			set_country_flag = br_umayyad_missionary_flag
-		}
-
-		remove_effect = {
-			FROM = {
-				random_list = {
-					5 = { add_resistance = -5 add_compliance = 10 }
-					30 = { add_resistance = -5 }
-					30 = { add_compliance = 10 }
-					10 = { add_resistance = 5 }
-					10 = { add_compliance = -5 }
-				}
-			}
-		}
-	}
 	br_umayyad_rebirth = {
 		icon = generic_speech
 
@@ -624,21 +581,166 @@ br_umayyad_category = {
 				}
 			}
 		}
-		visible = {}
-		available = {}
+		available = {
+			FROM = { is_controlled_by = root }
+		}
+		visible = {
+			var:capital = {
+				NOT = { state = from }
+			}
+		}
 
 		cost = 50
 
 		days_re_enable = 30
 		state_target = yes
-		on_map_mode = map_only
+		on_map_mode = map_and_decisions_view
 		
 		complete_effect = {
 			set_capital = { state = FROM }
+			if = {
+				limit = {
+					FROM = {
+						OR = {
+							state = 41 #马德里
+							state = 679 #麦地那
+							state = 856 #麦加
+						}
+					}
+				}
+				add_political_power = 150
+			}
+			if = {
+				limit = {
+					FROM = {
+						OR = {
+							state = 291 #巴格达
+							state = 679 #麦地那
+							state = 856 #麦加
+							state = 907 #开罗
+						}
+					}
+				}
+				add_stability = 0.05
+			}
+			if = {
+				limit = {
+					FROM = {
+						OR = {
+							state = 789 #科尔多瓦
+							state = 679 #麦地那
+							state = 856 #麦加
+							state = 454 #Jerusalem
+						}
+					}
+				}
+				add_war_support = 0.05
+			}
+			if = {
+				limit = {
+					FROM = {
+						OR = {
+							state = 789 #科尔多瓦
+							state = 554 #大马士革
+						}
+					}
+				}
+				add_command_power = 50
+			}
+			if = {
+				limit = {
+					FROM = {
+						OR = {
+							state = 789 #科尔多瓦
+							state = 291 #巴格达
+							state = 907 #开罗
+						}
+					}
+				}
+				add_cic = 3000
+			}
+			if = {
+				limit = {
+					FROM = {
+						OR = {
+							state = 554 #大马士革
+							state = 454 #Jerusalem
+						}
+					}
+				}
+				army_experience = 25
+			}
 		}
 
 		ai_will_do = {
-			base = 100
+			base = 0
+		}
+	}
+	br_umayyad_al_jihad = {
+		icon = generic_civil_support
+
+		target_root_trigger = {
+			original_tag = ADU
+		}
+		#target_array = 
+		target_trigger = {
+			FROM = {  }
+		}
+		available = {}
+		visible = {}
+
+		cost = 50
+
+		days_re_enable = 30
+		on_map_mode = map_and_decisions_view
+		
+		complete_effect = {}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+	br_umayyad_missionary = {
+		icon = infiltrate_state
+
+		target_root_trigger = {
+			original_tag = ADU
+		}
+		#target_array = 
+		target_trigger = {
+			FROM = {
+				is_controlled_by = root
+				NOT = { is_core_of = ROOT }
+			}
+		}
+		visible = {
+
+		}
+		available = {
+			not = { has_country_flag = br_umayyad_missionary_flag }
+		}
+
+		cost = 50
+
+		days_remove = 28
+		days_re_enable = 28
+		state_target = yes
+		on_map_mode = map_only
+		
+		complete_effect = {
+			set_country_flag = br_umayyad_missionary_flag
+		}
+
+		remove_effect = {
+			FROM = {
+				random_list = {
+					5 = { add_resistance = -5 add_compliance = 10 }
+					30 = { add_resistance = -5 }
+					30 = { add_compliance = 10 }
+					10 = { add_resistance = 5 }
+					10 = { add_compliance = -5 }
+				}
+			}
 		}
 	}
 }

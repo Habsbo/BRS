@@ -130,10 +130,77 @@ country_event = {
 	}
 }
 
+### 2001-2100 currency war ###
 country_event = {
-	id =  br_polski.1001
-	title =  br_polski.1001.t
-	desc =  br_polski.1001.desc
+	id = br_polski.2001
+	title = br_polski.2001.title
+	desc =  br_polski.2001.desc
+	picture = GFX_report_event_lithuanian_ultimatum
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+	
+	immediate = {
+		hidden_effect = {
+			#
+		}
+	}
+
+	option = {
+		name =  br_polski.2001.a
+		
+		ai_chance = {
+			base = 10
+		}
+	}
+
+	option = {
+		name =  br_polski.2001.b
+		
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+country_event = {
+	id = br_polski.2002
+	title = br_polski.2002.title
+	desc =  br_polski.2002.desc
+	picture = GFX_report_event_lithuanian_ultimatum
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	immediate = {
+		hidden_effect = {
+			#
+		}
+	}
+
+	option = {
+		name =  br_polski.2002.a
+		
+		ai_chance = {
+			base = 10
+		}
+	}
+
+	option = {
+		name =  br_polski.2002.b
+		
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+### test ###
+country_event = {
+	id =  br_polski.100001
+	title =  br_polski.100001.t
+	desc =  br_polski.100001.desc
 	picture = GFX_report_event_lithuanian_ultimatum
 
 	is_triggered_only = yes
@@ -163,7 +230,7 @@ country_event = {
 	}
 
 	option = {
-		name =  br_polski.1001.a
+		name =  br_polski.100001.a
 		set_politics = {
 			ruling_party = vanwardism
 			elections_allowed = no
@@ -203,7 +270,7 @@ country_event = {
 		}
 	}
 	option = {
-		name =  br_polski.1001.b
+		name =  br_polski.100001.b
 		set_politics = {
 			ruling_party = sci_socialism
 			elections_allowed = no
@@ -243,7 +310,7 @@ country_event = {
 		}
 	}
 	option = {
-		name =  br_polski.1001.c
+		name =  br_polski.100001.c
 		hidden_effect = {
 			POL_Parliament = {
 				remove_country_leader_role = {
@@ -266,7 +333,7 @@ country_event = {
 		activate_advisor = POL_Rydz_Smigly
 	}
 	option = {
-		name =  br_polski.1001.d
+		name =  br_polski.100001.d
 		set_politics = {
 			ruling_party = dem_liberalism
 			election_frequency = 48
@@ -305,7 +372,7 @@ country_event = {
 		}
 	}
 	option = {
-		name =  br_polski.1001.e
+		name =  br_polski.100001.e
 		set_politics = {
 			ruling_party = authoritarian
 			elections_allowed = no
