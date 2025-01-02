@@ -1,14 +1,14 @@
 bookmarks = {
 	bookmark = {
-		name = "br_spanish_civil_war"
-		desc = "br_spanish_civil_war_DESC"
+		name = "BR_BASIC_NAME"
+		desc = "BR_BASIC_DESC"
 		date = 1931.1.1.12
 		picture = "GFX_select_date_1936"
 		default_country = "SPR"
 		default = yes
 
 		"FRA"={
-			history = "FRA_GATHERING_STORM_DESC"
+			history = "FRA_BR_BASIC_DESC"
 			ideology = democratic
 			#available = { has_dlc = "La Resistance" } 
 			ideas = {
@@ -20,7 +20,7 @@ bookmarks = {
 		}
 
 		"GER"={
-			history = "GER_GATHERING_STORM_DESC"
+			history = "GER_BR_BASIC_DESC"
 			ideology = soc_anarchism
 			#available = { has_dlc = "La Resistance" } 
 			ideas = {
@@ -32,7 +32,7 @@ bookmarks = {
 		}
 		
 		"ENG"={
-			history = "ENG_DESC"
+			history = "ENG_BR_BASIC_DESC"
 			ideology = authoritarian
 			#available = { has_dlc = "La Resistance" } 
 			ideas = {
@@ -44,7 +44,7 @@ bookmarks = {
 		}
 
 		"SPR"={
-			history = "FRA_GATHERING_STORM_DESC"
+			history = "SPR_BR_BASIC_DESC"
 			ideology = authoritarian
 			#available = { has_dlc = "La Resistance" } 
 			ideas = {
@@ -56,7 +56,7 @@ bookmarks = {
 		}
 
 		"HUN"={
-			history = "FRA_GATHERING_STORM_DESC"
+			history = "HUN_BR_BASIC_DESC"
 			ideology = dem_conservatism
 			#available = { has_dlc = "La Resistance" } 
 			ideas = {
@@ -68,7 +68,7 @@ bookmarks = {
 		}
 
 		"POL"={
-			history = "FRA_GATHERING_STORM_DESC"
+			history = "POL_BR_BASIC_DESC"
 			ideology = dem_conservatism
 			#available = { has_dlc = "La Resistance" } 
 			ideas = {
@@ -80,7 +80,7 @@ bookmarks = {
 		}
 
 		"---"={
-			history = "OTHER_GATHERING_STORM_DESC"
+			history = "OTHER_BR_BASIC_DESC"
 		}
 
 

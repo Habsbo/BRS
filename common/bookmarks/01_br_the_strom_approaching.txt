@@ -1,29 +1,21 @@
 bookmarks = {
 	bookmark = {
-		name = "GATHERING_STORM_NAME"
-		desc = "GATHERING_STORM_DESC"
-		date = 1936.1.1.12
+		name = "THE_STORM_APPROACHING_NAME"
+		desc = "THE_STORM_APPROACHING_DESC"
+		date = 1931.1.1.12
 		picture = "GFX_select_date_1936"
 		default_country = "GER"
 		default = yes
 
 
 		"---"={
-			history = "OTHER_GATHERING_STORM_DESC"
+			history = "OTHER_THE_STORM_APPROACHING_DESC"
 		}
-
-
-		# minors from DLC 
-
-		"---"={
-			history = "OTHER_GATHERING_STORM_DESC"
-		}
-
 
 		# minors from DLC ####
 		"CAN"={
 			minor = yes
-			history = "CAN_GATHERING_STORM_DESC"
+			history = "CAN_THE_STORM_APPROACHING_DESC"
 			ideology = democratic
 			ideas = {
 				CAN_great_depression_1

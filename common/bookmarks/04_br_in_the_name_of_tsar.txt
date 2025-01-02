@@ -1,0 +1,92 @@
+bookmarks = {
+	bookmark = {
+		name = "VO_IMJA_CARJA_NAME"
+		desc = "VO_IMJA_CARJA_DESC"
+		date = 1931.1.1.12
+		picture = "GFX_select_date_1936"
+		default_country = "RUS"
+		default = no
+
+		"RUS"={
+			history = "RUS_VO_IMJA_CARJA_DESC"
+			ideology = sci_socialism
+			#available = {} 
+			ideas = {
+				#
+			}
+			focuses = {
+				#
+			}
+		}
+
+		"UKR"={
+			history = "UKR_VO_IMJA_CARJA_DESC"
+			ideology = sci_socialism
+			#available = {} 
+			ideas = {
+				#
+			}
+			focuses = {
+				#
+			}
+		}
+
+		"SOV"={
+			history = "SOV_VO_IMJA_CARJA_DESC"
+			ideology = sci_socialism
+			#available = {} 
+			ideas = {
+				#
+			}
+			focuses = {
+				#
+			}
+		}
+
+		"GER"={
+			history = "GER_VO_IMJA_CARJA_DESC"
+			ideology = dem_conservatism
+			#available = {} 
+			ideas = {
+				#
+			}
+			focuses = {
+				#
+			}
+		}
+
+
+		"---"={
+			history = "OTHER_ITA_VO_IMJA_CARJA_DESC"
+		}
+
+		# minors from DLC ####
+		"LIT"={
+			minor = yes
+			history = "LIT_VO_IMJA_CARJA_DESC"
+			ideology = democratic
+			ideas = {}
+			focuses = {}
+		}
+		"LAT"={
+			minor = yes
+			history = "LAT_VO_IMJA_CARJA_DESC"
+			ideology = democratic
+			ideas = {}
+			focuses = {}
+		}
+		"FIN"={
+			minor = yes
+			history = "CAN_ITA_VO_IMJA_CARJA_DESC"
+			ideology = democratic
+			ideas = {}
+			focuses = {}
+		}
+
+
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

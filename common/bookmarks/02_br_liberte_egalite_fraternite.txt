@@ -1,0 +1,66 @@
+bookmarks = {
+	bookmark = {
+		name = "LIBERTE_EGALITE_FRATERNITE_NAME"
+		desc = "LIBERTE_EGALITE_FRATERNITE_DESC"
+		date = 1931.1.1.12
+		picture = "GFX_select_date_1936"
+		default_country = "FRA"
+		default = no
+
+		"FRA"={
+			history = "FRA_LIBERTE_EGALITE_FRATERNITE_DESC"
+			ideology = democratic
+			#available = {} 
+			ideas = {
+				#
+			}
+			focuses = {
+				#
+			}
+		}
+
+		"ENG"={
+			history = "ENG_LIBERTE_EGALITE_FRATERNITE_DESC"
+			ideology = democratic
+			#available = {} 
+			ideas = {
+				#
+			}
+			focuses = {
+				#
+			}
+		}
+
+		"---"={
+			history = "OTHER_LIBERTE_EGALITE_FRATERNITE_DESC"
+		}
+
+		# minors from DLC ####
+		"ALG"={
+			minor = yes
+			history = "ALG_LIBERTE_EGALITE_FRATERNITE_DESC"
+			ideology = democratic
+			ideas = {}
+			focuses = {}
+		}
+		"MOR"={
+			minor = yes
+			history = "MOR_LIBERTE_EGALITE_FRATERNITE_DESC"
+			ideology = democratic
+			ideas = {}
+			focuses = {}
+		}
+		"TUN"={
+			minor = yes
+			history = "TUN_LIBERTE_EGALITE_FRATERNITE_DESC"
+			ideology = democratic
+			ideas = {}
+			focuses = {}
+		}
+
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

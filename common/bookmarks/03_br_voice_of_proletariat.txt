@@ -1,0 +1,48 @@
+bookmarks = {
+	bookmark = {
+		name = "VOIC_OF_PROLETARIAT_NAME"
+		desc = "VOIC_OF_PROLETARIAT_DESC"
+		date = 1931.1.1.12
+		picture = "GFX_select_date_1936"
+		default_country = "ITA"
+		default = no
+
+		"ITA"={
+			history = "ITA_VOIC_OF_PROLETARIAT_DESC"
+			ideology = sci_socialism
+			#available = { has_dlc = "La Resistance" } 
+			ideas = {
+				#
+			}
+			focuses = {
+				#
+			}
+		}
+
+		"---"={
+			history = "OTHER_VOIC_OF_PROLETARIAT_DESC"
+		}
+
+		# minors from DLC ####
+		"BEL"={
+			minor = yes
+			history = "BEL_VOIC_OF_PROLETARIAT_DESC"
+			ideology = democratic
+			ideas = {}
+			focuses = {}
+		}
+
+		"HOL"={
+			minor = yes
+			history = "HOL_VOIC_OF_PROLETARIAT_DESC"
+			ideology = democratic
+			ideas = {}
+			focuses = {}
+		}
+
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

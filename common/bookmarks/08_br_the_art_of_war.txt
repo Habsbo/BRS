@@ -1,0 +1,40 @@
+bookmarks = {
+	bookmark = {
+		name = "BM_THE_ART_OF_WAR_NAME"
+		desc = "BM_THE_ART_OF_WAR_DESC"
+		date = 1931.1.1.12
+		picture = "GFX_select_date_1936"
+		default_country = "CHI"
+		default = no
+
+		"CHI"={
+			history = "JAP_THE_ART_OF_WAR_DESC"
+			ideology = democratic
+			#available = { has_dlc = "La Resistance" } 
+			ideas = {
+				#
+			}
+			focuses = {
+				#
+			}
+		}
+
+		"---"={
+			history = "OTHER_THE_ART_OF_WAR_DESC"
+		}
+
+		# minors from DLC ####
+		"MAN"={
+			minor = yes
+			history = "MAN_THE_ART_OF_WAR_DESC"
+			ideology = democratic
+			ideas = {}
+			focuses = {}
+		}
+
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

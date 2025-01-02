@@ -252,5 +252,5 @@ SEF = {
 YHT = {
 	original_tag = CHI
 	
-	has_country_flag = CHI_yi_huo_tuan_flag
+	has_country_flag = CHI_YHT_flag
 }

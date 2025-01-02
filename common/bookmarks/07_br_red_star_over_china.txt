@@ -1,0 +1,40 @@
+bookmarks = {
+	bookmark = {
+		name = "BM_RED_STAR_OVER_CHINA_NAME"
+		desc = "BM_RED_STAR_OVER_CHINA_DESC"
+		date = 1931.1.1.12
+		picture = "GFX_select_date_1936"
+		default_country = "CHI"
+		default = no
+
+		"PRC"={
+			history = "PRC_RED_STAR_OVER_CHINA_DESC"
+			ideology = sci_socialism
+			#available = { has_dlc = "La Resistance" } 
+			ideas = {
+				#
+			}
+			focuses = {
+				#
+			}
+		}
+
+		"---"={
+			history = "OTHER_RED_STAR_OVER_CHINA_DESC"
+		}
+
+		# minors from DLC ####
+		"MAN"={
+			minor = yes
+			history = "MAN_RED_STAR_OVER_CHINA_DESC"
+			ideology = democratic
+			ideas = {}
+			focuses = {}
+		}
+
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}
