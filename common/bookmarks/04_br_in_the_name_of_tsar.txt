@@ -61,6 +61,13 @@ bookmarks = {
 		}
 
 		# minors from DLC ####
+		"POL"={
+			minor = yes
+			history = "POL_ITA_VO_IMJA_CARJA_DESC"
+			ideology = democratic
+			ideas = {}
+			focuses = {}
+		}
 		"LIT"={
 			minor = yes
 			history = "LIT_VO_IMJA_CARJA_DESC"
@@ -77,7 +84,7 @@ bookmarks = {
 		}
 		"FIN"={
 			minor = yes
-			history = "CAN_ITA_VO_IMJA_CARJA_DESC"
+			history = "FIN_ITA_VO_IMJA_CARJA_DESC"
 			ideology = democratic
 			ideas = {}
 			focuses = {}
