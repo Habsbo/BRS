@@ -130,7 +130,7 @@ country_event = {
 	}
 }
 
-### 2001-2100 currency war ###
+### 2001-3000 currency war ###
 country_event = {
 	id = br_polski.2001
 	title = br_polski.2001.title

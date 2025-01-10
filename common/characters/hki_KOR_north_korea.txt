@@ -1,0 +1,53 @@
+characters={
+	KOR_kim_il_sung = { #金日成
+		name = kim_il_sung
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_KOR_kim_il_sung"
+				small = "GFX_portrait_KOR_kim_il_sung_small"
+			}
+		}
+		country_leader = {
+			ideology = stalinism
+			traits={}
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	KOR_cho_man_sik = { #曹晚植
+		name = cho_man_sik
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_KOR_cho_man_sik"
+				small = "GFX_portrait_KOR_cho_man_sik_small"
+			}
+		}
+		country_leader = {
+			ideology = cooperativism
+			traits={}
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	KOR_kang_ryang_uk = { #康良煜
+		name = kang_ryang_uk
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_KOR_kang_ryang_uk"
+				small = "GFX_portrait_KOR_kang_ryang_uk_small"
+			}
+		}
+	}
+	
+	KOR_kim_tal_hyon = { #金达铉
+		name = kim_tal_hyon
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_KOR_kim_tal_hyon"
+				small = "GFX_portrait_KOR_kim_tal_hyon_small"
+			}
+		}
+	}
+}

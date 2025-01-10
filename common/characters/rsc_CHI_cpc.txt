@@ -1,0 +1,13 @@
+characters = {
+### CPC ###
+	CPC_mao_tzetung = { #毛泽东
+		name = mao_tzetung 
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_CPC_mao_tzetung"
+				small = "GFX_portrait_CPC_mao_tzetung_small"
+			}
+		}
+	}
+	
+}

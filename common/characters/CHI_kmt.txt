@@ -1,0 +1,14 @@
+characters = {
+### kuomintang ###
+
+	KMT_wang_jingwei = { #汪精卫
+		name = wang_jingwei
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_KMT_wang_jingwei"
+				small = "GFX_portrait_KMT_wang_jingwei_small"
+			}
+		}
+	}
+	
+}

@@ -36,7 +36,10 @@ recruit_character = KOR_kim_koo
 #
 recruit_character = KOR_rhee_syngman
 #
-recruit_character = KOR_yi_gang
-recruit_character = KOR_yi_un
+recruit_character = KOR_i_gang
+recruit_character = KOR_i_eun
 #
 recruit_character = KOR_kim_il_sung
+
+set_cosmetic_tag = KOR_joseon_dynasty
+set_country_flag = KOR_joseon_dynasty_flag

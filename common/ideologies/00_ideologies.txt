@@ -8,10 +8,6 @@ ideologies = {
 			}
 			syndicalism = {
 			}
-			anarchist_liberalism = {
-			}
-			anarchist_communism = {
-			}
 		}
 
 		dynamic_faction_names = {
@@ -48,6 +44,8 @@ ideologies = {
 
 		types = {
 			forwardism = {
+			}
+			anarchist_communism = {
 			}
 		}
 
@@ -261,6 +259,9 @@ ideologies = {
 			moderatism = {
 			}
 			centrism = {
+			}
+			anarchist_liberalism = {
+				can_be_randomly_selected = no
 			}
 		}
 

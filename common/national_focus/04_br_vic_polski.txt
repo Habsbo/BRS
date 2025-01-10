@@ -225,7 +225,7 @@ focus_tree = {
 		icon = GFX_focus_POL_consolidate_sanation_government
 		#prerequisite = {}
 		mutually_exclusive = { focus = POL_new_regent }
-		x = 24
+		x = 60
 		y = 2
 		relative_position_id = POL_capital_bans
 
@@ -979,7 +979,7 @@ focus_tree = {
 		icon = GFX_focus_SOV_my_brothers_keeper
 		prerequisite = { focus = POL_seek_successor }
 		#mutually_exclusive = { focus =  }
-		x = -1
+		x = 0
 		y = 1
 		relative_position_id = POL_seek_successor
 
@@ -1004,7 +1004,7 @@ focus_tree = {
 		icon = GFX_focus_POL_end_the_regency
 		prerequisite = { focus = POL_seek_successor }
 		#mutually_exclusive = { focus =  }
-		x = 3
+		x = 2
 		y = 1
 		relative_position_id = POL_seek_successor
 
@@ -1024,37 +1024,13 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 	}
 
-	focus = {
-		id = POL_habsburg_inheritor
-		icon = GFX_focus_POL_habsburg
-		prerequisite = { focus = POL_seek_successor }
-		#mutually_exclusive = { focus =  }
-		x = 7
-		y = 1
-		relative_position_id = POL_seek_successor
-
-		cost = 8
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		completion_reward = {}
-		
-		ai_will_do = { factor = 1 }
-	}
-
+	### hohenzollern line ###
 	focus = {
 		id = POL_hohenzollern_inheritor
 		icon = GFX_focus_ger_revive_kaiserreich
 		prerequisite = { focus = POL_seek_successor }
 		#mutually_exclusive = { focus =  }
-		x = 11
+		x = 6
 		y = 1
 		relative_position_id = POL_seek_successor
 
@@ -1073,14 +1049,562 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+	focus = {
+		id = POL_recourse_germany
+		icon = GFX_focus_GER_appease_the_wehrmacht
+		prerequisite = { focus = POL_hohenzollern_inheritor }
+		x = -2
+		y = 1
+		relative_position_id = POL_hohenzollern_inheritor
 
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_jugendgruppen
+		icon = GFX_focus_
+		prerequisite = { focus = POL_recourse_germany }
+		x = 0
+		y = 1
+		relative_position_id = POL_recourse_germany
+
+		cost = 5
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_deutsche_einmischung
+		icon = GFX_focus_
+		prerequisite = { focus = POL_jugendgruppen }
+		x = 0
+		y = 1
+		relative_position_id = POL_jugendgruppen
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_promote_loyal_officers
+		icon = GFX_focus_generic_military_mission
+		prerequisite = { focus = POL_hohenzollern_inheritor }
+		x = 0
+		y = 1
+		relative_position_id = POL_hohenzollern_inheritor
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_military_purge_hi
+		icon = GFX_focus_SOV_military_purge
+		prerequisite = { focus = POL_promote_loyal_officers }
+		x = 0
+		y = 1
+		relative_position_id = POL_promote_loyal_officers
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	### ###
+	focus = {
+		id = POL_habsburg_inheritor
+		icon = GFX_focus_POL_habsburg
+		prerequisite = { focus = POL_seek_successor }
+		#mutually_exclusive = { focus =  }
+		x = 16
+		y = 1
+		relative_position_id = POL_seek_successor
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_habsburg_1
+		icon = GFX_focus_
+		prerequisite = { focus = POL_habsburg_inheritor }
+		x = 0
+		y = 1
+		relative_position_id = POL_habsburg_inheritor
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_habsburg_1
+		icon = GFX_focus_
+		prerequisite = { focus = POL_habsburg_inheritor }
+		x = 2
+		y = 1
+		relative_position_id = POL_habsburg_inheritor
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = POL_justice_with_mercy_to_sejm
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = {
+			focus = POL_hohenzollern_inheritor
+			focus = POL_habsburg_inheritor
+		}
+		mutually_exclusive = { focus = POL_prohibit_sejm_by_edict }
+		x = 4
+		y = 1
+		relative_position_id = POL_hohenzollern_inheritor
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_loyal_to_polska_throne_is_patriotic
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		prerequisite = { focus = POL_justice_with_mercy_to_sejm }
+		x = -2
+		y = 1
+		relative_position_id = POL_justice_with_mercy_to_sejm
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_die_patriot_league
+		icon = GFX_goal_generic_attack_allies
+		prerequisite = { focus = POL_loyal_to_polska_throne_is_patriotic }
+		x = 0
+		y = 1
+		relative_position_id = POL_loyal_to_polska_throne_is_patriotic
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_verbannung_der_demokratischen_fraktion
+		icon = GFX_focus_SOV_penal_battalions
+		prerequisite = { focus = POL_die_patriot_league }
+		prerequisite = { focus = POL_control_sozialisten }
+		x = 1
+		y = 1
+		relative_position_id = POL_die_patriot_league
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_erleuchtete_monarchie
+		icon = GFX_focus_generic_polish_deal
+		prerequisite = { focus = POL_verbannung_der_demokratischen_fraktion }
+		mutually_exclusive = { focus = POL_der_gosser_konig }
+		x = 0
+		y = 1
+		relative_position_id = POL_verbannung_der_demokratischen_fraktion
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	#
+	focus = {
+		id = POL_labour_union_constriction_law
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		prerequisite = { focus = POL_justice_with_mercy_to_sejm }
+		x = 0
+		y = 1
+		relative_position_id = POL_justice_with_mercy_to_sejm
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_control_sozialisten
+		icon = GFX_focus_generic_communist
+		prerequisite = { focus = POL_labour_union_constriction_law }
+		x = 0
+		y = 1
+		relative_position_id = POL_labour_union_constriction_law
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = POL_prohibit_sejm_by_edict
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = {
+			focus = POL_hohenzollern_inheritor
+			focus = POL_habsburg_inheritor
+		}
+		mutually_exclusive = { focus = POL_justice_with_mercy_to_sejm }
+		x = 2
+		y = 0
+		relative_position_id = POL_justice_with_mercy_to_sejm
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_derkonig_und_daskonigreich
+		icon = GFX_focus_
+		prerequisite = { focus = POL_prohibit_sejm_by_edict }
+		x = 0
+		y = 1
+		relative_position_id = POL_prohibit_sejm_by_edict
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_unterdruckung_der_opposition
+		icon = GFX_focus_
+		prerequisite = { focus = POL_derkonig_und_daskonigreich }
+		x = 0
+		y = 1
+		relative_position_id = POL_derkonig_und_daskonigreich
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_strike_mit_gewalt
+		icon = GFX_focus_generic_strike_at_democracy1
+		prerequisite = { focus = POL_unterdruckung_der_opposition }
+		prerequisite = { focus = POL_pro_deutsche_propaganda }
+		x = 1
+		y = 1
+		relative_position_id = POL_unterdruckung_der_opposition
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_der_gosser_konig
+		icon = GFX_focus_GER_monarchy_compromise
+		prerequisite = { focus = POL_strike_mit_gewalt }
+		mutually_exclusive = { focus = POL_erleuchtete_monarchie }
+		x = 0
+		y = 1
+		relative_position_id = POL_strike_mit_gewalt
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_medienkrieg
+		icon = GFX_goal_generic_radar
+		prerequisite = { focus = POL_prohibit_sejm_by_edict }
+		x = 2
+		y = 1
+		relative_position_id = POL_prohibit_sejm_by_edict
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_pro_deutsche_propaganda
+		icon = GFX_focus_
+		prerequisite = { focus = POL_medienkrieg }
+		x = 0
+		y = 1
+		relative_position_id = POL_medienkrieg
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = POL_polska_deutsche_frauengruppen
+		icon = GFX_focus_SOV_womens_fascist_movement
+		prerequisite = { focus = POL_medienkrieg }
+		x = 1
+		y = 2
+		relative_position_id = POL_medienkrieg
+
+		cost = 5
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	### ###
 	focus = {
 		id = POL_united_royalists
 		icon = GFX_goal_tfv_strengthen_commonwealth_ties
 		prerequisite = { focus = POL_seek_successor }
 		#mutually_exclusive = { focus =  }
-		x = 16
-		y = 5
+		x = 22
+		y = 7
 		relative_position_id = POL_seek_successor
 
 		cost = 8

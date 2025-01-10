@@ -283,3 +283,29 @@
  EGY_fascism_party: "埃及青年党"
  EGY_nationalism_party: "埃及国家社会主义党"
  EGY_supernationalism_party: "古埃及多神教"
+
+
+#hki - japan
+ JAP_soc_anarchism_party: ""
+ JAP_vanwardism_party: ""
+ JAP_sci_socialism_party: ""
+ JAP_con_socialism_party: ""
+ JAP_dem_socialism_party: ""
+ JAP_dem_liberalism_party: "" 
+ JAP_dem_conservatism_party: "" 
+ JAP_authoritarian_party: ""
+ JAP_fascism_party: ""
+ JAP_nationalism_party: ""
+ JAP_supernationalism_party: ""
+#hki - korean
+ KOR_soc_anarchism_party: "朝鲜无政府主义"
+ KOR_vanwardism_party: "朝鲜劳动党国际派(CSR-I)" #Chosŏn Rodongdang
+ KOR_sci_socialism_party: "朝鲜劳动党马列派(CSR-ML)" #Chosŏn Rodongdang
+ KOR_con_socialism_party: "朝鲜社会民主党" #Chosŏn Sahoe Minjudang
+ KOR_dem_socialism_party: "天道教青友党" #chŏn do gyo chŏngu dang
+ KOR_dem_liberalism_party: "韩国自由党" 
+ KOR_dem_conservatism_party: "韩国独立党" #HangukDoglib Dang
+ KOR_authoritarian_party: "李氏高丽"
+ KOR_fascism_party: "协和会"
+ KOR_nationalism_party: "协和会"
+ KOR_supernationalism_party: "宇宙帝国"

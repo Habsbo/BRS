@@ -1,0 +1,214 @@
+characters={
+	#金九
+	KOR_kim_koo = {
+		name = kim_koo
+		portraits = {
+			civilian={
+				large = "GFX_portrait_KOR_kim_koo"
+				small = "GFX_portrait_KOR_kim_koo_small"
+			}
+		}
+		country_leader = {
+			ideology = conservatism
+			traits={}
+			expire="1949.6.26.1"
+			id=-1
+		}
+	}
+	#李承晚
+	KOR_rhee_syngman = {
+		name = rhee_syngman
+		portraits = {
+			civilian={
+				large = "GFX_portrait_KOR_rhee_syngman"
+				small = "GFX_portrait_KOR_rhee_syngman_small"
+			}
+		}
+		country_leader = {
+			ideology = conservatism
+			traits={}
+			expire="1965.7.19.1"
+			id=-1
+		}
+	}
+	#李堈
+	KOR_i_gang = {
+		name = i_gang
+		portraits = {
+			civilian={
+				large = "GFX_portrait_KOR_i_gang"
+				small = "GFX_portrait_KOR_i_gang_small"
+			}
+		}
+		#country_leader = {
+		#	ideology = despotism
+		#	traits={}
+		#	expire="1955.8.16.1"
+		#	id=-1
+		#}
+	}
+	#李垠
+	KOR_i_eun = {
+		name = KOR_yi_un
+		portraits = {
+			civilian={
+				large = "GFX_portrait_KOR_yi_un"
+				small = "GFX_portrait_KOR_yi_un_small"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			traits={}
+			expire="1970.5.1.1"
+			id=-1
+		}
+	}
+
+	#高木正雄
+	KOR_park_chunghee = {
+		name = park_chunghee
+		portraits = {
+			civilian={
+				large = "GFX_portrait_KOR_park_chunghee"
+				small = "GFX_portrait_KOR_park_chunghee_small"
+			}
+		}
+		#country_leader = {
+		#	ideology = conservatism
+		#	traits={}
+		#	expire="1970.5.1.1"
+		#	id=-1
+		#}
+	}
+	#尹潽善
+	KOR_yun_boseon = {
+		name = yun_boseon
+		portraits = {
+			civilian={
+				large = "GFX_portrait_KOR_yun_boseon"
+				small = "GFX_portrait_KOR_yun_boseon_small"
+			}
+		}
+	}
+	#许政
+	KOR_heo_jeong = {
+		name = heo_jeong
+		portraits = {
+			civilian={
+				large = "GFX_portrait_KOR_heo_jeong"
+				small = "GFX_portrait_KOR_heo_jeong_small"
+			}
+		}
+	}
+	#张勉
+	KOR_chang_myon = {
+		name = chang_myon
+		portraits = {
+			civilian={
+				large = "GFX_portrait_KOR_chang_myon"
+				small = "GFX_portrait_KOR_chang_myon_small"
+			}
+		}
+	}
+	#李范奭
+	KOR_i_beomseok = {
+		name = i_beomseok
+		portraits = {
+			civilian={
+				large = "GFX_portrait_KOR_i_beomseok"
+				small = "GFX_portrait_KOR_i_beomseok_small"
+			}
+		}
+	}
+	#白汉成/水原鹤人，亲日派
+	KOR_baek_hanseong = {
+		name = baek_hanseong
+		portraits = {
+			civilian={
+				large = "GFX_portrait_KOR_baek_hanseong"
+				small = "GFX_portrait_KOR_baek_hanseong_small"
+			}
+		}
+	}
+	#卞荣泰
+	KOR_pyon_yongtae = {
+		name = pyon_yongtae
+		portraits = {
+			civilian={
+				large = "GFX_portrait_KOR_pyon_yongtae"
+				small = "GFX_portrait_KOR_pyon_yongtae_small"
+			}
+		}
+	}
+	#申性模，代国务总理，国防部长，交通部，海军经历
+	KOR_sin_seongmo = {
+		name = sin_seongmo
+		portraits = {
+			civilian={
+				large = "GFX_portrait_KOR_sin_seongmo"
+				small = "GFX_portrait_KOR_sin_seongmo_small"
+			}
+		}
+	}
+	#李允荣，基督教牧师，反日
+	KOR_i_yunyeong = {
+		name = i_yunyeong
+		portraits = {
+			civilian={
+				large = "GFX_portrait_KOR_i_yunyeong"
+				small = "GFX_portrait_KOR_i_yunyeong_small"
+			}
+		}
+	}
+	#金弘壹，中国背景军官，别名金弘一、崔世平（최세평），中国名王雄、王逸曙和王复高
+	KOR_kim_hongil = {
+		name = kim_hongil
+		portraits = {
+			civilian={
+				large = "GFX_portrait_KOR_kim_hongil"
+				small = "GFX_portrait_KOR_kim_hongil_small"
+			}
+		}
+	}
+	#张泽相/Chang Taek-sang，仁同张氏，贵族。
+	KOR_chang_taeksang = {
+		name = chang_taeksang
+		portraits = {
+			civilian={
+				large = "GFX_portrait_KOR_chang_taeksang"
+				small = "GFX_portrait_KOR_chang_taeksang_small"
+			}
+		}
+	}
+	#白斗镇
+	KOR_paik_toochin = {
+		name = paik_toochin
+		portraits = {
+			civilian={
+				large = "GFX_portrait_KOR_paik_toochin"
+				small = "GFX_portrait_KOR_paik_toochin_small"
+			}
+		}
+	}
+	#
+	KOR_ = {
+		name = 
+		portraits = {
+			civilian={
+				large = "GFX_portrait_KOR_"
+				small = "GFX_portrait_KOR__small"
+			}
+		}
+	}
+	#
+	KOR_ = {
+		name = 
+		portraits = {
+			civilian={
+				large = "GFX_portrait_KOR_"
+				small = "GFX_portrait_KOR__small"
+			}
+		}
+	}
+
+}

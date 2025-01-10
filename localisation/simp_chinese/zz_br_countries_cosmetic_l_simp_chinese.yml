@@ -34,6 +34,46 @@
  CHI_YHT: "义和团"
  CHI_YHT_DEF: "义和团"
  CHI_YHT_ADJ: "义和团"
+#朝鲜
+ KOR_joseon_dynasty: "朝鲜王朝"
+ KOR_joseon_dynasty_DEF: "朝鲜王朝"
+ KOR_joseon_dynasty_ADJ: "朝鲜"
+ KOR_joseon_dynasty_JAP_subject: "日属朝鲜王朝"
+ KOR_joseon_dynasty_JAP_subject_DEF: "日属朝鲜王朝"
+ KOR_joseon_dynasty_JAP_subject_ADJ: "日属朝鲜"
+ KOR_daehan_jeguk: "大韩帝国"
+ KOR_daehan_jeguk_DEF: "大韩帝国"
+ KOR_daehan_jeguk_ADJ: "韩国"
+
+ KOR_daehan_minguk: "大韩民国"
+ KOR_daehan_minguk_DEF: "大韩民国"
+ KOR_daehan_minguk_ADJ: "韩国"
+ KOR_daehan_minguk_JAP_subject: "日属大韩共和国"
+ KOR_daehan_minguk_JAP_subject_DEF: "日属大韩共和国"
+ KOR_daehan_minguk_JAP_subject_ADJ: "日属韩国"
+
+ KOR_joseon_minjujuui_inmin_gonghwaguk: "朝鲜民主主义人民共和国"
+ KOR_joseon_minjujuui_inmin_gonghwaguk_DEF: "朝鲜民主主义人民共和国"
+ KOR_joseon_minjujuui_inmin_gonghwaguk_ADJ: "朝鲜"
+#日本
+ JAP_dai_nippon_teikoku: "大日本帝国"
+ JAP_dai_nippon_teikoku_DEF: "大日本帝国"
+
+ JAP_nippon_kyowakoku: "日本共和国"
+ JAP_nippon_kyowakoku_DEF: "日本共和国"
+
+ JAP_nippon_jinmin_kyowakoku: "日本人民共和国"
+ JAP_nippon_jinmin_kyowakoku_DEF: "日本人民共和国"
+
+ PRC_democratic_union_of_eastern_aisan_peoples_republics: "东亚人民共和国民主联盟"
+ PRC_democratic_union_of_eastern_aisan_peoples_republics_DEF: "东亚人民共和国民主联盟"
+ PRC_democratic_union_of_eastern_aisan_peoples_republics_ADJ: "东亚人民联盟"
+ PRK_democratic_union_of_eastern_aisan_peoples_republics: "东亚人民民主主义共和国联盟"
+ PRK_democratic_union_of_eastern_aisan_peoples_republics_DEF: "东亚人民民主主义共和国联盟"
+ PRK_democratic_union_of_eastern_aisan_peoples_republics_ADJ: "东亚人民联盟"
+ JAP_democratic_union_of_eastern_aisan_peoples_republics: "东亚人民共和国联盟"
+ JAP_democratic_union_of_eastern_aisan_peoples_republics_DEF: "东亚人民共和国联盟"
+ JAP_democratic_union_of_eastern_aisan_peoples_republics_ADJ: "东亚人民联盟"
 #法国
  FRA_republic: "法兰西共和国"
  FRA_republic_DEF: "法兰西共和国"
@@ -596,20 +636,32 @@
 #美国
  LSA: "美利坚合众国"
  LSA_DEF: "美利坚合众国"
+ LSA_JAP_subject: "日属米国"
+ LSA_JAP_subject_DEF: "日属米国"
+
  CSA: "美利坚联盟国"
  CSA_DEF: "美利坚联盟国"
+ CSA_JAP_subject: "日属米国"
+ CSA_JAP_subject_DEF: "日属米国"
+
  WPA: "太平洋合众国"
  WPA_DEF: "太平洋合众国"
+
  ASA: "美利坚工人联盟"
  ASA_DEF: "美利坚工人联盟"
+
  BSA: "美利坚统一工团联邦"
  BSA_DEF: "美利坚统一工团联邦"
+
  GSA: "美利坚黑帮国"
  GSA_DEF: "美利坚黑帮国"
+
  ESA: "美利坚帝国"
  ESA_DEF: "美利坚帝国"
+
  FSA: "美利坚国家联盟"
  FSA_DEF: "美利坚国家联盟"
+
 #撒哈拉以南非洲
  COG_DEU_trusteeship: "德属刚果托管领"
  COG_DEU_trusteeship_DEF: "德属刚果托管领"
