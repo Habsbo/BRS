@@ -247,7 +247,49 @@
 			check_variable = { benelux_region_var > 0 }
 		}
 	}
-
+### state rank - 国家等级 ###
+br_is_state_rank_0 = {
+	custom_trigger_tooltip = {
+		tooltip = br_is_state_rank_0_tt
+		check_variable = { state_rank = 0 }
+	}
+}
+br_is_state_rank_1 = {
+	custom_trigger_tooltip = {
+		tooltip = br_is_state_rank_1_tt
+		check_variable = { state_rank = 1 }
+	}
+}
+br_is_state_rank_2 = {
+	custom_trigger_tooltip = {
+		tooltip = br_is_state_rank_2_tt
+		check_variable = { state_rank = 2 }
+	}
+}
+br_is_state_rank_3 = {
+	custom_trigger_tooltip = {
+		tooltip = br_is_state_rank_3_tt
+		check_variable = { state_rank = 3 }
+	}
+}
+br_is_state_rank_4 = {
+	custom_trigger_tooltip = {
+		tooltip = br_is_state_rank_4_tt
+		check_variable = { state_rank = 4 }
+	}
+}
+br_is_state_rank_5 = {
+	custom_trigger_tooltip = {
+		tooltip = br_is_state_rank_5_tt
+		check_variable = { state_rank = 5 }
+	}
+}
+br_is_state_rank_6 = {
+	custom_trigger_tooltip = {
+		tooltip = br_is_state_rank_6_tt
+		check_variable = { state_rank = 6 }
+	}
+}
 ###
 br_is_public_feeling_over_0 = {
 	check_variable = { br_public_feeling_var > 0 tooltip = br_public_feeling_var_tt_over }

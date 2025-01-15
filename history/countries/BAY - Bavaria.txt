@@ -150,4 +150,4 @@ add_ideas = {
 
 
 #
-set_variable = { br_culture_deutsch = 1 } #
+set_variable = { core_culture = culture_deutsch } #

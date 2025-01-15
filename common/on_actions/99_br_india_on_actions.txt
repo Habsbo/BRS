@@ -1,0 +1,17 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			#
+			RAJ = {
+				remove_ideas = RAJ_assiduously_indian_labours
+				remove_ideas = RAJ_colonial_exploitation
+				remove_ideas = RAJ_industrialization_of_india
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			#
+		}
+	}
+}

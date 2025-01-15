@@ -942,8 +942,8 @@ add_ideas = {
 give_guarantee = CZE
 
 1887.10.31 = {
-	set_autonomy = { target = FRC autonomous_state = autonomy_br_self_governance }
+	set_autonomy = { target = FRC autonomous_state = autonomy_self_gov }
 }
-set_autonomy = { target = ALG autonomous_state = autonomy_br_self_governance }
-set_autonomy = { target = TUN autonomous_state = autonomy_br_self_governance }
-set_autonomy = { target = MOR autonomous_state = autonomy_br_protectorate }
+set_autonomy = { target = ALG autonomous_state = autonomy_self_gov }
+set_autonomy = { target = TUN autonomous_state = autonomy_self_gov }
+set_autonomy = { target = MOR autonomous_state = autonomy_protectorate }

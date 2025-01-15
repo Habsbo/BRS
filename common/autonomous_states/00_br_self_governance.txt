@@ -1,11 +1,11 @@
 autonomy_state = {
-	id = autonomy_br_self_governance
+	id = autonomy_self_gov
 	
 	is_puppet = yes
 	
 	use_overlord_color = yes
 	
-	min_freedom_level = 0.0
+	min_freedom_level = 0.6
 	
 	manpower_influence = 1.0
 	

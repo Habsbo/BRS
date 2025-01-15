@@ -94,9 +94,7 @@ country_event = { #
 	option = {
 		name = br_indochina.1.a #
 
-		FRC = {
-			country_event = br_indochina.2
-		}
+		FRC = { country_event = br_indochina.2 }
 
 		ai_chance = { factor = 0 }
 	}
@@ -136,9 +134,7 @@ country_event = { #
 
 	immediate = {
 		#
-		hidden_effect = {
-			set_cosmetic_tag = VIN_vietnam_conghoa
-		}
+		hidden_effect = { set_cosmetic_tag = VIN_vietnam_conghoa }
 	}
 
 	option = {
@@ -198,7 +194,11 @@ country_event = { #
 			CAM = { set_cosmetic_tag = CAM_kingdom }
 			#
 			670 = { transfer_state_to = LAO }
+			1089 = { transfer_state_to = LAO }
+			1090 = { transfer_state_to = LAO }
+			1091 = { transfer_state_to = LAO }
 			741 = { transfer_state_to = CAM }
+			1092 = { transfer_state_to = CAM }
 		}
 	}
 

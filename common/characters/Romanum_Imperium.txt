@@ -28,5 +28,14 @@ characters={
 				small = "GFX_portrait_ITA_arnaldo_paleologo_orindi_small"
 			}
 		}
+		advisor = {
+			slot = army_chief
+			available = {}
+			traits = { }
+			ai_will_do = { factor = 0 }
+			cost = 50
+		}
 	}
+
+
 }

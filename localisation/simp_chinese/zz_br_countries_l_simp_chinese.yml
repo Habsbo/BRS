@@ -1,37 +1,61 @@
 ﻿l_simp_chinese:
+#
  GER: "德意志"
  GER_DEF: "德意志"
  GER_ADJ: "德国"
- #
+
+#Swiss
+ SWI: "瑞士"
+ SWI_DEF: "瑞士"
+ SWI_ADJ: "瑞士"
+#Great Britain
  ENG: "英格兰"
  ENG_DEF: "英格兰"
  ENG_ADJ: "英国"
  WLS: "威尔士"
  WLS_DEF: "威尔士"
  WLS_ADJ: "威尔士"
+
+ SCO: "苏格兰"
+ SCO_DEF: "苏格兰"
+ SCO_ADJ: "苏格兰"
+
+ IRE: "爱尔兰"
+ IRE_DEF: "爱尔兰"
+ IRE_ADJ: "爱尔兰"
+ IRE_subject: "$OVERLORDADJ$属$IRE$"
+ IRE_subject_DEF: "$OVERLORDADJ$属$IRE$"
  NIR: "北爱尔兰"
  NIR_DEF: "北爱尔兰"
  NIR_ADJ: "北爱尔兰"
- #
+#Eastern Slavic
  SOV: "苏维埃$RUS$"
  SOV_DEF: "苏维埃$RUS$"
  SOV_ADJ: "苏俄"
-
+ RUS: "俄罗斯"
+ RUS_DEF: "俄罗斯"
+ RUS_ADJ: "俄罗斯"
+ UKR: "乌克兰"
+ UKR_DEF: "乌克兰"
+ UKR_ADJ: "乌克兰"
+#France
  FRA: "法兰西"
  FRA_DEF: "法国"
  FRA_ADJ: "法国"
  FRA_subject: "$OVERLORDADJ$属$FRA$"
  FRA_subject_DEF: "$OVERLORDADJ$属$FRA$"
- LUX: "卢森堡"
- LUX_DEF: "卢森堡"
- LUX_ADJ: "卢森堡"
- LUX_subject: "$OVERLORDADJ$属$LUX$"
- LUX_subject_DEF: "$OVERLORDADJ$属$LUX$"
- BEL: "比利时"
- BEL_DEF: "比利时"
- BEL_ADJ: "比利时"
- BEL_subject: "$OVERLORDADJ$属$BEL$"
- BEL_subject_DEF: "$OVERLORDADJ$属$BEL$"
+ BRI: "布列塔尼"
+ BRI_DEF: "布列塔尼"
+ BRI_ADJ: "布列塔尼"
+ OCC: "奥克西塔尼亚"
+ OCC_DEF: "奥克西塔尼亚"
+ OCC_ADJ: "欧西坦"
+ OCC_subject: "$OVERLORDADJ$属奥克西塔尼亚"
+ OCC_subject_DEF: "$OVERLORDADJ$属奥克西塔尼亚"
+ COR: "科西嘉"
+ COR_DEF: "科西嘉"
+ COR_ADJ: "科西嘉"
+#Benelux
  HOL: "荷兰"
  HOL_DEF: "荷兰"
  HOL_ADJ: "荷兰"
@@ -39,70 +63,134 @@
  HOL_subject_DEF: "$OVERLORDADJ$属$HOL$"
  HOL_FRA_subject: "巴达维亚共和国"
  HOL_FRA_subject_DEF: "巴达维亚共和国"
-
+ BEL: "比利时"
+ BEL_DEF: "比利时"
+ BEL_ADJ: "比利时"
+ BEL_subject: "$OVERLORDADJ$属$BEL$"
+ BEL_subject_DEF: "$OVERLORDADJ$属$BEL$"
+ LUX: "卢森堡"
+ LUX_DEF: "卢森堡"
+ LUX_ADJ: "卢森堡"
+ LUX_subject: "$OVERLORDADJ$属$LUX$"
+ LUX_subject_DEF: "$OVERLORDADJ$属$LUX$"
+#Československo
  CZE: "捷克"
  CZE_DEF: "捷克"
  CZE_ADJ: "捷克"
  CZE_subject: "$OVERLORDADJ$属$CZE$"
  CZE_subject_DEF: "$OVERLORDADJ$属$CZE$"
-
+ SLO: "斯洛伐克"
+ SLO_DEF: "斯洛伐克"
+ SLO_ADJ: "斯洛伐克"
+#Polski
  POL: "波兰"
  POL_DEF: "波兰"
  POL_ADJ: "波兰"
  POL_subject: "$OVERLORDADJ$属波兰"
  POL_subject_DEF: "$OVERLORDADJ$属波兰"
 
- AUS: "奥地利"
- AUS_DEF: "奥地利"
- AUS_ADJ: "奥地利"
- AUS_subject: "$OVERLORDADJ$属$AUS$"
- AUS_subject_DEF: "$OVERLORDADJ$属$AUS$"
-
+ BLR: "白俄罗斯"
+ BLR_DEF: "白俄罗斯"
+ BLR_ADJ: "白俄罗斯"
+#Baltic
  LIT: "立陶宛"
  LIT_DEF: "立陶宛"
  LIT_ADJ: "立陶宛"
  LIT_subject: "$OVERLORDADJ$属$LIT$"
  LIT_subject_DEF: "$OVERLORDADJ$属$LIT$"
-
  EST: "爱沙尼亚"
  EST_DEF: "爱沙尼亚"
  EST_ADJ: "爱沙尼亚"
  EST_subject: "$OVERLORDADJ$属$EST$"
  EST_subject_DEF: "$OVERLORDADJ$属$EST$"
-
  LAT: "拉脱维亚"
  LAT_DEF: "拉脱维亚"
  LAT_ADJ: "拉脱维亚"
  LAT_subject: "$OVERLORDADJ$属$LAT$"
  LAT_subject_DEF: "$OVERLORDADJ$属$LAT$"
-
+#Iberia
  SPR: "西班牙"
  SPR_DEF: "西班牙"
  SPR_ADJ: "西班牙"
  SPR_subject: "$OVERLORDADJ$属$SPR$"
  SPR_subject_DEF: "$OVERLORDADJ$属$SPR$"
-
+ POR: "葡萄牙"
+ POR_DEF: "葡萄牙"
+ POR_ADJ: "葡萄牙"
+ POR_subject: "$OVERLORDADJ$属$POR$"
+ POR_subject_DEF: "$OVERLORDADJ$属$POR$"
+#Italy
  ITA: "意大利"
  ITA_DEF: "意大利"
  ITA_ADJ: "意大利"
  ITA_subject: "$OVERLORDADJ$属$ITA$"
  ITA_subject_DEF: "$OVERLORDADJ$属$ITA$"
-
+#Danube
+ AUS: "奥地利"
+ AUS_DEF: "奥地利"
+ AUS_ADJ: "奥地利"
+ AUS_subject: "$OVERLORDADJ$属$AUS$"
+ AUS_subject_DEF: "$OVERLORDADJ$属$AUS$"
+ HUN: "匈牙利"
+ HUN_DEF: "匈牙利"
+ HUN_ADJ: "匈牙利"
+ HUN_subject: "$OVERLORDADJ$属$HUN$"
+ HUN_subject_DEF: "$OVERLORDADJ$属$HUN$"
  ROM: "罗马尼亚"
  ROM_DEF: "罗马尼亚"
  ROM_ADJ: "罗马尼亚"
  ROM_subject: "$OVERLORDADJ$属$ROM$"
  ROM_subject_DEF: "$OVERLORDADJ$属$ROM$"
-
+#Balkan
  YUG: "南斯拉夫"
  YUG_DEF: "南斯拉夫"
  YUG_ADJ: "南斯拉夫"
  YUG_subject: "$OVERLORDADJ$属$YUG$"
  YUG_subject_DEF: "$OVERLORDADJ$属$YUG$"
+ SLV: "斯洛文尼亚"
+ SLV_DEF: "斯洛文尼亚"
+ SLV_ADJ: "斯洛文尼亚"
+ CRO: "克罗地亚"
+ CRO_DEF: "克罗地亚"
+ CRO_ADJ: "克罗地亚"
+ SER: "塞尔维亚"
+ SER_DEF: "塞尔维亚"
+ SER_ADJ: "塞尔维亚"
+ MNT: "黑山"
+ MNT_DEF: "黑山"
+ MNT_ADJ: "黑山"
+ BOS: "波斯尼亚"
+ BOS_DEF: "波斯尼亚"
+ BOS_ADJ: "波斯尼亚"
+ HRZ: "黑塞哥维那"
+ HRZ_DEF: "黑塞哥维那"
+ HRZ_ADJ: "黑塞哥维那"
+ BOS_without_HRZ_ITA_subject: "萨拉热窝总督区"
+ BOS_without_HRZ_ITA_subject_DEF: "萨拉热窝总督区"
 
- SWI: "瑞士"
- SWI_DEF: "瑞士"
- SWI_ADJ: "瑞士"
+ ALB: "阿尔巴尼亚"
+ ALB_DEF: "阿尔巴尼亚"
+ ALB_ADJ: "阿尔巴尼亚"
+ ALB_subject: "$OVERLORDADJ$属$ALB$"
+ ALB_subject_DEF: "$OVERLORDADJ$属$ALB$"
+ BUL: "保加利亚"
+ BUL_DEF: "保加利亚"
+ BUL_ADJ: "保加利亚"
+ BUL_subject: "$OVERLORDADJ$属$BUL$"
+ BUL_subject_DEF: "$OVERLORDADJ$属$BUL$"
+ MAC: "马其顿"
+ MAC_DEF: "马其顿"
+ MAC_ADJ: "马其顿"
+ MAC_ITA_subject: "马其顿保护国"
+ MAC_ITA_subject_DEF: "马其顿保护国"
+ MAC_BUL_subject: "马其顿保护国"
+ MAC_BUL_subject_DEF: "马其顿保护国"
+#Legacy of Byzantine Empire
+ GRE: "希腊"
+ GRE_DEF: "希腊"
+ GRE_ADJ: "希腊"
+ GRE_subject: "$OVERLORDADJ$属$GRE$"
+ GRE_subject_DEF: "$OVERLORDADJ$属$GRE$"
 
  TUR: "土耳其"
  TUR_DEF: "土耳其"
@@ -110,18 +198,7 @@
  TUR_subject: "$OVERLORDADJ$属$TUR$"
  TUR_subject_DEF: "$OVERLORDADJ$属$TUR$"
 
- GRE: "希腊"
- GRE_DEF: "希腊"
- GRE_ADJ: "希腊"
- GRE_subject: "$OVERLORDADJ$属$GRE$"
- GRE_subject_DEF: "$OVERLORDADJ$属$GRE$"
-
- ALB: "阿尔巴尼亚"
- ALB_DEF: "阿尔巴尼亚"
- ALB_ADJ: "阿尔巴尼亚"
- ALB_subject: "$OVERLORDADJ$属$ALB$"
- ALB_subject_DEF: "$OVERLORDADJ$属$ALB$"
-
+#Nordic
  NOR: "挪威"
  NOR_DEF: "挪威"
  NOR_ADJ: "挪威"
@@ -137,63 +214,55 @@
  DEN_ADJ: "丹麦"
  DEN_subject: "$OVERLORDADJ$属$DEN$"
  DEN_subject_DEF: "$OVERLORDADJ$属$DEN$"
+#
  FIN: "芬兰"
  FIN_DEF: "芬兰"
  FIN_ADJ: "芬兰"
  FIN_subject: "$OVERLORDADJ$属$FIN$"
  FIN_subject_DEF: "$OVERLORDADJ$属$FIN$"
 
- BUL: "保加利亚"
- BUL_DEF: "保加利亚"
- BUL_ADJ: "保加利亚"
- BUL_subject: "$OVERLORDADJ$属$BUL$"
- BUL_subject_DEF: "$OVERLORDADJ$属$BUL$"
-
- POR: "葡萄牙"
- POR_DEF: "葡萄牙"
- POR_ADJ: "葡萄牙"
- POR_subject: "$OVERLORDADJ$属$POR$"
- POR_subject_DEF: "$OVERLORDADJ$属$POR$"
-
-
- IRE: "爱尔兰"
- IRE_DEF: "爱尔兰"
- IRE_ADJ: "爱尔兰"
- IRE_subject: "$OVERLORDADJ$属$IRE$"
- IRE_subject_DEF: "$OVERLORDADJ$属$IRE$"
-
- HUN: "匈牙利"
- HUN_DEF: "匈牙利"
- HUN_ADJ: "匈牙利"
- HUN_subject: "$OVERLORDADJ$属$HUN$"
- HUN_subject_DEF: "$OVERLORDADJ$属$HUN$"
-
- AFG: "阿富汗"
- AFG_DEF: "阿富汗"
+#Pan-Iran Nations
+ PER: "伊朗"
+ PER_DEF: "伊朗"
+ PER_ADJ: "伊朗"
+ AFG: "阿富汗斯坦"
+ AFG_DEF: "阿富汗斯坦"
  AFG_ADJ: "阿富汗"
+ KUR: "库尔德斯坦"
+ KUR_ADJ: "库尔德斯坦"
+ KUR_DEF: "库尔德斯坦"
 
+#Latin America
+ PRU: "秘鲁"
+ PRU_DEF: "秘鲁"
+ PRU_ADJ: "秘鲁"
+ BOL: "玻利维亚"
+ BOL_DEF: "玻利维亚"
+ BOL_ADJ: "玻利维亚"
+ BOL_subject: "$OVERLORDADJ$属$BOL$"
+ BOL_subject_DEF: "$OVERLORDADJ$属$BOL$"
+ CHL: "智利"
+ CHL_DEF: "智利"
+ CHL_ADJ: "智利"
  ARG: "阿根廷"
  ARG_DEF: "阿根廷"
  ARG_ADJ: "阿根廷"
  ARG_subject: "$OVERLORDADJ$属$ARG$"
  ARG_subject_DEF: "$OVERLORDADJ$属$ARG$"
 
- BOL: "玻利维亚"
- BOL_DEF: "玻利维亚"
- BOL_ADJ: "玻利维亚"
- BOL_subject: "$OVERLORDADJ$属$BOL$"
- BOL_subject_DEF: "$OVERLORDADJ$属$BOL$"
-
  BRA: "巴西"
  BRA_DEF: "巴西"
  BRA_ADJ: "巴西"
  BRA_subject: "$OVERLORDADJ$属$BRA$"
  BRA_subject_DEF: "$OVERLORDADJ$属$BRA$"
+ URG: "乌拉圭"
+ URG_DEF: "乌拉圭"
+ URG_ADJ: "乌拉圭"
+ PAR: "巴拉圭"
+ PAR_DEF: "巴拉圭"
+ PAR_ADJ: "巴拉圭"
 
- CAN: "加拿大"
- CAN_DEF: "加拿大"
- CAN_ADJ: "加拿大"
-
+#China
  CHI: "中国"
  CHI_DEF: "中国"
  CHI_ADJ: "中国"
@@ -203,15 +272,15 @@
  MAN: "满洲"
  MAN_DEF: "满洲"
  MAN_ADJ: "满洲"
- MAN_JAP: "关东州"
- MAN_JAP_DEF: "关东州"
- MAN_JAP_ADJ: "满洲"
- MAN_CHI: "中国东北"
- MAN_CHI_DEF: "中国东北"
- MAN_CHI_ADJ: "中国东北"
- MAN_PRC: "中国东北"
- MAN_PRC_DEF: "中国东北"
- MAN_PRC_ADJ: "中国东北"
+ MAN_JAP_suject: "关东州"
+ MAN_JAP_suject_DEF: "关东州"
+ MAN_JAP_suject_ADJ: "满洲"
+ MAN_CHI_suject: "中国东北"
+ MAN_CHI_suject_DEF: "中国东北"
+ MAN_CHI_suject_ADJ: "中国东北"
+ MAN_PRC_suject: "中国东北"
+ MAN_PRC_suject_DEF: "中国东北"
+ MAN_PRC_suject_ADJ: "中国东北"
  GXC: "广西"
  GXC_DEF: "广西"
  GXC_ADJ: "广西"
@@ -230,112 +299,107 @@
  MEN: "内蒙古"
  MEN_DEF: "蒙古"
  MEN_ADJ: "内蒙古"
+ TIB: "西藏"
+ TIB_DEF: "西藏"
+ TIB_ADJ: "西藏"
+#Mongols
  MON: "蒙古"
  MON_DEF: "蒙古"
  MON_ADJ: "蒙古"
  TAN: "唐努图瓦"
  TAN_DEF: "唐努图瓦"
  TAN_ADJ: "图瓦"
- TIB: "西藏"
- TIB_DEF: "西藏"
- TIB_ADJ: "西藏"
- NEP: "尼泊尔"
- NEP_DEF: "尼泊尔"
- NEP_ADJ: "尼泊尔"
+#
 
- CHL: "智利"
- CHL_DEF: "智利"
- CHL_ADJ: "智利"
 
- COL: "哥伦比亚"
- COL_DEF: "哥伦比亚"
- COL_ADJ: "哥伦比亚"
-
+#Central America
+ MEX: "墨西哥"
+ MEX_DEF: "墨西哥"
+ MEX_ADJ: "墨西哥"
+ NIC: "尼加拉瓜"
+ NIC_DEF: "尼加拉瓜"
+ NIC_ADJ: "尼加拉瓜"
  COS: "哥斯达黎加"
  COS_DEF: "哥斯达黎加"
  COS_ADJ: "哥斯达黎加"
-
- ECU: "厄瓜多尔"
- ECU_DEF: "厄瓜多尔"
- ECU_ADJ: "厄瓜多尔"
-
- ELS: "萨尔瓦多"
- ELS_DEF: "萨尔瓦多"
- ELS_ADJ: "萨尔瓦多"
-
  GUA: "危地马拉"
  GUA_DEF: "危地马拉"
  GUA_ADJ: "危地马拉"
-
  HON: "洪都拉斯"
  HON_DEF: "洪都拉斯"
  HON_ADJ: "洪都拉斯"
+ BLZ: "伯利兹"
+ BLZ_DEF: "伯利兹"
+ BLZ_ADJ: "伯利兹"
+ ELS: "萨尔瓦多"
+ ELS_DEF: "萨尔瓦多"
+ ELS_ADJ: "萨尔瓦多"
+#Legacy of Simon Bolívar, Republic of Colombia
+ COL: "哥伦比亚"
+ COL_DEF: "哥伦比亚"
+ COL_ADJ: "哥伦比亚"
+ VEN: "委内瑞拉"
+ VEN_DEF: "委内瑞拉"
+ VEN_ADJ: "委内瑞拉"
+ ECU: "厄瓜多尔"
+ ECU_DEF: "厄瓜多尔"
+ ECU_ADJ: "厄瓜多尔"
+ PAN: "巴拿马"
+ PAN_DEF: "巴拿马"
+ PAN_ADJ: "巴拿马"
 
+#South Asia
+ RAJ: "印度"
+ RAJ_DEF: "印度"
+ RAJ_ADJ: "印度"
+ BAN: "孟加拉国"
+ BAN_DEF: "孟加拉国"
+ BAN_ADJ: "孟加拉国"
+ PAK: "巴基斯坦"
+ PAK_DEF: "巴基斯坦"
+ PAK_ADJ: "巴基斯坦"
+ SRL: "斯里兰卡"
+ SRL_DEF: "斯里兰卡"
+ SRL_ADJ: "斯里兰卡"
+ MLD: "马尔代夫"
+ MLD_DEF: "马尔代夫"
+ MLD_ADJ: "马尔代夫"
+ NEP: "尼泊尔"
+ NEP_DEF: "尼泊尔"
+ NEP_ADJ: "尼泊尔"
+ BHU: "不丹"
+ BHU_DEF: "不丹"
+ BHU_ADJ: "不丹"
+#
  IRQ: "伊拉克"
  IRQ_DEF: "伊拉克"
  IRQ_ADJ: "伊拉克"
  IRQ_subject: "$OVERLORDADJ$属$IRQ$"
  IRQ_subject_DEF: "$OVERLORDADJ$属$IRQ$"
-
+ KUW: "科威特"
+ KUW_DEF: "科威特"
+ KUW_ADJ: "科威特"
+#
  JAP: "日本"
  JAP_DEF: "日本"
  JAP_ADJ: "日本"
  JAP_subject: "$OVERLORDADJ$属$JAP$"
  JAP_subject_DEF: "$OVERLORDADJ$属$JAP$"
 
- MEX: "墨西哥"
- MEX_DEF: "墨西哥"
- MEX_ADJ: "墨西哥"
 
- NIC: "尼加拉瓜"
- NIC_DEF: "尼加拉瓜"
- NIC_ADJ: "尼加拉瓜"
-
- PAN: "巴拿马"
- PAN_DEF: "巴拿马"
- PAN_ADJ: "巴拿马"
-
- PAR: "巴拉圭"
- PAR_DEF: "巴拉圭"
- PAR_ADJ: "巴拉圭"
-
- PER: "伊朗"
- PER_DEF: "伊朗"
- PER_ADJ: "伊朗"
-
- PHI: "菲律宾"
- PHI_DEF: "菲律宾"
- PHI_ADJ: "菲律宾"
-
- PRU: "秘鲁"
- PRU_DEF: "秘鲁"
- PRU_ADJ: "秘鲁"
 
  SAF: "南非"
  SAF_DEF: "南非"
  SAF_ADJ: "南非"
 
- SAU: "中阿拉伯"
- SAU_ADJ: "阿拉伯"
- SAU_DEF: "中阿拉伯"
-
- SIA: "暹罗"
- SIA_DEF: "暹罗"
- SIA_ADJ: "暹罗"
-
- VEN: "委内瑞拉"
- VEN_DEF: "委内瑞拉"
- VEN_ADJ: "委内瑞拉"
-
-
- AST: "澳大利西亚"
- AST_DEF: "澳大利西亚"
- AST_ADJ: "澳大利西亚"
+#
+ AST: "澳大利亚"
+ AST_DEF: "澳大利亚"
+ AST_ADJ: "澳大利亚"
  AST_autonomy_dominion: "澳大利亚自治领"
  AST_autonomy_dominion_DEF: "澳大利亚自治领"
  AST_subject: "$OVERLORDADJ$属$AST$"
  AST_subject_DEF: "$OVERLORDADJ$属$AST$"
-
  NZL: "新西兰"
  NZL_DEF: "新西兰"
  NZL_ADJ: "新西兰"
@@ -344,10 +408,7 @@
  NZL_subject: "$OVERLORDADJ$属$NZL$"
  NZL_subject_DEF: "$OVERLORDADJ$属$NZL$"
 
- URG: "乌拉圭"
- URG_DEF: "乌拉圭"
- URG_ADJ: "乌拉圭"
-
+#Caribbean Sea
  CUB: "古巴"
  CUB_DEF: "古巴"
  CUB_ADJ: "古巴"
@@ -359,7 +420,10 @@
  HAI: "海地"
  HAI_DEF: "海地"
  HAI_ADJ: "海地"
-
+#Arabia
+ SAU: "中阿拉伯"
+ SAU_ADJ: "阿拉伯"
+ SAU_DEF: "中阿拉伯"
  OMA: "阿曼"
  OMA_DEF: "阿曼"
  OMA_ADJ: "阿曼"
@@ -367,58 +431,50 @@
  YEM_DEF: "也门"
  YEM_ADJ: "也门"
 
+#Eastern Africa
  ETH: "埃塞俄比亚"
  ETH_DEF: "埃塞俄比亚"
  ETH_ADJ: "埃塞俄比亚"
-
- SLO: "斯洛伐克"
- SLO_DEF: "斯洛伐克"
- SLO_ADJ: "斯洛伐克"
-
- BHU: "不丹"
- BHU_DEF: "不丹"
- BHU_ADJ: "不丹"
+ ERI: "厄立特里亚"
+ ERI_DEF: "厄立特里亚"
+ ERI_ADJ: "厄立特里亚"
+ DJI: "吉布提"
+ DJI_DEF: "吉布提"
+ DJI_ADJ: "吉布提"
+ SOM: "索马里"
+ SOM_DEF: "索马里"
+ SOM_ADJ: "索马里"
 
  LIB: "利比里亚"
  LIB_DEF: "利比里亚"
  LIB_ADJ: "利比里亚"
 
- RAJ: "印度"
- RAJ_DEF: "印度"
- RAJ_ADJ: "印度"
-
  KOR: "朝鲜"
  KOR_DEF: "朝鲜"
  KOR_ADJ: "朝鲜"
-
- CRO: "克罗地亚"
- CRO_DEF: "克罗地亚"
- CRO_ADJ: "克罗地亚"
-
- SER: "塞尔维亚"
- SER_DEF: "塞尔维亚"
- SER_ADJ: "塞尔维亚"
-
- MNT: "黑山"
- MNT_DEF: "黑山"
- MNT_ADJ: "黑山"
-
+#
  ICE: "冰岛"
  ICE_DEF: "冰岛"
  ICE_ADJ: "冰岛"
-
+ GRN: "格陵兰"
+ GRN_DEF: "格陵兰"
+ GRN_ADJ: "卡拉利特"
+#
  SYR: "叙利亚"
  SYR_DEF: "叙利亚"
  SYR_ADJ: "叙利亚"
-
  LEB: "黎巴嫩"
  LEB_DEF: "黎巴嫩"
  LEB_ADJ: "黎巴嫩"
-
+ PAL: "巴勒斯坦"
+ PAL_DEF: "巴勒斯坦"
+ PAL_ADJ: "巴勒斯坦"
+ ISR: "以色列"
+ ISR_DEF: "以色列"
+ ISR_ADJ: "以色列"
  JOR: "约旦"
  JOR_DEF: "约旦"
  JOR_ADJ: "约旦"
-
  EGY: "埃及"
  EGY_DEF: "埃及"
  EGY_ADJ: "埃及"
@@ -430,49 +486,36 @@
  WGR: "德国"
  WGR_DEF: "德国"
  WGR_ADJ: "西德"
-
  DDR: "德国"
  DDR_DEF: "德国"
  DDR_ADJ: "东德"
 
- PAL: "巴勒斯坦"
- PAL_DEF: "巴勒斯坦"
- PAL_ADJ: "巴勒斯坦"
-
- ISR: "以色列"
- ISR_DEF: "以色列"
- ISR_ADJ: "以色列"
-
+#Southeast Asia
  VIN: "越南"
  VIN_DEF: "越南"
  VIN_ADJ: "越南"
-
  LAO: "老挝"
  LAO_DEF: "老挝"
  LAO_ADJ: "老挝"
-
  CAM: "柬埔寨"
  CAM_DEF: "柬埔寨"
  CAM_ADJ: "柬埔寨"
-
- INS: "印度尼西亚"
- INS_DEF: "印度尼西亚"
- INS_ADJ: "印度尼西亚"
-
  MAL: "马来西亚"
  MAL_DEF: "马来西亚"
  MAL_ADJ: "马来西亚"
-
- UKR: "乌克兰"
- UKR_DEF: "乌克兰"
- UKR_ADJ: "乌克兰"
-
- BLR: "白俄罗斯"
- BLR_DEF: "白俄罗斯"
- BLR_ADJ: "白俄罗斯"
- BLR_dem_socialism: "白俄罗斯社会主义共和国"
- BLR_dem_socialism_DEF: "白俄罗斯社会主义共和国"
-
+ PHI: "菲律宾"
+ PHI_DEF: "菲律宾"
+ PHI_ADJ: "菲律宾"
+ INS: "印度尼西亚"
+ INS_DEF: "印度尼西亚"
+ INS_ADJ: "印度尼西亚"
+ SIA: "暹罗"
+ SIA_DEF: "暹罗"
+ SIA_ADJ: "暹罗"
+ BRM: "缅甸"
+ BRM_DEF: "缅甸"
+ BRM_ADJ: "缅甸"
+#
  GEO: "格鲁吉亚"
  GEO_DEF: "格鲁吉亚"
  GEO_ADJ: "格鲁吉亚"
@@ -482,10 +525,11 @@
  AZR: "阿塞拜疆"
  AZR_DEF: "阿塞拜疆"
  AZR_ADJ: "阿塞拜疆"
-
+#
  KAZ: "哈萨克斯坦"
  KAZ_DEF: "哈萨克斯坦"
  KAZ_ADJ: "哈萨克"
+#
 
  ANG: "安哥拉"
  ANG_DEF: "安哥拉"
@@ -507,9 +551,6 @@
  KEN_DEF: "肯尼亚"
  KEN_ADJ: "肯尼亚"
 
- PAK: "巴基斯坦"
- PAK_DEF: "巴基斯坦"
- PAK_ADJ: "巴基斯坦"
 
  BOT: "博茨瓦纳"
  BOT_DEF: "博茨瓦纳"
@@ -519,17 +560,6 @@
  BAH_DEF: "巴哈马"
  BAH_ADJ: "巴哈马"
 
- BAN: "孟加拉国"
- BAN_DEF: "孟加拉国"
- BAN_ADJ: "孟加拉国"
-
- BLZ: "伯利兹"
- BLZ_DEF: "伯利兹"
- BLZ_ADJ: "伯利兹"
-
- BRM: "缅甸"
- BRM_DEF: "缅甸"
- BRM_ADJ: "缅甸"
 
  CRC: "安的列斯"
  CRC_DEF: "安的列斯"
@@ -571,13 +601,6 @@
  QAT_DEF: "卡塔尔"
  QAT_ADJ: "卡塔尔"
 
- SCO: "苏格兰"
- SCO_DEF: "苏格兰"
- SCO_ADJ: "苏格兰"
-
- SRL: "斯里兰卡"
- SRL_DEF: "斯里兰卡"
- SRL_ADJ: "斯里兰卡"
 
  SUR: "苏里南"
  SUR_DEF: "苏里南"
@@ -603,10 +626,11 @@
  UZB_DEF: "乌兹别克斯坦"
  UZB_ADJ: "乌兹别克"
 
- KUW: "科威特"
- KUW_DEF: "科威特"
- KUW_ADJ: "科威特"
 
+#North America
+ CAN: "加拿大"
+ CAN_DEF: "加拿大"
+ CAN_ADJ: "加拿大"
  CSA: "美利坚联盟国"
  CSA_DEF: "美利坚联盟国"
  CSA_ADJ: "邦联"
@@ -614,9 +638,6 @@
  USB_DEF: "美利坚中立州联"
  USB_ADJ: "美国"
 
- RUS: "俄罗斯"
- RUS_DEF: "俄罗斯"
- RUS_ADJ: "俄罗斯"
 
  CYP: "塞浦路斯"
  CYP_DEF: "塞浦路斯"
@@ -625,19 +646,16 @@
  MLT: "马耳他"
  MLT_DEF: "马耳他"
  MLT_ADJ: "马耳他"
-
+#
  RIF: "里夫"
  RIF_DEF: "里夫"
  RIF_ADJ: "里夫"
-
  ALG: "阿尔及利亚"
  ALG_DEF: "阿尔及利亚"
  ALG_ADJ: "阿尔及利亚"
-
  MOR: "摩洛哥"
  MOR_DEF: "摩洛哥"
  MOR_ADJ: "摩洛哥"
-
  TUN: "突尼斯"
  TUN_DEF: "突尼斯"
  TUN_ADJ: "突尼斯"
@@ -647,17 +665,6 @@
  SUD: "苏丹"
  SUD_DEF: "苏丹"
  SUD_ADJ: "苏丹"
-
-#非洲之角
- ERI: "厄立特里亚"
- ERI_DEF: "厄立特里亚"
- ERI_ADJ: "厄立特里亚"
- DJI: "吉布提"
- DJI_DEF: "吉布提"
- DJI_ADJ: "吉布提"
- SOM: "索马里"
- SOM_DEF: "索马里"
- SOM_ADJ: "索马里"
 
  UGA: "乌干达"
  UGA_DEF: "乌干达"
@@ -753,9 +760,6 @@
  CAY_DEF: "圭亚那"
  CAY_ADJ: "圭亚那"
 
- MLD: "马尔代夫"
- MLD_DEF: "马尔代夫"
- MLD_ADJ: "马尔代夫"
 
  FIJ: "斐济"
  FIJ_DEF: "斐济"
@@ -784,28 +788,6 @@
  HAW: "夏威夷"
  HAW_DEF: "夏威夷"
  HAW_ADJ: "夏威夷"
-
- SLV: "斯洛文尼亚"
- SLV_DEF: "斯洛文尼亚"
- SLV_ADJ: "斯洛文尼亚"
-
- BOS: "波斯尼亚"
- BOS_DEF: "波斯尼亚"
- BOS_ADJ: "波斯尼亚"
- HRZ: "黑塞哥维那"
- HRZ_DEF: "黑塞哥维那"
- HRZ_ADJ: "黑塞哥维那"
-
- BOS_without_HRZ_ITA_subject: "萨拉热窝总督区"
- BOS_without_HRZ_ITA_subject_DEF: "萨拉热窝总督区"
-
- MAC: "马其顿"
- MAC_DEF: "马其顿"
- MAC_ADJ: "马其顿"
- MAC_ITA_subject: "马其顿保护国"
- MAC_ITA_subject_DEF: "马其顿保护国"
- MAC_BUL_subject: "马其顿保护国"
- MAC_BUL_subject_DEF: "马其顿保护国"
 
  SPA: "$SPR$"
  SPA_DEF: "$SPR_DEF$"
@@ -839,48 +821,24 @@
  BAY: "巴伐利亚"
  BAY_DEF: "巴伐利亚"
  BAY_ADJ: "巴伐利亚"
-
  MEK: "梅克伦堡"
  MEK_DEF: "梅克伦堡"
  MEK_ADJ: "梅克伦堡"
-
  PRE: "普鲁士"
  PRE_DEF: "普鲁士"
  PRE_ADJ: "普鲁士"
-
  SAX: "萨克森"
  SAX_DEF: "萨克森"
  SAX_ADJ: "萨克森"
-
  HAN: "汉诺威"
  HAN_DEF: "汉诺威"
  HAN_ADJ: "汉诺威"
-
  WUR: "符腾堡"
  WUR_DEF: "符腾堡"
  WUR_ADJ: "符腾堡"
-
  SHL: "石勒苏益格"
  SHL_DEF: "石勒苏益格"
  SHL_ADJ: "石勒苏益格"
-
- BRI: "布列塔尼"
- BRI_DEF: "布列塔尼"
- BRI_ADJ: "布列塔尼"
-
- OCC: "奥克西塔尼亚"
- OCC_DEF: "奥克西塔尼亚"
- OCC_ADJ: "欧西坦"
- OCC_subject: "$OVERLORDADJ$属奥克西塔尼亚"
- OCC_subject_DEF: "$OVERLORDADJ$属奥克西塔尼亚"
-
- COR: "科西嘉"
- COR_DEF: "科西嘉"
- COR_ADJ: "科西嘉"
-
- KUR: "库尔德斯坦"
- KUR_ADJ: "库尔德斯坦"
- KUR_DEF: "库尔德斯坦"
 
  KOS: "科索沃"
  KOS_DEF: "科索沃"
@@ -1042,7 +1000,6 @@
  BUK: "布哈拉"
  BUK_DEF: "布哈拉"
  BUK_ADJ: "布哈拉"
-
  KHI: "希瓦"
  KHI_DEF: "希瓦"
  KHI_ADJ: "希瓦"
@@ -1064,13 +1021,11 @@
  HAR_ADJ: "哈勒尔"
  HAR_ETH_subject: "哈勒尔自治区"
  HAR_ETH_subject_DEF: "哈勒尔自治区"
-
  TIG: "提格雷"
  TIG_DEF: "提格雷"
  TIG_ADJ: "提格雷"
  TIG_ETH_subject: "提格雷自治区"
  TIG_ETH_subject_DEF: "提格雷自治区"
-
  AFA: "阿法尔"
  AFA_DEF: "阿法尔"
  AFA_ADJ: "阿法尔"
@@ -1078,32 +1033,26 @@
  AFA_ETH_subject_DEF: "奥萨自治区"
  AFA_ITA_subject: "奥萨总督区"
  AFA_ITA_subject_DEF: "奥萨总督区"
-
  BEG: "本尚古勒-古马兹"
  BEG_DEF: "本尚古勒-古马兹"
  BEG_ADJ: "本尚古勒-古马兹"
  BEG_ETH_subject: "本尚古勒-古马兹自治区"
  BEG_ETH_subject_DEF: "本尚古勒-古马兹自治区"
-
-
  GBA: "甘贝拉"
  GBA_DEF: "甘贝拉"
  GBA_ADJ: "甘贝拉"
  GBA_ETH_neutrality_subject: "甘贝拉自治区"
  GBA_ETH_neutrality_subject_DEF: "甘贝拉自治区"
-
  SID: "锡达莫"
  SID_DEF: "锡达莫王国"
  SID_ADJ: "锡达莫"
  SID_ETH_subject: "锡达莫自治区"
  SID_ETH_subject_DEF: "锡达莫自治区"
-
  ORO: "奥罗莫"
  ORO_DEF: "奥罗莫"
  ORO_ADJ: "奥罗莫"
  ORO_ETH_subject: "奥罗莫自治区"
  ORO_ETH_subject_DEF: "奥罗莫自治区"
-
  QEM: "卡曼国"
  QEM_DEF: "卡曼国"
  QEM_ADJ: "卡曼"
@@ -1185,10 +1134,6 @@
  GOT: "瑞典"
  GOT_DEF: "瑞典"
  GOT_ADJ: "瑞典"
-
- GRN: "格陵兰"
- GRN_DEF: "格陵兰"
- GRN_ADJ: "卡拉利特"
 
  JAN: "扬马延"
  JAN_DEF: "扬马延岛"

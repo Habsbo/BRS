@@ -541,7 +541,7 @@ defined_text = {
 		trigger = {
 			FROM = {
 				check_variable = { state_rank = 0 }
-				check_variable = { br_culture_deutsch = 1 }
+				check_variable = { core_culture = culture_deutsch }
 				has_country_flag = br_cl_status_flavour_flag
 				has_idea = br_laws_monarchy
 			}
@@ -571,7 +571,7 @@ defined_text = {
 				}
 			}
 		}
-		localization_key = CL_Basileus
+		localization_key = CL_Vasileus
 	}
 	text = {
 		trigger = {

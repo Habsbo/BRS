@@ -1,0 +1,7 @@
+br_deutscher_bund_decisions = {
+	icon = generic_research
+	visible = {
+		check_variable = { core_culture = culture_deutsch }
+	}
+	priority = -1
+}

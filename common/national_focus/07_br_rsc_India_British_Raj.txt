@@ -13,6 +13,8 @@ focus_tree = {
 	default = no
 
 	continuous_focus_position = { x = 50 y = 1500 }
+
+	shared_focus = RAJ_IC_projection_of_industrialization_in_india
 	
 	focus = {
 		id = RAJ_1

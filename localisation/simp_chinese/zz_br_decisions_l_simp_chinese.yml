@@ -96,11 +96,26 @@
  decision_cost_AE_50_blocked: "£GFX_army_experience §R50§!"
  decision_cost_AE_50_tooltip: "需要£GFX_army_experience §Y50§! 以执行此决议"
  decision_cost_AE_100: "£GFX_army_experience §Y100§!"
- decision_cost_AE_100_blocked: "£GFX_army_experience §R100§!"
+ decision_cost_AE_100_blocked: "£GFX_army_experience 100§!"
  decision_cost_AE_100_tooltip: "需要£GFX_army_experience §Y100§! 以执行此决议"
 
  br_debug_decisions: "测试，我们的国家等级变量是：[?root.state_rank|0H]"
 
+ br_is_state_rank_0_tt: "国家等级达到§Y至上权威(0)§!"
+ br_is_state_rank_1_tt: "国家等级达到§Y天命上邦(1)§!"
+ br_is_state_rank_2_tt: "国家等级达到§Y威加海内(2)§!"
+ br_is_state_rank_3_tt: "国家等级达到§Y诸侯闻达(3)§!"
+ br_is_state_rank_4_tt: "国家等级达到§Y国光蔚兮(4)§!"
+ br_is_state_rank_5_tt: "国家等级达到§Y籍籍无名(5)§!"
+ br_is_state_rank_6_tt: "国家等级达到§Y长河无声(6)§!"
+ br_our_state_rank_tt: "当前我们的国家等级是：§Y[GetStateRank]([?root.state_rank|0H])§!"
+ state_rank_0: "至上权威" #至上权威
+ state_rank_1: "天命上邦" #超级列强
+ state_rank_2: "威加海内" #普通列强
+ state_rank_3: "诸侯闻达" #次强
+ state_rank_4: "国光蔚兮" #
+ state_rank_5: "籍籍无名" #
+ state_rank_6: "长河无声" #
 # 
  br_baltics: "波罗的海统一"
  br_baltics_desc: "······"

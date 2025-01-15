@@ -180,3 +180,34 @@ defined_text = { # Country
 		localization_key = GethellenicCountryconfidence_ruins
 	}
 }
+
+defined_text = { # Country
+	name = GetStateRank
+	text = {
+		trigger = { check_variable = { state_rank = 0 } }
+		localization_key = state_rank_0
+	}
+	text = {
+		trigger = { check_variable = { state_rank = 1 } }
+		localization_key = state_rank_1
+	}
+	text = {
+		trigger = { check_variable = { state_rank = 2 } }
+		localization_key = state_rank_2
+	}
+	text = {
+		trigger = { check_variable = { state_rank = 3 } }
+		localization_key = state_rank_3
+	}
+	text = {
+		trigger = { check_variable = { state_rank = 4 } }
+		localization_key = state_rank_4
+	}
+	text = {
+		trigger = { check_variable = { state_rank = 5 } }
+		localization_key = state_rank_5
+	}
+	text = {
+		localization_key = state_rank_6
+	}
+}

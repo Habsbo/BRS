@@ -101,3 +101,34 @@
  ENG_colonial_economy_desc: ""
  ENG_saf_gold: "南非黄金"
  ENG_saf_gold_desc: ""
+
+#RAJ
+ RAJ_colonial_gov: "殖民政府"
+ RAJ_colonial_gov_desc: ""
+
+ RAJ_disguised_caste_system: "被粉饰的种姓制度"
+ RAJ_disguised_caste_system_desc: ""
+
+ RAJ_assiduously_indian_labours: "勤劳的印度工人"
+ RAJ_assiduously_indian_labours_desc: "印度工人们的勤劳令人惊骇，似乎被强者支配，为强大的征服者们服务是他们的生活准则，这成为他们生活的禁锢，对于我们[?Overlord.GetAdjective]人来说却刚刚好。"
+ RAJ_assiduously_indian_labours_dynamic_modifier: "勤劳的印度工人"
+ RAJ_assiduously_indian_labours_dynamic_modifier_desc: ""
+
+ RAJ_low_education_popularization: "缺乏基础教育"
+ RAJ_low_education_popularization_desc: "印度人缺乏基础教育，并不能理解现代工业和现代社会，这使得他们不仅不能正确参与工业生产，也对侵略者们带来的对现代思想极其排斥，面对这些奴役自己的人们，他们有一套自己的处事原则。"
+
+ RAJ_colonial_exploitation: "殖民剥削"
+ RAJ_colonial_exploitation_desc: ""
+ RAJ_colonial_exploitation_dynamic_modifier: "殖民剥削"
+ RAJ_colonial_exploitation_dynamic_modifier_desc: ""
+
+ RAJ_brains_drain: "人才流失"
+ RAJ_brains_drain_desc: ""
+
+ RAJ_industrialization_of_india: "印度的工业化进程"
+ RAJ_industrialization_of_india_desc: ""
+ RAJ_industrialization_of_india_dynamic_modifier: "印度的工业化进程"
+ RAJ_industrialization_of_india_dynamic_modifier_desc: ""
+
+ RAJ_IC_projection_of_industrialization_in_india: "在印度的工业化计划"
+ RAJ_IC_projection_of_industrialization_in_india_desc: ""

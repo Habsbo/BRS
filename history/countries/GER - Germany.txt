@@ -844,7 +844,7 @@ add_to_faction = POL
 #add_to_faction = BUL
 #add_to_faction = HOL
 
-set_autonomy = { target = LIT autonomy_state = autonomy_br_self_governance }
+set_autonomy = { target = LIT autonomy_state = autonomy_self_gov }
 set_autonomy = { target = COG autonomy_state = autonomy_colony }
 #rhe
 create_dynamic_country = {
@@ -892,4 +892,4 @@ create_dynamic_country = {
 }
 
 #
-set_variable = { br_culture_deutsch = 1 } #
+set_variable = { core_culture = culture_deutsch } #

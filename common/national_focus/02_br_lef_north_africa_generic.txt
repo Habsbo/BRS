@@ -229,7 +229,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = North_Africa_unconfidence_but_bloody
 
-	cost = 8
+	cost = 5
 	
 	available = {}
 	bypass = {}

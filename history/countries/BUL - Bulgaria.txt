@@ -325,5 +325,5 @@ set_cosmetic_tag = BUL_tsar_empire
 
 set_autonomy = {
 	target = MAC
-	autonomy_state = autonomy_br_protectorate
+	autonomy_state = autonomy_protectorate
 }

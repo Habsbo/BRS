@@ -41,5 +41,20 @@ recruit_character = KOR_i_eun
 #
 recruit_character = KOR_kim_il_sung
 
+
+recruit_character = KOR_park_chunghee 
+recruit_character = KOR_yun_boseon
+recruit_character = KOR_heo_jeong
+recruit_character = KOR_chang_myon
+recruit_character = KOR_i_beomseok
+recruit_character = KOR_baek_hanseong
+recruit_character = KOR_pyon_yongtae
+#recruit_character = 
+
+set_character_name = {
+	character = KOR_park_chunghee
+	name = takagi_masao
+}
+
 set_cosmetic_tag = KOR_joseon_dynasty
 set_country_flag = KOR_joseon_dynasty_flag

@@ -25,12 +25,12 @@ spriteTypes = {
 #	
 	spriteType = {
 		name = "GFX_portrait_kasane_teto"
-		texturefile = "gfx/leaders/Yugo_Slavia/Portrait_kasane_teto.png"
+		texturefile = "gfx//special characters/UTAU/portrait_kasane_teto.png"
 	}
 
 	spriteType = {
 		name = "GFX_portrait_kasane_teto_small"
-		texturefile = "gfx/interface/ideas/Yugo_Slavia/Portrait_kasane_teto_small.png"
+		texturefile = "gfx//special characters/UTAU/portrait_kasane_teto_small.png"
 	}
 
 ### it's my go ###

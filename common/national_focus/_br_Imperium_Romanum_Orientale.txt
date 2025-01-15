@@ -1,0 +1,238 @@
+focus_tree = {
+	id = imperium_romanum_orientale_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = BYZ
+			#always = no
+		}
+	}
+	
+	default = no
+
+	continuous_focus_position = { x = 2800 y = 10 }
+
+#	focus = {
+#		id = IRO_
+#		icon = GFX_
+#		prerequisite = { focus = }
+#		mutually_exclusive = { focus =  }
+#		x = -3
+#		y = 0
+#		relative_position_id = 
+#
+#		cost = 8
+#
+#		available = {}
+#		bypass = {}
+#
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = no
+#
+#		complete_tooltip = {}
+#		completion_reward = {}
+#		ai_will_do = { factor = 1 }
+#	}
+
+	focus = {
+		id = BYZ_thartheis_san_astrape
+		icon = GFX_
+		#prerequisite = { focus = }
+		#mutually_exclusive = { focus =  }
+		x = 6
+		y = 0
+		#relative_position_id = 
+
+		allow_branch = {}
+
+		cost = 5
+
+		available = {
+			root = {
+				hidden_trigger = { tag = BYZ }
+				br_is_state_rank_0 = yes
+				exists = yes
+				has_capitulated = no
+				is_subject = no
+				has_civil_war = no
+			}
+			var:country_leader = {
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = is_constantine_xi_palaiologos
+						has_character_flag = constantine_xi_palaiologos
+					}
+					custom_trigger_tooltip = {
+						tooltip = vasilias_named_as_constantine
+						has_character_flag = vasilias_named_as_constantine_flag
+					}
+				}
+				check_variable = {  }
+			}
+		}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {
+			add_war_support = 0.05
+			add_stability = 0.05
+			set_cosmetic_tag = Basileia_Rhomaion
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+	
+	focus = {
+		id = BYZ_avasugkrotese_tou_autokratorikou_stratou
+		icon = GFX_
+		prerequisite = { focus = BYZ_thartheis_san_astrape }
+		#mutually_exclusive = { focus =  }
+		x = -1
+		y = 1
+		relative_position_id = BYZ_thartheis_san_astrape
+		
+		cost = 5
+
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = BYZ_
+		icon = GFX_
+		prerequisite = { focus = BYZ_thartheis_san_astrape }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 1
+		relative_position_id = BYZ_thartheis_san_astrape
+		
+		cost = 5
+
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = BYZ_marmaromenos_vasilias
+		icon = GFX_
+		prerequisite = { focus = BYZ_avasugkrotese_tou_autokratorikou_stratou }
+		#prerequisite = { focus = BYZ_avasugkrotese_tou_autokratorikou_stratou }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 2
+		relative_position_id = BYZ_thartheis_san_astrape
+				
+		cost = 5
+
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+#
+	focus = {
+		id = BYZ_
+		icon = GFX_
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 0
+		#relative_position_id = 
+		
+		cost = 8
+
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = HEL_
+		icon = GFX_
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 0
+		#relative_position_id = 
+		
+		cost = 8
+
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+}
+
+shared_focus = {
+	id = Hellenic_shared_
+	icon = GFX_focus_ARG_defense_and_democracy
+	prerequisite = { focus = North_Africa_anti_france }
+	#mutually_exclusive = { focus =  }
+	x = 0
+	y = 1
+	relative_position_id = North_Africa_anti_france
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}

@@ -834,3 +834,75 @@ joint_focus = {
 
 	ai_will_do = { factor = 1 }
 }
+
+### indian shared focuses ###
+
+shared_focus = {
+	id = RAJ_IC_projection_of_industrialization_in_india
+	icon = GFX_focus_RAJ_all_india_forward_bloc
+	#prerequisite = { focus = RAJ_IC_ }
+	#mutually_exclusive = { focus =  }
+	x = 20
+	y = 0
+	#relative_position_id = RAJ_IC_
+
+	cost = 0
+	
+	available = { always = no }
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+shared_focus = {
+	id = RAJ_IC_
+	icon = GFX_focus_generic_improve_the_administration
+	prerequisite = { focus = RAJ_IC_projection_of_industrialization_in_india }
+	#mutually_exclusive = { focus =  }
+	x = -2
+	y = 1
+	relative_position_id = RAJ_IC_projection_of_industrialization_in_india
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+shared_focus = {
+	id = RAJ_IC_
+	icon = GFX_focus_generic_improve_the_administration
+	prerequisite = { focus = RAJ_IC_projection_of_industrialization_in_india }
+	#mutually_exclusive = { focus =  }
+	x = 2
+	y = 1
+	relative_position_id = RAJ_IC_projection_of_industrialization_in_india
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}

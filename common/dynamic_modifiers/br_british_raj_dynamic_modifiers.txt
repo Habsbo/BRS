@@ -1,0 +1,40 @@
+RAJ_assiduously_indian_labours_dynamic_modifier = { #
+	icon = GFX_idea_generic_production_bonus
+	
+	enable = {}
+
+	remove_trigger = {}
+
+	political_power_factor = RAJ_ail_political_power_factor
+	war_support_factor = RAJ_ail_war_support_factor
+	consumer_goods_expected_value = RAJ_ail_consumer_goods_expected_value
+	production_speed_buildings_factor = RAJ_ail_production_speed_buildings_factor
+	production_factory_max_efficiency_factor = RAJ_ail_production_factory_max_efficiency_factor
+	production_factory_start_efficiency_factor = RAJ_ail_production_factory_start_efficiency_factor
+	production_factory_efficiency_gain_factor = RAJ_ail_production_factory_efficiency_gain_factor
+}
+
+RAJ_colonial_exploitation_dynamic_modifier = {
+	icon = GFX_idea_can_wartime_prices_and_trade_board
+
+	enable = {}
+
+	remove_trigger = {}
+
+	political_power_gain = RAJ_colonial_exploitation_political_power_gain
+	stability_factor = RAJ_colonial_exploitation_stability_factor
+	consumer_goods_expected_value = RAJ_colonial_exploitation_consumer_goods_expected_value
+	con_socialism_drift = RAJ_colonial_exploitation_con_socialism_drift
+	dem_socialism_drift = RAJ_colonial_exploitation_dem_socialism_drift
+	dem_liberalism_drift = RAJ_colonial_exploitation_dem_liberalism_drift
+	dem_conservatism_drift = RAJ_colonial_exploitation_dem_conservatism_drift
+}
+
+RAJ_industrialization_of_india_dynamic_modifier = {
+	icon = GFX_idea_SOV_second_five_year_plan
+
+	enable = {}
+
+	remove_trigger = {}
+
+}

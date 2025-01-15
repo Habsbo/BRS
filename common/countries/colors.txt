@@ -301,9 +301,10 @@ SLO = {
 	color = rgb { 158  161  188 }
 	color_ui = rgb { 255 255 255 }
 }
+
 RAJ = {
-	color = rgb { 226  135  40 }
-	color_ui = rgb { 226  135  40 }
+	color = rgb { 153 51 0 }
+	color_ui = rgb { 153 51 0 }
 }
 
 CRO = {
@@ -312,7 +313,7 @@ CRO = {
 }
 
 PRC = {
-	color = rgb { 245 12 55 }
+	color = rgb { 245 0 10 }
 	color_ui = rgb { 178 34 60 }
 }
 

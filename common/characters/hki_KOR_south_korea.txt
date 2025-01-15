@@ -49,11 +49,11 @@ characters={
 	}
 	#李垠
 	KOR_i_eun = {
-		name = KOR_yi_un
+		name = i_eun
 		portraits = {
 			civilian={
-				large = "GFX_portrait_KOR_yi_un"
-				small = "GFX_portrait_KOR_yi_un_small"
+				large = "GFX_portrait_KOR_i_eun"
+				small = "GFX_portrait_KOR_i_eun_small"
 			}
 		}
 		country_leader = {

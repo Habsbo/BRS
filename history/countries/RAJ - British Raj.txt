@@ -34,6 +34,28 @@ set_technology = {
 	fuel_silos = 1
 	fuel_refining = 1
 }
+if = {
+	limit = { not = { has_dlc =  "Man the Guns" } }
+	set_technology = { transport = 1 }
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = { mtg_transport = 1 }
+}
+if = {
+	limit = { has_dlc = "Battle for the Bosporus" }
+	set_technology = { camelry = 1 }
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = { gwtank = 1 }
+}
+if = {
+	limit = { has_dlc = "No Step Back" }
+	set_technology = { gwtank_chassis = 1 }
+}
 
 recruit_character = RAJ_lord_linlithgow
 recruit_character = RAJ_v_d_savarkar
@@ -73,75 +95,59 @@ recruit_character = RAJ_subhas_chanda_bose
 recruit_character = RAJ_mahatma_mohandas_gandhi
 recruit_character = RAJ_sir_mohammed_iqbal
 recruit_character = RAJ_john_mathai
+#has_dlc = "Together for Victory"
+recruit_character = RAJ_lakshmi_sahgal
+recruit_character = RAJ_orde_wingate
+recruit_character = RAJ_kodandera_madappa_cariappa
+recruit_character = RAJ_kodandera_subayya_thimayya
+recruit_character = RAJ_jayanto_nath_chaudhuri
 
 set_variable = { RAJ_agrarian_society_increment = 0.05 }
 
-if = {
-	limit = {
-		has_dlc = "Together for Victory"
-	}
-	recruit_character = RAJ_lakshmi_sahgal
-	recruit_character = RAJ_orde_wingate
-	recruit_character = RAJ_kodandera_madappa_cariappa
-	recruit_character = RAJ_kodandera_subayya_thimayya
-	recruit_character = RAJ_jayanto_nath_chaudhuri
+add_to_tech_sharing_group = commonwealth_research
+
+add_ideas = {
+	RAJ_colonial_gov
+	RAJ_disguised_caste_system
+	RAJ_assiduously_indian_labours
+	RAJ_low_education_popularization
+	RAJ_colonial_exploitation
+	RAJ_brains_drain
+	RAJ_industrialization_of_india
+
+	RAJ_princely_states
+	RAJ_marginalized_muslim_community
+	RAJ_agrarian_society
+	RAJ_risk_of_famine
 }
 
+### Assiduously Indian Labours (dynamic modifier) / 勤劳的印度工人 ###
+add_dynamic_modifier = { modifier = RAJ_assiduously_indian_labours_dynamic_modifier }
 
-if = {
-	limit = {
-		not = { has_dlc =  "Man the Guns" }
-	}
-	set_technology = {
-		transport = 1
-	}
-}
+set_variable = { RAJ_ail_political_power_factor = -0.15 }
+set_variable = { RAJ_ail_war_support_factor = -0.10 }
+set_variable = { RAJ_ail_consumer_goods_expected_value = -0.25 }
+set_variable = { RAJ_ail_production_speed_buildings_factor = 0.10 }
+set_variable = { RAJ_ail_production_factory_max_efficiency_factor = 0.20 }
+set_variable = { RAJ_ail_production_factory_start_efficiency_factor = 0.20 }
+set_variable = { RAJ_ail_production_factory_efficiency_gain_factor = 0.20 }
 
-if = {
-	limit = {
-		has_dlc = "Man the Guns"
-	}
-	set_technology = {
-		mtg_transport = 1
-	}
-}
+### Colonial Exploitation (dynamic modifier) / 殖民剥削 ###
+add_dynamic_modifier = { modifier = RAJ_colonial_exploitation_dynamic_modifier }
 
-if = {
-	limit = {
-		has_dlc = "Battle for the Bosporus"
-	}
-	set_technology = { camelry = 1 }
-}
+set_variable = { RAJ_colonial_exploitation_political_power_gain = 0.5 }
+set_variable = { RAJ_colonial_exploitation_stability_factor = 0.10 }
+set_variable = { RAJ_colonial_exploitation_consumer_goods_expected_value = 0.35 }
+set_variable = { RAJ_colonial_exploitation_con_socialism_drift = 0.01 }
+set_variable = { RAJ_colonial_exploitation_dem_socialism_drift = 0.01 }
+set_variable = { RAJ_colonial_exploitation_dem_liberalism_drift = 0.01 }
+set_variable = { RAJ_colonial_exploitation_dem_conservatism_drift = 0.01 }
 
-if = {
-	limit = { has_dlc = "Together for Victory" }
+### Industrialization of India / 工业化 ###
+add_dynamic_modifier = { modifier = RAJ_industrialization_of_india_dynamic_modifier }
 
-	add_ideas = {
-		RAJ_princely_states
-		RAJ_marginalized_muslim_community
-		RAJ_agrarian_society
-		RAJ_risk_of_famine
-	}
+###  /  ###
 
-	add_to_tech_sharing_group = commonwealth_research
-}
-
-if = {
-	limit = {
-		NOT = { has_dlc = "No Step Back" }
-	}
-	set_technology = {
-		gwtank = 1
-	}
-}
-if = {
-	limit = {
-		has_dlc = "No Step Back"
-	}
-	set_technology = {
-		gwtank_chassis = 1
-	}
-}
 
 set_convoys = 20
 
@@ -177,15 +183,14 @@ set_popularities = {
 	con_socialism = 5 #保守社会主义
 	dem_socialism = 15 #社会民主主义
 	dem_liberalism = 30 #社会自由主义
-	dem_conservatism 10 #保守民主主义
+	dem_conservatism = 10 #保守民主主义
 	authoritarian = 30 #威权主义
 	fascism = 10 #民族主义/束棒
 }
 
+### operative leader / 特工 ###
 if = {
-	limit = {
-		has_dlc = "La Resistance"
-	}
+	limit = { has_dlc = "La Resistance" }
 	create_operative_leader = {
 		name = "Noor Inayat Khan"
 		GFX = GFX_portrait_noor_inayat_khan
@@ -196,3 +201,8 @@ if = {
 		nationalities = { RAJ }
 	}
 }
+
+### Not Useful Generic Dynamic Modifiers ###
+set_country_flag = br_dynamic_modifier_not_generic_flag
+set_country_flag = br_dynamic_modifier_not_generic_var_flag 
+### Not Useful Generic Dynamic Modifiers ###

@@ -813,52 +813,6 @@
 		ai_will_do = { factor = 1 }
 	}
 	focus = {
-		id = EUS_emergency_production
-		icon = GFX_goal_generic_production
-		prerequisite = { focus = EUS_seize_means_of_production }
-		#mutually_exclusive = { focus =  }
-		x = -2
-		y = 1
-		relative_position_id = EUS_seize_means_of_production
-		cost = 8
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		completion_reward = {}
-		
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
-		id = EUS_cheaper_rifle
-		icon = GFX_goal_generic_small_arms
-		prerequisite = { focus = EUS_emergency_production }
-		x = 0
-		y = 1
-		relative_position_id = EUS_emergency_production
-
-		cost = 8
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		completion_reward = {}
-		
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
 		id = EUS_adjust_to_union_economies
 		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = EUS_seize_means_of_production }
@@ -906,12 +860,36 @@
 		ai_will_do = { factor = 1 }
 	}
 	
+	focus = {
+		id = EUS_2
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = EUS_collective_economy }
+		#mutually_exclusive = { focus =  }
+		x = -2
+		y = 1
+		relative_position_id = EUS_collective_economy
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
 	#
 	focus = {
 		id = EUS_free_market
 		icon = GFX_goal_generic_positive_trade_relations
 		mutually_exclusive = { focus = EUS_collective_economy }
-		x = 4
+		x = 6
 		y = 0
 		relative_position_id = EUS_collective_economy
 
@@ -931,7 +909,7 @@
 		ai_will_do = { factor = 1 }
 	}
 	focus = {
-		id = EUS_2
+		id = EUS_guiding_trade_union
 		icon = GFX_focus_eng_concessions_to_the_trade_unions
 		prerequisite = { focus = EUS_free_market }
 		#mutually_exclusive = { focus =  }
@@ -955,13 +933,163 @@
 		ai_will_do = { factor = 1 }
 	}
 	focus = {
-		id = EUS_2
-		icon = GFX_goal_generic_demand_territory
-		#prerequisite = { focus =  }
+		id = EUS_invite_investors
+		icon = GFX_focus_GER_customs_union
+		prerequisite = { focus = EUS_guiding_trade_union }
 		#mutually_exclusive = { focus =  }
 		x = 0
-		y = 0
-		#relative_position_id =
+		y = 1
+		relative_position_id = EUS_guiding_trade_union
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = EUS_active_market
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = EUS_invite_investors }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 2
+		relative_position_id = EUS_guiding_trade_union
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = EUS_2
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = EUS_free_market }
+		#mutually_exclusive = { focus =  }
+		x = 2
+		y = 1
+		relative_position_id = EUS_free_market
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	#
+	focus = {
+		id = EUS_emergency_production
+		icon = GFX_goal_generic_production
+		prerequisite = {
+			focus = EUS_seize_means_of_production
+			focus = EUS_guiding_trade_union
+		}
+		mutually_exclusive = { focus = EUS_resume_production_wholly }
+		x = 2
+		y = 1
+		relative_position_id = EUS_seize_means_of_production
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = EUS_cheaper_rifle
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = EUS_emergency_production }
+		x = 0
+		y = 1
+		relative_position_id = EUS_emergency_production
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = EUS_resume_production_wholly
+		icon = GFX_focus_generic_military_industry
+		prerequisite = {
+			focus = EUS_seize_means_of_production
+			focus = EUS_guiding_trade_union
+		}
+		mutually_exclusive = { focus = EUS_emergency_production }
+		x = -2
+		y = 1
+		relative_position_id = EUS_guiding_trade_union
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = EUS_artillery_production
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = EUS_resume_production_wholly }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = EUS_resume_production_wholly
 
 		cost = 8
 		
