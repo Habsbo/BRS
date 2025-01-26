@@ -37,7 +37,7 @@ recruit_character = MAN_xian_yuan #爱新觉罗宪原
 
 recruit_character = MAN_zhang_haipeng #张海鹏
 recruit_character = MAN_zhang_jinghui #张景惠
-recruit_character = MAN_zhao_shangzhi #赵尚志
+recruit_character = CPC_zhao_shangzhi #赵尚志
 recruit_character = MAN_deng_linge #邓麟阁
 recruit_character = MAN_hung_zhehuang #洪哲晃
 recruit_character = MAN_yin_zuoqian #尹祚乾

@@ -86,6 +86,7 @@ characters={
 			legacy_id=-1
 		}
 	}
+	#川岛芳子
 	MAN_yoshiko_kawashima={
 		name=MAN_yoshiko_kawashima
 		portraits={
@@ -121,6 +122,7 @@ characters={
 			id=-1
 		}
 	}
+
 	MAN_changlin_linge={
 		name=MAN_changlin_linge
 		portraits={
@@ -238,7 +240,7 @@ characters={
 
 	### NAVY CHIEFS ###
 
-		MAN_yin_zuoqian={
+	MAN_yin_zuoqian={
 		name=MAN_yin_zuoqian
 		portraits={
 			army={
@@ -423,14 +425,14 @@ characters={
 				small = "GFX_portrait_China_generic_1_small"
 			}
 		}
-		field_marshal = {
-			traits = { }
+		corps_commander = {
+			traits = {}
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
 			planning_skill = 1
 			logistics_skill = 1
-			legacy_id = -1
+			legacy_id=-1
 		}
 	}
 	MAN_generic_char_2 = {
@@ -441,14 +443,14 @@ characters={
 				small = "GFX_portrait_China_generic_2_small"
 			}
 		}
-		field_marshal = {
-			traits = { }
+		corps_commander = {
+			traits = {}
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
 			planning_skill = 1
 			logistics_skill = 1
-			legacy_id = -1
+			legacy_id=-1
 		}
 	}
 	MAN_generic_char_3 = {
@@ -459,14 +461,14 @@ characters={
 				small = "GFX_portrait_China_generic_3_small"
 			}
 		}
-		field_marshal = {
-			traits = { }
+		corps_commander = {
+			traits = {}
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
 			planning_skill = 1
 			logistics_skill = 1
-			legacy_id = -1
+			legacy_id=-1
 		}
 	}
 	MAN_generic_char_4 = {
@@ -477,14 +479,14 @@ characters={
 				small = "GFX_portrait_China_generic_4_small"
 			}
 		}
-		field_marshal = {
-			traits = { }
+		corps_commander = {
+			traits = {  }
 			skill = 1
 			attack_skill = 2
 			defense_skill = 1
 			planning_skill = 1
 			logistics_skill = 1
-			legacy_id = -1
+			legacy_id=-1
 		}
 	}
 	MAN_generic_char_5 = {
@@ -498,9 +500,9 @@ characters={
 		navy_leader = {
 			traits = { old_guard_navy }
 			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			maneuvering_skill = 1
+			attack_skill = 3
+			defense_skill = 2
+			maneuvering_skill = 2
 			coordination_skill = 1
 			legacy_id = -1
 		}
