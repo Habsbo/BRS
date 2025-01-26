@@ -1876,7 +1876,7 @@ focus_tree = {
 		available = {
 			exists = yes
 			has_capitulated = no
-			is_puppet = no
+			is_subject = no
 		}
 		
 		bypass = {}
@@ -1912,7 +1912,7 @@ focus_tree = {
 		available = {
 			exists = yes
 			has_capitulated = no
-			is_puppet = no
+			is_subject = no
 		}
 		
 		bypass = {}
@@ -1925,21 +1925,19 @@ focus_tree = {
 			country_event = br_generic_focus.1
 		}
 		completion_reward = {
-			country_event = br_generic_focus.1
 			add_war_support = 0.05
 			effect_tooltip = {
 				add_stability = -0.10
 				if = {
 					limit = {
-						OR = {
-							br_ideology_socialism_nio = yes
-							br_ideology_fascism_nio = yes
-						}
+						br_ideology_socialism_nio = yes
+						br_ideology_fascism_nio = yes
 					}
 					add_popularity = { ideology = root popularity = -0.05 }
 				}
 				else = { add_popularity = { ideology = root popularity = 0.05 } }
 			}
+			country_event = br_generic_focus.1
 			custom_effect_tooltip = probability_tt
 			effect_tooltip = {
 				add_popularity = { ideology = sci_socialism popularity = 0.05 }
@@ -1968,7 +1966,11 @@ focus_tree = {
 
 		cost = 8
 		
-		available = {}
+		available = {
+			exists = yes
+			has_capitulated = no
+			is_subject = no
+		}
 		
 		bypass = {}
 		
@@ -1982,6 +1984,7 @@ focus_tree = {
 		completion_reward = {
 			add_dynamic_modifier = { modifier = youth_league_dynamic_modifier } 
 			set_variable = { youth_league_political_power_factor = 0.05 tooltip = political_power_factor_tt }
+			set_variable = { youth_league_conscription_factor = 0.25 tooltip = conscription_factor_tt }
 			if = {
 				limit = {
 					OR = {
@@ -2014,7 +2017,11 @@ focus_tree = {
 
 		cost = 8
 		
-		available = {}
+		available = {
+			exists = yes
+			has_capitulated = no
+			is_subject = no
+		}
 		
 		bypass = {}
 		
@@ -2025,6 +2032,7 @@ focus_tree = {
 		complete_tooltip = {}
 		completion_reward = {
 			add_political_power = 50
+			
 			if = {
 				limit = {
 					OR = {
@@ -2064,6 +2072,16 @@ focus_tree = {
 				multiply_temp_variable = { urge_alter_stab_var = -0.5 }
 				add_stability = urge_alter_stab_var
 			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = br_focus_road_to_revolution_communism_flag
+						has_country_flag = br_focus_road_to_revolution_anti_imperialism_flag
+						has_country_flag = br_focus_road_to_revolution_fascism_flag
+					}
+				}
+				custom_effect_tooltip = focus_urge_alter_effect_tt
+			}
 		}
 		
 		ai_will_do = { factor = 1 }
@@ -2081,7 +2099,15 @@ focus_tree = {
 
 		cost = 8
 		
-		available = {}
+		available = {
+			exists = yes
+			has_capitulated = no
+			is_subject = no
+			OR = {
+				has_country_flag = br_focus_road_to_revolution_communism_flag
+				has_country_flag = br_focus_road_to_revolution_anti_imperialism_flag
+			}
+		}
 		
 		bypass = {}
 		
@@ -2090,7 +2116,21 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		complete_tooltip = {}
-		completion_reward = {}
+		completion_reward = {
+			if = {
+				limit = { has_country_flag = br_focus_road_to_revolution_anti_imperialism_flag }
+				set_politics = {
+					ruling_party = con_socialism
+					elections_allowed = yes
+				}
+			}
+			else = {
+				set_politics = {
+					ruling_party = sci_socialism
+					elections_allowed = yes
+				}
+			}
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -2130,7 +2170,12 @@ focus_tree = {
 
 		cost = 8
 		
-		available = {}
+		available = {
+			exists = yes
+			has_capitulated = no
+			is_subject = no
+			has_country_flag = br_focus_road_to_revolution_fascism_flag
+		}
 		
 		bypass = {}
 		
@@ -2302,7 +2347,8 @@ focus_tree = {
 		available = {
 			exists = yes
 			has_capitulated = no
-			is_puppet = no
+			is_subject = no
+			br_ideology_capitalism_ruling_with_ds = yes
 		}
 		
 		bypass = {}
@@ -2312,7 +2358,10 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		complete_tooltip = {}
-		completion_reward = {}
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = { ideology = root popularity = 0.05 }
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -2337,7 +2386,23 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		complete_tooltip = {}
-		completion_reward = {}
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_idea = free_trade }
+				}
+				add_ideas = free_trade 
+			}
+			else = {
+				add_tech_bonus = {
+					name = focus_spirit_of_liberalism
+					bonus = 1.0
+					uses = 1
+					category = industry
+				}
+			}
+			add_ideas = generic_spirit_of_liberalism
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -2361,7 +2426,10 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		complete_tooltip = {}
-		completion_reward = {}
+		completion_reward = {
+			add_political_power = 150
+			add_ideas = generic_constitutionalism
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -2463,7 +2531,12 @@ focus_tree = {
 
 		cost = 8
 		
-		available = {}
+		available = {
+			exists = yes
+			has_capitulated = no
+			is_subject = no
+			is_in_faction = yes
+		}
 		
 		bypass = {}
 		
@@ -2568,6 +2641,9 @@ focus_tree = {
 		cost = 8
 		
 		available = {
+			exists = yes
+			has_capitulated = no
+			is_subject = no
 			NOT = {
 				has_completed_focus = focus_road_to_revolution
 				has_completed_focus = focus_safeguard_democratic
@@ -2581,7 +2657,9 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		complete_tooltip = {}
-		completion_reward = {}
+		completion_reward = {
+			add_popularity = { ideology = root popularity = 0.10 }
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -2605,7 +2683,24 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		complete_tooltip = {}
-		completion_reward = {}
+		completion_reward = {
+			if = {
+				limit = {
+					OR = {
+						has_war_with_major = yes
+						enemies_strength_ratio > 0.5
+					}
+				}
+				add_command_power = 50
+				add_war_support = 0.20
+				add_popularity = { ideology = root popularity = 0.20 }
+			}
+			else = {
+				add_war_support = 0.10
+				add_popularity = { ideology = root popularity = 0.10 }
+			}
+			custom_effect_tooltip = war_will_change_focus_effect_better_tt
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -2618,7 +2713,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = focus_force_the_pace
 
-		cost = 8
+		cost = 5
 		
 		available = {}
 		
@@ -2629,7 +2724,12 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		complete_tooltip = {}
-		completion_reward = {}
+		completion_reward = {
+			army_experience = 25
+			add_political_power = 50
+			add_stability = -0.05
+			add_popularity = { ideology = root popularity = 0.05 }
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -2646,7 +2746,13 @@ focus_tree = {
 
 		cost = 8
 		
-		available = {}
+		available = {
+			OR = {
+				has_idea = br_laws_feudalism
+				has_idea = br_laws_cleric
+				has_idea = br_laws_monarchy
+			}
+		}
 		
 		bypass = {}
 		
@@ -2694,7 +2800,9 @@ focus_tree = {
 
 		cost = 8
 		
-		available = {}
+		available = {
+			has_idea = br_laws_dictatorship
+		}
 		
 		bypass = {}
 		

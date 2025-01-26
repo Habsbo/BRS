@@ -1,0 +1,154 @@
+### STORIES ###
+add_namespace = br_story
+
+
+### STORY NUM COUNT 1 COPERNICUS - 1号故事：哥白尼 ###
+country_event = { #
+	id = br_story.1001
+	title = br_story.1001.title
+	desc = br_story.1001.desc
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = { set_global_flag = br_story_global_copernicus_flag }
+	}
+	
+	option = {
+		name = br_story.1001.a
+
+		country_event = { id = br_story.1002 days = 60 }
+		set_country_flag = br_story_copernicus_flag
+
+		ai_chance = { base = 0 }
+	}
+	
+	option = {
+		name = br_story.1001.b
+		custom_effect_tooltip = br_story.1001.end.tt
+		ai_chance = { base = 1 }
+	}
+}
+
+country_event = { #
+	id = br_story.1002
+	title = br_story.1002.title
+	desc = br_story.1002.desc
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = { country_event = { id = br_story.1003 days = 1 } }
+	}
+	
+	option = {
+		name = br_story.1002.a
+
+		effect_tooltip = { country_event = { id = br_story.1003 } }
+	}
+}
+
+country_event = { #
+	id = br_story.1003
+	title = br_story.1003.title
+	desc = br_story.1003.desc
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = { country_event = { id = br_story.1004 days = 800 } }
+	}
+	
+	option = {
+		name = br_story.1003.a
+		hidden_effect = { country_event = { id = br_story.1004 } }
+	}
+}
+
+country_event = { #
+	id = br_story.1004
+	title = br_story.1004.title
+	desc = br_story.1004.desc
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {}
+	}
+	
+	option = {
+		name = br_story.1004.a
+	}
+}
+
+country_event = { #
+	id = br_story.1005
+	title = br_story.1005.title
+	desc = br_story.1005.desc
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {}
+	}
+	
+	option = {
+		name = br_story.1005.a
+	}
+}
+
+country_event = { #
+	id = br_story.1011
+	title = br_story.1011.title
+	desc = br_story.1011.desc
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {}
+	}
+	
+	option = {
+		name = br_story.1011.a
+
+		ai_chance = { base = 0 }
+	}
+	
+	option = {
+		name = br_story.1011.b
+		custom_effect_tooltip = br_story.1011.end.tt
+		ai_chance = { base = 1 }
+	}
+}
+
+### STORY NUM COUNT 2  - 2号故事：战争孤儿 ###
+country_event = { #
+	id = br_story.2001
+	title = br_story.2001.title
+	desc = br_story.2001.desc
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {}
+	}
+	
+	option = {
+		name = br_story.2001.a
+
+		ai_chance = { base = 0 }
+	}
+	
+	option = {
+		name = br_story.2001.b
+		
+		ai_chance = { base = 1 }
+	}
+}

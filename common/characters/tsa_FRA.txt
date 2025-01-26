@@ -1,5 +1,24 @@
 characters = {
 ### popular front ###
-	
-	
+	#阿尔贝·勒布伦 Albert Lebrun
+	FRA_albert_lebrun = {
+		name = FRA_albert_lebrun
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_FRA_albert_lebrun
+				small = GFX_Portrait_FRA_albert_lebrun_small
+			}
+		}
+	}
+
+	#约瑟夫·阿斯塔纳斯·加斯顿·保罗·杜美
+	FRA_joseph_athanase_gaston_paul_doumer = {
+		name = FRA_joseph_athanase_gaston_paul_doumer
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_FRA_paul_doumer"
+				small = "GFX_Portrait_FRA_paul_doumer_small"
+			}
+		}
+	}
 }

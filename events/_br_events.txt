@@ -878,10 +878,8 @@ country_event = { #
 			add_stability = -0.10
 			if = {
 				limit = {
-					OR = {
-						br_ideology_socialism_nio = yes
-						br_ideology_fascism_nio = yes
-					}
+					br_ideology_socialism_nio = yes
+					br_ideology_fascism_nio = yes
 				}
 				add_popularity = { ideology = root popularity = -0.05 }
 			}
@@ -930,5 +928,26 @@ country_event = { #
 	
 	option = {
 		name = br_generic_focus.2.c
+	}
+}
+
+country_event = { #
+	id = br_generic_focus.3
+	title = br_generic_focus.3.title
+	desc = br_generic_focus.3.desc
+
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	option = {
+		name = br_generic_focus.3.a
+	}
+
+	option = {
+		name = br_generic_focus.3.b
+	}
+	
+	option = {
+		name = br_generic_focus.3.c
 	}
 }

@@ -71,7 +71,7 @@ focus_tree = {
 						has_character_flag = vasilias_named_as_constantine_flag
 					}
 				}
-				check_variable = {  }
+				check_variable = { br_public_feeling_var = 100 }
 			}
 		}
 		bypass = {}
@@ -84,7 +84,7 @@ focus_tree = {
 		completion_reward = {
 			add_war_support = 0.05
 			add_stability = 0.05
-			set_cosmetic_tag = Basileia_Rhomaion
+			set_cosmetic_tag = HEL_Basileia_Romaion
 		}
 
 		ai_will_do = { factor = 1 }
@@ -149,6 +149,30 @@ focus_tree = {
 		relative_position_id = BYZ_thartheis_san_astrape
 				
 		cost = 5
+
+		available = {}
+		bypass = {}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = BYZ_retrieve_anatolia
+		icon = GFX_
+		prerequisite = { focus = BYZ_marmaromenos_vasilias }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = BYZ_marmaromenos_vasilias
+		
+		cost = 8
 
 		available = {}
 		bypass = {}

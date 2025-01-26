@@ -255,7 +255,15 @@
  SLO_kaisertum_usterreich_side_range.2: "德意志主义强势"
  SLO_kaisertum_usterreich_side_range.3: "德意志主义主流"
 
-
+ br_ceska.9001.title: "苏台德沦陷" #捷克
+ br_ceska.9001.desc: ""
+ br_ceska.9001.a: "继续战争将毫无意义。"
+ br_ceska.9001.b: "暂时的挫折罢了。"
+ br_ceska.9002.title: "攻破苏台德" #他国
+ br_ceska.9002.desc: ""
+ br_ceska.9002.a: "我们只需要苏台德。"
+ br_ceska.9002.b: "我全都要。"
+ br_ceska.9002.c: "我是那么容易满足的人么？"
 
  : ""
  _desc: ""

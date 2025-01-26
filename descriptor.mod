@@ -12,6 +12,7 @@ tags={
 	"Translation"
 }
 replace_path="common/ai_strategy"
+replace_path="common/autonomous_states"
 replace_path="common/bookmarks"
 replace_path="common/decisions"
 replace_path="common/national_focus"

@@ -8,6 +8,7 @@
  focus_youth_league_desc: ""
  focus_urge_alter: "敦促变革"
  focus_urge_alter_desc: ""
+ focus_urge_alter_effect_tt: "将会根据意识形态的影响力而对国家的稳定和战争倾向发生影响。"
 
  focus_class_war: "阶级斗争"
  focus_class_war_desc: ""
@@ -84,7 +85,36 @@
  br_generic_focus.1.b: "帝国主义是我们身上最沉重的枷锁！"
  br_generic_focus.1.c: "国家、民族、社会！"
 
+ br_focus_road_to_revolution_communism_flag: "选择了§Y无产阶级§!革命"
+ br_focus_road_to_revolution_anti_imperialism_flag: "选择了§Y反帝国主义§!革命"
+ br_focus_road_to_revolution_fascism_flag: "选择了§Y法西斯主义§!革命"
+
  br_generic_focus.2.title: ""
  br_generic_focus.2.desc: ""
  br_generic_focus.2.a: ""
  br_generic_focus.2.b: ""
+ br_generic_focus.2.c: ""
+
+ br_generic_focus.3.title: ""
+ br_generic_focus.3.desc: ""
+ br_generic_focus.3.a: ""
+ br_generic_focus.3.b: ""
+
+ generic_spirit_of_liberalism: "自由主义精神"
+ generic_spirit_of_liberalism_desc: ""
+ generic_constitutionalism: "宪政主义"
+ generic_constitutionalism_desc: ""
+
+ war_will_change_focus_effect_better_tt: "§Y随着战争的到来，完成国策将会带来更好的效果。§!"
+
+ MAN_generic_char_1: "瓜尔佳·罕扎博勒果" #Gvwaligiya HanjaBolgo
+ MAN_generic_char_2: "董鄂·阿林阿" #Donggo Alingga
+ MAN_generic_char_3: "赫舍哩·巴彦" #Hesheri Hala Bayan
+ MAN_generic_char_4: "李佳·额尔德克" #Ligiya Eldeke
+ MAN_generic_char_5: "宁古塔·和其坤宜尔哈" #Ningguta HocikonIlha
+ 
+ MAN_generic_char_1_han: "关云忠" #Gvwaligiya HanjaBolgo - Guan Yunzhong
+ MAN_generic_char_2_han: "董岳" #Donggo Alingga - Dong Yue
+ MAN_generic_char_3_han: "何桂" #Hesheri Bayan - He Gui
+ MAN_generic_char_4_han: "李光耀" #Ligiya HanjaBolgo - Li Guangyao
+ MAN_generic_char_5_han: "宁俊才" #Ningguta HocikonIlha - Ning Juncai

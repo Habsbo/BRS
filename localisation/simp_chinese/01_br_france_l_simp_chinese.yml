@@ -106,3 +106,27 @@
  FRA_order_iberia_desc: ""
  FRA_valois_comeback: "瓦卢瓦归来"
  FRA_valois_comeback_desc: ""
+
+ FRA_local_ic_dynamic_modifier: "本土工业"
+ FRA_local_ic_dynamic_modifier_added: "§Y本土工业§!追加：\n"
+
+ local_building_slots_factor_tt: " 当地最大工厂数：$RIGHT|+=%0$"
+ local_factories_tt: " 当地工厂数：$RIGHT|+=%0$"
+ local_supplies_tt: " 当地补给能力：$RIGHT|+=%0$"
+ state_production_speed_if_factor_tt: " 当地的§Y基础设施§!建造速度：$RIGHT|+=%0$"
+ state_production_speed_ic_factor_tt: " 当地的§Y民用工厂§!建造速度：$RIGHT|+=%0$"
+ state_production_speed_af_factor_tt: " 当地的§Y军用工厂§!建造速度：$RIGHT|+=%0$"
+ state_production_speed_dy_factor_tt: " 当地的§Y海军船坞§!建造速度：$RIGHT|+=%0$"
+ local_resources_factor_tt: " 战略资源获取效率：$RIGHT|+=%0$"
+
+ FRA_expanding_ile_de_france: "开发法兰西岛"
+ FRA_expanding_ile_de_france_desc: ""
+ FRA_expanding_idf_focus_on_civilian_consume: "建设大都会"
+ FRA_expanding_idf_focus_on_civilian_consume_desc: ""
+ FRA_expanding_idf_focus_on_military_need: "供给军事"
+ FRA_expanding_idf_focus_on_military_need_desc: ""
+ : ""
+ _desc: ""
+ : ""
+ _desc: ""
+

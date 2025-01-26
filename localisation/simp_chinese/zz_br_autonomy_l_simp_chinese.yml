@@ -51,6 +51,12 @@
  CONSTRUCTION_INFO_MASTER: "这个建筑物位于$WHO|H$领土内。如果该国投入的工厂数未达上限，我们可以使用本国工厂辅助建造。"
  CONSTRUCTION_INFO_SUBJECT: "该建筑物由$WHO|H$为我国建造。如果该国投入的工厂数未达上限，我们可以使用本国工厂辅助建造。"
 ### automy kinds ###
+ autonomy_free: "独立国"
+ autonomy_protectorate: "保护国"
+ autonomy_puppet: "附庸国"
+ autonomy_integrated_puppet: "傀儡国"
+ autonomy_annex: "被吞并"
+
  autonomy_communist_satellite: "卫星国"
  autonomy_occupation_zone: "占领区"
  autonomy_aat_defense_council_member: "北欧防务理事会成员国"
@@ -58,10 +64,6 @@
  autonomy_dominion: "自治领"
  autonomy_supervised_state: "监管国"
  autonomy_colony: "殖民领"
- autonomy_puppet: "傀儡国"
- autonomy_integrated_puppet: "半吞并傀儡国"
- autonomy_annex: "被吞并"
- autonomy_free: "独立国"
  autonomy_reichskommissariat: "专员辖区"
  autonomy_reichsprotectorate: "保护国"
  autonomy_satellite: "卫星国"
@@ -72,4 +74,3 @@
  autonomy_personal_union: "共主邦联"
  autonomy_mandate_province_gov: "天朝行省"
  autonomy_self_gov: "自治政府"
- autonomy_protectorate: "保护国"

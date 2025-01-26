@@ -8,6 +8,17 @@ set_technology = {
 	tech_trucks = 1
 }
 
+recruit_character = MAN_generic_char_1
+recruit_character = MAN_generic_char_2
+recruit_character = MAN_generic_char_3
+recruit_character = MAN_generic_char_4
+recruit_character = MAN_generic_char_5
+MAN_generic_char_1 = { set_character_name = MAN_generic_char_1_han }
+MAN_generic_char_2 = { set_character_name = MAN_generic_char_2_han }
+MAN_generic_char_3 = { set_character_name = MAN_generic_char_3_han }
+MAN_generic_char_4 = { set_character_name = MAN_generic_char_4_han }
+MAN_generic_char_5 = { set_character_name = MAN_generic_char_5_han }
+
 if = {
 	limit = { has_dlc = "Waking the Tiger" }
 	set_country_flag = MAN_northern_bandits
@@ -16,33 +27,36 @@ if = {
 	add_ideas = MAN_banditry
 	add_ideas = MAN_kwantung_veto
 	add_ideas = MAN_low_legitimacy_5
-	recruit_character = MAN_songgotu_zhanshan
+	recruit_character = MAN_songgotu_zhanshan #索额图占山
 }
 
-recruit_character = MAN_aisin_gioro_puyi
-recruit_character = MAN_zhang_haipeng
-recruit_character = MAN_zhang_jinghui
-recruit_character = MAN_aisin_gioro_xiqia
-recruit_character = MAN_yoshiko_kawashima
-recruit_character = MAN_zhao_shangzhi
-recruit_character = MAN_changlin_linge
-recruit_character = MAN_kyoiji_tomonaga
-recruit_character = MAN_yonimitsu_kasahara
-recruit_character = MAN_deng_linge
-recruit_character = MAN_hung_zhehuang
-recruit_character = MAN_nakajima_kesago
-recruit_character = MAN_yin_zuoqian
-recruit_character = MAN_hesehn_tiemei
-recruit_character = MAN_xian_yuan
-recruit_character = MAN_guan_xingde
-recruit_character = MAN_megata_toshiro
+recruit_character = MAN_aisin_gioro_puyi #溥仪
+recruit_character = MAN_aisin_gioro_xiqia #爱新觉罗熙洽
+recruit_character = MAN_yoshiko_kawashima #川岛芳子
+recruit_character = MAN_xian_yuan #爱新觉罗宪原
+
+recruit_character = MAN_zhang_haipeng #张海鹏
+recruit_character = MAN_zhang_jinghui #张景惠
+recruit_character = MAN_zhao_shangzhi #赵尚志
+recruit_character = MAN_deng_linge #邓麟阁
+recruit_character = MAN_hung_zhehuang #洪哲晃
+recruit_character = MAN_yin_zuoqian #尹祚乾
+#japanese
+recruit_character = MAN_yonimitsu_kasahara #笠原幸雄
+recruit_character = MAN_kyoiji_tomonaga #富永恭次
+recruit_character = MAN_nakajima_kesago #中岛今朝吾
+recruit_character = MAN_megata_toshiro #目贺田种太郎
 if = {
 	limit = { has_dlc = "No Step Back" }
-	recruit_character = SOV_grigory_semyonov
+	recruit_character = SOV_grigory_semyonov #格里高利·谢苗诺夫
 	SOV_grigory_semyonov = { 
 		set_character_flag = SOV_exiled_army_leader
 	}
 }
+
+recruit_character = MAN_changlin_linge #昌林林格
+recruit_character = MAN_guan_xingde #关性德
+recruit_character = MAN_hesehn_tiemei #和珅铁梅
 
 set_convoys = 5
 

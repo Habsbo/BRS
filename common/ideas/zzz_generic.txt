@@ -208,6 +208,38 @@ ideas = {
 
 # Special ones that can be applied on other countries through focus system.
 	country = {
+
+		generic_spirit_of_liberalism = {
+			picture = anti_soviet_pact
+			
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via event
+			}
+
+			modifier = {
+				political_power_gain = 1.0
+				consumer_goods_factor = -0.08
+			}
+		}
+		
+		generic_constitutionalism = {
+			picture = anti_soviet_pact
+			
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via event
+			}
+
+			modifier = {
+				political_power_gain = 0.5
+				stability_factor = 0.10
+				political_advisor_cost_factor = -0.05
+			}
+		}
+
 		generic_communism_revolution = {
 			picture = spr_anti_fascist_crusade
 

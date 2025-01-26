@@ -67,4 +67,5 @@ youth_league_dynamic_modifier = {
 	sci_socialism_drift = youth_league_sci_socialism_drift
 	con_socialism_drift = youth_league_con_socialism_drift
 	fascism_drift = youth_league_fascism_drift
+	conscription_factor = youth_league_conscription_factor
 }

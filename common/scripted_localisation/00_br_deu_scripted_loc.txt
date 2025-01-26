@@ -1,0 +1,113 @@
+### made by LingXia ###
+
+# Allows you to create your own dynamic keys
+# to be called in localization.
+# defined_text -> this is it, we're defining the text
+# text -> a discrete entry that can be picked to display in loc.
+# trigger -> determines if a text entry will be picked or not.
+# (The triggers need to be valid for the scope the key is called in
+# (eg Root or From.From).)
+# localization_key -> points to the localization key
+# that'll be used if trigger passes
+
+defined_text = {
+	name = GetGERarmymodifier
+	text = {
+		trigger = { tag = KPD }
+		localization_key = GetGERarmymodifier_kommunismus
+	}
+	text = {
+		trigger = { tag = DKR }
+		localization_key = GetGERarmymodifier_imperial
+	}
+	text = {
+		trigger = { tag = NSD }
+		localization_key = GetGERarmymodifier_nazi
+	}
+	text = { localization_key = GetGERarmymodifier_default }
+}
+
+defined_text = {
+	name = GetGERarmymodifierDESC
+	text = {
+		trigger = { tag = KPD }
+		localization_key = GetGERarmymodifier_kommunismus_desc
+	}
+	text = {
+		trigger = { tag = DKR }
+		localization_key = GetGERarmymodifier_imperial_desc
+	}
+	text = {
+		trigger = { tag = NSD }
+		localization_key = GetGERarmymodifier_nazi_desc
+	}
+	text = { localization_key = GetGERarmymodifier_default_desc }
+}
+
+defined_text = {
+	name = GetGERnavymodifier
+	text = {
+		trigger = { tag = KPD }
+		localization_key = GetGERnavymodifier_kommunismus
+	}
+	text = {
+		trigger = { tag = DKR }
+		localization_key = GetGERnavymodifier_imperial
+	}
+	text = {
+		trigger = { tag = NSD }
+		localization_key = GetGERnavymodifier_nazi
+	}
+	text = { localization_key = GetGERnavymodifier_default }
+}
+
+defined_text = {
+	name = GetGERnavymodifierDESC
+	text = {
+		trigger = { tag = KPD }
+		localization_key = GetGERnavymodifier_kommunismus_desc
+	}
+	text = {
+		trigger = { tag = DKR }
+		localization_key = GetGERnavymodifier_imperial_desc
+	}
+	text = {
+		trigger = { tag = NSD }
+		localization_key = GetGERnavymodifier_nazi_desc
+	}
+	text = { localization_key = GetGERnavymodifier_default_desc }
+}
+
+defined_text = {
+	name = GetGERairforcemodifier 
+	text = {
+		trigger = { tag = KPD }
+		localization_key = GetGERairforcemodifier_kommunismus
+	}
+	text = {
+		trigger = { tag = DKR }
+		localization_key = GetGERairforcemodifier_imperial
+	}
+	text = {
+		trigger = { tag = NSD }
+		localization_key = GetGERairforcemodifier_nazi
+	}
+	text = { localization_key = GetGERnavymodifier_default }
+}
+
+defined_text = {
+	name = GetGERairforcemodifierDESC
+	text = {
+		trigger = { tag = KPD }
+		localization_key = GetGERairforcemodifier_kommunismus_desc
+	}
+	text = {
+		trigger = { tag = DKR }
+		localization_key = GetGERairforcemodifier_imperial_desc
+	}
+	text = {
+		trigger = { tag = NSD }
+		localization_key = GetGERairforcemodifier_nazi_desc
+	}
+	text = { localization_key = GetGERnavymodifier_default_desc }
+}

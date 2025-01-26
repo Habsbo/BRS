@@ -10,4 +10,14 @@ characters = {
 		}
 	}
 	
+	#胡志明 /Nguyễn Sinh Cung（阮必诚）
+	VIN_ho_chiminh = {
+		name = ho_chiminh
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_VIN_ho_chiminh"
+				small = "GFX_portrait_VIN_ho_chiminh_small"
+			}
+		}
+	}
 }

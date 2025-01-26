@@ -1301,4 +1301,14 @@ characters={
 			}
 		}
 	}
+
+	BYZ_constantine_xi_palaiologos = { #
+		name = constantine_xi_palaiologos
+		portraits={
+			civilian = {
+				large = "GFX_Portrait_GRE_constantine_xi"
+				small = "GFX_Portrait_GRE_constantine_xi_small"
+			}
+		}
+	}
 }

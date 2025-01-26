@@ -37,6 +37,19 @@ autonomy_state = {
 	}
 
 	allowed = {
+		OVERLORD = {
+			OR = {
+				has_idea = br_laws_monarchy
+				has_idea = br_laws_cleric
+				has_idea = br_laws_proxy
+				has_idea = br_laws_parliamentarism
+			}
+			OR = {
+				has_idea = br_laws_pure_race
+				has_idea = br_laws_apartheid
+				has_idea = br_laws_national_state
+			}
+		}
 		OR = {
 			has_dlc = "Death or Dishonor"
 			AND = {
@@ -49,12 +62,8 @@ autonomy_state = {
 				has_dlc = "No Step Back"
 			}
 		}
-		OVERLORD = { has_government = fascism }
-		if = {
-			limit = { has_dlc = "Waking the Tiger" }
-			NOT = { OVERLORD = { original_tag = JAP } }
-			NOT = { OVERLORD = { original_tag = MAN } }
-		}
+		NOT = { OVERLORD = { original_tag = JAP } }
+		NOT = { OVERLORD = { original_tag = MAN } }
 	}
 	
 	can_take_level = {

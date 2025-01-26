@@ -947,3 +947,16 @@ give_guarantee = CZE
 set_autonomy = { target = ALG autonomous_state = autonomy_self_gov }
 set_autonomy = { target = TUN autonomous_state = autonomy_self_gov }
 set_autonomy = { target = MOR autonomous_state = autonomy_protectorate }
+
+#巴黎
+16 = {
+	add_dynamic_modifier = { modifier = FRA_local_ic_dynamic_modifier }
+	set_variable = { FRA_local_ic_local_building_slots_factor = 0.20 }
+	set_variable = { FRA_local_ic_local_factories = 0.10 }
+	set_variable = { FRA_local_ic_local_supplies = 0.10 }
+	set_variable = { FRA_local_ic_state_production_speed_if_factor = 0.00 }
+	set_variable = { FRA_local_ic_state_production_speed_ic_factor = 0.00 }
+	set_variable = { FRA_local_ic_state_production_speed_af_factor = 0.00 }
+	set_variable = { FRA_local_ic_state_production_speed_dy_factor = 0.00 }
+	set_variable = { FRA_local_ic_local_resources_factor = 0.05 }
+}

@@ -12,3 +12,94 @@ country_event = { #
 		name = br_ceska.1.a
 	}
 }
+
+country_event = { #
+	id = br_ceska.2
+	title = br_ceska.2.title
+	desc = br_ceska.2.desc
+
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	option = {
+		name = br_ceska.2.a
+	}
+}
+
+
+country_event = { #
+	id = br_ceska.9001
+	title = br_ceska.9001.title
+	desc = br_ceska.9001.desc
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {}
+	
+	option = {
+		name = br_ceska.9001.a
+
+		#
+
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 0.5
+				OR = {
+					is_in_faction = no
+					has_war_support < 0.20
+				}
+			}
+		}
+	}
+
+	option = {
+		name = br_ceska.9001.b
+
+		#
+
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 0.5
+				OR = {
+					is_in_faction = no
+					has_war_support < 0.20
+				}
+			}
+		}
+	}
+}
+
+country_event = { #
+	id = br_ceska.9002
+	title = br_ceska.9002.title
+	desc = br_ceska.9002.desc
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {}
+	
+	option = {
+		name = br_ceska.9002.a
+		ai_chance = {
+			base = 0
+		}
+	}
+
+	option = {
+		name = br_ceska.9002.b
+		ai_chance = {
+			base = 0
+		}
+	}
+
+	option = {
+		name = br_ceska.9002.c
+		ai_chance = {
+			base = 0
+		}
+	}
+}

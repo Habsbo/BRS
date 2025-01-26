@@ -1,5 +1,6 @@
 characters = {
 ####阿拉贡####
+	#Chairman Joaquin Ascaso
 	CAT_joaquin_ascaso_budria = { #主席 华金·阿斯卡索
 		name=CAT_joaquin_ascaso_budria
 		portraits={
@@ -23,7 +24,7 @@ characters = {
 			legacy_id=-1
 		}
 	}
-
+	#Sec Benito Pabon
 	CAT_benito_pabon = { #总书记 贝尼托·帕彭
 		name=CAT_benito_pabon
 		portraits={
@@ -74,7 +75,7 @@ characters = {
 			legacy_id=-1
 		}
 	}
-
+	# Adolfo Ballano
 	CAT_adolfo_ballano = { #公共秩序 阿道夫·巴拉诺
 		name=CAT_adolfo_ballano
 		portraits={
@@ -112,7 +113,7 @@ characters = {
 			legacy_id=-1
 		}
 	}
-
+	# Adolfo Arnal
 	CAT_adolfo_arnal = { #农业部长 阿道夫·阿纳尔
 		name=CAT_adolfo_arnal
 		portraits={

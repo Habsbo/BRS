@@ -1,0 +1,14 @@
+spriteTypes = {
+# characters of germany
+
+	#赵尚志
+	spriteType = {
+		name = "GFX_Portrait_CPC_zhao_shangzhi"
+		texturefile = "gfx/leaders/China/CPC/Portrait_PRC_Zhao_Shangzhi.dds"
+	}
+
+	#spriteType = {
+	#	name = "GFX_Portrait_CPC_zhao_shangzhi_small"
+	#	texturefile = "gfx/interface/ideas/China/CPC/Portrait_PRC_Zhao_Shangzhi_small.dds"
+	#}
+}
