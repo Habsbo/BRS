@@ -1,0 +1,18 @@
+﻿l_simp_chinese:
+ JAP: "大日本帝国"
+ JAP_DEF: "日本帝国"
+ JAP_ADJ: "日本"
+
+ Mikado_Hirohito: "裕仁"
+ Wakatsuki_Reijiro: "若槻礼次郎"
+ 
+ successor_of_takaaki_kato: "加藤高明的继承人"
+ weak_compromiser: "软弱的妥协者"
+ 
+ VL_name_JAP_Wakatsuki_Reijiro: "$Wakatsuki_Reijiro$"
+ VL_state_JAP_Wakatsuki_Reijiro: "§Y$Wakatsuki_Reijiro$§!\n$VL_trait_JAP_Wakatsuki_Reijiro$"
+ VL_Dip_state_JAP_Wakatsuki_Reijiro: "§Y$Wakatsuki_Reijiro$§!\n$GetDipStatus$\n$VL_trait_JAP_Wakatsuki_Reijiro$"
+ VL_trait_JAP_Wakatsuki_Reijiro: "§Y$successor_of_takaaki_kato$§!\n  - $MODIFIER_POLITICAL_POWER_FACTOR$: §R-10%§!\n  - $con_socialism_drift$: §G+0.01§!\n  - $dem_socialism_drift$: §G+0.01§!\n  - $dem_liberalism_drift$: §G+0.01§!\n  - $dem_conservatism_drift$: §G+0.01§!\n§Y$weak_compromiser$§!\n  - $MODIFIER_DRIFT_DEFENCE_FACTOR$: §R-25.0%§!\n  - $MODIFIER_STABILITY_POPULARITY_FACTOR$: §G+5.00%§!"
+ VL_desc_JAP_Wakatsuki_Reijiro: "§g§!"
+ 
+ JAP_eight_eight_fleet_plan: "八八舰队计划"

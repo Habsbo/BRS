@@ -10,6 +10,13 @@ defined_text = {
 	}
 	text = {
 		trigger = {
+			original_tag = JAP
+			NOT = { br_special_chars_holding_gov = yes }
+		}
+		localization_key = [JAP_VL_picture]
+	}
+	text = {
+		trigger = {
 			original_tag = POL
 			NOT = { br_special_chars_holding_gov = yes }
 		}
@@ -83,6 +90,13 @@ defined_text = {
 	}
 	text = {
 		trigger = {
+			original_tag = JAP
+			NOT = { br_special_chars_holding_gov = yes }
+		}
+		localization_key = [JAP_VL_name]
+	}
+	text = {
+		trigger = {
 			original_tag = POL
 			NOT = { br_special_chars_holding_gov = yes }
 		}
@@ -152,6 +166,13 @@ defined_text = {
 			NOT = { br_special_chars_holding_gov = yes }
 		}
 		localization_key = [USA_VL_state]
+	}
+	text = {
+		trigger = {
+			original_tag = JAP
+			NOT = { br_special_chars_holding_gov = yes }
+		}
+		localization_key = [JAP_VL_state]
 	}
 	text = {
 		trigger = {
@@ -228,6 +249,13 @@ defined_text = {
 	}
 	text = {
 		trigger = {
+			original_tag = JAP
+			NOT = { br_special_chars_holding_gov = yes }
+		}
+		localization_key = [JAP_VL_Dip_state]
+	}
+	text = {
+		trigger = {
 			original_tag = POL
 			NOT = { br_special_chars_holding_gov = yes }
 		}
@@ -297,6 +325,13 @@ defined_text = {
 			NOT = { br_special_chars_holding_gov = yes }
 		}
 		localization_key = [USA_VL_desc]
+	}
+	text = {
+		trigger = {
+			original_tag = JAP
+			NOT = { br_special_chars_holding_gov = yes }
+		}
+		localization_key = [JAP_VL_desc]
 	}
 	text = {
 		trigger = {

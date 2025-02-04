@@ -12,21 +12,8 @@ add_ideas = {
 	partial_economic_mobilisation
 
 	JAP_zaibatsus
-	JAP_duplicate_research_efforts
-	JAP_militarism
-}
-
-if = {
-	limit = { has_dlc = "Waking the Tiger" }
-	add_ideas = {
-		JAP_interservice_rivalry_balanced		
-	}
-}
-if = {
-	limit = {
-		has_dlc = "Man the Guns"
-	}
-	add_ideas = MTG_naval_treaty_adherent
+	JAP_eight_eight_fleet_plan
+	JAP_interservice_rivalry_navy_dominant
 }
 
 set_technology = {
@@ -161,9 +148,16 @@ create_import = {
 
 set_convoys = 400
 
+add_ideas = {
+	br_laws_premier
+	br_laws_qualification
+	br_laws_spiritual
+	br_laws_bourgeoisie
+}
+
 set_politics = {
-	ruling_party = dem_conservatism
-	last_election = "1936.1.1"
+	ruling_party = dem_liberalism
+	last_election = "1930.1.1"
 	election_frequency = 48
 	elections_allowed = yes
 }
@@ -173,14 +167,17 @@ set_popularities = {
 	con_socialism = 2
 	#
 	dem_socialism= 3
-	dem_liberalism = 0
+	dem_liberalism = 15
 	dem_conservatism = 15
 	#
-	authoritarian = 35
+	authoritarian = 30
 	#
-	fascism = 25
-	nationalism = 10
+	fascism = 20
+	nationalism = 5
 }
+
+recruit_character = JAP_Hirohito
+recruit_character = JAP_Wakatsuki_Reijiro
 
 recruit_character = JAP_osachi_hamaguchi
 recruit_character = JAP_tsuyoshi_inukai
@@ -269,6 +266,8 @@ recruit_character = JAP_misumi_uika
 recruit_character = JAP_yahata_umiri
 recruit_character = JAP_yutenji_nyamu
 recruit_character = JAP_wakaba_mutsumi
+
+activate_advisor = JAP_Wakatsuki_Reijiro
 
 if = {
 	limit = {

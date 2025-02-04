@@ -87,6 +87,51 @@ defined_text = {
     }
 	text = { localization_key = VL_desc }
 }
+#JAP
+defined_text = {
+    name = JAP_VL_picture
+	text = {
+		trigger = { has_idea = JAP_Wakatsuki_Reijiro }
+		localization_key = GFX_Portrait_JAP_Wakatsuki_Reijiro
+    }
+	text = { localization_key = GFX_leader_unknown }
+}
+
+defined_text = {
+    name = JAP_VL_name
+	text = {
+		trigger = { has_idea = JAP_Wakatsuki_Reijiro }
+		localization_key = VL_name_JAP_Wakatsuki_Reijiro
+    }
+	text = { localization_key = VL_name }
+}
+
+defined_text = {
+    name = JAP_VL_state
+	text = {
+		trigger = { has_idea = JAP_Wakatsuki_Reijiro }
+		localization_key = VL_state_JAP_Wakatsuki_Reijiro
+    }
+	text = { localization_key = VL_state }
+}
+
+defined_text = {
+    name = JAP_VL_Dip_state
+	text = {
+		trigger = { has_idea = JAP_Wakatsuki_Reijiro }
+		localization_key = VL_Dip_state_JAP_Wakatsuki_Reijiro
+    }
+	text = { localization_key = VL_Dip_state }
+}
+
+defined_text = {
+    name = JAP_VL_desc
+	text = {
+		trigger = { has_idea = JAP_Wakatsuki_Reijiro }
+		localization_key = VL_desc_JAP_Wakatsuki_Reijiro
+    }
+	text = { localization_key = VL_desc }
+}
 #FRA
 #leon blum
 #edouard daladier

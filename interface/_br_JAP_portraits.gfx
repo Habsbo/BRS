@@ -1,0 +1,19 @@
+spriteTypes = {
+	###### characters of japan
+	spriteType = {
+		name = "GFX_Portrait_JAP_Hirohito"
+		texturefile = "gfx/leaders/JAP/Portrait_JAP_Hirohito.png"
+	}
+
+	spriteType = {
+		name = "GFX_Portrait_JAP_Wakatsuki_Reijiro"
+		texturefile = "gfx/leaders/JAP/Portrait_JAP_Wakatsuki_Reijiro.dds"
+	}
+	
+	######
+	
+	spriteType = {
+		name = "GFX_idea_advisor_JAP_Wakatsuki_Reijiro"
+		texturefile = "gfx/interface/ideas/idea_advisor_JAP_Wakatsuki_Reijiro.dds"
+	}
+}
