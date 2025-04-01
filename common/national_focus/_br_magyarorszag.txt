@@ -17,7 +17,7 @@
 ### economic policy ##
 	focus = {
 		id = HUN_laissez_faire
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_focus_generic_monetary_union
 		#prerequisite = { focus =  }
 		#mutually_exclusive = { focus =  }
 		x = 6
@@ -122,13 +122,65 @@
 		
 		completion_reward = {}
 	}
-###
+### Political ###
 	focus = {
-		id = HUN_2
-		icon = GFX_goal_generic_demand_territory
+		id = HUN_
+		icon = GFX_focus_generic_monarchy_1
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 16
+		y = 0
+		#relative_position_id =
+
+		cost = 5
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+
+	focus = {
+		id = HUN_
+		icon = GFX_focus_generic_communist_attack_hungary
 		#prerequisite = { focus =  }
 		#mutually_exclusive = { focus =  }
 		x = 0
+		y = 0
+		#relative_position_id =
+
+		cost = 5
+		
+		ai_will_do = { factor = 1 }
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+	}
+
+	focus = {
+		id = HUN_kaisers_crown
+		icon = GFX_focus_HUN_the_lands_of_the_crown_of_saint_stephen
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 24
 		y = 0
 		#relative_position_id =
 
@@ -148,7 +200,6 @@
 		
 		completion_reward = {}
 	}
-
 ###
 	shared_focus = TRA_question_of_transylvania
 }

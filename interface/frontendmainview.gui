@@ -151,11 +151,11 @@ guiTypes = {
 		animation_type = decelerated
 		animation_time = 1000					
 		size = { width = 256 height = 768}
-		Orientation = LOWER_RIGHT
+		Orientation = UPPER_RIGHT
 
 		ButtonType = {
 			name = "achievements_button"
-			position = { x = -50 y = 25 }
+			position = { x = 125 y = 250 }
 			quadTextureSprite ="achievements"
 			pdx_tooltip = "MENU_ACHIEVEMENTS"
 		}
@@ -163,13 +163,13 @@ guiTypes = {
 		iconType = {
 			name ="frontend_dev_logo"
 			spriteType = "GFX_frontend_dev_logo"
-			position = { x= 125 y = 15 }
+			position = { x= 125 y = 200 }
 		}
 		
 		iconType = {
 			name ="pdx_int_logo"
 			spriteType = "GFX_pdx_int_logo"
-			position = { x= 15 y = 50 }
+			position = { x= 15 y = 200 }
 		}
 		
 	}
@@ -178,11 +178,11 @@ guiTypes = {
 	### SINGLE PLAYER MENU
 	containerWindowType = {
 		name = "mainmenu_single_player"
-		position = { x=160 y =200}
+		position = { x=160 y = 200}
 		size = { width = 320 height = 80% }
 		Orientation = UPPER_LEFT
 		Origo = upper_left
-				
+		
 		background = {
 			name = "Background"		
 			quadTextureSprite ="GFX_tiled_window"
@@ -279,11 +279,6 @@ guiTypes = {
 		size = { width = 320 height = 80% }
 		Orientation = UPPER_LEFT
 		Origo = upper_left
-
-		positionType = {
-			name = "subscription_size"
-			position = { x = 320 y = 563 }
-		}
 				
 		background = {
 			name = "Background"		
@@ -334,8 +329,7 @@ guiTypes = {
 		positionType = {
 			name = "version_label_subscription_position"
 			position = { x = 35 y = 524 }
-		}
-		
+		}		
 		
 		ButtonType = {
 			name = "settings_button"
@@ -405,42 +399,6 @@ guiTypes = {
 			
 		}
 
-		iconType = {
-			name = "subscription_divider"
-			position = { x = 4 y = 336 }
-			spriteType = "GFX_main_lobby_divider"
-		}
-
-		containerWindowType = {
-			name = "subscription_widget"
-			position = { x = 16 y = 352 }
-			size = { width = 288 height = 108 }
-
-			ButtonType = {
-				name = "show_subscription"
-				position = { x = 0 y = 0 }
-				quadTextureSprite ="GFX_subscription_widget"
-				buttonText = "SUBSCRIPTION_WIDGET"
-				buttonFont = "hoi_24header"
-				multiline = yes
-			}
-		}
-
-		containerWindowType = {
-			name = "subscription_widget_subscribed"
-			position = { x = 16 y = 352 }
-			size = { width = 288 height = 108 }
-
-			ButtonType = {
-				name = "show_subscription"
-				position = { x = 0 y = 0 }
-				quadTextureSprite ="GFX_subscription_widget_active"
-				frame = 1
-				buttonText = "SUBSCRIPTION_WIDGET_SUBSCRIBED"
-				buttonFont = "hoi_24header"
-				multiline = yes
-			}
-		}
 	}
 
 ### original web links ###
@@ -598,6 +556,6 @@ guiTypes = {
 			position = { x = 0 y = 0 }
 			quadTextureSprite ="achievements"
 			pdx_tooltip = "MENU_ACHIEVEMENTS"
-		}		
+		}
 	}
 }
