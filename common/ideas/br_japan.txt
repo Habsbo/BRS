@@ -1,0 +1,21 @@
+### made by LingXia ###
+ideas = {
+	
+	country = {
+		JAP_eight_eight_fleet_plan = {
+			picture = AUS_naval_efficiency_idea
+
+			allowed = { original_tag = JAP }
+
+			allowed_civil_war = { always = no }
+
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = -0.20
+				industrial_capacity_dockyard = 0.20
+				consumer_goods_factor = -0.15
+			}
+		}
+	}
+}

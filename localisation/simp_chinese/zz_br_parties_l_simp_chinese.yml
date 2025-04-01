@@ -299,17 +299,17 @@
 
 
 #hki - japan
- JAP_soc_anarchism_party: ""
- JAP_vanwardism_party: ""
- JAP_sci_socialism_party: ""
- JAP_con_socialism_party: ""
- JAP_dem_socialism_party: ""
- JAP_dem_liberalism_party: "" 
- JAP_dem_conservatism_party: "" 
- JAP_authoritarian_party: ""
- JAP_fascism_party: ""
- JAP_nationalism_party: ""
- JAP_supernationalism_party: ""
+ JAP_soc_anarchism_party: "日本共产党"
+ JAP_vanwardism_party: "日本社会党"
+ JAP_sci_socialism_party: "社会民众党"
+ JAP_con_socialism_party: "日本劳动农民党"
+ JAP_dem_socialism_party: "日本农民党"
+ JAP_dem_liberalism_party: "立宪民政党"
+ JAP_dem_conservatism_party: "立宪政友会"
+ JAP_authoritarian_party: "协同党"
+ JAP_fascism_party: "协同党"
+ JAP_nationalism_party: "协同党"
+ JAP_supernationalism_party: "协同党"
 #hki - korean
  KOR_soc_anarchism_party: "朝鲜无政府主义"
  KOR_vanwardism_party: "朝鲜劳动党国际派(CSR-I)" #Chosŏn Rodongdang

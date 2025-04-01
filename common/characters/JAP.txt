@@ -1,0 +1,76 @@
+characters = {
+	JAP_Hirohito = {
+		name = Mikado_Hirohito
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_JAP_Hirohito
+			}
+			army = {
+				large = GFX_Portrait_JAP_Hirohito
+			}
+		}
+		country_leader = {
+			ideology = socialism
+			traits = { emperor_showa }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = liberalism
+			traits = { emperor_showa }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = conservatism
+			traits = { emperor_showa }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = despotism
+			traits = { emperor_showa }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = fascism_ideology
+			traits = { emperor_showa }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = nazism
+			traits = { emperor_showa }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+
+	JAP_Wakatsuki_Reijiro = {
+		name = Wakatsuki_Reijiro
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_JAP_Wakatsuki_Reijiro
+				small = GFX_idea_advisor_JAP_Wakatsuki_Reijiro
+			}
+			army = {
+				large = GFX_Portrait_JAP_Wakatsuki_Reijiro
+				small = GFX_idea_advisor_JAP_Wakatsuki_Reijiro
+			}
+		}
+		advisor = {
+			slot = head_of_gov
+			idea_token = JAP_Wakatsuki_Reijiro
+			allowed = {
+				original_tag = JAP
+			}
+			available = {
+				br_head_of_gov_generic_trigger = yes
+			}
+			cost = 0
+			can_be_fired = no
+			traits = { successor_of_takaaki_kato weak_compromiser generic_head_of_gov_hidden }
+		}
+	}
+}
