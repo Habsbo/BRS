@@ -1,6 +1,23 @@
 ideas = {
 
 	hidden_ideas = {
+		
+		generic_industrialization_idea = {
+			removal_cost = -1
+
+			allowed = { always = yes }
+
+			allowed_civil_war = { always = yes }
+
+			#on_add = {}
+
+			#on_remove = {}
+
+			modifier = {
+				civilian_factory_use = 5
+			}
+		}
+
 		BEL_king_traits_hidden = {
 			allowed = { always = no }
 			allowed_civil_war = { always = yes }
@@ -208,6 +225,119 @@ ideas = {
 
 # Special ones that can be applied on other countries through focus system.
 	country = {
+		generic_military_college = {
+			picture = generic_army_war_college
+
+			removal_cost = -1
+
+			allowed = { always = yes }
+
+			allowed_civil_war = { always = yes }
+
+			#on_add = {}
+
+			#on_remove = {}
+
+			modifier = {
+				max_command_power = 20
+				experience_gain_army_factor = 0.05
+			}
+			
+		}
+		generic_artillery = {
+			picture = generic_artillery_regiments
+
+			removal_cost = -1
+
+			allowed = { always = yes }
+
+			allowed_civil_war = { always = yes }
+
+			#on_add = {}
+
+			#on_remove = {}
+
+			modifier = {
+				army_artillery_attack_factor = 0.05
+			}
+
+			equipment_bonus = {
+				artillery_equipment = {
+					build_cost_ic = -0.05 instant = yes
+				}
+			}
+			
+		}
+		generic_engineer_crops = {
+			picture = generic_artillery_manufacturer_1
+
+			removal_cost = -1
+
+			allowed = { always = yes }
+
+			allowed_civil_war = { always = yes }
+
+			#on_add = {}
+
+			#on_remove = {}
+
+			modifier = { army_org_regain = 0.05 }
+
+			equipment_bonus = {
+				support_equipment = {
+					build_cost_ic = -0.05 instant = yes
+				}
+			}
+			
+		}
+		generic_willpower = {
+			picture = generic_manpower_bonus
+
+			removal_cost = -1
+
+			allowed = { always = yes }
+
+			allowed_civil_war = { always = yes }
+
+			#on_add = {}
+
+			#on_remove = {}
+
+			modifier = {
+				conscription = 0.015
+				army_advisor_cost_factor = -0.05
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_org_factor = 0.05
+			}
+
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.05 instant = yes
+				}
+			}
+			
+		}
+		generic_tech_college_idea = {
+			picture = generic_research_bonus
+
+			removal_cost = -1
+
+			allowed = { always = yes }
+
+			allowed_civil_war = { always = yes }
+
+			#on_add = {}
+
+			#on_remove = {}
+
+			modifier = {
+				research_speed_factor = 0.08
+				production_factory_efficiency_gain_factor = 0.10
+				industrial_capacity_factory = 0.10
+			}
+			
+		}
 
 		generic_spirit_of_liberalism = {
 			picture = anti_soviet_pact

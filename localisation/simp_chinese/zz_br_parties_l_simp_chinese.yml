@@ -124,6 +124,19 @@
  supernationalism_drift: "§Y$supernationalism$§!意识形态增长"
  supernationalism_acceptance: "§Y$supernationalism$§!接受度"
 
+#UK
+ WLS_soc_anarchism_party: ""
+ WLS_vanwardism_party: ""
+ WLS_sci_socialism_party: ""
+ WLS_con_socialism_party: "工党"
+ WLS_dem_socialism_party: "威尔士党" #Plaid Cymru
+ WLS_dem_liberalism_party: "威尔士自由民主党" 
+ WLS_dem_conservatism_party: "威尔士保守党"
+ WLS_authoritarian_party: ""
+ WLS_fascism_party: ""
+ WLS_nationalism_party: ""
+ WLS_supernationalism_party: ""
+
  CAT_soc_anarchism_party: "CNT-FAI（全国劳工联盟）"
  CAT_vanwardism_party: "工团党"
  CAT_sci_socialism_party: "西班牙共产党"

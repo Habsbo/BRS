@@ -8,27 +8,54 @@ country_event = { #
 	desc = br_serbia.1.desc
 	picture = GFX_report_event_chinese_soldiers_fighting
 
-	fire_only_once = yes
+	#fire_only_once = yes
 	is_triggered_only = yes
 
 	immediate = {
 		hidden_effect = {
-			#
+			MAC = { every_core_state = { add_claim_by = root } }
 		}
 	}
 
 	option = {
 		name = br_serbia.1.a #
 
-		FROM = {
-			create_wargoal = {
-				target = ROOT
-				type = take_claimed_state
-				generator = { 106 }
+		add_political_power = 50
+		add_war_support = 0.05
+		add_stability = 0.05
+		FROM = { country_event = br_serbia.2 }
+		custom_effect_tooltip = probability_tt
+		effect_tooltip = {
+			FROM = {
+				create_wargoal = {
+					target = ROOT
+					type = take_claimed_state
+					generator = { 970 106 }
+				}
 			}
 		}
 
-		ai_chance = { factor = 7 }
+		ai_chance = { base = 7 }
+	}
+
+	option = {
+		name = br_serbia.1.b #
+
+		add_political_power = -50
+		add_war_support = -0.05
+		add_stability = -0.05
+		FROM = {
+			set_autonomy = { target = MAC autonomy_state = autonomy_puppet }
+			country_event = br_serbia.3
+		}
+
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 1
+			}
+		}
+
 	}
 }
 
@@ -38,21 +65,393 @@ country_event = { #
 	desc = br_serbia.2.desc
 	picture = GFX_report_event_chinese_soldiers_fighting
 
-	fire_only_once = yes
+	#fire_only_once = yes
 	is_triggered_only = yes
 
 	immediate = {
-		hidden_effect = {
-			#
-		}
+		hidden_effect = {}
 	}
 
 	option = {
 		name = br_serbia.2.a #
 
-		
+		add_war_support = 0.05
 
-		ai_chance = { factor = 7 }
+		create_wargoal = {
+			target = from
+			type = take_claimed_state
+			generator = { 970 106 }
+		}
+
+		ai_chance = { base = 7 }
+	}
+
+	option = {
+		name = br_serbia.2.b #
+
+		add_stability = -0.05
+		MAC = { every_core_state = { remove_claim_by = root } }
+		
+		ai_chance = { base = 7 }
 	}
 }
 
+country_event = { #
+	id = br_serbia.3
+	title = br_serbia.3.title
+	desc = br_serbia.3.desc
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	#fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {}
+	}
+
+	option = {
+		name = br_serbia.3.a #
+
+		ai_chance = { base = 7 }
+	}
+}
+
+country_event = { #
+	id = br_serbia.4
+	title = br_serbia.4.title
+	desc = br_serbia.4.desc
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	#fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {}
+	}
+
+	option = {
+		name = br_serbia.4.a #
+
+		ai_chance = { base = 7 }
+	}
+}
+
+country_event = { #
+	id = br_serbia.5
+	title = br_serbia.5.title
+	desc = br_serbia.5.desc
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	#fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {}
+	}
+
+	option = {
+		name = br_serbia.5.a #
+
+		ai_chance = { base = 7 }
+	}
+}
+
+country_event = { #
+	id = br_serbia.6
+	title = br_serbia.6.title
+	desc = br_serbia.6.desc
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	#fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {}
+	}
+
+	option = {
+		name = br_serbia.6.a #
+
+		ai_chance = { base = 7 }
+	}
+}
+
+country_event = { #
+	id = br_serbia.7
+	title = br_serbia.7.title
+	desc = br_serbia.7.desc
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	#fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {}
+	}
+
+	option = {
+		name = br_serbia.7.a #
+
+		ai_chance = { base = 7 }
+	}
+}
+
+country_event = { #
+	id = br_serbia.8
+	title = br_serbia.8.title
+	desc = br_serbia.8.desc
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	#fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {}
+	}
+
+	option = {
+		name = br_serbia.8.a #
+
+		ai_chance = { base = 7 }
+	}
+}
+
+country_event = { #
+	id = br_serbia.9
+	title = br_serbia.9.title
+	desc = br_serbia.9.desc
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	#fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {}
+	}
+
+	option = {
+		name = br_serbia.9.a #
+
+		ai_chance = { base = 7 }
+	}
+}
+
+country_event = { #
+	id = br_serbia.10
+	title = br_serbia.10.title
+	desc = br_serbia.10.desc
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	#fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {}
+	}
+
+	option = {
+		name = br_serbia.10.a #
+
+		ai_chance = { base = 7 }
+	}
+}
+
+country_event = { #
+	id = br_serbia.11
+	title = br_serbia.11.title
+	desc = br_serbia.11.desc
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	#fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {}
+	}
+
+	option = {
+		name = br_serbia.11.a #
+
+		ai_chance = { base = 7 }
+	}
+}
+
+country_event = { #
+	id = br_serbia.12
+	title = br_serbia.12.title
+	desc = br_serbia.12.desc
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	#fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {}
+	}
+
+	option = {
+		name = br_serbia.12.a #
+
+		ai_chance = { base = 7 }
+	}
+}
+
+country_event = { #
+	id = br_serbia.13
+	title = br_serbia.13.title
+	desc = br_serbia.13.desc
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	#fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {}
+	}
+
+	option = {
+		name = br_serbia.13.a #
+
+		ai_chance = { base = 7 }
+	}
+}
+
+country_event = { #
+	id = br_serbia.14
+	title = br_serbia.14.title
+	desc = br_serbia.14.desc
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	#fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {}
+	}
+
+	option = {
+		name = br_serbia.14.a #
+
+		ai_chance = { base = 7 }
+	}
+}
+
+country_event = { #
+	id = br_serbia.15
+	title = br_serbia.15.title
+	desc = br_serbia.15.desc
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	#fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {}
+	}
+
+	option = {
+		name = br_serbia.15.a #
+
+		ai_chance = { base = 7 }
+	}
+}
+
+country_event = { #
+	id = br_serbia.16
+	title = br_serbia.16.title
+	desc = br_serbia.16.desc
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	#fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {}
+	}
+
+	option = {
+		name = br_serbia.16.a #
+
+		ai_chance = { base = 7 }
+	}
+}
+
+country_event = { #
+	id = br_serbia.17
+	title = br_serbia.17.title
+	desc = br_serbia.17.desc
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	#fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {}
+	}
+
+	option = {
+		name = br_serbia.17.a #
+
+		ai_chance = { base = 7 }
+	}
+}
+
+country_event = { #
+	id = br_serbia.18
+	title = br_serbia.18.title
+	desc = br_serbia.18.desc
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	#fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {}
+	}
+
+	option = {
+		name = br_serbia.18.a #
+
+		ai_chance = { base = 7 }
+	}
+}
+
+country_event = { #
+	id = br_serbia.19
+	title = br_serbia.19.title
+	desc = br_serbia.19.desc
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	#fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {}
+	}
+
+	option = {
+		name = br_serbia.19.a #
+
+		ai_chance = { base = 7 }
+	}
+}
+
+country_event = { #
+	id = br_serbia.20
+	title = br_serbia.20.title
+	desc = br_serbia.20.desc
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	#fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {}
+	}
+
+	option = {
+		name = br_serbia.20.a #
+
+		ai_chance = { base = 7 }
+	}
+}

@@ -187,6 +187,8 @@ ideas = {
 
 			modifier = {
 				political_power_cost = 0.10
+				war_support_factor = 0.10
+				conscription_factor = 0.15
 				research_speed_factor = 0.03
 			}
 		}

@@ -12,9 +12,13 @@
  ENG: "英格兰"
  ENG_DEF: "英格兰"
  ENG_ADJ: "英国"
- WLS: "威尔士"
- WLS_DEF: "威尔士"
- WLS_ADJ: "威尔士"
+
+ WLS: "凯美洛" #Cymru
+ WLS_DEF: "凯美洛"
+ WLS_ADJ: "凯美洛"
+ WLS_ENG_subject: "威尔士"
+ WLS_ENG_subject_DEF: "威尔士"
+ WLS_ENG_subject_ADJ: "威尔士"
 
  SCO: "苏格兰"
  SCO_DEF: "苏格兰"

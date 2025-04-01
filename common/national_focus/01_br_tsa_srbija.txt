@@ -12,7 +12,7 @@ focus_tree = {
 	
 	default = no
 
-	continuous_focus_position = { x = 50 y = 1500 }
+	continuous_focus_position = { x = 25 y = 1075 }
 	
 	focus = {
 		id = SER_
@@ -34,7 +34,6 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		complete_tooltip = {}
-		
 		completion_reward = {}
 		
 		ai_will_do = { factor = 1 }
@@ -45,7 +44,7 @@ focus_tree = {
 		icon = GFX_
 		#prerequisite = { focus =  }
 		#mutually_exclusive = { focus =  }
-		x = 12
+		x = 10
 		y = 0
 		#relative_position_id =
 
@@ -53,7 +52,7 @@ focus_tree = {
 		
 		available = {
 			OR = {
-				MAC = { is_puppet_of = BUL }
+				MAC = { is_subject_of = BUL }
 				106 = { is_fully_controlled_by = BUL }
 			}
 		}
@@ -61,7 +60,7 @@ focus_tree = {
 		bypass = {
 			OR = {
 				AND = {
-					NOT = { MAC = { is_puppet_of = BUL } }
+					NOT = { MAC = { is_subject_of = BUL } }
 					NOT = { 106 = { is_fully_controlled_by = BUL } }
 				}
 				has_war_with = BUL
@@ -76,10 +75,9 @@ focus_tree = {
 		
 		completion_reward = {
 			#
-			106 = { add_claim_by = root }
-			#
-			BUL = {
-				country_event = { id = br_ser.1 }
+			BUL = { country_event = { id = br_serbia.1 } }
+			effect_tooltip = {
+				MAC = { every_core_state = { add_claim_by = root } }
 			}
 		}
 		
@@ -94,9 +92,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = SER_war_for_macedonia
 
-		cost = 8
+		cost = 0
 		
-		available = {}
+		available = { always = no }
 		
 		bypass = {}
 		
@@ -172,9 +170,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = SER_war_for_macedonia
 
-		cost = 5
+		cost = 0
 		
-		available = {}
+		available = { always = no }
 		
 		bypass = {}
 		
@@ -318,7 +316,7 @@ focus_tree = {
 		bypass = {
 			104 = {
 				OR = {
-					is_fully_controlled_by = root
+					NOT = { is_fully_controlled_by = root }
 					#
 					free_building_slots = {
 						building = arms_factory
@@ -376,8 +374,10 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		complete_tooltip = {}
-		
-		completion_reward = {}
+		completion_reward = {
+			army_experience = 25
+			#add_ideas = SER_strengthen_militaries_project_idea
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -580,7 +580,12 @@ focus_tree = {
 
 		cost = 5
 		
-		available = {}
+		available = {
+			exists = yes
+			has_capitulated = no
+			is_puppet = no
+			has_war = no
+		}
 		
 		bypass = {}
 		
@@ -874,7 +879,7 @@ focus_tree = {
 		prerequisite = { focus = SER_new_tsar_of_bulgaria focus = SER_bulgaria_republic }
 		#mutually_exclusive = { focus =  }
 		x = -2
-		y = 3
+		y = 2
 		relative_position_id = SER_new_tsar_of_bulgaria
 
 		cost = 8
@@ -899,7 +904,7 @@ focus_tree = {
 		prerequisite = { focus = SER_new_tsar_of_bulgaria focus = SER_bulgaria_republic }
 		#mutually_exclusive = { focus =  }
 		x = 2
-		y = 3
+		y = 2
 		relative_position_id = SER_bulgaria_republic
 
 		cost = 8
@@ -918,4 +923,1545 @@ focus_tree = {
 		
 		ai_will_do = { factor = 1 }
 	}
+### ic ###	
+	focus = {
+		id = SER_industrialization
+		icon = GFX_focus_generic_industry_2
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 26
+		y = 0
+		#relative_position_id =
+
+		cost = 8
+		
+		available = {
+			num_of_civilian_factories_available_for_projects > 4
+		}
+		
+		bypass = {}
+
+		cancel = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		select_effect = {
+			add_ideas = generic_industrialization_idea
+			#
+			custom_effect_tooltip = national_industry_civilian_dynamic_modifier_added
+			add_to_variable = { nic_consumer_goods_expected_value = -0.10 }
+			add_to_variable = { nic_production_speed_buildings_factor = 0.10 }
+			add_to_variable = { nim_production_speed_industrial_complex_factor = 0.10 }
+		}
+
+		cancel_effect = {
+			remove_ideas = generic_industrialization_idea
+		}
+		
+		complete_tooltip = {
+			#
+			custom_effect_tooltip = national_industry_civilian_dynamic_modifier_added
+			add_to_variable = { nic_consumer_goods_expected_value = -0.10 tooltip = consumer_goods_expected_value_tt }
+			add_to_variable = { nic_production_speed_buildings_factor = 0.10 tooltip = production_speed_buildings_factor_tt }
+			add_to_variable = { nim_production_speed_industrial_complex_factor = 0.10 tooltip = production_speed_industrial_complex_factor_whitespace_tt }
+			#
+		}
+		
+		completion_reward = {
+			effect_tooltip = {
+				#
+				custom_effect_tooltip = national_industry_civilian_dynamic_modifier_added
+				add_to_variable = { nic_consumer_goods_expected_value = -0.10 tooltip = consumer_goods_expected_value_tt }
+				add_to_variable = { nic_production_speed_buildings_factor = 0.10 tooltip = production_speed_buildings_factor_tt }
+				add_to_variable = { nim_production_speed_industrial_complex_factor = 0.10 tooltip = production_speed_industrial_complex_factor_whitespace_tt }
+			}
+			hidden_effect = { remove_ideas = generic_industrialization_idea }
+			random_core_state = {
+				limit = {
+					is_controlled_by = root
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = industrial_complex level = 2 }
+			}
+			random_core_state = {
+				limit = {
+					is_controlled_by = root
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 }
+			}
+			random_core_state = {
+				limit = {
+					is_controlled_by = root
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 }
+			}
+		}
+		
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = SER_expanding_mining
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = SER_industrialization }
+		#mutually_exclusive = { focus =  }
+		x = -1
+		y = 1
+		relative_position_id = SER_industrialization
+
+		cost = 5
+		
+		available = {}
+		
+		bypass = {
+			all_core_state = {
+				free_building_slots = {
+					building = industrial_complex
+					size = 0
+					include_locked = yes
+				}
+			}
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			#
+			random_core_state = {
+				limit = {
+					is_controlled_by = root
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 }
+			}
+			#
+			add_tech_bonus = {
+				name = SER_expanding_mining
+				bonus = 1.0
+				uses = 1
+				technology = excavation1
+				technology = excavation2
+				technology = excavation3
+				technology = excavation4
+				technology = excavation5
+			}
+		}
+		
+		ai_will_do = { factor = 2 }
+	}
+
+	focus = {
+		id = SER_heavy_ic
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = SER_industrialization }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 1
+		relative_position_id = SER_industrialization
+
+		cost = 8
+		
+		available = {
+			num_of_civilian_factories_available_for_projects > 4
+		}
+		
+		bypass = {}
+		
+		cancel = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		select_effect = {
+			add_ideas = generic_industrialization_idea
+			#
+			custom_effect_tooltip = national_industry_civilian_dynamic_modifier_added
+			add_to_variable = { nic_consumer_goods_expected_value = -0.10 }
+			add_to_variable = { nic_production_speed_buildings_factor = 0.10 }
+			add_to_variable = { nim_production_speed_industrial_complex_factor = 0.10 }
+		}
+
+		cancel_effect = {
+			remove_ideas = generic_industrialization_idea
+		}
+		
+		complete_tooltip = {
+			#
+			custom_effect_tooltip = national_industry_civilian_dynamic_modifier_added
+			add_to_variable = { nic_consumer_goods_expected_value = -0.10 tooltip = consumer_goods_expected_value_tt }
+			add_to_variable = { nic_production_speed_buildings_factor = 0.10 tooltip = production_speed_buildings_factor_tt }
+			add_to_variable = { nim_production_speed_industrial_complex_factor = 0.10 tooltip = production_speed_industrial_complex_factor_whitespace_tt }
+			#
+			random_core_state = {
+				limit = {
+					is_controlled_by = root
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 }
+			}
+			#
+			add_tech_bonus = {
+				name = SER_heavy_ic
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 3
+				category = industry
+			}
+		}
+		completion_reward = {
+			effect_tooltip = {
+				#
+				custom_effect_tooltip = national_industry_civilian_dynamic_modifier_added
+				add_to_variable = { nic_consumer_goods_expected_value = -0.10 tooltip = consumer_goods_expected_value_tt }
+				add_to_variable = { nic_production_speed_buildings_factor = 0.10 tooltip = production_speed_buildings_factor_tt }
+				add_to_variable = { nim_production_speed_industrial_complex_factor = 0.10 tooltip = production_speed_industrial_complex_factor_whitespace_tt }
+			}
+			hidden_effect = { remove_ideas = generic_industrialization_idea }
+			#
+			random_core_state = {
+				limit = {
+					is_controlled_by = root
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 }
+			}
+			#	
+			add_tech_bonus = {
+				name = SER_heavy_ic
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 3
+				category = industry
+			}
+		}
+		
+		ai_will_do = { factor = 2 }
+	}
+
+	focus = {
+		id = SER_tech_college
+		icon = GFX_focus_generic_university_1
+		prerequisite = {
+			focus = SER_expanding_mining
+			focus = SER_heavy_ic
+		}
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 2
+		relative_position_id = SER_industrialization
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+			add_research_slot = 1
+			add_ideas = generic_tech_college_idea
+		}
+		completion_reward = {
+			add_research_slot = 1
+			add_ideas = generic_tech_college_idea
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = SER_traffics
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = SER_tech_college }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = SER_tech_college
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			#
+			custom_effect_tooltip = national_industry_civilian_dynamic_modifier_added
+			add_to_variable = { nic_consumer_goods_expected_value = -0.10 tooltip = consumer_goods_expected_value_tt }
+			add_to_variable = { nic_production_speed_buildings_factor = 0.10 tooltip = production_speed_buildings_factor_tt }
+			add_to_variable = { nim_production_speed_industrial_complex_factor = 0.10 tooltip = production_speed_industrial_complex_factor_whitespace_tt }
+			#
+			every_core_state = {
+				limit = {
+					is_controlled_by = root
+					free_building_slots = { building = infrastructure size > 0 }
+				}
+				if = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+				}
+				add_building_construction = { type = infrastructure level = 1 }
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = SER_electrification
+		icon = GFX_focus_generic_energy
+		prerequisite = { focus = SER_traffics }
+		#mutually_exclusive = { focus =  }
+		x = -1
+		y = 1
+		relative_position_id = SER_traffics
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			#
+			add_stability = 0.05
+			#
+			custom_effect_tooltip = national_industry_civilian_dynamic_modifier_added
+			add_to_variable = { nic_consumer_goods_expected_value = -0.05 tooltip = consumer_goods_expected_value_tt }
+			add_to_variable = { nic_production_speed_buildings_factor = 0.05 tooltip = production_speed_buildings_factor_tt }
+			add_to_variable = { nim_production_speed_industrial_complex_factor = 0.05 tooltip = production_speed_industrial_complex_factor_whitespace_tt }
+			#
+			random_core_state = {
+				prioritize = { 107 }
+				limit = {
+					is_controlled_by = root
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = industrial_complex level = 2 }
+			}
+			random_core_state = {
+				limit = {
+					is_controlled_by = root
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 }
+			}
+			random_core_state = {
+				limit = {
+					is_controlled_by = root
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 }
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = SER_improve_roads
+		icon = GFX_focus_generic_improve_roads
+		prerequisite = { focus = SER_traffics }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 1
+		relative_position_id = SER_traffics
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			#
+			custom_effect_tooltip = national_industry_civilian_dynamic_modifier_added
+			add_to_variable = { nic_consumer_goods_expected_value = -0.05 tooltip = consumer_goods_expected_value_tt }
+			add_to_variable = { nic_production_speed_buildings_factor = 0.05 tooltip = production_speed_buildings_factor_tt }
+			add_to_variable = { nim_production_speed_industrial_complex_factor = 0.05 tooltip = production_speed_industrial_complex_factor_whitespace_tt }
+			#
+			every_controlled_state = {
+				limit = {
+					is_in_home_area = yes
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+				}
+				add_building_construction = { type = infrastructure level = 1 }
+				if = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size < 2
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = { type = industrial_complex level = 1 }
+				}
+				else = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = { type = industrial_complex level = 1 }
+				}
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = SER_urbanization
+		icon = GFX_focus_generic_low_cost_housing
+		prerequisite = { focus = SER_electrification }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = SER_electrification
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			#
+			custom_effect_tooltip = national_industry_civilian_dynamic_modifier_added
+			add_to_variable = { nic_consumer_goods_expected_value = -0.05 tooltip = consumer_goods_expected_value_tt }
+			add_to_variable = { nic_production_speed_buildings_factor = 0.05 tooltip = production_speed_buildings_factor_tt }
+			#
+			random_core_state = {
+				prioritize = { 107 }
+				limit = {
+					is_controlled_by = root
+					free_building_slots = {
+						building = industrial_complex
+						size >2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = { type = industrial_complex level = 1 }
+			}
+			every_core_state = {
+				limit = {
+					is_controlled_by = root
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = SER_hearts_of_steel
+		icon = GFX_focus_generic_steel
+		prerequisite = { focus = SER_improve_roads }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = SER_improve_roads
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			random_core_state = {
+				prioritize = { 71 }
+				limit = { is_fully_controlled_by = root }
+				add_resource = { type = steel amount = 24 }
+				add_resource = { type = chromium amount = 8 }
+				add_resource = { type = aluminium amount = 12 }
+				if = {
+					limit = {
+						free_building_slots = { building = industrial_complex size > 1 }
+					}
+					add_building_construction = { type = industrial_complex level = 2 }
+				}
+				else = {
+					add_cic = 5000
+				}
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = SER_wisdom_buding
+		icon = GFX_focus_research2
+		prerequisite = {
+			focus = SER_urbanization
+			focus = SER_hearts_of_steel
+		}
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 3
+		relative_position_id = SER_traffics
+
+		cost = 5
+		
+		available = {
+			num_of_controlled_factories > 50
+		}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			add_research_slot = 1
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+### war economics ###
+	focus = {
+		id = SER_war_economics
+		icon = GFX_focus_generic_aircraft_production
+		prerequisite = { focus = SER_industrialization }
+		#mutually_exclusive = { focus =  }
+		x = -3
+		y = 1
+		relative_position_id = SER_industrialization
+
+		cost = 8
+		
+		available = {
+			OR = {
+				has_war_support > 0.60
+				threat > 0.25
+				has_war_with_major = yes
+				any_enemy_country = {
+					ic_ratio = {
+						tag = ROOT
+						ratio > 0.5
+					}
+				}
+			}
+		}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			#
+			if = {
+				limit = {
+					has_war_support < 0.50
+				}
+				add_war_support = 0.15
+			}
+			else = {
+				add_war_support = 0.05
+			}
+			#
+			if = {
+				limit = {
+					OR = {
+						has_idea = civilian_economy
+						has_idea = low_economic_mobilisation
+					}
+				}
+				add_ideas = partial_economic_mobilisation
+			}
+			else_if = {
+				limit = {
+					has_idea = low_economic_mobilisation
+				}
+				add_ideas = war_economy
+			}
+			else = {
+				add_stability = 0.05
+				army_experience = 15
+			}
+			#
+			custom_effect_tooltip = national_industry_military_dynamic_modifier_added
+			add_to_variable = { nim_production_speed_arms_factory_factor = 0.20 tooltip = production_speed_arms_factory_factor_tt }
+			add_to_variable = { nim_production_factory_efficiency_gain_factor = 0.05 tooltip = production_factory_efficiency_gain_factor_tt }
+			add_to_variable = { nim_production_factory_start_efficiency_factor = 0.05 tooltip = production_factory_start_efficiency_factor_tt }
+			add_to_variable = { nim_production_factory_max_efficiency_factor = 0.05 tooltip = production_factory_max_efficiency_factor_tt }
+			add_to_variable = { nim_production_lack_of_resource_penalty_factor = -0.05 tooltip = production_lack_of_resource_penalty_factor_tt }
+			add_to_variable = { nim_conversion_cost_civ_to_mil_factor = -0.20 tooltip = conversion_cost_civ_to_mil_factor_tt }
+			#
+			random_core_state = {
+				prioritize = { 70 }
+				limit = {
+					is_fully_controlled_by = root
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+					}
+				}
+				add_building_construction = { type = arms_factory level = 1 }
+			}
+			random_core_state = {
+				limit = {
+					is_fully_controlled_by = root
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+					}
+				}
+				add_building_construction = { type = arms_factory level = 1 }
+			}
+		}
+		
+		ai_will_do = { factor = 10 }
+	}
+	focus = {
+		id = SER_emergency_workers
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SER_war_economics }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = SER_war_economics
+
+		cost = 5
+		
+		available = {
+			num_of_controlled_factories > 20
+		}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			add_ideas = SAF_emergency_workers
+			#
+			custom_effect_tooltip = national_industry_civilian_dynamic_modifier_added
+			add_to_variable = { nic_industrial_capacity_factory = 0.10 tooltip = industrial_capacity_factory_tt }
+			#
+			custom_effect_tooltip = national_industry_military_dynamic_modifier_added
+			add_to_variable = { nim_production_factory_efficiency_gain_factor = 0.10 tooltip = production_factory_efficiency_gain_factor_tt }
+			add_to_variable = { nim_production_factory_start_efficiency_factor = 0.10 tooltip = production_factory_start_efficiency_factor_tt }
+			add_to_variable = { nim_production_factory_max_efficiency_factor = 0.10 tooltip = production_factory_max_efficiency_factor_tt }
+			add_to_variable = { nim_production_lack_of_resource_penalty_factor = -0.10 tooltip = production_lack_of_resource_penalty_factor_tt }
+			#
+			random_core_state = {
+				limit = {
+					is_controlled_by = root
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				remove_building = { type = industrial_complex level = 1 }
+				add_building_construction = { type = arms_factory level = 2 }
+			}
+		}
+		
+		ai_will_do = { factor = 2 }
+	}
+	focus = {
+		id = SER_grain_requisition_for_war
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = SER_emergency_workers }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = SER_emergency_workers
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {}
+		
+		ai_will_do = { factor = 2 }
+	}
+### military ###	
+	focus = {
+		id = SER_military_effort_1
+		icon = GFX_focus_generic_little_entente
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 4
+		y = 0
+		relative_position_id = SER_industrialization
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+			#
+			custom_effect_tooltip = national_industry_military_dynamic_modifier_added
+			add_to_variable = { nim_production_speed_arms_factory_factor = 0.20 tooltip = production_speed_arms_factory_factor_tt }
+			#
+			add_war_support = 0.05
+			army_experience = 50
+			#
+			add_doctrine_cost_reduction = {
+				name = SER_military_effort_1
+				cost_reduction = 0.50
+				uses = 1
+				category = land_doctrine
+			}
+		}
+		
+		completion_reward = {
+			#
+			custom_effect_tooltip = national_industry_military_dynamic_modifier_added
+			add_to_variable = { nim_production_speed_arms_factory_factor = 0.10 tooltip = production_speed_arms_factory_factor_tt }
+			#
+			add_war_support = 0.05
+			army_experience = 50
+			#
+			add_doctrine_cost_reduction = {
+				name = SER_military_effort_1
+				cost_reduction = 0.50
+				uses = 1
+				category = land_doctrine
+			}
+		}
+		
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = SER_improve_weapon
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = SER_military_effort_1 }
+		#mutually_exclusive = { focus =  }
+		x = -1
+		y = 1
+		relative_position_id = SER_military_effort_1
+
+		cost = 5
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = SER_improve_weapon
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+		
+		ai_will_do = { factor = 3 }
+	}
+
+	focus = {
+		id = SER_traning
+		icon = GFX_focus_generic_manpower
+		prerequisite = { focus = SER_military_effort_1 }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 1
+		relative_position_id = SER_military_effort_1
+
+		cost = 5
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			army_experience = 50
+			add_doctrine_cost_reduction = {
+				name = SER_traning
+				cost_reduction = 0.25
+				uses = 1
+				category = land_doctrine
+			}
+		}
+		
+		ai_will_do = { factor = 3 }
+	}
+
+	focus = {
+		id = SER_military_college
+		icon = GFX_focus_generic_military_mission
+		prerequisite = {
+			focus = SER_improve_weapon
+			focus = SER_traning
+		}
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 2
+		relative_position_id = SER_military_effort_1
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			add_ideas = generic_military_college
+			add_research_slot = 1
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = SER_artillery
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = {
+			focus = SER_improve_weapon
+			focus = SER_traning
+		}
+		#mutually_exclusive = { focus =  }
+		x = -1
+		y = 3
+		relative_position_id = SER_military_effort_1
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			#
+			add_ideas = generic_artillery
+			#
+			add_tech_bonus = {
+				name = SER_artillery
+				bonus = 1.0
+				uses = 1
+				category = artillery
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = SER_engineer_crops
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = {
+			focus = SER_improve_weapon
+			focus = SER_traning
+		}
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 3
+		relative_position_id = SER_military_effort_1
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			#
+			add_ideas = generic_engineer_crops
+			#
+			add_tech_bonus = {
+				name = SER_engineer_crops
+				bonus = 1.0
+				uses = 3
+				category = support_tech
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = SER_military_effort_2
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = SER_artillery }
+		prerequisite = { focus = SER_engineer_crops }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 2
+		relative_position_id = SER_military_college
+
+		cost = 5
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = SER_military_effort_2
+				cost_reduction = 0.50
+				uses = 1
+				category = land_doctrine
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = SER_special_force
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = SER_military_effort_2 }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = SER_military_effort_2
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			#
+			add_tech_bonus = {
+				name = SER_special_force
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = para_tech
+				category = marine_tech
+				category = mountaineers_tech
+			}
+			#
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				add_doctrine_cost_reduction = {
+					name = SER_special_force
+					cost_reduction = 0.5
+					uses = 2
+					category = special_forces_doctrine
+				}
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = SER_fire_first
+		icon = GFX_focus_generic_combined_arms
+		prerequisite = { focus = SER_military_effort_2 }
+		mutually_exclusive = { focus = SER_willpower }
+		x = -1
+		y = 2
+		relative_position_id = SER_military_effort_2
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			
+			add_tech_bonus = {
+				name = SER_artillery
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 3
+				category = infantry_weapons
+				category = artillery
+			}
+			add_tech_bonus = {
+				name = SER_artillery
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 2
+				technology = motorised_infantry
+				category = armor
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = SER_willpower
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = SER_military_effort_2 }
+		mutually_exclusive = { focus = SER_fire_first }
+		x = 1
+		y = 2
+		relative_position_id = SER_military_effort_2
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+			add_ideas = generic_willpower
+			army_experience = 50
+		}
+		completion_reward = {
+			add_ideas = generic_willpower
+			army_experience = 50
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	focus = {
+		id = SER_military_effort_3
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = {
+			focus = SER_fire_first
+			focus = SER_willpower
+		}
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 3
+		relative_position_id = SER_military_effort_2
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			#
+			add_war_support = 0.10
+			#
+			add_doctrine_cost_reduction = {
+				name = SER_military_effort_1
+				cost_reduction = 0.25
+				uses = 3
+				category = land_doctrine
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+### air ###	
+	focus = {
+		id = SER_fly_plan
+		icon = GFX_goal_generic_air_production
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 4
+		y = 0
+		relative_position_id = SER_military_effort_1
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			air_experience = 25
+			random_core_state = {
+				prioritize = { 107 109 }
+				limit = {
+					is_controlled_by = root
+					free_building_slots = {
+						building = air_base
+						size > 2
+					}
+				}
+				add_building_construction = { type = air_base level = 3 }
+			}
+			random_core_state = {
+				prioritize = { 107 109 }
+				limit = {
+					is_controlled_by = root
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = arms_factory level = 1 }
+			}
+			random_core_state = {
+				limit = {
+					is_controlled_by = root
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = arms_factory level = 1 }
+			}
+		}
+		
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = SER_push_by_myself
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = SER_fly_plan }
+		mutually_exclusive = { focus = SER_existing_plan }
+		x = -1
+		y = 1
+		relative_position_id = SER_fly_plan
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			air_experience = 25
+			#
+			add_tech_bonus = {
+				name = SER_push_by_myself
+				bonus = 1.0
+				uses = 1
+				category = light_fighter
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = SER_existing_plan
+		icon = GFX_focus_generic_copy_plane_designs
+		prerequisite = { focus = SER_fly_plan }
+		mutually_exclusive = { focus = SER_push_by_myself }
+		x = 1
+		y = 1
+		relative_position_id = SER_fly_plan
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			#
+			add_tech_bonus = {
+				name = SAF_replace_the_blenheim
+				bonus = 1.0
+				uses = 1
+				category = light_air
+				category = medium_air
+				category = heavy_air
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	focus = {
+		id = SER_ace_tactics
+		icon = GFX_goal_generic_air_fighter2
+		prerequisite = {
+			focus = SER_push_by_myself
+			focus = SER_existing_plan
+		}
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 2
+		relative_position_id = SER_fly_plan
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			air_experience = 25
+			add_doctrine_cost_reduction = {
+				name = SER_ace_tactics
+				cost_reduction = 0.5
+				uses = 3
+				category = air_doctrine
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	focus = {
+		id = SER_ground_service
+		icon = GFX_focus_generic_multi_role_aircraft
+		prerequisite = { focus = SER_ace_tactics }
+		#mutually_exclusive = { focus =  }
+		x = -1
+		y = 1
+		relative_position_id = SER_ace_tactics
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			add_ideas = SLO_ground_service
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	focus = {
+		id = SER_spare_parts
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = SER_ace_tactics }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 1
+		relative_position_id = SER_ace_tactics
+
+		cost = 5
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			#
+			air_experience = 50
+			#
+			random_core_state = {
+				prioritize = { 107 }
+				limit = {
+					is_controlled_by = root
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = arms_factory level = 1 }
+			}
+			random_core_state = {
+				limit = {
+					is_controlled_by = root
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = arms_factory level = 1 }
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = SER_combat_in_harsh
+		icon = GFX_focus_SOV_women_in_aviation
+		prerequisite = {
+			focus = SER_ground_service
+			focus = SER_spare_parts
+		}
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = SER_ground_service
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			add_ideas = SLO_combat_in_harsh
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = SER_rotations_for_battles
+		icon = GFX_goal_generic_build_airforce
+		prerequisite = {
+			focus = SER_ground_service
+			focus = SER_spare_parts
+		}
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = SER_spare_parts
+
+		cost = 8
+		
+		available = {
+			NOT = { has_idea = SLO_rotations_for_battles }
+		}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		
+		completion_reward = {
+			add_timed_idea = { idea = SLO_rotations_for_battles days = 182 }
+			#
+			random_core_state = {
+				prioritize = { 107 }
+				limit = {
+					is_fully_controlled_by = root
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = arms_factory level = 1 }
+			}
+			#
+			hidden_effect = {
+				uncomplete_national_focus = { focus = SER_rotations_for_battles }
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+
 }

@@ -1,0 +1,34 @@
+br_french_politics_categories = {
+    br_french_politics = {
+		icon = category_generic_prospect_for_resources
+
+		target_root_trigger = {
+			#has_complete_focus = ROM_projection_of_industry
+		}
+		target_array = ROM.core_states
+		target_trigger = {
+			FROM = {
+				#
+			}
+		}
+		visible = {
+
+		}
+		available = {
+			
+		}
+
+		cost = 50
+
+		days_remove = 56
+		days_re_enable = 1
+		state_target = yes
+		on_map_mode = map_only
+		
+		complete_effect = {}
+
+		remove_effect = {
+			FROM = {}
+		}
+	}
+}

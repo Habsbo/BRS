@@ -1,4 +1,14 @@
 ﻿l_simp_chinese:
+ the_great: "伟大的[THIS.GetLeader]"
+
+ generic_industrialization_idea: "工业化"
+ generic_industrialization_idea_desc: ""
+ generic_tech_college_idea: "技术学院"
+ generic_tech_college_idea_desc: ""
+
+ generic_willpower: "意志至上"
+ generic_willpower_desc: ""
+
  br_romania_ic_categories: "[ROOT.GetAdjective]工业计划"
  br_romania_ic_categories_on_map_area: "[ROOT.GetAdjective]国家工业计划部"
  br_romania_agrarian_reform: "农业改革"

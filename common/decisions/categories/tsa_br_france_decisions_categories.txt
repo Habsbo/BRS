@@ -1,0 +1,10 @@
+br_french_politics_categories = {
+	icon = generic_industry
+
+	#allowed = { original_tag = FRA }
+
+	visible = { original_tag = FRA }
+
+	visible_when_empty = yes
+	priority = 10
+}

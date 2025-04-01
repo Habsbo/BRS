@@ -1,0 +1,120 @@
+characters = {
+### 工党 ###
+	WLS_cliff_prothero = { #
+		name = WLS_cliff_prothero
+		portraits = {
+			civilian = {
+				large = GFX_portrait_WLS_cliff_prothero
+				small = GFX_portrait_WLS_cliff_prothero_small
+			}
+		}
+	}
+### Wales ###
+	WLS_lewis_valentine = { #
+		name = WLS_lewis_valentine
+		portraits = {
+			civilian = {
+				large = GFX_portrait_WLS_lewis_valentine
+				small = GFX_portrait_WLS_lewis_valentine_small
+			}
+		}
+	}
+	WLS_john_saunders_lewis = { #
+		name = WLS_saunders_lewis
+		portraits = {
+			civilian = {
+				large = GFX_portrait_WLS_john_saunders_lewis
+				small = GFX_portrait_WLS_john_saunders_lewis_small
+			}
+		}
+	}
+	WLS_john_edward_daniel = { #
+		name = WLS_john_edward_daniel
+		portraits = {
+			civilian = {
+				large = GFX_portrait_WLS_john_edward_daniel
+				small = GFX_portrait_WLS_john_edward_daniel_small
+			}
+		}
+	}
+	WLS_abi_williams = { #
+		name = WLS_abi_williams
+		portraits = {
+			civilian = {
+				large = GFX_portrait_WLS_abi_williams
+				small = GFX_portrait_WLS_abi_williams_small
+			}
+		}
+	}
+### 威尔士自由党 ###
+	#Sir Evan Spicer - 爵士 埃文·斯派瑟
+	WLS_evan_spicer = {
+		name = WLS_evan_spicer
+		portraits = {
+			civilian = {
+				large = GFX_portrait_WLS_evan_spicer
+				small = GFX_portrait_WLS_evan_spicer_small
+			}
+		}
+	}
+	#Sir John Herbert Lewis - 爵士 约翰·赫伯特·刘易斯，死于1933年
+	WLS_john_herbert_lewis = {
+		name = WLS_john_herbert_lewis
+		portraits = {
+			civilian = {
+				large = GFX_portrait_WLS_john_herbert_lewis
+				small = GFX_portrait_WLS_john_herbert_lewis_small
+			}
+		}
+	}
+	#1st Earl Lloyd-George of Dwyfor - 德威福的第一代伯爵（Earl）大卫·劳埃德·乔治
+	WLS_david_lloyd_george = {
+		name = WLS_david_lloyd_george
+		portraits = {
+			civilian = {
+				large = GFX_portrait_WLS_david_lloyd_george
+				small = GFX_portrait_WLS_david_lloyd_george_small
+			}
+		}
+	}
+	#Edward Clement Davies
+	WLS_edward_clement_davies = {
+		name = WLS_edward_clement_davies
+		portraits = {
+			civilian = {
+				large = GFX_portrait_WLS_edward_clement_davies
+				small = GFX_portrait_WLS_edward_clement_davies_small
+			}
+		}
+	}
+	#
+	WLS_evan_roderic_bowen = {
+		name = WLS_evan_roderic_bowen
+		portraits = {
+			civilian = {
+				large = GFX_portrait_WLS_evan_roderic_bowen
+				small = GFX_portrait_WLS_evan_roderic_bowen_small
+			}
+		}
+	}
+	#J. Walter Jones
+	WLS_j_walter_jones = {
+		name = WLS_j_walter_jones
+		portraits = {
+			civilian = {
+				large = GFX_portrait_WLS_j_walter_jones
+				small = GFX_portrait_WLS_j_walter_jones_small
+			}
+		}
+	}
+	#Parry Brown
+	WLS_parry_brown = {
+		name = WLS_parry_brown
+		portraits = {
+			civilian = {
+				large = GFX_portrait_WLS_parry_brown
+				small = GFX_portrait_WLS_parry_brown_small
+			}
+		}
+	}
+}

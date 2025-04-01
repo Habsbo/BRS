@@ -15,6 +15,9 @@ focus_tree = {
 
 	continuous_focus_position = { x = 2800 y = 10 }
 
+	shared_focus = Hellenic_shared_megali_idea
+	shared_focus = Hellenic_shared_rebirth_of_byzantine_empire
+
 #	focus = {
 #		id = IRO_
 #		icon = GFX_
@@ -163,30 +166,6 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 	}
 
-	focus = {
-		id = BYZ_retrieve_anatolia
-		icon = GFX_
-		prerequisite = { focus = BYZ_marmaromenos_vasilias }
-		#mutually_exclusive = { focus =  }
-		x = 0
-		y = 1
-		relative_position_id = BYZ_marmaromenos_vasilias
-		
-		cost = 8
-
-		available = {}
-		bypass = {}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		completion_reward = {}
-
-		ai_will_do = { factor = 1 }
-	}
-
 #
 	focus = {
 		id = BYZ_
@@ -238,13 +217,223 @@ focus_tree = {
 }
 
 shared_focus = {
-	id = Hellenic_shared_
+	id = Hellenic_shared_megali_idea
+	icon = GFX_focus_GRE_resurrecting_the_megali_idea
+	#prerequisite = { focus =  }
+	#mutually_exclusive = { focus = }
+	x = 12
+	y = 0
+	#relative_position_id = 
+
+	cost = 0
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+shared_focus = {
+	id = Hellenic_shared_rebirth_of_byzantine_empire
+	icon = GFX_focus_GRE_reviving_the_double_headed_eagle
+	#prerequisite = { focus =  }
+	#mutually_exclusive = { focus = }
+	x = 2
+	y = 0
+	relative_position_id =  Hellenic_shared_megali_idea
+
+	cost = 0
+	
+	available = {  }
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+shared_focus = {
+	id = Hellenic_shared_strike_to_smyrna
 	icon = GFX_focus_ARG_defense_and_democracy
-	prerequisite = { focus = North_Africa_anti_france }
+	prerequisite = {
+		focus = Hellenic_shared_megali_idea
+		focus = Hellenic_shared_rebirth_of_byzantine_empire
+	}
+	#mutually_exclusive = { focus =  }
+	x = 1
+	y = 1
+	relative_position_id = Hellenic_shared_megali_idea
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+
+shared_focus = {
+	id = Hellenic_shared_liberating_constantinople
+	icon = GFX_focus_ARG_defense_and_democracy
+	prerequisite = {
+		focus = Hellenic_shared_megali_idea
+		focus = Hellenic_shared_rebirth_of_byzantine_empire
+	}
+	#mutually_exclusive = { focus =  }
+	x = 3
+	y = 2
+	relative_position_id = Hellenic_shared_megali_idea
+
+	cost = 5
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {
+		341 = {
+			remove_claim_by = root
+			add_claim_by = root
+		}
+		797 = {
+			remove_claim_by = root
+			add_claim_by = root
+			set_state_name = BYZ_CONSTANTINOPLE_STATE
+		}
+	}
+
+	ai_will_do = { factor = 1 }
+}
+shared_focus = {
+	id = Hellenic_shared_recover_hagia_sophia
+	icon = GFX_focus_ARG_defense_and_democracy
+	prerequisite = { focus = Hellenic_shared_liberating_constantinople }
 	#mutually_exclusive = { focus =  }
 	x = 0
 	y = 1
-	relative_position_id = North_Africa_anti_france
+	relative_position_id = Hellenic_shared_liberating_constantinople
+
+	cost = 2
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+
+shared_focus = {
+	id = Hellenic_shared_sec_treaty_of_lausanne
+	icon = GFX_focus_ARG_defense_and_democracy
+	prerequisite = { focus = Hellenic_shared_megali_idea }
+	mutually_exclusive = { focus = Hellenic_shared_liberating_anatolia }
+	x = -1
+	y = 2
+	relative_position_id = Hellenic_shared_megali_idea
+
+	cost = 0
+	
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = Hellenic_shared_sec_treaty_of_lausanne_trigger_tt
+			always = no
+		}
+	}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+
+shared_focus = {
+	id = Hellenic_shared_liberating_anatolia
+	icon = GFX_focus_ARG_defense_and_democracy
+	prerequisite = { focus = Hellenic_shared_strike_to_smyrna }
+	mutually_exclusive = { focus = Hellenic_shared_sec_treaty_of_lausanne }
+	x = 0
+	y = 1
+	relative_position_id = Hellenic_shared_strike_to_smyrna
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+
+shared_focus = {
+	id = Hellenic_shared_
+	icon = GFX_focus_ARG_defense_and_democracy
+	prerequisite = { focus = Hellenic_shared_liberating_anatolia }
+	#mutually_exclusive = { focus =  }
+	x = 0
+	y = 1
+	relative_position_id = Hellenic_shared_liberating_anatolia
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+
+shared_focus = {
+	id = Hellenic_shared_
+	icon = GFX_focus_ARG_defense_and_democracy
+	#prerequisite = { focus = Hellenic_shared_strike_to_smyrna }
+	#mutually_exclusive = { focus =  }
+	x = 0
+	y = 1
+	#relative_position_id = Hellenic_shared_strike_to_smyrna
 
 	cost = 8
 	

@@ -37,7 +37,151 @@
  br_spain.4.desc: ""
  br_spain.4.a: ""
 #srbija
- br_serbia.1.title: "塞尔维亚王国要求就履行条约而归还马其顿地区"
+ br_serbia.1.title: "[FROM.GetName]要求就履行条约而归还马其顿地区"
  br_serbia.1.desc: ""
  br_serbia.1.a: "就让战争就此到来吧，我们绝不交出我们民族的土地。"
- br_serbia.1.b: "就让战争就此到来吧，我们绝不交出我们民族的土地。"
+ br_serbia.1.b: "好吧，我们接受。"
+
+ br_serbia.2.title: "[FROM.GetName]拒绝交出马其顿"
+ br_serbia.2.desc: ""
+ br_serbia.2.a: "那就开战！"
+ br_serbia.2.b: "还不是时候。"
+
+ br_serbia.3.title: "[FROM.GetName]屈服了"
+ br_serbia.3.desc: ""
+ br_serbia.3.a: "好极了。"
+
+ br_serbia.4.title: ""
+ br_serbia.4.desc: ""
+ br_serbia.4.a: ""
+ br_serbia.4.b: ""
+
+ br_serbia.5.title: ""
+ br_serbia.5.desc: ""
+ br_serbia.5.a: ""
+ br_serbia.5.b: ""
+
+ br_serbia.6.title: ""
+ br_serbia.6.desc: ""
+ br_serbia.6.a: ""
+ br_serbia.6.b: ""
+
+ br_serbia.7.title: ""
+ br_serbia.7.desc: ""
+ br_serbia.7.a: ""
+ br_serbia.7.b: ""
+
+ br_serbia.8.title: ""
+ br_serbia.8.desc: ""
+ br_serbia.8.a: ""
+ br_serbia.8.b: ""
+
+ br_serbia.9.title: ""
+ br_serbia.9.desc: ""
+ br_serbia.9.a: ""
+ br_serbia.9.b: ""
+
+ br_serbia.10.title: ""
+ br_serbia.10.desc: ""
+ br_serbia.10.a: ""
+ br_serbia.10.b: ""
+
+ br_serbia.11.title: ""
+ br_serbia.11.desc: ""
+ br_serbia.11.a: ""
+ br_serbia.11.b: ""
+
+ br_serbia.12.title: ""
+ br_serbia.12.desc: ""
+ br_serbia.12.a: ""
+ br_serbia.12.b: ""
+
+ br_serbia.13.title: ""
+ br_serbia.13.desc: ""
+ br_serbia.13.a: ""
+ br_serbia.13.b: ""
+
+ br_serbia.14.title: ""
+ br_serbia.14.desc: ""
+ br_serbia.14.a: ""
+ br_serbia.14.b: ""
+
+ br_serbia.15.title: ""
+ br_serbia.15.desc: ""
+ br_serbia.15.a: ""
+ br_serbia.15.b: ""
+
+ br_serbia.16.title: ""
+ br_serbia.16.desc: ""
+ br_serbia.16.a: ""
+ br_serbia.16.b: ""
+
+ br_serbia.17.title: ""
+ br_serbia.17.desc: ""
+ br_serbia.17.a: ""
+ br_serbia.17.b: ""
+
+ br_serbia.18.title: ""
+ br_serbia.18.desc: ""
+ br_serbia.18.a: ""
+ br_serbia.18.b: ""
+
+ br_serbia.19.title: ""
+ br_serbia.19.desc: ""
+ br_serbia.19.a: ""
+ br_serbia.19.b: ""
+
+ br_serbia.20.title: ""
+ br_serbia.20.desc: ""
+ br_serbia.20.a: ""
+ br_serbia.20.b: ""
+
+ br_serbia.21.title: ""
+ br_serbia.21.desc: ""
+ br_serbia.21.a: ""
+ br_serbia.21.b: ""
+
+ br_serbia.22.title: ""
+ br_serbia.22.desc: ""
+ br_serbia.22.a: ""
+ br_serbia.22.b: ""
+
+ br_serbia.23.title: ""
+ br_serbia.23.desc: ""
+ br_serbia.23.a: ""
+ br_serbia.23.b: ""
+
+ br_serbia.24.title: ""
+ br_serbia.24.desc: ""
+ br_serbia.24.a: ""
+ br_serbia.24.b: ""
+
+ br_serbia.25.title: ""
+ br_serbia.25.desc: ""
+ br_serbia.25.a: ""
+ br_serbia.25.b: ""
+
+ br_serbia.26.title: ""
+ br_serbia.26.desc: ""
+ br_serbia.26.a: ""
+ br_serbia.26.b: ""
+
+ br_serbia.27.title: ""
+ br_serbia.27.desc: ""
+ br_serbia.27.a: ""
+ br_serbia.27.b: ""
+
+ br_serbia.28.title: ""
+ br_serbia.28.desc: ""
+ br_serbia.28.a: ""
+ br_serbia.28.b: ""
+
+ br_serbia.29.title: ""
+ br_serbia.29.desc: ""
+ br_serbia.29.a: ""
+ br_serbia.29.b: ""
+
+ br_serbia.30.title: ""
+ br_serbia.30.desc: ""
+ br_serbia.30.a: ""
+ br_serbia.30.b: ""

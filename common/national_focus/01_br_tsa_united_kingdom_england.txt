@@ -16,9 +16,210 @@
 
 	shortcut = {
 		name = _shortcut
-		target = ENG_rehabilitate_the_economy
+		target = ENG_imperial_industrial_plan
 		scroll_wheel_factor = 0.725
 		trigger = { always = yes }
+	}
+
+### Imperial Industrial Plan - 帝国工业计划 ###
+	focus = {
+		id = ENG_imperial_industrial_plan
+		icon = GFX_focus_generic_industrialists
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 12
+		y = 0
+		#relative_position_id =
+
+		cost = 5
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+###
+	focus = {
+		id = ENG_establish_DAA
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = ENG_imperial_industrial_plan }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = ENG_imperial_industrial_plan
+
+		cost = 5
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = ENG_daa_review_departments
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = ENG_establish_DAA }
+		#mutually_exclusive = { focus =  }
+		x = -2
+		y = 1
+		relative_position_id = ENG_establish_DAA
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = ENG_daa_request_to_investigate_budget
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = ENG_establish_DAA }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = ENG_establish_DAA
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = ENG_daa_reshuffle_BoE
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = ENG_establish_DAA }
+		#mutually_exclusive = { focus =  }
+		x = 2
+		y = 1
+		relative_position_id = ENG_establish_DAA
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = ENG_daa_authorizing_EBC
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = ENG_daa_review_departments }
+		prerequisite = { focus = ENG_daa_request_to_investigate_budget }
+		prerequisite = { focus = ENG_daa_reshuffle_BoE }
+		mutually_exclusive = { focus = ENG_daa_direct_intervention }
+		x = -1
+		y = 1
+		relative_position_id = ENG_daa_request_to_investigate_budget
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = ENG_daa_direct_intervention
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = ENG_daa_review_departments }
+		prerequisite = { focus = ENG_daa_request_to_investigate_budget }
+		prerequisite = { focus = ENG_daa_reshuffle_BoE }
+		mutually_exclusive = { focus = ENG_daa_authorizing_EBC }
+		x = 2
+		y = 0
+		relative_position_id = ENG_daa_authorizing_EBC
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = ENG_daa_
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = ENG_establish_DAA }
+		#mutually_exclusive = { focus =  }
+		x = 8
+		y = 1
+		relative_position_id = ENG_establish_DAA
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
 	}
 ###
 	focus = {
@@ -50,33 +251,9 @@
 		icon = GFX_goal_generic_territory_or_war
 		prerequisite = { focus = ENG_colonial_economy }
 		#mutually_exclusive = { focus =  }
-		x = -2
+		x = -6
 		y = 1
 		relative_position_id = ENG_colonial_economy
-
-		cost = 8
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		completion_reward = {}
-		
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
-		id = ENG_
-		icon = GFX_goal_generic_demand_territory
-		#prerequisite = { focus =  }
-		#mutually_exclusive = { focus =  }
-		x = 0
-		y = 8
-		#relative_position_id = ENG_
 
 		cost = 8
 		
@@ -122,7 +299,10 @@
 	focus = {
 		id = ENG_rehabilitate_the_economy
 		icon = GFX_focus_generic_treaty
-		#prerequisite = { focus = ENG_ }
+		prerequisite = {
+			focus = ENG_daa_authorizing_EBC
+			focus = ENG_daa_direct_intervention
+		}
 		#mutually_exclusive = { focus =  }
 		x = 0
 		y = 4
@@ -443,216 +623,38 @@
 		ai_will_do = { factor = 1 }
 	}
 
-### Imperial Industrial Plan - 帝国工业计划 ###
 	focus = {
-		id = ENG_imperial_industrial_plan
-		icon = GFX_focus_generic_industrialists
-		#prerequisite = { focus =  }
-		#mutually_exclusive = { focus =  }
-		x = 12
-		y = 0
-		#relative_position_id =
-
-		cost = 5
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		completion_reward = {}
-		
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
-		id = ENG_establish_DAA
-		icon = GFX_goal_generic_intelligence_exchange
-		prerequisite = { focus = ENG_imperial_industrial_plan }
-		#mutually_exclusive = { focus =  }
-		x = 0
-		y = 1
-		relative_position_id = ENG_imperial_industrial_plan
-
-		cost = 5
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		completion_reward = {}
-		
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
-		id = ENG_review_departments
-		icon = GFX_goal_generic_demand_territory
-		prerequisite = { focus = ENG_establish_DAA }
-		#mutually_exclusive = { focus =  }
-		x = -2
-		y = 1
-		relative_position_id = ENG_establish_DAA
-
-		cost = 8
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		completion_reward = {}
-		
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
-		id = ENG_request_to_investigate_budget
-		icon = GFX_goal_generic_demand_territory
-		prerequisite = { focus = ENG_establish_DAA }
-		#mutually_exclusive = { focus =  }
-		x = 0
-		y = 1
-		relative_position_id = ENG_establish_DAA
-
-		cost = 8
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		completion_reward = {}
-		
-		ai_will_do = { factor = 1 }
-	}
-	focus = {
-		id = ENG_reshuffle_BoE
-		icon = GFX_goal_generic_demand_territory
-		prerequisite = { focus = ENG_establish_DAA }
-		#mutually_exclusive = { focus =  }
-		x = 2
-		y = 1
-		relative_position_id = ENG_establish_DAA
-
-		cost = 8
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		completion_reward = {}
-		
-		ai_will_do = { factor = 1 }
-	}
-
-	focus = {
-		id = ENG_compromise
-		icon = GFX_goal_generic_demand_territory
-		prerequisite = { focus = ENG_review_departments }
-		prerequisite = { focus = ENG_request_to_investigate_budget }
-		prerequisite = { focus = ENG_reshuffle_BoE }
-		#mutually_exclusive = { focus =  }
-		x = -1
-		y = 1
-		relative_position_id = ENG_request_to_investigate_budget
-
-		cost = 8
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		completion_reward = {}
-		
-		ai_will_do = { factor = 1 }
-	}
-	
-	focus = {
-		id = ENG_
-		icon = GFX_goal_generic_demand_territory
-		prerequisite = { focus = ENG_review_departments }
-		prerequisite = { focus = ENG_request_to_investigate_budget }
-		prerequisite = { focus = ENG_reshuffle_BoE }
-		#mutually_exclusive = { focus =  }
-		x = 1
-		y = 1
-		relative_position_id = ENG_request_to_investigate_budget
-
-		cost = 8
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		completion_reward = {}
-		
-		ai_will_do = { factor = 1 }
-	}
-
-	
-	focus = {
-		id = ENG_daa_
-		icon = GFX_goal_generic_demand_territory
-		prerequisite = { focus = ENG_establish_DAA }
-		#mutually_exclusive = { focus =  }
-		x = 8
-		y = 1
-		relative_position_id = ENG_establish_DAA
-
-		cost = 8
-		
-		available = {}
-		
-		bypass = {}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		complete_tooltip = {}
-		completion_reward = {}
-		
-		ai_will_do = { factor = 1 }
-	}
-
-	focus = {
-		id = ENG_
+		id = ENG_an1
 		icon = GFX_goal_generic_demand_territory
 		#prerequisite = { focus =  }
 		#mutually_exclusive = { focus =  }
 		x = 0
 		y = 0
 		#relative_position_id =
+
+		cost = 8
+		
+		available = {}
+		
+		bypass = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {}
+		completion_reward = {}
+		
+		ai_will_do = { factor = 1 }
+	}
+	focus = {
+		id = ENG_
+		icon = GFX_goal_generic_demand_territory
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 8
+		#relative_position_id = ENG_
 
 		cost = 8
 		
