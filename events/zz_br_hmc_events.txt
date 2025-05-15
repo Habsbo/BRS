@@ -1,0 +1,212 @@
+add_namespace = br_mhc
+
+#
+country_event = { #
+	id = br_mhc.1
+	title = br_mhc.1.title
+	desc = br_mhc.1.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			random_core_state = {
+				limit = { is_controlled_by_ROOT_or_subject = yes }
+				save_global_event_target_as = HMC_revolutionary_center
+				set_state_flag = HMC_revolt_flag
+				add_core_of = HMC
+			}
+			set_global_flag = br_global_hmc_revolt_flag
+		}
+	}
+
+	option = {
+		name = br_mhc.1.a #
+
+		event_target:HMC_revolutionary_center = { add_core_of = HMC }
+		
+		hidden_effect = {
+			random_list = {
+				1 = { activate_mission = br_mhc_revolt_mission.missionary }
+				1 = { activate_mission = br_mhc_revolt_mission.officer }
+				1 = { activate_mission = br_mhc_revolt_mission.appealing }
+			}
+		}
+
+		activate_mission = br_mhc_revolt_mission.uprising
+
+		ai_chance = { base = 1 }
+	}
+
+}
+
+#
+country_event = { #
+	id = br_mhc.2
+	title = br_mhc.2.title
+	desc = br_mhc.2.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			every_state = {
+				limit = {
+					has_state_flag = HMC_revolt_flag
+				}
+				transfer_state_to = HMC
+			}
+			HMC = {
+				set_capital = {
+					state = event_target:HMC_core
+				}
+			}
+			
+			MHC_Hong_Rengan = { set_nationality = HMC }
+			MHC_Hong_tian_Guifu = { set_nationality = HMC }
+		}
+		#
+	}
+
+	option = {
+		name =  br_mhc.2.a #
+		
+		hidden_effect = {
+			#
+		}
+
+		ai_chance = { factor = 5 }
+	}
+
+	option = {
+		name =  br_mhc.2.b #
+		
+		custom_effect_tooltip = br_mhc.2.b.tt
+		hidden_effect = {
+			HMC = { change_tag_from = GXC }
+		}
+
+
+		ai_chance = { factor = 5 }
+	}
+
+}
+
+#
+state_event = { #
+	id = br_mhc.3
+	title = br_mhc.3.title
+	desc = br_mhc.3.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			#
+		}
+		#
+	}
+
+	option = {
+		name =  br_mhc.3.a #
+
+		event_target:br_mhc_missionary_state = {
+			if = {
+				limit = { check_variable = { hmc_var = 0 } }
+				set_variable = { hmc_var = 1 tooltip = hmc_established_tt }
+			}
+			else = {
+				add_to_variable = { hmc_var = 1 tooltip = hmc_moved_tt }
+			}
+			
+		}
+		
+		hidden_effect = {}
+
+		ai_chance = { factor = 5 }
+	}
+
+	option = {
+		name =  br_mhc.3.b #
+		
+		hidden_effect = {}
+
+
+		ai_chance = { factor = 5 }
+	}
+
+}
+
+#
+country_event = { #
+	id = br_mhc.4
+	title = br_mhc.4.title
+	desc = br_mhc.4.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {}
+		#
+	}
+
+	option = {
+		name =  br_mhc.4.a #
+
+		ai_chance = { factor = 5 }
+	}
+
+	option = {
+		name =  br_mhc.4.b #
+		
+		ai_chance = { factor = 5 }
+	}
+
+}
+
+#
+country_event = { #
+	id = br_mhc.5
+	title = br_mhc.5.title
+	desc = br_mhc.5.desc
+	#picture = GFX_report_event_chinese_soldiers_fighting
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {}
+		#
+	}
+
+	option = {
+		name =  br_mhc.5.a #
+
+		add_country_leader_role = {
+			character = MHC_Hong_tian_Guifu
+			promote_leader = yes
+			country_leader = {
+				ideology = despotism
+				expire = "1965.1.1.1"
+				traits = { war_industrialist }
+			}
+		}
+
+		ai_chance = { factor = 5 }
+	}
+
+	option = {
+		name =  br_mhc.5.b #
+		
+		ai_chance = { factor = 5 }
+	}
+
+}

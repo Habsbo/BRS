@@ -1,0 +1,13 @@
+br_hmc_revolt_categories = {
+	icon = generic_industry
+
+	#allowed = { original_tag = FRA }
+
+	visible = {
+		#is_chinese_tag = yes
+		has_global_flag = br_global_hmc_revolt_flag
+	}
+
+	visible_when_empty = yes
+	priority = 10
+}

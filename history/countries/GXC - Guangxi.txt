@@ -60,3 +60,16 @@ set_popularities = {
 
 set_cosmetic_tag = China_Republic
 set_country_flag = China_Republic_flag
+
+recruit_character = MHC_Hong_Rengan
+recruit_character = MHC_Hong_tian_Guifu
+
+#太平天国
+create_dynamic_country = {
+	original_tag = GXC
+	set_country_flag = HMC_heaven_mandate_in_china_flag
+	set_politics = { ruling_party = authoritarian }
+	set_cosmetic_tag = HMC
+	set_research_slots = 1
+	reserve_dynamic_country = yes
+}

@@ -328,3 +328,9 @@ br_is_public_feeling_under_minus_75 = {
 br_is_public_feeling_equal_minus_100 = {
 	check_variable = { br_public_feeling_var = -100 tooltip = br_public_feeling_var_tt_no_more }
 }
+
+is_chinese_tag = {
+	OR = {
+		
+	}
+}

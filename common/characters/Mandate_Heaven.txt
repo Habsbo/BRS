@@ -1,0 +1,34 @@
+characters = {
+	#洪仁玕
+	MHC_Hong_Rengan = {
+		name = MHC_Hong_Rengan
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_MHC_Hong_Rengan
+				small = GFX_Portrait_MHC_Hong_Rengan_small
+			}
+		}
+		advisor = {
+			slot = head_of_gov
+			idea_token = HMC_Hong_Rengan_hog
+			allowed = { tag = MHC }
+			available = {
+				br_head_of_gov_generic_trigger = yes
+			}
+			cost = 0
+			can_be_fired = no
+			traits = { }
+		}
+	}
+
+	#洪天贵福
+	MHC_Hong_tian_Guifu = {
+		name = MHC_Hong_tian_Guifu 
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_MHC_Hong_tian_Guifu
+				small = GFX_Portrait_MHC_Hong_tian_Guifu_small
+			}
+		}
+	}
+}

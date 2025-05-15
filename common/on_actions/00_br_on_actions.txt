@@ -24,6 +24,14 @@ on_actions = {
 				}
 				remove_core_of = YHT
 			}
+			#
+			every_state = {
+				limit = {
+					is_core_of = HMC
+				}
+				remove_core_of = HMC
+			}
+			
 			#state rank
 			every_country = {
 				limit = { is_major = yes }

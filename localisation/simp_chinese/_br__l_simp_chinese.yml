@@ -588,10 +588,44 @@
  HUN_interfere_economy_desc: ""
  HUN_kaisers-crown.1: ""
  HUN_kaisers-crown.1_desc: ""
- : ""
- _desc: ""
- : ""
- _desc: ""
+
+ MHC_Hong_Rengan: "洪仁玕"
+ MHC_Hong_tian_Guifu: "洪天贵福"
+ MHC_Hong_Xiuquan: "洪秀全"
+
+ br_mhc.1.title: "洪秀全回来了"
+ br_mhc.1.desc: "在[613.GetName]重新回到清政府手中后，洪仁玕及洪秀全子洪天贵福等人下落不明。\n\n原本我们以为此事以随着叛乱被扑灭而告终——何况已经过去了几十年。然而最近，一名老者来到我政府治下的[HMC_core.GetName]开始以西洋基督教为名传教。然而他们的背后既不是俄罗斯人，也不是英、美、德、法的任何一个，而是一个什么劳什子撒冷王！不过就目前而言，这些信徒还没有对我政府之行政造成妨害。"
+ br_mhc.1.a: "你在胡说什么？"
+
+ br_mhc.2.title: "信仰之后"
+ br_mhc.2.desc: "随着拜上帝教瘟疫一般的扩张，转投洋教的农民们竟然胆子大了起来，与乡绅们和官僚公然展开对抗，他们缠发巾拿着砍刀的模样和当年的太平天国别无二样。\n\n这个所谓的“洪秀全”终于揭开了他的伪装。"
+ br_mhc.2.a: "应该立刻将这个邪教头头抓起来。"
+ br_mhc.2.b: "太平王，天下兴！"
+ br_mhc.2.b.tt: "§R将会开始扮演[HMC.GetName]并夺取信仰拜上帝会最多的几个行政区的控制权，并与当地的中国政府的残余势力发生内战！§!"
+
+ br_mhc.3.title: "新基督教的传播"
+ br_mhc.3.desc: ""
+ br_mhc.3.a: "由得他们去吧。"
+ br_mhc.3.b: "应该立刻取缔他们！"
+
+ br_mhc_revolt_categories: "[HMC.GetName]运动"
+
+ br_mhc_revolt_mission.uprising: "即将到来的[HMC.GetName]运动"
+ br_global_hmc_revolt_flag: "[HMC.GetName]运动兴起"
+ br_global_hmc_revolt_extinguished_flag: "[HMC.GetName]运动被扑灭"
+
+ br_mhc_revolt_mission.missionary: "新拜上帝会的宣教活动"
+ br_mhc_revolt_mission.missionary_desc: ""
+
+ br_mhc_revolt_mission.officer: "可疑的军官"
+ br_mhc_revolt_mission.officer_desc: ""
+ br_mhc_revolt_mission.officer.tt: "§R随机一名军官赞同拜上帝会的理念§!\n§R随机一名军官秘密加入拜上帝会§!\n§R随机一名军官愿意为恢复太平天国而提供直接帮助§!"
+
+ br_mhc_revolt_mission.appealing: "呼吁救亡"
+ br_mhc_revolt_mission.appealing_desc: ""
+
+ hmc_established_tt: "[HMC.GetName]在[br_mhc_missionary_state.GetName]建立影响"
+ hmc_moved_tt: "[HMC.GetName]在[br_mhc_missionary_state.GetName]影响力变化了[?br_mhc_missionary_state.hmc_var|0+]"
  : ""
  _desc: ""
  : ""
