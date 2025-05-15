@@ -14,18 +14,18 @@ country_event = { #
 		hidden_effect = {
 			random_core_state = {
 				limit = { is_controlled_by_ROOT_or_subject = yes }
-				save_global_event_target_as = HMC_revolutionary_center
-				set_state_flag = HMC_revolt_flag
-				add_core_of = HMC
+				save_global_event_target_as = MHC_revolutionary_center
+				set_state_flag = MHC_revolt_flag
+				add_core_of = MHC
 			}
-			set_global_flag = br_global_hmc_revolt_flag
+			set_global_flag = br_global_mhc_revolt_flag
 		}
 	}
 
 	option = {
 		name = br_mhc.1.a #
 
-		event_target:HMC_revolutionary_center = { add_core_of = HMC }
+		event_target:MHC_revolutionary_center = { add_core_of = MHC }
 		
 		hidden_effect = {
 			random_list = {
@@ -56,18 +56,18 @@ country_event = { #
 		hidden_effect = {
 			every_state = {
 				limit = {
-					has_state_flag = HMC_revolt_flag
+					has_state_flag = MHC_revolt_flag
 				}
-				transfer_state_to = HMC
+				transfer_state_to = MHC
 			}
-			HMC = {
+			MHC = {
 				set_capital = {
-					state = event_target:HMC_core
+					state = event_target:MHC_core
 				}
 			}
 			
-			MHC_Hong_Rengan = { set_nationality = HMC }
-			MHC_Hong_tian_Guifu = { set_nationality = HMC }
+			MHC_Hong_Rengan = { set_nationality = MHC }
+			MHC_Hong_tian_Guifu = { set_nationality = MHC }
 		}
 		#
 	}
@@ -87,7 +87,7 @@ country_event = { #
 		
 		custom_effect_tooltip = br_mhc.2.b.tt
 		hidden_effect = {
-			HMC = { change_tag_from = GXC }
+			MHC = { change_tag_from = GXC }
 		}
 
 
@@ -118,11 +118,11 @@ state_event = { #
 
 		event_target:br_mhc_missionary_state = {
 			if = {
-				limit = { check_variable = { hmc_var = 0 } }
-				set_variable = { hmc_var = 1 tooltip = hmc_established_tt }
+				limit = { check_variable = { mhc_var = 0 } }
+				set_variable = { mhc_var = 1 tooltip = mhc_established_tt }
 			}
 			else = {
-				add_to_variable = { hmc_var = 1 tooltip = hmc_moved_tt }
+				add_to_variable = { mhc_var = 1 tooltip = mhc_moved_tt }
 			}
 			
 		}

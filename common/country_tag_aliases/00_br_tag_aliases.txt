@@ -65,9 +65,9 @@ CNR = {
 	has_country_flag = China_Republic_flag
 }
 
-HMC = {
+MHC = {
 	original_tag = GXC
-	has_country_flag = HMC_heaven_mandate_in_china_flag
+	has_country_flag = MHC_heaven_mandate_in_china_flag
 }
 
 #Catalonia/Aragon 加泰罗尼亚/阿拉贡

@@ -27,9 +27,9 @@ on_actions = {
 			#
 			every_state = {
 				limit = {
-					is_core_of = HMC
+					is_core_of = MHC
 				}
-				remove_core_of = HMC
+				remove_core_of = MHC
 			}
 			
 			#state rank

@@ -10,7 +10,7 @@ characters = {
 		}
 		advisor = {
 			slot = head_of_gov
-			idea_token = HMC_Hong_Rengan_hog
+			idea_token = MHC_Hong_Rengan_hog
 			allowed = { tag = MHC }
 			available = {
 				br_head_of_gov_generic_trigger = yes
