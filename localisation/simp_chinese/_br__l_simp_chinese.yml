@@ -589,14 +589,16 @@
  HUN_kaisers-crown.1: ""
  HUN_kaisers-crown.1_desc: ""
 
- 
+ tech_ic_industrial_base: "基础产业"
+ tech_ic_industrial_base_desc: "国民的生活依赖一些基础产业的运行。农业和畜牧业是后发国家的最佳选择，然而随着工业化与现代化的推进，现代国家所需要的不会仅仅只是第一产业，而与这一意识相悖的是，落后国家引进工业而挤占第一产业的生存空间，将进一步摧毁他们国民的经济独立性，从而成为世界生产链中的附庸。落后国家所能做的，只是在这种挣扎中继续推进产业的进步。"
 
- : ""
- _desc: ""
- : ""
- _desc: ""
- : ""
- _desc: ""
+ tech_ic_industrial_base_01: "现代第一产业"
+ tech_ic_industrial_base_01_desc: "食为民本。注重第一产业的现代化为国民带来最基本的生活需要的同时也降低了人力需求、土地与时间的占用。"
+ tech_ic_heat_engine: "热机"
+ tech_ic_heat_engine_desc: "热机是"
+
+ tech_ic_industrial_base_02: "工业化"
+ tech_ic_industrial_base_02_desc: ""
  : ""
  _desc: ""
  : ""
