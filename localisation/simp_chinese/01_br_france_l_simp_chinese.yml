@@ -45,6 +45,8 @@
  VL_Dip_state_marceau_pivert: "§Y$marceau_pivert$§!\n$GetDipStatus$\n$VL_trait_marceau_pivert$"
  VL_desc_state_marceau_pivert: "§g§!"
 
+ FRA_raymond_poincare: "雷蒙·庞加莱"
+
  FRA_napoleon_vi: "拿破仑六世"
 #
  has_hog_from_communism_party_tt: "拥有一名来自§R[root.GetAdjective]的共产主义政党§!的§Y政府首脑§!"

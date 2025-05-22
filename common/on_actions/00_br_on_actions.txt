@@ -10,6 +10,12 @@ on_actions = {
 					}
 					activate_advisor = BEL_alexander_von_falkenhausen_hog
 				}
+				if = {
+					limit = {
+						date < 1933.01.01
+					}
+					country_event = br_belgium.1
+				}
 			}
 			#dynamic country - remove their core if no need
 			every_state = {

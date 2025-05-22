@@ -1,5 +1,6 @@
 add_namespace = br_fra
 
+#########################
 country_event = { #
 	id = br_fra.1
 	title = br_fra.1.title

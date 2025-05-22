@@ -1724,13 +1724,14 @@ characters={
 			}
 		}
 	}
-
+###  ###
+	#拿破仑六世
 	FRA_napoleon_vi={
-		name=FRA_napoleon_vi
-		portraits={
-			army={
+		name = FRA_napoleon_vi
+		portraits = {
+			army = {
 				large = GFX_portraits_fra_napoleon_vi
-				small="GFX_idea_generic_political_advisor_europe_3"
+				small = GFX_idea_generic_political_advisor_europe_3
 			}
 		}
 		country_leader={
@@ -1738,6 +1739,27 @@ characters={
 			traits={}
 			expire="1965.1.1.1"
 			id=-1
+		}
+	}
+### ###
+	#雷蒙·庞加莱 Raymond Nicolas Landry Poincaré
+	FRA_raymond_poincare = {
+		name = FRA_raymond_poincare
+		portraits = {
+			army = {
+				large = GFX_Portraits_FRA_raymond_poincare
+				small = GFX_Portraits_FRA_raymond_poincare_small
+			}
+		}
+	}
+	#亚历山大·德沙内尔
+	FRA_alexandre_millerand = {
+		name = FRA_raymond_poincare
+		portraits = {
+			army = {
+				large = GFX_Portraits_FRA_alexandre_millerand
+				small = GFX_Portraits_FRA_alexandre_millerand_small
+			}
 		}
 	}
 }

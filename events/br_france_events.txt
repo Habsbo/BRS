@@ -1,0 +1,1301 @@
+add_namespace = br_france
+
+country_event = {
+    id = br_france.1
+    title = br_france.1.t
+    desc = br_france.1.desc
+    picture = GFX_br_france1_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.1.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.2
+    title = br_france.2.t
+    desc = br_france.2.desc
+    picture = GFX_br_france2_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.2.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.3
+    title = br_france.3.t
+    desc = br_france.3.desc
+    picture = GFX_br_france3_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.3.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.4
+    title = br_france.4.t
+    desc = br_france.4.desc
+    picture = GFX_br_france4_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.4.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.5
+    title = br_france.5.t
+    desc = br_france.5.desc
+    picture = GFX_br_france5_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.5.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.6
+    title = br_france.6.t
+    desc = br_france.6.desc
+    picture = GFX_br_france6_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.6.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.7
+    title = br_france.7.t
+    desc = br_france.7.desc
+    picture = GFX_br_france7_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.7.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.8
+    title = br_france.8.t
+    desc = br_france.8.desc
+    picture = GFX_br_france8_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.8.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.9
+    title = br_france.9.t
+    desc = br_france.9.desc
+    picture = GFX_br_france9_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.9.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.10
+    title = br_france.10.t
+    desc = br_france.10.desc
+    picture = GFX_br_france10_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.10.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.11
+    title = br_france.11.t
+    desc = br_france.11.desc
+    picture = GFX_br_france11_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.11.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.12
+    title = br_france.12.t
+    desc = br_france.12.desc
+    picture = GFX_br_france12_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.12.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.13
+    title = br_france.13.t
+    desc = br_france.13.desc
+    picture = GFX_br_france13_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.13.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.14
+    title = br_france.14.t
+    desc = br_france.14.desc
+    picture = GFX_br_france14_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.14.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.15
+    title = br_france.15.t
+    desc = br_france.15.desc
+    picture = GFX_br_france15_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.15.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.16
+    title = br_france.16.t
+    desc = br_france.16.desc
+    picture = GFX_br_france16_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.16.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.17
+    title = br_france.17.t
+    desc = br_france.17.desc
+    picture = GFX_br_france17_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.17.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.18
+    title = br_france.18.t
+    desc = br_france.18.desc
+    picture = GFX_br_france18_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.18.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.19
+    title = br_france.19.t
+    desc = br_france.19.desc
+    picture = GFX_br_france19_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.19.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.20
+    title = br_france.20.t
+    desc = br_france.20.desc
+    picture = GFX_br_france20_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.20.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.21
+    title = br_france.21.t
+    desc = br_france.21.desc
+    picture = GFX_br_france21_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.21.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.22
+    title = br_france.22.t
+    desc = br_france.22.desc
+    picture = GFX_br_france22_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.22.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.23
+    title = br_france.23.t
+    desc = br_france.23.desc
+    picture = GFX_br_france23_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.23.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.24
+    title = br_france.24.t
+    desc = br_france.24.desc
+    picture = GFX_br_france24_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.24.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.25
+    title = br_france.25.t
+    desc = br_france.25.desc
+    picture = GFX_br_france25_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.25.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.26
+    title = br_france.26.t
+    desc = br_france.26.desc
+    picture = GFX_br_france26_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.26.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.27
+    title = br_france.27.t
+    desc = br_france.27.desc
+    picture = GFX_br_france27_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.27.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.28
+    title = br_france.28.t
+    desc = br_france.28.desc
+    picture = GFX_br_france28_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.28.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.29
+    title = br_france.29.t
+    desc = br_france.29.desc
+    picture = GFX_br_france29_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.29.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.30
+    title = br_france.30.t
+    desc = br_france.30.desc
+    picture = GFX_br_france30_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.30.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.31
+    title = br_france.31.t
+    desc = br_france.31.desc
+    picture = GFX_br_france31_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.31.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.32
+    title = br_france.32.t
+    desc = br_france.32.desc
+    picture = GFX_br_france32_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.32.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.33
+    title = br_france.33.t
+    desc = br_france.33.desc
+    picture = GFX_br_france33_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.33.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.34
+    title = br_france.34.t
+    desc = br_france.34.desc
+    picture = GFX_br_france34_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.34.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.35
+    title = br_france.35.t
+    desc = br_france.35.desc
+    picture = GFX_br_france35_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.35.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.36
+    title = br_france.36.t
+    desc = br_france.36.desc
+    picture = GFX_br_france36_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.36.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.37
+    title = br_france.37.t
+    desc = br_france.37.desc
+    picture = GFX_br_france37_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.37.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.38
+    title = br_france.38.t
+    desc = br_france.38.desc
+    picture = GFX_br_france38_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.38.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.39
+    title = br_france.39.t
+    desc = br_france.39.desc
+    picture = GFX_br_france39_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.39.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.40
+    title = br_france.40.t
+    desc = br_france.40.desc
+    picture = GFX_br_france40_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.40.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.41
+    title = br_france.41.t
+    desc = br_france.41.desc
+    picture = GFX_br_france41_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.41.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.42
+    title = br_france.42.t
+    desc = br_france.42.desc
+    picture = GFX_br_france42_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.42.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.43
+    title = br_france.43.t
+    desc = br_france.43.desc
+    picture = GFX_br_france43_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.43.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.44
+    title = br_france.44.t
+    desc = br_france.44.desc
+    picture = GFX_br_france44_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.44.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.45
+    title = br_france.45.t
+    desc = br_france.45.desc
+    picture = GFX_br_france45_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.45.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.46
+    title = br_france.46.t
+    desc = br_france.46.desc
+    picture = GFX_br_france46_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.46.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.47
+    title = br_france.47.t
+    desc = br_france.47.desc
+    picture = GFX_br_france47_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.47.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.48
+    title = br_france.48.t
+    desc = br_france.48.desc
+    picture = GFX_br_france48_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.48.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.49
+    title = br_france.49.t
+    desc = br_france.49.desc
+    picture = GFX_br_france49_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.49.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.50
+    title = br_france.50.t
+    desc = br_france.50.desc
+    picture = GFX_br_france50_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.50.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.51
+    title = br_france.51.t
+    desc = br_france.51.desc
+    picture = GFX_br_france51_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.51.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.52
+    title = br_france.52.t
+    desc = br_france.52.desc
+    picture = GFX_br_france52_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.52.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.53
+    title = br_france.53.t
+    desc = br_france.53.desc
+    picture = GFX_br_france53_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.53.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.54
+    title = br_france.54.t
+    desc = br_france.54.desc
+    picture = GFX_br_france54_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.54.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.55
+    title = br_france.55.t
+    desc = br_france.55.desc
+    picture = GFX_br_france55_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.55.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.56
+    title = br_france.56.t
+    desc = br_france.56.desc
+    picture = GFX_br_france56_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.56.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.57
+    title = br_france.57.t
+    desc = br_france.57.desc
+    picture = GFX_br_france57_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.57.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.58
+    title = br_france.58.t
+    desc = br_france.58.desc
+    picture = GFX_br_france58_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.58.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.59
+    title = br_france.59.t
+    desc = br_france.59.desc
+    picture = GFX_br_france59_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.59.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.60
+    title = br_france.60.t
+    desc = br_france.60.desc
+    picture = GFX_br_france60_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.60.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.61
+    title = br_france.61.t
+    desc = br_france.61.desc
+    picture = GFX_br_france61_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.61.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.62
+    title = br_france.62.t
+    desc = br_france.62.desc
+    picture = GFX_br_france62_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.62.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.63
+    title = br_france.63.t
+    desc = br_france.63.desc
+    picture = GFX_br_france63_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.63.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.64
+    title = br_france.64.t
+    desc = br_france.64.desc
+    picture = GFX_br_france64_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.64.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.65
+    title = br_france.65.t
+    desc = br_france.65.desc
+    picture = GFX_br_france65_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.65.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.66
+    title = br_france.66.t
+    desc = br_france.66.desc
+    picture = GFX_br_france66_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.66.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.67
+    title = br_france.67.t
+    desc = br_france.67.desc
+    picture = GFX_br_france67_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.67.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.68
+    title = br_france.68.t
+    desc = br_france.68.desc
+    picture = GFX_br_france68_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.68.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.69
+    title = br_france.69.t
+    desc = br_france.69.desc
+    picture = GFX_br_france69_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.69.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.70
+    title = br_france.70.t
+    desc = br_france.70.desc
+    picture = GFX_br_france70_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.70.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.71
+    title = br_france.71.t
+    desc = br_france.71.desc
+    picture = GFX_br_france71_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.71.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.72
+    title = br_france.72.t
+    desc = br_france.72.desc
+    picture = GFX_br_france72_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.72.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.73
+    title = br_france.73.t
+    desc = br_france.73.desc
+    picture = GFX_br_france73_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.73.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.74
+    title = br_france.74.t
+    desc = br_france.74.desc
+    picture = GFX_br_france74_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.74.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.75
+    title = br_france.75.t
+    desc = br_france.75.desc
+    picture = GFX_br_france75_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.75.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.76
+    title = br_france.76.t
+    desc = br_france.76.desc
+    picture = GFX_br_france76_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.76.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.77
+    title = br_france.77.t
+    desc = br_france.77.desc
+    picture = GFX_br_france77_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.77.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.78
+    title = br_france.78.t
+    desc = br_france.78.desc
+    picture = GFX_br_france78_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.78.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.79
+    title = br_france.79.t
+    desc = br_france.79.desc
+    picture = GFX_br_france79_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.79.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.80
+    title = br_france.80.t
+    desc = br_france.80.desc
+    picture = GFX_br_france80_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.80.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.81
+    title = br_france.81.t
+    desc = br_france.81.desc
+    picture = GFX_br_france81_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.81.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.82
+    title = br_france.82.t
+    desc = br_france.82.desc
+    picture = GFX_br_france82_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.82.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.83
+    title = br_france.83.t
+    desc = br_france.83.desc
+    picture = GFX_br_france83_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.83.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.84
+    title = br_france.84.t
+    desc = br_france.84.desc
+    picture = GFX_br_france84_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.84.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.85
+    title = br_france.85.t
+    desc = br_france.85.desc
+    picture = GFX_br_france85_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.85.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.86
+    title = br_france.86.t
+    desc = br_france.86.desc
+    picture = GFX_br_france86_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.86.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.87
+    title = br_france.87.t
+    desc = br_france.87.desc
+    picture = GFX_br_france87_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.87.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.88
+    title = br_france.88.t
+    desc = br_france.88.desc
+    picture = GFX_br_france88_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.88.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.89
+    title = br_france.89.t
+    desc = br_france.89.desc
+    picture = GFX_br_france89_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.89.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.90
+    title = br_france.90.t
+    desc = br_france.90.desc
+    picture = GFX_br_france90_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.90.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.91
+    title = br_france.91.t
+    desc = br_france.91.desc
+    picture = GFX_br_france91_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.91.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.92
+    title = br_france.92.t
+    desc = br_france.92.desc
+    picture = GFX_br_france92_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.92.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.93
+    title = br_france.93.t
+    desc = br_france.93.desc
+    picture = GFX_br_france93_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.93.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.94
+    title = br_france.94.t
+    desc = br_france.94.desc
+    picture = GFX_br_france94_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.94.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.95
+    title = br_france.95.t
+    desc = br_france.95.desc
+    picture = GFX_br_france95_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.95.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.96
+    title = br_france.96.t
+    desc = br_france.96.desc
+    picture = GFX_br_france96_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.96.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.97
+    title = br_france.97.t
+    desc = br_france.97.desc
+    picture = GFX_br_france97_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.97.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.98
+    title = br_france.98.t
+    desc = br_france.98.desc
+    picture = GFX_br_france98_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.98.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.99
+    title = br_france.99.t
+    desc = br_france.99.desc
+    picture = GFX_br_france99_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.99.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_france.100
+    title = br_france.100.t
+    desc = br_france.100.desc
+    picture = GFX_br_france100_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_france.100.a
+        ai_chance = { base = 50 }
+    }
+}
