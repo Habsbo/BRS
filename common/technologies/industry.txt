@@ -2097,14 +2097,14 @@ technologies = {
 
 		path = {
 			leads_to_tech = tech_ic_industrial_base_01
-			research_cost_coeff = 0.8
+			research_cost_coeff = 1
 		}
 		
 		#dependencies = {}
 		
 		folder = {
 			name = industry_folder
-			position = { x = 8 y = 0 }
+			position = { x = 0 y = 0 }
 		}
 
 		on_research_complete_limit = {}
@@ -2141,7 +2141,7 @@ technologies = {
 		#show_effect_as_desc = yes/no #可以使modifier/effect在科技本身的描述中显示。no则显示在鼠标悬停的科技具体描述内（默认为no）
 		path = {
 			leads_to_tech = tech_ic_industrial_base_02
-			research_cost_coeff = 0.8
+			research_cost_coeff = 1
 		}		
 		
 		#dependencies = {}
@@ -2183,14 +2183,20 @@ technologies = {
 		start_year = 1840
 		
 		#show_effect_as_desc = yes/no #可以使modifier/effect在科技本身的描述中显示。no则显示在鼠标悬停的科技具体描述内（默认为no）
+		
+		path = {
+			leads_to_tech = tech_ic_industrial_base_03
+			research_cost_coeff = 1
+		}
+
 		path = {
 			leads_to_tech = tech_ic_biology
-			research_cost_coeff = 0.8
+			research_cost_coeff = 1
 		}
 
 		path = {
 			leads_to_tech = tech_ic_chemical_industry
-			research_cost_coeff = 0.8
+			research_cost_coeff = 1
 		}
 
 		
@@ -2200,6 +2206,138 @@ technologies = {
 		folder = {
 			name = industry_folder
 			position = { x = 0 y = 4 }
+		}
+
+		on_research_complete_limit = {}
+		on_research_complete = {}
+
+		#modifier #可以直接填modifier
+		enable_equipments = {}
+		
+		enable_building = {
+			building = industrial_complex
+			level = 8
+		}
+		
+		#desc = _desc
+		
+		ai_will_do = { base = 100 }
+		
+		categories = {
+			industry
+			cat_production
+		}
+	}
+	
+	tech_ic_industrial_base_03 = {
+		#
+		production_factory_max_efficiency_factor = 0.05
+
+		#allow = {  }
+		#allow_brunch = {  }
+
+		research_cost = 2
+		start_year = 1840
+		
+		#show_effect_as_desc = yes/no #可以使modifier/effect在科技本身的描述中显示。no则显示在鼠标悬停的科技具体描述内（默认为no）
+		path = {
+			leads_to_tech = tech_ic_industrial_base_04
+			research_cost_coeff = 1
+		}
+		
+		#dependencies = {}
+		
+		folder = {
+			name = industry_folder
+			position = { x = 0 y = 6 }
+		}
+
+		on_research_complete_limit = {}
+		on_research_complete = {}
+
+		#modifier #可以直接填modifier
+		enable_equipments = {}
+		
+		enable_building = {
+			building = industrial_complex
+			level = 8
+		}
+		
+		#desc = _desc
+		
+		ai_will_do = { base = 100 }
+		
+		categories = {
+			industry
+			cat_production
+		}
+	}
+
+	tech_ic_industrial_base_04 = {
+		#
+		production_factory_max_efficiency_factor = 0.05
+
+		#allow = {  }
+		#allow_brunch = {  }
+
+		research_cost = 2
+		start_year = 1840
+		
+		#show_effect_as_desc = yes/no #可以使modifier/effect在科技本身的描述中显示。no则显示在鼠标悬停的科技具体描述内（默认为no）
+		path = {
+			leads_to_tech = tech_ic_industrial_base_05
+			research_cost_coeff = 1
+		}
+		
+		#dependencies = {}
+		
+		folder = {
+			name = industry_folder
+			position = { x = 0 y = 8 }
+		}
+
+		on_research_complete_limit = {}
+		on_research_complete = {}
+
+		#modifier #可以直接填modifier
+		enable_equipments = {}
+		
+		enable_building = {
+			building = industrial_complex
+			level = 8
+		}
+		
+		#desc = _desc
+		
+		ai_will_do = { base = 100 }
+		
+		categories = {
+			industry
+			cat_production
+		}
+	}
+	
+	tech_ic_industrial_base_05 = {
+		#
+		production_factory_max_efficiency_factor = 0.05
+
+		#allow = {  }
+		#allow_brunch = {  }
+
+		research_cost = 2
+		start_year = 1840
+		
+		#show_effect_as_desc = yes/no #可以使modifier/effect在科技本身的描述中显示。no则显示在鼠标悬停的科技具体描述内（默认为no）
+		#path = {
+		#	leads_to_tech = tech_ic_industrial_base_04
+		#	research_cost_coeff = 1
+		#}
+		
+		#dependencies = {}
+		
+		folder = {
+			name = industry_folder
+			position = { x = 0 y = 10 }
 		}
 
 		on_research_complete_limit = {}
@@ -2243,7 +2381,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 1 y = 6 }
+			position = { x = 5 y = 6 }
 		}
 
 		on_research_complete_limit = {}
@@ -2288,7 +2426,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 5 y = 6 }
+			position = { x = 10 y = 6 }
 		}
 
 		on_research_complete_limit = {}
