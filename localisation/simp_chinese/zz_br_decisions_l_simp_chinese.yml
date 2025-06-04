@@ -101,6 +101,7 @@
 
  br_debug_decisions: "测试，我们的国家等级变量是：[?root.state_rank|0H]"
 
+ authority_point_desc: "[GetStateRank]"
  br_is_state_rank_0_tt: "国家等级达到§Y至上权威(0)§!"
  br_is_state_rank_1_tt: "国家等级达到§Y天命上邦(1)§!"
  br_is_state_rank_2_tt: "国家等级达到§Y威加海内(2)§!"
@@ -108,7 +109,7 @@
  br_is_state_rank_4_tt: "国家等级达到§Y国光蔚兮(4)§!"
  br_is_state_rank_5_tt: "国家等级达到§Y籍籍无名(5)§!"
  br_is_state_rank_6_tt: "国家等级达到§Y长河无声(6)§!"
- br_our_state_rank_tt: "当前我们的国家等级是：§Y[GetStateRank]([?root.state_rank|0H])§!"
+ br_our_state_rank_tt: "当前我们的国家等级是：§Y[GetStateRank]([root.state_rank|0H])§!"
  state_rank_0: "至上权威" #至上权威
  state_rank_1: "天命上邦" #超级列强
  state_rank_2: "威加海内" #普通列强
@@ -120,12 +121,12 @@
  br_baltics: "波罗的海统一"
  br_baltics_desc: "······"
  br_proclaim_baltics_federation: "宣告波罗的海国家统一"
- br_proclaim_baltics_federation_trigger_tt: "必须满足以下全部：\n·[LIT.GetFlag]§Y[LIT.GetName]§!：全部核心领土被我们或我们支持的附庸政府完全控制\n·[LAT.GetFlag]§Y[LAT.GetName]§!：全部核心领土被我们或我们支持的附庸政府完全控制\n·[EST.GetFlag]§Y[EST.GetName]§!：全部核心领土被我们或我们支持的附庸政府完全控制\n"
+ br_proclaim_baltics_federation_trigger_tt: "必须满足以下全部：\n-[LIT.GetFlag]§Y[LIT.GetName]§!：全部核心领土被我们或我们支持的附庸政府完全控制\n-[LAT.GetFlag]§Y[LAT.GetName]§!：全部核心领土被我们或我们支持的附庸政府完全控制\n-[EST.GetFlag]§Y[EST.GetName]§!：全部核心领土被我们或我们支持的附庸政府完全控制\n"
  br_proclaim_baltics_federation_tt: "将会获得[LIT.GetAdjective]、[LAT.GetAdjective]、[EST.GetAdjective]三国的全部核心。"
  br_proclaim_baltics_federation.invitation: "邀请[FROM.GetFlag]§Y[FROM.GetName]§!加盟"
  br_proclaim_baltics_federation.invitation_tt: "他们将成为波罗的联邦的观察成员国。\n§G由于历史性原因或共同目标，在联邦的能力更强时，进一步的合并将会更容易，反之，他们将更容易在联邦化中主导我们。§!\n可能的历史性原因或共同目标：\n§Y波兰立陶宛联邦\n芬兰与爱沙尼亚的民族相似性\n白俄罗斯人与波兰人的相似性\n波罗的地缘联合的一致性目标§!"
- br_baltics_federation_invitation_possible_tt: "邀请[FROM.GetFlag]§Y[FROM.GetName]§!必须在战略上存在可能性\n以下将阻止两国战略上的友好：\n·[ROOT.GetFlag]§Y[ROOT.GetName]§!在一场战争中与[FROM.GetFlag]§Y[FROM.GetName]§!或他们的盟友敌对\n·[FROM.GetFlag]§Y[FROM.GetName]§!最近加入一个不与我们战略上友好的同盟或最近被我们的联盟驱逐过\n·我们制造了太多的世界紧张度，而[FROM.GetFlag]§Y[FROM.GetName]§!不喜欢制造紧张度的国家\n·[FROM.GetFlag]§Y[FROM.GetName]§!对我们不相似的意识形态仇视或存在误解\n·我们正在与[FROM.GetFlag]§Y[FROM.GetName]§!不喜欢的国家交好甚至邀请了他们加入同盟。\n·[FROM.GetFlag]§Y[FROM.GetName]§!最近遭到过我们的恫吓"
- br_baltics_federation_invitation_possible_targets_tt: "我们可以邀请的潜在国家或地区：\n·[FIN.GetFlag]§Y[FIN.GetName]§!\n·[POL.GetFlag]§Y[POL.GetName]§!\n·[BLR.GetFlag]§Y[BLR.GetName]§!\n·[UKR.GetFlag]§Y[UKR.GetName]§!\n·[SOV.GetFlag]§Y[SOV.GetName]§!\n·[SIL.GetFlag]§Y[SIL.GetName]§!\n·[CRI.GetFlag]§Y[CRI.GetName]§!\n·[DNZ.GetFlag]§Y[DNZ.GetName]§!\n·[KSH.GetFlag]§Y[KSH.GetName]§!\n·[SMI.GetFlag]§Y[SMI.GetName]§!\n·[KAR.GetFlag]§Y[KAR.GetName]§!"
+ br_baltics_federation_invitation_possible_tt: "邀请[FROM.GetFlag]§Y[FROM.GetName]§!必须在战略上存在可能性\n以下将阻止两国战略上的友好：\n-[ROOT.GetFlag]§Y[ROOT.GetName]§!在一场战争中与[FROM.GetFlag]§Y[FROM.GetName]§!或他们的盟友敌对\n-[FROM.GetFlag]§Y[FROM.GetName]§!最近加入一个不与我们战略上友好的同盟或最近被我们的联盟驱逐过\n-我们制造了太多的世界紧张度，而[FROM.GetFlag]§Y[FROM.GetName]§!不喜欢制造紧张度的国家\n-[FROM.GetFlag]§Y[FROM.GetName]§!对我们不相似的意识形态仇视或存在误解\n-我们正在与[FROM.GetFlag]§Y[FROM.GetName]§!不喜欢的国家交好甚至邀请了他们加入同盟。\n-[FROM.GetFlag]§Y[FROM.GetName]§!最近遭到过我们的恫吓"
+ br_baltics_federation_invitation_possible_targets_tt: "我们可以邀请的潜在国家或地区：\n-[FIN.GetFlag]§Y[FIN.GetName]§!\n-[POL.GetFlag]§Y[POL.GetName]§!\n-[BLR.GetFlag]§Y[BLR.GetName]§!\n-[UKR.GetFlag]§Y[UKR.GetName]§!\n-[SOV.GetFlag]§Y[SOV.GetName]§!\n-[SIL.GetFlag]§Y[SIL.GetName]§!\n-[CRI.GetFlag]§Y[CRI.GetName]§!\n-[DNZ.GetFlag]§Y[DNZ.GetName]§!\n-[KSH.GetFlag]§Y[KSH.GetName]§!\n-[SMI.GetFlag]§Y[SMI.GetName]§!\n-[KAR.GetFlag]§Y[KAR.GetName]§!"
  br_proclaim_baltics_federation.force: "恐吓[FROM.GetFlag]§Y[FROM.GetName]§!臣服"
 
  br_proclaim_BLR_UKR: "宣告§Y$BLR_UKR$§!成立"

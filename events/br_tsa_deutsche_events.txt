@@ -14,6 +14,7 @@ country_event = { #
 		complete_national_focus = DKR_kaiser_william_ii
 	}
 }
+
 country_event = { #
 	id = br_deutsche.2
 	title = br_deutsche.2.title

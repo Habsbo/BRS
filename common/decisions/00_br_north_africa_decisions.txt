@@ -491,6 +491,7 @@ br_na_generic_decisions = {#成立摩洛哥共和国
 	}
 }
 
+#
 br_umayyad_category = {
 	br_umayyad_declaration = {
 		icon = eng_propaganda_campaigns
@@ -588,9 +589,12 @@ br_umayyad_category = {
 			var:capital = {
 				NOT = { state = from }
 			}
+			FROM = {
+				is_controlled_by = root
+			}
 		}
 
-		cost = 50
+		cost = 0
 
 		days_re_enable = 30
 		state_target = yes
@@ -684,7 +688,12 @@ br_umayyad_category = {
 		}
 		#target_array = 
 		target_trigger = {
-			FROM = {  }
+			FROM = {
+				OR = {
+					is_major = yes
+					is_neighbor_of = ROOT
+				}
+			}
 		}
 		available = {}
 		visible = {}
@@ -694,7 +703,12 @@ br_umayyad_category = {
 		days_re_enable = 30
 		on_map_mode = map_and_decisions_view
 		
-		complete_effect = {}
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = FROM
+			}
+		}
 
 		ai_will_do = {
 			base = 0

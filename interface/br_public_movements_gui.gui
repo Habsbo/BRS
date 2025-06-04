@@ -38,4 +38,5 @@ guiTypes = {
 			text = "BR_PUBLIC_MOVEMENTS_TITLE"
 			font = "hoi_36header"
 		}
+	}
 }

@@ -48,6 +48,7 @@ br_baltics = {
 				original_tag = EST
 				original_tag = BLR
 			}
+			NOT = { has_global_flag = br_global_has_proclaimed_baltics_federation_flag }
 		}
 
 		fire_only_once = no
