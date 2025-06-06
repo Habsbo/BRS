@@ -1,0 +1,11 @@
+br_is_culture_major_british = {
+	custom_trigger_tooltip = {
+		tooltip = is_culture_major_tt
+		any_of = {
+			array = culture_major
+			value = english
+			index = i
+			check_variable = { i > 10 }
+		}
+	}
+}

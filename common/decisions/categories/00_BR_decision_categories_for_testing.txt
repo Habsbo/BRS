@@ -48,3 +48,12 @@ br_umayyad_category = {
 	visible = {}
 	priority = -1
 }
+
+#
+br_treaty_of_saadabad_category = {
+	icon = generic_research
+	
+	#allowed = {}
+	visible = { original_tag = AFG }
+	priority = -1
+}

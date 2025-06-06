@@ -1,0 +1,53 @@
+﻿l_simp_chinese:
+ br_conqueror.1.t: "征服世界！"
+ br_conqueror.1.desc: ""
+ br_conqueror.1.a: "让征服开始吧！"
+
+ br_conqueror.2.t: "来自[From.GetLeader]的警告"
+ br_conqueror.2.desc: ""
+ br_conqueror.2.a: "可笑至极。"
+ br_conqueror.2.b: "我将誓死追随这位大人。"
+
+ br_conqueror.3.t: "征服世界！"
+ br_conqueror.3.desc: ""
+ br_conqueror.3.a: "当我们扫清第一步的障碍···"
+
+ br_conqueror.4.t: "最渺小的征服者"
+ br_conqueror.4.desc: ""
+ br_conqueror.4.a: "[GetPLStatus]还会回来的！"
+
+ br_conqueror.5.t: "榨取[From.GetAdjective]人的智慧"
+ br_conqueror.5.desc: ""
+ br_conqueror.5.a: "他们的学校和师资可以为我们所用！"
+
+ br_conqueror.6.t: ""
+ br_conqueror.6.desc: ""
+ br_conqueror.6.a: ""
+
+ br_conqueror.7.t: ""
+ br_conqueror.7.desc: ""
+ br_conqueror.7.a: ""
+
+ br_conqueror.8.t: ""
+ br_conqueror.8.desc: ""
+ br_conqueror.8.a: ""
+
+ br_conqueror.9.t: ""
+ br_conqueror.9.desc: ""
+ br_conqueror.9.a: ""
+
+ br_conqueror.10.t: ""
+ br_conqueror.10.desc: ""
+ br_conqueror.10.a: ""
+
+
+
+ br_conqueror_news.1.t: "世界征服者"
+ br_conqueror_news.1.desc: ""
+ br_conqueror_news.1.a: "世界将在我的手中！"
+ br_conqueror_news.1.b: "都什么年代了。"
+
+ br_conqueror_news.2.t: "时代在召唤"
+ br_conqueror_news.2.desc: ""
+ br_conqueror_news.2.a: "他将如闪电般归来···"
+ br_conqueror_news.2.b: "这个时代不需要成吉思汗。"

@@ -912,3 +912,77 @@ shared_focus = {
 
 	ai_will_do = { factor = 1 }
 }
+
+
+
+shared_focus = {
+	id = Generic_Monarchy
+	icon = GFX_focus_generic_improve_the_administration
+	#prerequisite = { focus =  }
+	#mutually_exclusive = { focus =  }
+	x = 20
+	y = 0
+	#relative_position_id = 
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+
+shared_focus = {
+	id = Generic_Electoral
+	icon = GFX_focus_generic_improve_the_administration
+	#prerequisite = { focus =  }
+	#mutually_exclusive = { focus =  }
+	x = 2
+	y = 0
+	relative_position_id = Generic_Monarchy
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+
+shared_focus = {
+	id = Generic_
+	icon = GFX_focus_generic_improve_the_administration
+	#prerequisite = { focus =  }
+	#mutually_exclusive = { focus =  }
+	x = 2
+	y = 0
+	relative_position_id = Generic_Monarchy
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}

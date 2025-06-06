@@ -689,7 +689,7 @@ defined_text = {
 				}
 			}
 		}
-		localization_key = CL_mikado
+		localization_key = CL_Mikado
 	}
 	text = { localization_key = PL_country_leader }
 }

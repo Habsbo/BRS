@@ -1,0 +1,29 @@
+#
+br_treaty_of_saadabad_category = {
+	
+	br_tos_ = {
+		icon = generic_political_discourse
+
+		available = {
+			#
+		}
+
+		visible = {
+			#
+		}
+
+		fire_only_once = no
+		days_remove = 28
+		days_re_enable = 181
+
+		cost = 0
+
+		complete_effect = {
+			#
+		}
+
+		ai_will_do = {
+			base = 100
+		}
+	}
+}

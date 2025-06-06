@@ -1,0 +1,124 @@
+﻿### 君主制 ###
+shared_focus = {
+	id = Generic_Monarchy
+	icon = GFX_focus_generic_improve_the_administration
+	#prerequisite = { focus =  }
+	#mutually_exclusive = { focus =  }
+	x = 20
+	y = 0
+	#relative_position_id = 
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+
+###  ###
+shared_focus = {
+	id = Generic_Electoral
+	icon = GFX_focus_generic_improve_the_administration
+	#prerequisite = { focus =  }
+	#mutually_exclusive = { focus =  }
+	x = 4
+	y = 0
+	relative_position_id = Generic_Monarchy
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+
+###  ###
+shared_focus = {
+	id = Generic_
+	icon = GFX_focus_generic_improve_the_administration
+	prerequisite = { focus = Generic_Monarchy }
+	#mutually_exclusive = { focus =  }
+	x = 0
+	y = 1
+	relative_position_id = Generic_Monarchy
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+
+#
+shared_focus = {
+	id = Generic_s
+	icon = GFX_focus_generic_improve_the_administration
+	#prerequisite = { focus =  }
+	#mutually_exclusive = { focus =  }
+	x = 8
+	y = 0
+	relative_position_id = Generic_Monarchy
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}
+
+#
+shared_focus = {
+	id = Generic_
+	icon = GFX_focus_generic_improve_the_administration
+	#prerequisite = { focus =  }
+	#mutually_exclusive = { focus =  }
+	x = 12
+	y = 0
+	relative_position_id = Generic_Monarchy
+
+	cost = 8
+	
+	available = {}
+	bypass = {}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {}
+	completion_reward = {}
+
+	ai_will_do = { factor = 1 }
+}

@@ -1,0 +1,256 @@
+add_namespace = br_conqueror
+
+#征服者
+country_event = {
+    id = br_conqueror.1
+    title = br_conqueror.1.t
+    desc = br_conqueror.1.desc
+    picture = GFX_br_conqueror1_event
+    is_triggered_only = yes
+
+    immediate = {
+        hidden_effect = {
+            save_global_event_target_as = the_conqueror
+            news_event = br_conqueror_news.1
+            #
+            every_country = {
+                limit = {
+                    is_neighbor_of = root
+                }
+                country_event = br_conqueror.2
+            }
+        }
+    }
+
+    option = {
+        name = br_conqueror.1.a
+
+        var:country_leader = {
+            add_country_leader_trait = great_conqueror
+        }
+
+        ai_chance = { base = 1 }
+    }
+}
+
+country_event = {
+    id = br_conqueror.2
+    title = br_conqueror.2.t
+    desc = br_conqueror.2.desc
+    picture = GFX_br_conqueror2_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_conqueror.2.a
+
+        from = {
+            create_wargoal = {
+                target = root
+                type = puppet_wargoal_focus
+            }
+        }
+
+        ai_chance = { base = 1 }
+    }
+
+    option = {
+        name = br_conqueror.2.b
+
+        from = {
+            set_autonomy = {
+                target = root
+                autonomy_state = autonomy_puppet
+            }
+        }
+
+        ai_chance = { base = 1 }
+    }
+}
+
+#
+country_event = {
+    id = br_conqueror.3
+    title = br_conqueror.3.t
+    desc = br_conqueror.3.desc
+    picture = GFX_br_conqueror3_event
+    is_triggered_only = yes
+
+    immediate = {
+        hidden_effect = {
+            every_country = {
+                limit = {
+                    NOT = { tag = root }
+                    is_neighbor_of = root
+                }
+                country_event = br_conqueror.2
+            }
+        }
+    }
+
+    option = {
+        name = br_conqueror.3.a
+
+        ai_chance = { base = 1 }
+    }
+}
+
+#最渺小的征服者
+country_event = {
+    id = br_conqueror.4
+    title = br_conqueror.4.t
+    desc = br_conqueror.4.desc
+    picture = GFX_br_conqueror4_event
+    is_triggered_only = yes
+
+    immediate = {
+        hidden_effect = {
+            news_event = br_conqueror_news.2
+        }
+    }
+
+    option = {
+        name = br_conqueror.4.a
+
+        kill_country_leader = var:country_leader
+
+        ai_chance = { base = 1 }
+    }
+}
+
+country_event = {
+    id = br_conqueror.5
+    title = br_conqueror.5.t
+    desc = br_conqueror.5.desc
+    picture = GFX_br_conqueror5_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_conqueror.5.a
+
+        add_research_slot = 1
+
+        ai_chance = { base = 1 }
+    }
+}
+
+country_event = {
+    id = br_conqueror.6
+    title = br_conqueror.6.t
+    desc = br_conqueror.6.desc
+    picture = GFX_br_conqueror6_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_conqueror.6.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_conqueror.7
+    title = br_conqueror.7.t
+    desc = br_conqueror.7.desc
+    picture = GFX_br_conqueror7_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_conqueror.7.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_conqueror.8
+    title = br_conqueror.8.t
+    desc = br_conqueror.8.desc
+    picture = GFX_br_conqueror8_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_conqueror.8.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_conqueror.9
+    title = br_conqueror.9.t
+    desc = br_conqueror.9.desc
+    picture = GFX_br_conqueror9_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_conqueror.9.a
+        ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+    id = br_conqueror.10
+    title = br_conqueror.10.t
+    desc = br_conqueror.10.desc
+    picture = GFX_br_conqueror10_event
+    is_triggered_only = yes
+
+    option = {
+        name = br_conqueror.10.a
+        ai_chance = { base = 50 }
+    }
+}
+
+add_namespace = br_conqueror_news
+
+
+news_event = {
+	id = br_conqueror_news.1
+	title = br_conqueror_news.1.t
+	desc = br_conqueror_news.1.desc
+	picture = GFX_news_event_001
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = br_conqueror_news.1.a
+		trigger = {
+			tag = event_target:the_conqueror
+		}
+	}
+	option = {
+		name = br_conqueror_news.1.b
+		trigger = {
+			NOT = { tag = event_target:the_conqueror }
+		}
+	}
+}
+
+news_event = {
+	id = br_conqueror_news.2
+	title = br_conqueror_news.2.t
+	desc = br_conqueror_news.2.desc
+	picture = GFX_news_event_002
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = br_conqueror_news.2.a
+
+        hidden_effect = {
+            clear_global_event_target = the_conqueror
+        }
+
+		trigger = {
+			tag = event_target:the_conqueror
+		}
+	}
+
+	option = {
+		name = br_conqueror_news.2.b
+		trigger = {
+			NOT = { tag = event_target:the_conqueror }
+		}
+	}
+}

@@ -899,3 +899,8 @@ set_variable = { core_culture = culture_deutsch } #
 add_dynamic_modifier = { modifier = GER_army_modifier }
 add_dynamic_modifier = { modifier = GER_navy_modifier }
 add_dynamic_modifier = { modifier = GER_airforce_modifier }
+
+add_to_array = {
+    array = ROOT.culture_major
+    value = culture_
+}

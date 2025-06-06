@@ -986,6 +986,17 @@ guiTypes = {
 					clicksound = click_close
 					oversound = ui_menu_over
 				}
+
+### NATIONALITY ###
+				buttonType = {
+					name = "nationality_button"
+					position = { x = 0 y = 360 }
+					quadTextureSprite ="GFX_staff_office_button"
+					Orientation = "UPPER_LEFT"
+					shortcut = "shift+r"
+					clicksound = click_close
+					oversound = ui_menu_over
+				}
 			}
 			
 			buttonType = {

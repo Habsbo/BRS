@@ -1,0 +1,19 @@
+scripted_gui = {
+
+	countrycultureview_gui = {
+		context_type = player_context
+		#parent_window_token = politics_tab
+		window_name = "countrycultureview"
+		
+		visible = {
+			has_country_flag = countrycultureview_visible_flag
+		}
+
+		effects = {
+			close_button_click = {
+				clr_country_flag = countrycultureview_visible_flag
+			}
+		}
+	}
+
+}

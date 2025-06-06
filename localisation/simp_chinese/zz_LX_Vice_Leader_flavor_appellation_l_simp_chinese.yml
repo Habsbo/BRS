@@ -1,5 +1,6 @@
 ﻿l_simp_chinese:
 #baisc appellation - tribal
+ CL_greater_chieftain: "大酋长"
  CL_chieftain: "酋长"
 #baisc appellation - monarchy
  CL_Emperor: "皇帝"
@@ -34,9 +35,11 @@
 
 #itlian appellation
  CL_Imperator: "英白拉多"
+ CL_Duce: "领袖"
  
 #japanese appellation
- CL_mikado: "天皇"
+ CL_Mikado: "天皇"
+
 #han appellation
  CL_Emperor_china_flavor_1: "大行皇帝"
  CL_Emperor_china_flavor_2: "天子"
@@ -103,9 +106,9 @@
  CL_Maharaja: "摩诃罗阇"
  CL_Rajadhiraja: "罗阇帝罗阇"
  CL_Maharajadhiraja: "摩诃罗阇帝罗阇"
- CL_Maharani: "摩诃拉尼" #queen
- CL_Rajamata: "罗阇母妲" #raja's mon
- CL_Yuvraja: "玉罗阇" #crown prince
+ CL_Maharani: "摩诃拉尼" #Queen
+ CL_Rajamata: "罗阇母妲" #Raja's Monther
+ CL_Yuvraja: "玉罗阇" #Crown Prince
  CL_Dhramaraja: "达摩罗阇" #
 
  ###########################################

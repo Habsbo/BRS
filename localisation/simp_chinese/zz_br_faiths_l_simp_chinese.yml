@@ -41,6 +41,12 @@
 #
  trait_mahdi: "马赫迪"
 ### culture - 文化 ###
+ COUNTRY_NATIONALITY_TITLE: "国民"
+ COUNTRY_CULTURE_MAJOR_TITLE: "主流文化"
+ COUNTRY_CULTURE_ADOPTED_TITLE: "接纳文化"
+
+ COUNTRY_FAITH_MAJOR_TITLE: "主流信仰"
+ COUNTRY_FAITH_ADOPTED_TITLE: "容忍信仰"
 #法兰西组
  culture_france: "法兰西"
  culture_aquitaine: "阿基坦"
@@ -65,15 +71,15 @@
  culture_danish: "丹麦"
  culture_swedish: "瑞典"
  culture_icelandic: "冰岛"
+#南斯拉夫组
+ culture_jugoslavija: "南斯拉夫"
+ culture_hrvatska: "克罗地亚"
+ culture_srbija: "塞尔维亚"
 #波兰组
  culture_polska: "波兰"
 #捷克组
  culture_ceska: "捷克"
  culture_slovensko: "斯洛伐克"
-#南斯拉夫组
- culture_jugoslavija: "南斯拉夫"
- culture_hrvatska: "克罗地亚"
- culture_srbija: "塞尔维亚"
 #罗斯组
  culture_russian: "俄罗斯"
  culture_ukrainian: "乌克兰"
@@ -93,7 +99,7 @@
  culture_khampa: "康巴"
 #东胡组
  culture_mongolian: "蒙古"
-#维族
+#维吾尔-回鹘
  culture_uygur: "维吾尔"
 #朝鲜
  culture_joseon: "朝鲜"
@@ -103,14 +109,20 @@
 #亚述组
  culture_syria: "叙利亚"
 #伊朗组
+ culture_iran: "伊朗"
+ culture_tajik: "塔吉克"
  
+ culture_azeri: "阿塞拜疆"
+#
+ culture_pushtun: "普什图" #阿富汗
 #突厥组
-
+ culture_turkish: "突厥"
 #希腊组
  culture_hellenic: "希腊"
  culture_pontus: "本都"
  culture_achaia: "亚该亚"
  culture_magna_graecia: "大希腊" #失落的文化
+ culture_cyprus: "塞浦路斯"
 #亚美尼亚组
  culture_hayastan: "亚美尼亚"
 #土耳其组
@@ -118,9 +130,9 @@
 #越南组
  culture_vietnamese: "越南"
 #
+#壮侗台
+ culture_buzhuang: "布壮"
  culture_laos: "佬"
-#
- culture_zhuang: "壮"
  culture_thai: "泰"
  
 #犹太组

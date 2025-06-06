@@ -1,21 +1,9 @@
 br_debug_decisions = {
 	debug_faith = {
-		icon = generic_research
-		icon = generic_construction
-		target_root_trigger = { is_ai = no }
-		target_trigger = {
-			FROM = { is_owned_by = root }
+		fire_only_once = no
+		complete_effect = {
+			set_country_flag = countrycultureview_visible_flag
 		}
-
-		available = { always = no }
-		visible = { always = no }
-
-		cost = 0
-
-		state_target = yes
-		on_map_mode = map_and_decisions_view
-
-		complete_effect = {}
 
 		ai_will_do = { base = 0 }
 	}
